@@ -15,6 +15,7 @@ namespace DS3TexUpUI
         public string TextureDir { get; }
         public string ExtractDir => Path.Join(TextureDir, "extract");
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
+        public string UpscaleDir => Path.Join(TextureDir, "upscale");
 
         public Workspace(string gameDir, string textureDir)
         {
@@ -227,6 +228,69 @@ namespace DS3TexUpUI
 
             token.SubmitStatus("Restoring map files from backup");
             CopyFilesRecursively(new DirectoryInfo(MapsBackupDir), Directory.CreateDirectory(MapsDir), token);
+        }
+
+        public void PrepareUpscale(SubProgressToken token)
+        {
+            var progressFactor = 1.0 / DS3Info.Maps.Length;
+            foreach (var (map, i) in DS3Info.Maps.Select((m, i) => (m, i)))
+            {
+                PrepareUpscaleMap(token.Slice(i * progressFactor, progressFactor), map);
+            }
+            token.SubmitProgress(1);
+        }
+        private void PrepareUpscaleMap(SubProgressToken token, string map)
+        {
+            token.SubmitStatus($"Preparing {map} for upscaling");
+
+            var files = Directory.GetFiles(Path.Join(ExtractDir, map), "*.dds", SearchOption.TopDirectoryOnly);
+
+            token.SubmitStatus($"Preparing {map} for upscaling ({files.Length} files)");
+
+            var done = 0;
+            files.AsParallel().WithDegreeOfParallelism(8).ForAll(file =>
+            {
+                lock (token)
+                {
+                    if (token.IsCanceled) return;
+                    token.SubmitProgress(done++ / (double)files.Length);
+                }
+
+                string targetDir;
+                var lower = file.ToLower();
+                if (lower.Contains("_enkei_") || lower.Contains("_low_"))
+                    targetDir = "distant";
+                else if (lower.Contains("_base_") || lower.Contains("_baser_") || lower.Contains("_water_") || lower.Contains("_sky_") || lower.Contains("_mountain_"))
+                    targetDir = "ignore";
+                else if (file.EndsWith("_a.dds"))
+                    targetDir = "a";
+                else if (file.EndsWith("_n.dds"))
+                    targetDir = "n";
+                else if (file.EndsWith("_r.dds"))
+                    targetDir = "r";
+                else
+                    targetDir = "other";
+
+                try
+                {
+                    if (targetDir == "a")
+                    {
+                        using var ddsImage = DDSImage.Load(file);
+                        if (ddsImage.HasTransparency()) targetDir = "a_transparent";
+                    }
+
+                    targetDir = Path.Join(UpscaleDir, map, targetDir);
+                    Directory.CreateDirectory(targetDir);
+                    DDSConverter.ToPNG(file, targetDir);
+                }
+                catch (Exception)
+                {
+                    // ignore this file
+                    return;
+                }
+            });
+
+            token.SubmitProgress(1);
         }
 
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target, IProgressToken token)

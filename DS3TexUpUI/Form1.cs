@@ -129,6 +129,11 @@ namespace DS3TexUpUI
             isCanceled = true;
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            RunTask(GetWorkspace().PrepareUpscale);
+        }
+
         void RunTask(Action<SubProgressToken> task)
         {
             isCanceled = false;
@@ -162,6 +167,21 @@ namespace DS3TexUpUI
                     abortButton.Enabled = false;
                 }));
             });
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var output = @"C:\Users\micha\Desktop\up\in\";
+            DDSConverter.ToPNG("C:\\DS3TexUp\\extract\\m37\\m37_00_kumo_30_a.dds", output);
+           // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds", output);
+           // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds", output);
+           // MessageBox.Show(DDSImage.Load(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds").HasTransparency().ToString());
+           // MessageBox.Show(DDSImage.Load(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds").HasTransparency().ToString());
+           // 
+           // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_grass_00_a.png", output, DDSFormat.BC1_UNORM);
+           // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_woodplank_10_a.png", output, DDSFormat.BC1_UNORM);
+
+            // DDSConverter.ToPNG(@"C:\Users\micha\Desktop\up\m31_00_woodenhouse_05_a-4x-UltraSharp.png", @"C:\Users\micha\Desktop\up\in\m31_00_woodenhouse_05_a.png");
         }
     }
 }
