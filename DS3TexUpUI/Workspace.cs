@@ -232,7 +232,7 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Preparing {map} for upscaling ({files.Length} files)");
 
-            var ignorePattern = new Regex(@"\Am[\d_]+_(?i:base|water|sky|mountain)[_\darnme]+\z");
+            var ignorePattern = new Regex(@"\Am[\d_]+_(?i:base|sky|mountain)[_\darnme]+\z");
 
             token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
             {
@@ -251,26 +251,51 @@ namespace DS3TexUpUI
                 else
                     targetDir = "other";
 
+                var png = Path.GetFileNameWithoutExtension(file) + ".png";
+
                 try
                 {
-                    using var image = DDSImage.Load(file);
-
-                    if (image.IsSolidColor(0.05))
+                    if (targetDir == "n")
                     {
-                        // there is no point in upscaling a solid color.
-                        targetDir = "ignore";
+                        var image = DS3NormalMap.Load(file);
+
+                        var normalDir = Path.Join(UpscaleDir, map, "n_normal");
+                        var glossDir = Path.Join(UpscaleDir, map, "n_gloss");
+                        var heightDir = Path.Join(UpscaleDir, map, "n_height");
+                        Directory.CreateDirectory(normalDir);
+                        Directory.CreateDirectory(glossDir);
+                        Directory.CreateDirectory(heightDir);
+
+                        image.Normals.SaveAsPng(Path.Join(normalDir, png));
+                        image.Gloss.SaveAsPng(Path.Join(glossDir, png));
+                        if (image.Heights.IsNoticeable())
+                            image.Heights.SaveAsPng(Path.Join(heightDir, png));
                     }
                     else
                     {
-                        if (targetDir == "a" && image.HasTransparency())
-                        {
-                            targetDir = "a_transparent";
-                        }
-                    }
+                        using var image = DDSImage.Load(file);
 
-                    targetDir = Path.Join(UpscaleDir, map, targetDir);
-                    Directory.CreateDirectory(targetDir);
-                    image.SaveAsPng(Path.Join(targetDir, Path.GetFileNameWithoutExtension(file) + ".png"));
+                        if (image.IsSolidColor(0.05))
+                        {
+                            // there is no point in upscaling a solid color.
+                            targetDir = "ignore";
+                        }
+                        else
+                        {
+                            if (targetDir == "a")
+                            {
+                                var t = image.GetTransparency();
+                                if (t == TransparencyKind.Binary)
+                                    targetDir = "a_t_binary";
+                                else if (t == TransparencyKind.Full)
+                                    targetDir = "a_t_full";
+                            }
+                        }
+
+                        targetDir = Path.Join(UpscaleDir, map, targetDir);
+                        Directory.CreateDirectory(targetDir);
+                        image.SaveAsPng(Path.Join(targetDir, png));
+                    }
                 }
                 catch (Exception)
                 {

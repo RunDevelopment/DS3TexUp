@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
@@ -15,6 +14,8 @@ namespace DS3TexUpUI
         public readonly int Height;
 
         public NormalView Normals => new NormalView(this);
+        public GlossView Gloss => new GlossView(this);
+        public HeightView Heights => new HeightView(this);
 
         private DS3NormalMap(Rgba32[] data, int width, int height)
         {
@@ -80,18 +81,9 @@ namespace DS3TexUpUI
             }
         }
 
-        public byte[] GetGlossData() => Data.AsSpan().Map(p => p.B);
-        public byte[] GetHeightData() => Data.AsSpan().Map(p => p.A);
-
-
-        public void SaveGlossAsPng(string file)
+        public void SaveAsPng(string file)
         {
-            using var image = Image.LoadPixelData<Bgr24>(GetGlossData().AsSpan().Duplicate(3), Width, Height);
-            image.SaveAsPng(file);
-        }
-        public void SaveHeightAsPng(string file)
-        {
-            using var image = Image.LoadPixelData<Bgr24>(GetHeightData().AsSpan().Duplicate(3), Width, Height);
+            using var image = Image.LoadPixelData(Data, Width, Height);
             image.SaveAsPng(file);
         }
 
@@ -136,24 +128,21 @@ namespace DS3TexUpUI
             public void Set(DS3NormalMap other)
             {
                 var source = other.Data;
-                var target = Map.Data;
 
-                for (int i = 0; i < source.Length; i++)
+                for (int i = 0; i < Data.Length; i++)
                 {
                     var s = source[i];
-                    ref var t = ref target[i];
+                    ref var t = ref Data[i];
                     t.R = s.R;
                     t.G = s.G;
                 }
             }
             public void Set(Span<Normal> source)
             {
-                var target = Map.Data;
-
-                for (int i = 0; i < source.Length; i++)
+                for (int i = 0; i < Data.Length; i++)
                 {
                     var (r, g) = source[i].ToRG();
-                    ref var t = ref target[i];
+                    ref var t = ref Data[i];
                     t.R = r;
                     t.G = g;
                 }
@@ -182,20 +171,6 @@ namespace DS3TexUpUI
                 }
             }
 
-            public void EnhanceWith(NormalView other, float strength)
-            {
-                for (int i = 0; i < Count; i++)
-                {
-                    var a = this[i];
-                    var b = other.Data[i];
-
-                    var bX = b.R / 127.5f - 1.0f;
-                    var bY = b.G / 127.5f - 1.0f;
-
-                    this[i] = Normal.FromVector(a.X + bX * strength, a.Y + bY * strength, a.Z);
-                }
-            }
-
             public void SaveAsPng(string file)
             {
                 var rgb = new Rgb24[Count];
@@ -210,6 +185,159 @@ namespace DS3TexUpUI
             }
 
             public IEnumerator<Normal> GetEnumerator()
+            {
+                var count = Count;
+                for (var i = 0; i < count; i++)
+                    yield return this[i];
+            }
+
+            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        }
+
+        public readonly struct GlossView : IReadOnlyList<byte>
+        {
+            public readonly DS3NormalMap Map;
+
+            public readonly Rgba32[] Data;
+
+            public int Width => Map.Width;
+            public int Height => Map.Height;
+            public int Count => Width * Height;
+
+            public GlossView(DS3NormalMap map)
+            {
+                Map = map;
+                Data = map.Data;
+            }
+
+            public byte this[int index]
+            {
+                get => Data[index].B;
+                set => Data[index].B = value;
+            }
+            public byte this[int x, int y]
+            {
+                get => this[y * Width + x];
+                set => this[y * Width + x] = value;
+            }
+
+            public void Set(GlossView source) => Set(source.Map);
+            public void Set(DS3NormalMap other)
+            {
+                var source = other.Data;
+
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source[i].B;
+            }
+            public void Set(Span<byte> source)
+            {
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source[i];
+            }
+            public void Set(byte source)
+            {
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source;
+            }
+
+            public void SaveAsPng(string file)
+            {
+                var rgb = new Rgb24[Count];
+                for (int i = 0; i < rgb.Length; i++)
+                {
+                    var g = this[i];
+                    rgb[i] = new Rgb24(g, g, g);
+                }
+
+                using var image = Image.LoadPixelData(rgb, Width, Height);
+                image.SaveAsPng(file);
+            }
+
+            public IEnumerator<byte> GetEnumerator()
+            {
+                var count = Count;
+                for (var i = 0; i < count; i++)
+                    yield return this[i];
+            }
+
+            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        }
+
+        public readonly struct HeightView : IReadOnlyList<byte>
+        {
+            public readonly DS3NormalMap Map;
+
+            public readonly Rgba32[] Data;
+
+            public int Width => Map.Width;
+            public int Height => Map.Height;
+            public int Count => Width * Height;
+
+            public HeightView(DS3NormalMap map)
+            {
+                Map = map;
+                Data = map.Data;
+            }
+
+            public byte this[int index]
+            {
+                get => Data[index].A;
+                set => Data[index].A = value;
+            }
+            public byte this[int x, int y]
+            {
+                get => this[y * Width + x];
+                set => this[y * Width + x] = value;
+            }
+
+            public bool IsPresent()
+            {
+                foreach (var p in Data)
+                    if (p.A != 255)
+                        return true;
+                return false;
+            }
+            public bool IsNoticeable()
+            {
+                foreach (var p in Data)
+                    if (p.A < 250)
+                        return true;
+                return false;
+            }
+
+            public void Set(HeightView source) => Set(source.Map);
+            public void Set(DS3NormalMap other)
+            {
+                var source = other.Data;
+
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source[i].A;
+            }
+            public void Set(Span<byte> source)
+            {
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source[i];
+            }
+            public void Set(byte source)
+            {
+                for (int i = 0; i < Data.Length; i++)
+                    this[i] = source;
+            }
+
+            public void SaveAsPng(string file)
+            {
+                var rgb = new Rgb24[Count];
+                for (int i = 0; i < rgb.Length; i++)
+                {
+                    var h = this[i];
+                    rgb[i] = new Rgb24(h, h, h);
+                }
+
+                using var image = Image.LoadPixelData(rgb, Width, Height);
+                image.SaveAsPng(file);
+            }
+
+            public IEnumerator<byte> GetEnumerator()
             {
                 var count = Count;
                 for (var i = 0; i < count; i++)

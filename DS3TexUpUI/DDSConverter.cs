@@ -143,7 +143,7 @@ namespace DS3TexUpUI
             image.SaveAsPng(file);
         }
 
-        public bool HasTransparency()
+        public TransparencyKind GetTransparency()
         {
             var data = Data;
 
@@ -153,16 +153,41 @@ namespace DS3TexUpUI
                 case Pfim.ImageFormat.R5g5b5:
                 case Pfim.ImageFormat.R5g6b5:
                 case Pfim.ImageFormat.Rgb24:
-                    return false;
+                    return TransparencyKind.None;
 
                 case Pfim.ImageFormat.Rgba32:
-                    for (var i = 3; i < data.Length; i += 4)
                     {
-                        // some images have random pixels with 254 as their alpha value
-                        if (data[i] < 250)
-                            return true;
+                        var map = new bool[256];
+                        for (var i = 3; i < data.Length; i += 4)
+                        {
+                            map[data[i]] = true;
+                        }
+
+                        var min = 255;
+                        for (int i = 0; i < 256; i++)
+                        {
+                            if (map[i])
+                            {
+                                min = i;
+                                break;
+                            }
+                        }
+
+                        if (min == 255) return TransparencyKind.None;
+                        if (min >= 250) return TransparencyKind.Unnoticeable;
+
+                        var hasMin = false;
+                        for (int i = 6; i < 250; i++)
+                        {
+                            if (map[i])
+                            {
+                                hasMin = true;
+                                break;
+                            }
+                        }
+
+                        return hasMin ? TransparencyKind.Full : TransparencyKind.Binary;
                     }
-                    return false;
 
                 default:
                     throw new Exception("Unsupported pixel format (" + Format + ")");
@@ -252,6 +277,14 @@ namespace DS3TexUpUI
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
+    }
+
+    public enum TransparencyKind
+    {
+        None,
+        Unnoticeable,
+        Binary,
+        Full,
     }
 
     public enum DDSFormat

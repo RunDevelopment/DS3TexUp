@@ -223,12 +223,10 @@ namespace DS3TexUpUI
             //n.SaveGlossAsPng(@"C:\Users\micha\Desktop\test\gloss.png");
             //n.SaveHeightAsPng(@"C:\Users\micha\Desktop\test\height.png");
 
-            var nAi = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai.png");
-            var nUp = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-up.png");
-            var start = DateTime.Now;
-            nAi.Normals.CombineWith(nUp.Normals, 1f);
-            MessageBox.Show((DateTime.Now - start).ToString());
-            nAi.Normals.SaveAsPng(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
+            var nLow = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\m31_00_woodplank_10_n-bilinear-up.png");
+            var nHigh = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
+            nLow.Normals.Set(nHigh);
+            nLow.SaveAsPng(@"C:\Users\micha\Desktop\test\final.png");
 
             //DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up_res_m31_a\m31_00_woodplank_10_a-4x-UltraSharp.50.4x_UniversalUpscalerV2-Neutral_115000_swaG.50.png", @"C:\DS3TexUp\overwrite\m31\m31_00_woodplank_10_a.dds");
 
