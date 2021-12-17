@@ -188,57 +188,15 @@ namespace DS3TexUpUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var outputDir = @"C:\DS3TexUp\overwrite\m31";
 
-            // RunTask(token =>
-            // {
-            //     var files = Directory.GetFiles(@"C:\Users\micha\Desktop\up_res_m31_a");
-            //     token.SubmitStatus($"Converting {files.Length} files");
-            //
-            //     var done = 0;
-            //     files.AsParallel().ForAll(file =>
-            //     {
-            //         lock (token)
-            //         {
-            //             if (token.IsCanceled) return;
-            //         }
-            //
-            //         var dest = Path.GetFileNameWithoutExtension(file);
-            //         var index = dest.IndexOf("-4x");
-            //         if (index != -1) dest = dest.Substring(0, index);
-            //         dest = Path.Join(outputDir, dest + ".dds");
-            //         DDSConverter.ToDDS(file, dest);
-            //
-            //         lock (token)
-            //         {
-            //             if (token.IsCanceled) return;
-            //             done++;
-            //             token.SubmitProgress(done / (double)files.Length);
-            //         }
-            //     });
-            // });
+            // var nLow = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\m31_00_woodplank_10_n-bilinear-up.png");
+            // var nHigh = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
+            // nLow.Normals.Set(nHigh);
+            // nLow.SaveAsPng(@"C:\Users\micha\Desktop\test\final.png");
 
-            //using var n = DS3NormalMap.Load(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_n.dds");
-            //n.SaveNormalAsPng(@"C:\Users\micha\Desktop\test\normal.png");
-            //n.SaveGlossAsPng(@"C:\Users\micha\Desktop\test\gloss.png");
-            //n.SaveHeightAsPng(@"C:\Users\micha\Desktop\test\height.png");
 
-            var nLow = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\m31_00_woodplank_10_n-bilinear-up.png");
-            var nHigh = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
-            nLow.Normals.Set(nHigh);
-            nLow.SaveAsPng(@"C:\Users\micha\Desktop\test\final.png");
-
-            //DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up_res_m31_a\m31_00_woodplank_10_a-4x-UltraSharp.50.4x_UniversalUpscalerV2-Neutral_115000_swaG.50.png", @"C:\DS3TexUp\overwrite\m31\m31_00_woodplank_10_a.dds");
-
-            // var output = @"C:\Users\micha\Desktop\up\in\";
-            // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds", output);
-            // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds", output);
-            // 
-            // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_grass_00_a.png", output, DDSFormat.BC1_UNORM);
-            // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_woodplank_10_a.png", output, DDSFormat.BC1_UNORM);
-
-            // DDSConverter.ToPNG(@"C:\Users\micha\Desktop\up\m31_00_woodenhouse_05_a-4x-UltraSharp.png", @"C:\Users\micha\Desktop\up\in\m31_00_woodenhouse_05_a.png");
-
+            var t = new TilingForm(GetWorkspace());
+            t.ShowDialog();
         }
     }
 }
