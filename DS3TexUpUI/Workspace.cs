@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace DS3TexUpUI
 {
@@ -61,12 +62,7 @@ namespace DS3TexUpUI
             Directory.CreateDirectory(ExtractDir);
             Directory.CreateDirectory(OverwriteDir);
 
-            var progressFactor = 1.0 / DS3Info.Maps.Length;
-            foreach (var (map, i) in DS3Info.Maps.Select((m, i) => (m, i)))
-            {
-                ExtractHighResTextureMap(token.Slice(i * progressFactor, progressFactor), map);
-            }
-            token.SubmitProgress(1);
+            token.ForAll(DS3Info.Maps, ExtractHighResTextureMap);
         }
         private void ExtractHighResTextureMap(SubProgressToken token, string map)
         {
@@ -109,13 +105,7 @@ namespace DS3TexUpUI
         private void PartialOverwrtite(SubProgressToken token)
         {
             var presentMaps = DS3Info.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
-            var progressFactor = 1.0 / presentMaps.Length;
-
-            foreach (var (map, i) in presentMaps.Select((m, i) => (m, i)))
-            {
-                PartialOverwrtiteMap(token.Slice(i * progressFactor, progressFactor), map);
-            }
-            token.SubmitProgress(1);
+            token.ForAll(presentMaps, PartialOverwrtiteMap);
         }
         private void PartialOverwrtiteMap(SubProgressToken token, string map)
         {
@@ -149,13 +139,13 @@ namespace DS3TexUpUI
 
             SaveOverwriteFiles(map, overwritefiles);
 
-            token.SubmitStatus($"Repacking textures {repack.Count} textures for {map}");
+            token.SubmitStatus($"Repacking {repack.Count} textures for {map}");
 
-            Yabber.Run(repack.ToArray());
+            Yabber.RunParallel(token.Reserve(0.8), repack.ToArray());
 
             token.SubmitStatus($"Repacking {map} map files");
 
-            Yabber.Run(repack.Select(d => Path.GetDirectoryName(d)).ToHashSet().ToArray());
+            Yabber.RunParallel(token, repack.Select(d => Path.GetDirectoryName(d)).ToHashSet().ToArray());
 
             token.SubmitProgress(1);
         }
@@ -232,12 +222,7 @@ namespace DS3TexUpUI
 
         public void PrepareUpscale(SubProgressToken token)
         {
-            var progressFactor = 1.0 / DS3Info.Maps.Length;
-            foreach (var (map, i) in DS3Info.Maps.Select((m, i) => (m, i)))
-            {
-                PrepareUpscaleMap(token.Slice(i * progressFactor, progressFactor), map);
-            }
-            token.SubmitProgress(1);
+            token.ForAll(DS3Info.Maps, PrepareUpscaleMap);
         }
         private void PrepareUpscaleMap(SubProgressToken token, string map)
         {
@@ -247,41 +232,45 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Preparing {map} for upscaling ({files.Length} files)");
 
-            var done = 0;
-            files.AsParallel().WithDegreeOfParallelism(8).ForAll(file =>
-            {
-                lock (token)
-                {
-                    if (token.IsCanceled) return;
-                    token.SubmitProgress(done++ / (double)files.Length);
-                }
+            var ignorePattern = new Regex(@"\Am[\d_]+_(?i:base|water|sky|mountain)[_\darnme]+\z");
 
+            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
+            {
                 string targetDir;
-                var lower = file.ToLower();
-                if (lower.Contains("_enkei_") || lower.Contains("_low_"))
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name.Contains("_enkei_") || name.Contains("_low_"))
                     targetDir = "distant";
-                else if (lower.Contains("_base_") || lower.Contains("_baser_") || lower.Contains("_water_") || lower.Contains("_sky_") || lower.Contains("_mountain_"))
+                else if (ignorePattern.IsMatch(name))
                     targetDir = "ignore";
-                else if (file.EndsWith("_a.dds"))
+                else if (name.EndsWith("_a"))
                     targetDir = "a";
-                else if (file.EndsWith("_n.dds"))
+                else if (name.EndsWith("_n"))
                     targetDir = "n";
-                else if (file.EndsWith("_r.dds"))
+                else if (name.EndsWith("_r"))
                     targetDir = "r";
                 else
                     targetDir = "other";
 
                 try
                 {
-                    if (targetDir == "a")
+                    using var image = DDSImage.Load(file);
+
+                    if (image.IsSolidColor(0.05))
                     {
-                        using var ddsImage = DDSImage.Load(file);
-                        if (ddsImage.HasTransparency()) targetDir = "a_transparent";
+                        // there is no point in upscaling a solid color.
+                        targetDir = "ignore";
+                    }
+                    else
+                    {
+                        if (targetDir == "a" && image.HasTransparency())
+                        {
+                            targetDir = "a_transparent";
+                        }
                     }
 
                     targetDir = Path.Join(UpscaleDir, map, targetDir);
                     Directory.CreateDirectory(targetDir);
-                    DDSConverter.ToPNG(file, targetDir);
+                    image.SaveAsPng(Path.Join(targetDir, Path.GetFileNameWithoutExtension(file) + ".png"));
                 }
                 catch (Exception)
                 {
@@ -289,8 +278,6 @@ namespace DS3TexUpUI
                     return;
                 }
             });
-
-            token.SubmitProgress(1);
         }
 
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target, IProgressToken token)

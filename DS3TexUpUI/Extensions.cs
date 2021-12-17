@@ -21,5 +21,88 @@ namespace DS3TexUpUI
             }
             yield return source.Slice(offset, source.Length - offset);
         }
+
+        public static T[] ToArray<T>(this Span<T> span, int start) => span.Slice(start).ToArray();
+        public static T[] ToArray<T>(this Span<T> span, int start, int step)
+        {
+            if (step == 0) throw new ArgumentOutOfRangeException(nameof(step));
+            if (step == 1) return span.Slice(start).ToArray();
+
+            var array = new T[span.Length / step];
+
+            span = span.Slice(start);
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = span[i * step];
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// Duplicates every element in the span count times.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="span"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public static T[] Duplicate<T>(this Span<T> span, int count)
+        {
+            if (count == 0) return new T[0];
+            if (count == 1) return span.ToArray();
+
+            var array = new T[span.Length * count];
+            for (int i = 0; i < span.Length; i++)
+            {
+                var item = span[i];
+                for (int j = 0; j < count; j++)
+                    array[i * count + j] = item;
+            }
+            return array;
+        }
+
+        public static T[] Map<S, T>(this Span<S> span, Func<S, T> map)
+        {
+            var array = new T[span.Length];
+            for (int i = 0; i < span.Length; i++)
+                array[i] = map(span[i]);
+            return array;
+        }
+        public static T[] MapMany<S, T>(this Span<S> span, Func<S, (T, T)> map)
+        {
+            var array = new T[span.Length * 2];
+            for (int i = 0; i < span.Length; i++)
+            {
+                var (a, b) = map(span[i]);
+                array[i * 2 + 0] = a;
+                array[i * 2 + 1] = b;
+            }
+            return array;
+        }
+        public static T[] MapMany<S, T>(this Span<S> span, Func<S, (T, T, T)> map)
+        {
+            var array = new T[span.Length * 3];
+            for (int i = 0; i < span.Length; i++)
+            {
+                var (a, b, c) = map(span[i]);
+                array[i * 3 + 0] = a;
+                array[i * 3 + 1] = b;
+                array[i * 3 + 2] = c;
+            }
+            return array;
+        }
+        public static T[] MapMany<S, T>(this Span<S> span, Func<S, (T, T, T, T)> map)
+        {
+            var array = new T[span.Length * 4];
+            for (int i = 0; i < span.Length; i++)
+            {
+                var (a, b, c, d) = map(span[i]);
+                array[i * 4 + 0] = a;
+                array[i * 4 + 1] = b;
+                array[i * 4 + 2] = c;
+                array[i * 4 + 3] = d;
+            }
+            return array;
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DS3TexUpUI
 {
-    static class DS3Info
+    public static class DS3Info
     {
         public static readonly string[] Maps = new string[]{
             "m30", // High Wall of Lothric, Consumed King's Garden, Lothric Castle
@@ -26,5 +26,26 @@ namespace DS3TexUpUI
             "m53", // Arena - Dragon Ruins
             "m54", // Arena - Round Plaza
         };
+
+
+        public static class DDS
+        {
+            // Used for sRGB color textures without transparency
+            public static readonly DDSFormat Albedo = DDSFormat.BC1_UNORM_SRGB;
+            // Used for sRGB color textures with binary transparency.
+            // (A pixel is either fully transparent or fully opaque.)
+            public static readonly DDSFormat AlbedoBinaryAlpha = DDSFormat.BC1_UNORM_SRGB;
+            // Used for sRGB color textures with transparency (RGBA).
+            public static readonly DDSFormat AlbedoSmoothAlpha = DDSFormat.BC7_UNORM_SRGB;
+
+            // They use BC7 for all normals I looked at.
+            public static readonly DDSFormat Normal = DDSFormat.BC7_UNORM;
+            
+            public static readonly DDSFormat Reflective = DDSFormat.BC1_UNORM_SRGB;
+            
+            // They use BC4 for mask, but the header doesn't say whether signed or unsigned. Maybe it's typeless? idk
+            // public static readonly DDSFormat Mask = ?;
+        }
     }
+
 }

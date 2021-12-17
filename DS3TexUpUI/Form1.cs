@@ -16,6 +16,7 @@ namespace DS3TexUpUI
     {
         private IProgressToken progressToken;
         private bool isCanceled = false;
+        private bool taskIsRunning = false;
 
         class Form1ProgressToken : IProgressToken
         {
@@ -136,52 +137,110 @@ namespace DS3TexUpUI
 
         void RunTask(Action<SubProgressToken> task)
         {
-            isCanceled = false;
-            abortButton.Enabled = true;
-            statusTextBox.Text = "";
-            progressBar.Value = progressBar.Minimum;
-
-            Task.Run(() =>
+            if (taskIsRunning)
             {
-                try
+                MessageBox.Show("Another task is already running and has to be completed first.");
+                return;
+            }
+
+            try
+            {
+                taskIsRunning = true;
+
+                isCanceled = false;
+                abortButton.Enabled = true;
+                statusTextBox.Text = "";
+                progressBar.Value = progressBar.Minimum;
+
+                Task.Run(() =>
                 {
-                    task(new SubProgressToken(progressToken));
+                    try
+                    {
+                        task(new SubProgressToken(progressToken));
+
+                        Invoke(new Action(() =>
+                        {
+                            statusTextBox.Text = "Done.";
+                            progressBar.Value = progressBar.Maximum;
+                        }));
+
+                    }
+                    catch (CanceledException)
+                    {
+                        Invoke(new Action(() =>
+                        {
+                            progressBar.Value = progressBar.Minimum;
+                        }));
+                    }
 
                     Invoke(new Action(() =>
                     {
-                        statusTextBox.Text = "Done.";
-                        progressBar.Value = progressBar.Maximum;
+                        abortButton.Enabled = false;
                     }));
+                });
+            }
+            finally
+            {
+                taskIsRunning = false;
+            }
 
-                }
-                catch (CanceledException)
-                {
-                    Invoke(new Action(() =>
-                    {
-                        progressBar.Value = progressBar.Minimum;
-                    }));
-                }
-
-                Invoke(new Action(() =>
-                {
-                    abortButton.Enabled = false;
-                }));
-            });
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var output = @"C:\Users\micha\Desktop\up\in\";
-            DDSConverter.ToPNG("C:\\DS3TexUp\\extract\\m37\\m37_00_kumo_30_a.dds", output);
-           // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds", output);
-           // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds", output);
-           // MessageBox.Show(DDSImage.Load(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds").HasTransparency().ToString());
-           // MessageBox.Show(DDSImage.Load(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds").HasTransparency().ToString());
-           // 
-           // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_grass_00_a.png", output, DDSFormat.BC1_UNORM);
-           // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_woodplank_10_a.png", output, DDSFormat.BC1_UNORM);
+            var outputDir = @"C:\DS3TexUp\overwrite\m31";
+
+            // RunTask(token =>
+            // {
+            //     var files = Directory.GetFiles(@"C:\Users\micha\Desktop\up_res_m31_a");
+            //     token.SubmitStatus($"Converting {files.Length} files");
+            //
+            //     var done = 0;
+            //     files.AsParallel().ForAll(file =>
+            //     {
+            //         lock (token)
+            //         {
+            //             if (token.IsCanceled) return;
+            //         }
+            //
+            //         var dest = Path.GetFileNameWithoutExtension(file);
+            //         var index = dest.IndexOf("-4x");
+            //         if (index != -1) dest = dest.Substring(0, index);
+            //         dest = Path.Join(outputDir, dest + ".dds");
+            //         DDSConverter.ToDDS(file, dest);
+            //
+            //         lock (token)
+            //         {
+            //             if (token.IsCanceled) return;
+            //             done++;
+            //             token.SubmitProgress(done / (double)files.Length);
+            //         }
+            //     });
+            // });
+
+            //using var n = DS3NormalMap.Load(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_n.dds");
+            //n.SaveNormalAsPng(@"C:\Users\micha\Desktop\test\normal.png");
+            //n.SaveGlossAsPng(@"C:\Users\micha\Desktop\test\gloss.png");
+            //n.SaveHeightAsPng(@"C:\Users\micha\Desktop\test\height.png");
+
+            var nAi = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai.png");
+            var nUp = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-up.png");
+            var start = DateTime.Now;
+            nAi.Normals.CombineWith(nUp.Normals, 1f);
+            MessageBox.Show((DateTime.Now - start).ToString());
+            nAi.Normals.SaveAsPng(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
+
+            //DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up_res_m31_a\m31_00_woodplank_10_a-4x-UltraSharp.50.4x_UniversalUpscalerV2-Neutral_115000_swaG.50.png", @"C:\DS3TexUp\overwrite\m31\m31_00_woodplank_10_a.dds");
+
+            // var output = @"C:\Users\micha\Desktop\up\in\";
+            // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_woodplank_10_a.dds", output);
+            // DDSConverter.ToPNG(@"C:\DS3TexUp\extract\m31\m31_00_grass_00_a.dds", output);
+            // 
+            // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_grass_00_a.png", output, DDSFormat.BC1_UNORM);
+            // DDSConverter.ToDDS(@"C:\Users\micha\Desktop\up\in\m31_00_woodplank_10_a.png", output, DDSFormat.BC1_UNORM);
 
             // DDSConverter.ToPNG(@"C:\Users\micha\Desktop\up\m31_00_woodenhouse_05_a-4x-UltraSharp.png", @"C:\Users\micha\Desktop\up\in\m31_00_woodenhouse_05_a.png");
+
         }
     }
 }

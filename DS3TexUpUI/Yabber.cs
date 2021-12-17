@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Linq;
 
 namespace DS3TexUpUI
 {
@@ -19,15 +20,38 @@ namespace DS3TexUpUI
         }
         public static void Run(IProgressToken token, params string[] files)
         {
-            int i = 0;
-            foreach (var chunk in files.Chunks(16))
+            token.ForAll(files.Chunks(16), files.Length, chunk =>
             {
-                token.SubmitProgress(i / (double)files.Length);
                 RunProcess(chunk);
-                i += 16;
-            }
+                return chunk.Length;
+            });
+        }
+        public static void RunParallel(string[] files, int degreeOfParallelism = 0)
+        {
+            if (degreeOfParallelism == 0) degreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * 2.0 / 3.0);
 
-            token.SubmitProgress(1);
+            files
+                .Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)))
+                .AsParallel()
+                .WithDegreeOfParallelism(degreeOfParallelism)
+                .ForAll(chunk => RunProcess(chunk));
+        }
+        public static void RunParallel(IProgressToken token, string[] files, int degreeOfParallelism = 0)
+        {
+            if (degreeOfParallelism == 0) degreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * 2.0 / 3.0);
+
+            token.ForAll(
+                files
+                    .Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)))
+                    .AsParallel()
+                    .WithDegreeOfParallelism(degreeOfParallelism),
+                files.Length,
+                chunk =>
+                {
+                    RunProcess(chunk);
+                    return chunk.Length;
+                }
+            );
         }
 
         private static void RunProcess(string[] files)
