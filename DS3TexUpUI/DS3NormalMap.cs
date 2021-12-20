@@ -151,24 +151,7 @@ namespace DS3TexUpUI
             public void CombineWith(NormalView other, float strength)
             {
                 for (int i = 0; i < Count; i++)
-                {
-                    var n = this[i];
-                    var m = other[i];
-
-                    if (n.Z < 0.001) n = Normal.FromVector(n.X, n.Y, 0.001f);
-                    if (m.Z < 0.001) m = Normal.FromVector(m.X, m.Y, 0.001f);
-
-                    var nF = 1.0f / -n.Z;
-                    var mF = strength / -m.Z;
-
-                    var a = new Vector3(1.0f, 1.0f, (n.X + n.Y) * nF + (m.X + m.Y) * mF);
-                    var b = new Vector3(1.0f, -1.0f, (n.X - n.Y) * nF + (m.X - m.Y) * mF);
-
-                    var r = Vector3.Cross(a, b);
-                    if (r.Z < 0.0f) r = -r;
-
-                    this[i] = Normal.FromVector(r);
-                }
+                    this[i] = Normal.HeightMapAddition(n, 1f, m, strength);
             }
 
             public void SaveAsPng(string file)
@@ -390,6 +373,23 @@ namespace DS3TexUpUI
         }
         public static Normal FromRG(byte r, byte g)
             => FromXY(r / 127.5f - 1.0f, g / 127.5f - 1.0f);
+
+        public static Normal HeightMapAddition(Normal n, float nStrength, Normal m, float mStrength)
+        {
+            var nZ = n.Z < 0.001 ? 0.001f : n.Z;
+            var mZ = m.Z < 0.001 ? 0.001f : m.Z;
+
+            var nF = nStrength / -nZ;
+            var mF = mStrength / -mZ;
+
+            var a = new Vector3(1f, 0f, n.X * nF + m.X * mF);
+            var b = new Vector3(0f, 1f, n.Y * nF + m.Y * mF);
+
+            var r = Vector3.Cross(a, b);
+            if (r.Z < 0f) r = -r;
+
+            return FromVector(r);
+        }
 
         public (byte r, byte g) ToRG() => (
             (byte)((Math.Clamp(X, -1.0f, 1.0f) + 1.0f) * 127.5f),
