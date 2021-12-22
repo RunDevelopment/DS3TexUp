@@ -87,7 +87,7 @@ namespace DS3TexUpUI
             image.SaveAsPng(file);
         }
 
-        public readonly struct NormalView : IReadOnlyList<Normal>
+        public readonly struct NormalView : ITextureMap<Normal>
         {
             public readonly DS3NormalMap Map;
 
@@ -137,52 +137,6 @@ namespace DS3TexUpUI
                     t.G = s.G;
                 }
             }
-            public void Set(Span<Normal> source)
-            {
-                for (int i = 0; i < Data.Length; i++)
-                {
-                    var (r, g) = source[i].ToRG();
-                    ref var t = ref Data[i];
-                    t.R = r;
-                    t.G = g;
-                }
-            }
-
-            public void CombineWith(NormalView other, float strength)
-            {
-                for (int i = 0; i < Count; i++)
-                {
-                    var n = this[i];
-                    var m = other[i];
-
-                    if (n.Z < 0.001) n = Normal.FromVector(n.X, n.Y, 0.001f);
-                    if (m.Z < 0.001) m = Normal.FromVector(m.X, m.Y, 0.001f);
-
-                    var nF = 1.0f / -n.Z;
-                    var mF = strength / -m.Z;
-
-                    var a = new Vector3(1.0f, 1.0f, (n.X + n.Y) * nF + (m.X + m.Y) * mF);
-                    var b = new Vector3(1.0f, -1.0f, (n.X - n.Y) * nF + (m.X - m.Y) * mF);
-
-                    var r = Vector3.Cross(a, b);
-                    if (r.Z < 0.0f) r = -r;
-
-                    this[i] = Normal.FromVector(r);
-                }
-            }
-
-            public void SaveAsPng(string file)
-            {
-                var rgb = new Rgb24[Count];
-                for (int i = 0; i < rgb.Length; i++)
-                {
-                    var (r, g, b) = this[i].ToRGB();
-                    rgb[i] = new Rgb24(r, g, b);
-                }
-
-                using var image = Image.LoadPixelData(rgb, Width, Height);
-                image.SaveAsPng(file);
-            }
 
             public IEnumerator<Normal> GetEnumerator()
             {
@@ -194,7 +148,7 @@ namespace DS3TexUpUI
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
 
-        public readonly struct GlossView : IReadOnlyList<byte>
+        public readonly struct GlossView : ITextureMap<byte>
         {
             public readonly DS3NormalMap Map;
 
@@ -229,29 +183,6 @@ namespace DS3TexUpUI
                 for (int i = 0; i < Data.Length; i++)
                     this[i] = source[i].B;
             }
-            public void Set(Span<byte> source)
-            {
-                for (int i = 0; i < Data.Length; i++)
-                    this[i] = source[i];
-            }
-            public void Set(byte source)
-            {
-                for (int i = 0; i < Data.Length; i++)
-                    this[i] = source;
-            }
-
-            public void SaveAsPng(string file)
-            {
-                var rgb = new Rgb24[Count];
-                for (int i = 0; i < rgb.Length; i++)
-                {
-                    var g = this[i];
-                    rgb[i] = new Rgb24(g, g, g);
-                }
-
-                using var image = Image.LoadPixelData(rgb, Width, Height);
-                image.SaveAsPng(file);
-            }
 
             public IEnumerator<byte> GetEnumerator()
             {
@@ -263,7 +194,7 @@ namespace DS3TexUpUI
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
 
-        public readonly struct HeightView : IReadOnlyList<byte>
+        public readonly struct HeightView : ITextureMap<byte>
         {
             public readonly DS3NormalMap Map;
 
@@ -313,29 +244,6 @@ namespace DS3TexUpUI
                 for (int i = 0; i < Data.Length; i++)
                     this[i] = source[i].A;
             }
-            public void Set(Span<byte> source)
-            {
-                for (int i = 0; i < Data.Length; i++)
-                    this[i] = source[i];
-            }
-            public void Set(byte source)
-            {
-                for (int i = 0; i < Data.Length; i++)
-                    this[i] = source;
-            }
-
-            public void SaveAsPng(string file)
-            {
-                var rgb = new Rgb24[Count];
-                for (int i = 0; i < rgb.Length; i++)
-                {
-                    var h = this[i];
-                    rgb[i] = new Rgb24(h, h, h);
-                }
-
-                using var image = Image.LoadPixelData(rgb, Width, Height);
-                image.SaveAsPng(file);
-            }
 
             public IEnumerator<byte> GetEnumerator()
             {
@@ -346,61 +254,5 @@ namespace DS3TexUpUI
 
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
-    }
-
-    public readonly struct Normal
-    {
-        public readonly float X;
-        public readonly float Y;
-        public readonly float Z;
-
-        private Normal(float x, float y, float z)
-        {
-            X = x; Y = y; Z = z;
-        }
-
-        public static Normal FromVector(float x, float y, float z)
-        {
-            if (z < 0.0f) z = 0;
-
-            var l = MathF.Sqrt(x * x + y * y + z * z);
-            if (l < 0.001)
-            {
-                // The vector is too close to 0
-                return new Normal(0.0f, 0.0f, 1.0f);
-            }
-
-            return new Normal(x / l, y / l, z / l);
-        }
-        public static Normal FromVector(Vector3 v) => FromVector(v.X, v.Y, v.Z);
-
-        public static Normal FromXY(float x, float y)
-        {
-            var a = x * x + y * y;
-            var zSq = 1.0f - a;
-            if (zSq >= 0.0f)
-            {
-                return new Normal(x, y, MathF.Sqrt(zSq));
-            }
-            else
-            {
-                var f = 1.0f / MathF.Sqrt(a);
-                return new Normal(x * f, y * f, 0.0f);
-            }
-        }
-        public static Normal FromRG(byte r, byte g)
-            => FromXY(r / 127.5f - 1.0f, g / 127.5f - 1.0f);
-
-        public (byte r, byte g) ToRG() => (
-            (byte)((Math.Clamp(X, -1.0f, 1.0f) + 1.0f) * 127.5f),
-            (byte)((Math.Clamp(Y, -1.0f, 1.0f) + 1.0f) * 127.5f)
-        );
-        public (byte r, byte g, byte b) ToRGB()
-        {
-            var (r, g) = ToRG();
-            return (r, g, (byte)(Math.Clamp(Z, 0.0f, 1.0f) * 255.0f));
-        }
-
-        public static implicit operator Vector3(Normal n) => new Vector3(n.X, n.Y, n.Z);
     }
 }
