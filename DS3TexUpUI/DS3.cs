@@ -36,8 +36,7 @@ namespace DS3TexUpUI
         /// <para/>
         /// Useless and/or unused files are not in this map.
         /// </summary>
-        public static Lazy<IReadOnlyDictionary<string, ChrId[]>> CharacterFiles =
-            new Lazy<IReadOnlyDictionary<string, ChrId[]>>(GetCharacterFiles);
+        public static IReadOnlyDictionary<string, ChrId[]> CharacterFiles = GetCharacterFiles();
         private static IReadOnlyDictionary<string, ChrId[]> GetCharacterFiles()
         {
             var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, "chr.csv");
