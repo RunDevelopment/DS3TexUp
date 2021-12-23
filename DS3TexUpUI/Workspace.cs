@@ -33,10 +33,15 @@ namespace DS3TexUpUI
         public void Extract(SubProgressToken token)
         {
             EnsureBackup(token.Reserve(0));
-            UnpackHighRes(token.Reserve(0.5));
-            ExtractHighResTexture(token);
+
+            UnpackMap(token.Reserve(0.5));
+            ExtractHighResMapTexture(token);
         }
-        private void Unpack(SubProgressToken token, Func<string, bool> fileFilter)
+        private void UnpackMap(SubProgressToken token)
+        {
+            UnpackMap(token, f => !f.EndsWith("_l.tpf.dcx"));
+        }
+        private void UnpackMap(SubProgressToken token, Func<string, bool> fileFilter)
         {
             token.SubmitStatus("Unpacking all map files");
 
@@ -59,18 +64,47 @@ namespace DS3TexUpUI
             }
             token.SubmitProgress(1);
         }
-        private void UnpackHighRes(SubProgressToken token)
+        public void UnpackChr(SubProgressToken token)
         {
-            Unpack(token, f => !f.EndsWith("_l.tpf.dcx"));
+            token.SubmitStatus("Unpacking all chr files");
+
+            var files = Directory
+                .GetFiles(ChrDir, "*.texbnd.dcx", SearchOption.TopDirectoryOnly)
+                .Where(f =>
+                {
+                    // cXXXX
+                    var name = Path.GetFileName(f).Substring(0, 5);
+
+                    // c0000 doesn't have any interesting textures
+                    // Yabber can't open the files for c6330
+                    return name != "c0000" && name != "c6330";
+                })
+                .ToArray();
+
+            Yabber.RunParallel(token.Reserve(0.5), files);
+
+            token.SubmitStatus("Unpacking all chr .tpf files");
+
+            var tpfFiles = Directory
+                .GetDirectories(ChrDir, "c*-texbnd-dcx", SearchOption.TopDirectoryOnly)
+                .Select(d =>
+                {
+                    // cXXXX
+                    var n = Path.GetFileName(d).Substring(0, 5);
+                    return Path.Join(d, "chr", n, n + ".tpf");
+                })
+                .ToArray();
+
+            Yabber.RunParallel(token, tpfFiles);
         }
-        private void ExtractHighResTexture(SubProgressToken token)
+        private void ExtractHighResMapTexture(SubProgressToken token)
         {
             Directory.CreateDirectory(ExtractDir);
             Directory.CreateDirectory(OverwriteDir);
 
-            token.ForAll(DS3Info.Maps, ExtractHighResTextureMap);
+            token.ForAll(DS3Info.Maps, ExtractHighResMapTexture);
         }
-        private void ExtractHighResTextureMap(SubProgressToken token, string map)
+        private void ExtractHighResMapTexture(SubProgressToken token, string map)
         {
             token.SubmitStatus($"Extracting textures from {map}");
             token.SubmitProgress(0);
@@ -208,7 +242,7 @@ namespace DS3TexUpUI
                 EnsureBackup(token, backup.name, backup.original, backup.backup);
             });
         }
-        public static void EnsureBackup(SubProgressToken token, string name, string original, string backup)
+        private static void EnsureBackup(SubProgressToken token, string name, string original, string backup)
         {
             token.SubmitStatus($"Ensuring {name} backup");
             if (!Directory.Exists(backup))
@@ -233,7 +267,7 @@ namespace DS3TexUpUI
                 Restore(token, backup.name, backup.original, backup.backup);
             });
         }
-        public static void Restore(SubProgressToken token, string name, string original, string backup)
+        private static void Restore(SubProgressToken token, string name, string original, string backup)
         {
             if (!Directory.Exists(backup))
             {
