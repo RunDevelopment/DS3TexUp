@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DS3TexUpUI
 {
-    public static class DS3Info
+    public static class DS3
     {
         public static readonly string[] Maps = new string[]{
             "m30", // High Wall of Lothric, Consumed King's Garden, Lothric Castle

@@ -123,7 +123,7 @@ namespace DS3TexUpUI
         static List<string> GetAllFile(Workspace workspace)
         {
             var files = new List<string>();
-            foreach (var map in DS3Info.Maps)
+            foreach (var map in DS3.Maps)
             {
                 files.AddRange(Directory.GetFiles(Path.Join(workspace.UpscaleDir, map, "a")).Select(Path.GetFileNameWithoutExtension).Select(n => map + "/" + n));
             }

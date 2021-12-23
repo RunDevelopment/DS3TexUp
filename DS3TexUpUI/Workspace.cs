@@ -45,10 +45,10 @@ namespace DS3TexUpUI
         {
             token.SubmitStatus("Unpacking all map files");
 
-            foreach (var (map, i) in DS3Info.Maps.Select((m, i) => (m, i)))
+            foreach (var (map, i) in DS3.Maps.Select((m, i) => (m, i)))
             {
                 token.SubmitStatus($"Unpacking {map} map files");
-                token.SubmitProgress(i / (double)DS3Info.Maps.Length);
+                token.SubmitProgress(i / (double)DS3.Maps.Length);
 
                 var mapDir = Path.Join(MapsDir, map);
                 Yabber.Run(Directory.GetFiles(mapDir, $"{map}*.tpfbhd", SearchOption.TopDirectoryOnly));
@@ -60,7 +60,7 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus($"Unpacking {map} textures ({files.Count})");
-                Yabber.Run(token.Slice(i / (double)DS3Info.Maps.Length, 1.0 / DS3Info.Maps.Length), files.ToArray());
+                Yabber.Run(token.Slice(i / (double)DS3.Maps.Length, 1.0 / DS3.Maps.Length), files.ToArray());
             }
             token.SubmitProgress(1);
         }
@@ -102,7 +102,7 @@ namespace DS3TexUpUI
             Directory.CreateDirectory(ExtractDir);
             Directory.CreateDirectory(OverwriteDir);
 
-            token.ForAll(DS3Info.Maps, ExtractHighResMapTexture);
+            token.ForAll(DS3.Maps, ExtractHighResMapTexture);
         }
         private void ExtractHighResMapTexture(SubProgressToken token, string map)
         {
@@ -144,7 +144,7 @@ namespace DS3TexUpUI
         }
         private void PartialOverwrite(SubProgressToken token)
         {
-            var presentMaps = DS3Info.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
+            var presentMaps = DS3.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
             token.ForAll(presentMaps, PartialOverwriteMap);
         }
         private void PartialOverwriteMap(SubProgressToken token, string map)
@@ -284,7 +284,7 @@ namespace DS3TexUpUI
 
         public void PrepareUpscale(SubProgressToken token)
         {
-            token.ForAll(DS3Info.Maps, PrepareUpscaleMap);
+            token.ForAll(DS3.Maps, PrepareUpscaleMap);
         }
         private void PrepareUpscaleMap(SubProgressToken token, string map)
         {
