@@ -383,6 +383,36 @@ namespace DS3TexUpUI
             }
         }
 
+        public Dictionary<string, ChrId[]> GroupCharacterFiles()
+        {
+            var dirs = Directory.GetDirectories(ChrDir);
+
+            var files = new List<(string name, ChrId id)>();
+
+            foreach (var d in dirs)
+            {
+                // cXXXX
+                var name = Path.GetFileName(d).Substring(0, 5);
+                var id = ChrId.Parse(name);
+
+                var p = Path.Join(d, "chr", name, name + "-tpf");
+                var all = Directory.GetFiles(p)
+                    .Select(f => Path.GetFileNameWithoutExtension(f))
+                    .Where(f => f != "_yabber-tpf");
+
+                foreach (var f in all)
+                {
+                    files.Add((f, id));
+                }
+            }
+
+            var values = files
+                .GroupBy(f => f.name)
+                .Select(g => new KeyValuePair<string, ChrId[]>(g.Key, g.Select(f => f.id).ToArray()));
+
+            return new Dictionary<string, ChrId[]>(values);
+        }
+
         /// <summary>
         /// The `mXX_000X-tpfbhd` folders of a map.
         /// </summary>
