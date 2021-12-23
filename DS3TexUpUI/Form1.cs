@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -119,7 +119,7 @@ namespace DS3TexUpUI
         }
         private void overwriteButton_Click(object sender, EventArgs e)
         {
-            RunTask(GetWorkspace().Overwrtite);
+            RunTask(GetWorkspace().Overwrite);
         }
         private void restoreButton_Click(object sender, EventArgs e)
         {

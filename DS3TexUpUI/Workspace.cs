@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -98,11 +98,11 @@ namespace DS3TexUpUI
             token.SubmitProgress(1);
         }
 
-        public void Overwrtite(SubProgressToken token)
+        public void Overwrite(SubProgressToken token)
         {
-            PartialOverwrtite(token);
+            PartialOverwrite(token);
         }
-        private void PartialOverwrtite(SubProgressToken token)
+        private void PartialOverwrite(SubProgressToken token)
         {
             var presentMaps = DS3Info.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
             token.ForAll(presentMaps, PartialOverwrtiteMap);
