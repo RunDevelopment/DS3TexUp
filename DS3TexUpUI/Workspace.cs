@@ -105,9 +105,9 @@ namespace DS3TexUpUI
         private void PartialOverwrite(SubProgressToken token)
         {
             var presentMaps = DS3Info.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
-            token.ForAll(presentMaps, PartialOverwrtiteMap);
+            token.ForAll(presentMaps, PartialOverwriteMap);
         }
-        private void PartialOverwrtiteMap(SubProgressToken token, string map)
+        private void PartialOverwriteMap(SubProgressToken token, string map)
         {
             token.SubmitStatus($"Overwriting textures for {map}");
             token.SubmitProgress(0);
