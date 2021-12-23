@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -12,9 +12,15 @@ namespace DS3TexUpUI
         public string GameDir { get; }
         public string MapsDir => Path.Join(GameDir, "map");
         public string MapsBackupDir => Path.Join(GameDir, "map_old");
+        public string ChrDir => Path.Join(GameDir, "chr");
+        public string ChrBackupDir => Path.Join(GameDir, "chr_old");
+        public string ObjDir => Path.Join(GameDir, "obj");
+        public string ObjBackupDir => Path.Join(GameDir, "obj_old");
 
         public string TextureDir { get; }
         public string ExtractDir => Path.Join(TextureDir, "extract");
+        public string ExtractChrDir => Path.Join(ExtractDir, "chr");
+        public string ExtractObjDir => Path.Join(ExtractDir, "obj");
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
         public string UpscaleDir => Path.Join(TextureDir, "upscale");
 
@@ -187,37 +193,59 @@ namespace DS3TexUpUI
             return nameMap;
         }
 
+        private (string name, string original, string backup)[] GetBackups()
+        {
+            return new (string name, string original, string backup)[] {
+                ("chr", ChrDir, ChrBackupDir),
+                ("map", MapsDir, MapsBackupDir),
+                ("obj", ObjDir, ObjBackupDir),
+            };
+        }
         public void EnsureBackup(SubProgressToken token)
         {
-            token.SubmitStatus("Ensuring backup");
-            if (!Directory.Exists(MapsBackupDir))
+            token.ForAll(GetBackups(), (token, backup) =>
             {
-                token.SubmitStatus("Creating backup");
+                EnsureBackup(token, backup.name, backup.original, backup.backup);
+            });
+        }
+        public static void EnsureBackup(SubProgressToken token, string name, string original, string backup)
+        {
+            token.SubmitStatus($"Ensuring {name} backup");
+            if (!Directory.Exists(backup))
+            {
+                token.SubmitStatus($"Creating {name} backup");
                 try
                 {
-                    CopyFilesRecursively(new DirectoryInfo(MapsDir), Directory.CreateDirectory(MapsBackupDir), token);
+                    CopyFilesRecursively(new DirectoryInfo(original), Directory.CreateDirectory(backup), token);
                     token.SubmitProgress(1);
                 }
                 catch (Exception)
                 {
-                    token.SubmitStatus("Removing unfinished backup");
-                    Directory.Delete(MapsBackupDir, true);
+                    token.SubmitStatus($"Removing unfinished {name} backup");
+                    Directory.Delete(backup, true);
                 }
             }
         }
         public void Restore(SubProgressToken token)
         {
-            if (!Directory.Exists(MapsBackupDir))
+            token.ForAll(GetBackups(), (token, backup) =>
             {
-                token.SubmitStatus("Unable to restore. No backup found.");
+                Restore(token, backup.name, backup.original, backup.backup);
+            });
+        }
+        public static void Restore(SubProgressToken token, string name, string original, string backup)
+        {
+            if (!Directory.Exists(backup))
+            {
+                token.SubmitStatus($"Unable to restore. No {name} backup found.");
                 return;
             }
 
-            token.SubmitStatus("Removing current map files");
-            Directory.Delete(MapsDir, true);
+            token.SubmitStatus($"Removing current {name} files");
+            Directory.Delete(original, true);
 
-            token.SubmitStatus("Restoring map files from backup");
-            CopyFilesRecursively(new DirectoryInfo(MapsBackupDir), Directory.CreateDirectory(MapsDir), token);
+            token.SubmitStatus($"Restoring {name} files from backup");
+            CopyFilesRecursively(new DirectoryInfo(backup), Directory.CreateDirectory(original), token);
         }
 
         public void PrepareUpscale(SubProgressToken token)
