@@ -82,5 +82,42 @@ namespace DS3TexUpUI
             using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
             image.SaveAsPng(file);
         }
+
+        public static ArrayTextureMap<P> DownSample<P, M, A>(this AverageAccumulatorFactory<P, A> factory, M map, int scale)
+            where P : struct
+            where M : ITextureMap<P>
+            where A : IAverageAccumulator<P>, new()
+        {
+            if (scale < 1)
+                throw new ArgumentOutOfRangeException(nameof(scale));
+            if (map.Width % scale != 0 || map.Height % scale != 0)
+                throw new ArgumentException("Map dimensions have to evenly divide factor");
+
+            var w = map.Width / scale;
+            var h = map.Height / scale;
+            var result = new P[w * h];
+
+            for (int y = 0; y < h; y++)
+            {
+                for (int x = 0; x < w; x++)
+                {
+                    var a = factory.Create();
+
+                    for (int yOffset = 0; yOffset < scale; yOffset++)
+                    {
+                        var stride = (y * scale + yOffset) * map.Width;
+
+                        for (int xOffset = 0; xOffset < scale; xOffset++)
+                        {
+                            a.Add(map[stride + x * scale + xOffset]);
+                        }
+                    }
+
+                    result[y * w + x] = a.Result;
+                }
+            }
+
+            return new ArrayTextureMap<P>(result, w, h);
+        }
     }
 }
