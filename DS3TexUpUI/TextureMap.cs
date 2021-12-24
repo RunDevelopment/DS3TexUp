@@ -46,38 +46,33 @@ namespace DS3TexUpUI
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public static class MapExtensions
+    public static class TextureMapExtensions
     {
-        public static void Set<T, M, N>(this M map, N source)
+        public static void Set<T>(this ITextureMap<T> map, ITextureMap<T> source)
             where T : struct
-            where M : ITextureMap<T>
-            where N : ITextureMap<T>
         {
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = source[i];
         }
-        public static void Set<T, M>(this M map, Span<T> source)
+        public static void Set<T>(this ITextureMap<T> map, Span<T> source)
             where T : struct
-            where M : ITextureMap<T>
         {
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = source[i];
         }
-        public static void Set<T, M>(this M map, T source)
+        public static void Set<T>(this ITextureMap<T> map, T source)
             where T : struct
-            where M : ITextureMap<T>
         {
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = source;
         }
 
-        public static ArrayTextureMap<O> Convert<T, O, M>(this M map, Func<T, O> converter)
+        public static ArrayTextureMap<O> Convert<T, O>(this ITextureMap<T> map, Func<T, O> converter)
             where T : struct
             where O : struct
-            where M : ITextureMap<T>
         {
             var data = new O[map.Count];
             for (int i = 0; i < data.Length; i++)
@@ -94,12 +89,9 @@ namespace DS3TexUpUI
                 throw new ArgumentException("The given width does not evenly divide the array.", nameof(width));
             return new ArrayTextureMap<T>(array, width, height);
         }
-    }
 
-    public static class ByteMapExtensions
-    {
-        public static void SaveAsPng<M>(this M map, string file)
-             where M : ITextureMap<byte>
+
+        public static void SaveAsPng(this ITextureMap<byte> map, string file)
         {
             var rgb = new Rgb24[map.Count];
             for (int i = 0; i < rgb.Length; i++)
@@ -111,12 +103,7 @@ namespace DS3TexUpUI
             using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
             image.SaveAsPng(file);
         }
-    }
-
-    public static class FloatMapExtensions
-    {
-        public static void SaveAsPng<M>(this M map, string file)
-             where M : ITextureMap<float>
+        public static void SaveAsPng(this ITextureMap<float> map, string file)
         {
             var rgb = new Rgb24[map.Count];
             for (int i = 0; i < rgb.Length; i++)
@@ -129,16 +116,54 @@ namespace DS3TexUpUI
             using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
             image.SaveAsPng(file);
         }
+        public static void SaveAsPng(this ITextureMap<Normal> map, string file)
+        {
+            var rgb = new Rgb24[map.Count];
+            for (int i = 0; i < rgb.Length; i++)
+            {
+                var (r, g, b) = map[i].ToRGB();
+                rgb[i] = new Rgb24(r, g, b);
+            }
 
-        public static void Transform<M>(this M map, float offset = 0f, float scale = 0f)
-             where M : ITextureMap<float>
+            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
+            image.SaveAsPng(file);
+        }
+        public static void SaveAsPng(this ITextureMap<Rgba32> map, string file)
+        {
+            var rgb = new Rgba32[map.Count];
+            for (int i = 0; i < rgb.Length; i++)
+                rgb[i] = map[i];
+
+            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
+            image.SaveAsPng(file);
+        }
+        public static void SaveAsPng(this ITextureMap<Rgb24> map, string file)
+        {
+            var rgb = new Rgb24[map.Count];
+            for (int i = 0; i < rgb.Length; i++)
+                rgb[i] = map[i];
+
+            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
+            image.SaveAsPng(file);
+        }
+        public static void SaveAsPng(this ArrayTextureMap<Rgba32> map, string file)
+        {
+            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
+            image.SaveAsPng(file);
+        }
+        public static void SaveAsPng(this ArrayTextureMap<Rgb24> map, string file)
+        {
+            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
+            image.SaveAsPng(file);
+        }
+
+        public static void Transform(this ITextureMap<float> map, float offset = 0f, float scale = 0f)
         {
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = map[i] * scale + offset;
         }
-        public static void Normalize<M>(this M map)
-             where M : ITextureMap<float>
+        public static void Normalize(this ITextureMap<float> map)
         {
             var count = map.Count;
             if (count < 1) return;
@@ -163,27 +188,8 @@ namespace DS3TexUpUI
             for (int i = 0; i < count; i++)
                 map[i] = (map[i] - min) * f;
         }
-    }
 
-    public static class NormalMapExtensions
-    {
-        public static void SaveAsPng<M>(this M map, string file)
-            where M : ITextureMap<Normal>
-        {
-            var rgb = new Rgb24[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-            {
-                var (r, g, b) = map[i].ToRGB();
-                rgb[i] = new Rgb24(r, g, b);
-            }
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-
-        public static void CombineWith<M, N>(this M map, N other, float strength)
-            where M : ITextureMap<Normal>
-            where N : ITextureMap<Normal>
+        public static void CombineWith(this ITextureMap<Normal> map, ITextureMap<Normal> other, float strength)
         {
             var count = map.Count;
             for (int i = 0; i < count; i++)
