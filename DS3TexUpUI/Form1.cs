@@ -20,6 +20,8 @@ namespace DS3TexUpUI
 
         class Form1ProgressToken : IProgressToken
         {
+            readonly Form1 _form;
+
             public bool IsCanceled
             {
                 get
@@ -29,7 +31,8 @@ namespace DS3TexUpUI
                 }
             }
 
-            readonly Form1 _form;
+            public object Lock => this;
+
             public Form1ProgressToken(Form1 form)
             {
                 _form = form;

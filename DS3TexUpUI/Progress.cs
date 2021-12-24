@@ -18,6 +18,7 @@ namespace DS3TexUpUI
 
     public interface IProgressToken
     {
+        object Lock { get; }
         bool IsCanceled { get; }
         void CheckCanceled();
         void SubmitStatus(string status);
@@ -29,6 +30,8 @@ namespace DS3TexUpUI
         private readonly IProgressToken _token;
         private double _start;
         private double _size;
+
+        public object Lock => _token.Lock;
 
         public SubProgressToken(IProgressToken token) : this(token, 0) { }
         public SubProgressToken(IProgressToken token, double start) : this(token, start, 1 - start) { }
@@ -77,14 +80,14 @@ namespace DS3TexUpUI
 
             iter.ForAll(item =>
             {
-                lock (token)
+                lock (token.Lock)
                 {
                     if (token.IsCanceled) return;
                 }
 
                 var work = action(item);
 
-                lock (token)
+                lock (token.Lock)
                 {
                     if (token.IsCanceled) return;
                     done += work;
@@ -143,7 +146,7 @@ namespace DS3TexUpUI
 
             for (int i = 0; i < parts; i++)
             {
-                results[i] = new SubProgressToken(token, i / (double) parts, 1.0 / parts);
+                results[i] = new SubProgressToken(token, i / (double)parts, 1.0 / parts);
             }
 
             return results;
