@@ -18,10 +18,10 @@ namespace DS3TexUpUI
 
     public static class Average
     {
-        public static AverageAccumulatorFactory<byte, ByteAverageAccumulator> Byte() => default;
-        public static AverageAccumulatorFactory<int, IntAverageAccumulator> Int() => default;
-        public static AverageAccumulatorFactory<float, FloatAverageAccumulator> Float() => default;
-        public static AverageAccumulatorFactory<Normal, NormalAverageAccumulator> Normal() => default;
+        public static readonly AverageAccumulatorFactory<byte, ByteAverageAccumulator> Byte = default;
+        public static readonly AverageAccumulatorFactory<int, IntAverageAccumulator> Int = default;
+        public static readonly AverageAccumulatorFactory<float, FloatAverageAccumulator> Float = default;
+        public static readonly AverageAccumulatorFactory<Normal, NormalAverageAccumulator> Normal = default;
     }
 
     public struct ByteAverageAccumulator : IAverageAccumulator<byte>
