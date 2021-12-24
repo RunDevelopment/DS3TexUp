@@ -44,3 +44,13 @@ Since this is a GIGO situation, I just used `4x-UltraSharp`. It does a decent jo
 Height maps are even blockier than gloss maps and blurry often blurry on top of that. The first model does a good job of dealing with the extreme blockiness, but GIGO. It sometimes produces noticeable artifacts that are amplified by `4x-UltraSharp`. It doesn't happen too often, so I just ignored it for now.
 
 If the artifacts are too noticeable, I will think of a way of using the normal map to hopefully resolve the artifacts. However, I don't see the need to do so right now.
+
+## Reflective (_r)
+
+- `4x-UltraSharp`
+
+These maps aren't very noisy and this model seems to produce good results. Since `4x-UltraSharp` also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
+
+## Emissive (_e)
+
+Right now, I think emissive maps don't need upscaling.
