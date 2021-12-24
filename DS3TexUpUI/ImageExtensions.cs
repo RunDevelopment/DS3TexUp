@@ -72,21 +72,9 @@ namespace DS3TexUpUI
             return new ArrayTextureMap<Rgba32>(data, image.Width, image.Height);
         }
 
-        public static void SaveAsPng(this ArrayTextureMap<Rgba32> map, string file)
-        {
-            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ArrayTextureMap<Rgb24> map, string file)
-        {
-            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-
-        public static ArrayTextureMap<P> DownSample<P, M, A>(this AverageAccumulatorFactory<P, A> factory, M map, int scale)
-            where P : struct
-            where M : ITextureMap<P>
-            where A : IAverageAccumulator<P>, new()
+        public static ArrayTextureMap<P> DownSample<P, A>(this ArrayTextureMap<P> map, AverageAccumulatorFactory<P, A> factory, int scale)
+              where P : struct
+              where A : IAverageAccumulator<P>, new()
         {
             if (scale < 1)
                 throw new ArgumentOutOfRangeException(nameof(scale));
@@ -118,6 +106,90 @@ namespace DS3TexUpUI
             }
 
             return new ArrayTextureMap<P>(result, w, h);
+        }
+
+        public static ArrayTextureMap<Rgb24> IgnoreAlpha(this ArrayTextureMap<Rgba32> map)
+        {
+            var color = new Rgb24[map.Count];
+
+            for (int i = 0; i < color.Length; i++)
+            {
+                var p = map[i];
+                color[i] = new Rgb24(p.R, p.G, p.B);
+            }
+
+            return color.AsTextureMap(map.Width);
+        }
+        public static ArrayTextureMap<byte> GreyScaleIgnoreAlpha(this ArrayTextureMap<Rgba32> map)
+        {
+            var grey = new byte[map.Count];
+
+            for (int i = 0; i < grey.Length; i++)
+            {
+                var p = map[i];
+                grey[i] = (byte)((p.R + p.B + p.G) / 3);
+            }
+
+            return grey.AsTextureMap(map.Width);
+        }
+
+        public static (ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha) SplitAlphaBlack(this ArrayTextureMap<Rgba32> map)
+        {
+            var color = new Rgb24[map.Count];
+            var alpha = new byte[map.Count];
+
+            for (int i = 0; i < color.Length; i++)
+            {
+                var p = map[i];
+                color[i] = new Rgb24((byte)(p.R * p.A / 255), (byte)(p.G * p.A / 255), (byte)(p.B * p.A / 255));
+                alpha[i] = p.A;
+            }
+
+            return (color.AsTextureMap(map.Width), alpha.AsTextureMap(map.Width));
+        }
+        public static ArrayTextureMap<Rgba32> CombineAlphaBlack(this ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha)
+        {
+            if (color.Width != alpha.Width || color.Height != alpha.Height)
+                throw new ArgumentException();
+
+            var result = new Rgba32[color.Count];
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                var rgb = color[i];
+                var a = alpha[i];
+                result[i] = CombineAlphaBlack(rgb.R, rgb.G, rgb.B, a);
+            }
+
+            return result.AsTextureMap(color.Width);
+        }
+        public static ArrayTextureMap<Rgba32> CombineAlphaBlack(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
+        {
+            if (color.Width != alpha.Width || color.Height != alpha.Height)
+                throw new ArgumentException();
+
+            var result = new Rgba32[color.Count];
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                var rgb = color[i];
+                var a = alpha[i];
+                result[i] = CombineAlphaBlack(rgb.R, rgb.G, rgb.B, (byte)((a.R + a.B + a.G) / 3));
+            }
+
+            return result.AsTextureMap(color.Width);
+        }
+        private static Rgba32 CombineAlphaBlack(byte r, byte g, byte b, byte a)
+        {
+            if (a == 0)
+                return new Rgba32(0, 0, 0, a);
+            else
+                return new Rgba32(
+                    (byte)Math.Min(255, r * 255 / a),
+                    (byte)Math.Min(255, g * 255 / a),
+                    (byte)Math.Min(255, b * 255 / a),
+                    a
+                );
         }
     }
 }

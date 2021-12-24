@@ -6,6 +6,14 @@
 
 This consistently produced the sharpest, most interesting (detailed), and noise-free images.
 
+### Full alpha
+
+Some texture have full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
+
+I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with a black background and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately (using the same model from above) and recombined to get an upscaled transparent texture.
+
+This produces nice upscaled textures with full 8 bit alpha channels.
+
 ## Normal (_n)
 
 DS3 normal textures contains 3 different material maps that all have to be handled separately.
