@@ -26,6 +26,20 @@ namespace DS3TexUpUI
 
         public static DS3NormalMap Load(string file)
         {
+            if (file.EndsWith(".dds"))
+            {
+                using var image = DDSImage.Load(file);
+                return Of(image);
+            }
+            else
+            {
+                using var image = Image.Load(file);
+                return Of(image);
+            }
+        }
+
+        public static DS3NormalMap Of(DDSImage image)
+        {
             static Rgba32[] FromBGR(Span<byte> bytes)
             {
                 var data = new Rgba32[bytes.Length / 3];
@@ -41,6 +55,17 @@ namespace DS3TexUpUI
                 return data;
             }
 
+            var data = image.Format switch
+            {
+                Pfim.ImageFormat.Rgb24 => FromBGR(image.Data),
+                Pfim.ImageFormat.Rgba32 => FromBGRA(image.Data),
+                _ => throw new Exception("Invalid format: " + image.Format)
+            };
+
+            return new DS3NormalMap(data, image.Width, image.Height);
+        }
+        public static DS3NormalMap Of(Image image)
+        {
             static Rgba32[] MapRows<T>(Image<T> image, Func<T, Rgba32> map) where T : unmanaged, IPixel<T>
             {
                 var data = new Rgba32[image.Width * image.Height];
@@ -54,31 +79,15 @@ namespace DS3TexUpUI
                 return data;
             }
 
-            if (file.EndsWith(".dds"))
+            var data = image switch
             {
-                using var image = DDSImage.Load(file);
-                var data = image.Format switch
-                {
-                    Pfim.ImageFormat.Rgb24 => FromBGR(image.Data),
-                    Pfim.ImageFormat.Rgba32 => FromBGRA(image.Data),
-                    _ => throw new Exception("Invalid format: " + image.Format)
-                };
-
-                return new DS3NormalMap(data, image.Width, image.Height);
-            }
-            else
-            {
-                using var image = Image.Load(file);
-                var data = image switch
-                {
-                    Image<Bgr24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
-                    Image<Bgra32> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, p.A)),
-                    Image<Rgba32> i => MapRows(i, p => p),
-                    Image<Rgb24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
-                    _ => throw new Exception("Invalid format: " + image.PixelType.ToString())
-                };
-                return new DS3NormalMap(data, image.Width, image.Height);
-            }
+                Image<Bgr24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
+                Image<Bgra32> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, p.A)),
+                Image<Rgba32> i => MapRows(i, p => p),
+                Image<Rgb24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
+                _ => throw new Exception("Invalid format: " + image.PixelType.ToString())
+            };
+            return new DS3NormalMap(data, image.Width, image.Height);
         }
 
         public void SaveAsPng(string file)

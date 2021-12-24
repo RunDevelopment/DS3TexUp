@@ -34,8 +34,13 @@ namespace DS3TexUpUI
         {
             EnsureBackup(token.Reserve(0));
 
-            UnpackMap(token.Reserve(0.5));
-            ExtractHighResMapTexture(token);
+            var tokens = token.SplitEqually(4);
+
+            UnpackMap(tokens[0]);
+            ExtractHighResMapTexture(tokens[1]);
+
+            UnpackChr(tokens[2]);
+            ExtractChrTexture(tokens[3]);
         }
         private void UnpackMap(SubProgressToken token)
         {
@@ -64,7 +69,7 @@ namespace DS3TexUpUI
             }
             token.SubmitProgress(1);
         }
-        public void UnpackChr(SubProgressToken token)
+        private void UnpackChr(SubProgressToken token)
         {
             token.SubmitStatus("Unpacking all chr files");
 
@@ -136,6 +141,31 @@ namespace DS3TexUpUI
                 File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), false);
             }
             token.SubmitProgress(1);
+        }
+        private void ExtractChrTexture(SubProgressToken token)
+        {
+            token.SubmitStatus($"Extracting chr textues");
+            token.SubmitProgress(0);
+
+            var wantedFiles = DS3.CharacterFiles;
+
+            var outDir = Path.Join(ExtractChrDir);
+            Directory.CreateDirectory(outDir);
+
+            var files = Directory
+                .GetDirectories(ChrDir, "c*-texbnd-dcx", SearchOption.TopDirectoryOnly)
+                .SelectMany(d =>
+                {
+                    // cXXXX
+                    var n = Path.GetFileName(d).Substring(0, 5);
+                    return Directory
+                        .GetFiles(Path.Join(d, "chr", n, n + "-tpf"), "*.dds", SearchOption.TopDirectoryOnly)
+                        .Where(f => wantedFiles.ContainsKey(Path.GetFileNameWithoutExtension(f)));
+                })
+                .ToArray();
+
+            token.SubmitStatus($"Extracting {files.Length} chr textures");
+            token.ForAll(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
         }
 
         public void Overwrite(SubProgressToken token)
@@ -298,73 +328,81 @@ namespace DS3TexUpUI
 
             token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
             {
-                string targetDir;
-                var name = Path.GetFileNameWithoutExtension(file).ToLower();
-                if (name.Contains("_enkei_") || name.Contains("_low_"))
-                    targetDir = "distant";
-                else if (ignorePattern.IsMatch(name))
-                    targetDir = "ignore";
-                else if (name.EndsWith("_a"))
-                    targetDir = "a";
-                else if (name.EndsWith("_n"))
-                    targetDir = "n";
-                else if (name.EndsWith("_r"))
-                    targetDir = "r";
-                else
-                    targetDir = "other";
+                CategorizeTexture(file, Path.Join(UpscaleDir, map), ignorePattern.IsMatch);
+            });
+        }
+        public void PrepareUpscaleChr(SubProgressToken token)
+        {
+            token.SubmitStatus($"Preparing chr for upscaling");
 
-                var png = Path.GetFileNameWithoutExtension(file) + ".png";
+            var files = Directory.GetFiles(ExtractChrDir, "*.dds", SearchOption.TopDirectoryOnly);
 
-                try
+            token.SubmitStatus($"Preparing chr for upscaling ({files.Length} files)");
+
+            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
+            {
+                CategorizeTexture(file, Path.Join(UpscaleDir, "chr"), f => false);
+            });
+        }
+        private static void CategorizeTexture(string tex, string outDir, Func<string, bool> ignore)
+        {
+            static string JoinFile(params string[] parts)
+            {
+                var dir = Path.Join(parts);
+                Directory.CreateDirectory(Path.GetDirectoryName(dir));
+                return dir;
+            }
+
+            var name = Path.GetFileNameWithoutExtension(tex);
+            var png = name + ".png";
+
+            try
+            {
+                using var image = DDSImage.Load(tex);
+
+                if (ignore(name))
                 {
-                    if (targetDir == "n")
-                    {
-                        var image = DS3NormalMap.Load(file);
-
-                        var normalDir = Path.Join(UpscaleDir, map, "n_normal");
-                        var glossDir = Path.Join(UpscaleDir, map, "n_gloss");
-                        var heightDir = Path.Join(UpscaleDir, map, "n_height");
-                        Directory.CreateDirectory(normalDir);
-                        Directory.CreateDirectory(glossDir);
-                        Directory.CreateDirectory(heightDir);
-
-                        image.Normals.SaveAsPng(Path.Join(normalDir, png));
-                        image.Gloss.SaveAsPng(Path.Join(glossDir, png));
-                        if (image.Heights.IsNoticeable())
-                            image.Heights.SaveAsPng(Path.Join(heightDir, png));
-                    }
-                    else
-                    {
-                        using var image = DDSImage.Load(file);
-
-                        if (image.IsSolidColor(0.05))
-                        {
-                            // there is no point in upscaling a solid color.
-                            targetDir = "ignore";
-                        }
-                        else
-                        {
-                            if (targetDir == "a")
-                            {
-                                var t = image.GetTransparency();
-                                if (t == TransparencyKind.Binary)
-                                    targetDir = "a_t_binary";
-                                else if (t == TransparencyKind.Full)
-                                    targetDir = "a_t_full";
-                            }
-                        }
-
-                        targetDir = Path.Join(UpscaleDir, map, targetDir);
-                        Directory.CreateDirectory(targetDir);
-                        image.SaveAsPng(Path.Join(targetDir, png));
-                    }
-                }
-                catch (Exception)
-                {
-                    // ignore this file
+                    image.SaveAsPng(JoinFile(outDir, "ignore", png));
                     return;
                 }
-            });
+
+                if (name.EndsWith("_n"))
+                {
+                    var normalImage = DS3NormalMap.Of(image);
+
+                    normalImage.Normals.SaveAsPng(JoinFile(outDir, "n_normal", png));
+                    normalImage.Gloss.SaveAsPng(JoinFile(outDir, "n_gloss", png));
+                    if (normalImage.Heights.IsNoticeable())
+                        normalImage.Heights.SaveAsPng(JoinFile(outDir, "n_height", png));
+                    return;
+                }
+
+                if (image.IsSolidColor(0.05))
+                {
+                    // there is no point in upscaling a solid color.
+                    image.SaveAsPng(JoinFile(outDir, "ignore", png));
+                    return;
+                }
+
+                var target = "other";
+                if (name.EndsWith("_a"))
+                    target = image.GetTransparency() switch
+                    {
+                        TransparencyKind.Binary => "a_t_binary",
+                        TransparencyKind.Full => "a_t_full",
+                        _ => "a"
+                    };
+                else if (name.EndsWith("_r"))
+                    target = "r";
+                else if (name.EndsWith("_e") || name.EndsWith("_em"))
+                    target = "e";
+
+                image.SaveAsPng(JoinFile(outDir, target, png));
+            }
+            catch (Exception)
+            {
+                // ignore error
+            }
         }
 
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target, IProgressToken token)
