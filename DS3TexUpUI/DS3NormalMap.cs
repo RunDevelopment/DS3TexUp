@@ -17,6 +17,7 @@ namespace DS3TexUpUI
         public GlossView Gloss => new GlossView(this);
         public HeightView Heights => new HeightView(this);
 
+        private DS3NormalMap(ArrayTextureMap<Rgba32> map) : this(map.Data, map.Width, map.Height) { }
         private DS3NormalMap(Rgba32[] data, int width, int height)
         {
             Data = data;
@@ -24,71 +25,9 @@ namespace DS3TexUpUI
             Height = height;
         }
 
-        public static DS3NormalMap Load(string file)
-        {
-            if (file.EndsWith(".dds"))
-            {
-                using var image = DDSImage.Load(file);
-                return Of(image);
-            }
-            else
-            {
-                using var image = Image.Load(file);
-                return Of(image);
-            }
-        }
-
-        public static DS3NormalMap Of(DDSImage image)
-        {
-            static Rgba32[] FromBGR(Span<byte> bytes)
-            {
-                var data = new Rgba32[bytes.Length / 3];
-                for (var i = 0; i < data.Length; i++)
-                    data[i] = new Rgba32(bytes[i * 3 + 2], bytes[i * 3 + 1], bytes[i * 3 + 0], 255);
-                return data;
-            }
-            static Rgba32[] FromBGRA(Span<byte> bytes)
-            {
-                var data = new Rgba32[bytes.Length / 4];
-                for (var i = 0; i < data.Length; i++)
-                    data[i] = new Rgba32(bytes[i * 4 + 2], bytes[i * 4 + 1], bytes[i * 4 + 0], bytes[i * 4 + 3]);
-                return data;
-            }
-
-            var data = image.Format switch
-            {
-                Pfim.ImageFormat.Rgb24 => FromBGR(image.Data),
-                Pfim.ImageFormat.Rgba32 => FromBGRA(image.Data),
-                _ => throw new Exception("Invalid format: " + image.Format)
-            };
-
-            return new DS3NormalMap(data, image.Width, image.Height);
-        }
-        public static DS3NormalMap Of(Image image)
-        {
-            static Rgba32[] MapRows<T>(Image<T> image, Func<T, Rgba32> map) where T : unmanaged, IPixel<T>
-            {
-                var data = new Rgba32[image.Width * image.Height];
-                for (var y = 0; y < image.Height; y++)
-                {
-                    var stride = image.Width * y;
-                    var row = image.GetPixelRowSpan(y);
-                    for (int x = 0; x < row.Length; x++)
-                        data[stride + x] = map(row[x]);
-                }
-                return data;
-            }
-
-            var data = image switch
-            {
-                Image<Bgr24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
-                Image<Bgra32> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, p.A)),
-                Image<Rgba32> i => MapRows(i, p => p),
-                Image<Rgb24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
-                _ => throw new Exception("Invalid format: " + image.PixelType.ToString())
-            };
-            return new DS3NormalMap(data, image.Width, image.Height);
-        }
+        public static DS3NormalMap Load(string file) => new DS3NormalMap(file.LoadTextureMap());
+        public static DS3NormalMap Of(DDSImage image) => new DS3NormalMap(image.ToTextureMap());
+        public static DS3NormalMap Of(Image image) => new DS3NormalMap(image.ToTextureMap());
 
         public void SaveAsPng(string file)
         {

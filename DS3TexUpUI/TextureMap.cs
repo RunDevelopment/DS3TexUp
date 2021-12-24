@@ -17,28 +17,29 @@ namespace DS3TexUpUI
         T this[int x, int y] { get; set; }
     }
 
-    public readonly struct TextureMapAdapter<T> : ITextureMap<T>
+    /// <summary>A texture map backed by an array.</summary>
+    public readonly struct ArrayTextureMap<T> : ITextureMap<T>
         where T : struct
     {
-        private readonly T[] _data;
+        public readonly T[] Data;
 
         public int Width { get; }
         public int Height { get; }
         public int Count => Width * Height;
 
-        public T this[int index] { get => _data[index]; set => _data[index] = value; }
+        public T this[int index] { get => Data[index]; set => Data[index] = value; }
         public T this[int x, int y] { get => this[y * Width + x]; set => this[y * Width + x] = value; }
 
-        public TextureMapAdapter(T[] data, int width, int height)
+        public ArrayTextureMap(T[] data, int width, int height)
         {
             Width = width;
             Height = height;
-            _data = data;
+            Data = data;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            foreach (var item in _data)
+            foreach (var item in Data)
                 yield return item;
         }
 
@@ -73,7 +74,7 @@ namespace DS3TexUpUI
                 map[i] = source;
         }
 
-        public static TextureMapAdapter<O> Convert<T, O, M>(this M map, Func<T, O> converter)
+        public static ArrayTextureMap<O> Convert<T, O, M>(this M map, Func<T, O> converter)
             where T : struct
             where O : struct
             where M : ITextureMap<T>
@@ -82,16 +83,16 @@ namespace DS3TexUpUI
             for (int i = 0; i < data.Length; i++)
                 data[i] = converter(map[i]);
 
-            return new TextureMapAdapter<O>(data, map.Width, map.Height);
+            return new ArrayTextureMap<O>(data, map.Width, map.Height);
         }
 
-        public static TextureMapAdapter<T> AsTextureMap<T>(this T[] array, int width)
+        public static ArrayTextureMap<T> AsTextureMap<T>(this T[] array, int width)
             where T : struct
         {
             var height = array.Length / width;
             if (width * height != array.Length)
                 throw new ArgumentException("The given width does not evenly divide the array.", nameof(width));
-            return new TextureMapAdapter<T>(array, width, height);
+            return new ArrayTextureMap<T>(array, width, height);
         }
     }
 
