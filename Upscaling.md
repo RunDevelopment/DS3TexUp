@@ -12,7 +12,7 @@ This consistently produced the sharpest, most interesting (detailed), and noise-
 
 Some texture have binary or full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
 
-I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with a black background and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately (using the same model from above) and recombined to get an upscaled transparent texture.
+I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with a black background and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately (using the same model from above) and recombined to get an upscaled transparent texture (see `CombineAlphaBlack`).
 
 The `1x_SSAntiAlias9x` model is necessary to smoothen the edges of images with binary alpha. The anti aliasing also benefits the full alpha images since it smooths over some block compression artifacts in the alpha channel.
 
