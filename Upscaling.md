@@ -6,13 +6,17 @@
 
 This consistently produced the sharpest, most interesting (detailed), and noise-free images.
 
-### Full alpha
+### Binary alpha & Full alpha
 
-Some texture have full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
+- `1x_SSAntiAlias9x` chained with [ `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% ]
+
+Some texture have binary or full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
 
 I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with a black background and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately (using the same model from above) and recombined to get an upscaled transparent texture.
 
-This produces nice upscaled textures with full 8 bit alpha channels.
+The `1x_SSAntiAlias9x` model is necessary to smoothen the edges of images with binary alpha. The anti aliasing also benefits the full alpha images since it smooths over some block compression artifacts in the alpha channel.
+
+This produces nice upscaled textures with full 8 bit alpha channels. In the case of images with binary alpha, the 8 bit alpha is then quantized to binary.
 
 ## Normal (_n)
 
