@@ -386,12 +386,24 @@ namespace DS3TexUpUI
 
                 var target = "other";
                 if (name.EndsWith("_a"))
-                    target = image.GetTransparency() switch
+                {
+                    var transparency = image.GetTransparency();
+
+                    target = transparency switch
                     {
-                        TransparencyKind.Binary => "a_t_binary",
-                        TransparencyKind.Full => "a_t_full",
+                        TransparencyKind.Binary => "a_alpha_binary",
+                        TransparencyKind.Full => "a_alpha_full",
                         _ => "a"
                     };
+
+                    if (transparency == TransparencyKind.Binary || transparency == TransparencyKind.Full)
+                    {
+                        var (color, alpha) = image.ToTextureMap().SplitAlphaBlack();
+                        color.SaveAsPng(JoinFile(outDir, target, name + "-color.png"));
+                        alpha.SaveAsPng(JoinFile(outDir, target, name + "-alpha.png"));
+                        return;
+                    }
+                }
                 else if (name.EndsWith("_r"))
                     target = "r";
                 else if (name.EndsWith("_e") || name.EndsWith("_em"))
