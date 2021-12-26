@@ -34,13 +34,16 @@ namespace DS3TexUpUI
         {
             EnsureBackup(token.Reserve(0));
 
-            var tokens = token.SplitEqually(4);
+            var tokens = token.SplitEqually(6);
 
             UnpackMap(tokens[0]);
             ExtractHighResMapTexture(tokens[1]);
 
             UnpackChr(tokens[2]);
             ExtractChrTexture(tokens[3]);
+
+            UnpackObj(tokens[4]);
+            ExtractObjTexture(tokens[5]);
         }
         private void UnpackMap(SubProgressToken token)
         {
@@ -98,6 +101,33 @@ namespace DS3TexUpUI
                     var n = Path.GetFileName(d).Substring(0, 5);
                     return Path.Join(d, "chr", n, n + ".tpf");
                 })
+                .ToArray();
+
+            Yabber.RunParallel(token, tpfFiles);
+        }
+        private void UnpackObj(SubProgressToken token)
+        {
+            token.SubmitStatus("Unpacking all obj files");
+
+            var files = Directory
+                .GetFiles(ObjDir, "*objbnd.dcx", SearchOption.TopDirectoryOnly)
+                .ToArray();
+
+            token.SubmitStatus($"Unpacking {files.Length} obj files");
+
+            Yabber.RunParallel(token.Reserve(0.5), files);
+
+            token.SubmitStatus("Unpacking all obj .tpf files");
+
+            var tpfFiles = Directory
+                .GetDirectories(ObjDir, "o*-objbnd-dcx", SearchOption.TopDirectoryOnly)
+                .Select(d =>
+                {
+                    // oXXXXXX
+                    var id = Path.GetFileName(d).Substring(0, 7);
+                    return Path.Join(d, "obj", id.Substring(0, 3), id, id + ".tpf");
+                })
+                .Where(File.Exists)
                 .ToArray();
 
             Yabber.RunParallel(token, tpfFiles);
@@ -166,6 +196,37 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Extracting {files.Length} chr textures");
             token.ForAll(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
+        }
+        public void ExtractObjTexture(SubProgressToken token)
+        {
+            token.SubmitStatus($"Extracting obj textues");
+            token.SubmitProgress(0);
+
+            var outDir = Path.Join(ExtractObjDir);
+            Directory.CreateDirectory(outDir);
+
+            var files = Directory
+                .GetDirectories(ObjDir, "o*-objbnd-dcx", SearchOption.TopDirectoryOnly)
+                .SelectMany(d =>
+                {
+                    // oXXXXXX
+                    var id = Path.GetFileName(d).Substring(0, 7);
+
+                    var tpf = Path.Join(d, "obj", id.Substring(0, 3), id, id + "-tpf");
+                    if (!Directory.Exists(tpf)) return new (string, string)[0];
+
+                    return Directory
+                        .GetFiles(tpf, "*.dds", SearchOption.TopDirectoryOnly)
+                        .Select(f => (id, f));
+                })
+                .ToArray();
+
+            token.SubmitStatus($"Extracting {files.Length} obj textures");
+            token.ForAll(files, pair =>
+            {
+                var (id, file) = pair;
+                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
+            });
         }
 
         public void Overwrite(SubProgressToken token)
