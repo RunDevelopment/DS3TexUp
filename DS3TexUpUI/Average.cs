@@ -23,6 +23,8 @@ namespace DS3TexUpUI
         public static readonly AverageAccumulatorFactory<int, IntAverageAccumulator> Int = default;
         public static readonly AverageAccumulatorFactory<float, FloatAverageAccumulator> Float = default;
         public static readonly AverageAccumulatorFactory<Normal, NormalAverageAccumulator> Normal = default;
+        public static readonly AverageAccumulatorFactory<Rgb24, Rgb24AverageAccumulator> Rgb24 = default;
+        public static readonly AverageAccumulatorFactory<Rgba32, Rgba32AverageAccumulator> Rgba32 = default;
     }
 
     public struct ByteAverageAccumulator : IAverageAccumulator<byte>
