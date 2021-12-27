@@ -399,20 +399,42 @@ namespace DS3TexUpUI
             );
         }
 
-        private static (byte l, byte x, byte y) RgbToLxy(byte r, byte g, byte b)
+        public static float GetSharpnessScore(this ArrayTextureMap<Rgba32> map)
         {
-            var l = Math.Max(r, Math.Max(g, b));
-            return (
-                l,
-                (byte)((255 + r - g) / (2 * l)),
-                (byte)((255 + b - g) / (2 * l))
-            );
-        }
-        public static Rgb24 LxyToRgb(byte l, byte x, byte y)
-        {
-            var g_ = 255 - Math.Max(x, y);
-            var max = Math.Max(x, Math.Max(g_, y));
-            return new Rgb24((byte)(x * l / max), (byte)(g_ * l / max), (byte)(y * l / max));
+            var w = map.Width;
+            var h = map.Height;
+
+            long varR = 0;
+            long varG = 0;
+            long varB = 0;
+
+            static long Sq(long v) => v * v;
+
+            for (var y = 1; y < h; y++)
+            {
+                for (var x = 1; x < w; x++)
+                {
+                    var p = map[y * w + x];
+                    var px = map[y * w + (x - 1)];
+                    var py = map[(y - 1) * w + x];
+
+                    varR += Sq(p.R - px.R);
+                    varG += Sq(p.G - px.G);
+                    varB += Sq(p.B - px.B);
+
+                    varR += Sq(p.R - py.R);
+                    varG += Sq(p.G - py.G);
+                    varB += Sq(p.B - py.B);
+                }
+            }
+
+            var n = (w - 1.0) * (h - 1.0) * 2.0;
+
+            var stdR = Math.Sqrt(varR / n) / 255;
+            var stdG = Math.Sqrt(varG / n) / 255;
+            var stdB = Math.Sqrt(varB / n) / 255;
+
+            return (float)(stdR * 0.3 + stdG * 0.5 + stdB * 0.2);
         }
     }
 }
