@@ -475,8 +475,8 @@ namespace DS3TexUpUI
                     if (transparency == TransparencyKind.Binary || transparency == TransparencyKind.Full)
                     {
                         var (color, alpha) = image.ToTextureMap().SplitAlphaBlack();
-                        color.SaveAsPng(JoinFile(outDir, target, name + "-color.png"));
-                        alpha.SaveAsPng(JoinFile(outDir, target, name + "-alpha.png"));
+                        color.SaveAsPng(JoinFile(outDir, target, "color_" + png));
+                        alpha.SaveAsPng(JoinFile(outDir, target, "alpha_" + png));
                         return;
                     }
                 }
