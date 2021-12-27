@@ -34,16 +34,14 @@ namespace DS3TexUpUI
         {
             EnsureBackup(token.Reserve(0));
 
-            var tokens = token.SplitEqually(6);
-
-            UnpackMap(tokens[0]);
-            ExtractHighResMapTexture(tokens[1]);
-
-            UnpackChr(tokens[2]);
-            ExtractChrTexture(tokens[3]);
-
-            UnpackObj(tokens[4]);
-            ExtractObjTexture(tokens[5]);
+            token.SplitEqually(
+                UnpackMap,
+                ExtractHighResMapTexture,
+                UnpackChr,
+                ExtractChrTexture,
+                UnpackObj,
+                ExtractObjTexture
+            );
         }
         private void UnpackMap(SubProgressToken token)
         {
@@ -197,7 +195,7 @@ namespace DS3TexUpUI
             token.SubmitStatus($"Extracting {files.Length} chr textures");
             token.ForAll(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
         }
-        public void ExtractObjTexture(SubProgressToken token)
+        private void ExtractObjTexture(SubProgressToken token)
         {
             token.SubmitStatus($"Extracting obj textues");
             token.SubmitProgress(0);
@@ -375,7 +373,11 @@ namespace DS3TexUpUI
 
         public void PrepareUpscale(SubProgressToken token)
         {
-            token.ForAll(DS3.Maps, PrepareUpscaleMap);
+            token.SplitEqually(
+                token => token.ForAll(DS3.Maps, PrepareUpscaleMap),
+                PrepareUpscaleChr,
+                PrepareUpscaleObj
+            );
         }
         private void PrepareUpscaleMap(SubProgressToken token, string map)
         {
@@ -392,7 +394,7 @@ namespace DS3TexUpUI
                 CategorizeTexture(file, Path.Join(UpscaleDir, map), ignorePattern.IsMatch);
             });
         }
-        public void PrepareUpscaleChr(SubProgressToken token)
+        private void PrepareUpscaleChr(SubProgressToken token)
         {
             token.SubmitStatus($"Preparing chr for upscaling");
 
@@ -403,6 +405,19 @@ namespace DS3TexUpUI
             token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
             {
                 CategorizeTexture(file, Path.Join(UpscaleDir, "chr"), f => false);
+            });
+        }
+        public void PrepareUpscaleObj(SubProgressToken token)
+        {
+            token.SubmitStatus($"Preparing obj for upscaling");
+
+            var files = Directory.GetFiles(ExtractObjDir, "*.dds", SearchOption.TopDirectoryOnly);
+
+            token.SubmitStatus($"Preparing obj for upscaling ({files.Length} files)");
+
+            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
+            {
+                CategorizeTexture(file, Path.Join(UpscaleDir, "obj"), f => false);
             });
         }
         private static void CategorizeTexture(string tex, string outDir, Func<string, bool> ignore)

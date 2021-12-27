@@ -151,6 +151,13 @@ namespace DS3TexUpUI
 
             return results;
         }
+        public static void SplitEqually(this IProgressToken token, params Action<SubProgressToken>[] consumers)
+        {
+            var tokens = token.SplitEqually(consumers.Length);
+
+            for (int i = 0; i < consumers.Length; i++)
+                consumers[i](tokens[i]);
+        }
 
         public static (SubProgressToken, SubProgressToken) Split(this IProgressToken token, double s1)
         {
