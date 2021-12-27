@@ -1,4 +1,5 @@
 using System.Numerics;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace DS3TexUpUI
 {
@@ -72,6 +73,69 @@ namespace DS3TexUpUI
         public void Add(Normal value)
         {
             _total += value;
+        }
+    }
+    public struct Rgb24AverageAccumulator : IAverageAccumulator<Rgb24>
+    {
+        private int _totalR;
+        private int _totalG;
+        private int _totalB;
+        private int _count;
+
+        public Rgb24 Result
+        {
+            get
+            {
+                if (_count == 0) return new Rgb24(0, 0, 0);
+
+                var factor = (double)_count;
+                return new Rgb24(
+                    (byte)(_totalR * factor),
+                    (byte)(_totalG * factor),
+                    (byte)(_totalB * factor)
+                );
+            }
+        }
+
+        public void Add(Rgb24 value)
+        {
+            _totalR += value.R;
+            _totalG += value.G;
+            _totalB += value.B;
+            _count++;
+        }
+    }
+    public struct Rgba32AverageAccumulator : IAverageAccumulator<Rgba32>
+    {
+        private int _totalR;
+        private int _totalG;
+        private int _totalB;
+        private int _totalA;
+        private int _count;
+
+        public Rgba32 Result
+        {
+            get
+            {
+                if (_count == 0) return new Rgba32(0, 0, 0, 0);
+
+                var factor = (double)_count;
+                return new Rgba32(
+                    (byte)(_totalR * factor),
+                    (byte)(_totalG * factor),
+                    (byte)(_totalB * factor),
+                    (byte)(_totalA * factor)
+                );
+            }
+        }
+
+        public void Add(Rgba32 value)
+        {
+            _totalR += value.R;
+            _totalG += value.G;
+            _totalB += value.B;
+            _totalA += value.A;
+            _count++;
         }
     }
 }
