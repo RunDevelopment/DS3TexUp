@@ -2,13 +2,25 @@
 
 ## Albedo (_a)
 
+- `4x-UltraSharp`
 - `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
 
-This consistently produced the sharpest, most interesting (detailed), and noise-free images.
+These models all have their strengths and weaknesses. To get the sharpest results, I run all models and then pick the sharpest upscaled image using the `GetSharpnessScore` function.
+
+<details>
+<summary>My evaluation of the 2 models</summary>
+
+I will hence forth refer to `4x-UltraSharp` as M1 and `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% as M2.
+
+From what I tested, M2 seems to consistently produce the sharpest and most interesting results but only if the input image is very sharp, if the input is slightly blurry, the output will be too. This is a problem as some textures are just a tiny bit blurry. M2 is a model of extremes. The good results are generally very good but the bad results are also very bad.
+
+Fortunately, M1 doesn't have this problem and will always produce okay results. However, only okay. The average quality of the upscaled images is good but no where near a good M2 upscale.
+
+</details>
 
 ### Binary alpha & Full alpha
 
-- `1x_SSAntiAlias9x` chained with [ `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% ]
+- `1x_SSAntiAlias9x` chained with [ all models from above ]
 
 Some texture have binary or full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
 
