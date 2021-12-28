@@ -19,7 +19,8 @@ namespace DS3TexUpUI
                 yield return source.Slice(offset, size);
                 offset += size;
             }
-            yield return source.Slice(offset, source.Length - offset);
+            var last = source.Slice(offset, source.Length - offset);
+            if (last.Length > 0) yield return last;
         }
 
         public static T[] ToArray<T>(this Span<T> span, int start) => span.Slice(start).ToArray();
