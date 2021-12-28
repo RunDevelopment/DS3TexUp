@@ -39,7 +39,7 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<string, ChrId[]> CharacterFiles = GetCharacterFiles();
         private static IReadOnlyDictionary<string, ChrId[]> GetCharacterFiles()
         {
-            var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, "chr.csv");
+            var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, @"data\chr.csv");
             var text = File.ReadAllText(file, Encoding.UTF8);
 
             var result = new Dictionary<string, ChrId[]>();

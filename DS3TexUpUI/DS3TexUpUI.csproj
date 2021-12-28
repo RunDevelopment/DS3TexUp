@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ContentWithTargetPath Include="data\*.csv">
+    <ContentWithTargetPath Include="data\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>%(RecursiveDir)\%(Filename)%(Extension)</TargetPath>
+      <TargetPath>%(RecursiveDir)\data\%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
 
     <PackageReference Include="Pfim" Version="0.10.2" />
