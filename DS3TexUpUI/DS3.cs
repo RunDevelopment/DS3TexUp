@@ -64,6 +64,15 @@ namespace DS3TexUpUI
             return result;
         }
 
+        public static IReadOnlyList<string> Parts = GetParts();
+        private static IReadOnlyList<string> GetParts()
+        {
+            var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, @"data\parts.txt");
+            var text = File.ReadAllText(file, Encoding.UTF8);
+
+            return text.Split('\n').Select(s => s.Trim()).Where(s => s.Length > 0).ToArray();
+        }
+
         public static class DDS
         {
             // Used for sRGB color textures without transparency
