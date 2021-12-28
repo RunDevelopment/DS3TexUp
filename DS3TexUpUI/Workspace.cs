@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -482,8 +482,10 @@ namespace DS3TexUpUI
                 }
                 else if (name.EndsWith("_r"))
                     target = "r";
-                else if (name.EndsWith("_e") || name.EndsWith("_em"))
-                    target = "e";
+                else if (name.EndsWith("_s"))
+                    target = "s";
+                else if (name.EndsWith("_em") || name.EndsWith("_e"))
+                    target = "em";
 
                 image.SaveAsPng(JoinFile(outDir, target, png));
             }
