@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -16,11 +16,14 @@ namespace DS3TexUpUI
         public string ChrBackupDir => Path.Join(GameDir, "chr_old");
         public string ObjDir => Path.Join(GameDir, "obj");
         public string ObjBackupDir => Path.Join(GameDir, "obj_old");
+        public string PartsDir => Path.Join(GameDir, "parts");
+        public string PartsBackupDir => Path.Join(GameDir, "parts_old");
 
         public string TextureDir { get; }
         public string ExtractDir => Path.Join(TextureDir, "extract");
         public string ExtractChrDir => Path.Join(ExtractDir, "chr");
         public string ExtractObjDir => Path.Join(ExtractDir, "obj");
+        public string ExtractPartsDir => Path.Join(ExtractDir, "parts");
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
         public string UpscaleDir => Path.Join(TextureDir, "upscale");
 
@@ -40,7 +43,9 @@ namespace DS3TexUpUI
                 UnpackChr,
                 ExtractChrTexture,
                 UnpackObj,
-                ExtractObjTexture
+                ExtractObjTexture,
+                UnpackParts,
+                ExtractPartsTexture
             );
         }
         private void UnpackMap(SubProgressToken token)
@@ -124,6 +129,38 @@ namespace DS3TexUpUI
                     // oXXXXXX
                     var id = Path.GetFileName(d).Substring(0, 7);
                     return Path.Join(d, "obj", id.Substring(0, 3), id, id + ".tpf");
+                })
+                .Where(File.Exists)
+                .ToArray();
+
+            Yabber.RunParallel(token, tpfFiles);
+        }
+        private void UnpackParts(SubProgressToken token)
+        {
+            token.SubmitStatus("Unpacking all parts files");
+
+            var files = Directory
+                .GetFiles(PartsDir, "*.partsbnd.dcx", SearchOption.TopDirectoryOnly)
+                .Select(f => Path.GetFileName(f))
+                .Select(f => f.Substring(0, f.Length - ".partsbnd.dcx".Length))
+                .Intersect(DS3.Parts)
+                .Select(f => Path.Join(PartsDir, f + ".partsbnd.dcx"))
+                .ToArray();
+
+            token.SubmitStatus($"Unpacking {files.Length} parts files");
+
+            Yabber.RunParallel(token.Reserve(0.5), files);
+
+            token.SubmitStatus("Unpacking all parts .tpf files");
+
+            var tpfFiles = Directory
+                .GetDirectories(PartsDir, "*-partsbnd-dcx", SearchOption.TopDirectoryOnly)
+                .Select(d =>
+                {
+                    // XX_X_XXXX
+                    var id = Path.GetFileName(d).Substring(0, 9).ToUpperInvariant();
+                    var type = id.StartsWith("WP") ? "Weapon" : "FullBody";
+                    return Path.Join(d, "parts", type, id, id + ".tpf");
                 })
                 .Where(File.Exists)
                 .ToArray();
@@ -226,6 +263,39 @@ namespace DS3TexUpUI
                 File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
             });
         }
+        private void ExtractPartsTexture(SubProgressToken token)
+        {
+            token.SubmitStatus($"Extracting parts textues");
+            token.SubmitProgress(0);
+
+            var outDir = Path.Join(ExtractPartsDir);
+            Directory.CreateDirectory(outDir);
+
+            var files = Directory
+                .GetDirectories(PartsDir, "*-partsbnd-dcx", SearchOption.TopDirectoryOnly)
+                .SelectMany(d =>
+                {
+                    // XX_X_XXXX
+                    var id = Path.GetFileName(d).Substring(0, 9).ToUpperInvariant();
+                    var type = id.StartsWith("WP") ? "Weapon" : "FullBody";
+
+                    var tpf = Path.Join(d, "parts", type, id, id + "-tpf");
+
+                    if (!Directory.Exists(tpf)) return new (string, string)[0];
+
+                    return Directory
+                        .GetFiles(tpf, "*.dds", SearchOption.TopDirectoryOnly)
+                        .Select(f => (id, f));
+                })
+                .ToArray();
+
+            token.SubmitStatus($"Extracting {files.Length} parts textures");
+            token.ForAll(files, pair =>
+            {
+                var (id, file) = pair;
+                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
+            });
+        }
 
         public void Overwrite(SubProgressToken token)
         {
@@ -322,6 +392,7 @@ namespace DS3TexUpUI
                 ("chr", ChrDir, ChrBackupDir),
                 ("map", MapsDir, MapsBackupDir),
                 ("obj", ObjDir, ObjBackupDir),
+                ("parts", PartsDir, PartsBackupDir),
             };
         }
         public void EnsureBackup(SubProgressToken token)
@@ -376,48 +447,43 @@ namespace DS3TexUpUI
             token.SplitEqually(
                 token => token.ForAll(DS3.Maps, PrepareUpscaleMap),
                 PrepareUpscaleChr,
-                PrepareUpscaleObj
+                PrepareUpscaleObj,
+                PrepareUpscaleParts
             );
         }
         private void PrepareUpscaleMap(SubProgressToken token, string map)
         {
-            token.SubmitStatus($"Preparing {map} for upscaling");
-
-            var files = Directory.GetFiles(Path.Join(ExtractDir, map), "*.dds", SearchOption.TopDirectoryOnly);
-
-            token.SubmitStatus($"Preparing {map} for upscaling ({files.Length} files)");
-
             var ignorePattern = new Regex(@"\Am[\d_]+_(?i:base|sky|mountain)[_\darnme]+\z");
-
-            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
-            {
-                CategorizeTexture(file, Path.Join(UpscaleDir, map), ignorePattern.IsMatch);
-            });
+            PrepareUpscaleDirectory(token, map, ignorePattern.IsMatch);
         }
         private void PrepareUpscaleChr(SubProgressToken token)
         {
-            token.SubmitStatus($"Preparing chr for upscaling");
-
-            var files = Directory.GetFiles(ExtractChrDir, "*.dds", SearchOption.TopDirectoryOnly);
-
-            token.SubmitStatus($"Preparing chr for upscaling ({files.Length} files)");
-
-            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
-            {
-                CategorizeTexture(file, Path.Join(UpscaleDir, "chr"), f => false);
-            });
+            PrepareUpscaleDirectory(token, "chr");
         }
-        public void PrepareUpscaleObj(SubProgressToken token)
+        private void PrepareUpscaleObj(SubProgressToken token)
         {
-            token.SubmitStatus($"Preparing obj for upscaling");
+            PrepareUpscaleDirectory(token, "obj");
+        }
+        private void PrepareUpscaleParts(SubProgressToken token)
+        {
+            PrepareUpscaleDirectory(token, "parts");
+        }
+        private void PrepareUpscaleDirectory(SubProgressToken token, string name, Func<string, bool> ignore = null)
+        {
+            ignore ??= _ => false;
 
-            var files = Directory.GetFiles(ExtractObjDir, "*.dds", SearchOption.TopDirectoryOnly);
+            var sourceDir = Path.Join(ExtractDir, name);
+            var targetDir = Path.Join(UpscaleDir, name);
 
-            token.SubmitStatus($"Preparing obj for upscaling ({files.Length} files)");
+            token.SubmitStatus($"Preparing {name} for upscaling");
+
+            var files = Directory.GetFiles(sourceDir, "*.dds", SearchOption.TopDirectoryOnly);
+
+            token.SubmitStatus($"Preparing {name} for upscaling ({files.Length} files)");
 
             token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
             {
-                CategorizeTexture(file, Path.Join(UpscaleDir, "obj"), f => false);
+                CategorizeTexture(file, targetDir, ignore);
             });
         }
         private static void CategorizeTexture(string tex, string outDir, Func<string, bool> ignore)
