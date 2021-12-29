@@ -12,6 +12,7 @@
       <TargetPath>%(RecursiveDir)\data\%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
 
+    <PackageReference Include="SoulsFormats" Version="1.0.1" />
     <PackageReference Include="Pfim" Version="0.10.2" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
   </ItemGroup>

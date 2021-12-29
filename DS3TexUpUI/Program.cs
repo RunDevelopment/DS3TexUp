@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 using System.Windows.Forms;
 
 namespace DS3TexUpUI
@@ -14,6 +12,10 @@ namespace DS3TexUpUI
         [STAThread]
         static void Main()
         {
+            // Register encoding provider for Shift-JIS
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+            // Application logic
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
