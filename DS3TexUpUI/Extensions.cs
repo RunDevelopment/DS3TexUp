@@ -105,5 +105,54 @@ namespace DS3TexUpUI
             }
             return array;
         }
+
+        public static TValue GetOrAdd<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key)
+            where TValue : new()
+        {
+            if (!dict.TryGetValue(key, out TValue val))
+            {
+                val = new TValue();
+                dict.Add(key, val);
+            }
+
+            return val;
+        }
+        public static TValue GetOrAdd<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, Func<TValue> supplier)
+        {
+            if (!dict.TryGetValue(key, out TValue val))
+            {
+                val = supplier();
+                dict.Add(key, val);
+            }
+
+            return val;
+        }
+        public static TValue GetOrAdd<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, Func<TKey, TValue> supplier)
+        {
+            if (!dict.TryGetValue(key, out TValue val))
+            {
+                val = supplier(key);
+                dict.Add(key, val);
+            }
+
+            return val;
+        }
+
+        public static bool IsPowerOfTwo(this ulong x)
+        {
+            return (x != 0) && ((x & (x - 1)) == 0);
+        }
+        public static bool IsPowerOfTwo(this uint x)
+        {
+            return (x != 0) && ((x & (x - 1)) == 0);
+        }
+        public static bool IsPowerOfTwo(this long x)
+        {
+            return x > 0 && (x != 0) && ((x & (x - 1)) == 0);
+        }
+        public static bool IsPowerOfTwo(this int x)
+        {
+            return x > 0 && (x != 0) && ((x & (x - 1)) == 0);
+        }
     }
 }
