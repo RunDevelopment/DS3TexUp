@@ -90,7 +90,7 @@ namespace DS3TexUpUI
             {
                 if (_count == 0) return new Rgb24(0, 0, 0);
 
-                var factor = (double)_count;
+                var factor = 1 / (double)_count;
                 return new Rgb24(
                     (byte)(_totalR * factor),
                     (byte)(_totalG * factor),
@@ -121,7 +121,7 @@ namespace DS3TexUpUI
             {
                 if (_count == 0) return new Rgba32(0, 0, 0, 0);
 
-                var factor = (double)_count;
+                var factor = 1 / (double)_count;
                 return new Rgba32(
                     (byte)(_totalR * factor),
                     (byte)(_totalG * factor),
