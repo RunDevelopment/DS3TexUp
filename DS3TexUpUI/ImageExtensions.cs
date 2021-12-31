@@ -22,6 +22,13 @@ namespace DS3TexUpUI
 
         public static ArrayTextureMap<Rgba32> ToTextureMap(this DDSImage image)
         {
+            static Rgba32[] FromG(Span<byte> bytes)
+            {
+                var data = new Rgba32[bytes.Length];
+                for (var i = 0; i < data.Length; i++)
+                    data[i] = new Rgba32(bytes[i], bytes[i], bytes[i], 255);
+                return data;
+            }
             static Rgba32[] FromBGR(Span<byte> bytes)
             {
                 var data = new Rgba32[bytes.Length / 3];
@@ -39,6 +46,7 @@ namespace DS3TexUpUI
 
             var data = image.Format switch
             {
+                Pfim.ImageFormat.Rgb8 => FromG(image.Data),
                 Pfim.ImageFormat.Rgb24 => FromBGR(image.Data),
                 Pfim.ImageFormat.Rgba32 => FromBGRA(image.Data),
                 _ => throw new Exception("Invalid format: " + image.Format)
