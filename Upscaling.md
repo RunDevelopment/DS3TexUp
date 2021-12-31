@@ -4,11 +4,14 @@
 
 - `4x-UltraSharp`
 - `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
+- `ESRGAN_GroundTextures_NonTiled_RGB_UpscalingAlgorithm_128HR_32LR_305000Iterations`
 
-These models all have their strengths and weaknesses. To get the sharpest results, I run all models and then pick the sharpest upscaled image using the `GetSharpnessScore` function.
+The first 2 models are universal upscalers and have their strengths and weaknesses. To get the sharpest results, I run both models and then pick the sharpest upscaled image using the `GetSharpnessScore` function.
+
+If the image is purely stone and/or dirt, nothing beats `ESRGAN_GroundTextures`. It consistently produces extremely detailed and realistic-looking images. Frankly, it's not even close when comparing it to the universal upscalers. However, this model only knows rocks and dirt, and will shape everything in that image. Hence I only use it for texture that exclusively contain the following materials: *rock, stone, gravel, dirt, sand, ash, glass, ice, and small debris*.
 
 <details>
-<summary>My evaluation of the 2 models</summary>
+<summary>My evaluation of the 2 universal models</summary>
 
 I will hence forth refer to `4x-UltraSharp` as M1 and `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% as M2.
 
@@ -17,6 +20,14 @@ From what I tested, M2 seems to consistently produce the sharpest and most inter
 Fortunately, M1 doesn't have this problem and will always produce okay results. However, only okay. The average quality of the upscaled images is good but no where near a good M2 upscale.
 
 </details>
+
+### A note on denoising and block compression
+
+While block compression artifacts can throw off some models, many models were trained on JPEG compressed data. These models typically have no problem with BC and can be used without any prior denoising.
+
+I prefer not to use denoising or BC-removal models (or external tools). Noise added by compression artifacts and high-frequency details are indistinguishable for each other. Any denoising models (and tools) will produce images devoid of high-frequency details which results in very flat and boring upscaled textures.
+
+Models that can handle noise and compression artifacts tend to produce more detailed/interesting upscaled images.
 
 ### Binary alpha & Full alpha
 
@@ -39,9 +50,9 @@ DS3 normal textures contains 3 different material maps that all have to be handl
 - `4x-UniScale_Restore` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% on the extracted normal maps
 - `1x_NormalMapGenerator-CX-Lite_200000_G` on the upscaled albedo for high-frequency normals
 
-DS3's normal maps really don't have a lot of detail on them so upscaling them produces very flat materials. The problem is that the upscaled normal map only contains the low-frequency structure of the original, it doesn't not contain any of the "new" high-frequency details of the upscaled albedo.
+DS3's normal maps really don't have a lot of detail on them so upscaling them produces very flat materials. The problem is that the upscaled normal map only contains the low-frequency structure of the original, it does not contain any of the "new" high-frequency details of the upscaled albedo.
 
-To solve this, I also generate a normal map from the upscaled albedo. Since generated normal map contains (almost exclusively) the high-frequency details of the albedo. This is perfect for us.
+To solve this, I also generate a normal map from the upscaled albedo. The generated normal map contains (almost exclusively) the high-frequency details of the albedo. This is perfect for us.
 
 The 2 maps (same size) are then combined using a height map addition (see the `DS3NormalMap` class). This produces a combined normal map with the low-frequency structure of the original upscaled normal map and the high-frequency details of the generated normal map.
 
@@ -57,7 +68,7 @@ Since this is a GIGO situation, I just used `4x-UltraSharp`. It does a decent jo
 
 - `1x_BCGone-DetailedV2_40-60_115000_G` chained with `4x-UltraSharp` on the extracted height maps
 
-Height maps are even blockier than gloss maps and blurry often blurry on top of that. The first model does a good job of dealing with the extreme blockiness, but GIGO. It sometimes produces noticeable artifacts that are amplified by `4x-UltraSharp`. It doesn't happen too often, so I just ignored it for now.
+Height maps are even blockier than gloss maps and often blurry on top of that. The first model does a good job of dealing with the extreme blockiness, but GIGO. It sometimes produces noticeable artifacts that are amplified by `4x-UltraSharp`. It doesn't happen too often, so I just ignored it for now.
 
 If the artifacts are too noticeable, I will think of a way of using the normal map to hopefully resolve the artifacts. However, I don't see the need to do so right now.
 
