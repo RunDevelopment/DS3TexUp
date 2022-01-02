@@ -18,14 +18,19 @@ namespace DS3TexUpUI
         public string ObjBackupDir => Path.Join(GameDir, "obj_old");
         public string PartsDir => Path.Join(GameDir, "parts");
         public string PartsBackupDir => Path.Join(GameDir, "parts_old");
+        public string SfxDir => Path.Join(GameDir, "sfx");
+        public string SfxBackupDir => Path.Join(GameDir, "sfx_old");
 
         public string TextureDir { get; }
         public string ExtractDir => Path.Join(TextureDir, "extract");
         public string ExtractChrDir => Path.Join(ExtractDir, "chr");
         public string ExtractObjDir => Path.Join(ExtractDir, "obj");
         public string ExtractPartsDir => Path.Join(ExtractDir, "parts");
+        public string ExtractSfxDir => Path.Join(ExtractDir, "sfx");
+
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
         public string UpscaleDir => Path.Join(TextureDir, "upscale");
+
         public string CopyIndexFile => Path.Join(TextureDir, "copy.index");
         public string CopyEquivalenceFile => Path.Join(TextureDir, "copies.txt");
 
@@ -47,7 +52,9 @@ namespace DS3TexUpUI
                 UnpackObj,
                 ExtractObjTexture,
                 UnpackParts,
-                ExtractPartsTexture
+                ExtractPartsTexture,
+                UnpackSfx,
+                ExtractSfxTexture
             );
         }
         private void UnpackMap(SubProgressToken token)
@@ -165,6 +172,30 @@ namespace DS3TexUpUI
                     return Path.Join(d, "parts", type, id, id + ".tpf");
                 })
                 .Where(File.Exists)
+                .ToArray();
+
+            Yabber.RunParallel(token, tpfFiles);
+        }
+        private void UnpackSfx(SubProgressToken token)
+        {
+            token.SubmitStatus("Unpacking all sfx files");
+
+            var files = Directory.GetFiles(SfxDir, "*_resource.ffxbnd.dcx", SearchOption.TopDirectoryOnly);
+
+            token.SubmitStatus($"Unpacking {files.Length} sfx files");
+
+            Yabber.RunParallel(token.Reserve(0.5), files);
+
+            token.SubmitStatus("Unpacking all sfx .tpf files");
+
+            var tpfFiles = Directory
+                .GetDirectories(SfxDir, "*_resource-ffxbnd-dcx", SearchOption.TopDirectoryOnly)
+                .SelectMany(d =>
+                {
+                    var path = Path.Join(d, "sfx", "tex");
+                    if (!Directory.Exists(path)) return new string[0];
+                    return Directory.GetFiles(path, "*.tpf", SearchOption.TopDirectoryOnly);
+                })
                 .ToArray();
 
             Yabber.RunParallel(token, tpfFiles);
@@ -292,6 +323,44 @@ namespace DS3TexUpUI
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} parts textures");
+            token.ForAll(files, pair =>
+            {
+                var (id, file) = pair;
+                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
+            });
+        }
+        private void ExtractSfxTexture(SubProgressToken token)
+        {
+            token.SubmitStatus($"Extracting sfx textues");
+            token.SubmitProgress(0);
+
+            var outDir = Path.Join(ExtractSfxDir);
+            Directory.CreateDirectory(outDir);
+
+            var files = Directory
+                .GetDirectories(SfxDir, "*_resource-ffxbnd-dcx", SearchOption.TopDirectoryOnly)
+                .SelectMany(d =>
+                {
+                    // frpg_sfxbnd_XXXXX_resource-ffxbnd-dcx
+                    var id = Path.GetFileName(d).Substring("frpg_sfxbnd_".Length);
+                    id = id.Substring(0, id.Length - "_resource-ffxbnd-dcx".Length);
+
+                    var path = Path.Join(d, "sfx", "tex");
+                    if (!Directory.Exists(path)) return new (string, string)[0];
+
+                    return Directory
+                        .GetDirectories(path, "*-tpf", SearchOption.TopDirectoryOnly)
+                        .Select(d =>
+                        {
+                            var name = Path.GetFileName(d);
+                            name = name.Substring(0, name.Length - "-tpf".Length);
+                            return Path.Join(d, name + ".dds");
+                        })
+                        .Select(f => (id, f));
+                })
+                .ToArray();
+
+            token.SubmitStatus($"Extracting {files.Length} sfx textures");
             token.ForAll(files, pair =>
             {
                 var (id, file) = pair;
@@ -483,6 +552,7 @@ namespace DS3TexUpUI
                 ("map", MapsDir, MapsBackupDir),
                 ("obj", ObjDir, ObjBackupDir),
                 ("parts", PartsDir, PartsBackupDir),
+                ("sfx", SfxDir, SfxBackupDir),
             };
         }
         public void EnsureBackup(SubProgressToken token)
@@ -538,7 +608,8 @@ namespace DS3TexUpUI
                 token => token.ForAll(DS3.Maps, PrepareUpscaleMap),
                 PrepareUpscaleChr,
                 PrepareUpscaleObj,
-                PrepareUpscaleParts
+                PrepareUpscaleParts,
+                PrepareUpscaleSfx
             );
         }
         private void PrepareUpscaleMap(SubProgressToken token, string map)
@@ -557,6 +628,10 @@ namespace DS3TexUpUI
         private void PrepareUpscaleParts(SubProgressToken token)
         {
             PrepareUpscaleDirectory(token, "parts");
+        }
+        private void PrepareUpscaleSfx(SubProgressToken token)
+        {
+            PrepareUpscaleDirectory(token, "sfx");
         }
         private void PrepareUpscaleDirectory(SubProgressToken token, string name, Func<string, bool> ignore = null)
         {
