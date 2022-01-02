@@ -26,6 +26,8 @@ namespace DS3TexUpUI
         public string ExtractPartsDir => Path.Join(ExtractDir, "parts");
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
         public string UpscaleDir => Path.Join(TextureDir, "upscale");
+        public string CopyIndexFile => Path.Join(TextureDir, "copy.index");
+        public string CopyEquivalenceFile => Path.Join(TextureDir, "copies.txt");
 
         public Workspace(string gameDir, string textureDir)
         {
@@ -295,6 +297,94 @@ namespace DS3TexUpUI
                 var (id, file) = pair;
                 File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
             });
+        }
+
+        public void FindCopies(SubProgressToken token)
+        {
+            token.SplitEqually(
+                BuildCopyIndex,
+                LookupCopyEquivalenceClasses
+            );
+        }
+        private void BuildCopyIndex(SubProgressToken token)
+        {
+            if (File.Exists(CopyIndexFile)) return;
+
+            token.SubmitStatus("Search for files");
+
+            var files = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+            var index = new CopyIndex();
+
+            token.SubmitStatus($"Indexing {files.Length} files");
+            token.ForAll(files.AsParallel(), files.Length, f =>
+            {
+                try
+                {
+                    var image = f.LoadTextureMap();
+                    index.AddImage(image, f);
+                }
+                catch (System.Exception)
+                {
+                    // ignore
+                }
+            });
+
+            token.SubmitStatus($"Saving index");
+            index.Save(CopyIndexFile);
+        }
+        private void LookupCopyEquivalenceClasses(SubProgressToken token)
+        {
+            token.SubmitStatus("Loading index");
+            var index = CopyIndex.Load(CopyIndexFile);
+
+            var files = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+            var fileIds = files.Select((f, i) => (f, i)).ToDictionary(p => p.f, p => p.i);
+            var fileSizes = new (int, int)[files.Length];
+            foreach (var e in index.Entries)
+            {
+                if (fileIds.TryGetValue(e.File, out var id))
+                    fileSizes[id] = (e.Width, e.Height);
+            }
+
+            var eqRelations = new List<int[]>();
+
+            token.SubmitStatus($"Looking up {files.Length} files");
+            token.ForAll(files.AsParallel(), files.Length, f =>
+            {
+                try
+                {
+                    var similar = index.GetSimilar(f);
+                    if (similar == null || similar.Count < 2)
+                        return;
+                    var array = similar.Select(e => fileIds[e.File]).ToArray();
+
+                    lock (eqRelations)
+                    {
+                        eqRelations.Add(array);
+                    }
+                }
+                catch (System.Exception)
+                {
+                    // ignore
+                }
+            });
+
+            token.SubmitStatus("Finding equivalence classes");
+
+            var eqClasses = SetEquivalence.MergeOverlapping(eqRelations, files.Length);
+
+            var lines = eqClasses
+                 .Where(e => e.Count >= 2)
+                 .Select(e =>
+                 {
+                     e.Sort((a, b) => fileSizes[a].Item1.CompareTo(fileSizes[b].Item1));
+                     return string.Join(";", e.Select(i => files[i]));
+                 })
+                 .ToList();
+
+            token.SubmitStatus($"Writing results");
+
+            File.WriteAllText(CopyEquivalenceFile, string.Join("\n", lines), Encoding.UTF8);
         }
 
         public void Overwrite(SubProgressToken token)
