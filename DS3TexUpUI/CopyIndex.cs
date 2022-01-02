@@ -129,14 +129,14 @@ namespace DS3TexUpUI
         public static void CheckSize(ArrayTextureMap<Rgba32> image)
         {
             if (!IsSupportedImage(image))
-                throw new AggregateException("Both the width and the height have to be powers of 2");
+                throw new ArgumentException("Both the width and the height have to be powers of 2");
         }
 
         public void AddImage(string file) => AddImage(file.LoadTextureMap(), file);
         public void AddImage(ArrayTextureMap<Rgba32> image, string file)
         {
             if (!Ratio.Equals(new SizeRatio(image.Width, image.Height)))
-                throw new AggregateException("The ration of the image does not match the ratio of the index");
+                throw new ArgumentException("The ration of the image does not match the ratio of the index");
             CheckSize(image);
 
             var id = AddEntry(image, file);
