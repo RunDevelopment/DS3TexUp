@@ -16,6 +16,7 @@
     <PackageReference Include="SoulsFormats" Version="1.0.0" />
     <PackageReference Include="Pfim" Version="0.10.2" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
+    <PackageReference Include="MathNet.Numerics" Version="4.15.0" />
   </ItemGroup>
 
 </Project>
