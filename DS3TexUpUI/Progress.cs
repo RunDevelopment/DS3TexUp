@@ -68,6 +68,15 @@ namespace DS3TexUpUI
         }
     }
 
+    public class NoopProgressToken : IProgressToken
+    {
+        public object Lock => this;
+        public bool IsCanceled => false;
+        public void CheckCanceled() { }
+        public void SubmitProgress(double current) { }
+        public void SubmitStatus(string status) { }
+    }
+
     public static class ProgressExtensions
     {
         public static void ForAll<T>(this IProgressToken token, ParallelQuery<T> iter, int total, Action<T> action)
