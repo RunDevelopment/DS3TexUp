@@ -65,13 +65,12 @@ namespace DS3TexUpUI
         {
             token.SubmitStatus("Unpacking all map files");
 
-            foreach (var (map, i) in DS3.Maps.Select((m, i) => (m, i)))
+            token.ForAll(DS3.Maps, (token, map) =>
             {
                 token.SubmitStatus($"Unpacking {map} map files");
-                token.SubmitProgress(i / (double)DS3.Maps.Length);
 
                 var mapDir = Path.Join(MapsDir, map);
-                Yabber.Run(Directory.GetFiles(mapDir, $"{map}*.tpfbhd", SearchOption.TopDirectoryOnly));
+                Yabber.RunParallel(Directory.GetFiles(mapDir, $"{map}*.tpfbhd", SearchOption.TopDirectoryOnly));
 
                 var files = new List<string>();
                 foreach (var unpackedDir in GetUnpackedMapFileFolders(map))
@@ -80,8 +79,8 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus($"Unpacking {map} textures ({files.Count})");
-                Yabber.Run(token.Slice(i / (double)DS3.Maps.Length, 1.0 / DS3.Maps.Length), files.ToArray());
-            }
+                Yabber.RunParallel(token, files.ToArray());
+            });
             token.SubmitProgress(1);
         }
         private void UnpackChr(SubProgressToken token)
@@ -263,7 +262,7 @@ namespace DS3TexUpUI
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} chr textures");
-            token.ForAll(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
+            token.ForAllParallel(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
         }
         private void ExtractObjTexture(SubProgressToken token)
         {
@@ -290,7 +289,7 @@ namespace DS3TexUpUI
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} obj textures");
-            token.ForAll(files, pair =>
+            token.ForAllParallel(files, pair =>
             {
                 var (id, file) = pair;
                 File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
@@ -323,7 +322,7 @@ namespace DS3TexUpUI
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} parts textures");
-            token.ForAll(files, pair =>
+            token.ForAllParallel(files, pair =>
             {
                 var (id, file) = pair;
                 File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
@@ -361,7 +360,7 @@ namespace DS3TexUpUI
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} sfx textures");
-            token.ForAll(files, pair =>
+            token.ForAllParallel(files, pair =>
             {
                 var (id, file) = pair;
                 File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
@@ -385,7 +384,7 @@ namespace DS3TexUpUI
             var index = new CopyIndex();
 
             token.SubmitStatus($"Indexing {files.Length} files");
-            token.ForAll(files.AsParallel(), files.Length, f =>
+            token.ForAllParallel(files, f =>
             {
                 try
                 {
@@ -418,7 +417,7 @@ namespace DS3TexUpUI
             var eqRelations = new List<int[]>();
 
             token.SubmitStatus($"Looking up {files.Length} files");
-            token.ForAll(files.AsParallel(), files.Length, f =>
+            token.ForAllParallel(files, f =>
             {
                 try
                 {
@@ -646,10 +645,7 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Preparing {name} for upscaling ({files.Length} files)");
 
-            token.ForAll(files.AsParallel().WithDegreeOfParallelism(8), files.Length, file =>
-            {
-                CategorizeTexture(file, targetDir, ignore);
-            });
+            token.ForAllParallel(files, file => CategorizeTexture(file, targetDir, ignore));
         }
         private static void CategorizeTexture(string tex, string outDir, Func<string, bool> ignore)
         {
