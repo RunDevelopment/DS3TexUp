@@ -37,6 +37,13 @@ namespace DS3TexUpUI
             Data = data;
         }
 
+        public ArrayTextureMap<T> Clone()
+        {
+            var copy = new T[Count];
+            Array.Copy(Data, copy, copy.Length);
+            return new ArrayTextureMap<T>(copy, Width, Height);
+        }
+
         public IEnumerator<T> GetEnumerator()
         {
             foreach (var item in Data)
