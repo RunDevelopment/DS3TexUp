@@ -73,6 +73,8 @@ namespace DS3TexUpUI
             return text.Split('\n').Select(s => s.Trim()).Where(s => s.Length > 0).ToArray();
         }
 
+        public static TransparencyIndex Transparency = TransparencyIndex.Load(Path.Join(AppDomain.CurrentDomain.BaseDirectory, @"data\alpha.txt"));
+
         public static class DDS
         {
             // Used for sRGB color textures without transparency
