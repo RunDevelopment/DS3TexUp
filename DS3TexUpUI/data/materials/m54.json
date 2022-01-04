@@ -1,0 +1,2098 @@
+[
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_001000-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_001000\\Model\\m54_00_00_00_001000.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX01",
+					"Unk04": 101,
+					"Data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX21",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX23",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX25",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX27",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX34",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX01",
+					"Unk04": 101,
+					"Data": "AADAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX21",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX23",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX25",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX27",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX34",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m000000",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1218,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_BaseWall_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_BaseWall_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u4E0B\u5C64\u306E\u58C1A",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1210,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Ced_wallTile_02_a.tif",
+						"Scale": {
+							"X": 2,
+							"Y": 2
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Ced_wallTile_02_n.tif",
+						"Scale": {
+							"X": 2,
+							"Y": 2
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u8349\u5730A",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_m.mtd",
+				"Flags": 2250,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_GrassyMud_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DiffuseTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_glass_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_GrassyMud_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BlendMaskTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_maskStandard_06_m.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u77F3\u7573Amix",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_m.mtd",
+				"Flags": 2236,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_GroundTile_05_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DiffuseTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_a.tif",
+						"Scale": {
+							"X": 0.85,
+							"Y": 0.85
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_GroundTile_05_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BlendMaskTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_GroundTile_05_m.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001000_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 2,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_001100-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_001100\\Model\\m54_00_00_00_001100.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "\u679DA",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1170,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m37\\tex\\m37_00_tree_03_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m37\\tex\\m37_00_tree_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m37\\tex\\m37_00_tree_03_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u8349\u63FA\u308C",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e_grass.mtd",
+				"Flags": 1054,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_plant_00_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_glass_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_plant_00_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u690D\u7269A",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Flags": 1182,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_plant_01_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_glass_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_plant_01_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "Material #245",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1206,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_wall_04_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_GroundTile_11_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "Material #246",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1196,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_wall_04_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_block_02_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001100_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_001500-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_001500\\Model\\m54_00_00_00_001500.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "\u88C5\u98FE\u6C4E\u7528A",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1186,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_wall_04_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_handrail_01_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001500_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001500_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_001510-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_001510\\Model\\m54_00_00_00_001510.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX05",
+					"Unk04": 100,
+					"Data": "AACAPwAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "Material #2737",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Flags": 1204,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_wall_04_a.tif",
+						"Scale": {
+							"X": 0.5,
+							"Y": 2.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Stone_Standard_01_r.tif",
+						"Scale": {
+							"X": 0.5,
+							"Y": 2.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_handrail_02_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture1",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001510_gi_0000_00_dol_00.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DOLTexture2",
+						"Path": "n:\\fdp\\data\\model\\map\\m54_00_00_00\\tex\\54000000_m001510_gi_0000_00_dol_01.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_009000-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_009000\\Model\\m54_00_00_00_009000.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX14",
+					"Unk04": 101,
+					"Data": "ObRIP4/CdT8AAIA/AACAPwAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				}
+			],
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 190,
+					"Data": "BwAAAFAAAAALAAAAObRIP4/CdT8AAIA/AACAP5qZmT8bAAAAAQAAAM3MTD8cAAAAAQAAAJqZSUBaAAAAAgAAAJZDC7xfKcu7ZwAAAAIAAAB88jC70ERYu3AAAAACAAAAAAAAAAAAAABzAAAAAgAAAHzyMLvQRFi7"
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "\u5929\u7403\u534A\u900F\u660E",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_al_NoLight.mtd",
+				"Flags": 244,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_sky_04_a.tif",
+						"Scale": {
+							"X": 4,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u5929\u7403",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_NoLight.mtd",
+				"Flags": 232,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_sky_04_a.tif",
+						"Scale": {
+							"X": 4,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "\u771F\u4E0A\u30D6\u30EC\u30F3\u30C9\u30C6\u30B9\u30C8\u30B9\u30ED\u30FC2",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[A]_2m_NoLight_scroll.mtd",
+				"Flags": 1210,
+				"Textures": [
+					{
+						"Type": "MultiBlend2_et1_nolight_MuitiBlendMask_snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_kumo_30_a.tif",
+						"Scale": {
+							"X": 4.1,
+							"Y": 3.6
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "MultiBlend2_et1_nolight_MuitiBlendMask_snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_kumo_35_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "MultiBlend2_et1_nolight_MuitiBlendMask_snp_Texture2D_3_GSBlendMap_BlendEdgeTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_kumo_34_m.tif",
+						"Scale": {
+							"X": 4.1,
+							"Y": 3.6
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "MultiBlend2_et1_nolight_MuitiBlendMask_snp_Texture2D_0_GSBlendMap_ShininessMap_0",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_kumo_33_m.tif",
+						"Scale": {
+							"X": 2,
+							"Y": 1.8
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_012500-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_012500\\Model\\m54_00_00_00_012500.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 195,
+					"Data": "BAAAAFMAAAALAAAA16NwPrKdbz6ynW8+AACAPwAAgD8bAAAAAQAAAAAAgD8cAAAAAQAAAAAAoEBfAAAAAwAAAAAAgD9xPYo+zczMvg=="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "\u5C71\u30D6\u30EC\u30F3\u30C9\u30C6\u30B9\u30C8",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\Special\\M[RockBlendA].mtd",
+				"Flags": 976,
+				"Textures": [
+					{
+						"Type": "RockBlend_snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_100_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "RockBlend_snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_02_a.tif",
+						"Scale": {
+							"X": 3,
+							"Y": 3
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "RockBlend_snp_Texture2D_13_GSBlendMap_NormalMap_0",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_102_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "RockBlend_snp_Texture2D_14_GSBlendMap_NormalMap_1",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_rocktile_11_n.tif",
+						"Scale": {
+							"X": 33,
+							"Y": 16
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m54_00_00_00\\m54_00_00_00_012501-mapbnd-dcx\\map\\m54_00_00_00\\m54_00_00_00_012501\\Model\\m54_00_00_00_012501.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX01",
+					"Unk04": 101,
+					"Data": "AACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX04",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAKBAAACAPwAAAD8AAAAAAACgQAAAAD8AAIA/AAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX21",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX23",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX25",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX27",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX34",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "\u5C71\u30D6\u30EC\u30F3\u30C93",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
+				"Flags": 1844,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_100_a.tif",
+						"Scale": {
+							"X": 5,
+							"Y": 5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DiffuseTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Outside_Snow_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture2",
+						"Path": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_102_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture2",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_102_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmapTexture2",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DisplacementTexture",
+						"Path": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BlendMaskTexture",
+						"Path": "N:\\FDP\\data\\Model\\map\\m54\\tex\\m54_00_Mountain_100_m.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	}
+]
