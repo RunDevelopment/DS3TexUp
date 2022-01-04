@@ -244,7 +244,6 @@ namespace DS3TexUpUI
             token.SubmitStatus($"Extracting chr textues");
             token.SubmitProgress(0);
 
-            var wantedFiles = DS3.CharacterFiles;
 
             var outDir = Path.Join(ExtractChrDir);
             Directory.CreateDirectory(outDir);
@@ -254,15 +253,19 @@ namespace DS3TexUpUI
                 .SelectMany(d =>
                 {
                     // cXXXX
-                    var n = Path.GetFileName(d).Substring(0, 5);
+                    var id = Path.GetFileName(d).Substring(0, 5);
                     return Directory
-                        .GetFiles(Path.Join(d, "chr", n, n + "-tpf"), "*.dds", SearchOption.TopDirectoryOnly)
-                        .Where(f => wantedFiles.ContainsKey(Path.GetFileNameWithoutExtension(f)));
+                        .GetFiles(Path.Join(d, "chr", id, id + "-tpf"), "*.dds", SearchOption.TopDirectoryOnly)
+                        .Select(f => (id, f));
                 })
                 .ToArray();
 
             token.SubmitStatus($"Extracting {files.Length} chr textures");
-            token.ForAllParallel(files, f => File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), true));
+            token.ForAllParallel(files, pair =>
+            {
+                var (id, file) = pair;
+                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
+            });
         }
         private void ExtractObjTexture(SubProgressToken token)
         {
@@ -637,7 +640,6 @@ namespace DS3TexUpUI
             ignore ??= _ => false;
 
             var sourceDir = Path.Join(ExtractDir, name);
-            var targetDir = Path.Join(UpscaleDir, name);
 
             token.SubmitStatus($"Preparing {name} for upscaling");
 
@@ -645,9 +647,9 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Preparing {name} for upscaling ({files.Length} files)");
 
-            token.ForAllParallel(files, file => CategorizeTexture(file, targetDir, ignore));
+            token.ForAllParallel(files, file => CategorizeTexture(file, UpscaleDir, name, ignore));
         }
-        private static void CategorizeTexture(string tex, string outDir, Func<string, bool> ignore)
+        private static void CategorizeTexture(string file, string outDir, string dirName, Func<string, bool> ignore)
         {
             static string JoinFile(params string[] parts)
             {
@@ -656,65 +658,61 @@ namespace DS3TexUpUI
                 return dir;
             }
 
-            var name = Path.GetFileNameWithoutExtension(tex);
-            var png = name + ".png";
+            var fileName = Path.GetFileNameWithoutExtension(file);
+            var png = fileName + ".png";
 
             try
             {
-                using var image = DDSImage.Load(tex);
+                using var image = DDSImage.Load(file);
 
-                if (ignore(name))
+                if (ignore(fileName))
                 {
-                    image.SaveAsPng(JoinFile(outDir, "ignore", png));
+                    image.SaveAsPng(JoinFile(outDir, "ignore", dirName, png));
                     return;
                 }
 
-                if (name.EndsWith("_n"))
+                if (fileName.EndsWith("_n"))
                 {
                     var normalImage = DS3NormalMap.Of(image);
 
-                    normalImage.Normals.SaveAsPng(JoinFile(outDir, "n_normal", png));
-                    normalImage.Gloss.SaveAsPng(JoinFile(outDir, "n_gloss", png));
+                    normalImage.Normals.SaveAsPng(JoinFile(outDir, "n_normal", dirName, png));
+                    normalImage.Gloss.SaveAsPng(JoinFile(outDir, "n_gloss", dirName, png));
                     if (normalImage.Heights.IsNoticeable())
-                        normalImage.Heights.SaveAsPng(JoinFile(outDir, "n_height", png));
+                        normalImage.Heights.SaveAsPng(JoinFile(outDir, "n_height", dirName, png));
                     return;
                 }
 
                 if (image.IsSolidColor(0.05))
                 {
                     // there is no point in upscaling a solid color.
-                    image.SaveAsPng(JoinFile(outDir, "ignore", png));
+                    image.SaveAsPng(JoinFile(outDir, "ignore", dirName, png));
                     return;
                 }
 
                 var target = "other";
-                if (name.EndsWith("_a"))
+                if (fileName.EndsWith("_a"))
                 {
+                    target = "a";
+
                     var transparency = image.GetTransparency();
-
-                    target = transparency switch
-                    {
-                        TransparencyKind.Binary => "a_alpha_binary",
-                        TransparencyKind.Full => "a_alpha_full",
-                        _ => "a"
-                    };
-
                     if (transparency == TransparencyKind.Binary || transparency == TransparencyKind.Full)
                     {
-                        var (color, alpha) = image.ToTextureMap().SplitAlphaBlack();
-                        color.SaveAsPng(JoinFile(outDir, target, "color_" + png));
-                        alpha.SaveAsPng(JoinFile(outDir, target, "alpha_" + png));
+                        var texMap = image.ToTextureMap();
+                        texMap.GetAlpha().SaveAsPng(JoinFile(outDir, "a_alpha", dirName, png));
+                        texMap.FillSmallHoles();
+                        texMap.SetBackground(default);
+                        texMap.SaveAsPng(JoinFile(outDir, "a_color", dirName, png));
                         return;
                     }
                 }
-                else if (name.EndsWith("_r"))
+                else if (fileName.EndsWith("_r"))
                     target = "r";
-                else if (name.EndsWith("_s"))
+                else if (fileName.EndsWith("_s"))
                     target = "s";
-                else if (name.EndsWith("_em") || name.EndsWith("_e"))
+                else if (fileName.EndsWith("_em") || fileName.EndsWith("_e"))
                     target = "em";
 
-                image.SaveAsPng(JoinFile(outDir, target, png));
+                image.SaveAsPng(JoinFile(outDir, target, dirName, png));
             }
             catch (Exception)
             {
@@ -736,36 +734,6 @@ namespace DS3TexUpUI
                 token.CheckCanceled();
                 file.CopyTo(Path.Combine(target.FullName, file.Name));
             }
-        }
-
-        public Dictionary<string, ChrId[]> GroupCharacterFiles()
-        {
-            var dirs = Directory.GetDirectories(ChrDir);
-
-            var files = new List<(string name, ChrId id)>();
-
-            foreach (var d in dirs)
-            {
-                // cXXXX
-                var name = Path.GetFileName(d).Substring(0, 5);
-                var id = ChrId.Parse(name);
-
-                var p = Path.Join(d, "chr", name, name + "-tpf");
-                var all = Directory.GetFiles(p)
-                    .Select(f => Path.GetFileNameWithoutExtension(f))
-                    .Where(f => f != "_yabber-tpf");
-
-                foreach (var f in all)
-                {
-                    files.Add((f, id));
-                }
-            }
-
-            var values = files
-                .GroupBy(f => f.name)
-                .Select(g => new KeyValuePair<string, ChrId[]>(g.Key, g.Select(f => f.id).ToArray()));
-
-            return new Dictionary<string, ChrId[]>(values);
         }
 
         /// <summary>
