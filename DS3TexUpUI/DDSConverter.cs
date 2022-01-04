@@ -284,10 +284,10 @@ namespace DS3TexUpUI
 
     public enum TransparencyKind
     {
-        None,
-        Unnoticeable,
-        Binary,
-        Full,
+        None = 0,
+        Unnoticeable = 1,
+        Binary = 2,
+        Full = 3,
     }
 
     public enum DDSFormat
