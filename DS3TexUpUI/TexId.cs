@@ -110,6 +110,7 @@ namespace DS3TexUpUI
         {
             var n = Name;
 
+            // by suffix
             if (n.EndsWith("_a")) return TexKind.Albedo;
             if (n.EndsWith("_n")) return TexKind.Normal;
             if (n.EndsWith("_r")) return TexKind.Reflective;
@@ -117,7 +118,11 @@ namespace DS3TexUpUI
             if (n.EndsWith("_em") || n.EndsWith("_e")) return TexKind.Emissive;
             if (n.EndsWith("_h") || n.EndsWith("_d")) return TexKind.Height;
             if (n.EndsWith("_v")) return TexKind.VertexOffset;
-            if (n.EndsWith("_m") || n.EndsWith("_sm") || n.Contains("_mask_".AsSpan(), StringComparison.OrdinalIgnoreCase)) return TexKind.Mask;
+            if (n.EndsWith("_m") || n.EndsWith("_sm") || n.EndsWith("_mask")) return TexKind.Mask;
+
+            // by substring
+            if (n.Contains("_mask_".AsSpan(), StringComparison.OrdinalIgnoreCase)) return TexKind.Mask;
+            if (n.Contains("_n_".AsSpan(), StringComparison.OrdinalIgnoreCase)) return TexKind.Normal;
 
             return TexKind.Unknown;
         }
