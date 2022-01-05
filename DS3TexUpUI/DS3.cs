@@ -116,8 +116,8 @@ namespace DS3TexUpUI
             };
         }
 
-        public static IReadOnlyDictionary<TexId, (int width, int height)> OriginalSize
-            = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, (int, int)>>();
+        public static IReadOnlyDictionary<TexId, Size> OriginalSize
+            = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
         {
             return token =>
@@ -132,8 +132,7 @@ namespace DS3TexUpUI
                     try
                     {
                         var id = TexId.FromPath(f);
-                        using var stream = File.OpenRead(f);
-                        var header = new Pfim.DdsHeader(stream);
+                        var (header, _) = f.ReadDdsHeader();
                         lock (index)
                         {
                             index[id] = new Size((int)header.Width, (int)header.Height);

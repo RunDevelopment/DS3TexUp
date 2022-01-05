@@ -3,14 +3,31 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
+using Pfim;
+
+#nullable enable
 
 namespace DS3TexUpUI
 {
-    class DDSConverter
+    static class DDSExtensions
     {
+        public static (DdsHeader, DdsHeaderDxt10?) ReadDdsHeader(this string file)
+        {
+            using var stream = File.OpenRead(file);
+            var header = new DdsHeader(stream);
+            if (header.PixelFormat.FourCC == CompressionAlgorithm.DX10)
+            {
+                var dxt10 = new DdsHeaderDxt10(stream);
+                return (header, dxt10);
+            }
+            else
+            {
+                return (header, null);
+            }
+        }
+
         public static void ToPNG(string file, string target)
         {
             if (file.EndsWith(".dds"))
