@@ -670,25 +670,32 @@ namespace DS3TexUpUI
             {
                 using var image = DDSImage.Load(file);
 
-                if (kind == TexKind.Normal)
-                {
-                    var normalImage = DS3NormalMap.Of(image);
-
-                    normalImage.Normals.SaveAsPng(JoinFile(outDir, "n_normal", png));
-                    normalImage.Gloss.SaveAsPng(JoinFile(outDir, "n_gloss", png));
-                    if (normalImage.Heights.IsNoticeable())
-                        normalImage.Heights.SaveAsPng(JoinFile(outDir, "n_height", png));
-                    return;
-                }
-
                 var target = kind.GetShortName();
 
-                if (ignore(id.Name.ToString()) || image.IsSolidColor(0.05))
+                if (
+                    // The CupScale cannot handle files with non-ASCII characters.
+                    // Luckily, there are only 3 with such characters.
+                    id.Value.Any(c => c >= 128) ||
+                    // We want to ignore this file.
+                    ignore(id.Name.ToString()) ||
                     // there is no point in upscaling a solid color.
+                    image.IsSolidColor(0.05))
                     target = "ignore";
 
                 if (target != "ignore")
                 {
+                    // handle normals
+                    if (kind == TexKind.Normal)
+                    {
+                        var normalImage = DS3NormalMap.Of(image);
+
+                        normalImage.Normals.SaveAsPng(JoinFile(outDir, "n_normal", png));
+                        normalImage.Gloss.SaveAsPng(JoinFile(outDir, "n_gloss", png));
+                        if (normalImage.Heights.IsNoticeable())
+                            normalImage.Heights.SaveAsPng(JoinFile(outDir, "n_height", png));
+                        return;
+                    }
+
                     // handle transparency
                     var transparency = id.GetTransparency();
                     if (transparency == TransparencyKind.Binary || transparency == TransparencyKind.Full)
