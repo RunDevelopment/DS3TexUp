@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using SoulsFormats;
+using SixLabors.ImageSharp;
 
 namespace DS3TexUpUI
 {
@@ -112,6 +113,40 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus($"Saving index");
                 index.SaveAsJson(DataFile(@"alpha.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<TexId, (int width, int height)> OriginalSize
+            = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, (int, int)>>();
+        internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+                token.SubmitStatus($"Indexing {files.Length} files");
+                var index = new Dictionary<TexId, Size>();
+                token.ForAllParallel(files, f =>
+                {
+                    try
+                    {
+                        var id = TexId.FromPath(f);
+                        using var stream = File.OpenRead(f);
+                        var header = new Pfim.DdsHeader(stream);
+                        lock (index)
+                        {
+                            index[id] = new Size((int)header.Width, (int)header.Height);
+                        }
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+                });
+
+                token.SubmitStatus($"Saving index");
+                index.SaveAsJson(DataFile(@"original-size.json"));
             };
         }
 

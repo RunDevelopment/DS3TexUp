@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Numerics;
 using System.Linq;
+using SixLabors.ImageSharp;
 using SoulsFormats;
 
 namespace DS3TexUpUI
@@ -14,10 +15,14 @@ namespace DS3TexUpUI
     {
         public static readonly JsonConverter[] Converters = new JsonConverter[] {
             new Vector2Converter(),
+            new Tuple2Converter<int, int>(),
             new TexIdConverter(),
             new TexIdDictionaryConverter<int>(),
+            new TexIdDictionaryConverter<(int, int)>(),
             new TexIdDictionaryConverter<TexKind>(),
             new TexIdDictionaryConverter<TransparencyKind>(),
+            new TexIdDictionaryConverter<Size>(),
+            new SizeConverter(),
         };
 
         public static JsonSerializerOptions WithStandardConverters(this JsonSerializerOptions options)
@@ -85,6 +90,31 @@ namespace DS3TexUpUI
             }
         }
 
+        private sealed class Tuple2Converter<A, B> : JsonConverter<(A, B)>
+        {
+            public override (A, B) Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                if (reader.TokenType != JsonTokenType.StartArray) throw new JsonException();
+
+                reader.Read();
+                var item1 = JsonSerializer.Deserialize<A>(ref reader, options);
+                reader.Read();
+                var item2 = JsonSerializer.Deserialize<B>(ref reader, options);
+                reader.Read();
+                if (reader.TokenType != JsonTokenType.EndArray) throw new JsonException();
+
+                return (item1, item2);
+            }
+
+            public override void Write(Utf8JsonWriter writer, (A, B) value, JsonSerializerOptions options)
+            {
+                writer.WriteStartArray();
+                JsonSerializer.Serialize(writer, value.Item1, options);
+                JsonSerializer.Serialize(writer, value.Item2, options);
+                writer.WriteEndArray();
+            }
+        }
+
         private sealed class TexIdConverter : JsonConverter<TexId>
         {
             public override TexId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -142,5 +172,27 @@ namespace DS3TexUpUI
                 writer.WriteEndObject();
             }
         }
+
+        private sealed class SizeConverter : JsonConverter<Size>
+        {
+            public override Size Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var s = JsonSerializer.Deserialize<Surrogate>(ref reader, options);
+                return new Size(s.Width, s.Height);
+            }
+
+            public override void Write(Utf8JsonWriter writer, Size value, JsonSerializerOptions options)
+            {
+                var s = new Surrogate() { Width = value.Width, Height = value.Height };
+                JsonSerializer.Serialize(writer, s, options);
+            }
+
+            private struct Surrogate
+            {
+                public int Width { get; set; }
+                public int Height { get; set; }
+            }
+        }
+
     }
 }
