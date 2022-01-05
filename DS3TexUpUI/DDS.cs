@@ -28,6 +28,16 @@ namespace DS3TexUpUI
             }
         }
 
+        public static DDSFormat GetFormat(this (DdsHeader, DdsHeaderDxt10?) header)
+            => GetFormat(header.Item1, header.Item2);
+        public static DDSFormat GetFormat(this DdsHeader header, DdsHeaderDxt10? dxt10)
+        {
+            if (dxt10 == null)
+                return header.PixelFormat.FourCC;
+            else
+                return dxt10.DxgiFormat;
+        }
+
         public static void ToPNG(string file, string target)
         {
             if (file.EndsWith(".dds"))
@@ -86,12 +96,12 @@ namespace DS3TexUpUI
         }
         private static string ToTexConvFormat(DDSFormat format)
         {
-            return format switch
+            return format.DxgiFormat switch
             {
-                DDSFormat.BC1_UNORM => "BC1_UNORM",
-                DDSFormat.BC1_UNORM_SRGB => "BC1_UNORM_SRGB",
-                DDSFormat.BC7_UNORM => "BC7_UNORM",
-                DDSFormat.BC7_UNORM_SRGB => "BC7_UNORM_SRGB",
+                DxgiFormat.BC1_UNORM => "BC1_UNORM",
+                DxgiFormat.BC1_UNORM_SRGB => "BC1_UNORM_SRGB",
+                DxgiFormat.BC7_UNORM => "BC7_UNORM",
+                DxgiFormat.BC7_UNORM_SRGB => "BC7_UNORM_SRGB",
                 _ => throw new Exception("Invalid format: " + format),
             };
         }
@@ -305,11 +315,35 @@ namespace DS3TexUpUI
         Full = 3,
     }
 
-    public enum DDSFormat
+    public readonly struct DDSFormat
     {
-        BC1_UNORM = 71,
-        BC1_UNORM_SRGB = 72,
-        BC7_UNORM = 98,
-        BC7_UNORM_SRGB = 99,
+        public CompressionAlgorithm FourCC { get; }
+        public DxgiFormat DxgiFormat { get; }
+
+        public DDSFormat(CompressionAlgorithm fourCC)
+        {
+            FourCC = fourCC;
+            DxgiFormat = DxgiFormat.UNKNOWN;
+        }
+        public DDSFormat(DxgiFormat dxgiFormat)
+        {
+            FourCC = CompressionAlgorithm.DX10;
+            DxgiFormat = dxgiFormat;
+        }
+
+        public override string ToString()
+        {
+            if (FourCC == CompressionAlgorithm.DX10) return $"DX10 {DxgiFormat}";
+            return FourCC.ToString();
+        }
+        public static DDSFormat Parse(string input)
+        {
+            if (input.StartsWith("DX10 "))
+                return Enum.Parse<DxgiFormat>(input.Substring(5));
+            return Enum.Parse<CompressionAlgorithm>(input.Substring(5));
+        }
+
+        public static implicit operator DDSFormat(CompressionAlgorithm fourCC) => new DDSFormat(fourCC);
+        public static implicit operator DDSFormat(DxgiFormat dxgiFormat) => new DDSFormat(dxgiFormat);
     }
 }

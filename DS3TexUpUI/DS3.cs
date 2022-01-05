@@ -86,68 +86,23 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<TexId, TransparencyKind> Transparency
             = DataFile(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
-        {
-            return token =>
-            {
-                token.SubmitStatus($"Searching for files");
-                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
-
-                token.SubmitStatus($"Indexing {files.Length} files");
-                var index = new Dictionary<TexId, TransparencyKind>();
-                token.ForAllParallel(files, f =>
-                {
-                    try
-                    {
-                        var id = TexId.FromPath(f);
-                        var kind = DDSImage.Load(f).GetTransparency();
-                        lock (index)
-                        {
-                            index[id] = kind;
-                        }
-                    }
-                    catch (System.Exception)
-                    {
-                        // ignore
-                    }
-                });
-
-                token.SubmitStatus($"Saving index");
-                index.SaveAsJson(DataFile(@"alpha.json"));
-            };
-        }
+            => CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f => DDSImage.Load(f).GetTransparency());
 
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
             = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
         {
-            return token =>
+            return CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f =>
             {
-                token.SubmitStatus($"Searching for files");
-                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
-
-                token.SubmitStatus($"Indexing {files.Length} files");
-                var index = new Dictionary<TexId, Size>();
-                token.ForAllParallel(files, f =>
-                {
-                    try
-                    {
-                        var id = TexId.FromPath(f);
-                        var (header, _) = f.ReadDdsHeader();
-                        lock (index)
-                        {
-                            index[id] = new Size((int)header.Width, (int)header.Height);
-                        }
-                    }
-                    catch (System.Exception)
-                    {
-                        // ignore
-                    }
-                });
-
-                token.SubmitStatus($"Saving index");
-                index.SaveAsJson(DataFile(@"original-size.json"));
-            };
+                var (header, _) = f.ReadDdsHeader();
+                return new Size((int)header.Width, (int)header.Height);
+            });
         }
+
+        public static IReadOnlyDictionary<TexId, DDSFormat> OriginalFormat
+            = DataFile(@"original-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
+        internal static Action<SubProgressToken> CreateOriginalFormatIndex(Workspace w)
+            => CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f => f.ReadDdsHeader().GetFormat());
 
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
@@ -159,23 +114,36 @@ namespace DS3TexUpUI
                     yield return item;
         }
 
-        public static class DDS
+
+        private static Action<SubProgressToken> CreateExtractedFilesIndexJson<T>(Workspace w, string outputFile, Func<string, T> valueSector)
         {
-            // Used for sRGB color textures without transparency
-            public static readonly DDSFormat Albedo = DDSFormat.BC1_UNORM_SRGB;
-            // Used for sRGB color textures with binary transparency.
-            // (A pixel is either fully transparent or fully opaque.)
-            public static readonly DDSFormat AlbedoBinaryAlpha = DDSFormat.BC1_UNORM_SRGB;
-            // Used for sRGB color textures with transparency (RGBA).
-            public static readonly DDSFormat AlbedoSmoothAlpha = DDSFormat.BC7_UNORM_SRGB;
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
 
-            // They use BC7 for all normals I looked at.
-            public static readonly DDSFormat Normal = DDSFormat.BC7_UNORM;
+                token.SubmitStatus($"Indexing {files.Length} files");
+                var index = new Dictionary<TexId, T>();
+                token.ForAllParallel(files, f =>
+                {
+                    try
+                    {
+                        var id = TexId.FromPath(f);
+                        var value = valueSector(f);
+                        lock (index)
+                        {
+                            index[id] = value;
+                        }
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+                });
 
-            public static readonly DDSFormat Reflective = DDSFormat.BC1_UNORM_SRGB;
-
-            // They use BC4 for mask, but the header doesn't say whether signed or unsigned. Maybe it's typeless? idk
-            // public static readonly DDSFormat Mask = ?;
+                token.SubmitStatus($"Saving index");
+                index.SaveAsJson(outputFile);
+            };
         }
     }
 

@@ -22,7 +22,9 @@ namespace DS3TexUpUI
             new TexIdDictionaryConverter<TexKind>(),
             new TexIdDictionaryConverter<TransparencyKind>(),
             new TexIdDictionaryConverter<Size>(),
+            new TexIdDictionaryConverter<DDSFormat>(),
             new SizeConverter(),
+            new DDSFormatConverter(),
         };
 
         public static JsonSerializerOptions WithStandardConverters(this JsonSerializerOptions options)
@@ -194,5 +196,17 @@ namespace DS3TexUpUI
             }
         }
 
+        private sealed class DDSFormatConverter : JsonConverter<DDSFormat>
+        {
+            public override DDSFormat Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                if (reader.TokenType != JsonTokenType.String) throw new JsonException();
+                return DDSFormat.Parse(reader.GetString());
+            }
+            public override void Write(Utf8JsonWriter writer, DDSFormat value, JsonSerializerOptions options)
+            {
+                writer.WriteStringValue(value.ToString());
+            }
+        }
     }
 }
