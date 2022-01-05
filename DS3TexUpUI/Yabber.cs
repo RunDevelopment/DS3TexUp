@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DS3TexUpUI
 {
@@ -26,32 +27,23 @@ namespace DS3TexUpUI
                 return chunk.Length;
             });
         }
-        public static void RunParallel(string[] files, int degreeOfParallelism = 0)
+        public static void RunParallel(string[] files)
         {
-            if (degreeOfParallelism == 0) degreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * 2.0 / 3.0);
+            var degreeOfParallelism = Environment.ProcessorCount;
+            var chunks = files.Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)));
 
-            files
-                .Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)))
-                .AsParallel()
-                .WithDegreeOfParallelism(degreeOfParallelism)
-                .ForAll(chunk => RunProcess(chunk));
+            Parallel.ForEach(chunks, RunProcess);
         }
-        public static void RunParallel(IProgressToken token, string[] files, int degreeOfParallelism = 0)
+        public static void RunParallel(IProgressToken token, string[] files)
         {
-            if (degreeOfParallelism == 0) degreeOfParallelism = (int)Math.Ceiling(Environment.ProcessorCount * 2.0 / 3.0);
+            var degreeOfParallelism = Environment.ProcessorCount;
+            var chunks = files.Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)));
 
-            token.ForAll(
-                files
-                    .Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)))
-                    .AsParallel()
-                    .WithDegreeOfParallelism(degreeOfParallelism),
-                files.Length,
-                chunk =>
-                {
-                    RunProcess(chunk);
-                    return chunk.Length;
-                }
-            );
+            token.ForAllParallel(chunks, files.Length, chunk =>
+            {
+                RunProcess(chunk);
+                return chunk.Length;
+            });
         }
 
         private static void RunProcess(string[] files)

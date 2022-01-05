@@ -29,13 +29,13 @@ I prefer not to use denoising or BC-removal models (or external tools). Noise ad
 
 Models that can handle noise and compression artifacts tend to produce more detailed/interesting upscaled images.
 
-### Binary alpha & Full alpha
+### Alpha
 
-- `1x_SSAntiAlias9x` chained with [ all models from above ]
+- `1x_SSAntiAlias9x` chained with `4x-UltraSharp`
 
 Some texture have binary or full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
 
-I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with a black background and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately (using the same model from above) and recombined to get an upscaled transparent texture (see `CombineAlphaBlack`).
+I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with its colors extended to fill transparent regions and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately. The alpha image uses the above model and the color image uses whatever model works best (see the list of model at the start of the albedo section). The two upscaled images are then recombined to get an upscaled transparent texture.
 
 The `1x_SSAntiAlias9x` model is necessary to smoothen the edges of images with binary alpha. The anti aliasing also benefits the full alpha images since it smooths over some block compression artifacts in the alpha channel.
 
@@ -66,11 +66,9 @@ Since this is a GIGO situation, I just used `4x-UltraSharp`. It does a decent jo
 
 ### Height part
 
-- `1x_BCGone-DetailedV2_40-60_115000_G` chained with `4x-UltraSharp` on the extracted height maps
+- `4x-UltraSharp` on the extracted height maps
 
-Height maps are even blockier than gloss maps and often blurry on top of that. The first model does a good job of dealing with the extreme blockiness, but GIGO. It sometimes produces noticeable artifacts that are amplified by `4x-UltraSharp`. It doesn't happen too often, so I just ignored it for now.
-
-If the artifacts are too noticeable, I will think of a way of using the normal map to hopefully resolve the artifacts. However, I don't see the need to do so right now.
+Height maps are even blockier than gloss maps and often blurry on top of that. `4x-UltraSharp` does an unbelievable good job given the artifacts it has to deal with. However, it does add a noticeable noise.
 
 ## Reflective (_r)
 
@@ -78,6 +76,8 @@ If the artifacts are too noticeable, I will think of a way of using the normal m
 
 These maps aren't very noisy and this model seems to produce good results. Since `4x-UltraSharp` also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
 
-## Emissive (_e)
+## Emissive (_em)
 
-Right now, I think emissive maps don't need upscaling.
+- `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
+
+This model does a good job.

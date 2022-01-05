@@ -141,6 +141,47 @@ namespace DS3TexUpUI
             return grey.AsTextureMap(map.Width);
         }
 
+        public static ArrayTextureMap<byte> GetAlpha(this ArrayTextureMap<Rgba32> map)
+        {
+            var alpha = new byte[map.Count];
+
+            for (int i = 0; i < alpha.Length; i++)
+                alpha[i] = map.Data[i].A;
+
+            return alpha.AsTextureMap(map.Width);
+        }
+        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
+        {
+            if (color.Width != alpha.Width || color.Height != alpha.Height)
+                throw new ArgumentException();
+
+            var w = color.Width;
+            var h = color.Height;
+
+            static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
+
+            for (int i = 0; i < color.Data.Length; i++)
+            {
+                ref var c = ref color.Data[i];
+
+                var alphaRgb = alpha.Data[i];
+                c.A = NoisePass(Math.Max(alphaRgb.R, Math.Max(alphaRgb.G, alphaRgb.B)));
+            }
+        }
+        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
+        {
+            if (color.Width != alpha.Width || color.Height != alpha.Height)
+                throw new ArgumentException();
+
+            var w = color.Width;
+            var h = color.Height;
+
+            static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
+
+            for (int i = 0; i < color.Data.Length; i++)
+                color.Data[i].A = NoisePass(alpha.Data[i]);
+        }
+
         public static (ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha) SplitAlphaBlack(this ArrayTextureMap<Rgba32> map)
         {
             var color = new Rgb24[map.Count];
@@ -259,14 +300,6 @@ namespace DS3TexUpUI
 
             return result.AsTextureMap(w);
         }
-        private static void RemoveTransparentNoise(Span<Rgba32> data)
-        {
-            foreach (ref var item in data)
-            {
-                if (item.A <= 5)
-                    item = new Rgba32(0, 0, 0, 0);
-            }
-        }
         private static Rgba32 CombineAlphaBlack(byte r, byte g, byte b, byte a)
         {
             if (a == 0)
@@ -278,6 +311,19 @@ namespace DS3TexUpUI
                     (byte)Math.Min(255, b * 255 / a),
                     a
                 );
+        }
+
+        public static void RemoveTransparentNoise(this ArrayTextureMap<Rgba32> map)
+        {
+            RemoveTransparentNoise(map.Data);
+        }
+        private static void RemoveTransparentNoise(Span<Rgba32> data)
+        {
+            foreach (ref var item in data)
+            {
+                if (item.A <= 5)
+                    item = new Rgba32(0, 0, 0, 0);
+            }
         }
 
         public static ArrayTextureMap<Rgb24> WithBackground(this ArrayTextureMap<Rgba32> map, Rgb24 background)
@@ -295,6 +341,18 @@ namespace DS3TexUpUI
             }
 
             return result.AsTextureMap(map.Width);
+        }
+        public static void SetBackground(this ArrayTextureMap<Rgba32> map, Rgb24 background)
+        {
+            foreach (ref var p in map.Data.AsSpan())
+            {
+                p = new Rgba32(
+                    (byte)(p.R * p.A / 255 + background.R * (255 - p.A) / 255),
+                    (byte)(p.G * p.A / 255 + background.G * (255 - p.A) / 255),
+                    (byte)(p.B * p.A / 255 + background.B * (255 - p.A) / 255),
+                    255
+                );
+            }
         }
 
         public static ArrayTextureMap<Rgba32> CombineWithBackground(this ArrayTextureMap<Rgba32> map1, ArrayTextureMap<Rgba32> map2, Rgb24 bg1, Rgb24 bg2)
@@ -443,6 +501,116 @@ namespace DS3TexUpUI
             var stdB = Math.Sqrt(varB / n) / 255;
 
             return (float)(stdR * 0.3 + stdG * 0.5 + stdB * 0.2);
+        }
+
+        public static void FillSmallHoles(this ArrayTextureMap<Rgba32> map)
+        {
+            FillHolesAlphaPreprocessing(map);
+
+            static void DoIteration(ArrayTextureMap<Rgba32> source, ArrayTextureMap<Rgba32> target)
+            {
+                var w = source.Width;
+                var h = source.Height;
+
+                for (int y = 0; y < h; y++)
+                {
+                    for (int x = 0; x < w; x++)
+                    {
+                        var s = source.Data[y * w + x];
+
+                        if (s.A == 0)
+                        {
+                            var avg = new ColorAverage();
+
+                            if (x != 0) avg.Add(ref source.Data[y * w + (x - 1)]);
+                            if (x + 1 < w) avg.Add(ref source.Data[y * w + (x + 1)]);
+                            if (y != 0) avg.Add(ref source.Data[(y - 1) * w + x]);
+                            if (y + 1 < h) avg.Add(ref source.Data[(y + 1) * w + x]);
+
+                            s = avg.GetResult();
+                        }
+
+                        target[y * w + x] = s;
+                    }
+                }
+            }
+
+            var copy = map.Clone();
+
+            const int Iterations = 4;
+            for (var i = 0; i < Iterations; i++)
+            {
+                DoIteration(map, copy);
+                DoIteration(copy, map);
+            }
+        }
+        private static void FillHolesAlphaPreprocessing(ArrayTextureMap<Rgba32> map)
+        {
+            const int low = 15;
+            foreach (ref var item in map.Data.AsSpan())
+            {
+                item.A = item.A < low ? (byte)0 : (byte)255;
+            }
+        }
+        private struct ColorAverage
+        {
+            private int r;
+            private int g;
+            private int b;
+            private int count;
+
+            public void Add(ref Rgba32 color)
+            {
+                if (color.A != 0)
+                {
+                    r += color.R;
+                    g += color.G;
+                    b += color.B;
+                    count++;
+                }
+            }
+
+            public Rgba32 GetResult()
+            {
+                if (count == 0)
+                    return new Rgba32(0, 0, 0, 0);
+                else
+                    return new Rgba32((byte)(r / count), (byte)(g / count), (byte)(b / count), 255);
+            }
+        }
+
+        public static ArrayTextureMap<T> CobmineTiles<T>(this ArrayTextureMap<T>[,] tiles)
+            where T : struct
+        {
+            var tilesY = tiles.GetLength(0);
+            var tilesX = tiles.GetLength(1);
+
+            if (tilesX == 0 || tilesY == 0)
+                return new T[0].AsTextureMap(0);
+
+            var width = tiles[0, 0].Width;
+            var height = tiles[0, 0].Height;
+
+            var result = new T[width * height * tilesX * tilesY];
+            var resultWidth = width * tilesX;
+
+            for (int yT = 0; yT < tilesY; yT++)
+            {
+                for (int xT = 0; xT < tilesX; xT++)
+                {
+                    var yOffset = yT * height;
+                    var xOffset = xT * width;
+
+                    var source = tiles[yT, xT];
+                    if (source.Width != width || source.Height != height)
+                        throw new ArgumentException("All tiles have to be the same size");
+
+                    for (int y = 0; y < height; y++)
+                        Array.Copy(source.Data, y * width, result, (yOffset + y) * resultWidth + xOffset, width);
+                }
+            }
+
+            return result.AsTextureMap(resultWidth);
         }
     }
 }

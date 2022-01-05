@@ -11,10 +11,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
+    <ContentWithTargetPath Include="data\materials\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)\data\materials\%(Filename)%(Extension)</TargetPath>
+    </ContentWithTargetPath>
 
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
     <PackageReference Include="SoulsFormats" Version="1.0.0" />
-    <PackageReference Include="Pfim" Version="0.10.2" />
+    <PackageReference Include="Pfim" Version="0.10.3" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
     <PackageReference Include="MathNet.Numerics" Version="4.15.0" />
   </ItemGroup>

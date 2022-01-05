@@ -189,6 +189,9 @@ namespace DS3TexUpUI
                         return hasMin ? TransparencyKind.Full : TransparencyKind.Binary;
                     }
 
+                case Pfim.ImageFormat.R5g5b5a1:
+                    return TransparencyKind.Binary;
+
                 default:
                     throw new Exception("Unsupported pixel format (" + Format + ")");
             }
@@ -281,10 +284,10 @@ namespace DS3TexUpUI
 
     public enum TransparencyKind
     {
-        None,
-        Unnoticeable,
-        Binary,
-        Full,
+        None = 0,
+        Unnoticeable = 1,
+        Binary = 2,
+        Full = 3,
     }
 
     public enum DDSFormat

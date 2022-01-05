@@ -79,36 +79,10 @@ namespace DS3TexUpUI
 
     public static class ProgressExtensions
     {
-        public static void ForAll<T>(this IProgressToken token, ParallelQuery<T> iter, int total, Action<T> action)
+        public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, Action<T> action)
         {
-            ForAll(token, iter, total, item => { action(item); return 1; });
-        }
-        public static void ForAll<T>(this IProgressToken token, ParallelQuery<T> iter, int total, Func<T, int> action)
-        {
-            var done = 0;
-
-            iter.ForAll(item =>
-            {
-                lock (token.Lock)
-                {
-                    if (token.IsCanceled) return;
-                }
-
-                var work = action(item);
-
-                lock (token.Lock)
-                {
-                    if (token.IsCanceled) return;
-                    done += work;
-                    token.SubmitProgress(Math.Clamp(done / (double)total, 0, 1));
-                }
-            });
-
-            token.SubmitProgress(1);
-        }
-        public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, int total, Action<T> action)
-        {
-            ForAll(token, iter, total, item => { action(item); return 1; });
+            var collection = iter is IReadOnlyCollection<T> coll ? coll : iter.ToList();
+            ForAll(token, collection, collection.Count, item => { action(item); return 1; });
         }
         public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, int total, Func<T, int> action)
         {
@@ -128,25 +102,78 @@ namespace DS3TexUpUI
 
             token.SubmitProgress(1);
         }
-        public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, int total, Action<SubProgressToken, T> action)
+        public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, Action<SubProgressToken, T> action)
         {
-            var progress = new SubProgressToken(token);
+            var collection = iter is IReadOnlyCollection<T> coll ? coll : iter.ToList();
 
+            var progress = new SubProgressToken(token);
             var done = 0;
-            var factor = 1.0 / total;
-            ForAll(token, iter, total, item =>
+            var factor = 1.0 / collection.Count;
+            ForAll(token, collection, item =>
             {
                 action(progress.Slice(done * factor, factor), item);
                 done++;
             });
         }
-        public static void ForAll<T>(this IProgressToken token, IReadOnlyCollection<T> iter, Action<T> action)
+
+        public static void ForAllParallel<T>(this IProgressToken token, IEnumerable<T> iter, Action<T> action)
         {
-            ForAll(token, iter, iter.Count, action);
+            var collection = iter is IReadOnlyCollection<T> coll ? coll : iter.ToList();
+
+            ForAllParallel(token, collection, collection.Count, (item) =>
+            {
+                action(item);
+                return 1;
+            });
         }
-        public static void ForAll<T>(this IProgressToken token, IReadOnlyCollection<T> iter, Action<SubProgressToken, T> action)
+        public static void ForAllParallel<T>(this IProgressToken token, IEnumerable<T> iter, int total, Func<T, int> action)
         {
-            ForAll(token, iter, iter.Count, action);
+            token.SubmitProgress(0);
+
+
+            int done = 0;
+            System.Threading.Tasks.Parallel.ForEach(iter, (item, loop) =>
+            {
+                try
+                {
+                    lock (token.Lock)
+                    {
+                        if (token.IsCanceled)
+                        {
+                            loop.Break();
+                            return;
+                        }
+                    }
+
+                    var work = action(item);
+
+                    lock (token.Lock)
+                    {
+                        if (token.IsCanceled)
+                        {
+                            loop.Break();
+                            return;
+                        }
+
+                        done += work;
+                        if (total > 0) token.SubmitProgress(Math.Clamp(done / (double)total, 0, 1));
+                    }
+                }
+                catch (Exception e)
+                {
+                    if (e is CanceledException)
+                    {
+                        loop.Break();
+                        return;
+                    }
+
+                    throw;
+                }
+            });
+
+            token.CheckCanceled();
+
+            token.SubmitProgress(1);
         }
 
         public static SubProgressToken[] SplitEqually(this IProgressToken token, int parts)

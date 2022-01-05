@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SixLabors.ImageSharp.PixelFormats;
+using SoulsFormats;
 
 namespace DS3TexUpUI
 {
@@ -198,15 +200,75 @@ namespace DS3TexUpUI
 
         private void button5_Click(object sender, EventArgs e)
         {
+            // m37_00_00_00_020151
+            var w = GetWorkspace();
 
-            // var nLow = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\m31_00_woodplank_10_n-bilinear-up.png");
-            // var nHigh = DS3NormalMap.Load(@"C:\Users\micha\Desktop\test\normal-ai-x-up.png");
-            // nLow.Normals.Set(nHigh);
-            // nLow.SaveAsPng(@"C:\Users\micha\Desktop\test\final.png");
+            RunTask(w.FindCopies);
+
+            // Yabber.RunParallel(Directory.GetFiles(Path.Join(w.MapsDir, "m30_00_00_00"), "*.mapbnd.dcx"));
+
+            // var files = Directory
+            //     .GetDirectories(Path.Join(w.MapsDir, "m30_00_00_00"), "*-mapbnd-dcx")
+            //     .Select(d =>
+            //     {
+            //         // e.g. m37_00_00_00_020151
+            //         var meshId = Path.GetFileName(d).Substring(0, 19);
+            //         // e.g. m37_00_00_00_020151
+            //         var mapId = meshId.Substring(0, 12);
+
+            //         return Path.Join(d, "map", mapId, meshId, "Model", meshId + ".flver");
+            //     })
+            //     .ToArray();
+
+            // var relevant = files
+            //     .Where((file, i) =>
+            //     {
+            //         Text = "" + i;
+            //         var f = FLVER.Read(files[i]);
+            //         return f.Materials.Any(m => m.Params.Any(p => p.Value.Contains("m30_00_o309110_wall_02_n")));
+            //     })
+            //     .ToArray();
 
 
-            var t = new TilingForm(GetWorkspace());
-            t.ShowDialog();
+            // var files = Directory.GetFiles(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\mtd\allmaterialbnd-mtdbnd-dcx", "*.mtd");
+
+            // foreach (var file in files)
+            // {
+            //     var mat = MTD.Read(file);
+            //     if (mat.ShaderPath.Contains("pom", StringComparison.OrdinalIgnoreCase)) {
+            //         int i = 0;
+            //     }
+            // }
+
+            //             var mat = MTD.Read(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\mtd\allmaterialbnd-mtdbnd-dcx\M[ARSN]_l_p_m.mtd");
+
+            //             var relevant = new string[]{
+            // @"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m37_00_00_00\m37_00_00_00_000800-mapbnd-dcx\map\m37_00_00_00\m37_00_00_00_000800\Model\m37_00_00_00_000800.flver",
+            // @"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m37_00_00_00\m37_00_00_00_000908-mapbnd-dcx\map\m37_00_00_00\m37_00_00_00_000908\Model\m37_00_00_00_000908.flver"
+            //             };
+
+            //             foreach (var file in relevant)
+            //             {
+            //                 var f = FLVER2.Read(file);
+            //                 var m = f.Materials[4];
+            //                 var bytes = m.GXIndex;
+
+            //                 // var views = bytes.Chunks(4).Select(b => new Views(b)).ToArray();
+
+            //                 // var s = string.Join("\n", views.Select((v, i) =>
+            //                 // {
+            //                 //     return $"{i * 4} {{ }} {v.I32} {v.F32} [{v.Bytes[0]} {v.Bytes[1]} {v.Bytes[2]} {v.Bytes[3]}]";
+            //                 // }));
+            //                 // Clipboard.SetText(s);
+            //             }
+
+
+            // var res = string.Join("\n", relevant);
+            // MessageBox.Show(res);
+            // Clipboard.SetText(res);
+
+            // var f = FLVER.Read(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m53_00_00_00\m53_00_00_00_002000-mapbnd-dcx\map\m53_00_00_00\m53_00_00_00_002000\Model\m53_00_00_00_002000.flver");
+            // MessageBox.Show(string.Join("\n", f.Materials.Select(m => m.Name)));
         }
     }
 }

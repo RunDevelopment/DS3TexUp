@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
-using System.Text;
+using SoulsFormats;
 
 namespace DS3TexUpUI
 {
@@ -29,48 +29,100 @@ namespace DS3TexUpUI
             "m54", // Arena - Round Plaza
         };
 
-        /// <summary>
-        /// A map from every (sensible) character file to the IDs of the characters it is used by.
-        /// <para/>
-        /// One file may be used by multiple characters.
-        /// <para/>
-        /// Useless and/or unused files are not in this map.
-        /// </summary>
-        public static IReadOnlyDictionary<string, ChrId[]> CharacterFiles = GetCharacterFiles();
-        private static IReadOnlyDictionary<string, ChrId[]> GetCharacterFiles()
+        private static string DataFile(string name)
         {
-            var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, @"data\chr.csv");
-            var text = File.ReadAllText(file, Encoding.UTF8);
-
-            var result = new Dictionary<string, ChrId[]>();
-
-            foreach (var line in text.Split('\n').Where(l => !string.IsNullOrWhiteSpace(l)))
-            {
-                var parts = line.Split(';').Select(l => l.Trim()).ToArray();
-                if (parts.Length < 2)
-                    throw new FormatException("All files are expected to have at least one chr");
-
-                var name = parts[0];
-                var ids = new List<ChrId>();
-                for (int i = 1; i < parts.Length; i++)
-                    ids.Add(ChrId.Parse(parts[i]));
-
-                if (result.ContainsKey(name))
-                    throw new Exception("Duplicate file: " + name);
-
-                result[name] = ids.ToArray();
-            }
-
-            return result;
+            return Path.Join(AppDomain.CurrentDomain.BaseDirectory, "data", name);
         }
 
-        public static IReadOnlyList<string> Parts = GetParts();
-        private static IReadOnlyList<string> GetParts()
-        {
-            var file = Path.Join(AppDomain.CurrentDomain.BaseDirectory, @"data\parts.txt");
-            var text = File.ReadAllText(file, Encoding.UTF8);
+        public static readonly IReadOnlyList<string> Parts
+            = DataFile(@"parts.json").LoadJsonFile<string[]>();
 
-            return text.Split('\n').Select(s => s.Trim()).Where(s => s.Length > 0).ToArray();
+        public static readonly IReadOnlyDictionary<TexId, TexKind> KnownTexKinds
+            = DataFile(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
+        internal static Action<SubProgressToken> CreateKnownTexKindsIndex()
+        {
+            static IEnumerable<(TexId id, TexKind kind)> Selector(FlverMaterialInfo info)
+            {
+                foreach (var mat in info.Materials)
+                {
+                    foreach (var tex in mat.Textures)
+                    {
+                        var id = TexId.FromTexture(tex, info.FlverPath);
+                        var kind = TextureTypeToTexKind.GetOrDefault(tex.Type, TexKind.Unknown);
+                        if (id != null && kind != TexKind.Unknown)
+                            yield return (id.Value, kind);
+                    }
+                }
+            }
+
+            return token =>
+            {
+                token.SubmitStatus($"Creating index");
+
+                var grouped = ReadAllFlverMaterialInfo()
+                    .SelectMany(Selector)
+                    .GroupBy(p => p.id);
+
+                var result = new Dictionary<TexId, TexKind>();
+                foreach (var group in grouped)
+                {
+                    // Get the most common texture kind
+                    var kind = group
+                            .Select(p => p.kind)
+                            .GroupBy(k => k)
+                            .Select(g => (g.Key, g.Count()))
+                            .Aggregate((a, b) => a.Item2 > b.Item2 ? a : b)
+                            .Key;
+
+                    result[group.Key] = kind;
+                }
+
+                token.SubmitStatus($"Saving index");
+                result.SaveAsJson(DataFile(@"tex-kinds.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<TexId, TransparencyKind> Transparency
+            = DataFile(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
+        internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+                token.SubmitStatus($"Indexing {files.Length} files");
+                var index = new Dictionary<TexId, TransparencyKind>();
+                token.ForAllParallel(files, f =>
+                {
+                    try
+                    {
+                        var id = TexId.FromPath(f);
+                        var kind = DDSImage.Load(f).GetTransparency();
+                        lock (index)
+                        {
+                            index[id] = kind;
+                        }
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+                });
+
+                token.SubmitStatus($"Saving index");
+                index.SaveAsJson(DataFile(@"alpha.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
+            = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+
+        public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
+        {
+            foreach (var file in Directory.GetFiles(DataFile(@"materials"), "*.json"))
+                foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
+                    yield return item;
         }
 
         public static class DDS
@@ -93,31 +145,10 @@ namespace DS3TexUpUI
         }
     }
 
-    public readonly struct ChrId : IEquatable<ChrId>, IComparable<ChrId>
+    public struct FlverMaterialInfo
     {
-        public readonly int IntValue;
-
-        public ChrId(int intValue)
-        {
-            if (intValue < 0 || intValue > 9999) throw new ArgumentOutOfRangeException();
-            IntValue = intValue;
-        }
-
-        public bool Equals(ChrId other) => IntValue == other.IntValue;
-        public override bool Equals(object obj)
-        {
-            if (obj is ChrId other) return Equals(other);
-            return false;
-        }
-        public override int GetHashCode() => IntValue.GetHashCode();
-        public int CompareTo(ChrId other) => IntValue.CompareTo(other.IntValue);
-        public override string ToString() => "c" + IntValue.ToString("D4");
-
-        public static ChrId Parse(ReadOnlySpan<char> s)
-        {
-            if (s.StartsWith("c", StringComparison.OrdinalIgnoreCase)) s = s.Slice(1);
-            if (s.Length != 4) throw new FormatException("Expected chr ID to contain exactly 4 digits");
-            return new ChrId(int.Parse(s));
-        }
+        public string FlverPath { get; set; }
+        public List<FLVER2.GXList> GXLists { get; set; }
+        public List<FLVER2.Material> Materials { get; set; }
     }
 }
