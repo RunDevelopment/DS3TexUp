@@ -578,5 +578,39 @@ namespace DS3TexUpUI
                     return new Rgba32((byte)(r / count), (byte)(g / count), (byte)(b / count), 255);
             }
         }
+
+        public static ArrayTextureMap<T> CobmineTiles<T>(this ArrayTextureMap<T>[,] tiles)
+            where T : struct
+        {
+            var tilesY = tiles.GetLength(0);
+            var tilesX = tiles.GetLength(1);
+
+            if (tilesX == 0 || tilesY == 0)
+                return new T[0].AsTextureMap(0);
+
+            var width = tiles[0, 0].Width;
+            var height = tiles[0, 0].Height;
+
+            var result = new T[width * height * tilesX * tilesY];
+            var resultWidth = width * tilesX;
+
+            for (int yT = 0; yT < tilesY; yT++)
+            {
+                for (int xT = 0; xT < tilesX; xT++)
+                {
+                    var yOffset = yT * height;
+                    var xOffset = xT * width;
+
+                    var source = tiles[yT, xT];
+                    if (source.Width != width || source.Height != height)
+                        throw new ArgumentException("All tiles have to be the same size");
+
+                    for (int y = 0; y < height; y++)
+                        Array.Copy(source.Data, y * width, result, (yOffset + y) * resultWidth + xOffset, width);
+                }
+            }
+
+            return result.AsTextureMap(resultWidth);
+        }
     }
 }
