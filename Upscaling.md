@@ -76,6 +76,8 @@ Height maps are even blockier than gloss maps and often blurry on top of that. `
 
 These maps aren't very noisy and this model seems to produce good results. Since `4x-UltraSharp` also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
 
-## Emissive (_e)
+## Emissive (_em)
 
-Right now, I think emissive maps don't need upscaling.
+- `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
+
+This model does a good job.
