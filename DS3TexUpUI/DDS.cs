@@ -340,7 +340,7 @@ namespace DS3TexUpUI
         {
             if (input.StartsWith("DX10 "))
                 return Enum.Parse<DxgiFormat>(input.Substring(5));
-            return Enum.Parse<CompressionAlgorithm>(input.Substring(5));
+            return Enum.Parse<CompressionAlgorithm>(input);
         }
 
         public static implicit operator DDSFormat(CompressionAlgorithm fourCC) => new DDSFormat(fourCC);
