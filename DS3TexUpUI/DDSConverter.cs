@@ -130,8 +130,6 @@ namespace DS3TexUpUI
         public static DDSImage Load(string file)
         {
             var image = Pfim.Pfim.FromFile(file);
-            if (image == null) throw new Exception("Unable to decode file: " + file);
-
             if (image.Compressed) image.Decompress();
 
             return new DDSImage(image);
