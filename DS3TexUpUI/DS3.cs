@@ -103,6 +103,31 @@ namespace DS3TexUpUI
             = DataFile(@"original-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
         internal static Action<SubProgressToken> CreateOriginalFormatIndex(Workspace w)
             => CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f => f.ReadDdsHeader().GetFormat());
+        internal static Action<SubProgressToken> CreateFormatsGroupedByTexKind()
+        {
+            return token =>
+            {
+                var list = OriginalFormat
+                    .GroupBy(p => p.Key.GetTexKind())
+                    .OrderBy(p => (int)p.Key)
+                    .Select(g =>
+                    {
+                        return new
+                        {
+                            Type = g.Key.ToString(),
+                            Fromats = g
+                                .GroupBy(p => p.Value)
+                                .Select(g => new { Fromat = g.Key, Count = g.Count(), Textures = g.Select(p => p.Key).OrderBy(id => id).ToList() })
+                                .OrderByDescending(t => t.Count)
+                                .ToList()
+                        };
+                    })
+                    .ToList();
+
+                token.SubmitStatus("Saving formats");
+                list.SaveAsJson(DataFile(@"format-by-tex-kind.json"));
+            };
+        }
 
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
