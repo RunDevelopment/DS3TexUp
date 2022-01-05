@@ -203,8 +203,6 @@ namespace DS3TexUpUI
             // m37_00_00_00_020151
             var w = GetWorkspace();
 
-            RunTask(w.FindCopies);
-
             // Yabber.RunParallel(Directory.GetFiles(Path.Join(w.MapsDir, "m30_00_00_00"), "*.mapbnd.dcx"));
 
             // var files = Directory

@@ -78,6 +78,80 @@ namespace DS3TexUpUI
                 index.Save(file);
             }
         }
+
+        public static CopyIndex Create(SubProgressToken token, IEnumerable<string> files)
+            => Create(token, files.ToList());
+        public static CopyIndex Create(SubProgressToken token, IReadOnlyCollection<string> files)
+        {
+            var index = new CopyIndex();
+
+            token.SubmitStatus($"Indexing {files.Count} files");
+            token.ForAllParallel(files, f =>
+            {
+                try
+                {
+                    var image = f.LoadTextureMap();
+                    index.AddImage(image, f);
+                }
+                catch (System.Exception)
+                {
+                    // ignore
+                }
+            });
+
+            return index;
+        }
+
+        public List<HashSet<string>> GetEquivalenceClasses(SubProgressToken token, IEnumerable<string> files)
+            => GetEquivalenceClasses(token, files.ToList());
+        public List<HashSet<string>> GetEquivalenceClasses(SubProgressToken token, IReadOnlyList<string> files)
+        {
+            var fileIds = files.Select((f, i) => (f, i)).ToDictionary(p => p.f, p => p.i);
+            var fileSizes = new (int, int)[files.Count];
+            foreach (var e in Entries)
+            {
+                if (fileIds.TryGetValue(e.File, out var id))
+                    fileSizes[id] = (e.Width, e.Height);
+            }
+
+            var eqRelations = new List<int[]>();
+
+            token.SubmitStatus($"Looking up {files.Count} files");
+            token.ForAllParallel(files, f =>
+            {
+                try
+                {
+                    var similar = GetSimilar(f);
+                    if (similar == null || similar.Count < 2)
+                        return;
+                    var array = similar.Select(e => fileIds[e.File]).ToArray();
+
+                    lock (eqRelations)
+                    {
+                        eqRelations.Add(array);
+                    }
+                }
+                catch (System.Exception)
+                {
+                    // ignore
+                }
+            });
+
+            token.SubmitStatus("Finding equivalence classes");
+
+            var eqClasses = SetEquivalence.MergeOverlapping(eqRelations, files.Count);
+
+            var lines = eqClasses
+                 .Where(e => e.Count >= 2)
+                 .Select(e =>
+                 {
+                     e.Sort((a, b) => fileSizes[a].Item1.CompareTo(fileSizes[b].Item1));
+                     return string.Join(";", e.Select(i => files[i]));
+                 })
+                 .ToList();
+
+            return eqClasses.Select(eq => eq.Select(i => files[i]).ToHashSet()).ToList();
+        }
     }
 
     [Serializable]
