@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public static class Files
@@ -29,7 +31,9 @@ namespace DS3TexUpUI
 
             var level2 = new HashSet<string>();
             foreach (var l1 in level1)
-                level2.UnionWith(Directory.GetDirectories(Path.Join(source, l1)).Select(Path.GetFileName));
+            {
+                level2.UnionWith(Directory.GetDirectories(Path.Join(source, l1)).Select(f => Path.GetFileName(f)));
+            }
 
             var result = new List<(string, string)>();
             foreach (var l1 in level1)
