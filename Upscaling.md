@@ -70,6 +70,12 @@ Since this is a GIGO situation, I just used `4x-UltraSharp`. It does a decent jo
 
 Height maps are even blockier than gloss maps and often blurry on top of that. `4x-UltraSharp` does an unbelievable good job given the artifacts it has to deal with. However, it does add a noticeable noise.
 
+### A note on compression artifacts
+
+Normal textures in DS3 are typically compressed using BC7. This is definitely the right compression method to use and most normal textures (95%) use it. However, some are compressed using BC1. BC1 was designed for diffuse maps and will horribly compress normal maps resulting in heavy compression artifacts all over the normal map and especially in the gloss map.
+
+I used `1x_BCGone-DetailedV2_40-60_115000_G` on all BC1 compressed normal textures before splitting them into normals and gloss maps. This will result in rather smooth normals and gloss maps but it's acceptable.
+
 ## Reflective (_r)
 
 - `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%

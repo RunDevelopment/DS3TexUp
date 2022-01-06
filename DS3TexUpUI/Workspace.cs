@@ -629,6 +629,33 @@ namespace DS3TexUpUI
             }
         }
 
+        public void MoveBadNormals(SubProgressToken token, string outDir)
+        {
+            token.SubmitStatus("Searching for bad normals");
+            var bad = DS3.OriginalFormat
+                .Where(p =>
+                {
+                    var id = p.Key;
+                    var format = p.Value;
+                    return id.GetTexKind() == TexKind.Normal && format.FourCC == Pfim.CompressionAlgorithm.D3DFMT_DXT1;
+                })
+                .Select(p => p.Key)
+                .ToArray();
+
+            token.SubmitStatus("Copying bad normals");
+            token.ForAllParallel(bad, id =>
+            {
+                var cat = id.Category.ToString();
+                var name = id.Name.ToString();
+
+                var source = Path.Join(ExtractDir, cat, name + ".dds");
+                var target = Path.Join(outDir, cat, name + ".png");
+
+                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                source.ToPNG(target);
+            });
+        }
+
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target, IProgressToken token)
         {
             token.CheckCanceled();
