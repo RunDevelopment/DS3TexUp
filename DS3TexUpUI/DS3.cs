@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using SoulsFormats;
 using SixLabors.ImageSharp;
+using Pfim;
 
 namespace DS3TexUpUI
 {
@@ -131,6 +132,45 @@ namespace DS3TexUpUI
 
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+
+        // public static IReadOnlyDictionary<TexId, DDSFormat> OutputFormat
+        //     = DataFile(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
+        internal static Action<SubProgressToken> CreateOutputFormatIndex(Workspace w)
+        {
+            static DDSFormat GetOutputNormalFormat(DDSFormat format)
+            {
+                // Always use BC7 for normals!
+                if (format.DxgiFormat == DxgiFormat.BC1_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
+                if (format.DxgiFormat == DxgiFormat.BC1_UNORM) return DxgiFormat.BC7_UNORM;
+
+                // TODO: The other formats
+                return format;
+            }
+
+            static DDSFormat GetOutputFormat(DDSFormat format, TexKind kind)
+            {
+                // BC7 will always achieve better quality with the same memory
+                if (format.DxgiFormat == DxgiFormat.BC3_UNORM) return DxgiFormat.BC7_UNORM;
+                if (format.DxgiFormat == DxgiFormat.BC3_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
+
+                return kind switch
+                {
+                    // TODO: Other texture kinds need attention too!
+                    TexKind.Normal => GetOutputNormalFormat(format),
+                    _ => format
+                };
+            }
+
+            return token =>
+            {
+                var e = OriginalFormat
+                    .Select(kv => new KeyValuePair<TexId, DDSFormat>(kv.Key, GetOutputFormat(kv.Value, kv.Key.GetTexKind())))
+                    .ToList();
+
+                token.SubmitStatus("Saving formats");
+                new Dictionary<TexId, DDSFormat>(e).SaveAsJson(DataFile(@"output-format.json"));
+            };
+        }
 
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
         {
