@@ -72,9 +72,15 @@ Height maps are even blockier than gloss maps and often blurry on top of that. `
 
 ## Reflective (_r)
 
-- `4x-UltraSharp`
+- `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
 
-These maps aren't very noisy and this model seems to produce good results. Since `4x-UltraSharp` also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
+These maps aren't very noisy and this model seems to produce good results. Since this model also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
+
+## Shininess (_s)
+
+- `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
+
+Shininess is has a similar function to gloss (so similar that I haven't figured out the difference yet) however, the shininess map is its own texture and doesn't suffer from heavy compression artifacts as a result.
 
 ## Emissive (_em)
 
