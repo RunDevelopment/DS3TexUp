@@ -159,13 +159,19 @@ namespace DS3TexUpUI
             var h = color.Height;
 
             static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
+            static byte PickGrey(Rgba32 p) {
+                var min = Math.Min(p.R, Math.Min(p.G, p.B));
+                var max = Math.Max(p.R, Math.Max(p.G, p.B));
+                var avg = (byte)((p.R + p.G + p.B) / 3);
+                var blend = (byte)((max * avg + min * (255 - avg)) / 255);
+                return blend;
+            }
 
             for (int i = 0; i < color.Data.Length; i++)
             {
                 ref var c = ref color.Data[i];
-
-                var alphaRgb = alpha.Data[i];
-                c.A = NoisePass(Math.Max(alphaRgb.R, Math.Max(alphaRgb.G, alphaRgb.B)));
+                var grey = PickGrey(alpha.Data[i]);
+                c.A = NoisePass(grey);
             }
         }
         public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
