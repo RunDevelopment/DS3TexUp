@@ -9,9 +9,6 @@ namespace DS3TexUpUI
 {
     public class Yabber
     {
-        private static readonly string _yabberDir = @"C:\mods\DS3\Yabber 1.3.1";
-        private static readonly string _yabberExe = _yabberDir + @"\Yabber.exe";
-
         public static void Run(params string[] files)
         {
             foreach (var chunk in files.Chunks(16))
@@ -49,7 +46,7 @@ namespace DS3TexUpUI
         private static void RunProcess(string[] files)
         {
             var info = new ProcessStartInfo();
-            info.FileName = _yabberExe;
+            info.FileName = AppConfig.Instance.YabberExe;
             foreach (var file in files)
             {
                 info.ArgumentList.Add(file);

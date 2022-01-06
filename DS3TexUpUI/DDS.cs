@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -57,7 +57,6 @@ namespace DS3TexUpUI
             ToDDSUsingTexConv(file, target, format);
         }
 
-        private static readonly string _texConvPath = @"C:\DS3TexUp\texconv.exe";
         private static readonly Random _rng = new Random();
         private static void ToDDSUsingTexConv(string file, string target, DDSFormat format)
         {
@@ -65,7 +64,7 @@ namespace DS3TexUpUI
             var suffix = "-temp" + _rng.Next();
 
             // https://github.com/Microsoft/DirectXTex/wiki/Texconv
-            var info = new ProcessStartInfo(_texConvPath);
+            var info = new ProcessStartInfo(AppConfig.Instance.TexConvExe);
             info.ArgumentList.Add("-nologo");
             info.ArgumentList.Add("-y"); // overwrite existing
 
@@ -107,10 +106,9 @@ namespace DS3TexUpUI
         }
 
 
-        private static readonly string _compressonatorCli = @"C:\Program Files (x86)\Compressonator_4.2.5185\bin\CLI\compressonatorcli.exe";
         private static void ToDDSUsingCompressonator(string file, string target)
         {
-            var info = new ProcessStartInfo(_compressonatorCli);
+            var info = new ProcessStartInfo(AppConfig.Instance.CompressonatorCliExe);
             info.ArgumentList.Add("-fd");
             info.ArgumentList.Add("BC1");
             info.ArgumentList.Add("-DXT1UseAlpha");

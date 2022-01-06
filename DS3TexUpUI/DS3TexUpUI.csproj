@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ContentWithTargetPath Include="appconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)\%(Filename)%(Extension)</TargetPath>
+    </ContentWithTargetPath>
     <ContentWithTargetPath Include="data\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\%(Filename)%(Extension)</TargetPath>
