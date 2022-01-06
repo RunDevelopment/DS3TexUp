@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using Pfim;
@@ -38,7 +36,7 @@ namespace DS3TexUpUI
                 return dxt10.DxgiFormat;
         }
 
-        public static void ToPNG(string file, string target)
+        public static void ToPNG(this string file, string target)
         {
             if (file.EndsWith(".dds"))
             {
@@ -52,7 +50,7 @@ namespace DS3TexUpUI
             }
         }
 
-        public static void ToDDS(string file, string target, DDSFormat format)
+        public static void ToDDS(this string file, string target, DDSFormat format)
         {
             ToDDSUsingTexConv(file, target, format);
         }
