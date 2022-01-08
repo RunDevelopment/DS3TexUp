@@ -6,6 +6,8 @@ using SoulsFormats;
 using SixLabors.ImageSharp;
 using Pfim;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public static class DS3
@@ -172,6 +174,53 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus("Saving formats");
                 new Dictionary<TexId, DDSFormat>(e).SaveAsJson(DataFile(@"output-format.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> Copies
+            = DataFile(@"copies.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
+        internal static Action<SubProgressToken> CreateCopyIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+                var index = CopyIndex.Create(token.Reserve(0.5), files);
+
+                var copies = new Dictionary<TexId, List<TexId>>();
+
+                token.SubmitStatus($"Looking up {files.Length} files");
+                token.ForAllParallel(files, f =>
+                {
+                    var id = TexId.FromPath(f);
+                    var set = new HashSet<TexId>() { id };
+
+                    try
+                    {
+                        var similar = index.GetSimilar(f);
+                        if (similar != null)
+                            set.UnionWith(similar.Select(e => TexId.FromPath(e.File)));
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+
+                    var kind = id.GetTexKind();
+                    set.RemoveWhere(i => i.GetTexKind() != kind);
+
+                    var result = new List<TexId>(set);
+                    result.Sort();
+
+                    lock (copies)
+                    {
+                        copies[id] = result;
+                    }
+                });
+
+                token.SubmitStatus("Saving copies JSON");
+                copies.SaveAsJson(DataFile(@"copies.json"));
             };
         }
 
