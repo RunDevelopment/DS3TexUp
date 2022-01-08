@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Numerics;
+using System.Reflection;
 using System.Linq;
 using SixLabors.ImageSharp;
 using SoulsFormats;
@@ -13,25 +14,104 @@ namespace DS3TexUpUI
 {
     public static class JsonConverters
     {
-        public static readonly JsonConverter[] Converters = new JsonConverter[] {
-            new Vector2Converter(),
-            new Tuple2Converter<int, int>(),
-            new TexIdConverter(),
-            new TexIdDictionaryConverter<int>(),
-            new TexIdDictionaryConverter<(int, int)>(),
-            new TexIdDictionaryConverter<TexKind>(),
-            new TexIdDictionaryConverter<TransparencyKind>(),
-            new TexIdDictionaryConverter<Size>(),
-            new TexIdDictionaryConverter<DDSFormat>(),
-            new SizeConverter(),
-            new DDSFormatConverter(),
-        };
-
-        public static JsonSerializerOptions WithStandardConverters(this JsonSerializerOptions options)
+        private static readonly Dictionary<Type, JsonConverter> _concreteTypes = new Dictionary<Type, JsonConverter>()
         {
-            foreach (var c in Converters)
-                options.Converters.Add(c);
+            [typeof(Vector2)] = new Vector2Converter(),
+            [typeof(TexId)] = new TexIdConverter(),
+            [typeof(Size)] = new SizeConverter(),
+            [typeof(DDSFormat)] = new DDSFormatConverter(),
+        };
+        public static JsonSerializerOptions WithConvertersFor<T>(this JsonSerializerOptions options)
+        {
+            var types = GetTypes(typeof(T));
+
+            foreach (var type in types)
+            {
+                if (_concreteTypes.TryGetValue(type, out var concreteConverter))
+                {
+                    options.Converters.Add(concreteConverter);
+                }
+                else if (type.IsGenericType)
+                {
+                    var args = type.GetGenericArguments();
+                    var typeDef = type.GetGenericTypeDefinition();
+
+                    if (typeDef == typeof(Dictionary<,>))
+                    {
+                        if (args[0] == typeof(TexId))
+                        {
+                            var cType = typeof(TexIdDictionaryConverter<>).MakeGenericType(args[1]);
+                            var ctor = cType.GetConstructor(new Type[0]);
+                            var c = ctor.Invoke(null);
+                            options.Converters.Add((JsonConverter)c);
+                        }
+                    }
+                    else if (typeDef == typeof(ValueTuple<,>))
+                    {
+                        var cType = typeof(Tuple2Converter<,>).MakeGenericType(args);
+                        var ctor = cType.GetConstructor(new Type[0]);
+                        var c = ctor.Invoke(null);
+                        options.Converters.Add((JsonConverter)c);
+                    }
+                }
+            }
+
             return options;
+        }
+        private static List<Type> GetTypes(Type type)
+        {
+            var types = new List<Type>();
+            BFS(type, (type, list) =>
+            {
+                types.Add(type);
+
+                // Type parameters
+                if (type.IsGenericType)
+                    list.AddRange(type.GetGenericArguments());
+
+                // Properties
+                list.AddRange(GetPropertyTypes(type));
+
+                // IEnumerable<T> implementation
+                var enumerableTypes = type.GetInterfaces()
+                    .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>))
+                    .SelectMany(i => i.GetGenericArguments());
+                list.AddRange(enumerableTypes);
+            });
+            return types;
+        }
+        private static IEnumerable<Type> GetPropertyTypes(Type type)
+        {
+            var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (var p in props)
+            {
+                var get = p.GetMethod;
+                if (get != null && get.IsPublic)
+                {
+                    yield return get.ReturnType;
+                }
+            }
+        }
+        private static void BFS<T>(T start, Action<T, List<T>> consumeNext)
+        {
+            var seen = new HashSet<T>();
+
+            var current = new List<T>() { start };
+            var next = new List<T>();
+            while (current.Count > 0)
+            {
+                next.Clear();
+
+                foreach (var item in current)
+                {
+                    if (seen.Contains(item)) continue;
+                    seen.Add(item);
+
+                    consumeNext(item, next);
+                }
+
+                (current, next) = (next, current);
+            }
         }
 
         public static void SaveAsJson<T>(this T value, string file)
@@ -39,13 +119,14 @@ namespace DS3TexUpUI
             if (File.Exists(file)) File.Delete(file);
             using var f = File.OpenWrite(file);
             var jw = new Utf8JsonWriter(f);
-            JsonSerializer.Serialize(jw, value, new JsonSerializerOptions().WithStandardConverters());
+            var options = new JsonSerializerOptions().WithConvertersFor<T>();
+            JsonSerializer.Serialize(jw, value, options);
         }
 
         public static T LoadJsonFile<T>(this string file)
         {
             var jr = new Utf8JsonReader(File.ReadAllBytes(file));
-            var options = new JsonSerializerOptions().WithStandardConverters();
+            var options = new JsonSerializerOptions().WithConvertersFor<T>();
             return JsonSerializer.Deserialize<T>(ref jr, options);
         }
 
