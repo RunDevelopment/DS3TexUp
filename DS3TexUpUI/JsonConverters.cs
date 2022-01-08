@@ -122,9 +122,7 @@ namespace DS3TexUpUI
             public override TexId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType != JsonTokenType.String) throw new JsonException();
-                var value = reader.GetString();
-                reader.Read();
-                return new TexId(value);
+                return new TexId(reader.GetString());
             }
 
             public override void Write(Utf8JsonWriter writer, TexId value, JsonSerializerOptions options)

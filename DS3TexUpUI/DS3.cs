@@ -39,8 +39,8 @@ namespace DS3TexUpUI
         public static readonly IReadOnlyList<string> Parts
             = DataFile(@"parts.json").LoadJsonFile<string[]>();
 
-        public static readonly IReadOnlyCollection<string> GroundTextures
-            = DataFile(@"ground.json").LoadJsonFile<HashSet<string>>();
+        public static readonly IReadOnlyCollection<TexId> GroundTextures
+            = DataFile(@"ground.json").LoadJsonFile<HashSet<TexId>>();
 
         public static readonly IReadOnlyDictionary<TexId, TexKind> KnownTexKinds
             = DataFile(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
