@@ -36,6 +36,8 @@ namespace DS3TexUpUI
 
         private static readonly Regex _mapPattern = new Regex(@"\A(?i:m)\d{2}\z");
         private static readonly Regex _chrPattern = new Regex(@"\A(?i:c)\d{4}\z");
+        private static readonly Regex _objPattern = new Regex(@"\A(?i:o)\d{6}\z");
+        private static readonly Regex _objShortPattern = new Regex(@"\A(?i:o)\d{4}\z");
         private static readonly Regex _partsPattern = new Regex(@"\A(?i:\w{2})_(?i:[AFM])_\d+\z");
         public static TexId? FromTexture(FLVER2.Texture texture, string? flverPath = null)
         {
@@ -43,6 +45,8 @@ namespace DS3TexUpUI
 
             // Maps: N:\FDP\data\Model\map\m{00}\tex\name.ext
             // Chr: N:\FDP\data\Model\chr\c{0000}\tex\name.ext
+            // Obj: N:\FDP\data\Model\obj\o{00}\o{000000}\tex\name.ext
+            // Obj (short): N:\FDP\data\Model\obj\o{0000}\tex\name.ext
             // Sfx: N:\FDP\data\Sfx\Tex\name.ext
             // Armor: N:\FDP\data\Model\parts\FullBody\FB_M_8800\BD_M_8800\tex\name.ext
             // Weapon: N:\FDP\data\Model\parts\Weapon\WP_A_1419\tex\name.ext
@@ -58,6 +62,11 @@ namespace DS3TexUpUI
 
             if (_chrPattern.IsMatch(n))
                 return new TexId($"chr/{n.ToLowerInvariant()}_{name}");
+
+            if (_objPattern.IsMatch(n))
+                return new TexId($"obj/{n.ToLowerInvariant()}_{name}");
+            if (_objShortPattern.IsMatch(n))
+                return new TexId($"obj/o00{n.Substring(1)}_{name}");
 
             if (_partsPattern.IsMatch(n))
                 return new TexId($"parts/{n.ToUpperInvariant()}_{name}");
