@@ -26,14 +26,14 @@ namespace DS3TexUpUI
         }
         public static void RunParallel(string[] files)
         {
-            var degreeOfParallelism = Environment.ProcessorCount;
+            var degreeOfParallelism = AppConfig.Instance.MaxDegreeOfParallelism;
             var chunks = files.Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)));
 
             Parallel.ForEach(chunks, RunProcess);
         }
         public static void RunParallel(IProgressToken token, string[] files)
         {
-            var degreeOfParallelism = Environment.ProcessorCount;
+            var degreeOfParallelism = AppConfig.Instance.MaxDegreeOfParallelism;
             var chunks = files.Chunks(Math.Min(1, Math.Max(files.Length / degreeOfParallelism, 16)));
 
             token.ForAllParallel(chunks, files.Length, chunk =>

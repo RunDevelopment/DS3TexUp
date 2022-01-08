@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace DS3TexUpUI
 {
@@ -8,6 +9,7 @@ namespace DS3TexUpUI
         public string YabberExe { get; set; }
         public string TexConvExe { get; set; }
         public string CompressonatorCliExe { get; set; }
+        public int MaxDegreeOfParallelism { get; set; }
 
         public static readonly AppConfig Instance = LoadInstance();
         private static AppConfig LoadInstance()
@@ -28,6 +30,18 @@ namespace DS3TexUpUI
                 throw new Exception($"The path to {nameof(TexConvExe)} does not exist. {change}");
             if (!File.Exists(CompressonatorCliExe))
                 throw new Exception($"The path to {nameof(CompressonatorCliExe)} does not exist. {change}");
+
+            if (MaxDegreeOfParallelism <= 0)
+            {
+                MaxDegreeOfParallelism = Environment.ProcessorCount;
+            }
+        }
+
+        public ParallelOptions GetParallelOptions()
+        {
+            var options = new ParallelOptions();
+            options.MaxDegreeOfParallelism = MaxDegreeOfParallelism;
+            return options;
         }
     }
 }

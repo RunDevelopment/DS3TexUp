@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DS3TexUpUI
 {
@@ -130,9 +131,8 @@ namespace DS3TexUpUI
         {
             token.SubmitProgress(0);
 
-
             int done = 0;
-            System.Threading.Tasks.Parallel.ForEach(iter, (item, loop) =>
+            Parallel.ForEach(iter, AppConfig.Instance.GetParallelOptions(), (item, loop) =>
             {
                 try
                 {
