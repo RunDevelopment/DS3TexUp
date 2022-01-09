@@ -102,11 +102,11 @@ namespace DS3TexUpUI
             return null;
         }
 
-        public bool Equals(TexId other) => Value == other.Value;
+        public bool Equals(TexId other) => Value.Equals(other.Value, StringComparison.OrdinalIgnoreCase);
         public override bool Equals(object obj) => obj is TexId other ? Equals(other) : false;
-        public override int GetHashCode() => Value.GetHashCode();
+        public override int GetHashCode() => Value.GetHashCode(StringComparison.OrdinalIgnoreCase);
         public override string ToString() => Value;
-        public int CompareTo(TexId other) => string.Compare(Value, other.Value, StringComparison.Ordinal);
+        public int CompareTo(TexId other) => string.Compare(Value, other.Value, StringComparison.OrdinalIgnoreCase);
 
 
         public TexKind GetTexKind()
