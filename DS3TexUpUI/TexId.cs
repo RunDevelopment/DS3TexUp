@@ -159,7 +159,8 @@ namespace DS3TexUpUI
                     return (a.id == that).CompareTo(b.id == that);
                 });
 
-                if (copies.Count > 0) {
+                if (copies.Count > 0)
+                {
                     var largest = copies[copies.Count - 1].id;
                     if (largest != this) return largest;
                 }
@@ -167,7 +168,8 @@ namespace DS3TexUpUI
             return null;
         }
 
-        public bool IsUnwanted() {
+        public bool IsUnwanted()
+        {
             // We only want a textures if it is used or the larger copy of another texture.
             return DS3.Unused.Contains(this) && !DS3.LargestCopy.ContainsKey(this);
         }

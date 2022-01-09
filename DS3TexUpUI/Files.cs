@@ -69,7 +69,8 @@ namespace DS3TexUpUI
             }
         }
 
-        public static void RemoveFilesIf(IProgressToken token, DirectoryInfo root, Func<FileInfo, bool> condition) {
+        public static void RemoveFilesIf(IProgressToken token, DirectoryInfo root, Func<FileInfo, bool> condition)
+        {
             token.CheckCanceled();
 
             foreach (DirectoryInfo dir in root.GetDirectories())
