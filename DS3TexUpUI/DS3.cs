@@ -224,6 +224,49 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
+            = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
+        internal static Action<SubProgressToken> CreateTexUsage()
+        {
+            return token =>
+            {
+                var usage = new Dictionary<TexId, Dictionary<string, HashSet<string>>>();
+
+                foreach (var info in ReadAllFlverMaterialInfo())
+                {
+                    foreach (var mat in info.Materials)
+                    {
+                        foreach (var tex in mat.Textures)
+                        {
+                            var id = TexId.FromTexture(tex, info.FlverPath);
+                            if (id != null)
+                                usage.GetOrAdd(id.Value).GetOrAdd(info.FlverPath).Add(mat.Name);
+                        }
+                    }
+                }
+
+                token.SubmitStatus("Saving copies JSON");
+                usage.SaveAsJson(DataFile(@"usage.json"));
+            };
+        }
+
+        public static IReadOnlyCollection<TexId> Unused
+            = DataFile(@"unused.json").LoadJsonFile<HashSet<TexId>>();
+        internal static Action<SubProgressToken> CreateUnused(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+                var unused = files.Select(TexId.FromPath).Where(id => !UsedBy.ContainsKey(id)).ToList();
+                unused.Sort();
+
+                token.SubmitStatus("Saving copies JSON");
+                unused.SaveAsJson(DataFile(@"unused.json"));
+            };
+        }
+
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
         {
             foreach (var file in Directory.GetFiles(DataFile(@"materials"), "*.json"))
