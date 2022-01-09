@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -267,6 +267,24 @@ namespace DS3TexUpUI
 
             // var f = FLVER.Read(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m53_00_00_00\m53_00_00_00_002000-mapbnd-dcx\map\m53_00_00_00\m53_00_00_00_002000\Model\m53_00_00_00_002000.flver");
             // MessageBox.Show(string.Join("\n", f.Materials.Select(m => m.Name)));
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var w = GetWorkspace();
+                var p = Path.Join(w.ExtractDir, textBox1.Text + ".dds");
+                if (File.Exists(p))
+                {
+                    using var process = Process.Start(@"C:\Program Files\paint.net\paintdotnet.exe", p);
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("No such file");
+                }
+            }
         }
     }
 }
