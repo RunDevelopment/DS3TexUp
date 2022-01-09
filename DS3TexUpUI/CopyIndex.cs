@@ -188,12 +188,12 @@ namespace DS3TexUpUI
 
         private int AddEntry(ArrayTextureMap<Rgba32> image, string file)
         {
-            var id = Entries.Count;
             lock (this)
             {
+                var id = Entries.Count;
                 Entries.Add(new CopyIndexEntry(file, image.Width, image.Height));
+                return id;
             }
-            return id;
         }
 
         public static bool IsSupportedImage(ArrayTextureMap<Rgba32> image)
