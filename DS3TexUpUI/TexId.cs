@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Pfim;
 using SoulsFormats;
 
 namespace DS3TexUpUI
@@ -146,7 +147,8 @@ namespace DS3TexUpUI
                 var copies = similar.Select(id =>
                 {
                     var size = DS3.OriginalSize[id];
-                    return (id, size);
+                    var format = DS3.OriginalFormat[id];
+                    return (id, size, format);
                 }).ToList();
 
                 var that = this;
@@ -154,6 +156,59 @@ namespace DS3TexUpUI
                 {
                     var s = a.size.Width.CompareTo(b.size.Width);
                     if (s != 0) return s;
+
+                    static int? GetCompareNumber(DDSFormat format)
+                    {
+                        switch (format.FourCC)
+                        {
+                            case CompressionAlgorithm.D3DFMT_DXT1:
+                                return 1;
+                            case CompressionAlgorithm.D3DFMT_DXT5:
+                                return 3;
+                            case CompressionAlgorithm.ATI1:
+                                return 4;
+                            case CompressionAlgorithm.ATI2:
+                                return 5;
+                            case CompressionAlgorithm.DX10:
+                                switch (format.DxgiFormat)
+                                {
+                                    case DxgiFormat.BC1_TYPELESS:
+                                    case DxgiFormat.BC1_UNORM_SRGB:
+                                    case DxgiFormat.BC1_UNORM:
+                                        return 1;
+                                    case DxgiFormat.BC3_UNORM_SRGB:
+                                        return 3;
+                                    case DxgiFormat.BC4_SNORM:
+                                    case DxgiFormat.BC4_TYPELESS:
+                                    case DxgiFormat.BC4_UNORM:
+                                        return 4;
+                                    case DxgiFormat.BC5_SNORM:
+                                    case DxgiFormat.BC5_TYPELESS:
+                                    case DxgiFormat.BC5_UNORM:
+                                        return 5;
+                                    case DxgiFormat.BC7_UNORM:
+                                    case DxgiFormat.BC7_UNORM_SRGB:
+                                        return 7;
+                                    case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                                    case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                                    case DxgiFormat.B5G5R5A1_UNORM:
+                                        // uncompressed
+                                        return 10;
+                                    default:
+                                        return null;
+                                }
+
+                            default:
+                                return null;
+                        }
+                    }
+
+                    var af = GetCompareNumber(a.format);
+                    var bf = GetCompareNumber(b.format);
+                    if (af != null && bf != null && af != bf)
+                    {
+                        return af.Value.CompareTo(bf.Value);
+                    }
 
                     // this means that the current this will be picked if its size is the greatest.
                     return (a.id == that).CompareTo(b.id == that);
