@@ -52,5 +52,21 @@ namespace DS3TexUpUI
             }
             return result;
         }
+
+        public static void CopyFilesRecursively(IProgressToken token, DirectoryInfo source, DirectoryInfo target)
+        {
+            token.CheckCanceled();
+
+            foreach (DirectoryInfo dir in source.GetDirectories())
+            {
+                CopyFilesRecursively(token, dir, target.CreateSubdirectory(dir.Name));
+            }
+
+            foreach (FileInfo file in source.GetFiles())
+            {
+                token.CheckCanceled();
+                file.CopyTo(Path.Combine(target.FullName, file.Name));
+            }
+        }
     }
 }

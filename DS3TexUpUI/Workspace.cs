@@ -484,7 +484,7 @@ namespace DS3TexUpUI
                 token.SubmitStatus($"Creating {name} backup");
                 try
                 {
-                    CopyFilesRecursively(new DirectoryInfo(original), Directory.CreateDirectory(backup), token);
+                    Files.CopyFilesRecursively(token, new DirectoryInfo(original), Directory.CreateDirectory(backup));
                     token.SubmitProgress(1);
                 }
                 catch (Exception)
@@ -513,7 +513,7 @@ namespace DS3TexUpUI
             Directory.Delete(original, true);
 
             token.SubmitStatus($"Restoring {name} files from backup");
-            CopyFilesRecursively(new DirectoryInfo(backup), Directory.CreateDirectory(original), token);
+            Files.CopyFilesRecursively(token, new DirectoryInfo(backup), Directory.CreateDirectory(original));
         }
 
         public void PrepareUpscale(SubProgressToken token)
@@ -654,22 +654,6 @@ namespace DS3TexUpUI
                 Directory.CreateDirectory(Path.GetDirectoryName(target));
                 source.ToPNG(target);
             });
-        }
-
-        private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target, IProgressToken token)
-        {
-            token.CheckCanceled();
-
-            foreach (DirectoryInfo dir in source.GetDirectories())
-            {
-                CopyFilesRecursively(dir, target.CreateSubdirectory(dir.Name), token);
-            }
-
-            foreach (FileInfo file in source.GetFiles())
-            {
-                token.CheckCanceled();
-                file.CopyTo(Path.Combine(target.FullName, file.Name));
-            }
         }
 
         /// <summary>
