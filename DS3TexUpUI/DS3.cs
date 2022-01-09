@@ -224,6 +224,31 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> LargestCopy
+            = DataFile(@"largest-copy.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
+        internal static Action<SubProgressToken> CreateLargestCopyIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories).Select(TexId.FromPath).ToList();
+                ids.Sort();
+
+                token.SubmitStatus($"Indexing");
+                var largest = new Dictionary<TexId, List<TexId>>();
+                foreach (var id in ids)
+                {
+                    var l = id.GetLargerCopy();
+                    if (l != null) {
+                        largest.GetOrAdd(l.Value).Add(id);
+                    }
+                }
+
+                token.SubmitStatus("Saving JSON");
+                largest.SaveAsJson(DataFile(@"largest-copy.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
             = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
         internal static Action<SubProgressToken> CreateTexUsage()

@@ -108,6 +108,8 @@ namespace DS3TexUpUI
         public override string ToString() => Value;
         public int CompareTo(TexId other) => string.Compare(Value, other.Value, StringComparison.OrdinalIgnoreCase);
 
+        public static bool operator ==(TexId a, TexId b) => a.Equals(b);
+        public static bool operator !=(TexId a, TexId b) => !(a == b);
 
         public TexKind GetTexKind()
         {
@@ -134,6 +136,35 @@ namespace DS3TexUpUI
             if (n.Contains("_n_".AsSpan(), StringComparison.OrdinalIgnoreCase)) return TexKind.Normal;
 
             return TexKind.Unknown;
+        }
+
+        // Tries to find a larger copy of the current texture.
+        public TexId? GetLargerCopy()
+        {
+            if (DS3.Copies.TryGetValue(this, out var similar))
+            {
+                var copies = similar.Select(id =>
+                {
+                    var size = DS3.OriginalSize[id];
+                    return (id, size);
+                }).ToList();
+
+                var that = this;
+                copies.Sort((a, b) =>
+                {
+                    var s = a.size.Width.CompareTo(b.size.Width);
+                    if (s != 0) return s;
+
+                    // this means that the current this will be picked if its size is the greatest.
+                    return (a.id == that).CompareTo(b.id == that);
+                });
+
+                if (copies.Count > 0) {
+                    var largest = copies[copies.Count - 1].id;
+                    if (largest != this) return largest;
+                }
+            }
+            return null;
         }
 
         public TransparencyKind GetTransparency() => DS3.Transparency.GetOrDefault(this, TransparencyKind.Full);
