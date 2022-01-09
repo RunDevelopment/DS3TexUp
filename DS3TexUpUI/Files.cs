@@ -68,5 +68,20 @@ namespace DS3TexUpUI
                 file.CopyTo(Path.Combine(target.FullName, file.Name));
             }
         }
+
+        public static void RemoveFilesIf(IProgressToken token, DirectoryInfo root, Func<FileInfo, bool> condition) {
+            token.CheckCanceled();
+
+            foreach (DirectoryInfo dir in root.GetDirectories())
+            {
+                RemoveFilesIf(token, dir, condition);
+            }
+
+            foreach (FileInfo file in root.GetFiles())
+            {
+                token.CheckCanceled();
+                if (condition(file)) file.Delete();
+            }
+        }
     }
 }

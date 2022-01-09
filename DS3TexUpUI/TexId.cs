@@ -167,6 +167,11 @@ namespace DS3TexUpUI
             return null;
         }
 
+        public bool IsUnwanted() {
+            // We only want a textures if it is used or the larger copy of another texture.
+            return DS3.Unused.Contains(this) && !DS3.LargestCopy.ContainsKey(this);
+        }
+
         public TransparencyKind GetTransparency() => DS3.Transparency.GetOrDefault(this, TransparencyKind.Full);
     }
 
