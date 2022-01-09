@@ -92,13 +92,13 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<TexId, TransparencyKind> Transparency
             = DataFile(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
-            => CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f => DDSImage.Load(f).GetTransparency());
+            => CreateExtractedFilesIndexJson(w, DataFile(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
 
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
             = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
         {
-            return CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f =>
+            return CreateExtractedFilesIndexJson(w, DataFile(@"original-size.json"), f =>
             {
                 var (header, _) = f.ReadDdsHeader();
                 return new Size((int)header.Width, (int)header.Height);
