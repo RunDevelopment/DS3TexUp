@@ -6,6 +6,14 @@ namespace DS3TexUpUI
 {
     public static class ImageExtensions
     {
+        internal static void CheckSameSize<A, B>(this ITextureMap<A> a, ITextureMap<B> b)
+            where A : struct
+            where B : struct
+        {
+            if (a.Width != b.Width || a.Height != b.Height)
+                throw new ArgumentException($"Expected the two images to have the same size.");
+        }
+
         public static ArrayTextureMap<Rgba32> LoadTextureMap(this string file)
         {
             if (file.EndsWith(".dds"))
@@ -152,14 +160,14 @@ namespace DS3TexUpUI
         }
         public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
         {
-            if (color.Width != alpha.Width || color.Height != alpha.Height)
-                throw new ArgumentException();
+            color.CheckSameSize(alpha);
 
             var w = color.Width;
             var h = color.Height;
 
             static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
-            static byte PickGrey(Rgba32 p) {
+            static byte PickGrey(Rgba32 p)
+            {
                 var min = Math.Min(p.R, Math.Min(p.G, p.B));
                 var max = Math.Max(p.R, Math.Max(p.G, p.B));
                 var avg = (byte)((p.R + p.G + p.B) / 3);
@@ -176,8 +184,7 @@ namespace DS3TexUpUI
         }
         public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
         {
-            if (color.Width != alpha.Width || color.Height != alpha.Height)
-                throw new ArgumentException();
+            color.CheckSameSize(alpha);
 
             var w = color.Width;
             var h = color.Height;
@@ -204,8 +211,7 @@ namespace DS3TexUpUI
         }
         public static ArrayTextureMap<Rgba32> CombineAlphaBlack(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
         {
-            if (color.Width != alpha.Width || color.Height != alpha.Height)
-                throw new ArgumentException();
+            color.CheckSameSize(alpha);
 
             var w = color.Width;
             var h = color.Height;
@@ -363,8 +369,7 @@ namespace DS3TexUpUI
 
         public static ArrayTextureMap<Rgba32> CombineWithBackground(this ArrayTextureMap<Rgba32> map1, ArrayTextureMap<Rgba32> map2, Rgb24 bg1, Rgb24 bg2)
         {
-            if (map1.Width != map2.Width || map1.Height != map2.Height)
-                throw new ArgumentException();
+            map1.CheckSameSize(map2);
 
             var result = new Rgba32[map1.Count];
 
@@ -441,6 +446,8 @@ namespace DS3TexUpUI
         }
         public static void Min(this ArrayTextureMap<byte> map, ArrayTextureMap<byte> other)
         {
+            map.CheckSameSize(other);
+
             var w = map.Width;
             var h = map.Height;
 
@@ -452,23 +459,6 @@ namespace DS3TexUpUI
                     map[index] = Math.Min(map[index], other[index]);
                 }
             }
-        }
-
-        private static (byte y, byte cb, byte cr) RgbToYCbCr(byte r, byte g, byte b)
-        {
-            return (
-                (byte)Math.Clamp((int)(0f + 0.299f * r + 0.587f * g + 0.114f * b), 0, 255),
-                (byte)Math.Clamp((int)(128f - 0.168736f * r + 0.331264f * g + 0.5f * b), 0, 255),
-                (byte)Math.Clamp((int)(128f + 0.5f * r + 0.418688f * g + 0.081312f * b), 0, 255)
-            );
-        }
-        private static Rgb24 YCbCrToRgb(byte y, byte cb, byte cr)
-        {
-            return new Rgb24(
-                (byte)Math.Clamp((int)(y + 1.402f * (cr - 128)), 0, 255),
-                (byte)Math.Clamp((int)(y - 0.344136f * (cb - 128) - 0.714136f * (cr - 128)), 0, 255),
-                (byte)Math.Clamp((int)(y + 1.772f * (cb - 128)), 0, 255)
-            );
         }
 
         public static float GetSharpnessScore(this ArrayTextureMap<Rgba32> map)
@@ -617,6 +607,40 @@ namespace DS3TexUpUI
             }
 
             return result.AsTextureMap(resultWidth);
+        }
+
+        public static void AddSmoothGreen(this ArrayTextureMap<Rgba32> rough, ArrayTextureMap<Rgba32> smooth)
+        {
+            rough.CheckSameSize(smooth);
+
+            static float Greenness(float hue)
+            {
+                const float Low = 40;
+                const float Mid1 = 80;
+                const float Mid2 = 120;
+                const float High = 180;
+
+                if (hue < Low) return 0;
+                if (hue < Mid1) return (hue - Low) / (Mid1 - Low);
+                if (hue < Mid2) return 1;
+                if (hue < High) return 1 - (hue - Mid2) / (High - Mid2);
+                return 0;
+            }
+            static Rgba32 Interpolate(Rgba32 r, Rgba32 s)
+            {
+                var (hue, sat, v) = (HSV)s;
+
+                var g = Greenness(hue);
+                var sat_ = sat.ExtendOut(0.1f, 0.4f);
+
+                return r.Lerp(s, MathF.Sqrt(g * sat_));
+            }
+
+            for (int i = 0; i < rough.Data.Length; i++)
+            {
+                ref var r = ref rough.Data[i];
+                r = Interpolate(r, smooth.Data[i]);
+            }
         }
     }
 }

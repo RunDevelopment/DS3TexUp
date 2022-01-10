@@ -167,5 +167,14 @@ namespace DS3TexUpUI
         {
             return x > 0 && (x != 0) && ((x & (x - 1)) == 0);
         }
+
+        public static float ExtendOut(this float f, float eMin, float eMax)
+        {
+            return Math.Clamp((f - eMin) / (eMax - eMin), 0, 1);
+        }
+        public static double ExtendOut(this double f, double eMin, double eMax)
+        {
+            return Math.Clamp((f - eMin) / (eMax - eMin), 0, 1);
+        }
     }
 }
