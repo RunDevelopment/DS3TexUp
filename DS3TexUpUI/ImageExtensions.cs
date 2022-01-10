@@ -502,7 +502,11 @@ namespace DS3TexUpUI
         public static void FillSmallHoles(this ArrayTextureMap<Rgba32> map)
         {
             FillHolesAlphaPreprocessing(map);
-
+            var copy = map.Clone();
+            FillSmallHolesImpl(map, copy);
+        }
+        private static void FillSmallHolesImpl(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> workingCopy)
+        {
             static void DoIteration(ArrayTextureMap<Rgba32> source, ArrayTextureMap<Rgba32> target)
             {
                 var w = source.Width;
@@ -531,13 +535,11 @@ namespace DS3TexUpUI
                 }
             }
 
-            var copy = map.Clone();
-
             const int Iterations = 4;
             for (var i = 0; i < Iterations; i++)
             {
-                DoIteration(map, copy);
-                DoIteration(copy, map);
+                DoIteration(map, workingCopy);
+                DoIteration(workingCopy, map);
             }
         }
         private static void FillHolesAlphaPreprocessing(ArrayTextureMap<Rgba32> map)
@@ -573,6 +575,54 @@ namespace DS3TexUpUI
                 else
                     return new Rgba32((byte)(r / count), (byte)(g / count), (byte)(b / count), 255);
             }
+        }
+
+        public static void FillSmallHoles2(this ArrayTextureMap<Rgba32> map)
+        {
+            FillHolesAlphaPreprocessing(map);
+
+            var copy = map.Clone();
+            FillSmallHoles2Impl(map, copy);
+            FillSmallHolesImpl(map, copy);
+        }
+        private static void FillSmallHoles2Impl(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> workingCopy)
+        {
+
+            static void DoIteration(ArrayTextureMap<Rgba32> source, ArrayTextureMap<Rgba32> target)
+            {
+                var w = source.Width;
+                var h = source.Height;
+
+                for (int y = 0; y < h; y++)
+                {
+                    for (int x = 0; x < w; x++)
+                    {
+                        var index = y * w + x;
+                        var s = source.Data[index];
+
+                        if (s.A == 0)
+                        {
+                            static void SetIf(ref Rgba32 s, Rgba32[] data, int index)
+                            {
+                                if (s.A == 0 || index % 3 == 0) {
+                                    var color = data[index];
+                                    if (color.A != 0) s = color;
+                                }
+                            }
+
+                            if (x - 2 >= 0) SetIf(ref s, source.Data, y * w + (x - 2));
+                            if (x + 2 < w) SetIf(ref s, source.Data, y * w + (x + 2));
+                            if (y - 2 >= 0) SetIf(ref s, source.Data, (y - 2) * w + x);
+                            if (y + 2 < h) SetIf(ref s, source.Data, (y + 2) * w + x);
+                        }
+
+                        target[index] = s;
+                    }
+                }
+            }
+
+            DoIteration(map, workingCopy);
+            DoIteration(workingCopy, map);
         }
 
         public static ArrayTextureMap<T> CobmineTiles<T>(this ArrayTextureMap<T>[,] tiles)

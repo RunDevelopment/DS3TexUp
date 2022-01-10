@@ -614,7 +614,7 @@ namespace DS3TexUpUI
                     {
                         var texMap = image.ToTextureMap();
                         texMap.GetAlpha().SaveAsPng(JoinFile(outDir, "alpha", png));
-                        texMap.FillSmallHoles();
+                        texMap.FillSmallHoles2();
                         texMap.SetBackground(default);
                         texMap.SaveAsPng(JoinFile(outDir, target, png));
                         return;
