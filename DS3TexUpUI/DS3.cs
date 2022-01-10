@@ -43,6 +43,8 @@ namespace DS3TexUpUI
 
         public static readonly IReadOnlyCollection<TexId> GroundTextures
             = DataFile(@"ground.json").LoadJsonFile<HashSet<TexId>>();
+        public static readonly IReadOnlyCollection<TexId> GroundWithMossTextures
+            = DataFile(@"ground-with-moss.json").LoadJsonFile<HashSet<TexId>>();
 
         public static readonly IReadOnlyDictionary<TexId, TexKind> KnownTexKinds
             = DataFile(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
