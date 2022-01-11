@@ -223,7 +223,10 @@ namespace DS3TexUpUI
             return token =>
             {
                 token.SubmitStatus("Searching for files");
-                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories)
+                    // ignore all images that are just solid colors
+                    .Where(f => !DS3.SolidColor.Contains(TexId.FromPath(f)))
+                    .ToArray();
 
                 var index = CopyIndex.Create(token.Reserve(0.5), files);
 
