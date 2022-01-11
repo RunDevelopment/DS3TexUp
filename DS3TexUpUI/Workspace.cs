@@ -578,6 +578,8 @@ namespace DS3TexUpUI
             var png = id.Value + ".png";
             var kind = id.GetTexKind();
 
+            if (id.IsUnwanted()) return;
+
             try
             {
                 using var image = DDSImage.Load(file);
