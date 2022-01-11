@@ -26,7 +26,7 @@ namespace DS3TexUpUI
         {
             SameRatioCopyIndex.CheckSize(image);
 
-            var r = new SizeRatio(image.Width, image.Height);
+            var r = SizeRatio.Of(image);
             SameRatioCopyIndex index;
             lock (this)
             {
@@ -38,7 +38,7 @@ namespace DS3TexUpUI
         public List<CopyIndexEntry>? GetSimilar(string file) => GetSimilar(file.LoadTextureMap());
         public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image)
         {
-            if (BySize.TryGetValue(new SizeRatio(image.Width, image.Height), out var index))
+            if (BySize.TryGetValue(SizeRatio.Of(image), out var index))
             {
                 return index.GetSimilar(image);
             }
@@ -209,7 +209,7 @@ namespace DS3TexUpUI
         public void AddImage(string file) => AddImage(file.LoadTextureMap(), file);
         public void AddImage(ArrayTextureMap<Rgba32> image, string file)
         {
-            if (!Ratio.Equals(new SizeRatio(image.Width, image.Height)))
+            if (!Ratio.Equals(SizeRatio.Of(image)))
                 throw new ArgumentException("The ration of the image does not match the ratio of the index");
             CheckSize(image);
 
@@ -415,7 +415,6 @@ namespace DS3TexUpUI
             W = width / gcd;
             H = height / gcd;
         }
-
         private static int GCD(int a, int b)
         {
             while (a != 0 && b != 0)
@@ -428,6 +427,9 @@ namespace DS3TexUpUI
 
             return a | b;
         }
+
+        public static SizeRatio Of<T>(ITextureMap<T> image) where T : struct
+            => new SizeRatio(image.Width, image.Height);
 
         public int CompareTo(SizeRatio other)
         {
