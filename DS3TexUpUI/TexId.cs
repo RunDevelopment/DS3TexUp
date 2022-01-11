@@ -229,6 +229,13 @@ namespace DS3TexUpUI
             return DS3.Unused.Contains(this) && !DS3.LargestCopy.ContainsKey(this);
         }
 
+        public bool IsSolidColor(double tolerance)
+        {
+            if (DS3.OriginalColorDiff.TryGetValue(this, out var diff))
+                return diff.IsSolidColor(tolerance);
+            return false;
+        }
+
         public TransparencyKind GetTransparency() => DS3.Transparency.GetOrDefault(this, TransparencyKind.Full);
     }
 

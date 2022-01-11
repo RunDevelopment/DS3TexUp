@@ -243,6 +243,23 @@ namespace DS3TexUpUI
                     throw new Exception("Unsupported pixel format (" + Format + ")");
             }
         }
+        public RgbaDiff GetMaxAbsDiff()
+        {
+            var data = Data;
+            if (data.Length == 0) return default;
+
+            switch (Format)
+            {
+                case Pfim.ImageFormat.Rgb8:
+                    return new RgbaDiff(GetAbsDiff(data, 0, 1));
+                case Pfim.ImageFormat.Rgb24:
+                    return new RgbaDiff(GetAbsDiff(data, 2, 3), GetAbsDiff(data, 1, 3), GetAbsDiff(data, 0, 3));
+                case Pfim.ImageFormat.Rgba32:
+                    return new RgbaDiff(GetAbsDiff(data, 2, 4), GetAbsDiff(data, 1, 4), GetAbsDiff(data, 0, 4), GetAbsDiff(data, 3, 4));
+                default:
+                    throw new Exception("Unsupported pixel format (" + Format + ")");
+            }
+        }
         private static byte GetAbsDiff(Span<byte> data, int offset, int step)
         {
             var min = data[offset];
@@ -340,5 +357,43 @@ namespace DS3TexUpUI
 
         public static implicit operator DDSFormat(CompressionAlgorithm fourCC) => new DDSFormat(fourCC);
         public static implicit operator DDSFormat(DxgiFormat dxgiFormat) => new DDSFormat(dxgiFormat);
+    }
+
+    public struct RgbaDiff
+    {
+        public byte R { get; set; }
+        public byte G { get; set; }
+        public byte B { get; set; }
+        public byte A { get; set; }
+
+        public RgbaDiff(byte grey)
+        {
+            R = grey;
+            G = grey;
+            B = grey;
+            A = 0;
+        }
+        public RgbaDiff(byte r, byte g, byte b)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = 0;
+        }
+        public RgbaDiff(byte r, byte g, byte b, byte a)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = a;
+        }
+
+        public bool IsSolidColor(double tolerance = 0)
+        {
+            tolerance = Math.Clamp(tolerance, 0, 1);
+            var maxDiff = (byte)(255 * tolerance);
+
+            return R <= maxDiff && G <= maxDiff && B <= maxDiff && A <= maxDiff;
+        }
     }
 }

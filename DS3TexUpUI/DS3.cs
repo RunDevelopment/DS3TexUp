@@ -96,41 +96,15 @@ namespace DS3TexUpUI
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
             => CreateExtractedFilesIndexJson(w, DataFile(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
 
-        public static IReadOnlyCollection<TexId> SolidColor
-            = DataFile(@"solid-color.json").LoadJsonFile<HashSet<TexId>>();
-        internal static Action<SubProgressToken> CreateSolidColorIndex(Workspace w)
+        public static IReadOnlyDictionary<TexId, RgbaDiff> OriginalColorDiff
+            = DataFile(@"original-color-diff.json").LoadJsonFile<Dictionary<TexId, RgbaDiff>>();
+        internal static Action<SubProgressToken> CreateOriginalColorDiffIndex(Workspace w)
         {
-            return token =>
+            return CreateExtractedFilesIndexJson(w, DataFile(@"original-color-diff.json"), f =>
             {
-                token.SubmitStatus($"Searching for files");
-                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
-
-                token.SubmitStatus($"Indexing {files.Length} files");
-                var index = new List<TexId>();
-                token.ForAllParallel(files, f =>
-                {
-                    try
-                    {
-                        using var image = DDSImage.Load(f);
-                        if (image.IsSolidColor(0.05))
-                        {
-                            var id = TexId.FromPath(f);
-                            lock (index)
-                            {
-                                index.Add(id);
-                            }
-                        }
-                    }
-                    catch (System.Exception)
-                    {
-                        // ignore
-                    }
-                });
-                index.Sort();
-
-                token.SubmitStatus($"Saving index");
-                index.SaveAsJson(DataFile(@"solid-color.json"));
-            };
+                using var image = DDSImage.Load(f);
+                return image.GetMaxAbsDiff();
+            });
         }
 
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
@@ -225,7 +199,7 @@ namespace DS3TexUpUI
                 token.SubmitStatus("Searching for files");
                 var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories)
                     // ignore all images that are just solid colors
-                    .Where(f => !DS3.SolidColor.Contains(TexId.FromPath(f)))
+                    .Where(f => TexId.FromPath(f).IsSolidColor(0.1))
                     .ToArray();
 
                 var index = CopyIndex.Create(token.Reserve(0.5), files);
@@ -281,7 +255,8 @@ namespace DS3TexUpUI
                 foreach (var id in ids)
                 {
                     var l = id.GetLargerCopy();
-                    if (l != null) {
+                    if (l != null)
+                    {
                         largest.GetOrAdd(l.Value).Add(id);
                     }
                 }
