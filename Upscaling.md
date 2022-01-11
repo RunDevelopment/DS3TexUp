@@ -78,7 +78,7 @@ I used `1x_BCGone-DetailedV2_40-60_115000_G` on all BC1 compressed normal textur
 
 ## Reflective (_r)
 
-- `4x-UltraSharp` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50%
+- `4x-UltraSharp`
 
 These maps aren't very noisy and this model seems to produce good results. Since this model also does most of the heavy lifting for albedo maps, the fine details and structures it generates line up.
 
