@@ -96,6 +96,43 @@ namespace DS3TexUpUI
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
             => CreateExtractedFilesIndexJson(w, DataFile(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
 
+        public static IReadOnlyCollection<TexId> SolidColor
+            = DataFile(@"solid-color.json").LoadJsonFile<HashSet<TexId>>();
+        internal static Action<SubProgressToken> CreateSolidColorIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+                token.SubmitStatus($"Indexing {files.Length} files");
+                var index = new List<TexId>();
+                token.ForAllParallel(files, f =>
+                {
+                    try
+                    {
+                        using var image = DDSImage.Load(f);
+                        if (image.IsSolidColor(0.05))
+                        {
+                            var id = TexId.FromPath(f);
+                            lock (index)
+                            {
+                                index.Add(id);
+                            }
+                        }
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+                });
+                index.Sort();
+
+                token.SubmitStatus($"Saving index");
+                index.SaveAsJson(DataFile(@"solid-color.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
             = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
