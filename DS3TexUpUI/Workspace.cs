@@ -40,6 +40,11 @@ namespace DS3TexUpUI
             TextureDir = textureDir;
         }
 
+        public string GetExtractPath(TexId id)
+        {
+            return Path.Join(ExtractDir, id.Category, $"{id.Name.ToString()}.dds");
+        }
+
         public void Extract(SubProgressToken token)
         {
             EnsureBackup(token.Reserve(0));
