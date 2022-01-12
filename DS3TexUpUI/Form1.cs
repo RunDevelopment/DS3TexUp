@@ -203,70 +203,40 @@ namespace DS3TexUpUI
             // m37_00_00_00_020151
             var w = GetWorkspace();
 
-            // Yabber.RunParallel(Directory.GetFiles(Path.Join(w.MapsDir, "m30_00_00_00"), "*.mapbnd.dcx"));
-
-            // var files = Directory
-            //     .GetDirectories(Path.Join(w.MapsDir, "m30_00_00_00"), "*-mapbnd-dcx")
-            //     .Select(d =>
-            //     {
-            //         // e.g. m37_00_00_00_020151
-            //         var meshId = Path.GetFileName(d).Substring(0, 19);
-            //         // e.g. m37_00_00_00_020151
-            //         var mapId = meshId.Substring(0, 12);
-
-            //         return Path.Join(d, "map", mapId, meshId, "Model", meshId + ".flver");
-            //     })
-            //     .ToArray();
-
-            // var relevant = files
-            //     .Where((file, i) =>
-            //     {
-            //         Text = "" + i;
-            //         var f = FLVER.Read(files[i]);
-            //         return f.Materials.Any(m => m.Params.Any(p => p.Value.Contains("m30_00_o309110_wall_02_n")));
-            //     })
-            //     .ToArray();
-
-
-            // var files = Directory.GetFiles(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\mtd\allmaterialbnd-mtdbnd-dcx", "*.mtd");
-
-            // foreach (var file in files)
+            // RunTask(token =>
             // {
-            //     var mat = MTD.Read(file);
-            //     if (mat.ShaderPath.Contains("pom", StringComparison.OrdinalIgnoreCase)) {
-            //         int i = 0;
-            //     }
-            // }
+            //     var pairs = new (string, string, bool isEqual)[]{
+            //         ("m34/m34_o1240_01_n", "m33/m33_00_o1240_n", true),
+            //         ("m31/m31_00_spiderweb_01_n", "m38/m38_00_m22_00_grass_502_n", false),
+            //         ("m31/m31_00_ruinedge_01_a", "m33/m33_00_ruinedge_01_a", true),
+            //         ("m33/m33_00_ruinedge_01_a", "chr/c1350_c1350_weapon2_a", false),
+            //         ("chr/c2190_c2190_wing_n", "obj/o399910_c2190_wing_n", true),
+            //         ("chr/c1446_c1446_tunic_r", "chr/c1441_c1441_tunic_r", true),
+            //         ("chr/c3080_c3080arms_r", "obj/o302593_o302593_c3080arms_r", true),
+            //         ("m37/m37_00_firebrand_01_r", "m38/m38_00_o9569_r", true),
+            //         ("m41/m41_00_m36_00_Test_branch_tiling_01_r", "chr/c1109_c1109_hood_r", false),
+            //         ("m31/m31_00_spiderweb_03_n", "m30/m30_00_o344883_03_n",false),
+            //         ("m31/m31_00_woodbox_00_n","obj/o001080_o001080_woodenbox_n",true),
+            //         ("m32/m32_00_o324005_railing_n","m40/m40_00_railing_000_n",false),
+            //         ("m32/m32_00_o329222_2_r", "m30/m30_00_o329222_2_rubble_01_r", true),
+            //         ("chr/c6260_c6260_Shield_Small_n","parts/WP_A_2031_WP_A_2031_n",true),
+            //         ("chr/c1070_c1070_tree_n", "m31/m31_00_statue_00_n", true),
+            //         ("chr/c1370_c1370_hair_n", "chr/c1240_c1240_cloths_n", true),
+            //         ("chr/c1102_c1102_shield2_n", "obj/o398720_o398720_c1100_shield2_n", true),
+            //         ("chr/c1070_c1070_wp_a_0404_n", "chr/c1071_c1071_wp_a_0404_n", true),
+            //     };
 
-            //             var mat = MTD.Read(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\mtd\allmaterialbnd-mtdbnd-dcx\M[ARSN]_l_p_m.mtd");
+            //     var result = new List<string>();
+            //     token.ForAll(pairs, pair =>
+            //     {
+            //         var a = w.GetExtractPath(new TexId(pair.Item1)).LoadTextureMap();
+            //         var b = w.GetExtractPath(new TexId(pair.Item2)).LoadTextureMap();
+            //         var sim = a.GetSimilarityScore(b);
+            //         result.Add($"{sim} E:{pair.isEqual} A:{sim.color < 0.04 && sim.feature < 0.12}");
+            //     });
 
-            //             var relevant = new string[]{
-            // @"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m37_00_00_00\m37_00_00_00_000800-mapbnd-dcx\map\m37_00_00_00\m37_00_00_00_000800\Model\m37_00_00_00_000800.flver",
-            // @"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m37_00_00_00\m37_00_00_00_000908-mapbnd-dcx\map\m37_00_00_00\m37_00_00_00_000908\Model\m37_00_00_00_000908.flver"
-            //             };
-
-            //             foreach (var file in relevant)
-            //             {
-            //                 var f = FLVER2.Read(file);
-            //                 var m = f.Materials[4];
-            //                 var bytes = m.GXIndex;
-
-            //                 // var views = bytes.Chunks(4).Select(b => new Views(b)).ToArray();
-
-            //                 // var s = string.Join("\n", views.Select((v, i) =>
-            //                 // {
-            //                 //     return $"{i * 4} {{ }} {v.I32} {v.F32} [{v.Bytes[0]} {v.Bytes[1]} {v.Bytes[2]} {v.Bytes[3]}]";
-            //                 // }));
-            //                 // Clipboard.SetText(s);
-            //             }
-
-
-            // var res = string.Join("\n", relevant);
-            // MessageBox.Show(res);
-            // Clipboard.SetText(res);
-
-            // var f = FLVER.Read(@"C:\Program Files (x86)\Steam\steamapps\common\DARK SOULS III\Game\map\m53_00_00_00\m53_00_00_00_002000-mapbnd-dcx\map\m53_00_00_00\m53_00_00_00_002000\Model\m53_00_00_00_002000.flver");
-            // MessageBox.Show(string.Join("\n", f.Materials.Select(m => m.Name)));
+            //     MessageBox.Show(string.Join("\n", result));
+            // });
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
