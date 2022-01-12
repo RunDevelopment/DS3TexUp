@@ -44,6 +44,12 @@ namespace DS3TexUpUI
         {
             return Path.Join(ExtractDir, id.Category, $"{id.Name.ToString()}.dds");
         }
+        public string GetGamePath(TexId id)
+        {
+            if (DS3.GamePath.TryGetValue(id, out var relative))
+                return Path.Join(GameDir, relative);
+            throw new Exception($"Unknown tex id: {id}");
+        }
 
         public void Extract(SubProgressToken token)
         {
@@ -213,15 +219,89 @@ namespace DS3TexUpUI
         }
         private void ExtractHighResMapTexture(SubProgressToken token, string map)
         {
-            token.SubmitStatus($"Extracting textures from {map}");
+            var files = GetHighResMapTexFiles(token.Reserve(0.1), map);
+
+            token.SubmitStatus($"Extracting {files.Count} textures from {map}");
+
+            Directory.CreateDirectory(Path.Join(ExtractDir, map));
+            token.ForAllParallel(files, file =>
+            {
+                File.Copy(file.GamePath, GetExtractPath(file.Id));
+            });
+        }
+        private void ExtractChrTexture(SubProgressToken token)
+        {
+            var files = GetChrTexFiles(token.Reserve(0.1));
+
+            token.SubmitStatus($"Extracting {files.Count} chr textures");
+
+            Directory.CreateDirectory(Path.Join(ExtractChrDir));
+            token.ForAllParallel(files, file =>
+            {
+                File.Copy(file.GamePath, GetExtractPath(file.Id));
+            });
+        }
+        private void ExtractObjTexture(SubProgressToken token)
+        {
+            var files = GetObjTexFiles(token.Reserve(0.1));
+
+            token.SubmitStatus($"Extracting {files.Count} obj textures");
+
+            Directory.CreateDirectory(Path.Join(ExtractObjDir));
+            token.ForAllParallel(files, file =>
+            {
+                File.Copy(file.GamePath, GetExtractPath(file.Id));
+            });
+        }
+        private void ExtractPartsTexture(SubProgressToken token)
+        {
+            var files = GetPartsTexFiles(token.Reserve(0.1));
+
+            token.SubmitStatus($"Extracting {files.Count} parts textures");
+
+            Directory.CreateDirectory(Path.Join(ExtractPartsDir));
+            token.ForAllParallel(files, file =>
+            {
+                File.Copy(file.GamePath, GetExtractPath(file.Id));
+            });
+        }
+        private void ExtractSfxTexture(SubProgressToken token)
+        {
+            var files = GetSfxTexFiles(token.Reserve(0.1));
+
+            token.SubmitStatus($"Extracting {files.Count} sfx textures");
+
+            Directory.CreateDirectory(Path.Join(ExtractSfxDir));
+            token.ForAllParallel(files, file =>
+            {
+                File.Copy(file.GamePath, GetExtractPath(file.Id));
+            });
+        }
+
+        public List<TexFile> GetTexFiles(SubProgressToken token)
+        {
+            var result = new List<TexFile>();
+            token.SplitEqually(
+                token => result.AddRange(GetHighResMapTexFiles(token)),
+                token => result.AddRange(GetChrTexFiles(token)),
+                token => result.AddRange(GetObjTexFiles(token)),
+                token => result.AddRange(GetPartsTexFiles(token)),
+                token => result.AddRange(GetSfxTexFiles(token))
+            );
+            return result;
+        }
+        private List<TexFile> GetHighResMapTexFiles(SubProgressToken token)
+        {
+            var result = new List<TexFile>();
+            token.ForAll(DS3.Maps, (token, map) => result.AddRange(GetHighResMapTexFiles(token, map)));
+            return result;
+        }
+        private List<TexFile> GetHighResMapTexFiles(SubProgressToken token, string map)
+        {
+            token.SubmitStatus($"Seaching for {map} textue files");
             token.SubmitProgress(0);
 
-            var outDir = Path.Join(ExtractDir, map);
-            Directory.CreateDirectory(outDir);
-
-            var mapDir = Path.Join(MapsDir, map);
-
-            var files = GetUnpackedMapTextureFolders(map)
+            var result = GetUnpackedMapTextureFolders(map)
                 .Where((d) =>
                 {
                     var name = Path.GetFileName(d);
@@ -231,29 +311,22 @@ namespace DS3TexUpUI
                 {
                     var name = Path.GetFileName(d);
                     name = name.Substring(0, name.Length - "-tpf-dcx".Length);
-                    return Path.Join(d, $"{name}.dds");
-                })
-                .ToArray();
+                    return new TexFile()
+                    {
+                        GamePath = Path.Join(d, $"{name}.dds"),
+                        Id = new TexId(map, name)
+                    };
+                });
 
-
-            token.SubmitStatus($"Extracting {files.Length} textures from {map}");
-
-            foreach (var f in files)
-            {
-                File.Copy(f, Path.Join(outDir, Path.GetFileName(f)), false);
-            }
             token.SubmitProgress(1);
+            return result.ToList();
         }
-        private void ExtractChrTexture(SubProgressToken token)
+        private List<TexFile> GetChrTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Extracting chr textues");
+            token.SubmitStatus($"Seaching for chr textue files");
             token.SubmitProgress(0);
 
-
-            var outDir = Path.Join(ExtractChrDir);
-            Directory.CreateDirectory(outDir);
-
-            var files = Directory
+            var result = Directory
                 .GetDirectories(ChrDir, "c*-texbnd-dcx", SearchOption.TopDirectoryOnly)
                 .SelectMany(d =>
                 {
@@ -261,26 +334,25 @@ namespace DS3TexUpUI
                     var id = Path.GetFileName(d).Substring(0, 5);
                     return Directory
                         .GetFiles(Path.Join(d, "chr", id, id + "-tpf"), "*.dds", SearchOption.TopDirectoryOnly)
-                        .Select(f => (id, f));
-                })
-                .ToArray();
+                        .Select(f =>
+                        {
+                            return new TexFile()
+                            {
+                                GamePath = f,
+                                Id = new TexId("chr", $"{id}_{Path.GetFileNameWithoutExtension(f)}")
+                            };
+                        });
+                });
 
-            token.SubmitStatus($"Extracting {files.Length} chr textures");
-            token.ForAllParallel(files, pair =>
-            {
-                var (id, file) = pair;
-                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
-            });
+            token.SubmitProgress(1);
+            return result.ToList();
         }
-        private void ExtractObjTexture(SubProgressToken token)
+        private List<TexFile> GetObjTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Extracting obj textues");
+            token.SubmitStatus($"Seaching for obj textue files");
             token.SubmitProgress(0);
 
-            var outDir = Path.Join(ExtractObjDir);
-            Directory.CreateDirectory(outDir);
-
-            var files = Directory
+            var result = Directory
                 .GetDirectories(ObjDir, "o*-objbnd-dcx", SearchOption.TopDirectoryOnly)
                 .SelectMany(d =>
                 {
@@ -288,30 +360,29 @@ namespace DS3TexUpUI
                     var id = Path.GetFileName(d).Substring(0, 7);
 
                     var tpf = Path.Join(d, "obj", id.Substring(0, 3), id, id + "-tpf");
-                    if (!Directory.Exists(tpf)) return new (string, string)[0];
+                    if (!Directory.Exists(tpf)) return new TexFile[0];
 
                     return Directory
                         .GetFiles(tpf, "*.dds", SearchOption.TopDirectoryOnly)
-                        .Select(f => (id, f));
-                })
-                .ToArray();
+                        .Select(f =>
+                        {
+                            return new TexFile()
+                            {
+                                GamePath = f,
+                                Id = new TexId("obj", $"{id}_{Path.GetFileNameWithoutExtension(f)}")
+                            };
+                        });
+                });
 
-            token.SubmitStatus($"Extracting {files.Length} obj textures");
-            token.ForAllParallel(files, pair =>
-            {
-                var (id, file) = pair;
-                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
-            });
+            token.SubmitProgress(1);
+            return result.ToList();
         }
-        private void ExtractPartsTexture(SubProgressToken token)
+        private List<TexFile> GetPartsTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Extracting parts textues");
+            token.SubmitStatus($"Seaching for parts textue files");
             token.SubmitProgress(0);
 
-            var outDir = Path.Join(ExtractPartsDir);
-            Directory.CreateDirectory(outDir);
-
-            var files = Directory
+            var result = Directory
                 .GetDirectories(PartsDir, "*-partsbnd-dcx", SearchOption.TopDirectoryOnly)
                 .SelectMany(d =>
                 {
@@ -321,30 +392,29 @@ namespace DS3TexUpUI
 
                     var tpf = Path.Join(d, "parts", type, id, id + "-tpf");
 
-                    if (!Directory.Exists(tpf)) return new (string, string)[0];
+                    if (!Directory.Exists(tpf)) return new TexFile[0];
 
                     return Directory
                         .GetFiles(tpf, "*.dds", SearchOption.TopDirectoryOnly)
-                        .Select(f => (id, f));
-                })
-                .ToArray();
+                        .Select(f =>
+                        {
+                            return new TexFile()
+                            {
+                                GamePath = f,
+                                Id = new TexId("parts", $"{id}_{Path.GetFileNameWithoutExtension(f)}"),
+                            };
+                        });
+                });
 
-            token.SubmitStatus($"Extracting {files.Length} parts textures");
-            token.ForAllParallel(files, pair =>
-            {
-                var (id, file) = pair;
-                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
-            });
+            token.SubmitProgress(1);
+            return result.ToList();
         }
-        private void ExtractSfxTexture(SubProgressToken token)
+        private List<TexFile> GetSfxTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Extracting sfx textues");
+            token.SubmitStatus($"Seaching for sfx textue files");
             token.SubmitProgress(0);
 
-            var outDir = Path.Join(ExtractSfxDir);
-            Directory.CreateDirectory(outDir);
-
-            var files = Directory
+            var result = Directory
                 .GetDirectories(SfxDir, "*_resource-ffxbnd-dcx", SearchOption.TopDirectoryOnly)
                 .SelectMany(d =>
                 {
@@ -353,7 +423,7 @@ namespace DS3TexUpUI
                     id = id.Substring(0, id.Length - "_resource-ffxbnd-dcx".Length);
 
                     var path = Path.Join(d, "sfx", "tex");
-                    if (!Directory.Exists(path)) return new (string, string)[0];
+                    if (!Directory.Exists(path)) return new TexFile[0];
 
                     return Directory
                         .GetDirectories(path, "*-tpf", SearchOption.TopDirectoryOnly)
@@ -361,18 +431,16 @@ namespace DS3TexUpUI
                         {
                             var name = Path.GetFileName(d);
                             name = name.Substring(0, name.Length - "-tpf".Length);
-                            return Path.Join(d, name + ".dds");
-                        })
-                        .Select(f => (id, f));
-                })
-                .ToArray();
+                            return new TexFile()
+                            {
+                                GamePath = Path.Join(d, name + ".dds"),
+                                Id = new TexId("sfx", $"{id}_{name}"),
+                            };
+                        });
+                });
 
-            token.SubmitStatus($"Extracting {files.Length} sfx textures");
-            token.ForAllParallel(files, pair =>
-            {
-                var (id, file) = pair;
-                File.Copy(file, Path.Join(outDir, id + "_" + Path.GetFileName(file)), false);
-            });
+            token.SubmitProgress(1);
+            return result.ToList();
         }
 
         public void Overwrite(SubProgressToken token)
@@ -682,5 +750,11 @@ namespace DS3TexUpUI
 
             return list.ToArray();
         }
+    }
+
+    public struct TexFile
+    {
+        public TexId Id { get; set; }
+        public string GamePath { get; set; }
     }
 }

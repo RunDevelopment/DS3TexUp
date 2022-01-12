@@ -150,6 +150,19 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, string> GamePath
+            = DataFile(@"game-path.json").LoadJsonFile<Dictionary<TexId, string>>();
+        internal static Action<SubProgressToken> CreateGamePathIndex(Workspace w)
+        {
+            return token =>
+            {
+                var index = w.GetTexFiles(token).ToDictionary(f => f.Id, f => Path.GetRelativePath(w.GameDir, f.GamePath));
+
+                token.SubmitStatus("Saving JSON");
+                index.SaveAsJson(DataFile(@"game-path.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
 

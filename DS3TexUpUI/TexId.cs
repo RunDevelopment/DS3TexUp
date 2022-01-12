@@ -23,6 +23,7 @@ namespace DS3TexUpUI
             if (_sepIndex == -1)
                 throw new ArgumentException($"The given value '{value}' is invalid.");
         }
+        public TexId(ReadOnlySpan<char> category, ReadOnlySpan<char> name) : this(String.Concat(category, "/", name)) { }
 
         public static TexId FromPath(string path)
         {
