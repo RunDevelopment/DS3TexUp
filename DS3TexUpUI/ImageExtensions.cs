@@ -158,7 +158,7 @@ namespace DS3TexUpUI
 
             return alpha.AsTextureMap(map.Width);
         }
-        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
+        public static void SetNoisyAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
         {
             color.CheckSameSize(alpha);
 
@@ -182,7 +182,7 @@ namespace DS3TexUpUI
                 c.A = NoisePass(grey);
             }
         }
-        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
+        public static void SetNoisyAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
         {
             color.CheckSameSize(alpha);
 
@@ -193,6 +193,11 @@ namespace DS3TexUpUI
 
             for (int i = 0; i < color.Data.Length; i++)
                 color.Data[i].A = NoisePass(alpha.Data[i]);
+        }
+        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, byte alpha)
+        {
+            foreach (ref var item in color.Data.AsSpan())
+                item.A = alpha;
         }
 
         public static (ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha) SplitAlphaBlack(this ArrayTextureMap<Rgba32> map)
@@ -604,7 +609,8 @@ namespace DS3TexUpUI
                         {
                             static void SetIf(ref Rgba32 s, Rgba32[] data, int index)
                             {
-                                if (s.A == 0 || index % 3 == 0) {
+                                if (s.A == 0 || index % 3 == 0)
+                                {
                                     var color = data[index];
                                     if (color.A != 0) s = color;
                                 }
@@ -690,6 +696,202 @@ namespace DS3TexUpUI
             {
                 ref var r = ref rough.Data[i];
                 r = Interpolate(r, smooth.Data[i]);
+            }
+        }
+
+        public static (double color, double feature) GetSimilarityScore(this ArrayTextureMap<Rgba32> a, ArrayTextureMap<Rgba32> b)
+        {
+            MakeSameSizeCopies(ref a, ref b);
+            NormalizeChannels(a, b);
+            return (
+                GetColorSimilarityScoreSameSize(a, b),
+                GetColorSimilarityScoreSameSize(a.Sobel(), b.Sobel())
+            );
+        }
+        public static double GetColorSimilarityScore(this ArrayTextureMap<Rgba32> a, ArrayTextureMap<Rgba32> b)
+        {
+            MakeSameSizeCopies(ref a, ref b);
+            NormalizeChannels(a, b);
+            return GetColorSimilarityScoreSameSize(a, b);
+        }
+        public static double GetFeatureSimilarityScore(this ArrayTextureMap<Rgba32> a, ArrayTextureMap<Rgba32> b)
+        {
+            MakeSameSizeCopies(ref a, ref b);
+            NormalizeChannels(a, b);
+            return GetColorSimilarityScoreSameSize(a.Sobel(), b.Sobel());
+        }
+        private static void MakeSameSizeCopies(ref ArrayTextureMap<Rgba32> a, ref ArrayTextureMap<Rgba32> b)
+        {
+            if (a.Width != b.Width || a.Height != b.Height)
+            {
+                if (!SizeRatio.Of(a).Equals(SizeRatio.Of(b)))
+                    throw new Exception("The two images have different size ratios.");
+
+                // Make sure a is the larger image
+                if (a.Width < b.Width) (a, b) = (b, a);
+
+                var f = a.Width / b.Width;
+                if (b.Width * f != a.Width)
+                    throw new Exception("Cannot resize using whole-number scaling factor.");
+
+                // resize the larger one to the smaller size
+                a = a.DownSample(Average.Rgba32, f);
+                b = b.Clone();
+            }
+            else
+            {
+                a = a.Clone();
+                b = b.Clone();
+            }
+        }
+        private static void NormalizeChannels(ArrayTextureMap<Rgba32> a, ArrayTextureMap<Rgba32> b)
+        {
+            var min = new Rgba32(255, 255, 255, 255);
+            var max = new Rgba32(0, 0, 0, 0);
+
+            foreach (var p in a.Data)
+            {
+                min.R = Math.Min(min.R, p.R);
+                min.G = Math.Min(min.G, p.G);
+                min.B = Math.Min(min.B, p.B);
+                min.A = Math.Min(min.A, p.A);
+                max.R = Math.Max(max.R, p.R);
+                max.G = Math.Max(max.G, p.G);
+                max.B = Math.Max(max.B, p.B);
+                max.A = Math.Max(max.A, p.A);
+            }
+            foreach (var p in b.Data)
+            {
+                min.R = Math.Min(min.R, p.R);
+                min.G = Math.Min(min.G, p.G);
+                min.B = Math.Min(min.B, p.B);
+                min.A = Math.Min(min.A, p.A);
+                max.R = Math.Max(max.R, p.R);
+                max.G = Math.Max(max.G, p.G);
+                max.B = Math.Max(max.B, p.B);
+                max.A = Math.Max(max.A, p.A);
+            }
+
+            static void Adjust(ref byte min, ref byte max)
+            {
+                var diff = max - min;
+                if (diff <= 0)
+                {
+                    min = 0;
+                    max = 255;
+                    return;
+                }
+
+                var mid = (max + min) / 2;
+
+                const int MaxStep = 8;
+                var maxRange = Math.Min(255, diff * MaxStep);
+
+                var low = Math.Max(0, mid - maxRange / 2);
+                var high = Math.Min(255, low + maxRange);
+                low = high - maxRange;
+
+                var d = (byte)(255 * diff / (double)maxRange);
+                var m = min - low * d / 255;
+
+                min = (byte)Math.Max(0, m);
+                max = (byte)Math.Min(255, min + d);
+            }
+            Adjust(ref min.R, ref max.R);
+            Adjust(ref min.G, ref max.G);
+            Adjust(ref min.B, ref max.B);
+            Adjust(ref min.A, ref max.A);
+
+            foreach (ref var p in a.Data.AsSpan())
+            {
+                p.R = (byte)((p.R - min.R) * 255 / (max.R - min.R));
+                p.G = (byte)((p.G - min.G) * 255 / (max.G - min.G));
+                p.B = (byte)((p.B - min.B) * 255 / (max.B - min.B));
+                p.A = (byte)((p.A - min.A) * 255 / (max.A - min.A));
+            }
+            foreach (ref var p in b.Data.AsSpan())
+            {
+                p.R = (byte)((p.R - min.R) * 255 / (max.R - min.R));
+                p.G = (byte)((p.G - min.G) * 255 / (max.G - min.G));
+                p.B = (byte)((p.B - min.B) * 255 / (max.B - min.B));
+                p.A = (byte)((p.A - min.A) * 255 / (max.A - min.A));
+            }
+        }
+        private static double GetColorSimilarityScoreSameSize(this ArrayTextureMap<Rgba32> mapA, ArrayTextureMap<Rgba32> mapB)
+        {
+            CheckSameSize(mapA, mapB);
+
+            long r = 0;
+            long g = 0;
+            long b = 0;
+            long a = 0;
+
+            for (int i = 0; i < mapA.Data.Length; i++)
+            {
+                var pA = mapA.Data[i];
+                var pB = mapB.Data[i];
+
+                r += Math.Abs(pA.R - pB.R);
+                g += Math.Abs(pA.G - pB.G);
+                b += Math.Abs(pA.B - pB.B);
+                a += Math.Abs(pA.A - pB.A);
+            }
+
+            return Math.Sqrt(r * r + g * g + b * b + a * a) / mapA.Data.Length / 510;
+        }
+
+        private static int counter = 0;
+        public static ArrayTextureMap<Rgba32> Sobel(this ArrayTextureMap<Rgba32> map)
+        {
+            var w = map.Width;
+            var h = map.Height;
+
+            var result = new Rgba32[map.Count].AsTextureMap(w);
+            for (int y = 1; y < h - 1; y++)
+            {
+                for (int x = 1; x < w - 1; x++)
+                {
+                    var gx = new RgbaInt();
+                    gx.Add(map[x - 1, y - 1], 1);
+                    gx.Add(map[x - 1, y + 0], 2);
+                    gx.Add(map[x - 1, y + 1], 1);
+                    gx.Add(map[x + 1, y - 1], -1);
+                    gx.Add(map[x + 1, y + 0], -2);
+                    gx.Add(map[x + 1, y + 1], -1);
+
+                    var gy = new RgbaInt();
+                    gy.Add(map[x - 1, y - 1], 1);
+                    gy.Add(map[x + 0, y - 1], 2);
+                    gy.Add(map[x + 1, y - 1], 1);
+                    gy.Add(map[x - 1, y + 1], -1);
+                    gy.Add(map[x + 0, y + 1], -2);
+                    gy.Add(map[x + 1, y + 1], -1);
+
+                    var mag = new Rgba32();
+                    mag.R = (byte)Math.Min((int)MathF.Sqrt(gx.R * gx.R + gy.R * gy.R), 255);
+                    mag.G = (byte)Math.Min((int)MathF.Sqrt(gx.G * gx.G + gy.G * gy.G), 255);
+                    mag.B = (byte)Math.Min((int)MathF.Sqrt(gx.B * gx.B + gy.B * gy.B), 255);
+                    mag.A = (byte)Math.Min((int)MathF.Sqrt(gx.A * gx.A + gy.A * gy.A), 255);
+
+                    result[x, y] = mag;
+                }
+            }
+
+            return result;
+        }
+        private struct RgbaInt
+        {
+            public int R;
+            public int G;
+            public int B;
+            public int A;
+
+            public void Add(Rgba32 c, int factor)
+            {
+                R += c.R * factor;
+                G += c.G * factor;
+                B += c.B * factor;
+                A += c.A * factor;
             }
         }
     }

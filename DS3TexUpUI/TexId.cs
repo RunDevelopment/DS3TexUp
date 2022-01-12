@@ -144,83 +144,112 @@ namespace DS3TexUpUI
         {
             if (DS3.Copies.TryGetValue(this, out var similar))
             {
-                var copies = similar.Select(id =>
-                {
-                    var size = DS3.OriginalSize[id];
-                    var format = DS3.OriginalFormat[id];
-                    return (id, size, format);
-                }).ToList();
+                var copies = similar.ToList();
 
                 var that = this;
                 copies.Sort((a, b) =>
                 {
-                    var s = a.size.Width.CompareTo(b.size.Width);
-                    if (s != 0) return s;
-
-                    static int? GetCompareNumber(DDSFormat format)
-                    {
-                        switch (format.FourCC)
-                        {
-                            case CompressionAlgorithm.D3DFMT_DXT1:
-                                return 1;
-                            case CompressionAlgorithm.D3DFMT_DXT5:
-                                return 3;
-                            case CompressionAlgorithm.ATI1:
-                                return 4;
-                            case CompressionAlgorithm.ATI2:
-                                return 5;
-                            case CompressionAlgorithm.DX10:
-                                switch (format.DxgiFormat)
-                                {
-                                    case DxgiFormat.BC1_TYPELESS:
-                                    case DxgiFormat.BC1_UNORM_SRGB:
-                                    case DxgiFormat.BC1_UNORM:
-                                        return 1;
-                                    case DxgiFormat.BC3_UNORM_SRGB:
-                                        return 3;
-                                    case DxgiFormat.BC4_SNORM:
-                                    case DxgiFormat.BC4_TYPELESS:
-                                    case DxgiFormat.BC4_UNORM:
-                                        return 4;
-                                    case DxgiFormat.BC5_SNORM:
-                                    case DxgiFormat.BC5_TYPELESS:
-                                    case DxgiFormat.BC5_UNORM:
-                                        return 5;
-                                    case DxgiFormat.BC7_UNORM:
-                                    case DxgiFormat.BC7_UNORM_SRGB:
-                                        return 7;
-                                    case DxgiFormat.B8G8R8A8_UNORM_SRGB:
-                                    case DxgiFormat.B8G8R8X8_UNORM_SRGB:
-                                    case DxgiFormat.B5G5R5A1_UNORM:
-                                        // uncompressed
-                                        return 10;
-                                    default:
-                                        return null;
-                                }
-
-                            default:
-                                return null;
-                        }
-                    }
-
-                    var af = GetCompareNumber(a.format);
-                    var bf = GetCompareNumber(b.format);
-                    if (af != null && bf != null && af != bf)
-                    {
-                        return af.Value.CompareTo(bf.Value);
-                    }
+                    var q = CompareQuality(a, b);
+                    if (q != 0) return q;
 
                     // this means that the current this will be picked if its size is the greatest.
-                    return (a.id == that).CompareTo(b.id == that);
+                    return (a == that).CompareTo(b == that);
                 });
 
                 if (copies.Count > 0)
                 {
-                    var largest = copies[copies.Count - 1].id;
+                    var largest = copies[copies.Count - 1];
                     if (largest != this) return largest;
                 }
             }
             return null;
+        }
+        private static int CompareQuality(TexId a, TexId b)
+        {
+            if (DS3.OriginalSize.TryGetValue(a, out var aSize) && DS3.OriginalSize.TryGetValue(b, out var bSize))
+            {
+                var s = aSize.Width.CompareTo(bSize.Width);
+                if (s != 0) return s;
+            }
+
+            static int? GetCompareNumber(DDSFormat format)
+            {
+                switch (format.FourCC)
+                {
+                    case CompressionAlgorithm.D3DFMT_DXT1:
+                        return 1;
+                    case CompressionAlgorithm.D3DFMT_DXT5:
+                        return 3;
+                    case CompressionAlgorithm.ATI1:
+                        return 4;
+                    case CompressionAlgorithm.ATI2:
+                        return 5;
+                    case CompressionAlgorithm.DX10:
+                        switch (format.DxgiFormat)
+                        {
+                            case DxgiFormat.BC1_TYPELESS:
+                            case DxgiFormat.BC1_UNORM_SRGB:
+                            case DxgiFormat.BC1_UNORM:
+                                return 1;
+                            case DxgiFormat.BC3_UNORM_SRGB:
+                                return 3;
+                            case DxgiFormat.BC4_SNORM:
+                            case DxgiFormat.BC4_TYPELESS:
+                            case DxgiFormat.BC4_UNORM:
+                                return 4;
+                            case DxgiFormat.BC5_SNORM:
+                            case DxgiFormat.BC5_TYPELESS:
+                            case DxgiFormat.BC5_UNORM:
+                                return 5;
+                            case DxgiFormat.BC7_UNORM:
+                            case DxgiFormat.BC7_UNORM_SRGB:
+                                return 7;
+                            case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                            case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                            case DxgiFormat.B5G5R5A1_UNORM:
+                                // uncompressed
+                                return 10;
+                            default:
+                                return null;
+                        }
+
+                    default:
+                        return null;
+                }
+            }
+
+            if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
+            {
+                var af = GetCompareNumber(aFormat);
+                var bf = GetCompareNumber(bFormat);
+                if (af != null && bf != null && af != bf)
+                {
+                    return af.Value.CompareTo(bf.Value);
+                }
+            }
+
+            return 0;
+        }
+        public TexId GetRepresentative()
+        {
+            if (DS3.Copies.TryGetValue(this, out var similar))
+            {
+                var copies = similar.Where(id => !id.IsUnwanted()).ToList();
+
+                var that = this;
+                copies.Sort((a, b) =>
+                {
+                    var q = CompareQuality(a, b);
+                    if (q != 0) return q;
+
+                    // this means that the current this will be picked if its size is the greatest.
+                    return (a == that).CompareTo(b == that);
+                });
+
+                if (copies.Count > 0)
+                    return copies[copies.Count - 1];
+            }
+            return this;
         }
 
         public bool IsUnwanted()

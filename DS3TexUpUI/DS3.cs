@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.IO;
 using SoulsFormats;
 using SixLabors.ImageSharp;
 using Pfim;
+using SixLabors.ImageSharp.PixelFormats;
 
 #nullable enable
 
@@ -199,12 +201,29 @@ namespace DS3TexUpUI
                 token.SubmitStatus("Searching for files");
                 var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories)
                     // ignore all images that are just solid colors
-                    .Where(f => !TexId.FromPath(f).IsSolidColor(0.1))
+                    .Where(f => !TexId.FromPath(f).IsSolidColor(0.05))
                     .ToArray();
 
                 var index = CopyIndex.Create(token.Reserve(0.5), files);
 
                 var copies = new Dictionary<TexId, List<TexId>>();
+
+                var simCache = new ConcurrentDictionary<(TexId, TexId), bool>();
+                Func<TexId, ArrayTextureMap<Rgba32>, TexId, string, bool> isSimilar = (aId, aImage, bId, bFile) =>
+                {
+                    // same image
+                    if (aId == bId) return true;
+
+                    var key = aId.CompareTo(bId) < 0 ? (aId, bId) : (bId, aId);
+
+                    if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
+
+                    var simScore = aImage.GetSimilarityScore(bFile.LoadTextureMap());
+                    var sim = simScore.color < 0.04 && simScore.feature < 0.12;
+
+                    simCache.TryAdd(key, sim);
+                    return sim;
+                };
 
                 token.SubmitStatus($"Looking up {files.Length} files");
                 token.ForAllParallel(files, f =>
@@ -214,9 +233,18 @@ namespace DS3TexUpUI
 
                     try
                     {
-                        var similar = index.GetSimilar(f);
+                        var image = f.LoadTextureMap();
+
+                        var similar = index.GetSimilar(image);
                         if (similar != null)
-                            set.UnionWith(similar.Select(e => TexId.FromPath(e.File)));
+                        {
+                            foreach (var e in similar)
+                            {
+                                var eId = TexId.FromPath(e.File);
+                                if (isSimilar(id, image, eId, e.File))
+                                    set.Add(eId);
+                            }
+                        }
                     }
                     catch (System.Exception)
                     {
@@ -263,6 +291,33 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus("Saving JSON");
                 largest.SaveAsJson(DataFile(@"largest-copy.json"));
+            };
+        }
+        internal static Action<SubProgressToken> CreateRepresentativesIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories).Select(TexId.FromPath).ToList();
+                ids.Sort();
+
+                token.SubmitStatus($"Indexing");
+                var dic = new Dictionary<TexId, List<TexId>>();
+                foreach (var id in ids)
+                    dic.GetOrAdd(id.GetRepresentative()).Add(id);
+
+                var list = dic
+                    .Select(kv => new { Id = kv.Key, Count = kv.Value.Count, Represented = kv.Value })
+                    .Where(v => v.Count > 1)
+                    .ToList();
+                list.Sort((a, b) =>
+                {
+                    if (a.Count != b.Count) return -a.Count.CompareTo(b.Count);
+                    return a.Id.CompareTo(b.Id);
+                });
+
+                token.SubmitStatus("Saving JSON");
+                list.SaveAsJson(DataFile(@"important-representatives.json"));
             };
         }
 
