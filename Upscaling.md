@@ -31,13 +31,14 @@ Models that can handle noise and compression artifacts tend to produce more deta
 
 ### Alpha
 
-- `1x_SSAntiAlias9x` chained with `4x-UltraSharp`
+- `4x-UltraSharp`
+- `ESRGAN_Skyrim_NonTiled_Alpha_NN_128_32_105000`
 
 Some texture have binary or full 8 bit alpha channels. Upscaling them is a challenge because ESRGAN wasn't designed to deal with transparency. Cupscale does provide an "Enable Transparency" option but the results aren't very good.
 
-I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with its colors extended to fill transparent regions and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately. The alpha image uses the above model and the color image uses whatever model works best (see the list of model at the start of the albedo section). The two upscaled images are then recombined to get an upscaled transparent texture.
+I solved this by splitting these textures into a RGB color image and a grey-scale alpha image. The color image is the original transparent texture with its colors extended to fill transparent regions and the alpha image is just the value of the alpha channel. The color and alpha images are then upscaled separately. The alpha image uses the above models and the color image uses whatever model works best (see the list of model at the start of the albedo section). The two upscaled images are then recombined to get an upscaled transparent texture.
 
-The `1x_SSAntiAlias9x` model is necessary to smoothen the edges of images with binary alpha. The anti aliasing also benefits the full alpha images since it smooths over some block compression artifacts in the alpha channel.
+Binary alpha images are upscaled with `ESRGAN_Skyrim_NonTiled_Alpha_NN_128_32_105000`. This model does a very good job at upscaling binary alphas while retaining details. However, it can't deal with full alpha images. `4x-UltraSharp` is used for full alpha images.
 
 This produces nice upscaled textures with full 8 bit alpha channels. In the case of images with binary alpha, the 8 bit alpha is then quantized to binary.
 
