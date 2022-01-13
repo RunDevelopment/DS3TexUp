@@ -20,6 +20,7 @@ namespace DS3TexUpUI
             [typeof(TexId)] = new TexIdConverter(),
             [typeof(Size)] = new SizeConverter(),
             [typeof(DDSFormat)] = new DDSFormatConverter(),
+            [typeof(HashSet<TexId>)] = new TexIdHashSetConverter(),
         };
         public static JsonSerializerOptions WithConvertersFor<T>(this JsonSerializerOptions options)
         {
@@ -251,6 +252,21 @@ namespace DS3TexUpUI
                 }
 
                 writer.WriteEndObject();
+            }
+        }
+
+        private sealed class TexIdHashSetConverter : JsonConverter<HashSet<TexId>>
+        {
+            public override HashSet<TexId> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var list = JsonSerializer.Deserialize<List<TexId>>(ref reader, options);
+                return new HashSet<TexId>(list);
+            }
+            public override void Write(Utf8JsonWriter writer, HashSet<TexId> value, JsonSerializerOptions options)
+            {
+                var list = value.ToList();
+                list.Sort();
+                JsonSerializer.Serialize(writer, list, options);
             }
         }
 

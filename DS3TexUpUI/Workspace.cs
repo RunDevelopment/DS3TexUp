@@ -31,8 +31,7 @@ namespace DS3TexUpUI
         public string OverwriteDir => Path.Join(TextureDir, "overwrite");
         public string UpscaleDir => Path.Join(TextureDir, "upscale");
 
-        public string CopyIndexFile => Path.Join(TextureDir, "copy.index");
-        public string CopyEquivalenceFile => Path.Join(TextureDir, "copies.txt");
+        public string LastOverwritesFile => Path.Join(GameDir, "last-overwrites.json");
 
         public Workspace(string gameDir, string textureDir)
         {
@@ -49,6 +48,10 @@ namespace DS3TexUpUI
             if (DS3.GamePath.TryGetValue(id, out var relative))
                 return Path.Join(GameDir, relative);
             throw new Exception($"Unknown tex id: {id}");
+        }
+        public string GetOverwritePath(TexId id)
+        {
+            return Path.Join(OverwriteDir, id.Category, $"{id.Name.ToString()}.dds");
         }
 
         public void Extract(SubProgressToken token)
@@ -445,91 +448,82 @@ namespace DS3TexUpUI
 
         public void Overwrite(SubProgressToken token)
         {
-            PartialOverwrite(token);
+            token.SubmitStatus($"Searching for overwrite files");
+
+            var dirs = DS3.Maps.Union(new string[] { "chr", "obj", "parts", "sfx" });
+            var ids = dirs
+                .Select(d => Path.Join(OverwriteDir, d))
+                .Where(Directory.Exists)
+                .SelectMany(d => Directory.GetFiles(d, "*.dds", SearchOption.TopDirectoryOnly))
+                .Select(TexId.FromPath)
+                .ToList();
+
+            Overwrite(token, ids);
         }
-        private void PartialOverwrite(SubProgressToken token)
+        public void Overwrite(SubProgressToken token, IEnumerable<TexId> textures)
         {
-            var presentMaps = DS3.Maps.Where((map) => Directory.Exists(Path.Join(OverwriteDir, map))).ToArray();
-            token.ForAll(presentMaps, PartialOverwriteMap);
+            token.SubmitStatus($"Filtering overwrite files");
+            var valid = textures.Where(id => DS3.GamePath.ContainsKey(id)).ToHashSet();
+            OverwriteValidSet(token, valid);
         }
-        private void PartialOverwriteMap(SubProgressToken token, string map)
+        private void OverwriteValidSet(SubProgressToken token, HashSet<TexId> overwrite)
         {
-            token.SubmitStatus($"Overwriting textures for {map}");
-            token.SubmitProgress(0);
+            token.SubmitStatus($"Restoring previous overwrites");
+            var restore =File.Exists(LastOverwritesFile) ? LastOverwritesFile.LoadJsonFile<HashSet<TexId>>() : new HashSet<TexId>();
+            restore.ExceptWith(overwrite);
+            token.SubmitStatus($"Restoring {restore.Count} previous overwrites");
+            token.Reserve(0.33).ForAllParallel(restore, id => File.Copy(GetExtractPath(id), GetGamePath(id), true));
 
-            var nameMap = GetFileNameMap(map);
+            token.SubmitStatus($"Overwriting files");
+            overwrite.SaveAsJson(LastOverwritesFile);
+            token.SubmitStatus($"Overwriting {overwrite.Count} textures");
+            token.Reserve(0.5).ForAllParallel(overwrite, id => File.Copy(GetOverwritePath(id), GetGamePath(id), true));
 
-            var overwritefiles = Directory.GetFiles(Path.Join(OverwriteDir, map), "m*.dds", SearchOption.TopDirectoryOnly);
-            var restoreFiles = LoadRestoreFiles(map, overwritefiles);
+            Repack(token, overwrite.Union(restore).ToHashSet());
+        }
+        private void Repack(SubProgressToken token, HashSet<TexId> textures)
+        {
+            token.SubmitStatus($"Repacking {textures.Count} textures");
 
-            token.SubmitStatus($"Overwriting textures {overwritefiles.Length} textures for {map}");
+            Repack(token, textures.Select(GetGamePath));
+        }
+        private void Repack(SubProgressToken token, IEnumerable<string> files)
+        {
+            token.CheckCanceled();
 
-            var repack = new List<string>();
-
-            foreach (var f in restoreFiles.Concat(overwritefiles))
+            static IEnumerable<string> GetParentDirs(IEnumerable<string> files)
             {
-                var name = Path.GetFileName(f);
-                name = name.Substring(0, name.Length - ".dds".Length);
+                return files.Select(f => Path.GetDirectoryName(f));
+            }
+            static int CountParts(string path) => path.Count(c => c == '/' || c == '\\');
+            static (List<string> current, List<string> next) SplitDirs(IEnumerable<string> dirs, int stop)
+            {
+                var l = dirs.ToHashSet().Select(d => (d, CountParts(d))).Where(p => p.Item2 >= stop).ToList();
+                if (l.Count == 0) return (new List<string>(), new List<string>());
 
-                if (nameMap.TryGetValue(name, out var unpackedPath))
-                {
-                    File.Copy(f, unpackedPath, true);
-                    repack.Add(Path.GetDirectoryName(unpackedPath));
-                }
-                else
-                {
-                    throw new Exception($"There is no unpacked file for {f}");
-                }
+                l.Sort((a, b) => -a.Item2.CompareTo(b.Item2));
+                var greatest = l[0].Item2;
+
+                var current = l.Where(p => p.Item2 == greatest).Select(p => p.d).ToList();
+                var next = l.Skip(current.Count).Select(p => p.d).ToList();
+                return (current, next);
             }
 
-            SaveOverwriteFiles(map, overwritefiles);
+            var stop = CountParts(GameDir);
+            var (current, next) = SplitDirs(GetParentDirs(files), stop);
 
-            token.SubmitStatus($"Repacking {repack.Count} textures for {map}");
+            while (current.Count > 0)
+            {
+                var yabberDirs = current
+                    .Where(d => Directory.GetFiles(d, "_yabber*.xml", SearchOption.TopDirectoryOnly).Any())
+                    .ToArray();
+                Yabber.RunParallel(token.Reserve(0.33), yabberDirs);
 
-            Yabber.RunParallel(token.Reserve(0.8), repack.ToArray());
-
-            token.SubmitStatus($"Repacking {map} map files");
-
-            Yabber.RunParallel(token, repack.Select(d => Path.GetDirectoryName(d)).ToHashSet().ToArray());
+                next.AddRange(GetParentDirs(current));
+                (current, next) = SplitDirs(next, stop);
+            }
 
             token.SubmitProgress(1);
-        }
-        private void SaveOverwriteFiles(string map, string[] overwriteFiles)
-        {
-            var s = new StringBuilder();
-            foreach (var file in overwriteFiles)
-            {
-                s.Append(Path.GetFileName(file)).Append("\n");
-            }
-
-            File.WriteAllText(Path.Join(MapsDir, map, "tex_overwrites.txt"), s.ToString(), Encoding.UTF8);
-        }
-        private string[] LoadRestoreFiles(string map, string[] overwriteFiles)
-        {
-            var path = Path.Join(MapsDir, map, "tex_overwrites.txt");
-            if (!File.Exists(path))
-                return new string[0];
-
-            var restoreNames = new OverwriteDiff<string>(
-                File.ReadAllText(path, Encoding.UTF8).Split('\n').Select(s => s.Trim()).Where(s => s.Length > 0),
-                overwriteFiles.Select(Path.GetFileName)
-            ).Restore;
-
-            return restoreNames.Select(n => Path.Join(ExtractDir, map, n)).ToArray();
-        }
-        /// <summary>
-        /// Returns a map from the name of each unpacked texture to its path.
-        /// </summary>
-        private Dictionary<string, string> GetFileNameMap(string map)
-        {
-            var nameMap = new Dictionary<string, string>();
-            foreach (var f in GetUnpackedMapTextureFolders(map))
-            {
-                var name = Path.GetFileName(f);
-                name = name.Substring(0, name.Length - "-tpf-dcx".Length);
-                nameMap[name] = Path.Join(f, $"{name}.dds");
-            }
-            return nameMap;
         }
 
         private (string name, string original, string backup)[] GetBackups()
