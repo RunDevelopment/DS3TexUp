@@ -469,7 +469,7 @@ namespace DS3TexUpUI
         private void OverwriteValidSet(SubProgressToken token, HashSet<TexId> overwrite)
         {
             token.SubmitStatus($"Restoring previous overwrites");
-            var restore =File.Exists(LastOverwritesFile) ? LastOverwritesFile.LoadJsonFile<HashSet<TexId>>() : new HashSet<TexId>();
+            var restore = File.Exists(LastOverwritesFile) ? LastOverwritesFile.LoadJsonFile<HashSet<TexId>>() : new HashSet<TexId>();
             restore.ExceptWith(overwrite);
             token.SubmitStatus($"Restoring {restore.Count} previous overwrites");
             token.Reserve(0.33).ForAllParallel(restore, id => File.Copy(GetExtractPath(id), GetGamePath(id), true));
@@ -682,7 +682,10 @@ namespace DS3TexUpUI
                     if (transparency == TransparencyKind.Binary || transparency == TransparencyKind.Full)
                     {
                         var texMap = image.ToTextureMap();
-                        texMap.GetAlpha().SaveAsPng(JoinFile(outDir, "alpha", png));
+
+                        var alphaTarget = transparency == TransparencyKind.Binary ? "alpha_binary" : "alpha_full";
+                        texMap.GetAlpha().SaveAsPng(JoinFile(outDir, alphaTarget, png));
+
                         texMap.FillSmallHoles2();
                         texMap.SetBackground(default);
                         texMap.SaveAsPng(JoinFile(outDir, target, png));
