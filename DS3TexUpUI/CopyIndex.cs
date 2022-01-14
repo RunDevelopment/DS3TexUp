@@ -430,6 +430,10 @@ namespace DS3TexUpUI
 
         public static SizeRatio Of<T>(ITextureMap<T> image) where T : struct
             => new SizeRatio(image.Width, image.Height);
+        public static SizeRatio Of(SixLabors.ImageSharp.Size size)
+            => new SizeRatio(size.Width, size.Height);
+        public static SizeRatio Of(System.Drawing.Size size)
+            => new SizeRatio(size.Width, size.Height);
 
         public int CompareTo(SizeRatio other)
         {
@@ -444,5 +448,8 @@ namespace DS3TexUpUI
         public bool Equals(SizeRatio other) => W == other.W && H == other.H;
         public override int GetHashCode() => W << 3 | H;
         public override string ToString() => $"SizeRation {W}:{H}";
+
+        public static bool operator ==(SizeRatio left, SizeRatio right) => left.Equals(right);
+        public static bool operator !=(SizeRatio left, SizeRatio right) => !(left == right);
     }
 }

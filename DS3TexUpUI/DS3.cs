@@ -377,6 +377,166 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, TexId> NormalAlbedo
+            = DataFile(@"normal-albedo.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        internal static Action<SubProgressToken> CreateNormalAlbedoIndex()
+        {
+            return token =>
+            {
+                var index = new Dictionary<TexId, List<TexId>>();
+                Action<TexId?, TexId?> AddToIndex = (normal, albedo) =>
+                {
+                    if (normal != null && albedo != null)
+                    {
+                        var n = normal.Value;
+                        var a = albedo.Value;
+                        a = a.GetLargerCopy() ?? a;
+                        if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor(0.05) && !a.IsSolidColor(0.05))
+                        {
+                            if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))
+                            {
+                                if (SizeRatio.Of(nSize) == SizeRatio.Of(aSize))
+                                {
+                                    index.GetOrAdd(normal.Value).Add(albedo.Value);
+                                }
+                            }
+                        }
+                    }
+                };
+
+                token.SubmitStatus($"Analysing flver files");
+                foreach (var info in DS3.ReadAllFlverMaterialInfo())
+                {
+                    var a = new List<(TexId? id, string type)>();
+                    var n = new List<(TexId? id, string type)>();
+                    foreach (var mat in info.Materials)
+                    {
+                        a.Clear();
+                        n.Clear();
+                        foreach (var tex in mat.Textures)
+                        {
+                            var i = TexId.FromTexture(tex, info.FlverPath);
+                            var kind = DS3.TextureTypeToTexKind.GetOrDefault(tex.Type, TexKind.Unknown);
+                            if (kind == TexKind.Albedo)
+                                a.Add((i, tex.Type));
+                            else if (kind == TexKind.Normal)
+                                n.Add((i, tex.Type));
+                        }
+
+                        if (a.Count == 0 || n.Count == 0) continue;
+
+                        if (a.Count == n.Count && a.Count >= 2)
+                        {
+                            // There is a pattern where they types would end with _0, _1, and so on.
+                            static bool EndsWithNumber(string s)
+                                => s.Length >= 2 && s[^2] == '_' && s[^1] >= '0' && s[^1] <= '9';
+
+                            if (a.Select(p => p.type).All(EndsWithNumber) &&
+                                n.Select(p => p.type).All(EndsWithNumber))
+                            {
+                                a.Sort((a, b) => a.type[^1].CompareTo(b.type[^1]));
+                                n.Sort((a, b) => a.type[^1].CompareTo(b.type[^1]));
+
+                                if (a.Where((p, i) => p.type[^1] - '0' == i).Count() == a.Count &&
+                                    n.Where((p, i) => p.type[^1] - '0' == i).Count() == a.Count)
+                                {
+                                    for (int i = 0; i < a.Count; i++)
+                                        AddToIndex(n[i].id, a[i].id);
+                                    continue;
+                                }
+                            }
+                        }
+
+                        if (a.Count == 1 && n.Count == 1)
+                        {
+                            // simple case
+                            AddToIndex(n[0].id, a[0].id);
+                            continue;
+                        }
+
+                        if (a.Count == 2 && n.Count == 2 &&
+                            a[0].type.EndsWith("Texture") && n[0].type.EndsWith("Texture") &&
+                            a[1].type.EndsWith("Texture2") && n[1].type.EndsWith("Texture2"))
+                        {
+                            AddToIndex(n[0].id, a[0].id);
+                            AddToIndex(n[1].id, a[1].id);
+                            continue;
+                        }
+
+                        if (a.Count == 2 && n.Count == 3 &&
+                            mat.MTD.Contains("_Water", StringComparison.OrdinalIgnoreCase) &&
+                            a[0].type.EndsWith("Texture") && n[0].type.EndsWith("Texture") &&
+                            a[1].type.EndsWith("Texture2") && n[1].type.EndsWith("Texture2") &&
+                            n[2].type.EndsWith("Texture3"))
+                        {
+                            AddToIndex(n[0].id, a[0].id);
+                            AddToIndex(n[1].id, a[1].id);
+                            continue;
+                        }
+                    }
+                }
+
+                token.SubmitStatus($"Analysing texture files");
+                var forbidden = new HashSet<TexId>() {
+                    new TexId("m32/m32_00_o4520_3_n"),
+                    new TexId("m37/M37_00_Outside_CedPlaceHolder_n"),
+                };
+                static TexId GetAlbedoByName(TexId n)
+                {
+                    return new TexId(n.Category, n.Name.Slice(0, n.Name.Length - 2).ToString() + "_a");
+                }
+                foreach (var id in DS3.OriginalSize.Keys)
+                {
+                    if (id.GetTexKind() == TexKind.Normal && id.Name.EndsWith("_n") && !index.ContainsKey(id) && !forbidden.Contains(id))
+                        AddToIndex(id, GetAlbedoByName(id));
+                }
+
+                // token.SubmitStatus("Saving JSON");
+                // index.SaveAsJson(DataFile(@"normal-albedo.json"));
+
+                token.SubmitStatus($"Categorizing pairings");
+                var certain = new Dictionary<TexId, TexId>();
+                var ambiguous = new Dictionary<TexId, Dictionary<TexId, int>>();
+
+                foreach (var (n, ids) in index)
+                {
+                    var set = ids.ToHashSet();
+                    if (set.Count == 1)
+                    {
+                        certain[n] = ids[0];
+                    }
+                    else
+                    {
+                        var byCount = ids.GroupBy(id => id).ToDictionary(g => g.Key, g => g.Count());
+
+                        var maxCount = byCount.Values.Max();
+                        var maxA = byCount.Where(kv => kv.Value == maxCount).First().Key;
+                        var certainPercentage = (maxCount - 1) / (double)ids.Count;
+
+                        if (certainPercentage >= 0.65)
+                        {
+                            certain[n] = maxA;
+                            continue;
+                        }
+
+                        var name = GetAlbedoByName(n);
+                        var maxSize = set.Select(id => DS3.OriginalSize[id].Width).Max();
+                        if (byCount.TryGetValue(name, out var nameCount) && (nameCount == maxCount || DS3.OriginalSize[name].Width == maxSize))
+                        {
+                            certain[n] = name;
+                            continue;
+                        }
+
+                        ambiguous[n] = byCount;
+                    }
+                }
+
+                token.SubmitStatus("Saving JSON");
+                certain.SaveAsJson(DataFile(@"normal-albedo-auto.json"));
+                ambiguous.SaveAsJson(DataFile(@"normal-albedo-manual.json"));
+            };
+        }
+
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
         {
             foreach (var file in Directory.GetFiles(DataFile(@"materials"), "*.json"))
