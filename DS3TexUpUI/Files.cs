@@ -203,18 +203,26 @@ namespace DS3TexUpUI
             {
                 var n = DS3NormalMap.Load(normalFiles[id]);
 
+                var normalized = false;
                 if (normalAlbedoFiles.TryGetValue(id, out var naFile))
                 {
                     // Combine with albedo normals
                     ITextureMap<Normal> na = DS3NormalMap.Load(naFile).Normals;
                     if (na.Width > n.Width) na = na.DownSample(Average.Normal, na.Width / n.Width);
-                    n.Normals.CombineWith(na, 1f);
+
+                    if (na.Width == n.Width && na.Height == n.Height)
+                    {
+                        n.Normals.CombineWith(na, 1f);
+                        normalized = true;
+                    }
+                    else
+                    {
+                        token.SubmitLog($"The sizes of n:{n.Width}x{n.Height}:{normalFiles[id]} and a:{na.Width}x{na.Height}:{naFile} are not compatible");
+                    }
                 }
-                else
-                {
-                    // The upscaled normals might not be normalized, so let's do this here.
-                    n.Normals.Normalize();
-                }
+
+                // The upscaled normals might not be normalized
+                if (!normalized) n.Normals.Normalize();
 
                 // Set gloss map
                 var g = glossFiles[id].LoadTextureMap();
