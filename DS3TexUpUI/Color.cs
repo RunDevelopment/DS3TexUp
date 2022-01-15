@@ -130,5 +130,26 @@ namespace DS3TexUpUI
                 (byte)(c0.A * (1 - blend) + c1.A * blend)
             );
         }
+
+        // The byte will be the average of the RGB channels.
+        public static byte GetGreyAverage(this Rgba32 c)
+        {
+            return (byte)((c.R + c.B + c.G) / 3);
+        }
+        // The byte will be the perceived brightness of the color.
+        public static byte GetGreyBrightness(this Rgba32 c)
+        {
+            return (byte)((c.R * 3 + c.B * 11 + c.G * 2) / 16);
+        }
+        // The byte will be a linear interpolation between the min and max of all channels. The blend factor will be
+        // avg(rgb) / 255.
+        public static byte GetGreyMinMaxBlend(this Rgba32 c)
+        {
+            var min = Math.Min(c.R, Math.Min(c.G, c.B));
+            var max = Math.Max(c.R, Math.Max(c.G, c.B));
+            var avg = c.GetGreyAverage();
+            var blend = (byte)((max * avg + min * (255 - avg)) / 255);
+            return blend;
+        }
     }
 }

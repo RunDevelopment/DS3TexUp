@@ -127,35 +127,38 @@ namespace DS3TexUpUI
         public static ArrayTextureMap<Rgb24> IgnoreAlpha(this ArrayTextureMap<Rgba32> map)
         {
             var color = new Rgb24[map.Count];
-
             for (int i = 0; i < color.Length; i++)
-            {
-                var p = map[i];
-                color[i] = new Rgb24(p.R, p.G, p.B);
-            }
-
+                color[i] = map[i].Rgb;
             return color.AsTextureMap(map.Width);
         }
-        public static ArrayTextureMap<byte> GreyScaleIgnoreAlpha(this ArrayTextureMap<Rgba32> map)
+
+        public static ArrayTextureMap<byte> GreyAverage(this ArrayTextureMap<Rgba32> map)
         {
             var grey = new byte[map.Count];
-
             for (int i = 0; i < grey.Length; i++)
-            {
-                var p = map[i];
-                grey[i] = (byte)((p.R + p.B + p.G) / 3);
-            }
-
+                grey[i] = map[i].GetGreyAverage();
+            return grey.AsTextureMap(map.Width);
+        }
+        public static ArrayTextureMap<byte> GreyBrightness(this ArrayTextureMap<Rgba32> map)
+        {
+            var grey = new byte[map.Count];
+            for (int i = 0; i < grey.Length; i++)
+                grey[i] = map[i].GetGreyBrightness();
+            return grey.AsTextureMap(map.Width);
+        }
+        public static ArrayTextureMap<byte> GreyGreyMinMaxBlend(this ArrayTextureMap<Rgba32> map)
+        {
+            var grey = new byte[map.Count];
+            for (int i = 0; i < grey.Length; i++)
+                grey[i] = map[i].GetGreyMinMaxBlend();
             return grey.AsTextureMap(map.Width);
         }
 
         public static ArrayTextureMap<byte> GetAlpha(this ArrayTextureMap<Rgba32> map)
         {
             var alpha = new byte[map.Count];
-
             for (int i = 0; i < alpha.Length; i++)
                 alpha[i] = map.Data[i].A;
-
             return alpha.AsTextureMap(map.Width);
         }
         public static void SetNoisyAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
@@ -166,21 +169,9 @@ namespace DS3TexUpUI
             var h = color.Height;
 
             static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
-            static byte PickGrey(Rgba32 p)
-            {
-                var min = Math.Min(p.R, Math.Min(p.G, p.B));
-                var max = Math.Max(p.R, Math.Max(p.G, p.B));
-                var avg = (byte)((p.R + p.G + p.B) / 3);
-                var blend = (byte)((max * avg + min * (255 - avg)) / 255);
-                return blend;
-            }
 
             for (int i = 0; i < color.Data.Length; i++)
-            {
-                ref var c = ref color.Data[i];
-                var grey = PickGrey(alpha.Data[i]);
-                c.A = NoisePass(grey);
-            }
+                color.Data[i].A = NoisePass(alpha.Data[i].GetGreyMinMaxBlend());
         }
         public static void SetNoisyAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
         {
@@ -221,7 +212,7 @@ namespace DS3TexUpUI
             var w = color.Width;
             var h = color.Height;
 
-            var grey = alpha.GreyScaleIgnoreAlpha();
+            var grey = alpha.GreyAverage();
             // var blur = grey.Blur(1);
             // grey.Min(blur);
 
