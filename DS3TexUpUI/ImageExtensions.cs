@@ -88,7 +88,7 @@ namespace DS3TexUpUI
             return new ArrayTextureMap<Rgba32>(data, image.Width, image.Height);
         }
 
-        public static ArrayTextureMap<P> DownSample<P, A>(this ArrayTextureMap<P> map, AverageAccumulatorFactory<P, A> factory, int scale)
+        public static ArrayTextureMap<P> DownSample<P, A>(this ITextureMap<P> map, AverageAccumulatorFactory<P, A> factory, int scale)
               where P : struct
               where A : IAverageAccumulator<P>, new()
         {
