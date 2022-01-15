@@ -58,6 +58,8 @@ namespace DS3TexUpUI
         public static void Set<T>(this ITextureMap<T> map, ITextureMap<T> source)
             where T : struct
         {
+            map.CheckSameSize(source);
+
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = source[i];
@@ -195,9 +197,17 @@ namespace DS3TexUpUI
             for (int i = 0; i < count; i++)
                 map[i] = (map[i] - min) * f;
         }
+        public static void Normalize(this ITextureMap<Normal> map)
+        {
+            var count = map.Count;
+            for (int i = 0; i < count; i++)
+                map[i] = map[i];
+        }
 
         public static void CombineWith(this ITextureMap<Normal> map, ITextureMap<Normal> other, float strength)
         {
+            map.CheckSameSize(other);
+
             var count = map.Count;
             for (int i = 0; i < count; i++)
                 map[i] = Normal.HeightMapAddition(map[i], 1f, other[i], strength);
