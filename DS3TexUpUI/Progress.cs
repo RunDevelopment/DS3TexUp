@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
 
@@ -17,7 +19,12 @@ namespace DS3TexUpUI
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
-    public interface IProgressToken
+    public interface ILogger
+    {
+        void SubmitLog(string message);
+    }
+
+    public interface IProgressToken : ILogger
     {
         object Lock { get; }
         bool IsCanceled { get; }
@@ -46,15 +53,9 @@ namespace DS3TexUpUI
         public bool IsCanceled => _token.IsCanceled;
         public void CheckCanceled() => _token.CheckCanceled();
 
-        public void SubmitProgress(double current)
-        {
-            _token.SubmitProgress(_start + current * _size);
-        }
-
-        public void SubmitStatus(string status)
-        {
-            _token.SubmitStatus(status);
-        }
+        public void SubmitProgress(double current) => _token.SubmitProgress(_start + current * _size);
+        public void SubmitStatus(string status) => _token.SubmitStatus(status);
+        public void SubmitLog(string message) => _token.SubmitLog(message);
 
         public SubProgressToken Reserve(double size)
         {
@@ -76,6 +77,19 @@ namespace DS3TexUpUI
         public void CheckCanceled() { }
         public void SubmitProgress(double current) { }
         public void SubmitStatus(string status) { }
+        public void SubmitLog(string message) { }
+    }
+
+    public static class LoggerExtensions
+    {
+        public static void LogException(this ILogger logger, Exception e)
+        {
+            logger.LogException("An error occurred", e);
+        }
+        public static void LogException(this ILogger logger, string message, Exception e)
+        {
+            logger.SubmitLog($"{message}: {e.ToString()}");
+        }
     }
 
     public static class ProgressExtensions

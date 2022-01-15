@@ -630,9 +630,9 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Preparing {name} for upscaling ({files.Length} files)");
 
-            token.ForAllParallel(files, file => CategorizeTexture(file, UpscaleDir, ignore));
+            token.ForAllParallel(files, file => CategorizeTexture(file, UpscaleDir, ignore, token));
         }
-        private static void CategorizeTexture(string file, string outDir, Func<string, bool> ignore)
+        private static void CategorizeTexture(string file, string outDir, Func<string, bool> ignore, ILogger logger)
         {
             static string JoinFile(params string[] parts)
             {
@@ -695,9 +695,9 @@ namespace DS3TexUpUI
 
                 image.SaveAsPng(JoinFile(outDir, target, png));
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                // ignore error
+                logger.LogException($"Failed to categorize {file}", e);
             }
         }
 

@@ -54,9 +54,10 @@ namespace DS3TexUpUI
                 CheckCanceled();
                 _form.Invoke(new Action(() =>
                 {
+                    const int Max = 10000;
                     _form.progressBar.Minimum = 0;
-                    _form.progressBar.Maximum = 1000;
-                    _form.progressBar.Value = (int)Math.Min(1000, Math.Max(current * 1000, 0));
+                    _form.progressBar.Maximum = Max;
+                    _form.progressBar.Value = (int)Math.Min(Max, Math.Max(current * Max, 0));
                 }));
             }
 
@@ -67,7 +68,15 @@ namespace DS3TexUpUI
                 {
                     _form.statusTextBox.Text = status;
                 }));
+            }
 
+            public void SubmitLog(string message)
+            {
+                CheckCanceled();
+                _form.Invoke(new Action(() =>
+                {
+                    _form.logRichTextBox.AppendText(message + "\n");
+                }));
             }
         }
 
@@ -163,6 +172,7 @@ namespace DS3TexUpUI
             isCanceled = false;
             abortButton.Enabled = true;
             statusTextBox.Text = "";
+            logRichTextBox.Clear();
             progressBar.Value = progressBar.Minimum;
 
             Task.Run(() =>

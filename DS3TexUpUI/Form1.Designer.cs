@@ -48,6 +48,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.logRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             //
             // label1
@@ -180,18 +184,18 @@
             //
             // progressBar
             //
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 209);
+            this.progressBar.Location = new System.Drawing.Point(12, 273);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(673, 23);
             this.progressBar.TabIndex = 4;
             //
             // statusTextBox
             //
-            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusTextBox.Location = new System.Drawing.Point(12, 180);
+            this.statusTextBox.Location = new System.Drawing.Point(12, 244);
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.ReadOnly = true;
             this.statusTextBox.Size = new System.Drawing.Size(673, 23);
@@ -199,9 +203,8 @@
             //
             // label3
             //
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 162);
+            this.label3.Location = new System.Drawing.Point(12, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 6;
@@ -229,16 +232,52 @@
             //
             // textBox1
             //
-            this.textBox1.Location = new System.Drawing.Point(13, 128);
+            this.textBox1.Location = new System.Drawing.Point(6, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(505, 23);
             this.textBox1.TabIndex = 9;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             //
+            // groupBox1
+            //
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 158);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(673, 59);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Misc";
+            //
+            // label4
+            //
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(517, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Open TexId in Paint.net";
+            //
+            // logRichTextBox
+            //
+            this.logRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.logRichTextBox.Location = new System.Drawing.Point(12, 302);
+            this.logRichTextBox.Name = "logRichTextBox";
+            this.logRichTextBox.ReadOnly = true;
+            this.logRichTextBox.Size = new System.Drawing.Size(673, 157);
+            this.logRichTextBox.TabIndex = 11;
+            this.logRichTextBox.Text = "";
+            //
             // Form1
             //
-            this.ClientSize = new System.Drawing.Size(697, 244);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(697, 471);
+            this.Controls.Add(this.logRichTextBox);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
@@ -258,6 +297,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Dark Souls III TextureUp";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +326,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox logRichTextBox;
     }
 }
 
