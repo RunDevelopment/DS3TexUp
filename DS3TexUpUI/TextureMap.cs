@@ -291,4 +291,32 @@ namespace DS3TexUpUI
 
         public static implicit operator Vector3(Normal n) => new Vector3(n.X, n.Y, n.Z);
     }
+
+    public readonly struct Slope
+    {
+        public readonly float dx;
+        public readonly float dy;
+
+        public Slope(float dx, float dy)
+        {
+            this.dx = dx;
+            this.dy = dy;
+        }
+
+        public static Slope FromNormal(Normal n)
+        {
+            var f = -1f / (n.Z < 0.001f ? 0.001f : n.Z);
+            return new Slope(n.X * f, n.Y * f);
+        }
+
+        public Normal ToNormal()
+        {
+            var a = new Vector3(1f, 0f, dx);
+            var b = new Vector3(0f, 1f, dy);
+            return Normal.FromVector(Vector3.Cross(a, b));
+        }
+
+        public static implicit operator Normal(Slope s) => s.ToNormal();
+        public static explicit operator Slope(Normal n) => FromNormal(n);
+    }
 }
