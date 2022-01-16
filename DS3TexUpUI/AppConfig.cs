@@ -9,6 +9,7 @@ namespace DS3TexUpUI
         public string YabberExe { get; set; }
         public string TexConvExe { get; set; }
         public string CompressonatorCliExe { get; set; }
+        public string NVCompressExe { get; set; }
         public int MaxDegreeOfParallelism { get; set; }
 
         public static readonly AppConfig Instance = LoadInstance();

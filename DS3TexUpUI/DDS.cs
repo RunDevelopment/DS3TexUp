@@ -50,13 +50,13 @@ namespace DS3TexUpUI
             }
         }
 
-        public static void ToDDS(this string file, string target, DDSFormat format)
+        public static void ToDDS(this string file, string target, DDSFormat format, TexId id)
         {
             ToDDSUsingTexConv(file, target, format);
         }
 
         private static readonly Random _rng = new Random();
-        private static void ToDDSUsingTexConv(string file, string target, DDSFormat format)
+        internal static void ToDDSUsingTexConv(string file, string target, DDSFormat format)
         {
             var dir = Path.GetDirectoryName(target);
             var suffix = "-temp" + _rng.Next();
@@ -77,22 +77,27 @@ namespace DS3TexUpUI
             info.ArgumentList.Add("-o");
             info.ArgumentList.Add(dir);
             info.ArgumentList.Add(file);
+            var s = info.Arguments;
 
             info.RedirectStandardOutput = true;
             info.RedirectStandardError = true;
             info.RedirectStandardInput = true;
             info.CreateNoWindow = true;
 
-            var p = Process.Start(info);
-            p.WaitForExit();
+            using var p = Process.Start(info);
+            var output = p.StandardOutput.ReadToEnd();
             if (p.ExitCode != 0)
-                throw new Exception("Unable to convert file: " + p.StandardError.ReadToEnd());
+                throw new Exception("Unable to convert file: " + output);
 
             var tempFile = Path.Join(dir, Path.GetFileNameWithoutExtension(file) + suffix + ".dds");
             File.Move(tempFile, target, true);
         }
         private static string ToTexConvFormat(DDSFormat format)
         {
+            if (format.DxgiFormat != DxgiFormat.UNKNOWN)
+            {
+                return format.DxgiFormat.ToString();
+            }
             return format.DxgiFormat switch
             {
                 DxgiFormat.BC1_UNORM => "BC1_UNORM",
@@ -103,11 +108,43 @@ namespace DS3TexUpUI
             };
         }
 
-
-        private static void ToDDSUsingCompressonator(string file, string target)
+        internal static void ToDDSUsingCompressonator(string file, string target)
         {
             var info = new ProcessStartInfo(AppConfig.Instance.CompressonatorCliExe);
             info.ArgumentList.Add("-fd");
+            info.ArgumentList.Add("BC1");
+            info.ArgumentList.Add("-DXT1UseAlpha");
+            info.ArgumentList.Add("1");
+            // info.ArgumentList.Add("-EncodeWith");
+            // info.ArgumentList.Add("GPU");
+            info.ArgumentList.Add("-RefineSteps");
+            info.ArgumentList.Add("2");
+            info.ArgumentList.Add("-miplevels");
+            info.ArgumentList.Add("20");
+
+            info.ArgumentList.Add(file);
+            info.ArgumentList.Add(target);
+
+            info.CreateNoWindow = true;
+            info.RedirectStandardError = true;
+            info.RedirectStandardInput = true;
+            info.RedirectStandardOutput = true;
+
+            var p = Process.Start(info);
+            p.WaitForExit();
+            if (p.ExitCode != 0)
+                throw new Exception("Unable to convert file: " + p.StandardOutput.ReadToEnd());
+        }
+
+        internal static void ToDDSUsingNVCompress(string file, string target, DDSFormat format)
+        {
+            var info = new ProcessStartInfo(AppConfig.Instance.NVCompressExe);
+            info.ArgumentList.Add("-dds10");
+            info.ArgumentList.Add("-silent");
+            info.ArgumentList.Add("-alpha");
+            info.ArgumentList.Add("-alpha_dithering");
+
+
             info.ArgumentList.Add("BC1");
             info.ArgumentList.Add("-DXT1UseAlpha");
             info.ArgumentList.Add("1");
