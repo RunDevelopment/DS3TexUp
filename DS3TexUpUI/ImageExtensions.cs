@@ -831,7 +831,6 @@ namespace DS3TexUpUI
             return Math.Sqrt(r * r + g * g + b * b + a * a) / mapA.Data.Length / 510;
         }
 
-        private static int counter = 0;
         public static ArrayTextureMap<Rgba32> Sobel(this ArrayTextureMap<Rgba32> map)
         {
             var w = map.Width;
