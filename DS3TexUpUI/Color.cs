@@ -179,5 +179,11 @@ namespace DS3TexUpUI
                 a
             );
         }
+        // Returns color.WithBackground(color)
+        public static Rgba32 WithSelfBackground(this Rgba32 color)
+        {
+            color.A = (byte)(255 - (255 - color.A) * (255 - color.A) / 255);
+            return color;
+        }
     }
 }
