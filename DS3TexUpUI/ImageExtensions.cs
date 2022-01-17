@@ -337,30 +337,14 @@ namespace DS3TexUpUI
         public static ArrayTextureMap<Rgb24> WithBackground(this ArrayTextureMap<Rgba32> map, Rgb24 background)
         {
             var result = new Rgb24[map.Count];
-
             for (int i = 0; i < result.Length; i++)
-            {
-                var p = map[i];
-                result[i] = new Rgb24(
-                    (byte)(p.R * p.A / 255 + background.R * (255 - p.A) / 255),
-                    (byte)(p.G * p.A / 255 + background.G * (255 - p.A) / 255),
-                    (byte)(p.B * p.A / 255 + background.B * (255 - p.A) / 255)
-                );
-            }
-
+                result[i] = map[i].WithBackground(background).Rgb;
             return result.AsTextureMap(map.Width);
         }
         public static void SetBackground(this ArrayTextureMap<Rgba32> map, Rgb24 background)
         {
             foreach (ref var p in map.Data.AsSpan())
-            {
-                p = new Rgba32(
-                    (byte)(p.R * p.A / 255 + background.R * (255 - p.A) / 255),
-                    (byte)(p.G * p.A / 255 + background.G * (255 - p.A) / 255),
-                    (byte)(p.B * p.A / 255 + background.B * (255 - p.A) / 255),
-                    255
-                );
-            }
+                p = p.WithBackground(background);
         }
 
         public static ArrayTextureMap<Rgba32> CombineWithBackground(this ArrayTextureMap<Rgba32> map1, ArrayTextureMap<Rgba32> map2, Rgb24 bg1, Rgb24 bg2)

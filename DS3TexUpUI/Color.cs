@@ -151,5 +151,33 @@ namespace DS3TexUpUI
             var blend = (byte)((max * avg + min * (255 - avg)) / 255);
             return blend;
         }
+
+        public static Rgba32 WithBackground(this Rgba32 fg, Rgb24 bg)
+        {
+            int fgBlend = fg.A;
+            int bgBlend = 255 - fg.A;
+
+            return new Rgba32(
+                (byte)(fg.R * fgBlend / 255 + bg.R * bgBlend / 255),
+                (byte)(fg.G * fgBlend / 255 + bg.G * bgBlend / 255),
+                (byte)(fg.B * fgBlend / 255 + bg.B * bgBlend / 255),
+                255
+            );
+        }
+        public static Rgba32 WithBackground(this Rgba32 fg, Rgba32 bg)
+        {
+            if (bg.A == 0) return fg;
+
+            byte a = (byte)(255 - (255 - fg.A) * (255 - bg.A) / 255);
+            int fgBlend = fg.A * 255 / a;
+            int bgBlend = 255 - fgBlend;
+
+            return new Rgba32(
+                (byte)(fg.R * fgBlend / 255 + bg.R * bgBlend / 255),
+                (byte)(fg.G * fgBlend / 255 + bg.G * bgBlend / 255),
+                (byte)(fg.B * fgBlend / 255 + bg.B * bgBlend / 255),
+                a
+            );
+        }
     }
 }
