@@ -686,7 +686,7 @@ namespace DS3TexUpUI
                         var alphaTarget = transparency == TransparencyKind.Binary ? "alpha_binary" : "alpha_full";
                         texMap.GetAlpha().SaveAsPng(JoinFile(outDir, alphaTarget, png));
 
-                        texMap.FillSmallHoles2();
+                        texMap.FillSmallHoles3();
                         texMap.SetBackground(default);
                         texMap.SaveAsPng(JoinFile(outDir, target, png));
                         return;

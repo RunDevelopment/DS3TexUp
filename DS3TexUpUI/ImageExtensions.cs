@@ -605,6 +605,73 @@ namespace DS3TexUpUI
             DoIteration(map, workingCopy);
             DoIteration(workingCopy, map);
         }
+        public static void FillSmallHoles3(this ArrayTextureMap<Rgba32> map)
+        {
+            FillHolesAlphaPreprocessing(map);
+
+            var copy = map.Clone();
+            FillSmallHoles3Impl(map, copy);
+            FillSmallHolesImpl(map, copy);
+        }
+        private static void FillSmallHoles3Impl(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> workingCopy)
+        {
+            static Rgba32 FragmentBlur(ArrayTextureMap<Rgba32> source, int x, int y, int n, float distance, float offset)
+            {
+                var acc = new RgbGammaCorrectedPremultipliedAlphaAverageAccumulator();
+
+                for (int i = 0; i < n; i++)
+                {
+                    var angle = MathF.PI * 2 * i / n + offset;
+                    var xOffset = (int)(MathF.Cos(angle) * distance);
+                    var yOffset = (int)(MathF.Sin(angle) * distance);
+                    var x_ = x - xOffset;
+                    var y_ = y - yOffset;
+
+                    if (x_ >= 0 && y_ >= 0 && x_ < source.Width && y_ < source.Height)
+                        acc.Add(source[x_, y_]);
+                }
+
+                return acc.Result;
+            }
+            static void DoIteration(ArrayTextureMap<Rgba32> source, ArrayTextureMap<Rgba32> target)
+            {
+                var w = source.Width;
+                var h = source.Height;
+
+                for (int y = 0; y < h; y++)
+                {
+                    for (int x = 0; x < w; x++)
+                    {
+                        var index = y * w + x;
+                        var s = source.Data[index];
+
+                        if (s.A != 255)
+                        {
+                            // This implements something called fragment blur.
+                            // The idea is to blur an image by offsetting n copies of the image by a distance d. Each
+                            // copy is rotated around the center and its alpha is multiplied by 1/n. For a
+                            // demonstration of this blur, see the Paint.net effect with the same name.
+                            //
+                            // I will do a variants, or multiple such blurs layered on top of each other to be more
+                            // precise.
+
+                            for (var i = 0; i <= 5; i++)
+                            {
+                                var b = FragmentBlur(source, x, y, 5, (1 << i), i);
+                                s = s.WithBackground(b.WithSelfBackground());
+                            }
+                        }
+
+                        target[index] = s;
+                    }
+                }
+            }
+
+            DoIteration(map, workingCopy);
+            map.Set(workingCopy);
+            FillHolesAlphaPreprocessing(map);
+            // DoIteration(workingCopy, map);
+        }
 
         public static ArrayTextureMap<T> CobmineTiles<T>(this ArrayTextureMap<T>[,] tiles)
             where T : struct
