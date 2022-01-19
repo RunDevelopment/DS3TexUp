@@ -116,13 +116,17 @@ namespace DS3TexUpUI
                     d.Remove(id);
         }
 
-        public static void PickSharpest(IProgressToken token, IEnumerable<string> inputDirs, string outputDir)
+        public static void PickSharpest(IProgressToken token, IEnumerable<string> inputDirs, string outputDir, Func<string, bool>? didChange = null)
         {
             token.SubmitStatus("Searching for files");
             var files = inputDirs.SelectMany(d => Directory.GetFiles(d, "*.png", SearchOption.AllDirectories)).ToList();
-            var byId = files.GroupBy(TexId.FromPath).ToDictionary(g => g.Key, g => g.ToList());
+            var byId = files.GroupBy(TexId.FromPath)
+                .Select(g => (g.Key, g.ToList()))
+                .Where(g => didChange == null || g.Item2.Any(didChange))
+                .ToDictionary(g => g.Key, g => g.Item2);
+            var fileCount = byId.Select(kv => kv.Value.Count).Sum();
 
-            token.SubmitStatus($"Selecting the sharpest of {byId.Count} textures and {files.Count} files");
+            token.SubmitStatus($"Selecting the sharpest of {byId.Count} textures and {fileCount} files");
             token.ForAllParallel(byId, kv =>
             {
                 var (id, files) = kv;
