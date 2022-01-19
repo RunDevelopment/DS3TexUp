@@ -231,27 +231,6 @@ namespace DS3TexUpUI
 
             return 0;
         }
-        public TexId GetRepresentative()
-        {
-            if (DS3.Copies.TryGetValue(this, out var similar))
-            {
-                var copies = similar.Where(id => !id.IsUnwanted()).ToList();
-
-                var that = this;
-                copies.Sort((a, b) =>
-                {
-                    var q = CompareQuality(a, b);
-                    if (q != 0) return q;
-
-                    // this means that the current this will be picked if its size is the greatest.
-                    return (a == that).CompareTo(b == that);
-                });
-
-                if (copies.Count > 0)
-                    return copies[copies.Count - 1];
-            }
-            return this;
-        }
 
         public bool IsUnwanted()
         {

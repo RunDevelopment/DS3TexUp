@@ -306,33 +306,6 @@ namespace DS3TexUpUI
                 largest.SaveAsJson(DataFile(@"largest-copy.json"));
             };
         }
-        internal static Action<SubProgressToken> CreateRepresentativesIndex(Workspace w)
-        {
-            return token =>
-            {
-                token.SubmitStatus($"Searching for files");
-                var ids = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories).Select(TexId.FromPath).ToList();
-                ids.Sort();
-
-                token.SubmitStatus($"Indexing");
-                var dic = new Dictionary<TexId, List<TexId>>();
-                foreach (var id in ids)
-                    dic.GetOrAdd(id.GetRepresentative()).Add(id);
-
-                var list = dic
-                    .Select(kv => new { Id = kv.Key, Count = kv.Value.Count, Represented = kv.Value })
-                    .Where(v => v.Count > 1)
-                    .ToList();
-                list.Sort((a, b) =>
-                {
-                    if (a.Count != b.Count) return -a.Count.CompareTo(b.Count);
-                    return a.Id.CompareTo(b.Id);
-                });
-
-                token.SubmitStatus("Saving JSON");
-                list.SaveAsJson(DataFile(@"important-representatives.json"));
-            };
-        }
 
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
             = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
