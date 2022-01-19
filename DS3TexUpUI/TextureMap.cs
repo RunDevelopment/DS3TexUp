@@ -319,4 +319,22 @@ namespace DS3TexUpUI
         public static implicit operator Normal(Slope s) => s.ToNormal();
         public static explicit operator Slope(Normal n) => FromNormal(n);
     }
+
+    public readonly struct NormalAngle
+    {
+        public readonly float X;
+        public readonly float Y;
+
+        public NormalAngle(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public static NormalAngle FromNormal(Normal n) => new NormalAngle(MathF.Asin(n.X), MathF.Asin(n.Y));
+        public Normal ToNormal() => Normal.FromXY(MathF.Sin(X), MathF.Sin(Y));
+
+        public static implicit operator Normal(NormalAngle s) => s.ToNormal();
+        public static explicit operator NormalAngle(Normal n) => FromNormal(n);
+    }
 }

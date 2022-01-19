@@ -88,6 +88,15 @@ namespace DS3TexUpUI
             return new ArrayTextureMap<Rgba32>(data, image.Width, image.Height);
         }
 
+        public static ArrayTextureMap<T> Clone<T>(this ITextureMap<T> map) where T : struct
+        {
+            var c = map.Count;
+            var copy = new T[c];
+            for (var i = 0; i < c; i++)
+                copy[i] = map[i];
+            return copy.AsTextureMap(map.Width);
+        }
+
         public static ArrayTextureMap<P> DownSample<P, A>(this ITextureMap<P> map, AverageAccumulatorFactory<P, A> factory, int scale)
               where P : struct
               where A : IAverageAccumulator<P>, new()
@@ -934,6 +943,86 @@ namespace DS3TexUpUI
                 B += c.B * factor;
                 A += c.A * factor;
             }
+        }
+
+        public static ArrayTextureMap<Normal> UpSampleNormals(this ITextureMap<Normal> map, int scale)
+        {
+            var source = map.Convert(NormalAngle.FromNormal);
+            var sW = source.Width;
+            var sH = source.Height;
+
+            var result = new Normal[sW * scale * sH * scale].AsTextureMap(sW * scale);
+            var rW = sW * scale;
+            var rH = sH * scale;
+
+            for (var y = 0; y < rH; y++)
+            {
+                for (var x = 0; x < rW; x++)
+                {
+                    var xs = (x + .5) / scale - .5;
+                    var ys = (y + .5) / scale - .5;
+                    var xsFloor = (int)Math.Floor(xs);
+                    var ysFloor = (int)Math.Floor(ys);
+
+                    var xBlend = (float)(xs - xsFloor);
+                    var yBlend = (float)(ys - ysFloor);
+                    var x0 = Math.Max(0, xsFloor - 1);
+                    var x1 = Math.Max(0, xsFloor);
+                    var x2 = Math.Min(sW - 1, xsFloor + 1);
+                    var x3 = Math.Min(sW - 1, xsFloor + 2);
+                    var y0 = Math.Max(0, ysFloor - 1);
+                    var y1 = Math.Max(0, ysFloor);
+                    var y2 = Math.Min(sH - 1, ysFloor + 1);
+                    var y3 = Math.Min(sH - 1, ysFloor + 2);
+
+                    // Interpolate the angle, not the normals
+                    var a00 = source[x0, y0];
+                    var a01 = source[x0, y1];
+                    var a02 = source[x0, y2];
+                    var a03 = source[x0, y3];
+                    var a10 = source[x1, y0];
+                    var a11 = source[x1, y1];
+                    var a12 = source[x1, y2];
+                    var a13 = source[x1, y3];
+                    var a20 = source[x2, y0];
+                    var a21 = source[x2, y1];
+                    var a22 = source[x2, y2];
+                    var a23 = source[x2, y3];
+                    var a30 = source[x3, y0];
+                    var a31 = source[x3, y1];
+                    var a32 = source[x3, y2];
+                    var a33 = source[x3, y3];
+
+                    var aX = Cubic(
+                        Cubic(a00.X, a10.X, a20.X, a30.X, xBlend),
+                        Cubic(a01.X, a11.X, a21.X, a31.X, xBlend),
+                        Cubic(a02.X, a12.X, a22.X, a32.X, xBlend),
+                        Cubic(a03.X, a13.X, a23.X, a33.X, xBlend),
+                        yBlend
+                    );
+                    var aY = Cubic(
+                        Cubic(a00.Y, a10.Y, a20.Y, a30.Y, xBlend),
+                        Cubic(a01.Y, a11.Y, a21.Y, a31.Y, xBlend),
+                        Cubic(a02.Y, a12.Y, a22.Y, a32.Y, xBlend),
+                        Cubic(a03.Y, a13.Y, a23.Y, a33.Y, xBlend),
+                        yBlend
+                    );
+
+                    result[x, y] = new NormalAngle(aX, aY);
+                }
+            }
+
+            return result;
+        }
+        private static float Cubic(float v0, float v1, float v2, float v3, float blend)
+        {
+            // Cubic spline interpolation
+            float a = (-v0 + 3 * v1 - 3 * v2 + v3) * .5f;
+            float b = v0 + (-5 * v1 + 4 * v2 - v3) * .5f;
+            float c = (v2 - v0) * .5f;
+            float d = v1;
+
+            return d + blend * (c + blend * (b + blend * a));
         }
     }
 }
