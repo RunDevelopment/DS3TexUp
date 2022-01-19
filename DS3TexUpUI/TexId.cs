@@ -112,6 +112,10 @@ namespace DS3TexUpUI
 
         public static bool operator ==(TexId a, TexId b) => a.Equals(b);
         public static bool operator !=(TexId a, TexId b) => !(a == b);
+        public static bool operator <(TexId a, TexId b) => a.CompareTo(b) < 0;
+        public static bool operator <=(TexId a, TexId b) => a.CompareTo(b) <= 0;
+        public static bool operator >(TexId a, TexId b) => a.CompareTo(b) > 0;
+        public static bool operator >=(TexId a, TexId b) => a.CompareTo(b) >= 0;
 
         public TexKind GetTexKind()
         {

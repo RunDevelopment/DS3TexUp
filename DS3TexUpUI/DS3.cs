@@ -227,7 +227,7 @@ namespace DS3TexUpUI
                     // same image
                     if (aId == bId) return true;
 
-                    var key = aId.CompareTo(bId) < 0 ? (aId, bId) : (bId, aId);
+                    var key = aId < bId ? (aId, bId) : (bId, aId);
 
                     if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
 
