@@ -209,6 +209,7 @@ namespace DS3TexUpUI
                     // Combine with albedo normals
                     ITextureMap<Normal> na = DS3NormalMap.Load(naFile).Normals;
                     if (na.Width > n.Width) na = na.DownSample(Average.Normal, na.Width / n.Width);
+                    if (na.Width * 2 == n.Width) na = na.UpSampleNormals(2);
 
                     if (na.Width == n.Width && na.Height == n.Height)
                     {
