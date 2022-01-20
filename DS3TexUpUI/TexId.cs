@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Pfim;
+using SixLabors.ImageSharp.PixelFormats;
 using SoulsFormats;
 
 namespace DS3TexUpUI
@@ -144,21 +146,54 @@ namespace DS3TexUpUI
             return TexKind.Unknown;
         }
 
-        // Tries to find a larger copy of the current texture.
-        public TexId? GetLargerCopy()
+        public TexId? GetLargestCopy()
         {
+            // TODO: implement
+            throw new NotImplementedException();
+        }
+
+        // Tries to find a larger copy of the current texture.
+        public TexId? ComputeLargerCopy(Workspace w)
+        {
+            static bool IsUsedInGame(TexId id)
+            {
+                return DS3.UsedBy.ContainsKey(id);
+            }
+
+            var simScoreCache = new Dictionary<TexId, double>();
+            var that = this;
+            var thisImage = new Lazy<ArrayTextureMap<Rgba32>>(() => w.GetExtractPath(that).LoadTextureMap());
+            double GetSimScore(TexId other)
+            {
+                return simScoreCache.GetOrAdd(other, other =>
+                {
+                    var sim = thisImage.Value.GetSimilarityScore(w.GetExtractPath(other).LoadTextureMap());
+                    return -(sim.color + sim.feature);
+                });
+            }
+
             if (DS3.Copies.TryGetValue(this, out var similar))
             {
                 var copies = similar.ToList();
 
-                var that = this;
                 copies.Sort((a, b) =>
                 {
                     var q = CompareQuality(a, b);
                     if (q != 0) return q;
 
                     // this means that the current this will be picked if its size is the greatest.
-                    return (a == that).CompareTo(b == that);
+                    if (a == that || b == that) return (a == that).CompareTo(b == that);
+
+                    // try not to pick one that isn't used in game
+                    var u = IsUsedInGame(a).CompareTo(IsUsedInGame(b));
+                    if (u != 0) return u;
+
+                    // try to pick the most similar image
+                    var s = GetSimScore(a).CompareTo(GetSimScore(b));
+                    if (s != 0) return s;
+
+                    // if it doesn't matter which one we pick, pick the one with the smaller ID.
+                    return -a.CompareTo(b);
                 });
 
                 if (copies.Count > 0)

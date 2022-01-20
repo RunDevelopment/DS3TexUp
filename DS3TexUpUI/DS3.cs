@@ -206,7 +206,7 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> Copies
-            = DataFile(@"copies.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
+            = CopiesFromPairs(DataFile(@"copies.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateCopyIndex(Workspace w)
         {
             return token =>
@@ -248,7 +248,7 @@ namespace DS3TexUpUI
                     {
                         var image = f.LoadTextureMap();
 
-                        var similar = index.GetSimilar(image);
+                        var similar = index.GetSimilar(image, 2);
                         if (similar != null)
                         {
                             foreach (var e in similar)
@@ -277,8 +277,38 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving copies JSON");
-                copies.SaveAsJson(DataFile(@"copies.json"));
+                PairsFromCopies(copies).SaveAsJson(DataFile(@"copies.json"));
             };
+        }
+        internal static Dictionary<TexId, HashSet<TexId>> CopiesFromPairs(IEnumerable<(TexId, TexId)> pairs)
+        {
+            static HashSet<TexId> NewHashSet(TexId id)
+            {
+                var set = new HashSet<TexId>();
+                set.Add(id);
+                return set;
+            }
+
+            var copies = new Dictionary<TexId, HashSet<TexId>>();
+            foreach (var (a, b) in pairs)
+            {
+                copies.GetOrAdd(a, NewHashSet).Add(b);
+                copies.GetOrAdd(b, NewHashSet).Add(a);
+            }
+            return copies;
+        }
+        internal static List<(TexId, TexId)> PairsFromCopies<T>(IReadOnlyDictionary<TexId, T> copies)
+            where T : IReadOnlyCollection<TexId>
+        {
+            static (TexId, TexId) NewPair(TexId a, TexId b) => a <= b ? (a, b) : (b, a);
+
+            var l = copies
+                .SelectMany(kv => kv.Value.Select(a => NewPair(a, kv.Key)))
+                .Where(p => p.Item1 != p.Item2)
+                .ToHashSet()
+                .ToList();
+            l.Sort();
+            return l;
         }
 
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> LargestCopy
@@ -293,14 +323,20 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus($"Indexing");
                 var largest = new Dictionary<TexId, List<TexId>>();
-                foreach (var id in ids)
+                token.ForAllParallel(ids, id =>
                 {
-                    var l = id.GetLargerCopy();
+                    var l = id.ComputeLargerCopy(w);
                     if (l != null)
                     {
-                        largest.GetOrAdd(l.Value).Add(id);
+                        lock (largest)
+                        {
+                            largest.GetOrAdd(l.Value).Add(id);
+                        }
                     }
-                }
+                });
+
+                foreach (var (_, l) in largest)
+                    l.Sort();
 
                 token.SubmitStatus("Saving JSON");
                 largest.SaveAsJson(DataFile(@"largest-copy.json"));
@@ -363,7 +399,7 @@ namespace DS3TexUpUI
                     {
                         var n = normal.Value;
                         var a = albedo.Value;
-                        a = a.GetLargerCopy() ?? a;
+                        a = a.GetLargestCopy() ?? a;
                         if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor(0.05) && !a.IsSolidColor(0.05))
                         {
                             if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))

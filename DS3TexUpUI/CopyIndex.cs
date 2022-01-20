@@ -36,11 +36,11 @@ namespace DS3TexUpUI
         }
 
         public List<CopyIndexEntry>? GetSimilar(string file) => GetSimilar(file.LoadTextureMap());
-        public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image)
+        public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image, byte spread = 1)
         {
             if (BySize.TryGetValue(SizeRatio.Of(image), out var index))
             {
-                return index.GetSimilar(image);
+                return index.GetSimilar(image, spread);
             }
             else
             {
@@ -272,14 +272,14 @@ namespace DS3TexUpUI
             return _grid[row * 256 + column];
         }
 
-        public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image)
+        public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image, byte spread = 1)
         {
             var bytes = GetBytes(image);
             if (bytes == null) return null;
 
-            var acc = GetSimilar(0, bytes[0]);
+            var acc = GetSimilar(0, bytes[0], spread);
             for (int i = 1; i < bytes.Length; i++)
-                acc.And(GetSimilar(i, bytes[i]));
+                acc.And(GetSimilar(i, bytes[i], spread));
 
             var l = new List<CopyIndexEntry>();
             foreach (var id in acc)
@@ -287,18 +287,14 @@ namespace DS3TexUpUI
 
             return l;
         }
-        private SimpleBitSet GetSimilar(int row, byte column)
+        private SimpleBitSet GetSimilar(int row, byte column, byte spread)
         {
             var set = new SimpleBitSet(Entries.Count);
 
-            foreach (var id in GetGridCell(row, column))
-                set.SetTrue(id);
-
-            if (column > 0)
-                foreach (var id in GetGridCell(row, (byte)(column - 1)))
-                    set.SetTrue(id);
-            if (column < 255)
-                foreach (var id in GetGridCell(row, (byte)(column + 1)))
+            var min = Math.Max(0, column - spread);
+            var max = Math.Min(255, column + spread);
+            for (int c = min; c <= max; c++)
+                foreach (var id in GetGridCell(row, (byte)c))
                     set.SetTrue(id);
 
             return set;
