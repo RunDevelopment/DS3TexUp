@@ -313,6 +313,8 @@ namespace DS3TexUpUI
 
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> LargestCopy
             = DataFile(@"largest-copy.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
+        public static IReadOnlyDictionary<TexId, TexId> LargestCopyOf
+            = LargestCopy.SelectMany(kv => kv.Value.Select(v => (v, kv.Key))).ToDictionary(p => p.v, p => p.Key);
         internal static Action<SubProgressToken> CreateLargestCopyIndex(Workspace w)
         {
             return token =>

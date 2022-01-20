@@ -7,6 +7,8 @@ using Pfim;
 using SixLabors.ImageSharp.PixelFormats;
 using SoulsFormats;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public readonly struct TexId : IEquatable<TexId>, IComparable<TexId>
@@ -55,10 +57,10 @@ namespace DS3TexUpUI
             // Armor: N:\FDP\data\Model\parts\FullBody\FB_M_8800\BD_M_8800\tex\name.ext
             // Weapon: N:\FDP\data\Model\parts\Weapon\WP_A_1419\tex\name.ext
 
-            var p = Path.GetDirectoryName(texture.Path);
+            var p = Path.GetDirectoryName(texture.Path)!;
             if (!Path.GetFileName(p).Equals("tex", StringComparison.OrdinalIgnoreCase)) return null;
 
-            p = Path.GetDirectoryName(p);
+            p = Path.GetDirectoryName(p)!;
             var n = Path.GetFileName(p);
 
             if (_mapPattern.IsMatch(n))
@@ -84,13 +86,13 @@ namespace DS3TexUpUI
 
                 if (flverPath != null && Path.GetExtension(flverPath).Equals(".flver", StringComparison.OrdinalIgnoreCase))
                 {
-                    var d = Path.GetDirectoryName(flverPath);
+                    var d = Path.GetDirectoryName(flverPath)!;
                     if (Path.GetFileName(d).Equals("model", StringComparison.OrdinalIgnoreCase))
                     {
-                        d = Path.GetDirectoryName(d);
+                        d = Path.GetDirectoryName(d)!;
                         if (Path.GetFileName(d).Equals("sfx", StringComparison.OrdinalIgnoreCase))
                         {
-                            var dName = Path.GetFileName(Path.GetDirectoryName(d));
+                            var dName = Path.GetFileName(Path.GetDirectoryName(d)!);
                             if (dName.StartsWith("frpg_sfxbnd_") && dName.EndsWith("_resource-ffxbnd-dcx"))
                             {
                                 var id = dName.Substring("frpg_sfxbnd_".Length);
@@ -107,7 +109,7 @@ namespace DS3TexUpUI
         }
 
         public bool Equals(TexId other) => Value.Equals(other.Value, StringComparison.OrdinalIgnoreCase);
-        public override bool Equals(object obj) => obj is TexId other ? Equals(other) : false;
+        public override bool Equals(object? obj) => obj is TexId other ? Equals(other) : false;
         public override int GetHashCode() => Value.GetHashCode(StringComparison.OrdinalIgnoreCase);
         public override string ToString() => Value;
         public int CompareTo(TexId other) => string.Compare(Value, other.Value, StringComparison.OrdinalIgnoreCase);
@@ -148,8 +150,9 @@ namespace DS3TexUpUI
 
         public TexId? GetLargestCopy()
         {
-            // TODO: implement
-            throw new NotImplementedException();
+            if (DS3.LargestCopyOf.TryGetValue(this, out var largest))
+                return largest;
+            return null;
         }
 
         // Tries to find a larger copy of the current texture.
