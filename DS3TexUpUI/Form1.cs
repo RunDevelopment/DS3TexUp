@@ -21,9 +21,6 @@ namespace DS3TexUpUI
         private bool isCanceled = false;
         private bool taskIsRunning = false;
 
-        private Timer _exceptionTimer = new Timer() { Enabled = true, Interval = 10 };
-        private Exception? _exception = null;
-
         class Form1ProgressToken : IProgressToken
         {
             readonly Form1 _form;
@@ -86,13 +83,6 @@ namespace DS3TexUpUI
             InitializeComponent();
 
             progressToken = new Form1ProgressToken(this);
-
-            _exceptionTimer.Tick += (s, ev) =>
-            {
-                var e = _exception;
-                _exception = null;
-                if (e != null) throw e;
-            };
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -192,11 +182,17 @@ namespace DS3TexUpUI
                 {
                     if (e is CanceledException)
                     {
-                        Invoke(new Action(() => progressBar.Value = progressBar.Minimum));
-                        return;
+                        Invoke(new Action(() =>
+                        {
+                            statusTextBox.Text = "Canceled.";
+                            progressBar.Value = progressBar.Minimum;
+                        }));
                     }
-
-                    Invoke(new Action(() => _exception = new Exception(e.ToString())));
+                    else
+                    {
+                        progressToken.LogException(e);
+                        progressToken.SubmitLog("Failed.");
+                    }
                 }
                 finally
                 {
