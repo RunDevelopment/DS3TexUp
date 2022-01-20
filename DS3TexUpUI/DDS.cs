@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Collections.Generic;
 using System.IO;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -177,6 +178,15 @@ namespace DS3TexUpUI
 
         public int Width => _image.Width;
         public int Height => _image.Height;
+        public int BytesPerPixel
+        {
+            get
+            {
+                var bits = _image.BitsPerPixel;
+                if (bits % 8 == 0) return bits / 8;
+                throw new Exception();
+            }
+        }
 
         public Span<byte> Data => _image.Data.Slice(0, _image.DataLen);
 
@@ -266,16 +276,16 @@ namespace DS3TexUpUI
             switch (Format)
             {
                 case Pfim.ImageFormat.Rgb8:
-                    return GetAbsDiff(data, 0, 1) <= maxDiff;
+                    return GetMinMax(data, 0, BytesPerPixel).GetDiff() <= maxDiff;
                 case Pfim.ImageFormat.Rgb24:
-                    return GetAbsDiff(data, 0, 3) <= maxDiff
-                        && GetAbsDiff(data, 1, 3) <= maxDiff
-                        && GetAbsDiff(data, 2, 3) <= maxDiff;
+                    return GetMinMax(data, 0, BytesPerPixel).GetDiff() <= maxDiff
+                        && GetMinMax(data, 1, BytesPerPixel).GetDiff() <= maxDiff
+                        && GetMinMax(data, 2, BytesPerPixel).GetDiff() <= maxDiff;
                 case Pfim.ImageFormat.Rgba32:
-                    return GetAbsDiff(data, 0, 4) <= maxDiff
-                        && GetAbsDiff(data, 1, 4) <= maxDiff
-                        && GetAbsDiff(data, 2, 4) <= maxDiff
-                        && GetAbsDiff(data, 3, 4) <= maxDiff;
+                    return GetMinMax(data, 0, BytesPerPixel).GetDiff() <= maxDiff
+                        && GetMinMax(data, 1, BytesPerPixel).GetDiff() <= maxDiff
+                        && GetMinMax(data, 2, BytesPerPixel).GetDiff() <= maxDiff
+                        && GetMinMax(data, 3, BytesPerPixel).GetDiff() <= maxDiff;
                 default:
                     throw new Exception("Unsupported pixel format (" + Format + ")");
             }
@@ -288,16 +298,16 @@ namespace DS3TexUpUI
             switch (Format)
             {
                 case Pfim.ImageFormat.Rgb8:
-                    return new RgbaDiff(GetAbsDiff(data, 0, 1));
+                    return GetNonBorderMinMax(m => new RgbaMinMax(GetMinMax(m.Span, 0, 1)));
                 case Pfim.ImageFormat.Rgb24:
-                    return new RgbaDiff(GetAbsDiff(data, 2, 3), GetAbsDiff(data, 1, 3), GetAbsDiff(data, 0, 3));
+                    return GetNonBorderMinMax(m => new RgbaMinMax(GetMinMax(m.Span, 2, 3), GetMinMax(m.Span, 1, 3), GetMinMax(m.Span, 0, 3)));
                 case Pfim.ImageFormat.Rgba32:
-                    return new RgbaDiff(GetAbsDiff(data, 2, 4), GetAbsDiff(data, 1, 4), GetAbsDiff(data, 0, 4), GetAbsDiff(data, 3, 4));
+                    return GetNonBorderMinMax(m => new RgbaMinMax(GetMinMax(m.Span, 2, 4), GetMinMax(m.Span, 1, 4), GetMinMax(m.Span, 0, 4), GetMinMax(m.Span, 3, 4)));
                 default:
                     throw new Exception("Unsupported pixel format (" + Format + ")");
             }
         }
-        private static byte GetAbsDiff(Span<byte> data, int offset, int step)
+        private static MinMax GetMinMax(ReadOnlySpan<byte> data, int offset, int step)
         {
             var min = data[offset];
             var max = data[offset];
@@ -307,7 +317,33 @@ namespace DS3TexUpUI
                 if (c < min) min = c;
                 if (c > max) max = c;
             }
-            return (byte)(max - min);
+            return new MinMax(min, max);
+        }
+        private RgbaMinMax GetNonBorderMinMax(Func<ReadOnlyMemory<byte>, RgbaMinMax> func)
+        {
+            RgbaMinMax minmax = default;
+            var first = true;
+            foreach (var slice in ForAllNonBorder())
+            {
+                var mm = func(slice);
+                if (first)
+                    minmax = mm;
+                else
+                    minmax.UnionWith(mm);
+                first = false;
+            }
+            return minmax;
+        }
+        private IEnumerable<ReadOnlyMemory<byte>> ForAllNonBorder()
+        {
+            var bpp = BytesPerPixel;
+            var sliceLen = bpp * (Width - 2);
+            var data = _image.Data.AsMemory(0, _image.DataLen);
+
+            for (int y = 1; y < Height - 1; y++)
+            {
+                yield return data.Slice((y * Width + 1) * bpp, sliceLen);
+            }
         }
 
         public Image ToImage()
@@ -396,12 +432,78 @@ namespace DS3TexUpUI
         public static implicit operator DDSFormat(DxgiFormat dxgiFormat) => new DDSFormat(dxgiFormat);
     }
 
+    public readonly struct MinMax
+    {
+        public byte Min { get; }
+        public byte Max { get; }
+
+        public MinMax(byte value)
+        {
+            Min = value;
+            Max = value;
+        }
+        public MinMax(byte min, byte max)
+        {
+            Min = min;
+            Max = max;
+        }
+
+        public byte GetDiff() => (byte)(Max - Min);
+
+        public MinMax Union(MinMax other)
+        {
+            return new MinMax(Math.Min(Min, other.Min), Math.Max(Max, other.Max));
+        }
+    }
+    public struct RgbaMinMax
+    {
+        public MinMax R { get; set; }
+        public MinMax G { get; set; }
+        public MinMax B { get; set; }
+        public MinMax A { get; set; }
+
+        public RgbaMinMax(MinMax grey)
+        {
+            R = grey;
+            G = grey;
+            B = grey;
+            A = new MinMax(255);
+        }
+        public RgbaMinMax(MinMax r, MinMax g, MinMax b)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = new MinMax(255);
+        }
+        public RgbaMinMax(MinMax r, MinMax g, MinMax b, MinMax a)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = a;
+        }
+
+        public RgbaDiff GetDiff() => new RgbaDiff(R.GetDiff(), G.GetDiff(), B.GetDiff(), A.GetDiff());
+        public static implicit operator RgbaDiff(RgbaMinMax minmax) => minmax.GetDiff();
+
+        public void UnionWith(RgbaMinMax other)
+        {
+            R = R.Union(other.R);
+            G = G.Union(other.G);
+            B = B.Union(other.B);
+            A = A.Union(other.A);
+        }
+    }
     public struct RgbaDiff
     {
         public byte R { get; set; }
         public byte G { get; set; }
         public byte B { get; set; }
         public byte A { get; set; }
+
+        public byte Max => Math.Max(Math.Max(R, G), Math.Max(B, A));
+        public int Sum => R + G + B + A;
 
         public RgbaDiff(byte grey)
         {
@@ -429,8 +531,7 @@ namespace DS3TexUpUI
         {
             tolerance = Math.Clamp(tolerance, 0, 1);
             var maxDiff = (byte)(255 * tolerance);
-
-            return R <= maxDiff && G <= maxDiff && B <= maxDiff && A <= maxDiff;
+            return Max <= maxDiff;
         }
     }
 }
