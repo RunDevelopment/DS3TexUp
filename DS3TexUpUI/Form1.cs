@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SixLabors.ImageSharp.PixelFormats;
@@ -253,12 +254,16 @@ namespace DS3TexUpUI
         {
             if (e.KeyCode == Keys.Enter)
             {
+                var re = new Regex(@"[^\w/]+");
                 var w = GetWorkspace();
-                var p = Path.Join(w.ExtractDir, textBox1.Text + ".dds");
+                var p = Path.Join(w.ExtractDir, re.Replace(textBox1.Text, "") + ".dds");
                 if (File.Exists(p))
                 {
                     using var process = Process.Start(@"C:\Program Files\paint.net\paintdotnet.exe", p);
                     textBox1.Text = "";
+
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
                 }
                 else
                 {
