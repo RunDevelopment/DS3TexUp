@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 
 namespace DS3TexUpUI
 {
@@ -97,73 +95,6 @@ namespace DS3TexUpUI
             if (width * height != array.Length)
                 throw new ArgumentException("The given width does not evenly divide the array.", nameof(width));
             return new ArrayTextureMap<T>(array, width, height);
-        }
-
-
-        public static void SaveAsPng(this ITextureMap<byte> map, string file)
-        {
-            var rgb = new Rgb24[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-            {
-                var v = map[i];
-                rgb[i] = new Rgb24(v, v, v);
-            }
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ITextureMap<float> map, string file)
-        {
-            var rgb = new Rgb24[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-            {
-                var f = Math.Clamp(map[i], 0f, 1f) * 255f;
-                var v = (byte)f;
-                rgb[i] = new Rgb24(v, v, v);
-            }
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ITextureMap<Normal> map, string file)
-        {
-            var rgb = new Rgb24[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-            {
-                var (r, g, b) = map[i].ToRGB();
-                rgb[i] = new Rgb24(r, g, b);
-            }
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ITextureMap<Rgba32> map, string file)
-        {
-            var rgb = new Rgba32[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-                rgb[i] = map[i];
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ITextureMap<Rgb24> map, string file)
-        {
-            var rgb = new Rgb24[map.Count];
-            for (int i = 0; i < rgb.Length; i++)
-                rgb[i] = map[i];
-
-            using var image = Image.LoadPixelData(rgb, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ArrayTextureMap<Rgba32> map, string file)
-        {
-            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
-            image.SaveAsPng(file);
-        }
-        public static void SaveAsPng(this ArrayTextureMap<Rgb24> map, string file)
-        {
-            using var image = Image.LoadPixelData(map.Data, map.Width, map.Height);
-            image.SaveAsPng(file);
         }
 
         public static void Transform(this ITextureMap<float> map, float offset = 0f, float scale = 0f)

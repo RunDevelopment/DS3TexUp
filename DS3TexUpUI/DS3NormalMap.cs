@@ -32,7 +32,7 @@ namespace DS3TexUpUI
         public void SaveAsPng(string file)
         {
             using var image = Image.LoadPixelData(Data, Width, Height);
-            image.SaveAsPng(file);
+            image.SaveAsPngWithDefaultEncoder(file);
         }
 
         public readonly struct NormalView : ITextureMap<Normal>

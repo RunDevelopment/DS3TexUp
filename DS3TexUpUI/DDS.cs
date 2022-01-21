@@ -47,7 +47,7 @@ namespace DS3TexUpUI
             else
             {
                 using var image = Image.Load(file);
-                image.SaveAsPng(target);
+                image.SaveAsPngWithDefaultEncoder(target);
             }
         }
 
@@ -208,7 +208,7 @@ namespace DS3TexUpUI
         public void SaveAsPng(string file)
         {
             using var image = ToImage();
-            image.SaveAsPng(file);
+            image.SaveAsPngWithDefaultEncoder(file);
         }
 
         public TransparencyKind GetTransparency()
