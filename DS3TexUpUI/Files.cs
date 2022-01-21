@@ -1,8 +1,10 @@
 using System;
+using System.Buffers.Binary;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using SixLabors.ImageSharp;
 
 #nullable enable
 
@@ -84,6 +86,40 @@ namespace DS3TexUpUI
                 token.CheckCanceled();
                 if (condition(file)) file.Delete();
             }
+        }
+
+        public static void EnsureGammaPngChunk(IProgressToken token, IReadOnlyCollection<string> files)
+        {
+            static bool HasGammaChunk(string file)
+            {
+                foreach (var chunk in PngChunk.ReadHeaderChunks(file))
+                {
+                    if (chunk.Type == PngChunkType.gAMA)
+                    {
+                        var gamma = BinaryPrimitives.ReadUInt32BigEndian(chunk.Data.Span);
+                        if (gamma == 45455) return true;
+                    }
+                }
+                return false;
+            }
+
+            var rnd = new Random();
+            token.SubmitStatus($"Ensuring the gamma chunk in {files.Count} PNG files");
+            token.ForAllParallel(files, file =>
+            {
+                if (!HasGammaChunk(file))
+                {
+                    int number;
+                    lock (rnd) {
+                        number = rnd.Next();
+                    }
+                    var target = $"{file}-temp{number}.png";
+                    using var image = Image.Load(file);
+                    image.SaveAsPngWithDefaultEncoder(target);
+                    File.Delete(file);
+                    File.Move(target, file);
+                }
+            });
         }
 
         private static string GetOutputFile(this TexId id, string outputDir)
