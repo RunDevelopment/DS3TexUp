@@ -110,7 +110,8 @@ namespace DS3TexUpUI
                 if (!HasGammaChunk(file))
                 {
                     int number;
-                    lock (rnd) {
+                    lock (rnd)
+                    {
                         number = rnd.Next();
                     }
                     var target = $"{file}-temp{number}.png";
@@ -241,42 +242,49 @@ namespace DS3TexUpUI
             token.SubmitStatus($"Combining {active.Count} normal textures");
             token.ForAllParallel(active, id =>
             {
-                var n = DS3NormalMap.Load(normalFiles[id]);
-
-                var normalized = false;
-                if (normalAlbedoFiles.TryGetValue(id, out var naFile))
+                try
                 {
-                    // Combine with albedo normals
-                    ITextureMap<Normal> na = DS3NormalMap.Load(naFile).Normals;
-                    if (na.Width > n.Width) na = na.DownSample(Average.Normal, na.Width / n.Width);
-                    if (na.Width * 2 == n.Width) na = na.UpSampleNormals(2);
+                    var n = DS3NormalMap.Load(normalFiles[id]);
 
-                    if (na.Width == n.Width && na.Height == n.Height)
+                    var normalized = false;
+                    if (normalAlbedoFiles.TryGetValue(id, out var naFile))
                     {
-                        n.Normals.CombineWith(na, 1f);
-                        normalized = true;
+                        // Combine with albedo normals
+                        ITextureMap<Normal> na = DS3NormalMap.Load(naFile).Normals;
+                        if (na.Width > n.Width) na = na.DownSample(Average.Normal, na.Width / n.Width);
+                        if (na.Width * 2 == n.Width) na = na.UpSampleNormals(2);
+
+                        if (na.Width == n.Width && na.Height == n.Height)
+                        {
+                            n.Normals.CombineWith(na, 1f);
+                            normalized = true;
+                        }
+                        else
+                        {
+                            token.SubmitLog($"The sizes of n:{n.Width}x{n.Height}:{normalFiles[id]} and a:{na.Width}x{na.Height}:{naFile} are not compatible");
+                        }
                     }
-                    else
+
+                    // The upscaled normals might not be normalized
+                    if (!normalized) n.Normals.Normalize();
+
+                    // Set gloss map
+                    var g = glossFiles[id].LoadTextureMap();
+                    n.Gloss.Set(g.GreyBrightness());
+
+                    if (heightFiles.TryGetValue(id, out var hFile))
                     {
-                        token.SubmitLog($"The sizes of n:{n.Width}x{n.Height}:{normalFiles[id]} and a:{na.Width}x{na.Height}:{naFile} are not compatible");
+                        // Set height map
+                        var h = heightFiles[id].LoadTextureMap();
+                        n.Heights.Set(h.GreyAverage());
                     }
+
+                    n.SaveAsPng(id.GetOutputFile(outputDir));
                 }
-
-                // The upscaled normals might not be normalized
-                if (!normalized) n.Normals.Normalize();
-
-                // Set gloss map
-                var g = glossFiles[id].LoadTextureMap();
-                n.Gloss.Set(g.GreyBrightness());
-
-                if (heightFiles.TryGetValue(id, out var hFile))
+                catch (Exception e)
                 {
-                    // Set height map
-                    var h = heightFiles[id].LoadTextureMap();
-                    n.Heights.Set(h.GreyAverage());
+                    token.LogException(e);
                 }
-
-                n.SaveAsPng(id.GetOutputFile(outputDir));
             });
         }
     }
