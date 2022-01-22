@@ -416,6 +416,25 @@ namespace DS3TexUpUI
             DxgiFormat = dxgiFormat;
         }
 
+        public DxgiFormat ToDX10()
+        {
+            return FourCC switch
+            {
+                CompressionAlgorithm.ATI1 => DxgiFormat.BC4_UNORM,
+                CompressionAlgorithm.ATI2 => DxgiFormat.BC5_UNORM,
+                CompressionAlgorithm.D3DFMT_DXT1 => DxgiFormat.BC1_UNORM,
+                CompressionAlgorithm.D3DFMT_DXT2 => this.DxgiFormat,
+                CompressionAlgorithm.D3DFMT_DXT3 => DxgiFormat.BC2_UNORM,
+                CompressionAlgorithm.D3DFMT_DXT4 => this.DxgiFormat,
+                CompressionAlgorithm.D3DFMT_DXT5 => DxgiFormat.BC3_UNORM,
+                CompressionAlgorithm.BC4S => DxgiFormat.BC4_SNORM,
+                CompressionAlgorithm.BC5S => DxgiFormat.BC5_SNORM,
+                CompressionAlgorithm.BC4U => DxgiFormat.BC4_UNORM,
+                CompressionAlgorithm.BC5U => DxgiFormat.BC5_UNORM,
+                _ => this.DxgiFormat,
+            };
+        }
+
         public override string ToString()
         {
             if (FourCC == CompressionAlgorithm.DX10) return $"DX10 {DxgiFormat}";
