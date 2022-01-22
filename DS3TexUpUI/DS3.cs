@@ -129,6 +129,7 @@ namespace DS3TexUpUI
             return token =>
             {
                 var list = OriginalFormat
+                    .Where(p => !Unused.Contains(p.Key))
                     .GroupBy(p => p.Key.GetTexKind())
                     .OrderBy(p => (int)p.Key)
                     .Select(g =>
