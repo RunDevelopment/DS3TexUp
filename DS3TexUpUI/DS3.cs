@@ -269,7 +269,7 @@ namespace DS3TexUpUI
                     if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
 
                     var simScore = aImage.GetSimilarityScore(bFile.LoadTextureMap());
-                    var sim = simScore.color < 0.04 && simScore.feature < 0.12;
+                    var sim = simScore.color < 0.04 && simScore.feature < 0.13;
 
                     simCache.TryAdd(key, sim);
                     return sim;
