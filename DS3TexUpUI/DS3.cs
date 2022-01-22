@@ -49,6 +49,9 @@ namespace DS3TexUpUI
         public static readonly IReadOnlyCollection<TexId> GroundWithMossTextures
             = DataFile(@"ground-with-moss.json").LoadJsonFile<HashSet<TexId>>();
 
+        public static readonly IReadOnlyCollection<TexId> SolidColor
+            = DataFile(@"solid-color.json").LoadJsonFile<HashSet<TexId>>();
+
         public static readonly IReadOnlyDictionary<TexId, TexKind> KnownTexKinds
             = DataFile(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
         internal static Action<SubProgressToken> CreateKnownTexKindsIndex()
@@ -248,7 +251,7 @@ namespace DS3TexUpUI
                 token.SubmitStatus("Searching for files");
                 var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories)
                     // ignore all images that are just solid colors
-                    .Where(f => !TexId.FromPath(f).IsSolidColor(0.05))
+                    .Where(f => !TexId.FromPath(f).IsSolidColor())
                     .ToArray();
 
                 var index = CopyIndex.Create(token.Reserve(0.5), files);
@@ -436,7 +439,7 @@ namespace DS3TexUpUI
                         var n = normal.Value;
                         var a = albedo.Value;
                         a = a.GetLargestCopy() ?? a;
-                        if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor(0.05) && !a.IsSolidColor(0.05))
+                        if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor() && !a.IsSolidColor())
                         {
                             if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))
                             {

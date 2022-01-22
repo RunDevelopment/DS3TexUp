@@ -148,6 +148,8 @@ namespace DS3TexUpUI
             return TexKind.Unknown;
         }
 
+        public bool IsSolidColor() => DS3.SolidColor.Contains(this);
+
         public TexId? GetLargestCopy()
         {
             if (DS3.LargestCopyOf.TryGetValue(this, out var largest))
@@ -278,13 +280,6 @@ namespace DS3TexUpUI
         {
             // We only want a textures if it is used or the larger copy of another texture.
             return DS3.Unused.Contains(this) && !DS3.LargestCopy.ContainsKey(this);
-        }
-
-        public bool IsSolidColor(double tolerance)
-        {
-            if (DS3.OriginalColorDiff.TryGetValue(this, out var diff))
-                return diff.IsSolidColor(tolerance);
-            return false;
         }
 
         public TransparencyKind GetTransparency() => DS3.Transparency.GetOrDefault(this, TransparencyKind.Full);
