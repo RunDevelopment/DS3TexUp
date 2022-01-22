@@ -104,6 +104,9 @@ namespace DS3TexUpUI
         }
         public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, int total, Func<T, int> action)
         {
+            token.SubmitProgress(0);
+            token.SubmitSubProgress(0, total);
+
             var done = 0;
 
             foreach (var item in iter)
@@ -148,6 +151,7 @@ namespace DS3TexUpUI
         public static void ForAllParallel<T>(this IProgressToken token, IEnumerable<T> iter, int total, Func<T, int> action)
         {
             token.SubmitProgress(0);
+            token.SubmitSubProgress(0, total);
 
             int done = 0;
             Parallel.ForEach(iter, AppConfig.Instance.GetParallelOptions(), (item, loop) =>
