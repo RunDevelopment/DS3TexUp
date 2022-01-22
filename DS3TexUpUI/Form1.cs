@@ -270,11 +270,13 @@ namespace DS3TexUpUI
                 var re = new Regex(@"[^\w/]+");
                 var colorCode = new Regex(@"^(?i:[rgbymc]){6}$");
                 var text = re.Replace(textBox1.Text, "");
-                if (colorCode.IsMatch(text)) {
+                if (colorCode.IsMatch(text))
+                {
                     var cc = ColorCode6x6.Parse(text);
                     foreach (var kv in DS3.ColorCode)
                     {
-                        if (kv.Value == cc) {
+                        if (kv.Value == cc)
+                        {
                             text = kv.Key.ToString();
                             break;
                         }
@@ -282,7 +284,7 @@ namespace DS3TexUpUI
                 }
 
                 var w = GetWorkspace();
-                var p = Path.Join(w.ExtractDir, text + ".dds");
+                var p = Path.Join(w.ExtractDir, text.Replace('/', '\\') + ".dds");
                 if (File.Exists(p))
                 {
                     using var process = Process.Start(@"C:\Program Files\paint.net\paintdotnet.exe", p);
