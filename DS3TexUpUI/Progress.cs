@@ -31,6 +31,7 @@ namespace DS3TexUpUI
         void CheckCanceled();
         void SubmitStatus(string status);
         void SubmitProgress(double current);
+        void SubmitSubProgress(int current, int total);
     }
 
     public class SubProgressToken : IProgressToken
@@ -56,6 +57,7 @@ namespace DS3TexUpUI
         public void SubmitProgress(double current) => _token.SubmitProgress(_start + current * _size);
         public void SubmitStatus(string status) => _token.SubmitStatus(status);
         public void SubmitLog(string message) => _token.SubmitLog(message);
+        public void SubmitSubProgress(int current, int total) => _token.SubmitSubProgress(current, total);
 
         public SubProgressToken Reserve(double size)
         {
@@ -78,6 +80,7 @@ namespace DS3TexUpUI
         public void SubmitProgress(double current) { }
         public void SubmitStatus(string status) { }
         public void SubmitLog(string message) { }
+        public void SubmitSubProgress(int current, int total) { }
     }
 
     public static class LoggerExtensions
@@ -113,6 +116,7 @@ namespace DS3TexUpUI
                 if (token.IsCanceled) return;
                 done += work;
                 token.SubmitProgress(Math.Clamp(done / (double)total, 0, 1));
+                token.SubmitSubProgress(done, total);
             }
 
             token.SubmitProgress(1);
@@ -170,7 +174,11 @@ namespace DS3TexUpUI
                         }
 
                         done += work;
-                        if (total > 0) token.SubmitProgress(Math.Clamp(done / (double)total, 0, 1));
+                        if (total > 0)
+                        {
+                            token.SubmitProgress(Math.Clamp(done / (double)total, 0, 1));
+                            token.SubmitSubProgress(done, total);
+                        }
                     }
                 }
                 catch (Exception e)

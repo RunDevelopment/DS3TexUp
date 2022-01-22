@@ -25,15 +25,10 @@ namespace DS3TexUpUI
         {
             readonly Form1 _form;
 
-            public bool IsCanceled
-            {
-                get
-                {
-                    Application.DoEvents();
-                    return _form.isCanceled;
-                }
-            }
+            private string _status = "";
+            private (int, int)? _subProgress = null;
 
+            public bool IsCanceled => _form.isCanceled;
             public object Lock => this;
 
             public Form1ProgressToken(Form1 form)
@@ -59,22 +54,44 @@ namespace DS3TexUpUI
                 }));
             }
 
+            public void SubmitSubProgress(int current, int total)
+            {
+                CheckCanceled();
+
+                _subProgress = (current, total);
+                _form.Invoke(new Action(() =>
+                {
+                    _form.statusTextBox.Text = GetStatusTex();
+                }));
+            }
             public void SubmitStatus(string status)
             {
                 CheckCanceled();
+
+                _status = status;
+                _subProgress = null;
                 _form.Invoke(new Action(() =>
                 {
-                    _form.statusTextBox.Text = status;
+                    _form.statusTextBox.Text = GetStatusTex();
                 }));
+            }
+            private string GetStatusTex()
+            {
+                if (_subProgress == null)
+                    return _status;
+                else
+                    return $"{_status} ({_subProgress.Value.Item1}/{_subProgress.Value.Item2})";
             }
 
             public void SubmitLog(string message)
             {
-                CheckCanceled();
                 _form.Invoke(new Action(() =>
                 {
-                    _form.logRichTextBox.AppendText(message + "\n");
+                    var log = _form.logRichTextBox;
+                    log.AppendText(message + "\n");
+                    log.ScrollToCaret();
                 }));
+                CheckCanceled();
             }
         }
 
