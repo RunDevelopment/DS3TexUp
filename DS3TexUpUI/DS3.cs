@@ -285,7 +285,7 @@ namespace DS3TexUpUI
                     {
                         var image = f.LoadTextureMap();
 
-                        var similar = index.GetSimilar(image, 2);
+                        var similar = index.GetSimilar(image, 3);
                         if (similar != null)
                         {
                             foreach (var e in similar)
