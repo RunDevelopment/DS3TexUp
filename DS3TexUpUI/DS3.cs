@@ -167,32 +167,26 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
 
-        // public static IReadOnlyDictionary<TexId, DDSFormat> OutputFormat
-        //     = DataFile(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
+        public static IReadOnlyDictionary<TexId, DDSFormat> OutputFormat
+            = DataFile(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
         internal static Action<SubProgressToken> CreateOutputFormatIndex(Workspace w)
         {
-            static DDSFormat GetOutputNormalFormat(DDSFormat format)
-            {
-                // Always use BC7 for normals!
-                if (format.DxgiFormat == DxgiFormat.BC1_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
-                if (format.DxgiFormat == DxgiFormat.BC1_UNORM) return DxgiFormat.BC7_UNORM;
-
-                // TODO: The other formats
-                return format;
-            }
-
             static DDSFormat GetOutputFormat(DDSFormat format, TexKind kind)
             {
-                // BC7 will always achieve better quality with the same memory
-                if (format.DxgiFormat == DxgiFormat.BC3_UNORM) return DxgiFormat.BC7_UNORM;
-                if (format.DxgiFormat == DxgiFormat.BC3_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
+                var dx = format.ToDX10();
 
-                return kind switch
+                // BC7 will always achieve better quality with the same memory
+                if (dx == DxgiFormat.BC3_UNORM) return DxgiFormat.BC7_UNORM;
+                if (dx == DxgiFormat.BC3_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
+
+                // Some formats should not use BC1
+                if (kind == TexKind.Normal || kind == TexKind.Height || kind == TexKind.VertexOffset)
                 {
-                    // TODO: Other texture kinds need attention too!
-                    TexKind.Normal => GetOutputNormalFormat(format),
-                    _ => format
-                };
+                    if (dx == DxgiFormat.BC1_UNORM_SRGB) return DxgiFormat.BC7_UNORM_SRGB;
+                    if (dx == DxgiFormat.BC1_UNORM) return DxgiFormat.BC7_UNORM;
+                }
+
+                return dx == DxgiFormat.UNKNOWN ? format : dx;
             }
 
             return token =>
