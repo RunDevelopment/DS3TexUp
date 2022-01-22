@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -197,6 +198,44 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus("Saving formats");
                 new Dictionary<TexId, DDSFormat>(e).SaveAsJson(DataFile(@"output-format.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<TexId, ColorCode6x6> ColorCode
+            = DataFile(@"color-code.json").LoadJsonFile<Dictionary<TexId, ColorCode6x6>>();
+        internal static Action<SubProgressToken> CreateColorCodeIndex()
+        {
+            return token =>
+            {
+                token.SubmitStatus("Selecting textures");
+                var ids = OriginalSize.Keys
+                    .Where(id => id.GetTexKind() == TexKind.Albedo)
+                    .Where(id => !Unused.Contains(id))
+                    .ToList();
+                ids.Sort();
+
+                token.SubmitStatus("Creating index");
+                var index = new Dictionary<TexId, ColorCode6x6>();
+                var set = new BitArray((int)ColorCode6x6.Max);
+                token.ForAll(ids, id =>
+                {
+                    var i = unchecked((uint)id.GetHashCode());
+                    i ^= i >> 16;
+                    var c = new ColorCode6x6(i);
+
+                    // probe until we find a free id
+                    for (var t = 0u; set[(int)c.Number]; t++)
+                    {
+                        i += t * 2 + 1;
+                        c = new ColorCode6x6(i);
+                    }
+
+                    set[(int)c.Number] = true;
+                    index[id] = c;
+                });
+
+                token.SubmitStatus("Saving JSON");
+                index.SaveAsJson(DataFile(@"color-code.json"));
             };
         }
 
@@ -588,5 +627,101 @@ namespace DS3TexUpUI
         public string FlverPath { get; set; }
         public List<FLVER2.GXList> GXLists { get; set; }
         public List<FLVER2.Material> Materials { get; set; }
+    }
+
+    public readonly struct ColorCode6x6 : IEquatable<ColorCode6x6>
+    {
+        public static readonly uint Max = 46656;
+        private static readonly Rgba32[] _colors = new Rgba32[] {
+            new Rgba32(255, 0, 0, 255),
+            new Rgba32(255, 255, 0, 255),
+            new Rgba32(0, 255, 0, 255),
+            new Rgba32(0, 255, 255, 255),
+            new Rgba32(0, 0, 255, 255),
+            new Rgba32(255, 0, 255, 255),
+        };
+        private static readonly char[] _letters = new[] { 'R', 'Y', 'G', 'C', 'B', 'M' };
+
+        public uint Number { get; }
+
+        public ColorCode6x6(uint n)
+        {
+            n %= Max;
+            Number = Math.Min(Reverse(n), n);
+        }
+        private static void GetCodes(uint n, out uint c0, out uint c1, out uint c2, out uint c3, out uint c4, out uint c5)
+        {
+            c0 = n % 6;
+            c1 = (n /= 6) % 6;
+            c2 = (n /= 6) % 6;
+            c3 = (n /= 6) % 6;
+            c4 = (n /= 6) % 6;
+            c5 = n / 6;
+        }
+        private static uint Reverse(uint n)
+        {
+            GetCodes(n, out var c0, out var c1, out var c2, out var c3, out var c4, out var c5);
+            return c0 * 7776 + c1 * 1296 + c2 * 216 + c3 * 36 + c4 * 6 + c5;
+        }
+
+        public Rgba32[] GetColors()
+        {
+            GetCodes(Number, out var c0, out var c1, out var c2, out var c3, out var c4, out var c5);
+            return new Rgba32[] { _colors[c0], _colors[c1], _colors[c2], _colors[c3], _colors[c4], _colors[c5] };
+        }
+
+        public override bool Equals(object? obj) => obj is ColorCode6x6 other ? Equals(other) : false;
+        public bool Equals(ColorCode6x6 other) => Number == other.Number;
+        public override int GetHashCode() => Number.GetHashCode();
+
+        public override string ToString()
+        {
+            GetCodes(Number, out var c0, out var c1, out var c2, out var c3, out var c4, out var c5);
+            return $"{_letters[c0]}{_letters[c1]}{_letters[c2]}{_letters[c3]}{_letters[c4]}{_letters[c5]}";
+        }
+        public static ColorCode6x6 Parse(string input)
+        {
+            if (input.Length != 6) throw new Exception("Expected the string to be 6 letters long.");
+
+            static uint ToCode(char c)
+            {
+                switch (c)
+                {
+                    case 'r':
+                    case 'R':
+                        return 0;
+                    case 'y':
+                    case 'Y':
+                        return 1;
+                    case 'g':
+                    case 'G':
+                        return 2;
+                    case 'c':
+                    case 'C':
+                        return 3;
+                    case 'b':
+                    case 'B':
+                        return 4;
+                    case 'm':
+                    case 'M':
+                        return 5;
+                    default:
+                        throw new Exception($"Invalid color letter {c}. Expected RGBYCM.");
+                }
+            }
+
+            var c0 = ToCode(input[0]);
+            var c1 = ToCode(input[1]);
+            var c2 = ToCode(input[2]);
+            var c3 = ToCode(input[3]);
+            var c4 = ToCode(input[4]);
+            var c5 = ToCode(input[5]);
+
+            var n = c0 + c1 * 6 + c2 * 36 + c3 * 216 + c4 * 1296 + c5 * 7776;
+            return new ColorCode6x6(n);
+        }
+
+        public static bool operator ==(ColorCode6x6 rhs, ColorCode6x6 lhs) => rhs.Equals(lhs);
+        public static bool operator !=(ColorCode6x6 rhs, ColorCode6x6 lhs) => !(rhs == lhs);
     }
 }

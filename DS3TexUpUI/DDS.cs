@@ -56,6 +56,23 @@ namespace DS3TexUpUI
             ToDDSUsingTexConv(file, target, format);
         }
 
+        private static Random _tempRandom = new Random();
+        public static void SaveAsDDS(this ITextureMap<Rgba32> image, string target, DDSFormat format, TexId id)
+        {
+            int n;
+            lock (_tempRandom) { n = _tempRandom.Next(); }
+            var temp = target + $"-temp{n}.png";
+            image.SaveAsPng(temp);
+            try
+            {
+                ToDDS(temp, target, format, id);
+            }
+            finally
+            {
+                File.Delete(temp);
+            }
+        }
+
         private static readonly Random _rng = new Random();
         internal static void ToDDSUsingTexConv(string file, string target, DDSFormat format)
         {

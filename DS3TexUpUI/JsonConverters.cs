@@ -19,7 +19,8 @@ namespace DS3TexUpUI
             [typeof(Vector2)] = new Vector2Converter(),
             [typeof(TexId)] = new TexIdConverter(),
             [typeof(Size)] = new SizeConverter(),
-            [typeof(DDSFormat)] = new DDSFormatConverter(),
+            [typeof(DDSFormat)] = new StringParsingConverter<DDSFormat>(DDSFormat.Parse),
+            [typeof(ColorCode6x6)] = new StringParsingConverter<ColorCode6x6>(ColorCode6x6.Parse),
             [typeof(HashSet<TexId>)] = new TexIdHashSetConverter(),
         };
         public static JsonSerializerOptions WithConvertersFor<T>(this JsonSerializerOptions options)
@@ -291,14 +292,17 @@ namespace DS3TexUpUI
             }
         }
 
-        private sealed class DDSFormatConverter : JsonConverter<DDSFormat>
+        private sealed class StringParsingConverter<T> : JsonConverter<T>
         {
-            public override DDSFormat Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            private readonly Func<string, T> _parse;
+            public StringParsingConverter(Func<string, T> parse) => _parse = parse;
+
+            public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType != JsonTokenType.String) throw new JsonException();
-                return DDSFormat.Parse(reader.GetString());
+                return _parse(reader.GetString());
             }
-            public override void Write(Utf8JsonWriter writer, DDSFormat value, JsonSerializerOptions options)
+            public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
             {
                 writer.WriteStringValue(value.ToString());
             }

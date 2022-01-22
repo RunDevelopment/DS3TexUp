@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SixLabors.ImageSharp;
+using Pfim;
 
 #nullable enable
 
@@ -280,6 +281,37 @@ namespace DS3TexUpUI
                     }
 
                     n.SaveAsPng(id.GetOutputFile(outputDir));
+                }
+                catch (Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
+        }
+
+        public static void CreateIdTextures(IProgressToken token, Workspace w, string outputDir)
+        {
+            token.SubmitStatus("Creating id textures");
+            token.ForAllParallel(DS3.ColorCode, kv =>
+            {
+                try
+                {
+                    var (id, code) = kv;
+
+                    var exPath = w.GetExtractPath(id);
+                    var i = exPath.LoadTextureMap();
+                    i.AddColorCode(code.GetColors());
+
+                    var target = Path.Join(outputDir, id.Category, Path.GetFileName(exPath));
+                    Directory.CreateDirectory(Path.GetDirectoryName(target));
+
+                    var format = DS3.OutputFormat[id];
+                    if (format.DxgiFormat == DxgiFormat.BC1_UNORM) format = DxgiFormat.R8G8B8A8_UNORM;
+                    if (format.DxgiFormat == DxgiFormat.BC1_UNORM_SRGB) format = DxgiFormat.R8G8B8A8_UNORM_SRGB;
+                    if (format.DxgiFormat == DxgiFormat.BC7_UNORM) format = DxgiFormat.R8G8B8A8_UNORM;
+                    if (format.DxgiFormat == DxgiFormat.BC7_UNORM_SRGB) format = DxgiFormat.R8G8B8A8_UNORM_SRGB;
+
+                    i.SaveAsDDS(target, format, id);
                 }
                 catch (Exception e)
                 {

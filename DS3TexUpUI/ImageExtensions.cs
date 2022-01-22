@@ -1024,5 +1024,54 @@ namespace DS3TexUpUI
 
             return d + blend * (c + blend * (b + blend * a));
         }
+
+        public static void AddColorCode(this ArrayTextureMap<Rgba32> map, Span<Rgba32> code)
+        {
+            static bool IsEven(int i) => (i & 1) != 0;
+            static bool Flip(int x, int y, int l)
+            {
+                x >>= 1;
+                y >>= 1;
+                return IsEven(y / l) ^ IsEven(x / l);
+            }
+
+            // horizontal lines
+            for (var y = 0; y < map.Height; y += code.Length * 2)
+            {
+                for (var x = 0; x < map.Width; x++)
+                {
+                    if ((x & 1) == 0)
+                    {
+                        // black
+                        map[x, y] = new Rgba32(0, 0, 0, 255);
+                    }
+                    else
+                    {
+                        var i = (x >> 1) % code.Length;
+                        if (Flip(x, y, code.Length)) i = code.Length - 1 - i;
+                        map[x, y] = code[i];
+                    }
+                }
+            }
+
+            // vertical lines
+            for (var x = 0; x < map.Width; x += code.Length * 2)
+            {
+                for (var y = 0; y < map.Height; y++)
+                {
+                    if ((y & 1) == 0)
+                    {
+                        // black
+                        map[x, y] = new Rgba32(0, 0, 0, 255);
+                    }
+                    else
+                    {
+                        var i = (y >> 1) % code.Length;
+                        if (Flip(x, y, code.Length)) i = code.Length - 1 - i;
+                        map[x, y] = code[i];
+                    }
+                }
+            }
+        }
     }
 }
