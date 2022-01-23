@@ -350,6 +350,75 @@ namespace DS3TexUpUI
             return l;
         }
 
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> Identical
+            = CopiesFromPairs(DataFile(@"identical.json").LoadJsonFile<List<(TexId, TexId)>>());
+        internal static Action<SubProgressToken> CreateIdenticalIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Finding identical");
+                var identical = new Dictionary<TexId, HashSet<TexId>>();
+
+                var cache = new ConcurrentDictionary<(TexId, TexId), bool>();
+                bool AreIdentical(TexId a, TexId b)
+                {
+                    if (a == b) return true;
+                    if (DS3.OriginalSize[a].Width != DS3.OriginalSize[b].Width) return false;
+
+                    if (a > b) (b, a) = (a, b);
+                    var key = (a, b);
+
+                    if (cache!.TryGetValue(key, out var cachedResult)) return cachedResult;
+
+                    var imageA = w.GetExtractPath(a).LoadTextureMap();
+                    var imageB = w.GetExtractPath(b).LoadTextureMap();
+                    var identical = true;
+                    for (int i = 0; i < imageA.Count; i++)
+                    {
+                        var pa = imageA[i];
+                        var pb = imageB[i];
+
+                        var diffR = Math.Abs(pa.R - pb.R);
+                        var diffG = Math.Abs(pa.G - pb.G);
+                        var diffB = Math.Abs(pa.B - pb.B);
+                        var diffA = Math.Abs(pa.A - pb.A);
+
+                        const int MaxDiff = 2;
+                        if (diffR > MaxDiff || diffG > MaxDiff || diffB > MaxDiff || diffA > MaxDiff)
+                        {
+                            identical = false;
+                            break;
+                        }
+                    }
+
+                    cache[key] = identical;
+                    return identical;
+                }
+
+                token.ForAllParallel(Copies.Values, copies =>
+                {
+                    foreach (var a in copies)
+                    {
+                        foreach (var b in copies)
+                        {
+                            if (AreIdentical(a, b))
+                            {
+                                lock (identical)
+                                {
+                                    static HashSet<TexId> NewHashSet(TexId id) => new HashSet<TexId>() { id };
+                                    identical.GetOrAdd(a, NewHashSet).Add(b);
+                                    identical.GetOrAdd(b, NewHashSet).Add(a);
+                                }
+                            }
+                        }
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                PairsFromCopies(identical).SaveAsJson(DataFile(@"identical.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> LargestCopy
             = DataFile(@"largest-copy.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
         public static IReadOnlyDictionary<TexId, TexId> LargestCopyOf
