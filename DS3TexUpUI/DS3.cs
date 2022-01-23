@@ -242,8 +242,8 @@ namespace DS3TexUpUI
             };
         }
 
-        public static IReadOnlyDictionary<TexId, HashSet<TexId>> Copies
-            = CopiesFromPairs(DataFile(@"copies-raw.json").LoadJsonFile<List<(TexId, TexId)>>());
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> CopiesUncertain
+            = CopiesFromPairs(DataFile(@"copies-uncertain.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateCopyIndex(Workspace w)
         {
             return token =>
@@ -316,7 +316,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving copies JSON");
-                PairsFromCopies(copies).SaveAsJson(DataFile(@"copies-raw.json"));
+                PairsFromCopies(copies).SaveAsJson(DataFile(@"copies-uncertain.json"));
             };
         }
         internal static Dictionary<TexId, HashSet<TexId>> CopiesFromPairs(IEnumerable<(TexId, TexId)> pairs)
@@ -395,7 +395,7 @@ namespace DS3TexUpUI
                     return identical;
                 }
 
-                token.ForAllParallel(Copies.Values, copies =>
+                token.ForAllParallel(CopiesUncertain.Values, copies =>
                 {
                     foreach (var a in copies)
                     {
@@ -432,7 +432,7 @@ namespace DS3TexUpUI
                 var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
                 {
                     var l = new List<TexId>() { id };
-                    if (DS3.Copies.TryGetValue(id, out var copies))
+                    if (DS3.CopiesUncertain.TryGetValue(id, out var copies))
                     {
                         l.AddRange(copies);
                     }
@@ -445,7 +445,6 @@ namespace DS3TexUpUI
                     var (scc, i) = pair;
 
                     // Remove identical textures
-                    var identical = DS3.CopiesIdentical.GetOrNew(scc.First());
                     static TexId MapTo(TexId id)
                     {
                         if (DS3.CopiesIdentical.TryGetValue(id, out var same)) return same.First();
@@ -510,7 +509,7 @@ namespace DS3TexUpUI
                 var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
                 {
                     var l = new List<TexId>() { id };
-                    if (DS3.Copies.TryGetValue(id, out var copies))
+                    if (DS3.CopiesUncertain.TryGetValue(id, out var copies))
                     {
                         l.AddRange(copies);
                     }

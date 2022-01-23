@@ -177,7 +177,7 @@ namespace DS3TexUpUI
                 });
             }
 
-            if (DS3.Copies.TryGetValue(this, out var similar))
+            if (DS3.CopiesUncertain.TryGetValue(this, out var similar))
             {
                 var copies = similar.ToList();
 
