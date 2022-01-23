@@ -1949,6 +1949,10 @@
 	],
 	[
 		"chr/c1130_c1130_jarei_body_01_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c1130_c1130_jarei_body_01_r",
 		"m35/m35_00_o350015_03_r"
 	],
 	[
@@ -1962,6 +1966,10 @@
 	[
 		"chr/c1139_c1139_ude_n",
 		"obj/o341010_o341010_ude_n"
+	],
+	[
+		"chr/c1139_c1139_ude_r",
+		"obj/o341010_o341010_ude_r"
 	],
 	[
 		"chr/c1170_c1170_Machete_01_a",
@@ -3528,12 +3536,20 @@
 		"chr/c1321_c1321_Ball_n"
 	],
 	[
+		"chr/c1320_c1320_botom_r",
+		"m30/m30_00_bigrock_04_r"
+	],
+	[
 		"chr/c1320_c1320_necklace_a",
 		"chr/c1321_c1321_necklace_a"
 	],
 	[
 		"chr/c1320_c1320_necklace_n",
 		"chr/c1321_c1321_necklace_n"
+	],
+	[
+		"chr/c1320_c1320_Skirt02_r",
+		"m30/m30_00_low_square_01_r"
 	],
 	[
 		"chr/c1320_c1320_top_sm",
@@ -3658,6 +3674,10 @@
 	[
 		"chr/c1360_c1360_cloth_r",
 		"chr/c6310_c6310_mummy_skin_r"
+	],
+	[
+		"chr/c1360_c1360_cloth_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"chr/c1360_c1360_cloth_r",
@@ -4525,6 +4545,18 @@
 	],
 	[
 		"chr/c1442_c1442_bottom_r",
+		"chr/c3250_c3250_face_r"
+	],
+	[
+		"chr/c1442_c1442_bottom_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"chr/c1442_c1442_bottom_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c1442_c1442_bottom_r",
 		"m35/m35_00_o350015_03_r"
 	],
 	[
@@ -5061,6 +5093,10 @@
 	],
 	[
 		"chr/c2210_c2210_hair_a_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c2210_c2210_hair_a_r",
 		"obj/o401156_o401156_02_r"
 	],
 	[
@@ -5520,6 +5556,10 @@
 		"obj/o302593_o302593_c3080branch_n"
 	],
 	[
+		"chr/c3080_c3080hair02_n",
+		"obj/o302593_o302593_c3080hair02_n"
+	],
+	[
 		"chr/c3080_c3080tail_a",
 		"obj/o302593_o302593_c3080tail_a"
 	],
@@ -5598,6 +5638,14 @@
 	[
 		"chr/c3110_c3110_hair_n",
 		"m40/m40_00_grass_320_n"
+	],
+	[
+		"chr/c3120_c3120_stickRoot_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"chr/c3120_c3120_stickRoot_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"chr/c3160_c3160_AM_a",
@@ -5685,11 +5733,43 @@
 	],
 	[
 		"chr/c3250_c3250_bottom_r",
+		"chr/c3250_c3250_face_r"
+	],
+	[
+		"chr/c3250_c3250_bottom_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"chr/c3250_c3250_bottom_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c3250_c3250_bottom_r",
 		"m35/m35_00_o350015_03_r"
 	],
 	[
 		"chr/c3250_c3250_face_r",
+		"chr/c5260_c5260_body_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
 		"chr/c6310_c6310_mummy_skin_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"m30/m30_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"m32/m32_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"chr/c3250_c3250_face_r",
@@ -5701,7 +5781,19 @@
 	],
 	[
 		"chr/c3250_c3250_face_r",
+		"m41/m41_00_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
 		"m41/m41_00_o364040_bark_02_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"m53/m53_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c3250_c3250_face_r",
+		"obj/o329250_m32_00_o324060_pillar_01_r"
 	],
 	[
 		"chr/c3250_c3250_face_r",
@@ -6213,7 +6305,51 @@
 	],
 	[
 		"chr/c5260_c5260_body_r",
+		"chr/c6310_c6310_mummy_skin_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m30/m30_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m32/m32_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m35/m35_00_o350209_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
 		"m38/m38_00_m000302_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m41/m41_00_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m41/m41_00_o364040_bark_02_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"m53/m53_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"obj/o329250_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"obj/o399910_c2190_body_r"
+	],
+	[
+		"chr/c5260_c5260_body_r",
+		"parts/LG_M_2650_LG_M_2650_r"
 	],
 	[
 		"chr/c5260_c5260_cloth_a",
@@ -6445,6 +6581,10 @@
 	],
 	[
 		"chr/c6010_c6010_fether_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"chr/c6010_c6010_fether_r",
 		"obj/o401156_o401156_02_r"
 	],
 	[
@@ -6522,6 +6662,10 @@
 	[
 		"chr/c6020_c6020_eye_r",
 		"chr/c6121_c6120_eye_r"
+	],
+	[
+		"chr/c6020_c6020_hair_r",
+		"m30/m30_00_o309120_frame_02_r"
 	],
 	[
 		"chr/c6020_c6020_hair_r",
@@ -6825,6 +6969,10 @@
 	],
 	[
 		"chr/c6100_c6100_Body_01_r",
+		"m45/m45_00_c6100_Body_01_r"
+	],
+	[
+		"chr/c6100_c6100_Body_01_r",
 		"parts/BD_M_6050_BD_M_6050_01_r"
 	],
 	[
@@ -6926,6 +7074,10 @@
 	[
 		"chr/c6100_c6100_LONGAXE_n",
 		"parts/WP_A_0718_WP_A_0718_n"
+	],
+	[
+		"chr/c6100_c6100_LONGAXE_r",
+		"m45/m45_00_c6100_LONGAXE_r"
 	],
 	[
 		"chr/c6100_c6100_LONGAXE_r",
@@ -7072,6 +7224,14 @@
 		"m37/m37_00_Cliffs_r"
 	],
 	[
+		"chr/c6200_c6200_Cape_Dust_r",
+		"m45/m45_00_ladder_c6120_01_r"
+	],
+	[
+		"chr/c6200_c6200_Cape_Dust_r",
+		"sfx/m45_s09400_r"
+	],
+	[
 		"chr/c6200_c6200_Cape_n",
 		"chr/c6201_c6201_Cape_Dust_n"
 	],
@@ -7134,6 +7294,14 @@
 	[
 		"chr/c6201_c6201_Cape_Dust_r",
 		"m37/m37_00_Cliffs_r"
+	],
+	[
+		"chr/c6201_c6201_Cape_Dust_r",
+		"m45/m45_00_ladder_c6120_01_r"
+	],
+	[
+		"chr/c6201_c6201_Cape_Dust_r",
+		"sfx/m45_s09400_r"
 	],
 	[
 		"chr/c6201_c6201_Weapon_Dust_a",
@@ -7533,7 +7701,15 @@
 	],
 	[
 		"chr/c6310_c6310_mummy_skin_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"chr/c6310_c6310_mummy_skin_r",
 		"m32/m32_00_o330005_r"
+	],
+	[
+		"chr/c6310_c6310_mummy_skin_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"chr/c6310_c6310_mummy_skin_r",
@@ -8373,6 +8549,10 @@
 	],
 	[
 		"m30/m30_00_grass_050_r",
+		"m30/m30_00_o309120_frame_02_r"
+	],
+	[
+		"m30/m30_00_grass_050_r",
 		"m34/m34_00_grass_050_r"
 	],
 	[
@@ -9077,6 +9257,18 @@
 	],
 	[
 		"m30/m30_00_low_Castlewall_02_r",
+		"m30/m30_00_low_square_01_r"
+	],
+	[
+		"m30/m30_00_low_Castlewall_02_r",
+		"m30/m30_00_o309304_partf_01_r"
+	],
+	[
+		"m30/m30_00_low_Castlewall_02_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"m30/m30_00_low_Castlewall_02_r",
 		"m40/m40_00_low_Castlewall_902_r"
 	],
 	[
@@ -9174,6 +9366,10 @@
 	[
 		"m30/m30_00_low_Castlewall_05_n",
 		"m50/m50_00_m30_00_low_Castlewall_05_n"
+	],
+	[
+		"m30/m30_00_low_Castlewall_05_r",
+		"m30/m30_00_low_square_01_r"
 	],
 	[
 		"m30/m30_00_low_Castlewall_05_r",
@@ -9753,11 +9949,139 @@
 	],
 	[
 		"m30/m30_00_low_square_01_r",
+		"m30/m30_00_o309304_partf_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m30/m30_00_o324102_07_brick_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m30/m30_00_o4805_tombstones_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m30/m30_00_o4834_carving_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m30/m30_00_o4836_04_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m32/m32_00_o324060_pillar_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m32/m32_00_o324101_02_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m32/m32_00_o324102_06_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m32/m32_00_o324102_07_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m32/m32_00_o330005_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m35/m35_00_o350015_03_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m35/m35_00_o350209_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m37/m37_00_Outside_Pillar_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m40/m40_00_low_Castlewall_902_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m40/m40_00_low_Castlewall_905_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m40/m40_00_tombstones_302_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m41/m41_00_m30_00_o324102_07_brick_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m41/m41_00_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m41/m41_00_o364040_bark_02_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m41/m41_00_o364041_weeds_02_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m41/m41_00_o364045_treehole_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m53/m53_00_o324060_pillar_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m53/m53_00_o324101_02_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m53/m53_00_o324102_06_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m53/m53_00_o324102_07_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"m53/m53_00_o330005_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"obj/o329250_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"obj/o399910_c2190_body_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
 		"obj/o401156_o401156_02_r"
 	],
 	[
 		"m30/m30_00_low_square_01_r",
 		"obj/o409020_o409020_02_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"parts/AM_F_4400_AM_F_4400_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"parts/AM_M_4400_AM_M_4400_r"
+	],
+	[
+		"m30/m30_00_low_square_01_r",
+		"parts/LG_M_2650_LG_M_2650_r"
 	],
 	[
 		"m30/m30_00_m31_00_brickwall_03_a",
@@ -12617,11 +12941,35 @@
 	],
 	[
 		"m30/m30_00_o309120_frame_02_r",
+		"m31/m31_00_groundsand_00_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
+		"m32/m32_00_o329502_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
+		"m53/m53_00_o329502_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
+		"obj/o323000_o323000_03_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
+		"obj/o381051_o381051_02_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
 		"parts/HD_M_5550_HD_M_5550_r"
 	],
 	[
 		"m30/m30_00_o309120_frame_02_r",
 		"parts/LG_F_2850_LG_F_2850_r"
+	],
+	[
+		"m30/m30_00_o309120_frame_02_r",
+		"parts/LG_F_8250_LG_F_8250_1_r"
 	],
 	[
 		"m30/m30_00_o309120_frame_02_r",
@@ -13182,6 +13530,14 @@
 	[
 		"m30/m30_00_o309304_partf_01_r",
 		"m35/m35_00_o4820_wall_02_r"
+	],
+	[
+		"m30/m30_00_o309304_partf_01_r",
+		"m40/m40_00_low_Castlewall_902_r"
+	],
+	[
+		"m30/m30_00_o309304_partf_01_r",
+		"obj/o401156_o401156_02_r"
 	],
 	[
 		"m30/m30_00_o309304_partf_02_a",
@@ -15694,6 +16050,10 @@
 	[
 		"m30/m30_00_o4834_part_01_n",
 		"m50/m50_00_o4834_part_01_n"
+	],
+	[
+		"m30/m30_00_o4834_part_02_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"m30/m30_00_o4834_roof_02_r",
@@ -22305,6 +22665,10 @@
 	],
 	[
 		"m32/m32_00_o324060_pillar_01_r",
+		"m34/m34_00_o309304_partf_01_r"
+	],
+	[
+		"m32/m32_00_o324060_pillar_01_r",
 		"m41/m41_00_m32_00_o324060_pillar_01_r"
 	],
 	[
@@ -22530,6 +22894,10 @@
 	[
 		"m32/m32_00_o324061_decorate_05_n",
 		"m53/m53_00_o324061_decorate_05_n"
+	],
+	[
+		"m32/m32_00_o324061_decorate_05_r",
+		"m34/m34_00_o309304_partf_01_r"
 	],
 	[
 		"m32/m32_00_o324061_decorate_05_r",
@@ -25074,6 +25442,10 @@
 	[
 		"m32/m32_00_plant_02_r",
 		"m53/m53_00_plant_02_r"
+	],
+	[
+		"m32/m32_00_plant_02_r",
+		"obj/o324112_o324112_plant_01_r"
 	],
 	[
 		"m32/m32_00_plant_4_a",
@@ -28888,6 +29260,14 @@
 		"m50/m50_00_Brakewall_n"
 	],
 	[
+		"m34/m34_00_Brakewall_r",
+		"parts/AM_F_9500_AM_F_9500_r"
+	],
+	[
+		"m34/m34_00_Brakewall_r",
+		"parts/AM_M_9500_AM_M_9500_r"
+	],
+	[
 		"m34/m34_00_grass_050_a",
 		"m50/m50_00_grass_050_a"
 	],
@@ -29588,6 +29968,50 @@
 		"m35/m35_00_o350015_03_r"
 	],
 	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m35/m35_00_o350209_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m37/m37_00_Outside_Pillar_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m40/m40_00_low_Castlewall_902_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m41/m41_00_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m53/m53_00_o324060_pillar_01_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"m53/m53_00_o324061_decorate_05_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"obj/o329250_m32_00_o324060_pillar_01_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"obj/o399910_c2190_body_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"obj/o401156_o401156_02_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"obj/o409020_o409020_02_r"
+	],
+	[
+		"m34/m34_00_o309304_partf_01_r",
+		"parts/LG_M_2650_LG_M_2650_r"
+	],
+	[
 		"m34/m34_00_o309304_partg_01_a",
 		"m50/m50_00_o309304_partg_01_a"
 	],
@@ -30148,6 +30572,14 @@
 		"m53/m53_00_o4820_fence_01_n"
 	],
 	[
+		"m34/m34_00_o4820_fence_r",
+		"m35/m35_00_o4820_fence_01_r"
+	],
+	[
+		"m34/m34_00_o4820_fence_r",
+		"m50/m50_00_o4820_fence_01_r"
+	],
+	[
 		"m34/m34_00_o4820_ladder01_a",
 		"m34/m34_00_o4853_stand_04_a"
 	],
@@ -30410,6 +30842,10 @@
 	[
 		"m34/m34_01_o309190_02_a",
 		"obj/o309190_m34_01_o309190_02_a"
+	],
+	[
+		"m34/m34_01_o309190_02_n",
+		"obj/o309190_m34_01_o309190_02_n"
 	],
 	[
 		"m34/m34_01_o309190_03_a",
@@ -30718,6 +31154,10 @@
 	[
 		"m34/m34_o304860_14_a",
 		"m50/m50_o304860_14_a"
+	],
+	[
+		"m34/m34_o304860_14_a",
+		"obj/o304860_o304860_14_a"
 	],
 	[
 		"m34/m34_o309110_wall_m",
@@ -33158,6 +33598,14 @@
 	[
 		"m37/m37_00_BonfireChurchPlasterBumpy_a",
 		"m37/m37_00_BonFireChurchPlasterWall_a"
+	],
+	[
+		"m37/m37_00_BonfireChurchPlasterBumpy_r",
+		"parts/AM_F_9500_AM_F_9500_r"
+	],
+	[
+		"m37/m37_00_BonfireChurchPlasterBumpy_r",
+		"parts/AM_M_9500_AM_M_9500_r"
 	],
 	[
 		"m37/m37_00_BonFireChurchPlasterWall_n",
@@ -43432,6 +43880,10 @@
 		"parts/BD_M_6050_BD_M_6050_01_n"
 	],
 	[
+		"m45/m45_00_c6100_Body_01_r",
+		"parts/BD_M_6050_BD_M_6050_01_r"
+	],
+	[
 		"m45/m45_00_c6100_Hands_n",
 		"parts/AM_M_6050_AM_M_6050_Hands_n"
 	],
@@ -43458,6 +43910,10 @@
 	[
 		"m45/m45_00_c6100_LONGAXE_n",
 		"parts/WP_A_0718_WP_A_0718_n"
+	],
+	[
+		"m45/m45_00_c6100_LONGAXE_r",
+		"parts/WP_A_0718_WP_A_0718_r"
 	],
 	[
 		"m45/m45_00_candellabra_01_a",
@@ -43726,6 +44182,10 @@
 	[
 		"m45/m45_00_ladder_c6120_01_r",
 		"m53/m53_00_o324030_stone_tablet_01_r"
+	],
+	[
+		"m45/m45_00_ladder_c6120_01_r",
+		"obj/o400100_o000100_00_r"
 	],
 	[
 		"m45/m45_00_ladder_c6120_01_r",
@@ -46532,6 +46992,10 @@
 		"obj/o304860_o304860_10_a"
 	],
 	[
+		"m50/m50_o304860_14_a",
+		"obj/o304860_o304860_14_a"
+	],
+	[
 		"m50/m50_o342300_a",
 		"obj/o302300_o302300_a"
 	],
@@ -47784,6 +48248,10 @@
 		"m54/m54_00_Outside_Snow_a"
 	],
 	[
+		"m53/m53_00_plant_02_r",
+		"obj/o324112_o324112_plant_01_r"
+	],
+	[
 		"m53/m53_00_sky_moon_a",
 		"obj/o329000_m32_00_sky_moon_a"
 	],
@@ -48908,6 +49376,10 @@
 		"obj/o319800_BrickWall_00_s"
 	],
 	[
+		"obj/o309000_m94_00_cloud_07_n",
+		"obj/o369000_m94_00_cloud_07_n"
+	],
+	[
 		"obj/o309800_o0100_n",
 		"obj/o321030_o321030_n"
 	],
@@ -49650,6 +50122,10 @@
 	[
 		"obj/o400100_o000100_00_r",
 		"obj/o410100_o410100_o000100_00_r"
+	],
+	[
+		"obj/o400100_o000100_00_r",
+		"sfx/m45_s09400_r"
 	],
 	[
 		"obj/o400100_o000100_00_s",
@@ -50954,6 +51430,10 @@
 	[
 		"sfx/commoneffects_s07012_r",
 		"sfx/commoneffects_s07016_r"
+	],
+	[
+		"sfx/commoneffects_s11401",
+		"sfx/commoneffects_s50065"
 	],
 	[
 		"sfx/commoneffects_s11605_n",

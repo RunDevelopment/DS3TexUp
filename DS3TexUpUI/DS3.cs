@@ -285,7 +285,9 @@ namespace DS3TexUpUI
                     {
                         var image = f.LoadTextureMap();
 
-                        var similar = index.GetSimilar(image, 3);
+                        // small images suffer more from compression artifacts, so we want to given them a boost
+                        var spread = image.Count <= 128 * 128 ? 4 : 3;
+                        var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
                             foreach (var e in similar)
