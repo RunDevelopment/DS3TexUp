@@ -93,4 +93,69 @@ namespace DS3TexUpUI
             return classes;
         }
     }
+
+    class StronglyConnectedComponents
+    {
+        public static IEnumerable<List<T>> Find<T>(IEnumerable<T> elements, Func<T, IEnumerable<T>> getNext)
+            where T : IEquatable<T>
+        {
+            var s = new Stack<T>();
+            var p = new Stack<T>();
+            var preorderNumbers = new Dictionary<T, int>();
+
+            var scc = new Dictionary<T, List<T>>();
+
+            // https://en.wikipedia.org/wiki/Path-based_strong_component_algorithm
+            void Search(T v, ref int c)
+            {
+                var number = c++;
+                preorderNumbers[v] = number;
+
+                s.Push(v);
+                p.Push(v);
+
+                foreach (var w in getNext(v))
+                {
+                    if (preorderNumbers.TryGetValue(w, out var wNumber))
+                    {
+                        if (!scc.ContainsKey(w))
+                        {
+                            while (p.TryPeek(out var top) && preorderNumbers[top] > wNumber)
+                            {
+                                p.Pop();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Search(w, ref c);
+                    }
+                }
+
+                if (p.Count > 0 && p.Peek().Equals(v))
+                {
+                    var component = new List<T>();
+                    while (s.TryPop(out var top))
+                    {
+                        component.Add(top);
+                        scc[top] = component;
+                        if (top.Equals(v)) break;
+                    }
+
+                    p.Pop();
+                }
+            }
+
+            var c = 0;
+            foreach (var item in elements)
+            {
+                if (!preorderNumbers.ContainsKey(item))
+                {
+                    Search(item, ref c);
+                }
+            }
+
+            return new HashSet<List<T>>(scc.Values);
+        }
+    }
 }

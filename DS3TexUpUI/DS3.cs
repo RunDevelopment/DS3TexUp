@@ -243,7 +243,7 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> Copies
-            = CopiesFromPairs(DataFile(@"copies.json").LoadJsonFile<List<(TexId, TexId)>>());
+            = CopiesFromPairs(DataFile(@"copies-raw.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateCopyIndex(Workspace w)
         {
             return token =>
@@ -316,7 +316,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving copies JSON");
-                PairsFromCopies(copies).SaveAsJson(DataFile(@"copies.json"));
+                PairsFromCopies(copies).SaveAsJson(DataFile(@"copies-raw.json"));
             };
         }
         internal static Dictionary<TexId, HashSet<TexId>> CopiesFromPairs(IEnumerable<(TexId, TexId)> pairs)
@@ -350,7 +350,7 @@ namespace DS3TexUpUI
             return l;
         }
 
-        public static IReadOnlyDictionary<TexId, HashSet<TexId>> Identical
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> CopiesIdentical
             = CopiesFromPairs(DataFile(@"copies-identical.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateIdenticalIndex(Workspace w)
         {
@@ -416,6 +416,110 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus("Saving JSON");
                 PairsFromCopies(identical).SaveAsJson(DataFile(@"copies-identical.json"));
+            };
+        }
+
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> CopiesCertain
+            = CopiesFromPairs(DataFile(@"copies-certain.json").LoadJsonFile<List<(TexId, TexId)>>());
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> CopiesRejected
+            = CopiesFromPairs(DataFile(@"copies-rejected.json").LoadJsonFile<List<(TexId, TexId)>>());
+        private static readonly string _sccDirectory = @"C:\DS3TexUp\scc";
+        internal static Action<SubProgressToken> CreateSCCDirectory(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Getting SCC");
+                var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
+                {
+                    var l = new List<TexId>() { id };
+                    if (DS3.Copies.TryGetValue(id, out var copies))
+                    {
+                        l.AddRange(copies);
+                    }
+                    return l;
+                }).Where(l => l.Count >= 2).OrderByDescending(l => l.Count).ToList();
+
+                token.SubmitStatus("Copying files");
+                token.ForAllParallel(scc.Select((x, i) => (x, i)), pair =>
+                {
+                    var (scc, i) = pair;
+
+                    // Remove identical textures
+                    var identical = DS3.CopiesIdentical.GetOrNew(scc.First());
+                    static TexId MapTo(TexId id)
+                    {
+                        if (DS3.CopiesIdentical.TryGetValue(id, out var same)) return same.First();
+                        return id;
+                    }
+                    scc = scc.Select(MapTo).ToHashSet().ToList();
+
+                    // only one texture after identical textures were removed
+                    if (scc.Count < 2) return;
+
+                    var dir = Path.Join(_sccDirectory, "" + i);
+                    Directory.CreateDirectory(dir);
+
+                    var largest = scc.Select(id => DS3.OriginalSize[id].Width).Max();
+
+                    foreach (var id in scc)
+                    {
+                        token.CheckCanceled();
+
+                        var source = w.GetExtractPath(id);
+                        var target = Path.Join(dir, $"{id.Category.ToString()}-{Path.GetFileName(source)}");
+                        if (DS3.OriginalSize[id].Width < largest)
+                        {
+                            var image = source.LoadTextureMap();
+                            image.UpSample(largest / image.Width).SaveAsPng(Path.ChangeExtension(target, "png"));
+                        }
+                        else
+                        {
+                            File.Copy(source, target);
+                        }
+                    }
+                });
+            };
+        }
+        internal static Action<SubProgressToken> ReadSCCDirectory(Workspace w)
+        {
+            return token =>
+            {
+                var files = Directory.GetFiles(_sccDirectory, "*", SearchOption.AllDirectories);
+
+                static TexId SCCFilenameToTexId(string file)
+                {
+                    var name = Path.GetFileNameWithoutExtension(file);
+                    name = name.Replace('-', '/');
+                    return new TexId(name);
+                }
+                var components = files
+                    .GroupBy(f => Path.GetDirectoryName(f))
+                    .Select(g => g.Select(SCCFilenameToTexId).ToList())
+                    .SelectMany(l => l.Select(i => (l, i)))
+                    .ToDictionary(p => p.i, p => p.l);
+
+                foreach (var (id, others) in DS3.CopiesIdentical)
+                {
+                    var c = components.GetOrAdd(id);
+                    c.AddRange(others.Except(c));
+                }
+
+                var pairs = DS3.PairsFromCopies(components);
+                pairs.SaveAsJson(DataFile(@"copies-certain.json"));
+
+                var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
+                {
+                    var l = new List<TexId>() { id };
+                    if (DS3.Copies.TryGetValue(id, out var copies))
+                    {
+                        l.AddRange(copies);
+                    }
+                    return l;
+                }).SelectMany(l => l.Select(i => (l, i))).ToDictionary(p => p.i, p => p.l);
+                var sccPairs = DS3.PairsFromCopies(scc);
+
+                var rejected = sccPairs.Except(pairs).ToList();
+                rejected.SaveAsJson(DataFile(@"copies-rejected.json"));
             };
         }
 
