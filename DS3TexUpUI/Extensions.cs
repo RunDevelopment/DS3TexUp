@@ -150,6 +150,13 @@ namespace DS3TexUpUI
                 return val;
             return defaultSupplier();
         }
+        public static TValue GetOrNew<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dict, TKey key)
+            where TValue : new()
+        {
+            if (dict.TryGetValue(key, out TValue val))
+                return val;
+            return new TValue();
+        }
 
         public static bool IsPowerOfTwo(this ulong x)
         {

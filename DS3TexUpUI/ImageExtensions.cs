@@ -945,6 +945,90 @@ namespace DS3TexUpUI
             }
         }
 
+
+        public static ArrayTextureMap<Rgba32> UpSample(this ArrayTextureMap<Rgba32> source, int scale)
+        {
+            var sW = source.Width;
+            var sH = source.Height;
+
+            var result = new Rgba32[sW * scale * sH * scale].AsTextureMap(sW * scale);
+            var rW = sW * scale;
+            var rH = sH * scale;
+
+            for (var y = 0; y < rH; y++)
+            {
+                for (var x = 0; x < rW; x++)
+                {
+                    var xs = (x + .5) / scale - .5;
+                    var ys = (y + .5) / scale - .5;
+                    var xsFloor = (int)Math.Floor(xs);
+                    var ysFloor = (int)Math.Floor(ys);
+
+                    var xBlend = (float)(xs - xsFloor);
+                    var yBlend = (float)(ys - ysFloor);
+                    var x0 = Math.Max(0, xsFloor - 1);
+                    var x1 = Math.Max(0, xsFloor);
+                    var x2 = Math.Min(sW - 1, xsFloor + 1);
+                    var x3 = Math.Min(sW - 1, xsFloor + 2);
+                    var y0 = Math.Max(0, ysFloor - 1);
+                    var y1 = Math.Max(0, ysFloor);
+                    var y2 = Math.Min(sH - 1, ysFloor + 1);
+                    var y3 = Math.Min(sH - 1, ysFloor + 2);
+
+                    // Interpolate the angle, not the normals
+                    var a00 = source[x0, y0];
+                    var a01 = source[x0, y1];
+                    var a02 = source[x0, y2];
+                    var a03 = source[x0, y3];
+                    var a10 = source[x1, y0];
+                    var a11 = source[x1, y1];
+                    var a12 = source[x1, y2];
+                    var a13 = source[x1, y3];
+                    var a20 = source[x2, y0];
+                    var a21 = source[x2, y1];
+                    var a22 = source[x2, y2];
+                    var a23 = source[x2, y3];
+                    var a30 = source[x3, y0];
+                    var a31 = source[x3, y1];
+                    var a32 = source[x3, y2];
+                    var a33 = source[x3, y3];
+
+                    var r = Cubic(
+                        Cubic(a00.R, a10.R, a20.R, a30.R, xBlend),
+                        Cubic(a01.R, a11.R, a21.R, a31.R, xBlend),
+                        Cubic(a02.R, a12.R, a22.R, a32.R, xBlend),
+                        Cubic(a03.R, a13.R, a23.R, a33.R, xBlend),
+                        yBlend
+                    );
+                    var g = Cubic(
+                        Cubic(a00.G, a10.G, a20.G, a30.G, xBlend),
+                        Cubic(a01.G, a11.G, a21.G, a31.G, xBlend),
+                        Cubic(a02.G, a12.G, a22.G, a32.G, xBlend),
+                        Cubic(a03.G, a13.G, a23.G, a33.G, xBlend),
+                        yBlend
+                    );
+                    var b = Cubic(
+                        Cubic(a00.B, a10.B, a20.B, a30.B, xBlend),
+                        Cubic(a01.B, a11.B, a21.B, a31.B, xBlend),
+                        Cubic(a02.B, a12.B, a22.B, a32.B, xBlend),
+                        Cubic(a03.B, a13.B, a23.B, a33.B, xBlend),
+                        yBlend
+                    );
+                    var a = Cubic(
+                        Cubic(a00.A, a10.A, a20.A, a30.A, xBlend),
+                        Cubic(a01.A, a11.A, a21.A, a31.A, xBlend),
+                        Cubic(a02.A, a12.A, a22.A, a32.A, xBlend),
+                        Cubic(a03.A, a13.A, a23.A, a33.A, xBlend),
+                        yBlend
+                    );
+
+                    static byte ToByte(float v) => (byte)Math.Clamp((int)v, 0, 255);
+                    result[x, y] = new Rgba32(ToByte(r), ToByte(g), ToByte(b), ToByte(a));
+                }
+            }
+
+            return result;
+        }
         public static ArrayTextureMap<Normal> UpSampleNormals(this ITextureMap<Normal> map, int scale)
         {
             var source = map.Convert(NormalAngle.FromNormal);
