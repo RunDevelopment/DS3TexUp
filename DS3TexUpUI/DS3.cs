@@ -351,7 +351,7 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> Identical
-            = CopiesFromPairs(DataFile(@"identical.json").LoadJsonFile<List<(TexId, TexId)>>());
+            = CopiesFromPairs(DataFile(@"copies-identical.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateIdenticalIndex(Workspace w)
         {
             return token =>
@@ -415,7 +415,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                PairsFromCopies(identical).SaveAsJson(DataFile(@"identical.json"));
+                PairsFromCopies(identical).SaveAsJson(DataFile(@"copies-identical.json"));
             };
         }
 
