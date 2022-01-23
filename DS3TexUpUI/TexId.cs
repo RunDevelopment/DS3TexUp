@@ -177,7 +177,7 @@ namespace DS3TexUpUI
                 });
             }
 
-            if (DS3.CopiesUncertain.TryGetValue(this, out var similar))
+            if (DS3.CopiesCertain.TryGetValue(this, out var similar))
             {
                 var copies = similar.ToList();
 
@@ -192,10 +192,6 @@ namespace DS3TexUpUI
                     // try not to pick one that isn't used in game
                     var u = IsUsedInGame(a).CompareTo(IsUsedInGame(b));
                     if (u != 0) return u;
-
-                    // try to pick the most similar image
-                    var s = GetSimScore(a).CompareTo(GetSimScore(b));
-                    if (s != 0) return s;
 
                     // if it doesn't matter which one we pick, pick the one with the smaller ID.
                     return -a.CompareTo(b);
