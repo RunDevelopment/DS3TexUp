@@ -269,7 +269,7 @@ namespace DS3TexUpUI
                     if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
 
                     var simScore = aImage.GetSimilarityScore(bFile.LoadTextureMap());
-                    var sim = simScore.color < 0.04 && simScore.feature < 0.13;
+                    var sim = simScore.color < 0.045 && simScore.feature < 0.18;
 
                     simCache.TryAdd(key, sim);
                     return sim;
@@ -286,7 +286,7 @@ namespace DS3TexUpUI
                         var image = f.LoadTextureMap();
 
                         // small images suffer more from compression artifacts, so we want to given them a boost
-                        var spread = image.Count <= 128 * 128 ? 4 : 3;
+                        var spread = image.Count <= 64 * 64 ? 5 : image.Count <= 128 * 128 ? 4 : 3;
                         var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
@@ -434,7 +434,8 @@ namespace DS3TexUpUI
                     var l = new List<TexId>() { id };
                     if (DS3.CopiesUncertain.TryGetValue(id, out var copies))
                     {
-                        l.AddRange(copies);
+                        var without = DS3.CopiesRejected.GetOrNew(id).SelectMany(i => DS3.CopiesRejected.GetOrNew(i));
+                        l.AddRange(copies.Except(without));
                     }
                     return l;
                 }).Where(l => l.Count >= 2).OrderByDescending(l => l.Count).ToList();
@@ -445,11 +446,7 @@ namespace DS3TexUpUI
                     var (scc, i) = pair;
 
                     // Remove identical textures
-                    static TexId MapTo(TexId id)
-                    {
-                        if (DS3.CopiesIdentical.TryGetValue(id, out var same)) return same.First();
-                        return id;
-                    }
+                    static TexId MapTo(TexId id) => id.GetRepresentative();
                     scc = scc.Select(MapTo).ToHashSet().ToList();
 
                     // only one texture after identical textures were removed
@@ -497,7 +494,7 @@ namespace DS3TexUpUI
                     .SelectMany(l => l.Select(i => (l, i)))
                     .ToDictionary(p => p.i, p => p.l);
 
-                foreach (var (id, others) in DS3.CopiesIdentical)
+                foreach (var (id, others) in DS3.CopiesCertain)
                 {
                     var c = components.GetOrAdd(id);
                     c.AddRange(others.Except(c));
