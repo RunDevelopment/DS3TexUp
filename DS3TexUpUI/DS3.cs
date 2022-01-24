@@ -698,7 +698,7 @@ namespace DS3TexUpUI
                         var n = normal.Value;
                         var a = albedo.Value;
                         a = a.GetRepresentative();
-                        if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor() && !a.IsSolidColor())
+                        if (!n.IsSolidColor() && !a.IsSolidColor())
                         {
                             if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))
                             {
