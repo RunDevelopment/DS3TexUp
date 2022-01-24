@@ -269,7 +269,7 @@ namespace DS3TexUpUI
                     if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
 
                     var simScore = aImage.GetSimilarityScore(bFile.LoadTextureMap());
-                    var sim = simScore.color < 0.05 && simScore.feature < 0.2;
+                    var sim = simScore.color < 0.055 && simScore.feature < 0.24;
 
                     simCache.TryAdd(key, sim);
                     return sim;
@@ -286,7 +286,7 @@ namespace DS3TexUpUI
                         var image = f.LoadTextureMap();
 
                         // small images suffer more from compression artifacts, so we want to given them a boost
-                        var spread = image.Count <= 64 * 64 ? 6 : image.Count <= 128 * 128 ? 4 : 3;
+                        var spread = image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 6 : 4;
                         var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
