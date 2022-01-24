@@ -526,34 +526,122 @@ namespace DS3TexUpUI
             = DataFile(@"largest-copy.json").LoadJsonFile<Dictionary<TexId, HashSet<TexId>>>();
         public static IReadOnlyDictionary<TexId, TexId> LargestCopyOf
             = LargestCopy.SelectMany(kv => kv.Value.Select(v => (v, kv.Key))).ToDictionary(p => p.v, p => p.Key);
-        internal static Action<SubProgressToken> CreateLargestCopyIndex(Workspace w)
+
+        public static IReadOnlyDictionary<TexId, TexId> RepresentativeOf
+            = DataFile(@"representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        public static IReadOnlyCollection<TexId> Representatives = RepresentativeOf.Values.ToHashSet();
+        internal static Action<SubProgressToken> CreateRepresentativeIndex(Workspace w)
         {
             return token =>
             {
                 token.SubmitStatus($"Searching for files");
-                var ids = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories).Select(TexId.FromPath).ToList();
+                var ids = DS3.OriginalSize.Keys.ToList();
                 ids.Sort();
 
                 token.SubmitStatus($"Indexing");
-                var largest = new Dictionary<TexId, List<TexId>>();
+                var representative = new Dictionary<TexId, TexId>();
                 token.ForAllParallel(ids, id =>
                 {
-                    var l = id.ComputeLargerCopy(w);
-                    if (l != null)
+                    if (!CopiesCertain.TryGetValue(id, out var othersSet) || othersSet.Count == 0) return;
+
+                    var others = othersSet.ToList();
+                    others.Sort((a, b) =>
                     {
-                        lock (largest)
+                        var q = CompareQuality(a, b);
+                        if (q != 0) return q;
+
+                        // try not to pick one that isn't used in game
+                        var u = IsUsedInGame(a).CompareTo(IsUsedInGame(b));
+                        if (u != 0) return u;
+
+                        // if it doesn't matter which one we pick, pick the one with the smaller ID.
+                        return -a.CompareTo(b);
+                    });
+
+                    var r = others.Last();
+                    if (r != id)
+                    {
+                        lock (representative)
                         {
-                            largest.GetOrAdd(l.Value).Add(id);
+                            representative[id] = r;
                         }
                     }
                 });
 
-                foreach (var (_, l) in largest)
-                    l.Sort();
-
                 token.SubmitStatus("Saving JSON");
-                largest.SaveAsJson(DataFile(@"largest-copy.json"));
+                representative.SaveAsJson(DataFile(@"representative.json"));
             };
+
+            static bool IsUsedInGame(TexId id)
+            {
+                return DS3.UsedBy.ContainsKey(id);
+            }
+            static int CompareQuality(TexId a, TexId b)
+            {
+                if (DS3.OriginalSize.TryGetValue(a, out var aSize) && DS3.OriginalSize.TryGetValue(b, out var bSize))
+                {
+                    var s = aSize.Width.CompareTo(bSize.Width);
+                    if (s != 0) return s;
+                }
+
+                static int? GetCompareNumber(DDSFormat format)
+                {
+                    switch (format.FourCC)
+                    {
+                        case CompressionAlgorithm.D3DFMT_DXT1:
+                            return 1;
+                        case CompressionAlgorithm.D3DFMT_DXT5:
+                            return 3;
+                        case CompressionAlgorithm.ATI1:
+                            return 4;
+                        case CompressionAlgorithm.ATI2:
+                            return 5;
+                        case CompressionAlgorithm.DX10:
+                            switch (format.DxgiFormat)
+                            {
+                                case DxgiFormat.BC1_TYPELESS:
+                                case DxgiFormat.BC1_UNORM_SRGB:
+                                case DxgiFormat.BC1_UNORM:
+                                    return 1;
+                                case DxgiFormat.BC3_UNORM_SRGB:
+                                    return 3;
+                                case DxgiFormat.BC4_SNORM:
+                                case DxgiFormat.BC4_TYPELESS:
+                                case DxgiFormat.BC4_UNORM:
+                                    return 4;
+                                case DxgiFormat.BC5_SNORM:
+                                case DxgiFormat.BC5_TYPELESS:
+                                case DxgiFormat.BC5_UNORM:
+                                    return 5;
+                                case DxgiFormat.BC7_UNORM:
+                                case DxgiFormat.BC7_UNORM_SRGB:
+                                    return 7;
+                                case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                                case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                                case DxgiFormat.B5G5R5A1_UNORM:
+                                    // uncompressed
+                                    return 10;
+                                default:
+                                    return null;
+                            }
+
+                        default:
+                            return null;
+                    }
+                }
+
+                if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
+                {
+                    var af = GetCompareNumber(aFormat);
+                    var bf = GetCompareNumber(bFormat);
+                    if (af != null && bf != null && af != bf)
+                    {
+                        return af.Value.CompareTo(bf.Value);
+                    }
+                }
+
+                return 0;
+            }
         }
 
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
@@ -612,7 +700,7 @@ namespace DS3TexUpUI
                     {
                         var n = normal.Value;
                         var a = albedo.Value;
-                        a = a.GetLargestCopy() ?? a;
+                        a = a.GetRepresentative();
                         if (!n.IsUnwanted() && !a.IsUnwanted() && !n.IsSolidColor() && !a.IsSolidColor())
                         {
                             if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))

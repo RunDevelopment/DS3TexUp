@@ -150,132 +150,17 @@ namespace DS3TexUpUI
 
         public bool IsSolidColor() => DS3.SolidColor.Contains(this);
 
-        public TexId? GetLargestCopy()
+        public TexId GetRepresentative()
         {
-            if (DS3.LargestCopyOf.TryGetValue(this, out var largest))
-                return largest;
-            return null;
-        }
-
-        // Tries to find a larger copy of the current texture.
-        public TexId? ComputeLargerCopy(Workspace w)
-        {
-            static bool IsUsedInGame(TexId id)
-            {
-                return DS3.UsedBy.ContainsKey(id);
-            }
-
-            var simScoreCache = new Dictionary<TexId, double>();
-            var that = this;
-            var thisImage = new Lazy<ArrayTextureMap<Rgba32>>(() => w.GetExtractPath(that).LoadTextureMap());
-            double GetSimScore(TexId other)
-            {
-                return simScoreCache.GetOrAdd(other, other =>
-                {
-                    var sim = thisImage.Value.GetSimilarityScore(w.GetExtractPath(other).LoadTextureMap());
-                    return -(sim.color + sim.feature);
-                });
-            }
-
-            if (DS3.CopiesCertain.TryGetValue(this, out var similar))
-            {
-                var copies = similar.ToList();
-
-                copies.Sort((a, b) =>
-                {
-                    var q = CompareQuality(a, b);
-                    if (q != 0) return q;
-
-                    // this means that the current this will be picked if its size is the greatest.
-                    if (a == that || b == that) return (a == that).CompareTo(b == that);
-
-                    // try not to pick one that isn't used in game
-                    var u = IsUsedInGame(a).CompareTo(IsUsedInGame(b));
-                    if (u != 0) return u;
-
-                    // if it doesn't matter which one we pick, pick the one with the smaller ID.
-                    return -a.CompareTo(b);
-                });
-
-                if (copies.Count > 0)
-                {
-                    var largest = copies[copies.Count - 1];
-                    if (largest != this) return largest;
-                }
-            }
-            return null;
-        }
-        private static int CompareQuality(TexId a, TexId b)
-        {
-            if (DS3.OriginalSize.TryGetValue(a, out var aSize) && DS3.OriginalSize.TryGetValue(b, out var bSize))
-            {
-                var s = aSize.Width.CompareTo(bSize.Width);
-                if (s != 0) return s;
-            }
-
-            static int? GetCompareNumber(DDSFormat format)
-            {
-                switch (format.FourCC)
-                {
-                    case CompressionAlgorithm.D3DFMT_DXT1:
-                        return 1;
-                    case CompressionAlgorithm.D3DFMT_DXT5:
-                        return 3;
-                    case CompressionAlgorithm.ATI1:
-                        return 4;
-                    case CompressionAlgorithm.ATI2:
-                        return 5;
-                    case CompressionAlgorithm.DX10:
-                        switch (format.DxgiFormat)
-                        {
-                            case DxgiFormat.BC1_TYPELESS:
-                            case DxgiFormat.BC1_UNORM_SRGB:
-                            case DxgiFormat.BC1_UNORM:
-                                return 1;
-                            case DxgiFormat.BC3_UNORM_SRGB:
-                                return 3;
-                            case DxgiFormat.BC4_SNORM:
-                            case DxgiFormat.BC4_TYPELESS:
-                            case DxgiFormat.BC4_UNORM:
-                                return 4;
-                            case DxgiFormat.BC5_SNORM:
-                            case DxgiFormat.BC5_TYPELESS:
-                            case DxgiFormat.BC5_UNORM:
-                                return 5;
-                            case DxgiFormat.BC7_UNORM:
-                            case DxgiFormat.BC7_UNORM_SRGB:
-                                return 7;
-                            case DxgiFormat.B8G8R8A8_UNORM_SRGB:
-                            case DxgiFormat.B8G8R8X8_UNORM_SRGB:
-                            case DxgiFormat.B5G5R5A1_UNORM:
-                                // uncompressed
-                                return 10;
-                            default:
-                                return null;
-                        }
-
-                    default:
-                        return null;
-                }
-            }
-
-            if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
-            {
-                var af = GetCompareNumber(aFormat);
-                var bf = GetCompareNumber(bFormat);
-                if (af != null && bf != null && af != bf)
-                {
-                    return af.Value.CompareTo(bf.Value);
-                }
-            }
-
-            return 0;
+            if (DS3.RepresentativeOf.TryGetValue(this, out var r))
+                return r;
+            return this;
         }
 
         public bool IsUnwanted()
         {
             // We only want a textures if it is used or the larger copy of another texture.
-            return DS3.Unused.Contains(this) && !DS3.LargestCopy.ContainsKey(this);
+            return DS3.Unused.Contains(this) && !DS3.Representatives.Contains(this);
         }
 
         public TransparencyKind GetTransparency() => DS3.Transparency.GetOrDefault(this, TransparencyKind.Full);
