@@ -926,7 +926,7 @@ namespace DS3TexUpUI
                         var image = f.LoadTextureMap();
 
                         // small images suffer more from compression artifacts, so we want to given them a boost
-                        var spread = image.Count <= 64 * 64 ? 2 : image.Count <= 128 * 128 ? 1 : 1;
+                        var spread = image.Count <= 64 * 64 ? 3 : image.Count <= 128 * 128 ? 2 : 2;
                         var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
@@ -1036,7 +1036,7 @@ namespace DS3TexUpUI
                     var l = new List<TexId>() { id };
                     if (DS3.NormalCopiesUncertain.TryGetValue(id, out var copies))
                     {
-                        var without = DS3.NormalCopiesRejected.GetOrNew(id).SelectMany(i => DS3.NormalCopiesRejected.GetOrNew(i));
+                        var without = DS3.NormalCopiesRejected.GetOrNew(id).SelectMany(i => DS3.NormalCopiesCertain.GetOrNew(i));
                         l.AddRange(copies.Except(without));
                     }
                     return l;
