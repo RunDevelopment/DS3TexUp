@@ -370,6 +370,92 @@ namespace DS3TexUpUI
             return true;
         }
     }
+    public class NormalImageHasher : IImageHasher
+    {
+        public const int MinPixels = 512;
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+        public int ByteCount => MinWidth * MinHeight * 2;
+
+        public NormalImageHasher(SizeRatio ratio)
+        {
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
+        }
+
+        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+
+        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+        {
+            if (!IsSupported(image))
+            {
+                bytes = new byte[0];
+                return false;
+            }
+
+            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
+            bytes = new byte[small.Data.Length * 2];
+
+            for (int i = 0; i < small.Data.Length; i++)
+            {
+                bytes[i * 2 + 0] = (byte)(small.Data[i].R >> 1); // divide by 2 to get rid of noise
+                bytes[i * 2 + 1] = (byte)(small.Data[i].G >> 1); // divide by 2 to get rid of noise
+            }
+
+            return true;
+        }
+    }
+
+    public class BlueChannelImageHasher : IImageHasher
+    {
+        public const int MinPixels = 256;
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+        public int ByteCount => MinWidth * MinHeight;
+
+        public BlueChannelImageHasher(SizeRatio ratio)
+        {
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
+        }
+
+        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+
+        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+        {
+            if (!IsSupported(image))
+            {
+                bytes = new byte[0];
+                return false;
+            }
+
+            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
+            bytes = new byte[small.Data.Length];
+
+            for (int i = 0; i < small.Data.Length; i++)
+                bytes[i] = (byte)(small.Data[i].B >> 2); // divide by 4 to get rid of noise
+
+            return true;
+        }
+    }
 
     public struct CopyIndexEntry
     {

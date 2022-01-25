@@ -1157,5 +1157,15 @@ namespace DS3TexUpUI
                 }
             }
         }
+
+        public static void Multiply(this ArrayTextureMap<Rgba32> map, Rgba32 color) {
+            foreach (ref var p in map.Data.AsSpan())
+            {
+                p.R = (byte)(p.R * color.R / 255);
+                p.G = (byte)(p.G * color.G / 255);
+                p.B = (byte)(p.B * color.B / 255);
+                p.A = (byte)(p.A * color.A / 255);
+            }
+        }
     }
 }
