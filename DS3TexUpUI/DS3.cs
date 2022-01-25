@@ -434,7 +434,7 @@ namespace DS3TexUpUI
                     var l = new List<TexId>() { id };
                     if (DS3.CopiesUncertain.TryGetValue(id, out var copies))
                     {
-                        var without = DS3.CopiesRejected.GetOrNew(id).SelectMany(i => DS3.CopiesRejected.GetOrNew(i));
+                        var without = DS3.CopiesRejected.GetOrNew(id).SelectMany(i => DS3.CopiesCertain.GetOrNew(i));
                         l.AddRange(copies.Except(without));
                     }
                     return l;
