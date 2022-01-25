@@ -832,6 +832,10 @@
 		"parts/LG_M_5400_LG_M_5400_a"
 	],
 	[
+		"chr/c1320_c1320_botom_a",
+		"chr/c1321_c1321_botom_a"
+	],
+	[
 		"chr/c1320_c1320_necklace_a",
 		"chr/c1321_c1321_necklace_a"
 	],
@@ -890,6 +894,10 @@
 	[
 		"chr/c1350_c1350_hair_a",
 		"chr/c5019_c5019_hair_a"
+	],
+	[
+		"chr/c1350_c1350_hair_a",
+		"m32/m32_00_c5010_hair_a"
 	],
 	[
 		"chr/c1350_c1350_hair_a",
@@ -1493,6 +1501,10 @@
 	],
 	[
 		"chr/c5019_c5019_hair_a",
+		"m32/m32_00_c5010_hair_a"
+	],
+	[
+		"chr/c5019_c5019_hair_a",
 		"parts/HD_M_5700_HD_M_5700_hair_a"
 	],
 	[
@@ -1778,6 +1790,10 @@
 	[
 		"chr/c6100_c6100_Hands_a",
 		"parts/AM_M_6050_AM_M_6050_Hands_a"
+	],
+	[
+		"chr/c6100_c6100_Head_a",
+		"m45/m45_00_c6100_Head_a"
 	],
 	[
 		"chr/c6100_c6100_LONGAXE_a",
@@ -2454,6 +2470,14 @@
 	[
 		"m30/m30_00_low_o009055_04_a",
 		"obj/o009058_o009055_04_a"
+	],
+	[
+		"m30/m30_00_low_o319810_02_a",
+		"m33/m33_00_o009056_02_a"
+	],
+	[
+		"m30/m30_00_low_o319810_02_a",
+		"obj/o009056_o009056_02_a"
 	],
 	[
 		"m30/m30_00_low_o319810_03_a",
@@ -4610,6 +4634,10 @@
 	[
 		"m32/m32_00_c5010_hair_a",
 		"m53/m53_00_c5010_hair_a"
+	],
+	[
+		"m32/m32_00_c5010_hair_a",
+		"parts/HD_M_5700_HD_M_5700_hair_a"
 	],
 	[
 		"m32/m32_00_c5019_a",
@@ -7498,6 +7526,10 @@
 	[
 		"m37/m37_00_chair_00_a",
 		"sfx/m30_s09070_a"
+	],
+	[
+		"m37/m37_00_Dirty_02_a",
+		"m39/m39_m37_00_Dirty_02_a"
 	],
 	[
 		"m37/m37_00_enkei_70_a",
@@ -10444,6 +10476,10 @@
 		"parts/HD_F_0100_HD_F_0100_hair_a"
 	],
 	[
+		"m53/m53_00_c5010_hair_a",
+		"parts/HD_M_5700_HD_M_5700_hair_a"
+	],
+	[
 		"m53/m53_00_c5019_a",
 		"sfx/m32_s09291_a"
 	],
@@ -11178,6 +11214,10 @@
 	[
 		"parts/BD_M_6800_BD_M_6800_2_n",
 		"sfx/commoneffects_s06001"
+	],
+	[
+		"parts/HD_F_0100_HD_F_0100_a",
+		"parts/HD_M_0100_HD_M_0100_a"
 	],
 	[
 		"parts/HD_F_0100_HD_F_0100_hair_a",
