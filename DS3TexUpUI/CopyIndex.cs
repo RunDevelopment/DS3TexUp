@@ -2,12 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
-using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using SixLabors.ImageSharp.PixelFormats;
 
 #nullable enable
@@ -18,21 +15,28 @@ namespace DS3TexUpUI
     {
         public readonly ConcurrentDictionary<SizeRatio, SameRatioCopyIndex> BySize
             = new ConcurrentDictionary<SizeRatio, SameRatioCopyIndex>();
+        public readonly Func<SizeRatio, IImageHasher> HasherFactory;
 
         public IEnumerable<CopyIndexEntry> Entries => BySize.Values.SelectMany(i => i.Entries);
 
-        public void AddImage(string file) => AddImage(file.LoadTextureMap(), file);
-        public void AddImage(ArrayTextureMap<Rgba32> image, string file)
+        public CopyIndex(Func<SizeRatio, IImageHasher>? hasherFactory = null)
         {
-            SameRatioCopyIndex.CheckSize(image);
+            HasherFactory = hasherFactory ?? (r => new RgbaImageHasher(r));
+        }
+
+        public bool AddImage(string file) => AddImage(file.LoadTextureMap(), file);
+        public bool AddImage(ArrayTextureMap<Rgba32> image, string file)
+        {
+            if (!image.Width.IsPowerOfTwo() || !image.Height.IsPowerOfTwo())
+                return false;
 
             var r = SizeRatio.Of(image);
             SameRatioCopyIndex index;
             lock (this)
             {
-                index = BySize.GetOrAdd(r, r => new SameRatioCopyIndex(r));
+                index = BySize.GetOrAdd(r, r => new SameRatioCopyIndex(HasherFactory(r)));
             }
-            index.AddImage(image, file);
+            return index.AddImage(image, file);
         }
 
         public List<CopyIndexEntry>? GetSimilar(string file) => GetSimilar(file.LoadTextureMap());
@@ -48,42 +52,9 @@ namespace DS3TexUpUI
             }
         }
 
-        public static CopyIndex Load(string file)
+        public static CopyIndex Create(SubProgressToken token, IReadOnlyCollection<string> files, Func<SizeRatio, IImageHasher>? hasherFactory = null)
         {
-            using var f = File.OpenRead(file);
-            return Load(f);
-        }
-        public static CopyIndex Load(Stream file)
-        {
-            var index = new CopyIndex();
-
-            var l = file.Length;
-            while (file.Position < l)
-            {
-                var i = SameRatioCopyIndex.Load(file);
-                index.BySize[i.Ratio] = i;
-            }
-
-            return index;
-        }
-        public void Save(string file)
-        {
-            using var f = File.Create(file);
-            Save(f);
-        }
-        public void Save(Stream file)
-        {
-            foreach (var index in BySize.Values)
-            {
-                index.Save(file);
-            }
-        }
-
-        public static CopyIndex Create(SubProgressToken token, IEnumerable<string> files)
-            => Create(token, files.ToList());
-        public static CopyIndex Create(SubProgressToken token, IReadOnlyCollection<string> files)
-        {
-            var index = new CopyIndex();
+            var index = new CopyIndex(hasherFactory);
 
             token.SubmitStatus($"Indexing {files.Count} files");
             token.ForAllParallel(files, f =>
@@ -154,36 +125,21 @@ namespace DS3TexUpUI
         }
     }
 
-    [Serializable]
     public class SameRatioCopyIndex
     {
-        public readonly SizeRatio Ratio;
-        private readonly int _smallWidth;
+        public readonly IImageHasher Hasher;
 
         public readonly List<CopyIndexEntry> Entries = new List<CopyIndexEntry>();
 
         private readonly List<int>[] _grid;
-        public readonly List<int> Tiny = new List<int>();
 
 
-        public SameRatioCopyIndex(SizeRatio ratio)
+        public SameRatioCopyIndex(IImageHasher hasher)
         {
-            Ratio = ratio;
-            _smallWidth = GetSmallWidth(ratio);
-
-            var rowCount = _smallWidth * _smallWidth * ratio.H / ratio.W * 4;
-            _grid = new List<int>[rowCount * 256];
+            Hasher = hasher;
+            _grid = new List<int>[hasher.ByteCount * 256];
             for (int i = 0; i < _grid.Length; i++)
                 _grid[i] = new List<int>();
-        }
-        private static int GetSmallWidth(SizeRatio ratio)
-        {
-            const int MinPixels = 256;
-
-            var s = 1;
-            while (ratio.W * ratio.H * s * s < MinPixels)
-                s *= 2;
-            return s * ratio.W;
         }
 
         private int AddEntry(ArrayTextureMap<Rgba32> image, string file)
@@ -196,75 +152,20 @@ namespace DS3TexUpUI
             }
         }
 
-        public static bool IsSupportedImage(ArrayTextureMap<Rgba32> image)
+        public bool AddImage(string file) => AddImage(file.LoadTextureMap(), file);
+        public bool AddImage(ArrayTextureMap<Rgba32> image, string file)
         {
-            return image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-        public static void CheckSize(ArrayTextureMap<Rgba32> image)
-        {
-            if (!IsSupportedImage(image))
-                throw new ArgumentException("Both the width and the height have to be powers of 2");
-        }
-
-        public void AddImage(string file) => AddImage(file.LoadTextureMap(), file);
-        public void AddImage(ArrayTextureMap<Rgba32> image, string file)
-        {
-            if (!Ratio.Equals(SizeRatio.Of(image)))
-                throw new ArgumentException("The ration of the image does not match the ratio of the index");
-            CheckSize(image);
-
-            var id = AddEntry(image, file);
-            var bytes = GetBytes(image);
-
-            lock (this)
+            if (Hasher.TryGetBytes(image, out var bytes))
             {
-                if (bytes == null)
+                lock (this)
                 {
-                    Tiny.Add(id);
-                    return;
+                    var id = AddEntry(image, file);
+                    for (int i = 0; i < bytes.Length; i++)
+                        GetGridCell(i, bytes[i]).Add(id);
                 }
-
-                for (int i = 0; i < bytes.Length; i++)
-                    GetGridCell(i, bytes[i]).Add(id);
-            }
-        }
-        private byte[]? GetBytes(ArrayTextureMap<Rgba32> image)
-        {
-            if (image.Width < _smallWidth || !IsSupportedImage(image))
-                return null;
-
-            var small = image.DownSample(Average.Rgba32, image.Width / _smallWidth);
-            var bytes = new byte[small.Data.Length * 4];
-
-            const float WeightR = 0.25f;
-            const float WeightG = 0.5f;
-            const float WeightB = 0.25f;
-            const float WeightA = 0.25f;
-
-            for (int i = 0; i < small.Data.Length; i++)
-            {
-                var p = small.Data[i];
-
-                bytes[i * 4 + 0] = (byte)(p.R * WeightR);
-                bytes[i * 4 + 1] = (byte)(p.G * WeightG);
-                bytes[i * 4 + 2] = (byte)(p.B * WeightB);
-                bytes[i * 4 + 3] = (byte)(p.A * WeightA);
-            }
-
-            return bytes;
-        }
-        private bool TryDownSample(ArrayTextureMap<Rgba32> image, out ArrayTextureMap<Rgba32> small)
-        {
-            if (image.Width < _smallWidth)
-            {
-                small = default;
-                return false;
-            }
-            else
-            {
-                small = image.DownSample(Average.Rgba32, image.Width / _smallWidth);
                 return true;
             }
+            return false;
         }
 
         private List<int> GetGridCell(int row, byte column)
@@ -274,8 +175,7 @@ namespace DS3TexUpUI
 
         public List<CopyIndexEntry>? GetSimilar(ArrayTextureMap<Rgba32> image, byte spread = 1)
         {
-            var bytes = GetBytes(image);
-            if (bytes == null) return null;
+            if (!Hasher.TryGetBytes(image, out var bytes)) return null;
 
             var acc = GetSimilar(0, bytes[0], spread);
             for (int i = 1; i < bytes.Length; i++)
@@ -298,20 +198,6 @@ namespace DS3TexUpUI
                     set.SetTrue(id);
 
             return set;
-        }
-
-        public static SameRatioCopyIndex Load(Stream stream)
-        {
-            BinaryFormatter b = new BinaryFormatter();
-            return (SameRatioCopyIndex)b.Deserialize(stream);
-        }
-        public void Save(Stream stream)
-        {
-            lock (this)
-            {
-                BinaryFormatter b = new BinaryFormatter();
-                b.Serialize(stream, this);
-            }
         }
 
         private struct SimpleBitSet : IEnumerable<int>
@@ -381,7 +267,110 @@ namespace DS3TexUpUI
         }
     }
 
-    [Serializable]
+    public interface IImageHasher
+    {
+        int MinWidth { get; }
+        SizeRatio Ratio { get; }
+        int ByteCount { get; }
+
+        bool IsSupported(ArrayTextureMap<Rgba32> image);
+        bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes);
+    }
+    public class RgbaImageHasher : IImageHasher
+    {
+        public const int MinPixels = 256;
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+        public int ByteCount => MinWidth * MinHeight * 4;
+
+        public RgbaImageHasher(SizeRatio ratio)
+        {
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
+        }
+
+        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+
+        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+        {
+            if (!IsSupported(image))
+            {
+                bytes = new byte[0];
+                return false;
+            }
+
+            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
+            bytes = new byte[small.Data.Length * 4];
+
+            const float WeightR = 0.25f;
+            const float WeightG = 0.5f;
+            const float WeightB = 0.25f;
+            const float WeightA = 0.25f;
+
+            for (int i = 0; i < small.Data.Length; i++)
+            {
+                var p = small.Data[i];
+
+                bytes[i * 4 + 0] = (byte)(p.R * WeightR);
+                bytes[i * 4 + 1] = (byte)(p.G * WeightG);
+                bytes[i * 4 + 2] = (byte)(p.B * WeightB);
+                bytes[i * 4 + 3] = (byte)(p.A * WeightA);
+            }
+
+            return true;
+        }
+    }
+    public class AlphaImageHasher : IImageHasher
+    {
+        public const int MinPixels = 256;
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+        public int ByteCount => MinWidth * MinHeight;
+
+        public AlphaImageHasher(SizeRatio ratio)
+        {
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
+        }
+
+        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+
+        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+        {
+            if (!IsSupported(image))
+            {
+                bytes = new byte[0];
+                return false;
+            }
+
+            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
+            bytes = new byte[small.Data.Length];
+
+            for (int i = 0; i < small.Data.Length; i++)
+                bytes[i] = (byte)(small.Data[i].A >> 2); // divide by 4 to get rid of noise
+
+            return true;
+        }
+    }
+
     public struct CopyIndexEntry
     {
         public string File;
@@ -396,7 +385,6 @@ namespace DS3TexUpUI
         }
     }
 
-    [Serializable]
     public readonly struct SizeRatio : IEquatable<SizeRatio>, IComparable<SizeRatio>
     {
         public readonly int W;
@@ -444,6 +432,15 @@ namespace DS3TexUpUI
         public bool Equals(SizeRatio other) => W == other.W && H == other.H;
         public override int GetHashCode() => W << 3 | H;
         public override string ToString() => $"SizeRation {W}:{H}";
+
+        /// <summary> Returns the smallest power of two factor such that W*s*H*s >= minPixels. </summary>
+        public int GetUpscaleFactor(int minPixels)
+        {
+            var s = 1;
+            while (W * H * s * s < minPixels)
+                s *= 2;
+            return s;
+        }
 
         public static bool operator ==(SizeRatio left, SizeRatio right) => left.Equals(right);
         public static bool operator !=(SizeRatio left, SizeRatio right) => !(left == right);
