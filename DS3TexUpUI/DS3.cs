@@ -874,6 +874,73 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, TexId> AlphaRepresentativeOf
+            = DataFile(@"alpha-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        public static IReadOnlyCollection<TexId> AlphaRepresentatives = AlphaRepresentativeOf.Values.ToHashSet();
+        internal static Action<SubProgressToken> CreateAlphaRepresentativeIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = DS3.OriginalSize.Keys.ToList();
+                ids.Sort();
+
+                token.SubmitStatus($"Indexing");
+                var representative = new Dictionary<TexId, TexId>();
+
+                ConcurrentDictionary<TexId, double> artifactScoreCache = new ConcurrentDictionary<TexId, double>();
+                double GetArtifactsScore(TexId id)
+                {
+                    if (artifactScoreCache.TryGetValue(id, out var score)) return score;
+                    score = w.GetExtractPath(id).LoadTextureMap().GetAlpha().BCArtifactsScore();
+                    artifactScoreCache[id] = score;
+                    return score;
+                }
+
+                token.ForAllParallel(ids, id =>
+                {
+                    if (!AlphaCopiesCertain.TryGetValue(id, out var othersSet) || othersSet.Count == 0) return;
+
+                    var others = othersSet.ToList();
+
+                    // We cannot use a texture with binary alpha to represent a texture with full 8 bit alpha.
+                    if (id.GetTransparency() == TransparencyKind.Full)
+                    {
+                        others.RemoveAll(id => id.GetTransparency() != TransparencyKind.Full);
+                        if (others.Count == 0) return;
+                    }
+
+                    var largestWidth = others.Max(id => DS3.OriginalSize[id].Width);
+                    others.RemoveAll(id => DS3.OriginalSize[id].Width < largestWidth);
+
+                    // Don't use binary if full 8 bit are available.
+                    var has8Bit = others.Any(id => id.GetTransparency() == TransparencyKind.Full);
+                    if (has8Bit)
+                        others.RemoveAll(id => id.GetTransparency() != TransparencyKind.Full);
+
+                    // If there multiple 8 bit alphas, choose the one with the least BC artifacts
+                    if (has8Bit && others.Count >= 2)
+                    {
+                        var maxScore = others.Min(GetArtifactsScore) * 1.05; // 5% tolerance
+                        others.RemoveAll(id => GetArtifactsScore(id) > maxScore);
+                    }
+
+                    others.Sort(CompareIdsByQuality);
+                    var r = others.Last();
+                    if (r != id)
+                    {
+                        lock (representative)
+                        {
+                            representative[id] = r;
+                        }
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                representative.SaveAsJson(DataFile(@"alpha-representative.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, HashSet<TexId>> NormalCopiesUncertain
             = CopiesFromPairs(DataFile(@"normal-copies-uncertain.json").LoadJsonFile<List<(TexId, TexId)>>());
         internal static Action<SubProgressToken> CreateNormalCopyIndex(Workspace w)

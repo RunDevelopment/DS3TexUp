@@ -1158,7 +1158,8 @@ namespace DS3TexUpUI
             }
         }
 
-        public static void Multiply(this ArrayTextureMap<Rgba32> map, Rgba32 color) {
+        public static void Multiply(this ArrayTextureMap<Rgba32> map, Rgba32 color)
+        {
             foreach (ref var p in map.Data.AsSpan())
             {
                 p.R = (byte)(p.R * color.R / 255);
@@ -1166,6 +1167,26 @@ namespace DS3TexUpUI
                 p.B = (byte)(p.B * color.B / 255);
                 p.A = (byte)(p.A * color.A / 255);
             }
+        }
+
+        public static double BCArtifactsScore(this ArrayTextureMap<byte> map)
+        {
+            // The idea is that BC artifacts are most noticeable on the edges between blocks.
+            // This algorithm will calculate the average difference of adjacent pixels in neighboring blocks
+
+            long diff = 0;
+
+            // horizontal
+            for (int y = 4; y < map.Height; y += 4)
+                for (int x = 0; x < map.Width; x++)
+                    diff += Math.Abs(map[x, y - 1] - map[x, y]);
+            // vertical
+            for (int y = 0; y < map.Height; y++)
+                for (int x = 4; x < map.Width; x += 4)
+                    diff += Math.Abs(map[x - 1, y] - map[x, y]);
+
+            double count = (map.Width - 1) * (map.Height - 1) - 1;
+            return diff / count / 255;
         }
     }
 }
