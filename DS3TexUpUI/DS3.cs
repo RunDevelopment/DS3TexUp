@@ -1208,6 +1208,246 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> GlossCopiesUncertain
+            = CopiesFromPairs(DataFile(@"gloss-copies-uncertain.json").LoadJsonFile<List<(TexId, TexId)>>());
+        internal static Action<SubProgressToken> CreateGlossCopyIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Searching for files");
+                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories)
+                    // ignore all images that are just solid colors
+                    .Where(f => !TexId.FromPath(f).IsSolidColor())
+                    // only normals
+                    .Where(f => TexId.FromPath(f).GetTexKind() == TexKind.Normal)
+                    // ignore all gloss maps that are just solid colors
+                    .Where(f => DS3.OriginalColorDiff[TexId.FromPath(f)].B > 12)
+                    .ToArray();
+
+                var index = CopyIndex.Create(token.Reserve(0.5), files, r => new BlueChannelImageHasher(r));
+
+                var copies = new Dictionary<TexId, List<TexId>>();
+
+                token.SubmitStatus($"Looking up {files.Length} files");
+                token.ForAllParallel(files, f =>
+                {
+                    var id = TexId.FromPath(f);
+                    var set = new HashSet<TexId>() { id };
+
+                    try
+                    {
+                        var image = f.LoadTextureMap();
+
+                        // small images suffer more from compression artifacts, so we want to given them a boost
+                        var spread = image.Count <= 64 * 64 ? 6 : image.Count <= 128 * 128 ? 4 : 3;
+                        var similar = index.GetSimilar(image, (byte)spread);
+                        if (similar != null)
+                        {
+                            foreach (var e in similar)
+                            {
+                                var eId = TexId.FromPath(e.File);
+                                set.Add(eId);
+                            }
+                        }
+                    }
+                    catch (System.Exception)
+                    {
+                        // ignore
+                    }
+
+                    var result = new List<TexId>(set);
+                    result.Sort();
+
+                    lock (copies)
+                    {
+                        copies[id] = result;
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                PairsFromCopies(copies).SaveAsJson(DataFile(@"gloss-copies-uncertain.json"));
+            };
+        }
+        internal static Action<SubProgressToken> CreateGlossIdenticalIndex(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Finding identical");
+                var identical = new Dictionary<TexId, HashSet<TexId>>();
+
+                var cache = new ConcurrentDictionary<(TexId, TexId), bool>();
+                bool AreIdentical(TexId a, TexId b)
+                {
+                    if (a == b) return true;
+                    if (DS3.OriginalSize[a].Width != DS3.OriginalSize[b].Width) return false;
+
+                    if (a > b) (b, a) = (a, b);
+                    var key = (a, b);
+
+                    if (cache!.TryGetValue(key, out var cachedResult)) return cachedResult;
+
+                    var imageA = w.GetExtractPath(a).LoadTextureMap();
+                    var imageB = w.GetExtractPath(b).LoadTextureMap();
+                    var identical = true;
+                    for (int i = 0; i < imageA.Count; i++)
+                    {
+                        var pa = imageA[i];
+                        var pb = imageB[i];
+
+                        var diffB = Math.Abs(imageA[i].B - imageB[i].B);
+
+                        const int MaxDiff = 8;
+                        if (diffB > MaxDiff)
+                        {
+                            identical = false;
+                            break;
+                        }
+                    }
+
+                    cache[key] = identical;
+                    return identical;
+                }
+
+                token.ForAllParallel(GlossCopiesUncertain.Values, copies =>
+                {
+                    foreach (var a in copies)
+                    {
+                        foreach (var b in copies)
+                        {
+                            if (AreIdentical(a, b))
+                            {
+                                lock (identical)
+                                {
+                                    static HashSet<TexId> NewHashSet(TexId id) => new HashSet<TexId>() { id };
+                                    identical.GetOrAdd(a, NewHashSet).Add(b);
+                                    identical.GetOrAdd(b, NewHashSet).Add(a);
+                                }
+                            }
+                        }
+                    }
+                });
+
+                identical = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
+                {
+                    return new List<TexId>(identical.GetOrNew(id)) { id };
+                }).Select(l => l.ToHashSet()).SelectMany(l => l.Select(i => (l, i))).ToDictionary(p => p.i, p => p.l);
+
+                token.SubmitStatus("Saving JSON");
+                PairsFromCopies(identical).SaveAsJson(DataFile(@"gloss-copies-certain.json"));
+                new List<(TexId, TexId)>().SaveAsJson(DataFile(@"gloss-copies-rejected.json"));
+            };
+        }
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> GlossCopiesCertain
+            = CopiesFromPairs(DataFile(@"gloss-copies-certain.json").LoadJsonFile<List<(TexId, TexId)>>());
+        public static IReadOnlyDictionary<TexId, HashSet<TexId>> GlossCopiesRejected
+            = CopiesFromPairs(DataFile(@"gloss-copies-rejected.json").LoadJsonFile<List<(TexId, TexId)>>());
+        internal static Action<SubProgressToken> CreateGlossSCCDirectory(Workspace w)
+        {
+            return token =>
+            {
+                token.SubmitStatus("Getting SCC");
+                var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
+                {
+                    var l = new List<TexId>() { id };
+                    if (DS3.GlossCopiesUncertain.TryGetValue(id, out var copies))
+                    {
+                        var without = DS3.GlossCopiesRejected.GetOrNew(id).SelectMany(i => DS3.GlossCopiesCertain.GetOrNew(i));
+                        l.AddRange(copies.Except(without));
+                    }
+                    return l;
+                }).Where(l => l.Count >= 2).OrderByDescending(l => l.Count).ToList();
+
+                token.SubmitStatus("Copying files");
+                token.ForAllParallel(scc.Select((x, i) => (x, i)), pair =>
+                {
+                    var (scc, i) = pair;
+
+                    // Remove identical textures
+                    static TexId MapTo(TexId id)
+                    {
+                        if (DS3.GlossCopiesCertain.TryGetValue(id, out var similar) && similar.Count > 0)
+                        {
+                            var l = similar.ToList();
+                            l.Sort(CompareIdsByQuality);
+                            return l.Last();
+                        }
+                        return id;
+                    }
+                    scc = scc.Select(MapTo).ToHashSet().ToList();
+
+                    // only one texture after identical textures were removed
+                    if (scc.Count < 2) return;
+
+                    var dir = Path.Join(_sccDirectory, "" + i);
+                    Directory.CreateDirectory(dir);
+
+                    var largest = scc.Select(id => DS3.OriginalSize[id].Width).Max();
+
+                    foreach (var id in scc)
+                    {
+                        token.CheckCanceled();
+
+                        var source = w.GetExtractPath(id);
+                        var target = Path.Join(dir, $"{id.Category.ToString()}-{Path.GetFileNameWithoutExtension(source)}@{DS3.OriginalSize[id].Width}px.png");
+
+                        var image = source.LoadTextureMap();
+                        if (DS3.OriginalSize[id].Width < largest)
+                            image = image.UpSample(largest / image.Width);
+
+                        image.Multiply(new Rgba32(0, 0, 255, 255));
+                        image.SetAlpha(255);
+                        image.SaveAsPng(target);
+                    }
+                });
+            };
+        }
+        internal static Action<SubProgressToken> ReadGlossSCCDirectory(Workspace w)
+        {
+            return token =>
+            {
+                var files = Directory.GetFiles(_sccDirectory, "*", SearchOption.AllDirectories);
+
+                static TexId SCCFilenameToTexId(string file)
+                {
+                    var name = Path.GetFileNameWithoutExtension(file);
+                    var i = name.IndexOf('@');
+                    if (i != -1) name = name.Substring(0, i);
+                    name = name.Replace('-', '/');
+                    return new TexId(name);
+                }
+                var components = files
+                    .GroupBy(f => Path.GetDirectoryName(f))
+                    .Select(g => g.Select(SCCFilenameToTexId).ToList())
+                    .SelectMany(l => l.Select(i => (l, i)))
+                    .ToDictionary(p => p.i, p => p.l);
+
+                foreach (var (id, others) in DS3.GlossCopiesCertain)
+                {
+                    var c = components.GetOrAdd(id);
+                    c.AddRange(others.Except(c));
+                }
+
+                var pairs = DS3.PairsFromCopies(components);
+                pairs.SaveAsJson(DataFile(@"gloss-copies-certain.json"));
+
+                var scc = StronglyConnectedComponents.Find(DS3.OriginalSize.Keys, id =>
+                {
+                    var l = new List<TexId>() { id };
+                    if (DS3.GlossCopiesUncertain.TryGetValue(id, out var copies))
+                    {
+                        l.AddRange(copies);
+                    }
+                    return l;
+                }).SelectMany(l => l.Select(i => (l, i))).ToDictionary(p => p.i, p => p.l);
+                var sccPairs = DS3.PairsFromCopies(scc);
+
+                var rejected = sccPairs.Except(pairs).ToList();
+                rejected.SaveAsJson(DataFile(@"gloss-copies-rejected.json"));
+            };
+        }
+
+
+
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
             = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
         internal static Action<SubProgressToken> CreateTexUsage()

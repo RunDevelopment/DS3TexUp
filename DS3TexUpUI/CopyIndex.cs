@@ -417,7 +417,7 @@ namespace DS3TexUpUI
 
     public class BlueChannelImageHasher : IImageHasher
     {
-        public const int MinPixels = 256;
+        public const int MinPixels = 512;
 
         public SizeRatio Ratio { get; }
         public int ScaleFactor { get; }
@@ -451,7 +451,7 @@ namespace DS3TexUpUI
             bytes = new byte[small.Data.Length];
 
             for (int i = 0; i < small.Data.Length; i++)
-                bytes[i] = (byte)(small.Data[i].B >> 2); // divide by 4 to get rid of noise
+                bytes[i] = (byte)(small.Data[i].B >> 1); // divide by 2 to get rid of noise
 
             return true;
         }
