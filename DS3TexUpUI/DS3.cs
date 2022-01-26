@@ -959,29 +959,6 @@ namespace DS3TexUpUI
 
                 var copies = new Dictionary<TexId, List<TexId>>();
 
-                var simCache = new ConcurrentDictionary<(TexId, TexId), bool>();
-                static void PreprocessNormalTexture(ArrayTextureMap<Rgba32> image)
-                {
-                    image.Multiply(new Rgba32(255, 255, 0, 0));
-                }
-                Func<TexId, ArrayTextureMap<Rgba32>, TexId, string, bool> isSimilar = (aId, aImage, bId, bFile) =>
-                {
-                    // same image
-                    if (aId == bId) return true;
-
-                    var key = aId < bId ? (aId, bId) : (bId, aId);
-
-                    if (simCache.TryGetValue(key, out var cachedSim)) return cachedSim;
-
-                    var bImage = bFile.LoadTextureMap();
-                    PreprocessNormalTexture(bImage);
-                    var simScore = aImage.GetSimilarityScore(bImage);
-                    var sim = simScore.color < 0.055 && simScore.feature < 0.24;
-
-                    simCache.TryAdd(key, sim);
-                    return sim;
-                };
-
                 token.SubmitStatus($"Looking up {files.Length} files");
                 token.ForAllParallel(files, f =>
                 {
@@ -997,11 +974,9 @@ namespace DS3TexUpUI
                         var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
-                            // PreprocessNormalTexture(image);
                             foreach (var e in similar)
                             {
                                 var eId = TexId.FromPath(e.File);
-                                // if (isSimilar(id, image, eId, e.File))
                                 set.Add(eId);
                             }
                         }
