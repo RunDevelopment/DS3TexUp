@@ -1239,7 +1239,7 @@ namespace DS3TexUpUI
                         var image = f.LoadTextureMap();
 
                         // small images suffer more from compression artifacts, so we want to given them a boost
-                        var spread = image.Count <= 64 * 64 ? 6 : image.Count <= 128 * 128 ? 4 : 3;
+                        var spread = image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 6 : 4;
                         var similar = index.GetSimilar(image, (byte)spread);
                         if (similar != null)
                         {
@@ -1446,7 +1446,40 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, TexId> GlossRepresentativeOf
+            = DataFile(@"gloss-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        public static IReadOnlyCollection<TexId> GlossRepresentatives = GlossRepresentativeOf.Values.ToHashSet();
+        internal static Action<SubProgressToken> CreateGlossRepresentativeIndex()
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = DS3.OriginalSize.Keys.ToList();
+                ids.Sort();
 
+                token.SubmitStatus($"Indexing");
+                var representative = new Dictionary<TexId, TexId>();
+                token.ForAllParallel(ids, id =>
+                {
+                    if (!GlossCopiesCertain.TryGetValue(id, out var othersSet) || othersSet.Count == 0) return;
+
+                    var others = othersSet.ToList();
+                    others.Sort(CompareIdsByQuality);
+
+                    var r = others.Last();
+                    if (r != id)
+                    {
+                        lock (representative)
+                        {
+                            representative[id] = r;
+                        }
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                representative.SaveAsJson(DataFile(@"gloss-representative.json"));
+            };
+        }
 
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
             = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
