@@ -645,7 +645,7 @@ namespace DS3TexUpUI
             var png = id.Value + ".png";
             var kind = id.GetTexKind();
 
-            if (id.IsUnwanted()) return;
+            // if (id.IsUnwanted()) return;
 
             try
             {
@@ -660,7 +660,7 @@ namespace DS3TexUpUI
                     // We want to ignore this file.
                     ignore(id.Name.ToString()) ||
                     // there is no point in upscaling a solid color.
-                    image.IsSolidColor(0.05))
+                    id.IsSolidColor())
                     target = "ignore";
 
                 if (target != "ignore")
