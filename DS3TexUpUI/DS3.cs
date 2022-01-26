@@ -1131,6 +1131,41 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<TexId, TexId> NormalRepresentativeOf
+            = DataFile(@"normal-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        public static IReadOnlyCollection<TexId> NormalRepresentatives = NormalRepresentativeOf.Values.ToHashSet();
+        internal static Action<SubProgressToken> CreateNormalRepresentativeIndex()
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = DS3.OriginalSize.Keys.ToList();
+                ids.Sort();
+
+                token.SubmitStatus($"Indexing");
+                var representative = new Dictionary<TexId, TexId>();
+                token.ForAllParallel(ids, id =>
+                {
+                    if (!NormalCopiesCertain.TryGetValue(id, out var othersSet) || othersSet.Count == 0) return;
+
+                    var others = othersSet.ToList();
+                    others.Sort(CompareIdsByQuality);
+
+                    var r = others.Last();
+                    if (r != id)
+                    {
+                        lock (representative)
+                        {
+                            representative[id] = r;
+                        }
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                representative.SaveAsJson(DataFile(@"normal-representative.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
             = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
         internal static Action<SubProgressToken> CreateTexUsage()
