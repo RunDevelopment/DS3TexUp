@@ -152,8 +152,17 @@ namespace DS3TexUpUI
 
         public TexId GetRepresentative()
         {
-            if (DS3.RepresentativeOf.TryGetValue(this, out var r))
-                return r;
+            if (DS3.RepresentativeOf.TryGetValue(this, out var r)) return r;
+            return this;
+        }
+        public TexId GetAlphaRepresentative()
+        {
+            if (DS3.AlphaRepresentativeOf.TryGetValue(this, out var r)) return r;
+            return this;
+        }
+        public TexId GetNormalRepresentative()
+        {
+            if (DS3.NormalRepresentativeOf.TryGetValue(this, out var r)) return r;
             return this;
         }
 
