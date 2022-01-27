@@ -28,6 +28,7 @@ namespace DS3TexUpUI
         public static DS3NormalMap Load(string file) => new DS3NormalMap(file.LoadTextureMap());
         public static DS3NormalMap Of(DDSImage image) => new DS3NormalMap(image.ToTextureMap());
         public static DS3NormalMap Of(Image image) => new DS3NormalMap(image.ToTextureMap());
+        public static DS3NormalMap Of(ArrayTextureMap<Rgba32> image) => new DS3NormalMap(image);
 
         public void SaveAsPng(string file)
         {
