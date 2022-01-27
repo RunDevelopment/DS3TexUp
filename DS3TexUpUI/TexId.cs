@@ -165,6 +165,11 @@ namespace DS3TexUpUI
             if (DS3.NormalRepresentativeOf.TryGetValue(this, out var r)) return r;
             return this;
         }
+        public TexId GetGlossRepresentative()
+        {
+            if (DS3.GlossRepresentativeOf.TryGetValue(this, out var r)) return r;
+            return this;
+        }
 
         public bool IsUnwanted()
         {
