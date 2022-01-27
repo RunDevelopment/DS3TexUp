@@ -155,7 +155,7 @@ namespace DS3TexUpUI
                 grey[i] = map[i].GetGreyBrightness();
             return grey.AsTextureMap(map.Width);
         }
-        public static ArrayTextureMap<byte> GreyGreyMinMaxBlend(this ArrayTextureMap<Rgba32> map)
+        public static ArrayTextureMap<byte> GreyMinMaxBlend(this ArrayTextureMap<Rgba32> map)
         {
             var grey = new byte[map.Count];
             for (int i = 0; i < grey.Length; i++)
