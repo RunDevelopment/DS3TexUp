@@ -90,6 +90,8 @@ namespace DS3TexUpUI
             info.ArgumentList.Add("-d");
             info.ArgumentList.Add("-dx10");
 
+            if (!format.IsSRGB()) info.ArgumentList.Add("-srgbo");
+
             info.ArgumentList.Add("-sx");
             info.ArgumentList.Add(suffix);
             info.ArgumentList.Add("-o");
@@ -109,21 +111,13 @@ namespace DS3TexUpUI
 
             var tempFile = Path.Join(dir, Path.GetFileNameWithoutExtension(file) + suffix + ".dds");
             File.Move(tempFile, target, true);
-        }
-        private static string ToTexConvFormat(DDSFormat format)
-        {
-            if (format.DxgiFormat != DxgiFormat.UNKNOWN)
+
+            static string ToTexConvFormat(DDSFormat format)
             {
-                return format.DxgiFormat.ToString();
+                if (format.DxgiFormat != DxgiFormat.UNKNOWN)
+                    return format.DxgiFormat.ToString();
+                throw new Exception("Invalid format: " + format);
             }
-            return format.DxgiFormat switch
-            {
-                DxgiFormat.BC1_UNORM => "BC1_UNORM",
-                DxgiFormat.BC1_UNORM_SRGB => "BC1_UNORM_SRGB",
-                DxgiFormat.BC7_UNORM => "BC7_UNORM",
-                DxgiFormat.BC7_UNORM_SRGB => "BC7_UNORM_SRGB",
-                _ => throw new Exception("Invalid format: " + format),
-            };
         }
 
         internal static void ToDDSUsingCompressonator(string file, string target)
@@ -450,6 +444,23 @@ namespace DS3TexUpUI
                 CompressionAlgorithm.BC5U => DxgiFormat.BC5_UNORM,
                 _ => this.DxgiFormat,
             };
+        }
+
+        public bool IsSRGB()
+        {
+            switch (ToDX10())
+            {
+                case DxgiFormat.BC1_UNORM_SRGB:
+                case DxgiFormat.BC2_UNORM_SRGB:
+                case DxgiFormat.BC3_UNORM_SRGB:
+                case DxgiFormat.BC7_UNORM_SRGB:
+                case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                case DxgiFormat.R8G8B8A8_UNORM_SRGB:
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         public override string ToString()
