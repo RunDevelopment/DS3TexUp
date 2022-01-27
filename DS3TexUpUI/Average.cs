@@ -137,9 +137,9 @@ namespace DS3TexUpUI
     }
     public struct RgbGammaCorrectedPremultipliedAlphaAverageAccumulator : IAverageAccumulator<Rgba32>, IAverageAccumulator<Rgb24>
     {
-        private uint _totalR;
-        private uint _totalG;
-        private uint _totalB;
+        private ulong _totalR;
+        private ulong _totalG;
+        private ulong _totalB;
         private uint _totalA;
         private uint _count;
 
