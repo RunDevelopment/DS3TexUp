@@ -190,6 +190,7 @@ namespace DS3TexUpUI
             for (int i = 0; i < color.Data.Length; i++)
                 color.Data[i].A = NoisePass(alpha.Data[i]);
         }
+
         public static void SetAlpha(this ArrayTextureMap<Rgba32> color, byte alpha)
         {
             foreach (ref var item in color.Data.AsSpan())
@@ -198,9 +199,41 @@ namespace DS3TexUpUI
         public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
         {
             color.CheckSameSize(alpha);
-
             for (int i = 0; i < color.Data.Length; i++)
                 color.Data[i].A = alpha.Data[i];
+        }
+        public static void SetRed(this ArrayTextureMap<Rgba32> color, byte red)
+        {
+            foreach (ref var item in color.Data.AsSpan())
+                item.R = red;
+        }
+        public static void SetRed(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> red)
+        {
+            color.CheckSameSize(red);
+            for (int i = 0; i < color.Data.Length; i++)
+                color.Data[i].R = red.Data[i];
+        }
+        public static void SetGreen(this ArrayTextureMap<Rgba32> color, byte green)
+        {
+            foreach (ref var item in color.Data.AsSpan())
+                item.G = green;
+        }
+        public static void SetGreen(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> green)
+        {
+            color.CheckSameSize(green);
+            for (int i = 0; i < color.Data.Length; i++)
+                color.Data[i].G = green.Data[i];
+        }
+        public static void SetBlue(this ArrayTextureMap<Rgba32> color, byte blue)
+        {
+            foreach (ref var item in color.Data.AsSpan())
+                item.B = blue;
+        }
+        public static void SetBlue(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> blue)
+        {
+            color.CheckSameSize(blue);
+            for (int i = 0; i < color.Data.Length; i++)
+                color.Data[i].B = blue.Data[i];
         }
 
         public static (ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha) SplitAlphaBlack(this ArrayTextureMap<Rgba32> map)
