@@ -6,6 +6,7 @@ using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using Pfim;
 
 #nullable enable
@@ -24,6 +25,9 @@ namespace DS3TexUpUI
             {
                 case TexKind.Albedo:
                     WriteSRGB(id, upscale, Textures.Albedo, "albedo");
+                    break;
+                case TexKind.Normal:
+                    WriteNormal(id, upscale);
                     break;
                 case TexKind.Reflective:
                     WriteSRGB(id, upscale, Textures.Reflective, "reflective");
@@ -107,45 +111,6 @@ namespace DS3TexUpUI
             }
         }
 
-        private void WriteAlbedo(TexId id, int upscale)
-        {
-            var targetWidth = GetTargetWidth(id, upscale);
-
-            var albedo = GetFile(Textures.Albedo, id.GetRepresentative());
-            var albedoWidth = GetPngWidth(albedo);
-            CheckWidth(id, upscale, targetWidth, albedoWidth, "albedo");
-
-            if (albedoWidth == targetWidth && !HasAlpha(id))
-            {
-                // fast path
-                ToDDS(id, albedo, deleteAfter: false);
-                return;
-            }
-
-            var image = albedo.LoadTextureMap();
-            EnsureWidth(ref image, targetWidth, Average.Rgba32GammaAlpha, id, "albedo");
-
-            if (HasAlpha(id))
-            {
-                var alpha = GetFile(Textures.Alpha, id.GetAlphaRepresentative());
-                var alphaWidth = GetPngWidth(alpha);
-                CheckWidth(id, upscale, targetWidth, alphaWidth, "alpha");
-
-                var alphaImage = alpha.LoadTextureMap().GreyMinMaxBlend();
-                EnsureWidth(ref alphaImage, targetWidth, Average.Byte, id, "alpha");
-
-                if (id.GetTransparency() == TransparencyKind.Binary)
-                    alphaImage.QuantizeBinary(threshold: 127);
-
-                image.SetAlpha(alphaImage);
-            }
-
-            // create temporary file.
-            var targetFile = GetTempPngFile(id);
-            image.SaveAsPng(targetFile);
-
-            ToDDS(id, targetFile, deleteAfter: true);
-        }
         private bool TryGetAlpha(TexId id, int upscale, int targetWidth, out ArrayTextureMap<byte> alphaImage)
         {
             if (!HasAlpha(id))
@@ -187,6 +152,58 @@ namespace DS3TexUpUI
             // set alpha
             if (TryGetAlpha(id, upscale, targetWidth, out var alphaImage))
                 image.SetAlpha(alphaImage);
+
+            // create temporary file.
+            var targetFile = GetTempPngFile(id);
+            image.SaveAsPng(targetFile);
+
+            ToDDS(id, targetFile, deleteAfter: true);
+        }
+
+        private void WriteNormal(TexId id, int upscale)
+        {
+            var targetWidth = GetTargetWidth(id, upscale);
+
+            // normals
+            var normal = GetFile(Textures.NormalNormal, id.GetNormalRepresentative());
+            CheckWidth(id, upscale, targetWidth, GetPngWidth(normal), "normal");
+            var normalImage = DS3NormalMap.Of(normal.LoadTextureMap()).Normals.Clone();
+            EnsureWidth(ref normalImage, targetWidth, Average.Normal, id, "normal");
+
+            // normal albedo
+            if (DS3.NormalAlbedo.TryGetValue(id, out var albedoId))
+            {
+                var albedo = GetFile(Textures.NormalAlbedo, albedoId);
+                var albedoWidth = GetPngWidth(albedo);
+                if (albedoWidth >= targetWidth)
+                {
+                    CheckWidth(albedoId, upscale, targetWidth, albedoWidth, "normal albedo");
+                    var normalAlbedoImage = DS3NormalMap.Of(albedo.LoadTextureMap()).Normals.Clone();
+                    EnsureWidth(ref normalAlbedoImage, targetWidth, Average.Normal, albedoId, "normal albedo");
+                    normalImage.CombineWith(normalAlbedoImage, 0.5f);
+                }
+            }
+
+            // DS3 normal texture
+            var image = new Rgba32[normalImage.Count].AsTextureMap(normalImage.Width);
+            for (int i = 0; i < image.Count; i++)
+            {
+                ref var p = ref image.Data[i];
+                (p.R, p.G) = normalImage[i].ToRG();
+            }
+
+            // gloss
+            var gloss = GetFile(Textures.NormalGloss, id.GetGlossRepresentative());
+            CheckWidth(id, upscale, targetWidth, GetPngWidth(gloss), "gloss");
+            var glossImage = gloss.LoadTextureMap().GreyMinMaxBlend();
+            EnsureWidth(ref glossImage, targetWidth, Average.Byte, id, "gloss");
+            image.SetBlue(glossImage);
+
+            // alpha
+            if (TryGetAlpha(id, upscale, targetWidth, out var alphaImage))
+                image.SetAlpha(alphaImage);
+            else
+                image.SetAlpha(255);
 
             // create temporary file.
             var targetFile = GetTempPngFile(id);
