@@ -186,11 +186,7 @@ namespace DS3TexUpUI
         {
             color.CheckSameSize(alpha);
 
-            var w = color.Width;
-            var h = color.Height;
-
             static byte NoisePass(byte c) => (byte)Math.Clamp(((c - 5) * 26 / 25), 0, 255);
-
             for (int i = 0; i < color.Data.Length; i++)
                 color.Data[i].A = NoisePass(alpha.Data[i]);
         }
@@ -198,6 +194,13 @@ namespace DS3TexUpUI
         {
             foreach (ref var item in color.Data.AsSpan())
                 item.A = alpha;
+        }
+        public static void SetAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<byte> alpha)
+        {
+            color.CheckSameSize(alpha);
+
+            for (int i = 0; i < color.Data.Length; i++)
+                color.Data[i].A = alpha.Data[i];
         }
 
         public static (ArrayTextureMap<Rgb24> color, ArrayTextureMap<byte> alpha) SplitAlphaBlack(this ArrayTextureMap<Rgba32> map)
@@ -1187,6 +1190,12 @@ namespace DS3TexUpUI
 
             double count = (map.Width - 1) * (map.Height - 1) - 1;
             return diff / count / 255;
+        }
+
+        public static void QuantizeBinary(this ArrayTextureMap<byte> map, byte threshold = 127)
+        {
+            foreach (ref var p in map.Data.AsSpan())
+                p = p > threshold ? (byte)255 : (byte)0;
         }
     }
 }
