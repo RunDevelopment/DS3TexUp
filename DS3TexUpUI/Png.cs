@@ -76,6 +76,20 @@ namespace DS3TexUpUI
             encoder.ChunkFilter = PngChunkFilter.None;
             image.SaveAsPng(file, encoder);
         }
+
+        public static Size ReadPngSize(string file)
+        {
+            foreach (var chunk in PngChunk.ReadHeaderChunks(file))
+            {
+                if (chunk.Type == PngChunkType.IHDR)
+                {
+                    var width = BinaryPrimitives.ReverseEndianness(BitConverter.ToInt32(chunk.Data.Span.Slice(0, 4)));
+                    var height = BinaryPrimitives.ReverseEndianness(BitConverter.ToInt32(chunk.Data.Span.Slice(4, 4)));
+                    return new Size(width, height);
+                }
+            }
+            throw new Exception("Invalid PNG. Unable to find IHDR chunk.");
+        }
     }
 
     struct PngChunk
