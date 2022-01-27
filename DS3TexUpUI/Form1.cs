@@ -20,6 +20,7 @@ namespace DS3TexUpUI
         private IProgressToken progressToken;
         private bool isCanceled = false;
         private bool taskIsRunning = false;
+        private DateTime lastStartTime;
 
         class Form1ProgressToken : IProgressToken
         {
@@ -182,6 +183,17 @@ namespace DS3TexUpUI
             statusTextBox.Text = "";
             logRichTextBox.Clear();
             progressBar.Value = progressBar.Minimum;
+            lastStartTime = DateTime.UtcNow;
+
+            string GetElapsedTime()
+            {
+                var d = DateTime.UtcNow - lastStartTime;
+
+                if (d.Days != 0) return $"{d.Days}d {d.Hours}h {d.Minutes}m {d.Seconds}s";
+                if (d.Hours != 0) return $"{d.Hours}h {d.Minutes}m {d.Seconds}s";
+                if (d.Minutes != 0) return $"{d.Minutes}m {d.Seconds}s";
+                return $"{d.Seconds}s";
+            }
 
             Task.Run(() =>
             {
@@ -191,7 +203,7 @@ namespace DS3TexUpUI
 
                     Invoke(new Action(() =>
                     {
-                        statusTextBox.Text = "Done.";
+                        statusTextBox.Text = $"Done. Took {GetElapsedTime()}";
                         progressBar.Value = progressBar.Maximum;
                     }));
                 }
@@ -201,7 +213,7 @@ namespace DS3TexUpUI
                     {
                         Invoke(new Action(() =>
                         {
-                            statusTextBox.Text = "Canceled.";
+                            statusTextBox.Text = $"Canceled. Took {GetElapsedTime()}";
                             progressBar.Value = progressBar.Minimum;
                         }));
                     }
