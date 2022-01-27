@@ -11,6 +11,16 @@ using SoulsFormats;
 
 namespace DS3TexUpUI
 {
+    /// Texture ids uniquely identify a texture in DS3 files. They are composed of a category and a name.
+    ///
+    /// Category and name can have the following patterns:
+    /// - chr/c[0-9]{4}_(?"ign".+)
+    /// - m[0-9]{2}/(?"ign".+)
+    /// - obj/o[0-9]{6}_(?"ign".+)
+    /// - parts/[a-z]{2}_[mfa]_[0-9]{4}_(?"ign".+)
+    /// - sfx/commoneffects_(?"ign".+)
+    /// - sfx/dlc[12]_(?"ign".+)
+    /// - sfx/m[0-9]{2}_(?"ign".+)
     public readonly struct TexId : IEquatable<TexId>, IComparable<TexId>
     {
         public readonly string Value;
@@ -44,7 +54,7 @@ namespace DS3TexUpUI
         private static readonly Regex _chrPattern = new Regex(@"\A(?i:c)\d{4}\z");
         private static readonly Regex _objPattern = new Regex(@"\A(?i:o)\d{6}\z");
         private static readonly Regex _objShortPattern = new Regex(@"\A(?i:o)\d{4}\z");
-        private static readonly Regex _partsPattern = new Regex(@"\A(?i:\w{2})_(?i:[AFM])_\d+\z");
+        private static readonly Regex _partsPattern = new Regex(@"\A(?i:\w{2})_(?i:[AFM])_\d{4}\z");
         public static TexId? FromTexture(FLVER2.Texture texture, string? flverPath = null)
         {
             var name = Path.GetFileNameWithoutExtension(texture.Path);
@@ -120,6 +130,23 @@ namespace DS3TexUpUI
         public static bool operator <=(TexId a, TexId b) => a.CompareTo(b) <= 0;
         public static bool operator >(TexId a, TexId b) => a.CompareTo(b) > 0;
         public static bool operator >=(TexId a, TexId b) => a.CompareTo(b) >= 0;
+
+        public ReadOnlySpan<char> GetInGameName()
+        {
+            var c = Category;
+
+            if (c == "chr") return Name.Slice(6);
+            if (c.Length == 3 && c[0] == 'm' && c[1].IsDigit() && c[2].IsDigit()) return Name;
+            if (c == "obj") return Name.Slice(8);
+            if (c == "parts") return Name.Slice(10);
+            if (c == "sfx") {
+                if (Name.StartsWith("commoneffects")) return Name.Slice(14);
+                if (Name.StartsWith("dlc")) return Name.Slice(5);
+                if (Name.StartsWith("m")) return Name.Slice(4);
+            }
+
+            throw new Exception("Unknown tex id pattern.");
+        }
 
         public TexKind GetTexKind()
         {

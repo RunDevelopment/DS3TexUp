@@ -183,5 +183,7 @@ namespace DS3TexUpUI
         {
             return Math.Clamp((f - eMin) / (eMax - eMin), 0, 1);
         }
+
+        public static bool IsDigit(this char c) => c >= '0' && c <= '9';
     }
 }
