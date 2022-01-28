@@ -168,6 +168,28 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyDictionary<string, HashSet<TexId>> Homographs
+            = DataFile(@"homographs.json").LoadJsonFile<Dictionary<string, HashSet<TexId>>>();
+        internal static Action<SubProgressToken> CreateHomographIndex(Workspace w)
+        {
+            return token =>
+            {
+                var homographs = OriginalSize.Keys
+                    .GroupBy(id => id.GetInGameName())
+                    .Select(g =>
+                    {
+                        var l = g.ToList();
+                        l.Sort();
+                        return (g.Key, l);
+                    })
+                    .Where(p => p.l.Count >= 2)
+                    .ToDictionary(p => p.Key, p => p.l);
+
+                token.SubmitStatus("Saving JSON");
+                homographs.SaveAsJson(DataFile(@"homographs.json"));
+            };
+        }
+
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
             = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
 

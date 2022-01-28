@@ -131,21 +131,36 @@ namespace DS3TexUpUI
         public static bool operator >(TexId a, TexId b) => a.CompareTo(b) > 0;
         public static bool operator >=(TexId a, TexId b) => a.CompareTo(b) >= 0;
 
-        public ReadOnlySpan<char> GetInGameName()
+        public string GetInGameName()
+        {
+            return GetInGameNameSlice().ToString().ToLowerInvariant();
+        }
+        private ReadOnlySpan<char> GetInGameNameSlice()
         {
             var c = Category;
 
-            if (c == "chr") return Name.Slice(6);
+            if (c.Equals("chr", StringComparison.Ordinal)) return Name.Slice(6);
             if (c.Length == 3 && c[0] == 'm' && c[1].IsDigit() && c[2].IsDigit()) return Name;
-            if (c == "obj") return Name.Slice(8);
-            if (c == "parts") return Name.Slice(10);
-            if (c == "sfx") {
+            if (c.Equals("obj", StringComparison.Ordinal)) return Name.Slice(8);
+            if (c.Equals("parts", StringComparison.Ordinal)) return Name.Slice(10);
+            if (c.Equals("sfx", StringComparison.Ordinal))
+            {
                 if (Name.StartsWith("commoneffects")) return Name.Slice(14);
                 if (Name.StartsWith("dlc")) return Name.Slice(5);
                 if (Name.StartsWith("m")) return Name.Slice(4);
             }
 
-            throw new Exception("Unknown tex id pattern.");
+            throw new Exception($"Unknown tex id pattern {this}.");
+        }
+        public IReadOnlyCollection<TexId> GetHomographs()
+        {
+            if (DS3.Homographs.TryGetValue(GetInGameName(), out var homographs))
+            {
+                if (!homographs.Contains(this))
+                    homographs = new HashSet<TexId>(homographs) { this };
+                return homographs;
+            }
+            return new HashSet<TexId>() { this };
         }
 
         public TexKind GetTexKind()
