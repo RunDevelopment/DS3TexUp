@@ -8,6 +8,7 @@ using SoulsFormats;
 using SixLabors.ImageSharp;
 using Pfim;
 using SixLabors.ImageSharp.PixelFormats;
+using System.Numerics;
 
 #nullable enable
 
@@ -1549,20 +1550,25 @@ namespace DS3TexUpUI
             return token =>
             {
                 var index = new Dictionary<TexId, List<TexId>>();
-                Action<TexId?, TexId?> AddToIndex = (normal, albedo) =>
+                void AddToIndex((IReadOnlyCollection<TexId> ids, Vector2 scale) normal, (IReadOnlyCollection<TexId> ids, Vector2 scale) albedo)
                 {
-                    if (normal != null && albedo != null)
+                    if (normal.scale != albedo.scale)
                     {
-                        var n = normal.Value;
-                        var a = albedo.Value;
-                        a = a.GetRepresentative();
-                        if (!n.IsSolidColor() && !a.IsSolidColor())
+                        return;
+                    }
+
+                    foreach (var a in albedo.ids.Select(id => id.GetRepresentative()))
+                    {
+                        foreach (var n in normal.ids)
                         {
-                            if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))
+                            if (!n.IsSolidColor() && !a.IsSolidColor())
                             {
-                                if (SizeRatio.Of(nSize) == SizeRatio.Of(aSize))
+                                if (DS3.OriginalSize.TryGetValue(n, out var nSize) && DS3.OriginalSize.TryGetValue(a, out var aSize))
                                 {
-                                    index.GetOrAdd(normal.Value).Add(albedo.Value);
+                                    if (SizeRatio.Of(nSize) == SizeRatio.Of(aSize))
+                                    {
+                                        index.GetOrAdd(n).Add(a);
+                                    }
                                 }
                             }
                         }
@@ -1572,20 +1578,20 @@ namespace DS3TexUpUI
                 token.SubmitStatus($"Analysing flver files");
                 foreach (var info in DS3.ReadAllFlverMaterialInfo())
                 {
-                    var a = new List<(TexId? id, string type)>();
-                    var n = new List<(TexId? id, string type)>();
+                    var a = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();
+                    var n = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();
                     foreach (var mat in info.Materials)
                     {
                         a.Clear();
                         n.Clear();
                         foreach (var tex in mat.Textures)
                         {
-                            var i = TexId.FromTexture(tex, info.FlverPath);
+                            var i = TexId.FromTexturePath(tex, info.FlverPath);
                             var kind = DS3.TextureTypeToTexKind.GetOrDefault(tex.Type, TexKind.Unknown);
                             if (kind == TexKind.Albedo)
-                                a.Add((i, tex.Type));
+                                a.Add(((i, tex.Scale), tex.Type));
                             else if (kind == TexKind.Normal)
-                                n.Add((i, tex.Type));
+                                n.Add(((i, tex.Scale), tex.Type));
                         }
 
                         if (a.Count == 0 || n.Count == 0) continue;
@@ -1653,7 +1659,7 @@ namespace DS3TexUpUI
                 foreach (var id in DS3.OriginalSize.Keys)
                 {
                     if (id.GetTexKind() == TexKind.Normal && id.Name.EndsWith("_n") && !index.ContainsKey(id) && !forbidden.Contains(id))
-                        AddToIndex(id, GetAlbedoByName(id));
+                        AddToIndex((id.GetHomographs(), Vector2.One), (GetAlbedoByName(id).GetHomographs(), Vector2.One));
                 }
 
                 // token.SubmitStatus("Saving JSON");
@@ -1678,7 +1684,7 @@ namespace DS3TexUpUI
                         var maxA = byCount.Where(kv => kv.Value == maxCount).First().Key;
                         var certainPercentage = (maxCount - 1) / (double)ids.Count;
 
-                        if (certainPercentage >= 0.65)
+                        if (certainPercentage >= 0.60)
                         {
                             certain[n] = maxA;
                             continue;
