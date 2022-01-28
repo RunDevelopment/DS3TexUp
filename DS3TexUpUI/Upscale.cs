@@ -15,9 +15,15 @@ namespace DS3TexUpUI
 {
     public class UpscaleProject
     {
-        public Workspace Workspace { get; set; }
-        public UpscaledTextures Textures { get; set; }
+        public Workspace Workspace { get; }
+        public UpscaledTextures Textures { get; set; } = new UpscaledTextures();
         public string TemporaryDir { get; set; }
+
+        public UpscaleProject(Workspace workspace)
+        {
+            Workspace = workspace;
+            TemporaryDir = Path.Join(workspace.TextureDir, "temp");
+        }
 
         public void WriteDDS(TexId id, int upscale)
         {
@@ -180,7 +186,22 @@ namespace DS3TexUpUI
                     CheckWidth(albedoId, upscale, targetWidth, albedoWidth, "normal albedo");
                     var normalAlbedoImage = DS3NormalMap.Of(albedo.LoadTextureMap()).Normals.Clone();
                     EnsureWidth(ref normalAlbedoImage, targetWidth, Average.Normal, albedoId, "normal albedo");
-                    normalImage.CombineWith(normalAlbedoImage, 0.5f);
+
+                    const float MaxStrength = 0.75f;
+                    if (TryGetAlpha(albedoId, upscale, targetWidth, out var albedoAlphaImage))
+                    {
+                        // we want to take the alpha of the albedo into account when applying the normal map
+                        albedoAlphaImage = albedoAlphaImage.Blur(1);
+                        var strength = new float[albedoAlphaImage.Count].AsTextureMap(targetWidth);
+                        for (int i = 0; i < strength.Data.Length; i++)
+                            strength[i] = Math.Min(1f, albedoAlphaImage[i] / 63f) * MaxStrength;
+                        normalImage.CombineWith(normalAlbedoImage, strength);
+                    }
+                    else
+                    {
+                        // the easy part
+                        normalImage.CombineWith(normalAlbedoImage, MaxStrength);
+                    }
                 }
             }
 
@@ -215,17 +236,16 @@ namespace DS3TexUpUI
 
     public class UpscaledTextures
     {
-        public TexOverrideList Alpha { get; set; }
-        public TexOverrideList Albedo { get; set; }
+        public TexOverrideList Alpha { get; set; } = new TexOverrideList();
+        public TexOverrideList Albedo { get; set; } = new TexOverrideList();
 
-        public TexOverrideList NormalNormal { get; set; }
-        public TexOverrideList NormalGloss { get; set; }
-        public TexOverrideList NormalHeight { get; set; }
-        public TexOverrideList NormalAlbedo { get; set; }
-        public string Normal { get; set; }
+        public TexOverrideList NormalNormal { get; set; } = new TexOverrideList();
+        public TexOverrideList NormalGloss { get; set; } = new TexOverrideList();
+        public TexOverrideList NormalHeight { get; set; } = new TexOverrideList();
+        public TexOverrideList NormalAlbedo { get; set; } = new TexOverrideList();
 
-        public TexOverrideList Reflective { get; set; }
-        public TexOverrideList Emissive { get; set; }
-        public TexOverrideList Shininess { get; set; }
+        public TexOverrideList Reflective { get; set; } = new TexOverrideList();
+        public TexOverrideList Emissive { get; set; } = new TexOverrideList();
+        public TexOverrideList Shininess { get; set; } = new TexOverrideList();
     }
 }

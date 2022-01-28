@@ -143,6 +143,15 @@ namespace DS3TexUpUI
             for (int i = 0; i < count; i++)
                 map[i] = Normal.HeightMapAddition(map[i], 1f, other[i], strength);
         }
+        public static void CombineWith(this ITextureMap<Normal> map, ITextureMap<Normal> other, ITextureMap<float> strength)
+        {
+            map.CheckSameSize(other);
+            map.CheckSameSize(strength);
+
+            var count = map.Count;
+            for (int i = 0; i < count; i++)
+                map[i] = Normal.HeightMapAddition(map[i], 1f, other[i], strength[i]);
+        }
     }
 
     public readonly struct Normal
