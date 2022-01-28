@@ -170,7 +170,7 @@ namespace DS3TexUpUI
 
         public static IReadOnlyDictionary<string, HashSet<TexId>> Homographs
             = DataFile(@"homographs.json").LoadJsonFile<Dictionary<string, HashSet<TexId>>>();
-        internal static Action<SubProgressToken> CreateHomographIndex(Workspace w)
+        internal static Action<SubProgressToken> CreateHomographIndex()
         {
             return token =>
             {
@@ -182,7 +182,6 @@ namespace DS3TexUpUI
                         l.Sort();
                         return (g.Key, l);
                     })
-                    .Where(p => p.l.Count >= 2)
                     .ToDictionary(p => p.Key, p => p.l);
 
                 token.SubmitStatus("Saving JSON");
