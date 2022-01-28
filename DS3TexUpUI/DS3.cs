@@ -62,10 +62,14 @@ namespace DS3TexUpUI
                 {
                     foreach (var tex in mat.Textures)
                     {
-                        var id = TexId.FromTexture(tex, info.FlverPath);
                         var kind = TextureTypeToTexKind.GetOrDefault(tex.Type, TexKind.Unknown);
-                        if (id != null && kind != TexKind.Unknown)
-                            yield return (id.Value, kind);
+                        if (kind != TexKind.Unknown)
+                        {
+                            foreach (var id in TexId.FromTexturePath(tex, info.FlverPath))
+                            {
+                                yield return (id, kind);
+                            }
+                        }
                     }
                 }
             }
@@ -133,7 +137,6 @@ namespace DS3TexUpUI
             return token =>
             {
                 var list = OriginalFormat
-                    .Where(p => !Unused.Contains(p.Key))
                     .GroupBy(p => p.Key.GetTexKind())
                     .OrderBy(p => (int)p.Key)
                     .Select(g =>
@@ -543,7 +546,7 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<TexId, TexId> RepresentativeOf
             = DataFile(@"representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         public static IReadOnlyCollection<TexId> Representatives = RepresentativeOf.Values.ToHashSet();
-        internal static Action<SubProgressToken> CreateRepresentativeIndex(Workspace w)
+        internal static Action<SubProgressToken> CreateRepresentativeIndex()
         {
             return token =>
             {
@@ -1511,9 +1514,10 @@ namespace DS3TexUpUI
                     {
                         foreach (var tex in mat.Textures)
                         {
-                            var id = TexId.FromTexture(tex, info.FlverPath);
-                            if (id != null)
-                                usage.GetOrAdd(id.Value).GetOrAdd(info.FlverPath).Add(mat.Name);
+                            foreach (var id in TexId.FromTexturePath(tex, info.FlverPath))
+                            {
+                                usage.GetOrAdd(id).GetOrAdd(info.FlverPath).Add(mat.Name);
+                            }
                         }
                     }
                 }
@@ -1525,14 +1529,12 @@ namespace DS3TexUpUI
 
         public static IReadOnlyCollection<TexId> Unused
             = DataFile(@"unused.json").LoadJsonFile<HashSet<TexId>>();
-        internal static Action<SubProgressToken> CreateUnused(Workspace w)
+        internal static Action<SubProgressToken> CreateUnused()
         {
             return token =>
             {
                 token.SubmitStatus($"Searching for files");
-                var files = Directory.GetFiles(w.ExtractDir, "*.dds", SearchOption.AllDirectories);
-
-                var unused = files.Select(TexId.FromPath).Where(id => !UsedBy.ContainsKey(id)).ToList();
+                var unused = DS3.OriginalSize.Keys.Where(id => !UsedBy.ContainsKey(id)).ToList();
                 unused.Sort();
 
                 token.SubmitStatus("Saving copies JSON");

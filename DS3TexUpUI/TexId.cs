@@ -50,6 +50,22 @@ namespace DS3TexUpUI
             return new TexId($"{dir}/{name}");
         }
 
+        public static IReadOnlyCollection<TexId> FromTexturePath(FLVER2.Texture texture, string? flverPath = null)
+        {
+            var key = Path.GetFileNameWithoutExtension(texture.Path).ToLowerInvariant();
+            var id = FromTexture(texture, flverPath);
+
+            if (DS3.Homographs.TryGetValue(key, out var homographs))
+            {
+                if (id != null && !homographs.Contains(id.Value))
+                    homographs = new HashSet<TexId>(homographs) { id.Value };
+                return homographs;
+            }
+
+            homographs = new HashSet<TexId>();
+            if (id != null) homographs.Add(id.Value);
+            return homographs;
+        }
         private static readonly Regex _mapPattern = new Regex(@"\A(?i:m)\d{2}\z");
         private static readonly Regex _chrPattern = new Regex(@"\A(?i:c)\d{4}\z");
         private static readonly Regex _objPattern = new Regex(@"\A(?i:o)\d{6}\z");
