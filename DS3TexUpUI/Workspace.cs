@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.IO;
 using System.Text;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
 
 namespace DS3TexUpUI
 {
@@ -469,17 +471,56 @@ namespace DS3TexUpUI
         private void OverwriteValidSet(SubProgressToken token, HashSet<TexId> overwrite)
         {
             token.SubmitStatus($"Restoring previous overwrites");
-            var restore = File.Exists(LastOverwritesFile) ? LastOverwritesFile.LoadJsonFile<HashSet<TexId>>() : new HashSet<TexId>();
-            restore.ExceptWith(overwrite);
-            token.SubmitStatus($"Restoring {restore.Count} previous overwrites");
+            var lastOverwrites = File.Exists(LastOverwritesFile)
+                ? LastOverwritesFile.LoadJsonFile<Dictionary<TexId, string>>()
+                : new Dictionary<TexId, string>();
+
+            token.SubmitStatus($"Restoring previous overwrites");
+            var restore = lastOverwrites.Keys.Except(overwrite).ToList();
+            SetEmpty(lastOverwrites, restore);
+            lastOverwrites.SaveAsJson(LastOverwritesFile);
             token.Reserve(0.33).ForAllParallel(restore, id => File.Copy(GetExtractPath(id), GetGamePath(id), true));
 
-            token.SubmitStatus($"Overwriting files");
-            overwrite.SaveAsJson(LastOverwritesFile);
-            token.SubmitStatus($"Overwriting {overwrite.Count} textures");
-            token.Reserve(0.5).ForAllParallel(overwrite, id => File.Copy(GetOverwritePath(id), GetGamePath(id), true));
+            token.SubmitStatus($"Filtering out unchanged overwrites");
+            var newOverwrites = new Dictionary<TexId, string>();
+            token.Reserve(0.1).ForAllParallel(overwrite, id =>
+            {
+                var oldHash = lastOverwrites.GetOrDefault(id, "");
+                var newHash = HashFile(GetOverwritePath(id));
+                if (oldHash != newHash)
+                {
+                    lock (newOverwrites)
+                    {
+                        newOverwrites[id] = newHash;
+                    }
+                }
+            });
 
-            Repack(token, overwrite.Union(restore).ToHashSet());
+            token.SubmitStatus($"Overwriting textures");
+            SetEmpty(lastOverwrites, newOverwrites.Keys);
+            lastOverwrites.SaveAsJson(LastOverwritesFile);
+            token.Reserve(0.33).ForAllParallel(newOverwrites.Keys, id => File.Copy(GetOverwritePath(id), GetGamePath(id), true));
+
+            Repack(token, newOverwrites.Keys.Union(restore).ToHashSet());
+
+            token.SubmitStatus($"Saving overwrites log");
+            restore.ForEach(id => lastOverwrites.Remove(id));
+            foreach (var (id, hash) in newOverwrites)
+                lastOverwrites[id] = hash;
+            lastOverwrites.SaveAsJson(LastOverwritesFile);
+
+            static string HashFile(string path)
+            {
+                using var md5 = MD5.Create();
+                using var stream = File.OpenRead(path);
+                var hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            }
+            static void SetEmpty(Dictionary<TexId, string> d, IEnumerable<TexId> ids)
+            {
+                foreach (var id in ids)
+                    d[id] = "";
+            }
         }
         private void Repack(SubProgressToken token, HashSet<TexId> textures)
         {
