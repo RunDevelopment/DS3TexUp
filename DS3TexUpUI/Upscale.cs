@@ -42,7 +42,7 @@ namespace DS3TexUpUI
                     WriteSRGB(id, upscale, Textures.Shininess, "shininess");
                     break;
                 case TexKind.Emissive:
-                    WriteSRGB(id, upscale, Textures.Emissive, "emissive");
+                    WriteEmissive(id, upscale, Textures.Emissive, "emissive");
                     break;
                 default:
                     throw new Exception($"Unsupported tex kind {id.GetTexKind()} for {id}.");
@@ -153,6 +153,39 @@ namespace DS3TexUpUI
             }
 
             var image = tex.LoadTextureMap();
+            EnsureWidth(ref image, targetWidth, Average.Rgba32GammaAlpha, id, kind);
+
+            // set alpha
+            if (TryGetAlpha(id, upscale, targetWidth, out var alphaImage))
+                image.SetAlpha(alphaImage);
+
+            // create temporary file.
+            var targetFile = GetTempPngFile(id);
+            image.SaveAsPng(targetFile);
+
+            ToDDS(id, targetFile, deleteAfter: true);
+        }
+
+        private void WriteEmissive(TexId id, int upscale, TexOverrideList source, string kind)
+        {
+            var targetWidth = GetTargetWidth(id, upscale);
+
+            var tex = GetFile(source, id.GetRepresentative());
+            var texWidth = GetPngWidth(tex);
+            CheckWidth(id, upscale, targetWidth, texWidth, kind);
+
+            var image = tex.LoadTextureMap();
+
+            // The upscaling sometimes causes a very slight noise. This isn't noticeable in the PNG but it is in the
+            // DDS to due color quantization artifacts. This can cause noticeable decolourings. The noise added is a
+            // consistent rgb=(1,2,1).
+            foreach (ref var p in image.Data.AsSpan())
+            {
+                p.R = (byte)Math.Max(0, (int)((p.R - 1) * 255f / 254));
+                p.G = (byte)Math.Max(0, (int)((p.G - 2) * 255f / 253));
+                p.B = (byte)Math.Max(0, (int)((p.B - 1) * 255f / 254));
+            }
+
             EnsureWidth(ref image, targetWidth, Average.Rgba32GammaAlpha, id, kind);
 
             // set alpha
