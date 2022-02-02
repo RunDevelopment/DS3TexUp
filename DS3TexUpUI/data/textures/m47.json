@@ -1,0 +1,1508 @@
+[
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_000010-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_000010\\Model\\m47_00_00_00_000010.flver",
+		"Materials": [
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o4800_wall01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a",
+					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_brickWall_03_n",
+					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n",
+					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "brick",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000010_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_000113-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_000113\\Model\\m47_00_00_00_000113.flver",
+		"Materials": [
+			{
+				"Name": "o4800_roof01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_roof_01_a",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_o309100_roof_01_n",
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+				}
+			},
+			{
+				"Name": "o4800_wall01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a",
+					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_brickWall_03_n",
+					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n",
+					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			},
+			{
+				"Name": "Material #149479305",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_edge_01_a",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_o309100_edge_01_n",
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+				}
+			},
+			{
+				"Name": "o309120_frame_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149479328",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m40_00_wall_012_a",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m40_00_wall_012_n",
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+				}
+			},
+			{
+				"Name": "\u738B\u57CE2\u6C4E\u7528\u58C1_2m",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o309100_wall_01_a",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o309100_wall_03_a",
+					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o309100_wall_01_n",
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o309100_wall_03_n",
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m47/m47_00_o309100_wall_01_r",
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m47/m47_00_o309100_wall_03_r",
+					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m47/m47_00_o309100_wall_01_s",
+					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m47/m47_00_o309100_wall_03_s"
+				}
+			},
+			{
+				"Name": "o309110_edge_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o309100_edge_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o309100_edge_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o309110_frame_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o309110_frame_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o309110_frame_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o309110_frame_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o309110_frame_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o309110_frame_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o309120_frame_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o309320_frame_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o309320_frame_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o309320_frame_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o309100_edge_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309100_edge_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309100_edge_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "brick",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000113_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_000300-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_000300\\Model\\m47_00_00_00_000300.flver",
+		"Materials": [
+			{
+				"Name": "Weapon",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o302550_weapon_a",
+					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000300_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000300_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o302550_body",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o302550_weapon_a",
+					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000300_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m000300_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003000-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003000\\Model\\m47_00_00_00_003000.flver",
+		"Materials": [
+			{
+				"Name": "Material #2",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003000_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003000_gi_0000_00_dol_01.tif",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_m40_00_x_ground_03_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a",
+					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m47/m47_00_m40_00_x_floor_03_white_a",
+					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_ash_01_m",
+					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_ash_100_n",
+					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_m40_00_x_ground_02_n",
+					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m47/m47_00_m40_00_x_floor_03_white_n",
+					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			},
+			{
+				"Name": "Material #4",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003000_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003000_gi_0000_00_dol_01.tif",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364045_wall_01_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a",
+					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_ash_01_m",
+					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_ash_100_n",
+					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364045_wall_01_n",
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_055_055_055_r.tif",
+					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003001-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003001\\Model\\m47_00_00_00_003001.flver",
+		"Materials": [
+			{
+				"Name": "m41_00_o364040_bark_03",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003001_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003001_gi_0000_00_dol_01.tif",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a",
+					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base2_a.tif",
+					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_o324110_mask_image_m",
+					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364040_bark_03_n",
+					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364040_moss_n",
+					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n",
+					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_n.tif",
+					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			},
+			{
+				"Name": "Material #4",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003001_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003001_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003002-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003002\\Model\\m47_00_00_00_003002.flver",
+		"Materials": [
+			{
+				"Name": "m41_00_o364040_bark_03",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003002_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003002_gi_0000_00_dol_01.tif",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a",
+					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base2_a.tif",
+					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_o324110_mask_image_m",
+					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364040_bark_03_n",
+					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364040_moss_n",
+					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n",
+					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_n.tif",
+					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_r.tif",
+					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif",
+					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+				}
+			},
+			{
+				"Name": "Material #1",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003002_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003002_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003070-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003070\\Model\\m47_00_00_00_003070.flver",
+		"Materials": [
+			{
+				"Name": "Material #4843",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_e_grass.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a"
+				}
+			},
+			{
+				"Name": "Material #4845",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_e_grass.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a"
+				}
+			},
+			{
+				"Name": "Material #4848",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m27_00_grass_002_n",
+					"g_EmissiveTexture": "m47/m47_00_m27_00_grass_002_emissive_a",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+				}
+			},
+			{
+				"Name": "Material #4849",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m27_00_m22_00_house_700_500_n",
+					"g_EmissiveTexture": "m47/m47_00_m27_00_m22_00_house_700_500_emissive_a",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003071-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003071\\Model\\m47_00_00_00_003071.flver",
+		"Materials": [
+			{
+				"Name": "Material #4843",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_e_grass.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a"
+				}
+			},
+			{
+				"Name": "Material #4845",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_e_grass.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a"
+				}
+			},
+			{
+				"Name": "Material #4848",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m27_00_grass_002_n",
+					"g_EmissiveTexture": "m47/m47_00_m27_00_grass_002_emissive_a",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+				}
+			},
+			{
+				"Name": "Material #4849",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m27_00_m22_00_house_700_500_n",
+					"g_EmissiveTexture": "m47/m47_00_m27_00_m22_00_house_700_500_emissive_a",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003080-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003080\\Model\\m47_00_00_00_003080.flver",
+		"Materials": [
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o324102_07",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o329222_pubble",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003080_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003081-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003081\\Model\\m47_00_00_00_003081.flver",
+		"Materials": [
+			{
+				"Name": "Material #149480396",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003081_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003081_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480397",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003081_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003081_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003082-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003082\\Model\\m47_00_00_00_003082.flver",
+		"Materials": [
+			{
+				"Name": "o324102_07",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o329222_pubble",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003082_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003083-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003083\\Model\\m47_00_00_00_003083.flver",
+		"Materials": [
+			{
+				"Name": "o324102_07",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o329222_pubble",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003083_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003084-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003084\\Model\\m47_00_00_00_003084.flver",
+		"Materials": [
+			{
+				"Name": "o324102_07",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o329222_pubble",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003084_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003085-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003085\\Model\\m47_00_00_00_003085.flver",
+		"Materials": [
+			{
+				"Name": "o324102_07",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o329222_pubble",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480386",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #149480388",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003085_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003086-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003086\\Model\\m47_00_00_00_003086.flver",
+		"Materials": [
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003086_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003086_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003087-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003087\\Model\\m47_00_00_00_003087.flver",
+		"Materials": [
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364040_bark_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364040_bark_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003087_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003087_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003088-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003088\\Model\\m47_00_00_00_003088.flver",
+		"Materials": [
+			{
+				"Name": "o364041_bark",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003088_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003088_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003088_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003088_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003089-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003089\\Model\\m47_00_00_00_003089.flver",
+		"Materials": [
+			{
+				"Name": "o364041_weeds_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "wall_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "Material #148",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
+				"Textures": {
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_01.tif",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364045_wall_01_a",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_blendmask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364045_wall_01_n",
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_020_020_020_r.tif",
+					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_08_s.tif",
+					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+				}
+			},
+			{
+				"Name": "Material #14",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003089_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003091-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003091\\Model\\m47_00_00_00_003091.flver",
+		"Materials": [
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003091_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003091_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003092-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003092\\Model\\m47_00_00_00_003092.flver",
+		"Materials": [
+			{
+				"Name": "o364045_bark_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003092_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003092_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003093-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003093\\Model\\m47_00_00_00_003093.flver",
+		"Materials": [
+			{
+				"Name": "Material #144",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003093_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003093_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003094-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003094\\Model\\m47_00_00_00_003094.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003094_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003094_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003094_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003094_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003095-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003095\\Model\\m47_00_00_00_003095.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003095_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003096-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003096\\Model\\m47_00_00_00_003096.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003096_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003097-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003097\\Model\\m47_00_00_00_003097.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003097_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003098-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003098\\Model\\m47_00_00_00_003098.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003098_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003098_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003098_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003098_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003099-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003099\\Model\\m47_00_00_00_003099.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003099_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003099_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003099_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003099_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003100-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003100\\Model\\m47_00_00_00_003100.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003100_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003100_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003100_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003100_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003101-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003101\\Model\\m47_00_00_00_003101.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003101_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003102-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003102\\Model\\m47_00_00_00_003102.flver",
+		"Materials": [
+			{
+				"Name": "0364045_treeroot_01",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "o364045_treeroot_02",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_01.tif"
+				}
+			},
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003102_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_003103-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_003103\\Model\\m47_00_00_00_003103.flver",
+		"Materials": [
+			{
+				"Name": "treehole",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_050_050_050_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_DOLTexture1": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003103_gi_0000_00_dol_00.tif",
+					"g_DOLTexture2": "n:\\fdp\\data\\model\\map\\m47_00_00_00\\tex\\47000000_m003103_gi_0000_00_dol_01.tif"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_009005-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_009005\\Model\\m47_00_00_00_009005.flver",
+		"Materials": [
+			{
+				"Name": "Material #271",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_NoLight.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_sky_05_a"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_010000-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_010000\\Model\\m47_00_00_00_010000.flver",
+		"Materials": [
+			{
+				"Name": "\u3082\u3084_\u524D",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_al_m_NoLight_Opacity.mtd",
+				"Textures": {
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_storm_50_a",
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_4_GSBlendMap_OpacityTexture1": "m47/m47_00_kumo_02_m",
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_5_GSBlendMap_OpacityTexture2": "m47/m47_00_kumo_02_m"
+				}
+			},
+			{
+				"Name": "\u3082\u3084_\u6700\u5965",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_al_m_NoLight_Opacity.mtd",
+				"Textures": {
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_storm_50_a",
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_4_GSBlendMap_OpacityTexture1": "m47/m47_00_kumo_02_m",
+					"Fujir_Nolight_OpacityBlend_snp_Texture2D_5_GSBlendMap_OpacityTexture2": "m47/m47_00_kumo_02_m"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_901000-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_901000\\Model\\m47_00_00_00_901000.flver",
+		"Materials": [
+			{
+				"Name": "\u5C71\u30D6\u30EC\u30F3\u30C93",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m32_00_Mountain_a",
+					"g_DiffuseTexture2": "m47/m47_00_m32_00_Outside_Snow_a",
+					"g_SpecularTexture": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_SpecularTexture2": "N:\\FDP\\data\\Other\\SysTex\\Reflectance_060_060_060_r.tif",
+					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+					"g_ShininessTexture2": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
+					"g_BumpmapTexture": "m47/m47_00_m37_00_Mountain_102_n",
+					"g_BumpmapTexture2": "m47/m47_00_m37_00_Mountain_102_n",
+					"g_DetailBumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+					"g_DetailBumpmapTexture2": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga",
+					"g_BlendMaskTexture": "m47/m47_00_m37_00_Mountain_100_m"
+				}
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m47_00_00_00\\m47_00_00_00_902000-mapbnd-dcx\\map\\m47_00_00_00\\m47_00_00_00_902000\\Model\\m47_00_00_00_902000.flver",
+		"Materials": [
+			{
+				"Name": "mtns_04",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_al_NoLight.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m40_00_mountain_04_382_a"
+				}
+			},
+			{
+				"Name": "Material #5",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[A]_NoLight.mtd",
+				"Textures": {
+					"g_DiffuseTexture": "m47/m47_00_m40_00_mountain_04_382_a"
+				}
+			}
+		]
+	}
+]

@@ -1714,6 +1714,53 @@ namespace DS3TexUpUI
                 foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
                     yield return item;
         }
+        internal static Action<IProgressToken> GenerateFlverTextureInfoFiles()
+        {
+            return token =>
+            {
+                token.SubmitStatus("Converting files");
+                token.ForAllParallel(Directory.GetFiles(DataFile(@"materials"), "*.json"), file =>
+                {
+                    var items = file.LoadJsonFile<List<FlverMaterialInfo>>().Select(info =>
+                    {
+                        var result = new FlverTextureInfo() { FlverPath = info.FlverPath };
+                        result.Materials.AddRange(info.Materials.Select(mat =>
+                        {
+                            var result = new FlverTextureInfo.Material()
+                            {
+                                Name = mat.Name,
+                                MTD = mat.MTD,
+                            };
+                            foreach (var tex in mat.Textures)
+                            {
+                                var id = TexId.FromTexture(tex, info.FlverPath);
+                                result.Textures[tex.Type] = id != null ? id.Value.ToString() : tex.Path;
+                            }
+
+                            return result;
+                        }));
+                        return result;
+                    }).ToList();
+
+                    var targetDir = DataFile(@"textures");
+                    Directory.CreateDirectory(targetDir);
+                    items.SaveAsJson(Path.Join(targetDir, Path.GetFileName(file)));
+                });
+            };
+        }
+        private class FlverTextureInfo
+        {
+            public string? FlverPath { get; set; }
+            public List<Material> Materials { get; } = new List<Material>();
+
+            public class Material
+            {
+                public string? Name { get; set; }
+                public string? MTD { get; set; }
+                public Dictionary<string, string> Textures { get; set; } = new Dictionary<string, string>();
+            }
+
+        }
 
 
         private static Action<SubProgressToken> CreateExtractedFilesIndexJson<T>(Workspace w, string outputFile, Func<string, T> valueSector)
