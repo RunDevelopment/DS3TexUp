@@ -12,13 +12,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -26,7 +20,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324100_a",
-					"g_SpecularTexture": "m53/m53_00_o324100_r",
 					"g_BumpmapTexture": "m53/m53_00_o324100_n"
 				}
 			},
@@ -72,7 +65,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -82,7 +74,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -97,7 +88,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -107,7 +97,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -122,12 +111,7 @@
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324000_wall_ancient_02_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324000_wall_01_n",
 					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o329220_05_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324000_wall_ancient_02_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324000_wall_01_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o329220_05_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324000_wall_ancient_02_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324000_wall_01_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o329220_05_s"
+					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324000_wall_ancient_02_r"
 				}
 			},
 			{
@@ -135,8 +119,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_3_n"
 				}
 			},
@@ -145,8 +127,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_4_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_4_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_4_n"
 				}
 			},
@@ -156,7 +136,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324013_grace_04_a",
 					"g_SpecularTexture": "m53/m53_00_o324013_grace_04_r",
-					"g_ShininessTexture": "m53/m53_00_o324013_grace_04_s",
 					"g_BumpmapTexture": "m53/m53_00_o324013_grace_04_n"
 				}
 			},
@@ -169,10 +148,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324013_wall_07_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324000_wall_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324013_wall_07_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324000_wall_02_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324013_wall_07_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324000_wall_02_s"
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324000_wall_02_r"
 				}
 			},
 			{
@@ -181,7 +157,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324013_pillar_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324013_pillar_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324013_pillar_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324013_pillar_01_n"
 				}
 			},
@@ -191,7 +166,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -201,7 +175,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			}
@@ -215,8 +188,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -225,8 +196,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -235,8 +204,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -255,13 +222,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -269,8 +230,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -279,8 +238,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -299,13 +256,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -313,8 +264,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -323,8 +272,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -343,13 +290,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -357,8 +298,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -367,8 +306,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -387,13 +324,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -401,7 +332,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324100_a",
-					"g_SpecularTexture": "m53/m53_00_o324100_r",
 					"g_BumpmapTexture": "m53/m53_00_o324100_n"
 				}
 			},
@@ -469,8 +399,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -485,7 +413,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -495,7 +422,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -505,7 +431,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -519,13 +444,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -533,8 +452,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -543,8 +460,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -559,7 +474,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -573,13 +487,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			}
 		]
@@ -592,8 +500,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -602,8 +508,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -612,8 +516,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -632,13 +534,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -646,8 +542,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -656,8 +550,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -676,13 +568,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -690,8 +576,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -700,8 +584,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -715,8 +597,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -725,8 +605,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -735,8 +613,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -755,9 +631,7 @@
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324000_ground_01_damage_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324005_sand_n",
 					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324000_ground_01_damage_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324005_sand_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324000_ground_01_damage_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324005_sand_s"
+					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324005_sand_r"
 				}
 			},
 			{
@@ -766,7 +640,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			}
@@ -784,18 +657,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -804,7 +669,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -814,7 +678,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -824,7 +687,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cliff_01_a",
 					"g_SpecularTexture": "m53/m53_00_cliff_01_r",
-					"g_ShininessTexture": "m53/m53_00_cliff_01_s",
 					"g_BumpmapTexture": "m53/m53_00_cliff_01_n"
 				}
 			},
@@ -833,8 +695,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -844,7 +704,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -854,7 +713,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -864,7 +722,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -873,14 +730,8 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_et1_l.mtd",
 				"Textures": {
 					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m53/m53_00_o329220_01_f_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o329220_05_f_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o329220_05_m",
-					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329220_01_f_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329220_05_f_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329220_01_f_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329220_05_f_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329220_01_f_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329220_05_f_s"
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329220_01_f_n"
 				}
 			},
 			{
@@ -888,8 +739,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_f_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_f_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_f_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_f_n"
 				}
 			},
@@ -898,8 +747,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329212_a",
-					"g_SpecularTexture": "m53/m53_00_o329212_r",
-					"g_ShininessTexture": "m53/m53_00_o329212_s",
 					"g_BumpmapTexture": "m53/m53_00_o329212_n"
 				}
 			},
@@ -916,14 +763,8 @@
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324102_03_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o324102_02_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o324102_04_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_01_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324102_03_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o324102_02_r",
 					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o324102_04_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324102_01_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o324102_02_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o324102_04_s"
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s"
 				}
 			},
 			{
@@ -936,13 +777,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331303_wall_section_02_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o329210_3_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o329210_3_n"
 				}
 			},
 			{
@@ -955,13 +790,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -969,8 +798,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -979,8 +806,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -989,8 +814,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			},
@@ -999,8 +822,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -1018,18 +839,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -1037,8 +850,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -1048,7 +859,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -1058,7 +868,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -1067,8 +876,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -1077,8 +884,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -1091,9 +896,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -1101,8 +904,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -1121,7 +922,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -1130,8 +930,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -1140,8 +938,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -1155,8 +951,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_railing_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_railing_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_railing_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_railing_n"
 				}
 			},
@@ -1166,7 +960,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -1176,7 +969,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -1185,8 +977,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -1195,8 +985,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -1210,13 +998,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -1224,8 +1006,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_2_n"
 				}
 			},
@@ -1234,8 +1014,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -1249,8 +1027,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_railing_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_railing_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_railing_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_railing_n"
 				}
 			},
@@ -1260,7 +1036,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_grace_01_n"
 				}
 			},
@@ -1270,7 +1045,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -1280,7 +1054,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -1290,7 +1063,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -1300,7 +1072,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_ruins_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_ruins_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_ruins_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_ruins_n"
 				}
 			},
@@ -1310,7 +1081,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -1324,13 +1094,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -1339,7 +1103,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			},
@@ -1349,7 +1112,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -1359,7 +1121,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -1368,8 +1129,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -1379,7 +1138,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -1389,7 +1147,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -1399,7 +1156,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -1409,7 +1165,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -1427,18 +1182,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -1447,7 +1194,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -1456,8 +1202,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -1467,7 +1211,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -1477,7 +1220,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -1486,8 +1228,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -1496,8 +1236,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -1510,9 +1248,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -1520,8 +1256,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -1532,20 +1266,12 @@
 					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m53/m53_00_o324102_04_a",
 					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o324102_03_a",
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_o331303_wall_section_02_a",
-					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base2_a.tif",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324102_03_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_n.tif",
 					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324102_03_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_r.tif",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324102_04_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s"
 				}
 			},
 			{
@@ -1553,8 +1279,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -1573,7 +1297,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -1582,8 +1305,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -1592,8 +1313,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -1608,7 +1327,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -1618,7 +1336,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -1628,7 +1345,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -1638,7 +1354,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -1648,7 +1363,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -1657,8 +1371,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_01_n"
 				}
 			},
@@ -1667,8 +1379,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_02_n"
 				}
 			},
@@ -1677,8 +1387,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -1687,8 +1395,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -1698,7 +1404,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_1_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_1_n"
 				}
 			},
@@ -1708,7 +1413,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_5_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_5_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_5_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_5_n"
 				}
 			},
@@ -1718,7 +1422,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			},
@@ -1730,11 +1433,7 @@
 					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o329210_3_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n"
 				}
 			},
 			{
@@ -1743,7 +1442,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -1752,8 +1450,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -1763,7 +1459,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -1773,7 +1468,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -1782,8 +1476,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -1793,7 +1485,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -1803,7 +1494,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -1813,7 +1503,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -1823,7 +1512,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -1841,18 +1529,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -1860,8 +1540,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -1871,7 +1549,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -1881,7 +1558,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -1890,8 +1566,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -1900,8 +1574,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -1911,7 +1583,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_5_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_5_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_5_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_5_n"
 				}
 			},
@@ -1924,9 +1595,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -1935,7 +1604,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -1944,8 +1612,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -1954,8 +1620,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -1971,20 +1635,12 @@
 					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m53/m53_00_o324102_04_a",
 					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o324102_03_a",
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_o331303_wall_section_02_a",
-					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base2_a.tif",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324102_03_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_n.tif",
 					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324102_03_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_r.tif",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324102_04_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "N:\\FDP\\data\\Material\\sat\\images\\m30_00_base_s.tif"
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s"
 				}
 			},
 			{
@@ -1992,8 +1648,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2003,7 +1657,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -2013,7 +1666,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2023,7 +1675,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2033,7 +1684,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2043,7 +1693,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -2053,7 +1702,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -2063,7 +1711,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -2073,7 +1720,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -2083,7 +1729,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -2098,7 +1743,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -2107,8 +1751,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_03_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_03_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_03_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_03_n"
 				}
 			},
@@ -2118,7 +1760,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2128,7 +1769,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			},
@@ -2138,7 +1778,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -2148,7 +1787,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -2157,8 +1795,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -2167,8 +1803,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -2183,7 +1817,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2193,7 +1826,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2203,7 +1835,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2212,8 +1843,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -2226,9 +1855,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2236,8 +1863,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2247,7 +1872,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			}
@@ -2262,7 +1886,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2272,7 +1895,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2282,7 +1904,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2295,9 +1916,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2305,8 +1924,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2325,7 +1942,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			}
@@ -2340,7 +1956,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2350,7 +1965,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2360,7 +1974,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2369,8 +1982,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -2383,9 +1994,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2393,8 +2002,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2418,7 +2025,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2428,7 +2034,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2438,7 +2043,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2451,9 +2055,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2461,8 +2063,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2485,8 +2085,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_railing_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_railing_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_railing_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_railing_n"
 				}
 			},
@@ -2496,7 +2094,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_grace_01_n"
 				}
 			},
@@ -2506,7 +2103,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2516,7 +2112,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2526,7 +2121,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -2539,9 +2133,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2550,7 +2142,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2559,8 +2150,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -2570,7 +2159,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -2580,7 +2168,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -2590,7 +2177,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -2600,7 +2186,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -2618,18 +2203,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -2638,7 +2215,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -2647,8 +2223,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -2658,7 +2232,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2668,7 +2241,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -2677,14 +2249,8 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_et1_l.mtd",
 				"Textures": {
 					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m53/m53_00_o329220_01_f_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o329220_05_f_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o329220_05_m",
-					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329220_01_f_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329220_05_f_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329220_01_f_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329220_05_f_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329220_01_f_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329220_05_f_s"
+					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329220_01_f_n"
 				}
 			},
 			{
@@ -2692,8 +2258,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_f_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_f_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_f_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_f_n"
 				}
 			},
@@ -2702,8 +2266,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329212_a",
-					"g_SpecularTexture": "m53/m53_00_o329212_r",
-					"g_ShininessTexture": "m53/m53_00_o329212_s",
 					"g_BumpmapTexture": "m53/m53_00_o329212_n"
 				}
 			},
@@ -2720,14 +2282,8 @@
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324102_03_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o324102_02_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o324102_04_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_01_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o324102_03_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o324102_02_r",
 					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o324102_04_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o324102_01_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o324102_02_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o324102_04_s"
+					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o324102_03_s"
 				}
 			},
 			{
@@ -2740,13 +2296,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331303_wall_section_02_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o329210_3_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o329210_3_n"
 				}
 			},
 			{
@@ -2759,13 +2309,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -2773,8 +2317,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2783,8 +2325,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -2793,8 +2333,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			},
@@ -2803,8 +2341,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -2822,18 +2358,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -2841,8 +2369,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -2852,7 +2378,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2862,7 +2387,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -2871,8 +2395,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -2881,8 +2403,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -2895,9 +2415,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -2905,8 +2423,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -2916,7 +2432,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -2925,8 +2440,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -2935,8 +2448,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			},
@@ -2946,7 +2457,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			}
@@ -2961,7 +2471,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -2971,7 +2480,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_arch_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_arch_01_n"
 				}
 			},
@@ -2981,7 +2489,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -2991,7 +2498,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -3001,7 +2507,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -3011,7 +2516,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -3020,8 +2524,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_01_n"
 				}
 			},
@@ -3030,8 +2532,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_02_n"
 				}
 			},
@@ -3040,8 +2540,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3050,8 +2548,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -3061,7 +2557,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_1_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_1_n"
 				}
 			},
@@ -3075,13 +2570,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -3089,8 +2578,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_2_n"
 				}
 			},
@@ -3100,7 +2587,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_5_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_5_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_5_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_5_n"
 				}
 			},
@@ -3110,7 +2596,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			},
@@ -3122,11 +2607,7 @@
 					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o329210_3_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n"
 				}
 			},
 			{
@@ -3134,8 +2615,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -3145,7 +2624,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -3154,8 +2632,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -3165,7 +2641,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -3175,7 +2650,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			}
@@ -3193,18 +2667,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -3212,8 +2678,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -3223,7 +2687,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -3233,7 +2696,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -3242,8 +2704,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -3252,8 +2712,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3266,9 +2724,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -3276,8 +2732,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -3287,7 +2741,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -3296,8 +2749,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -3306,8 +2757,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -3325,18 +2774,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -3345,7 +2786,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -3355,7 +2795,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -3365,7 +2804,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -3374,8 +2812,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -3384,8 +2820,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3398,9 +2832,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -3408,8 +2840,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -3418,8 +2848,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -3428,8 +2856,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			},
@@ -3439,7 +2865,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -3449,7 +2874,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -3459,7 +2883,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -3469,7 +2892,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			},
@@ -3479,7 +2901,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			}
@@ -3493,8 +2914,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -3503,8 +2922,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3513,8 +2930,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -3529,7 +2944,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -3539,7 +2953,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -3549,7 +2962,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -3559,7 +2971,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -3569,7 +2980,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -3578,8 +2988,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_01_n"
 				}
 			},
@@ -3588,8 +2996,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329221_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329221_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329221_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329221_02_n"
 				}
 			},
@@ -3598,8 +3004,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3608,8 +3012,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -3619,7 +3021,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_1_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_1_n"
 				}
 			},
@@ -3633,13 +3034,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -3648,7 +3043,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_5_a",
 					"g_SpecularTexture": "m53/m53_00_o329222_5_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_5_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_5_n"
 				}
 			},
@@ -3658,7 +3052,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			},
@@ -3667,8 +3060,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -3678,7 +3069,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -3687,8 +3077,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -3698,7 +3086,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -3708,7 +3095,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			}
@@ -3723,7 +3109,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -3732,8 +3117,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -3742,8 +3125,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3752,8 +3133,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			},
@@ -3763,7 +3142,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -3773,7 +3151,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -3783,7 +3160,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -3793,7 +3169,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -3811,18 +3186,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -3830,8 +3197,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -3841,7 +3206,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -3851,7 +3215,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -3860,8 +3223,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -3870,8 +3231,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -3884,9 +3243,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -3894,8 +3251,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -3905,7 +3260,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -3914,8 +3268,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -3924,8 +3276,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			},
@@ -3935,7 +3285,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			}
@@ -3953,18 +3302,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -3973,7 +3314,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -3983,7 +3323,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -3992,8 +3331,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -4003,7 +3340,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_grace_01_n"
 				}
 			},
@@ -4013,7 +3349,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -4023,7 +3358,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_pillar_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_pillar_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_pillar_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_pillar_02_n"
 				}
 			},
@@ -4032,8 +3366,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -4042,8 +3374,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -4056,9 +3386,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324102_04_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o324102_04_r"
 				}
 			},
 			{
@@ -4066,8 +3394,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -4077,7 +3403,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -4086,8 +3411,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -4096,8 +3419,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_2_n"
 				}
 			}
@@ -4111,8 +3432,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_railing_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_railing_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_railing_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_railing_n"
 				}
 			},
@@ -4122,7 +3441,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_stone_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_stone_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_stone_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_stone_02_n"
 				}
 			},
@@ -4132,7 +3450,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_steps_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_steps_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_steps_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_steps_n"
 				}
 			},
@@ -4142,7 +3459,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -4156,13 +3472,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4171,7 +3481,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -4181,7 +3490,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_relief_01_a",
 					"g_SpecularTexture": "m53/m53_00_ground_relief_01_r",
-					"g_ShininessTexture": "m53/m53_00_ground_relief_01_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_relief_01_n"
 				}
 			},
@@ -4191,7 +3499,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			},
@@ -4201,7 +3508,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -4211,7 +3517,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			}
@@ -4225,8 +3530,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_railing_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_railing_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_railing_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_railing_n"
 				}
 			},
@@ -4236,7 +3539,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_arch_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_arch_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_arch_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_arch_02_n"
 				}
 			},
@@ -4246,7 +3548,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_grace_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_grace_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_grace_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_grace_02_n"
 				}
 			},
@@ -4256,7 +3557,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_grace_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_grace_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_grace_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_grace_01_n"
 				}
 			},
@@ -4266,7 +3566,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324060_arch_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324060_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324060_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324060_arch_01_n"
 				}
 			},
@@ -4276,7 +3575,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -4286,7 +3584,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_grace_02_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_grace_02_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_grace_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_grace_02_n"
 				}
 			},
@@ -4296,7 +3593,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324010_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324010_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324010_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324010_01_n"
 				}
 			},
@@ -4310,13 +3606,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			}
 		]
@@ -4334,13 +3624,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4348,8 +3632,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cobbleStone_a",
-					"g_SpecularTexture": "m53/m53_00_cobbleStone_r",
-					"g_ShininessTexture": "m53/m53_00_cobbleStone_s",
 					"g_BumpmapTexture": "m53/m53_00_cobbleStone_n"
 				}
 			},
@@ -4358,8 +3640,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -4373,8 +3653,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_pillar_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_pillar_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_pillar_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_pillar_n"
 				}
 			},
@@ -4384,7 +3662,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_cliff_01_a",
 					"g_SpecularTexture": "m53/m53_00_cliff_01_r",
-					"g_ShininessTexture": "m53/m53_00_cliff_01_s",
 					"g_BumpmapTexture": "m53/m53_00_cliff_01_n"
 				}
 			},
@@ -4393,8 +3670,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -4403,8 +3678,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -4413,8 +3686,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -4423,8 +3694,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329212_a",
-					"g_SpecularTexture": "m53/m53_00_o329212_r",
-					"g_ShininessTexture": "m53/m53_00_o329212_s",
 					"g_BumpmapTexture": "m53/m53_00_o329212_n"
 				}
 			},
@@ -4438,13 +3707,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4452,8 +3715,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_2_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_2_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_2_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_2_n"
 				}
 			},
@@ -4463,7 +3724,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_ground_01_damage_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_ground_01_damage_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_ground_01_damage_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_ground_01_damage_n"
 				}
 			}
@@ -4477,7 +3737,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o309175_a",
-					"g_SpecularTexture": "m53/m53_00_o309175_r",
 					"g_BumpmapTexture": "m53/m53_00_o309175_n"
 				}
 			},
@@ -4486,8 +3745,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_arch_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324005_arch_01_r",
-					"g_ShininessTexture": "m32/m32_00_o324005_arch_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_arch_01_n"
 				}
 			},
@@ -4545,18 +3802,10 @@
 					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m53/m53_00_GroundSand_14_a",
 					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m53/m53_00_o329230_03_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
-					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_fabric_02_s",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331306_floor_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_GroundSand_14_n",
 					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m53/m53_00_o329230_03_n",
-					"MultiBlend4_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_RockSingle_00_r",
-					"MultiBlend4_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331306_floor_02_r",
-					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r",
-					"MultiBlend4_et1_snp_Texture2D_8_GSBlendMap_ReflectanceMap_3": "m53/m53_00_o329230_03_r",
-					"MultiBlend4_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_RockSingle_00_s",
-					"MultiBlend4_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331306_floor_02_s",
-					"MultiBlend4_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_GroundSand_14_s",
-					"MultiBlend4_et1_snp_Texture2D_12_GSBlendMap_ShininessMap_3": "m53/m53_00_o329230_03_s"
+					"MultiBlend4_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_GroundSand_14_r"
 				}
 			},
 			{
@@ -4565,7 +3814,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324005_stone_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324005_stone_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324005_stone_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324005_stone_01_n"
 				}
 			},
@@ -4575,7 +3823,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324070_edge_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324070_edge_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324070_edge_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324070_edge_01_n"
 				}
 			},
@@ -4589,13 +3836,7 @@
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_2_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o329210_3_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend3_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_2_r",
-					"MultiBlend3_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o329210_3_r",
-					"MultiBlend3_et1_snp_Texture2D_7_GSBlendMap_ReflectanceMap_2": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend3_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_2_s",
-					"MultiBlend3_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o329210_3_s",
-					"MultiBlend3_et1_snp_Texture2D_11_GSBlendMap_ShininessMap_2": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4604,7 +3845,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_ground_002_a",
 					"g_SpecularTexture": "m53/m53_00_ground_002_r",
-					"g_ShininessTexture": "m53/m53_00_ground_002_s",
 					"g_BumpmapTexture": "m53/m53_00_ground_002_n"
 				}
 			},
@@ -4616,10 +3856,7 @@
 					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o324000_wall_01_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o329220_05_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o324000_wall_ancient_02_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324000_wall_01_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m_ref_marble_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m_ref_marble_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o324000_wall_01_n"
 				}
 			},
 			{
@@ -4631,9 +3868,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_ironbeam_00_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_ironbeam_rust_00_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_ironbeam_00_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_ironrust_01_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_ironbeam_00_r"
 				}
 			},
 			{
@@ -4650,8 +3885,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329213_1_a",
-					"g_SpecularTexture": "m53/m53_00_o329213_1_r",
-					"g_ShininessTexture": "m53/m53_00_o329213_1_s",
 					"g_BumpmapTexture": "m53/m53_00_o329213_1_n"
 				}
 			},
@@ -4661,7 +3894,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -4671,7 +3903,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -4686,7 +3917,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324000_breakbrick_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324000_breakbrick_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324000_breakbrick_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324000_breakbrick_01_n"
 				}
 			},
@@ -4696,7 +3926,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329217_a",
 					"g_SpecularTexture": "m53/m53_00_o329217_r",
-					"g_ShininessTexture": "m53/m53_00_o329217_s",
 					"g_BumpmapTexture": "m53/m53_00_o329217_n"
 				}
 			},
@@ -4706,7 +3935,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -4720,7 +3948,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_03_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_03_r",
 					"g_BumpmapTexture": "m53/m53_00_o329220_03_n"
 				}
 			}
@@ -4734,7 +3961,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_03_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_03_r",
 					"g_BumpmapTexture": "m53/m53_00_o329220_03_n"
 				}
 			}
@@ -4748,7 +3974,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324080_wall_01_a",
-					"g_SpecularTexture": "m53/m53_00_o324080_wall_01_r",
 					"g_BumpmapTexture": "m53/m53_00_o324080_wall_01_n"
 				}
 			},
@@ -4757,7 +3982,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_03_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_03_r",
 					"g_BumpmapTexture": "m53/m53_00_o329220_03_n"
 				}
 			},
@@ -4766,7 +3990,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329230_04_a",
-					"g_SpecularTexture": "m53/m53_00_o329230_01_r",
 					"g_BumpmapTexture": "m53/m53_00_o329230_01_n"
 				}
 			},
@@ -4775,7 +3998,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329230_05_a",
-					"g_SpecularTexture": "m53/m53_00_o329230_02_r",
 					"g_BumpmapTexture": "m53/m53_00_o329230_02_n"
 				}
 			}
@@ -4789,8 +4011,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_01_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_01_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_01_n"
 				}
 			},
@@ -4799,8 +4019,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329220_02_a",
-					"g_SpecularTexture": "m53/m53_00_o329220_02_r",
-					"g_ShininessTexture": "m53/m53_00_o329220_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o329220_02_n"
 				}
 			},
@@ -4809,8 +4027,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329210_8_a",
-					"g_SpecularTexture": "m53/m53_00_o329210_8_r",
-					"g_ShininessTexture": "m53/m53_00_o329210_8_s",
 					"g_BumpmapTexture": "m53/m53_00_o329210_8_n"
 				}
 			}
@@ -4825,7 +4041,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324010_01_a",
 					"g_SpecularTexture": "m53/m53_00_o324010_01_r",
-					"g_ShininessTexture": "m53/m53_00_o324010_01_s",
 					"g_BumpmapTexture": "m53/m53_00_o324010_01_n"
 				}
 			}
@@ -4874,11 +4089,7 @@
 					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o331303_wall_section_02_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_3_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_3_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_3_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4887,7 +4098,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -4897,7 +4107,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -4911,8 +4120,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329222_3_a",
-					"g_SpecularTexture": "m53/m53_00_o329222_3_r",
-					"g_ShininessTexture": "m53/m53_00_o329222_3_s",
 					"g_BumpmapTexture": "m53/m53_00_o329222_3_n"
 				}
 			},
@@ -4924,11 +4131,7 @@
 					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m53/m53_00_o331303_wall_section_02_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_o324110_mask_image",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_o329210_3_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_o329210_3_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_o331303_wall_section_02_r",
-					"MultiBlend2_et1_snp_Texture2D_9_GSBlendMap_ShininessMap_0": "m53/m53_00_o329210_3_s",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "m53/m53_00_o331303_wall_section_02_s"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_o331303_wall_section_02_n"
 				}
 			},
 			{
@@ -4937,7 +4140,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o324102_08_a",
 					"g_SpecularTexture": "m53/m53_00_o324102_08_r",
-					"g_ShininessTexture": "m53/m53_00_o324102_08_s",
 					"g_BumpmapTexture": "m53/m53_00_o324102_08_n"
 				}
 			},
@@ -4947,7 +4149,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o329218_a",
 					"g_SpecularTexture": "m53/m53_00_o329218_r",
-					"g_ShininessTexture": "m53/m53_00_o329218_s",
 					"g_BumpmapTexture": "m53/m53_00_o329218_n"
 				}
 			}
@@ -4961,8 +4162,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o331320_ruins_plant_02_a",
-					"g_SpecularTexture": "m53/m53_00_o331320_ruins_plant_02_r",
-					"g_ShininessTexture": "m53/m53_00_o331320_ruins_plant_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o331320_ruins_plant_02_n"
 				}
 			},
@@ -4971,8 +4170,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e_grass.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_grass_02_a",
-					"g_SpecularTexture": "m53/m53_00_grass_02_r",
-					"g_ShininessTexture": "m53/m53_00_grass_02_s",
 					"g_BumpmapTexture": "m53/m53_00_grass_02_n"
 				}
 			},
@@ -4981,8 +4178,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e_grass.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_grass_03_a",
-					"g_SpecularTexture": "m53/m53_00_grass_03_r",
-					"g_ShininessTexture": "m53/m53_00_grass_03_s",
 					"g_BumpmapTexture": "m53/m53_00_grass_03_n"
 				}
 			}
@@ -4996,8 +4191,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_o331320_ruins_plant_02_a",
-					"g_SpecularTexture": "m53/m53_00_o331320_ruins_plant_02_r",
-					"g_ShininessTexture": "m53/m53_00_o331320_ruins_plant_02_s",
 					"g_BumpmapTexture": "m53/m53_00_o331320_ruins_plant_02_n"
 				}
 			},
@@ -5006,8 +4199,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e_grass.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_grass_02_a",
-					"g_SpecularTexture": "m53/m53_00_grass_02_r",
-					"g_ShininessTexture": "m53/m53_00_grass_02_s",
 					"g_BumpmapTexture": "m53/m53_00_grass_02_n"
 				}
 			},
@@ -5016,8 +4207,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_e_grass.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m53/m53_00_grass_03_a",
-					"g_SpecularTexture": "m53/m53_00_grass_03_r",
-					"g_ShininessTexture": "m53/m53_00_grass_03_s",
 					"g_BumpmapTexture": "m53/m53_00_grass_03_n"
 				}
 			}
@@ -5035,9 +4224,7 @@
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m53/m53_00_blendmask_01_m",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m53/m53_00_Mountain002_n",
 					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m53/m53_00_Mountain002_n",
-					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_Mountain_r",
-					"MultiBlend2_et1_snp_Texture2D_6_GSBlendMap_ReflectanceMap_1": "m53/m53_00_Outside_Snow_r",
-					"MultiBlend2_et1_snp_Texture2D_10_GSBlendMap_ShininessMap_1": "N:\\FDP\\data\\Material\\sat\\images\\m30_ground_06_s.tif"
+					"MultiBlend2_et1_snp_Texture2D_5_GSBlendMap_ReflectanceMap_0": "m53/m53_00_Mountain_r"
 				}
 			}
 		]

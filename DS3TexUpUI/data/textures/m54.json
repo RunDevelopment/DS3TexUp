@@ -7,7 +7,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_Outside_BaseWall_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_Outside_BaseWall_n"
 				}
 			},
@@ -16,7 +15,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_Ced_wallTile_02_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_Ced_wallTile_02_n"
 				}
 			},
@@ -26,7 +24,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_Outside_GrassyMud_a",
 					"g_DiffuseTexture2": "m54/m54_00_Outside_Snow_a",
-					"g_SpecularTexture": "m54/m54_00_glass_Standard_01_r",
 					"g_SpecularTexture2": "m54/m54_00_Outside_Snow_r",
 					"g_BumpmapTexture": "m54/m54_00_Outside_GrassyMud_n",
 					"g_BumpmapTexture2": "m54/m54_00_Outside_Snow_n",
@@ -39,7 +36,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_GroundTile_05_a",
 					"g_DiffuseTexture2": "m54/m54_00_Outside_Snow_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_SpecularTexture2": "m54/m54_00_Outside_Snow_r",
 					"g_BumpmapTexture": "m54/m54_00_GroundTile_05_n",
 					"g_BumpmapTexture2": "m54/m54_00_Outside_Snow_n",
@@ -56,7 +52,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m37/m37_00_tree_03_a",
-					"g_SpecularTexture": "m37/m37_00_tree_Standard_01_r",
 					"g_BumpmapTexture": "m37/m37_00_tree_03_n"
 				}
 			},
@@ -65,7 +60,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e_grass.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_plant_00_a",
-					"g_SpecularTexture": "m54/m54_00_glass_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_plant_00_n"
 				}
 			},
@@ -74,7 +68,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_plant_01_a",
-					"g_SpecularTexture": "m54/m54_00_glass_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_plant_01_n"
 				}
 			},
@@ -83,7 +76,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_wall_04_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_GroundTile_11_n"
 				}
 			},
@@ -92,7 +84,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_wall_04_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_block_02_n"
 				}
 			}
@@ -106,7 +97,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_wall_04_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_handrail_01_n"
 				}
 			}
@@ -120,7 +110,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "m54/m54_00_wall_04_a",
-					"g_SpecularTexture": "m54/m54_00_Stone_Standard_01_r",
 					"g_BumpmapTexture": "m54/m54_00_handrail_02_n"
 				}
 			}

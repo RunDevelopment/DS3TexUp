@@ -5,9 +5,7 @@
 			{
 				"Name": "s00040",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/commoneffects_s00002"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -94,7 +92,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
@@ -109,7 +106,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
@@ -124,7 +120,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
@@ -138,8 +133,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04006",
-					"g_SpecularTexture": "sfx/commoneffects_s00004",
-					"g_ShininessTexture": "sfx/commoneffects_s00004",
 					"g_BumpmapTexture": "sfx/commoneffects_s04007"
 				}
 			}
@@ -153,8 +146,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
-					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
@@ -168,8 +159,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
-					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
@@ -183,8 +172,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
-					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
@@ -198,8 +185,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
-					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
-					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
@@ -270,7 +255,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
-					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
@@ -286,7 +270,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07000_n"
 				}
 			}
@@ -301,7 +284,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07001_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07001_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07001_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07001_n"
 				}
 			},
@@ -311,7 +293,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07017_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07017_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07017_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07017_n"
 				}
 			}
@@ -326,7 +307,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07002_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07002_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07002_n"
 				}
 			}
@@ -341,7 +321,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07004_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07004_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07004_n"
 				}
 			},
@@ -351,7 +330,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07004_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07004_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07004_n"
 				}
 			}
@@ -366,7 +344,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07005_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07005_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07005_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07005_n"
 				}
 			}
@@ -381,7 +358,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07006_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07006_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07006_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07006_n"
 				}
 			}
@@ -396,7 +372,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07007_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07007_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07007_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07007_n"
 				}
 			}
@@ -411,7 +386,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07017_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07017_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07017_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07017_n"
 				}
 			}
@@ -426,7 +400,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07012_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07012_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07012_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07012_n"
 				}
 			}
@@ -441,7 +414,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07013_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07013_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07013_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07013_n"
 				}
 			}
@@ -456,7 +428,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07014_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07014_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07014_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07014_n"
 				}
 			}
@@ -471,7 +442,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07015_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07015_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07015_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07015_n"
 				}
 			}
@@ -486,7 +456,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07016_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07016_r",
-					"g_ShininessTexture": "sfx/commoneffects_s07016_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s07016_n"
 				}
 			}
@@ -584,7 +553,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -594,7 +562,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -609,7 +576,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -619,7 +585,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -634,7 +599,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -644,7 +608,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -659,7 +622,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -669,7 +631,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -684,7 +645,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -694,7 +654,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -723,7 +682,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -733,7 +691,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -771,7 +728,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -781,7 +737,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -796,7 +751,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -806,7 +760,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -821,7 +774,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -831,7 +783,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -846,7 +797,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -856,7 +806,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
@@ -871,7 +820,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
@@ -881,7 +829,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08024_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08024_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08024_n"
 				}
 			}
@@ -993,7 +940,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08060_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08060_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08060_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08060_n"
 				}
 			}
@@ -1008,7 +954,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08061_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08061_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08061_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08061_n"
 				}
 			}
@@ -1023,7 +968,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08062_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08062_r",
-					"g_ShininessTexture": "sfx/commoneffects_s08062_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s08062_n"
 				}
 			}
@@ -1061,7 +1005,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08083_a",
-					"g_SpecularTexture": "sfx/commoneffects_s00003",
 					"g_ShininessTexture": "sfx/commoneffects_s08083_n",
 					"g_BumpmapTexture": "sfx/commoneffects_s08083_n"
 				}
@@ -1136,7 +1079,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
-					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
@@ -1151,7 +1093,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
-					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
@@ -1166,7 +1107,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
-					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
 					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
@@ -1193,8 +1133,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11605",
-					"g_SpecularTexture": "sfx/commoneffects_s00003",
-					"g_ShininessTexture": "sfx/commoneffects_s00005",
 					"g_BumpmapTexture": "sfx/commoneffects_s11605_n"
 				}
 			}
@@ -1208,8 +1146,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s11606",
-					"g_SpecularTexture": "sfx/commoneffects_s00003",
-					"g_ShininessTexture": "sfx/commoneffects_s00005",
 					"g_BumpmapTexture": "sfx/commoneffects_s11606_n"
 				}
 			}
@@ -1245,12 +1181,7 @@
 			{
 				"Name": "03 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/commoneffects_s99999_a",
-					"g_SpecularTexture": "sfx/commoneffects_s99999_r",
-					"g_ShininessTexture": "sfx/commoneffects_s99999_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s99999_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1260,12 +1191,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s11655",
-					"g_SpecularTexture": "sfx/dlc1_s00002",
-					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1275,12 +1201,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s11655",
-					"g_SpecularTexture": "sfx/dlc1_s00002",
-					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1290,12 +1211,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s11655",
-					"g_SpecularTexture": "sfx/dlc1_s00002",
-					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1351,8 +1267,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s08120_a",
 					"g_SpecularTexture": "sfx/dlc1_s08120_r",
 					"g_ShininessTexture": "sfx/dlc1_s08120_n",
-					"g_BumpmapTexture": "sfx/dlc1_s08120_n",
-					"g_EmissiveTexture": "sfx/dlc1_s00004"
+					"g_BumpmapTexture": "sfx/dlc1_s08120_n"
 				}
 			}
 		]
@@ -1363,9 +1278,7 @@
 			{
 				"Name": "07 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_add_Soft.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s11655"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1393,8 +1306,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08170_a",
 					"g_SpecularTexture": "sfx/dlc1_s08170_r",
-					"g_BumpmapTexture": "sfx/dlc1_s08170_n",
-					"g_EmissiveTexture": "sfx/dlc1_s00003"
+					"g_BumpmapTexture": "sfx/dlc1_s08170_n"
 				}
 			}
 		]
@@ -1406,7 +1318,6 @@
 				"Name": "s08181",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
 					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
@@ -1420,7 +1331,6 @@
 				"Name": "s08180",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
 					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
@@ -1434,7 +1344,6 @@
 				"Name": "s08180",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
 					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
@@ -1449,7 +1358,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s09360_a",
-					"g_SpecularTexture": "sfx/dlc1_s09360_r",
 					"g_BumpmapTexture": "sfx/dlc1_s09360_n"
 				}
 			}
@@ -1486,7 +1394,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s09321_a",
-					"g_SpecularTexture": "sfx/dlc1_s04009_r",
 					"g_ShininessTexture": "sfx/dlc1_s09520_n",
 					"g_BumpmapTexture": "sfx/dlc1_s09520_n"
 				}
@@ -1513,8 +1420,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08008_a",
-					"g_SpecularTexture": "sfx/dlc2_s08000_r",
-					"g_ShininessTexture": "sfx/dlc2_s08000_s",
 					"g_BumpmapTexture": "sfx/dlc2_s50022"
 				}
 			},
@@ -1523,8 +1428,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08008_a",
-					"g_SpecularTexture": "sfx/dlc2_s08000_r",
-					"g_ShininessTexture": "sfx/dlc2_s08000_s",
 					"g_BumpmapTexture": "sfx/dlc2_s50022"
 				}
 			}
@@ -1649,7 +1552,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08360_a",
-					"g_SpecularTexture": "sfx/dlc2_s04020_r",
 					"g_BumpmapTexture": "sfx/dlc2_s08360_n"
 				}
 			}
@@ -1700,8 +1602,6 @@
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_glow_al .mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc2_s11604",
-					"g_SpecularTexture": "sfx/dlc2_s00004",
 					"g_BumpmapTexture": "sfx/dlc2_s08410_n",
 					"g_EmissiveTexture": "sfx/dlc2_s08410_em"
 				}
@@ -1744,7 +1644,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08430_a",
-					"g_SpecularTexture": "sfx/dlc2_s00002",
 					"g_BumpmapTexture": "sfx/dlc2_s08430_n"
 				}
 			}
@@ -1756,9 +1655,7 @@
 			{
 				"Name": "\u6A19\u6E96_9",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_add_Soft.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/dlc2_s11419"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1780,12 +1677,7 @@
 			{
 				"Name": "\u77E2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m30_s08000_a",
-					"g_SpecularTexture": "sfx/m30_s08000_r",
-					"g_ShininessTexture": "sfx/m30_s08000_s",
-					"g_BumpmapTexture": "sfx/m30_s08000_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1811,7 +1703,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09010_a",
-					"g_SpecularTexture": "sfx/m30_s09010_r",
 					"g_BumpmapTexture": "sfx/m30_s09010_n"
 				}
 			}
@@ -1876,7 +1767,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09070_a",
-					"g_SpecularTexture": "sfx/m30_s09070_r",
 					"g_BumpmapTexture": "sfx/m30_s09070_n"
 				}
 			}
@@ -1923,9 +1813,7 @@
 			{
 				"Name": "02 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_add.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m30_s00001"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1935,11 +1823,7 @@
 			{
 				"Name": "08 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m30_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m30_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m30_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1950,10 +1834,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m30_s90010_a",
-					"g_SpecularTexture": "sfx/m30_s00002",
-					"g_ShininessTexture": "sfx/m30_s00002",
-					"g_BumpmapTexture": "sfx/m30_s00002"
+					"g_DiffuseTexture": "sfx/m30_s90010_a"
 				}
 			}
 		]
@@ -1964,11 +1845,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m30_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m30_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m30_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -1978,11 +1855,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m30_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m30_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m30_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2007,7 +1880,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s04005_a",
 					"g_SpecularTexture": "sfx/m31_s04005_r",
-					"g_ShininessTexture": "sfx/m31_s04005_s",
 					"g_BumpmapTexture": "sfx/m31_s04005_n"
 				}
 			}
@@ -2019,12 +1891,7 @@
 			{
 				"Name": "\u77E2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m31_s08000_a",
-					"g_SpecularTexture": "sfx/m31_s08000_r",
-					"g_ShininessTexture": "sfx/m31_s08000_s",
-					"g_BumpmapTexture": "sfx/m31_s08000_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2059,7 +1926,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09040_a",
-					"g_SpecularTexture": "sfx/m31_s09040_r",
 					"g_BumpmapTexture": "sfx/m31_s09040_n"
 				}
 			}
@@ -2073,7 +1939,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09110_a",
-					"g_SpecularTexture": "sfx/m31_s09110_r",
 					"g_BumpmapTexture": "sfx/m31_s09110_n"
 				}
 			},
@@ -2082,7 +1947,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09110_a",
-					"g_SpecularTexture": "sfx/m31_s09110_r",
 					"g_BumpmapTexture": "sfx/m31_s09110_n"
 				}
 			}
@@ -2096,7 +1960,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09121_a",
-					"g_SpecularTexture": "sfx/m31_s09121_r",
 					"g_BumpmapTexture": "sfx/m31_s09121_n"
 				}
 			},
@@ -2119,7 +1982,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09500_a",
-					"g_SpecularTexture": "sfx/m31_s09500_r",
 					"g_BumpmapTexture": "sfx/m31_s09500_n"
 				}
 			}
@@ -2133,8 +1995,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s10049",
-					"g_SpecularTexture": "sfx/m31_s00003",
-					"g_ShininessTexture": "sfx/m31_s00001",
 					"g_BumpmapTexture": "sfx/m31_s10048_n"
 				}
 			}
@@ -2209,7 +2069,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09280_a",
-					"g_SpecularTexture": "sfx/m32_s09280_r",
 					"g_BumpmapTexture": "sfx/m32_s09280_n"
 				}
 			},
@@ -2218,7 +2077,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09281_a",
-					"g_SpecularTexture": "sfx/m32_s09281_r",
 					"g_BumpmapTexture": "sfx/m32_s09281_n"
 				}
 			}
@@ -2232,7 +2090,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09290_a",
-					"g_SpecularTexture": "sfx/m32_s09290_r",
 					"g_BumpmapTexture": "sfx/m32_s09290_n"
 				}
 			},
@@ -2241,7 +2098,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09291_a",
-					"g_SpecularTexture": "sfx/m32_s09291_r",
 					"g_BumpmapTexture": "sfx/m32_s09291_n"
 				}
 			},
@@ -2250,7 +2106,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09292_a",
-					"g_SpecularTexture": "sfx/m32_s09292_r",
 					"g_BumpmapTexture": "sfx/m32_s09292_n"
 				}
 			}
@@ -2262,9 +2117,7 @@
 			{
 				"Name": "03 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m32_s10020"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2289,7 +2142,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s04005_a",
 					"g_SpecularTexture": "sfx/m33_s04005_r",
-					"g_ShininessTexture": "sfx/m33_s04005_s",
 					"g_BumpmapTexture": "sfx/m33_s04005_n"
 				}
 			}
@@ -2303,7 +2155,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s04030_a",
-					"g_SpecularTexture": "sfx/m33_s04030_r",
 					"g_ShininessTexture": "sfx/m33_s04030_n",
 					"g_BumpmapTexture": "sfx/m33_s04030_n"
 				}
@@ -2341,7 +2192,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09010_a",
-					"g_SpecularTexture": "sfx/m33_s09010_r",
 					"g_BumpmapTexture": "sfx/m33_s09010_n"
 				}
 			}
@@ -2369,7 +2219,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09140_a",
-					"g_SpecularTexture": "sfx/m33_s09140_r",
 					"g_BumpmapTexture": "sfx/m33_s09140_n"
 				}
 			}
@@ -2383,7 +2232,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09140_a",
-					"g_SpecularTexture": "sfx/m33_s09140_r",
 					"g_BumpmapTexture": "sfx/m33_s09140_n"
 				}
 			},
@@ -2443,11 +2291,7 @@
 			{
 				"Name": "08 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m33_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m33_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m33_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2458,10 +2302,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m33_s90010_a",
-					"g_SpecularTexture": "sfx/m33_s00002",
-					"g_ShininessTexture": "sfx/m33_s00002",
-					"g_BumpmapTexture": "sfx/m33_s00002"
+					"g_DiffuseTexture": "sfx/m33_s90010_a"
 				}
 			}
 		]
@@ -2472,11 +2313,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m33_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m33_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m33_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2486,11 +2323,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m33_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m33_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m33_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2500,11 +2333,7 @@
 			{
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m33_s04008",
-					"g_SpecularTexture": "sfx/m33_s00004",
-					"g_ShininessTexture": "sfx/m33_s00004"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2526,12 +2355,7 @@
 			{
 				"Name": "\u77E2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m34_s08000_a",
-					"g_SpecularTexture": "sfx/m34_s08000_r",
-					"g_ShininessTexture": "sfx/m34_s08000_s",
-					"g_BumpmapTexture": "sfx/m34_s08000_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2557,7 +2381,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s09090_a",
-					"g_SpecularTexture": "sfx/m34_s09090_r",
 					"g_BumpmapTexture": "sfx/m34_s09090_n"
 				}
 			}
@@ -2585,7 +2408,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s09260_a",
-					"g_SpecularTexture": "sfx/m34_s09260_r",
 					"g_BumpmapTexture": "sfx/m34_s09260_n"
 				}
 			}
@@ -2609,11 +2431,7 @@
 			{
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m34_s04008",
-					"g_SpecularTexture": "sfx/m34_s00004",
-					"g_ShininessTexture": "sfx/m34_s00004"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2635,12 +2453,7 @@
 			{
 				"Name": "\u77E2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m35_s08000_a",
-					"g_SpecularTexture": "sfx/m35_s08000_r",
-					"g_ShininessTexture": "sfx/m35_s08000_s",
-					"g_BumpmapTexture": "sfx/m35_s08000_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2675,7 +2488,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09000_a",
-					"g_SpecularTexture": "sfx/m35_s09000_r",
 					"g_BumpmapTexture": "sfx/m35_s09000_n"
 				}
 			}
@@ -2689,7 +2501,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09010_a",
-					"g_SpecularTexture": "sfx/m35_s09010_r",
 					"g_BumpmapTexture": "sfx/m35_s09010_n"
 				}
 			}
@@ -2703,7 +2514,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09040_a",
-					"g_SpecularTexture": "sfx/m35_s09040_r",
 					"g_BumpmapTexture": "sfx/m35_s09040_n"
 				}
 			}
@@ -2717,7 +2527,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09160_a",
-					"g_SpecularTexture": "sfx/m35_s09160_r",
 					"g_BumpmapTexture": "sfx/m35_s09160_n"
 				}
 			}
@@ -2731,7 +2540,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09170_a",
-					"g_SpecularTexture": "sfx/m35_s09170_r",
 					"g_BumpmapTexture": "sfx/m35_s09170_n"
 				}
 			}
@@ -2759,7 +2567,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09300_a",
-					"g_SpecularTexture": "sfx/m35_s09300_r",
 					"g_BumpmapTexture": "sfx/m35_s09300_n"
 				}
 			}
@@ -2771,11 +2578,7 @@
 			{
 				"Name": "08 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m35_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m35_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m35_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2786,10 +2589,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m35_s90010_a",
-					"g_SpecularTexture": "sfx/m35_s00002",
-					"g_ShininessTexture": "sfx/m35_s00002",
-					"g_BumpmapTexture": "sfx/m35_s00002"
+					"g_DiffuseTexture": "sfx/m35_s90010_a"
 				}
 			}
 		]
@@ -2800,11 +2600,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m35_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m35_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m35_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2814,11 +2610,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m35_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m35_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m35_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -2854,7 +2646,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s08081_a",
-					"g_SpecularTexture": "sfx/m37_s08081_r",
 					"g_ShininessTexture": "sfx/m37_s08081_n",
 					"g_BumpmapTexture": "sfx/m37_s08081_n"
 				}
@@ -2906,7 +2697,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09190_a",
-					"g_SpecularTexture": "sfx/m37_s09190_r",
 					"g_BumpmapTexture": "sfx/m37_s09190_n"
 				}
 			},
@@ -2915,7 +2705,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09190_a",
-					"g_SpecularTexture": "sfx/m37_s09190_r",
 					"g_BumpmapTexture": "sfx/m37_s09190_n"
 				}
 			}
@@ -2929,7 +2718,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09310_a",
-					"g_SpecularTexture": "sfx/m37_s09311_r",
 					"g_BumpmapTexture": "sfx/m37_s09310_n"
 				}
 			}
@@ -2943,7 +2731,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
-					"g_SpecularTexture": "sfx/m37_s09311_r",
 					"g_BumpmapTexture": "sfx/m37_s09320_n"
 				}
 			}
@@ -2957,7 +2744,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
-					"g_SpecularTexture": "sfx/m37_s09311_r",
 					"g_BumpmapTexture": "sfx/m37_s09331_n"
 				}
 			},
@@ -2966,7 +2752,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
-					"g_SpecularTexture": "sfx/m37_s09311_r",
 					"g_BumpmapTexture": "sfx/m37_s09330_n"
 				}
 			}
@@ -2978,11 +2763,7 @@
 			{
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m37_s04008",
-					"g_SpecularTexture": "sfx/m37_s00004",
-					"g_ShininessTexture": "sfx/m37_s00004"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3006,7 +2787,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s04031_a",
-					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
 					"g_EmissiveTexture": "sfx/m38_s04031_e"
@@ -3017,7 +2797,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s04031_a",
-					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
 					"g_EmissiveTexture": "sfx/m38_s04031_e"
@@ -3028,7 +2807,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s04031_a",
-					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
 					"g_EmissiveTexture": "sfx/m38_s04031_e"
@@ -3044,7 +2822,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s04040_a",
-					"g_SpecularTexture": "sfx/m38_s04040_r",
 					"g_ShininessTexture": "sfx/m38_s04040_n",
 					"g_BumpmapTexture": "sfx/m38_s04040_n",
 					"g_EmissiveTexture": "sfx/m38_s04040_e"
@@ -3075,8 +2852,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s10048_e",
-					"g_SpecularTexture": "sfx/m38_s00004",
-					"g_ShininessTexture": "sfx/m38_s11604_s",
 					"g_BumpmapTexture": "sfx/m38_s10048_n",
 					"g_EmissiveTexture": "sfx/m38_s10048_e"
 				}
@@ -3092,7 +2867,6 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s08070_a",
 					"g_SpecularTexture": "sfx/m38_s08070_r",
-					"g_ShininessTexture": "sfx/m38_s08070_s",
 					"g_BumpmapTexture": "sfx/m38_s08070_n"
 				}
 			}
@@ -3129,7 +2903,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09200_a",
-					"g_SpecularTexture": "sfx/m38_s09200_r",
 					"g_BumpmapTexture": "sfx/m38_s09200_n"
 				}
 			},
@@ -3138,7 +2911,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09201_a",
-					"g_SpecularTexture": "sfx/m38_s09200_r",
 					"g_BumpmapTexture": "sfx/m38_s09201_n"
 				}
 			}
@@ -3152,7 +2924,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09210_a",
-					"g_SpecularTexture": "sfx/m38_s09200_r",
 					"g_BumpmapTexture": "sfx/m38_s09210_n"
 				}
 			},
@@ -3161,7 +2932,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09211_a",
-					"g_SpecularTexture": "sfx/m38_s09200_r",
 					"g_BumpmapTexture": "sfx/m38_s09211_n"
 				}
 			},
@@ -3170,7 +2940,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09201_a",
-					"g_SpecularTexture": "sfx/m38_s09200_r",
 					"g_BumpmapTexture": "sfx/m38_s09201_n"
 				}
 			}
@@ -3207,8 +2976,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s10049",
-					"g_SpecularTexture": "sfx/m38_s00003",
-					"g_ShininessTexture": "sfx/m38_s00001",
 					"g_BumpmapTexture": "sfx/m38_s10048_n"
 				}
 			}
@@ -3232,11 +2999,7 @@
 			{
 				"Name": "08 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m38_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m38_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m38_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3247,10 +3010,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m38_s90010_a",
-					"g_SpecularTexture": "sfx/m38_s00002",
-					"g_ShininessTexture": "sfx/m38_s00002",
-					"g_BumpmapTexture": "sfx/m38_s00002"
+					"g_DiffuseTexture": "sfx/m38_s90010_a"
 				}
 			}
 		]
@@ -3261,11 +3021,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m38_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m38_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m38_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3275,11 +3031,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m38_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m38_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m38_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3303,8 +3055,7 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m39_s09230_a",
-					"g_SpecularTexture": "sfx/m39_s09230_r",
-					"g_BumpmapTexture": "sfx/m39_s09230_n "
+					"g_SpecularTexture": "sfx/m39_s09230_r"
 				}
 			},
 			{
@@ -3312,8 +3063,7 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m39_s09230_a",
-					"g_SpecularTexture": "sfx/m39_s09230_r",
-					"g_BumpmapTexture": "sfx/m39_s09230_n "
+					"g_SpecularTexture": "sfx/m39_s09230_r"
 				}
 			}
 		]
@@ -3340,7 +3090,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m40_s09250_a",
-					"g_SpecularTexture": "sfx/m40_s09300_r",
 					"g_BumpmapTexture": "sfx/m40_s09250_n"
 				}
 			}
@@ -3354,7 +3103,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m40_s09350_a",
-					"g_SpecularTexture": "sfx/m40_s09311_r",
 					"g_BumpmapTexture": "sfx/m40_s09350_n"
 				}
 			}
@@ -3378,11 +3126,7 @@
 			{
 				"Name": "08 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m40_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m40_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m40_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3393,10 +3137,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m40_s90010_a",
-					"g_SpecularTexture": "sfx/m40_s00002",
-					"g_ShininessTexture": "sfx/m40_s00002",
-					"g_BumpmapTexture": "sfx/m40_s00002"
+					"g_DiffuseTexture": "sfx/m40_s90010_a"
 				}
 			}
 		]
@@ -3407,11 +3148,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m40_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m40_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m40_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3421,11 +3158,7 @@
 			{
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\Special\\S[Crystal].mtd",
-				"Textures": {
-					"Crystal_snp_Texture2D_0_GSBlendMap_NormalMap_0": "sfx/m40_s17020_n",
-					"Crystal_snp_Texture2D_2_GSBlendMap_ReflectanceMap_0": "sfx/m40_s17020_r",
-					"Crystal_snp_Texture2D_1_GSBlendMap_ShininessMap_0": "sfx/m40_s17020_s"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3435,11 +3168,7 @@
 			{
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m40_s04008",
-					"g_SpecularTexture": "sfx/m40_s00004",
-					"g_ShininessTexture": "sfx/m40_s00004"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3486,9 +3215,7 @@
 				"Name": "01 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m40_s50003",
 					"g_SpecularTexture": "sfx/m40_s50039_r",
-					"g_ShininessTexture": "sfx/m40_s50039_s",
 					"g_BumpmapTexture": "sfx/m40_s11021_n"
 				}
 			}
@@ -3502,7 +3229,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m41_s09360_a",
-					"g_SpecularTexture": "sfx/m41_s09360_r",
 					"g_BumpmapTexture": "sfx/m41_s09360_n"
 				}
 			}
@@ -3549,12 +3275,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s11655",
-					"g_SpecularTexture": "sfx/m45_s00002",
-					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3564,12 +3285,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s11655",
-					"g_SpecularTexture": "sfx/m45_s00002",
-					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3579,12 +3295,7 @@
 			{
 				"Name": "crystal",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s11655",
-					"g_SpecularTexture": "sfx/m45_s00002",
-					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3612,8 +3323,7 @@
 					"g_DiffuseTexture": "sfx/m45_s08120_a",
 					"g_SpecularTexture": "sfx/m45_s08120_r",
 					"g_ShininessTexture": "sfx/m45_s08120_n",
-					"g_BumpmapTexture": "sfx/m45_s08120_n",
-					"g_EmissiveTexture": "sfx/m45_s00004"
+					"g_BumpmapTexture": "sfx/m45_s08120_n"
 				}
 			}
 		]
@@ -3624,9 +3334,7 @@
 			{
 				"Name": "07 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_add_Soft.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s11655"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3652,7 +3360,6 @@
 				"Name": "s08180",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
 					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
@@ -3666,7 +3373,6 @@
 				"Name": "s08180",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
 					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
@@ -3680,7 +3386,6 @@
 				"Name": "s08180",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
 					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
@@ -3695,7 +3400,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09000_a",
-					"g_SpecularTexture": "sfx/m45_s09000_r",
 					"g_BumpmapTexture": "sfx/m45_s09000_n"
 				}
 			}
@@ -3709,7 +3413,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09010_a",
-					"g_SpecularTexture": "sfx/m45_s09010_r",
 					"g_BumpmapTexture": "sfx/m45_s09010_n"
 				}
 			}
@@ -3723,7 +3426,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09250_a",
-					"g_SpecularTexture": "sfx/m45_s09300_r",
 					"g_BumpmapTexture": "sfx/m45_s09250_n"
 				}
 			}
@@ -3745,9 +3447,7 @@
 				"Name": "Hair",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s09381_a",
-					"g_SpecularTexture": "sfx/m45_s09381_r",
-					"g_BumpmapTexture": "sfx/m45_s09381_n"
+					"g_DiffuseTexture": "sfx/m45_s09381_a"
 				}
 			}
 		]
@@ -3760,7 +3460,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09390_a",
-					"g_SpecularTexture": "sfx/m45_s09390_r",
 					"g_BumpmapTexture": "sfx/m45_s09390_n"
 				}
 			}
@@ -3788,7 +3487,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09411_a",
-					"g_SpecularTexture": "sfx/m45_s09420_r",
 					"g_BumpmapTexture": "sfx/m45_s09410_n",
 					"g_EmissiveTexture": "sfx/m45_s09411_a"
 				}
@@ -3803,7 +3501,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09420_a",
-					"g_SpecularTexture": "sfx/m45_s09420_r",
 					"g_BumpmapTexture": "sfx/m45_s09420_n"
 				}
 			},
@@ -3812,7 +3509,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09421_a",
-					"g_SpecularTexture": "sfx/m45_s09421_r",
 					"g_BumpmapTexture": "sfx/m45_s09421_n"
 				}
 			}
@@ -3826,7 +3522,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09500_a",
-					"g_SpecularTexture": "sfx/m45_s09500_r",
 					"g_BumpmapTexture": "sfx/m45_s09500_n"
 				}
 			}
@@ -3840,7 +3535,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09520_a",
-					"g_SpecularTexture": "sfx/m45_s04009_r",
 					"g_ShininessTexture": "sfx/m45_s09520_n",
 					"g_BumpmapTexture": "sfx/m45_s09520_n",
 					"g_EmissiveTexture": "sfx/m45_s09521_a"
@@ -3856,7 +3550,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09321_a",
-					"g_SpecularTexture": "sfx/m45_s04009_r",
 					"g_ShininessTexture": "sfx/m45_s09520_n",
 					"g_BumpmapTexture": "sfx/m45_s09520_n"
 				}
@@ -3893,9 +3586,7 @@
 			{
 				"Name": "03 - Default",
 				"MTD": "N:\\NTC\\data\\Material\\mtd\\sfx\\S[A]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s00001"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3905,11 +3596,7 @@
 			{
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s04008",
-					"g_SpecularTexture": "sfx/m45_s00004",
-					"g_ShininessTexture": "sfx/m45_s00004"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -3967,7 +3654,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09260_a",
-					"g_SpecularTexture": "sfx/m46_s09260_r",
 					"g_BumpmapTexture": "sfx/m46_s09260_n"
 				}
 			}
@@ -3981,7 +3667,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s04040_a",
-					"g_SpecularTexture": "sfx/m50_s04040_r",
 					"g_ShininessTexture": "sfx/m50_s04040_n",
 					"g_BumpmapTexture": "sfx/m50_s04040_n",
 					"g_EmissiveTexture": "sfx/m50_s04040_e"
@@ -3997,8 +3682,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_em.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s10048_e",
-					"g_SpecularTexture": "sfx/m50_s00004",
-					"g_ShininessTexture": "sfx/m50_s11604_s",
 					"g_BumpmapTexture": "sfx/m50_s10048_n",
 					"g_EmissiveTexture": "sfx/m50_s10048_e"
 				}
@@ -4011,12 +3694,7 @@
 			{
 				"Name": "\u77E2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m50_s08000_a",
-					"g_SpecularTexture": "sfx/m50_s08000_r",
-					"g_ShininessTexture": "sfx/m50_s08000_s",
-					"g_BumpmapTexture": "sfx/m50_s08000_n"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -4027,8 +3705,6 @@
 				"Name": "Standardmaterial",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_glow_al .mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m50_s11604",
-					"g_SpecularTexture": "sfx/m50_s00004",
 					"g_BumpmapTexture": "sfx/m50_s08410_n",
 					"g_EmissiveTexture": "sfx/m50_s08410_em"
 				}
@@ -4043,7 +3719,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09010_a",
-					"g_SpecularTexture": "sfx/m50_s09010_r",
 					"g_BumpmapTexture": "sfx/m50_s09010_n"
 				}
 			}
@@ -4089,7 +3764,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09431_a",
-					"g_SpecularTexture": "sfx/m50_s09000_r",
 					"g_BumpmapTexture": "sfx/m50_s09431_n"
 				}
 			},
@@ -4098,7 +3772,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09432_a",
-					"g_SpecularTexture": "sfx/m50_s09000_r",
 					"g_BumpmapTexture": "sfx/m50_s09432_n"
 				}
 			}
@@ -4112,7 +3785,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09440_a",
-					"g_SpecularTexture": "sfx/m50_s09000_r",
 					"g_BumpmapTexture": "sfx/m50_s09440_n"
 				}
 			}
@@ -4126,7 +3798,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09321_a",
-					"g_SpecularTexture": "sfx/m50_s04009_r",
 					"g_ShininessTexture": "sfx/m50_s09520_n",
 					"g_BumpmapTexture": "sfx/m50_s09520_n"
 				}
@@ -4218,7 +3889,6 @@
 				"Name": "WP_Falloff",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_al_Falloff.mtd",
 				"Textures": {
-					"Veill_snp_Texture2D_2_AlbedoMap_0": "sfx/m51_s00006",
 					"Veill_snp_Texture2D_3_MaskTexture": "sfx/m51_s08220_m",
 					"Veill_snp_Texture2D_1_NormalMap_0": "sfx/m51_s08220_n"
 				}
@@ -4238,9 +3908,7 @@
 			{
 				"Name": "03 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_al.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m51_s11655"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -4263,7 +3931,6 @@
 				"Name": "wp",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_al_Falloff.mtd",
 				"Textures": {
-					"Veill_snp_Texture2D_2_AlbedoMap_0": "sfx/m51_s00006",
 					"Veill_snp_Texture2D_3_MaskTexture": "N:\\FDP\\data\\Material\\sat\\images\\Veil\\mask.png",
 					"Veill_snp_Texture2D_1_NormalMap_0": "sfx/m51_s08231_n"
 				}
@@ -4284,7 +3951,6 @@
 				"Name": "09 - Default",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_al_Falloff.mtd",
 				"Textures": {
-					"Veill_snp_Texture2D_2_AlbedoMap_0": "sfx/m51_s00006",
 					"Veill_snp_Texture2D_3_MaskTexture": "sfx/m51_s08240_m",
 					"Veill_snp_Texture2D_1_NormalMap_0": "sfx/m51_s08240_n"
 				}
@@ -4483,7 +4149,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09000_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09000_n"
 				}
 			}
@@ -4497,7 +4162,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09040_a",
-					"g_SpecularTexture": "sfx/m51_s09040_r",
 					"g_BumpmapTexture": "sfx/m51_s09040_n"
 				}
 			}
@@ -4525,7 +4189,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09460_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09460_n"
 				}
 			}
@@ -4539,7 +4202,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09480_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09480_n"
 				}
 			},
@@ -4548,7 +4210,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09481_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09481_n"
 				}
 			}
@@ -4562,7 +4223,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s08310_n"
 				}
 			},
@@ -4571,7 +4231,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09490_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09490_n"
 				}
 			},
@@ -4580,7 +4239,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09491_n"
 				}
 			},
@@ -4589,7 +4247,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09492_n"
 				}
 			},
@@ -4598,7 +4255,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09495_n"
 				}
 			},
@@ -4607,7 +4263,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09494_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09494_n"
 				}
 			},
@@ -4616,7 +4271,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09494_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09496_n"
 				}
 			},
@@ -4625,7 +4279,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09493_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09493_n"
 				}
 			}
@@ -4639,7 +4292,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09497_a",
-					"g_SpecularTexture": "sfx/m51_s09000_r",
 					"g_BumpmapTexture": "sfx/m51_s09497_n"
 				}
 			}
@@ -4653,7 +4305,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09500_a",
-					"g_SpecularTexture": "sfx/m51_s09500_r",
 					"g_BumpmapTexture": "sfx/m51_s09500_n"
 				}
 			}
@@ -4667,7 +4318,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09321_a",
-					"g_SpecularTexture": "sfx/m51_s04009_r",
 					"g_ShininessTexture": "sfx/m51_s09520_n",
 					"g_BumpmapTexture": "sfx/m51_s09520_n"
 				}
@@ -4704,9 +4354,7 @@
 			{
 				"Name": "\u6A19\u6E96_9",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[A]_add_Soft.mtd",
-				"Textures": {
-					"g_DiffuseTexture": "sfx/m51_s11419"
-				}
+				"Textures": {}
 			}
 		]
 	},
@@ -4717,20 +4365,14 @@
 				"Name": "o980018",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m51_s11667",
-					"g_SpecularTexture": "sfx/m51_s07004_r",
-					"g_ShininessTexture": "sfx/m51_s07004_s",
-					"g_BumpmapTexture": "sfx/m51_s07004_n"
+					"g_DiffuseTexture": "sfx/m51_s11667"
 				}
 			},
 			{
 				"Name": "\u4E21\u9762",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m51_s11667",
-					"g_SpecularTexture": "sfx/m51_s07004_r",
-					"g_ShininessTexture": "sfx/m51_s07004_s",
-					"g_BumpmapTexture": "sfx/m51_s07004_n"
+					"g_DiffuseTexture": "sfx/m51_s11667"
 				}
 			}
 		]
@@ -4766,7 +4408,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09280_a",
-					"g_SpecularTexture": "sfx/m53_s09280_r",
 					"g_BumpmapTexture": "sfx/m53_s09280_n"
 				}
 			},
@@ -4775,7 +4416,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09281_a",
-					"g_SpecularTexture": "sfx/m53_s09281_r",
 					"g_BumpmapTexture": "sfx/m53_s09281_n"
 				}
 			}
@@ -4789,7 +4429,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09290_a",
-					"g_SpecularTexture": "sfx/m53_s09290_r",
 					"g_BumpmapTexture": "sfx/m53_s09290_n"
 				}
 			},
@@ -4798,7 +4437,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09291_a",
-					"g_SpecularTexture": "sfx/m53_s09291_r",
 					"g_BumpmapTexture": "sfx/m53_s09291_n"
 				}
 			},
@@ -4807,7 +4445,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN]_e.mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09292_a",
-					"g_SpecularTexture": "sfx/m53_s09292_r",
 					"g_BumpmapTexture": "sfx/m53_s09292_n"
 				}
 			}
@@ -4821,7 +4458,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09310_a",
-					"g_SpecularTexture": "sfx/m54_s09311_r",
 					"g_BumpmapTexture": "sfx/m54_s09310_n"
 				}
 			}
@@ -4835,7 +4471,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
-					"g_SpecularTexture": "sfx/m54_s09311_r",
 					"g_BumpmapTexture": "sfx/m54_s09320_n"
 				}
 			}
@@ -4849,7 +4484,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
-					"g_SpecularTexture": "sfx/m54_s09311_r",
 					"g_BumpmapTexture": "sfx/m54_s09331_n"
 				}
 			},
@@ -4858,7 +4492,6 @@
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\sfx\\S[ARSN].mtd",
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
-					"g_SpecularTexture": "sfx/m54_s09311_r",
 					"g_BumpmapTexture": "sfx/m54_s09330_n"
 				}
 			}

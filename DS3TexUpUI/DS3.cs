@@ -1720,6 +1720,7 @@ namespace DS3TexUpUI
             {
                 var ignoreFiles = new HashSet<string>() {
                     "dummy128",
+                    "BurningBlendMask",
                     "SYSTEX_DummyAlbedo",
                     "SYSTEX_DummyShininess",
                     "SYSTEX_DummySpecular",
@@ -1730,7 +1731,17 @@ namespace DS3TexUpUI
                     "SYSTEX_DummyBurn_em",
                     "SYSTEX_DummyBurn_m",
 
-                    "m30_ground_08_s" // weird, I know
+                    // weird, I know
+                    "m30_00_base_a",
+                    "m30_00_base_n",
+                    "m30_00_base_r",
+                    "m30_00_base_s",
+                    "m30_00_base2_a",
+                    "m30_00_base2_n",
+                    "m30_00_base2_r",
+                    "m30_00_base2_s",
+                    "m30_ground_06_s",
+                    "m30_ground_08_s",
                 };
 
                 token.SubmitStatus("Converting files");
@@ -1753,21 +1764,22 @@ namespace DS3TexUpUI
                                 if (ignoreFiles.Contains(Path.GetFileNameWithoutExtension(tex.Path))) continue;
 
                                 var id = TexId.FromTexture(tex, info.FlverPath);
+                                if (id == null)
+                                {
+                                    var ids = TexId.FromTexturePath(tex, info.FlverPath);
+                                    if (ids.Count == 1) id = ids.First();
+                                }
+
                                 if (id != null)
                                 {
+                                    if (!DS3.OriginalSize.ContainsKey(id.Value)) continue;
+                                    if (id.Value.IsSolidColor()) continue;
+
                                     result.Textures[tex.Type] = id.Value.ToString();
                                 }
                                 else
                                 {
-                                    var ids = TexId.FromTexturePath(tex, info.FlverPath);
-                                    if (ids.Count == 1)
-                                    {
-                                        result.Textures[tex.Type] = ids.First().ToString();
-                                    }
-                                    else
-                                    {
-                                        result.Textures[tex.Type] = tex.Path;
-                                    }
+                                    result.Textures[tex.Type] = tex.Path;
                                 }
                             }
 
