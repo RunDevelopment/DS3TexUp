@@ -1718,6 +1718,21 @@ namespace DS3TexUpUI
         {
             return token =>
             {
+                var ignoreFiles = new HashSet<string>() {
+                    "dummy128",
+                    "SYSTEX_DummyAlbedo",
+                    "SYSTEX_DummyShininess",
+                    "SYSTEX_DummySpecular",
+                    "SYSTEX_DummyNormal",
+                    "SYSTEX_DummyEmissive",
+                    "SYSTEX_DummyDamagedNormal",
+                    "SYSTEX_DummyScatteringMask",
+                    "SYSTEX_DummyBurn_em",
+                    "SYSTEX_DummyBurn_m",
+
+                    "m30_ground_08_s" // weird, I know
+                };
+
                 token.SubmitStatus("Converting files");
                 token.ForAllParallel(Directory.GetFiles(DataFile(@"materials"), "*.json"), file =>
                 {
@@ -1733,8 +1748,27 @@ namespace DS3TexUpUI
                             };
                             foreach (var tex in mat.Textures)
                             {
+                                if (tex.Type == "g_DOLTexture1" || tex.Type == "g_DOLTexture2") continue;
+                                if (tex.Path.Contains("Other\\SysTex")) continue;
+                                if (ignoreFiles.Contains(Path.GetFileNameWithoutExtension(tex.Path))) continue;
+
                                 var id = TexId.FromTexture(tex, info.FlverPath);
-                                result.Textures[tex.Type] = id != null ? id.Value.ToString() : tex.Path;
+                                if (id != null)
+                                {
+                                    result.Textures[tex.Type] = id.Value.ToString();
+                                }
+                                else
+                                {
+                                    var ids = TexId.FromTexturePath(tex, info.FlverPath);
+                                    if (ids.Count == 1)
+                                    {
+                                        result.Textures[tex.Type] = ids.First().ToString();
+                                    }
+                                    else
+                                    {
+                                        result.Textures[tex.Type] = tex.Path;
+                                    }
+                                }
                             }
 
                             return result;

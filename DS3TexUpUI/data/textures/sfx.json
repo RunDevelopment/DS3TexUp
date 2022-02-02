@@ -95,8 +95,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
 		]
@@ -111,8 +110,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
 		]
@@ -127,8 +125,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04000_n"
 				}
 			}
 		]
@@ -143,8 +140,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04006",
 					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s00004",
-					"g_BumpmapTexture": "sfx/commoneffects_s04007",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04007"
 				}
 			}
 		]
@@ -159,8 +155,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04009_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
 		]
@@ -175,8 +170,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04009_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
 		]
@@ -191,8 +185,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04009_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
 		]
@@ -207,8 +200,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04009_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04009_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04009_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s04009_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04009_n"
 				}
 			}
 		]
@@ -235,8 +227,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04020_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04020_n",
-					"g_BumpmapTexture": "sfx/commoneffects_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04020_n"
 				}
 			}
 		]
@@ -251,8 +242,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04020_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04020_n",
-					"g_BumpmapTexture": "sfx/commoneffects_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04020_n"
 				}
 			}
 		]
@@ -267,8 +257,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s04020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s04020_r",
 					"g_ShininessTexture": "sfx/commoneffects_s04020_n",
-					"g_BumpmapTexture": "sfx/commoneffects_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s04020_n"
 				}
 			}
 		]
@@ -283,8 +272,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
 					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s11604_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
 			}
 		]
@@ -299,8 +287,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07000_n"
 				}
 			}
 		]
@@ -315,8 +302,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07001_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07001_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07001_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07001_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07001_n"
 				}
 			},
 			{
@@ -326,8 +312,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07017_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07017_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07017_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07017_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07017_n"
 				}
 			}
 		]
@@ -342,8 +327,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07002_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07002_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07002_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07002_n"
 				}
 			}
 		]
@@ -358,8 +342,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07004_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07004_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07004_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07004_n"
 				}
 			},
 			{
@@ -369,8 +352,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07004_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07004_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07004_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07004_n"
 				}
 			}
 		]
@@ -385,8 +367,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07005_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07005_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07005_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07005_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07005_n"
 				}
 			}
 		]
@@ -401,8 +382,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07006_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07006_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07006_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07006_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07006_n"
 				}
 			}
 		]
@@ -417,8 +397,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07007_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07007_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07007_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07007_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07007_n"
 				}
 			}
 		]
@@ -433,8 +412,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07017_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07017_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07017_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07017_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07017_n"
 				}
 			}
 		]
@@ -449,8 +427,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07012_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07012_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07012_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07012_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07012_n"
 				}
 			}
 		]
@@ -465,8 +442,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07013_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07013_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07013_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07013_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07013_n"
 				}
 			}
 		]
@@ -481,8 +457,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07014_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07014_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07014_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07014_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07014_n"
 				}
 			}
 		]
@@ -497,8 +472,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07015_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07015_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07015_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07015_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07015_n"
 				}
 			}
 		]
@@ -513,8 +487,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s07016_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07016_r",
 					"g_ShininessTexture": "sfx/commoneffects_s07016_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s07016_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07016_n"
 				}
 			}
 		]
@@ -528,9 +501,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			}
 		]
@@ -544,9 +515,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			},
 			{
@@ -555,9 +524,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			}
 		]
@@ -571,9 +538,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			},
 			{
@@ -582,9 +547,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			}
 		]
@@ -598,9 +561,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			},
 			{
@@ -609,9 +570,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s07020_a",
 					"g_SpecularTexture": "sfx/commoneffects_s07020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s07020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s07020_n"
 				}
 			}
 		]
@@ -626,8 +585,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -637,8 +595,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -653,8 +610,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -664,8 +620,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -680,8 +635,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -691,8 +645,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08002_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -707,8 +660,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -718,8 +670,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -734,8 +685,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -745,8 +695,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -760,9 +709,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08005_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08005_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08005_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08005_n"
 				}
 			}
 		]
@@ -777,8 +724,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -788,8 +734,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -803,9 +748,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08007_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08007_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08007_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08007_n"
 				}
 			},
 			{
@@ -814,9 +757,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08007_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08007_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08007_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08007_n"
 				}
 			}
 		]
@@ -831,8 +772,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -842,8 +782,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -858,8 +797,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -869,8 +807,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -885,8 +822,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -896,8 +832,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -912,8 +847,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -923,8 +857,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08004_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			}
 		]
@@ -939,8 +872,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08000_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08000_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08000_n"
 				}
 			},
 			{
@@ -950,8 +882,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08024_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08024_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08000_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08024_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08024_n"
 				}
 			}
 		]
@@ -965,9 +896,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08025_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08025_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08025_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08025_n"
 				}
 			},
 			{
@@ -976,9 +905,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08025_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08025_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08025_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08025_n"
 				}
 			}
 		]
@@ -992,9 +919,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08025_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08025_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08025_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08025_n"
 				}
 			},
 			{
@@ -1003,9 +928,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08025_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08025_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08025_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08025_n"
 				}
 			}
 		]
@@ -1019,9 +942,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08027_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08027_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08027_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08027_n"
 				}
 			}
 		]
@@ -1035,9 +956,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08040_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08040_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08040_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08040_n"
 				}
 			}
 		]
@@ -1051,9 +970,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08044_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08044_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08044_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08044_n"
 				}
 			},
 			{
@@ -1062,9 +979,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/commoneffects_s08044_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08044_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/commoneffects_s08044_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08044_n"
 				}
 			}
 		]
@@ -1079,8 +994,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08060_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08060_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08060_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08060_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08060_n"
 				}
 			}
 		]
@@ -1095,8 +1009,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08061_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08061_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08061_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08061_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08061_n"
 				}
 			}
 		]
@@ -1111,8 +1024,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08062_a",
 					"g_SpecularTexture": "sfx/commoneffects_s08062_r",
 					"g_ShininessTexture": "sfx/commoneffects_s08062_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s08062_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08062_n"
 				}
 			}
 		]
@@ -1151,8 +1063,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s08083_a",
 					"g_SpecularTexture": "sfx/commoneffects_s00003",
 					"g_ShininessTexture": "sfx/commoneffects_s08083_n",
-					"g_BumpmapTexture": "sfx/commoneffects_s08083_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s08083_n"
 				}
 			}
 		]
@@ -1227,8 +1138,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
 					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s11604_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
 			}
 		]
@@ -1243,8 +1153,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
 					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s11604_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
 			}
 		]
@@ -1259,8 +1168,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11604",
 					"g_SpecularTexture": "sfx/commoneffects_s00004",
 					"g_ShininessTexture": "sfx/commoneffects_s11604_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s11604_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11604_n"
 				}
 			}
 		]
@@ -1287,8 +1195,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11605",
 					"g_SpecularTexture": "sfx/commoneffects_s00003",
 					"g_ShininessTexture": "sfx/commoneffects_s00005",
-					"g_BumpmapTexture": "sfx/commoneffects_s11605_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11605_n"
 				}
 			}
 		]
@@ -1303,8 +1210,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s11606",
 					"g_SpecularTexture": "sfx/commoneffects_s00003",
 					"g_ShininessTexture": "sfx/commoneffects_s00005",
-					"g_BumpmapTexture": "sfx/commoneffects_s11606_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s11606_n"
 				}
 			}
 		]
@@ -1343,8 +1249,7 @@
 					"g_DiffuseTexture": "sfx/commoneffects_s99999_a",
 					"g_SpecularTexture": "sfx/commoneffects_s99999_r",
 					"g_ShininessTexture": "sfx/commoneffects_s99999_s",
-					"g_BumpmapTexture": "sfx/commoneffects_s99999_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/commoneffects_s99999_n"
 				}
 			}
 		]
@@ -1359,8 +1264,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s11655",
 					"g_SpecularTexture": "sfx/dlc1_s00002",
 					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
 				}
 			}
 		]
@@ -1375,8 +1279,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s11655",
 					"g_SpecularTexture": "sfx/dlc1_s00002",
 					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
 				}
 			}
 		]
@@ -1391,8 +1294,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s11655",
 					"g_SpecularTexture": "sfx/dlc1_s00002",
 					"g_ShininessTexture": "sfx/dlc1_s04020_n",
-					"g_BumpmapTexture": "sfx/dlc1_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s04020_n"
 				}
 			}
 		]
@@ -1406,9 +1308,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s07100",
 					"g_SpecularTexture": "sfx/dlc1_s07100_s",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s07100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s07100_n"
 				}
 			}
 		]
@@ -1422,9 +1322,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08110_a",
 					"g_SpecularTexture": "sfx/dlc1_s08110_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s08110_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08110_n"
 				}
 			}
 		]
@@ -1438,9 +1336,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08110_a",
 					"g_SpecularTexture": "sfx/dlc1_s08110_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s08110_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08110_n"
 				}
 			}
 		]
@@ -1456,8 +1352,7 @@
 					"g_SpecularTexture": "sfx/dlc1_s08120_r",
 					"g_ShininessTexture": "sfx/dlc1_s08120_n",
 					"g_BumpmapTexture": "sfx/dlc1_s08120_n",
-					"g_EmissiveTexture": "sfx/dlc1_s00004",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc1_s00004"
 				}
 			}
 		]
@@ -1484,8 +1379,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s08160_a",
 					"g_SpecularTexture": "sfx/dlc1_s08160_r",
 					"g_ShininessTexture": "sfx/dlc1_s08160_s",
-					"g_BumpmapTexture": "sfx/dlc1_s08160_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08160_n"
 				}
 			}
 		]
@@ -1499,10 +1393,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08170_a",
 					"g_SpecularTexture": "sfx/dlc1_s08170_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc1_s08170_n",
-					"g_EmissiveTexture": "sfx/dlc1_s00003",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc1_s00003"
 				}
 			}
 		]
@@ -1516,9 +1408,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
 			}
 		]
@@ -1532,9 +1422,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
 			}
 		]
@@ -1548,9 +1436,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s08180_a",
 					"g_SpecularTexture": "sfx/dlc1_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s08180_n"
 				}
 			}
 		]
@@ -1564,9 +1450,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s09360_a",
 					"g_SpecularTexture": "sfx/dlc1_s09360_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s09360_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s09360_n"
 				}
 			}
 		]
@@ -1580,9 +1464,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s09371_a",
 					"g_SpecularTexture": "sfx/dlc1_s09371_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s09371_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s09371_n"
 				}
 			},
 			{
@@ -1591,9 +1473,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc1_s09370_a",
 					"g_SpecularTexture": "sfx/dlc1_s09370_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc1_s09370_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s09370_n"
 				}
 			}
 		]
@@ -1608,8 +1488,7 @@
 					"g_DiffuseTexture": "sfx/dlc1_s09321_a",
 					"g_SpecularTexture": "sfx/dlc1_s04009_r",
 					"g_ShininessTexture": "sfx/dlc1_s09520_n",
-					"g_BumpmapTexture": "sfx/dlc1_s09520_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc1_s09520_n"
 				}
 			}
 		]
@@ -1636,8 +1515,7 @@
 					"g_DiffuseTexture": "sfx/dlc2_s08008_a",
 					"g_SpecularTexture": "sfx/dlc2_s08000_r",
 					"g_ShininessTexture": "sfx/dlc2_s08000_s",
-					"g_BumpmapTexture": "sfx/dlc2_s50022",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s50022"
 				}
 			},
 			{
@@ -1647,8 +1525,7 @@
 					"g_DiffuseTexture": "sfx/dlc2_s08008_a",
 					"g_SpecularTexture": "sfx/dlc2_s08000_r",
 					"g_ShininessTexture": "sfx/dlc2_s08000_s",
-					"g_BumpmapTexture": "sfx/dlc2_s50022",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s50022"
 				}
 			}
 		]
@@ -1698,10 +1575,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08300_a",
 					"g_SpecularTexture": "sfx/dlc2_s08300_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08300_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08300_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08300_em"
 				}
 			}
 		]
@@ -1715,10 +1590,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08310_a",
 					"g_SpecularTexture": "sfx/dlc2_s08310_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08310_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08310_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08310_em"
 				}
 			}
 		]
@@ -1732,10 +1605,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08310_a",
 					"g_SpecularTexture": "sfx/dlc2_s08310_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08310_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08310_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08310_em"
 				}
 			}
 		]
@@ -1749,10 +1620,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08310_a",
 					"g_SpecularTexture": "sfx/dlc2_s08310_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08310_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08310_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08310_em"
 				}
 			}
 		]
@@ -1766,10 +1635,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08320_a",
 					"g_SpecularTexture": "sfx/dlc2_s08320_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08320_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08320_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08320_em"
 				}
 			}
 		]
@@ -1783,9 +1650,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08360_a",
 					"g_SpecularTexture": "sfx/dlc2_s04020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc2_s08360_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s08360_n"
 				}
 			}
 		]
@@ -1799,9 +1664,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08370_a",
 					"g_SpecularTexture": "sfx/dlc2_s08370_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc2_s08370_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s08370_n"
 				}
 			}
 		]
@@ -1839,10 +1702,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s11604",
 					"g_SpecularTexture": "sfx/dlc2_s00004",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/dlc2_s08410_n",
-					"g_EmissiveTexture": "sfx/dlc2_s08410_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/dlc2_s08410_em"
 				}
 			}
 		]
@@ -1856,9 +1717,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08420_a",
 					"g_SpecularTexture": "sfx/dlc2_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc2_s08420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s08420_n"
 				}
 			}
 		]
@@ -1872,9 +1731,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08420_a",
 					"g_SpecularTexture": "sfx/dlc2_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc2_s08420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s08420_n"
 				}
 			}
 		]
@@ -1888,9 +1745,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/dlc2_s08430_a",
 					"g_SpecularTexture": "sfx/dlc2_s00002",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/dlc2_s08430_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/dlc2_s08430_n"
 				}
 			}
 		]
@@ -1929,8 +1784,7 @@
 					"g_DiffuseTexture": "sfx/m30_s08000_a",
 					"g_SpecularTexture": "sfx/m30_s08000_r",
 					"g_ShininessTexture": "sfx/m30_s08000_s",
-					"g_BumpmapTexture": "sfx/m30_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s08000_n"
 				}
 			}
 		]
@@ -1944,9 +1798,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s08150_a",
 					"g_SpecularTexture": "sfx/m30_s08150_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s08150_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s08150_n"
 				}
 			}
 		]
@@ -1960,9 +1812,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09010_a",
 					"g_SpecularTexture": "sfx/m30_s09010_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09010_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09010_n"
 				}
 			}
 		]
@@ -1976,9 +1826,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09020_a",
 					"g_SpecularTexture": "sfx/m30_s09020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09020_n"
 				}
 			}
 		]
@@ -1992,9 +1840,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09051_a",
 					"g_SpecularTexture": "sfx/m30_s09051_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09051_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09051_n"
 				}
 			},
 			{
@@ -2003,9 +1849,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09050_a",
 					"g_SpecularTexture": "sfx/m30_s09050_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09050_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09050_n"
 				}
 			}
 		]
@@ -2019,9 +1863,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09060_a",
 					"g_SpecularTexture": "sfx/m30_s09060_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09060_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09060_n"
 				}
 			}
 		]
@@ -2035,9 +1877,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09070_a",
 					"g_SpecularTexture": "sfx/m30_s09070_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09070_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09070_n"
 				}
 			}
 		]
@@ -2051,9 +1891,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09080_a",
 					"g_SpecularTexture": "sfx/m30_s09080_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09080_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09080_n"
 				}
 			},
 			{
@@ -2062,9 +1900,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m30_s09080_a",
 					"g_SpecularTexture": "sfx/m30_s09080_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m30_s09080_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s09080_n"
 				}
 			}
 		]
@@ -2117,8 +1953,7 @@
 					"g_DiffuseTexture": "sfx/m30_s90010_a",
 					"g_SpecularTexture": "sfx/m30_s00002",
 					"g_ShininessTexture": "sfx/m30_s00002",
-					"g_BumpmapTexture": "sfx/m30_s00002",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m30_s00002"
 				}
 			}
 		]
@@ -2173,8 +2008,7 @@
 					"g_DiffuseTexture": "sfx/m31_s04005_a",
 					"g_SpecularTexture": "sfx/m31_s04005_r",
 					"g_ShininessTexture": "sfx/m31_s04005_s",
-					"g_BumpmapTexture": "sfx/m31_s04005_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s04005_n"
 				}
 			}
 		]
@@ -2189,8 +2023,7 @@
 					"g_DiffuseTexture": "sfx/m31_s08000_a",
 					"g_SpecularTexture": "sfx/m31_s08000_r",
 					"g_ShininessTexture": "sfx/m31_s08000_s",
-					"g_BumpmapTexture": "sfx/m31_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s08000_n"
 				}
 			}
 		]
@@ -2204,9 +2037,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s08100_a",
 					"g_SpecularTexture": "sfx/m31_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s08100_n"
 				}
 			},
 			{
@@ -2215,9 +2046,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s08100_a",
 					"g_SpecularTexture": "sfx/m31_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s08100_n"
 				}
 			}
 		]
@@ -2231,9 +2060,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09040_a",
 					"g_SpecularTexture": "sfx/m31_s09040_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09040_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09040_n"
 				}
 			}
 		]
@@ -2247,9 +2074,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09110_a",
 					"g_SpecularTexture": "sfx/m31_s09110_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09110_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09110_n"
 				}
 			},
 			{
@@ -2258,9 +2083,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09110_a",
 					"g_SpecularTexture": "sfx/m31_s09110_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09110_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09110_n"
 				}
 			}
 		]
@@ -2274,9 +2097,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09121_a",
 					"g_SpecularTexture": "sfx/m31_s09121_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09121_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09121_n"
 				}
 			},
 			{
@@ -2285,9 +2106,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09120_a",
 					"g_SpecularTexture": "sfx/m31_s09120_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09120_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09120_n"
 				}
 			}
 		]
@@ -2301,9 +2120,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m31_s09500_a",
 					"g_SpecularTexture": "sfx/m31_s09500_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m31_s09500_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s09500_n"
 				}
 			}
 		]
@@ -2318,8 +2135,7 @@
 					"g_DiffuseTexture": "sfx/m31_s10049",
 					"g_SpecularTexture": "sfx/m31_s00003",
 					"g_ShininessTexture": "sfx/m31_s00001",
-					"g_BumpmapTexture": "sfx/m31_s10048_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m31_s10048_n"
 				}
 			}
 		]
@@ -2345,9 +2161,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "chr/c5180_c5180_Fruit_a",
 					"g_SpecularTexture": "chr/c5180_c5180_Fruit_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "chr/c5180_c5180_Fruit_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "chr/c5180_c5180_Fruit_n"
 				}
 			}
 		]
@@ -2373,9 +2187,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09270_a",
 					"g_SpecularTexture": "sfx/m32_s09270_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09270_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09270_n"
 				}
 			},
 			{
@@ -2384,9 +2196,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09271_a",
 					"g_SpecularTexture": "sfx/m32_s09271_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09271_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09271_n"
 				}
 			}
 		]
@@ -2400,9 +2210,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09280_a",
 					"g_SpecularTexture": "sfx/m32_s09280_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09280_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09280_n"
 				}
 			},
 			{
@@ -2411,9 +2219,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09281_a",
 					"g_SpecularTexture": "sfx/m32_s09281_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09281_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09281_n"
 				}
 			}
 		]
@@ -2427,9 +2233,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09290_a",
 					"g_SpecularTexture": "sfx/m32_s09290_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09290_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09290_n"
 				}
 			},
 			{
@@ -2438,9 +2242,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09291_a",
 					"g_SpecularTexture": "sfx/m32_s09291_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09291_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09291_n"
 				}
 			},
 			{
@@ -2449,9 +2251,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m32_s09292_a",
 					"g_SpecularTexture": "sfx/m32_s09292_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m32_s09292_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m32_s09292_n"
 				}
 			}
 		]
@@ -2490,8 +2290,7 @@
 					"g_DiffuseTexture": "sfx/m33_s04005_a",
 					"g_SpecularTexture": "sfx/m33_s04005_r",
 					"g_ShininessTexture": "sfx/m33_s04005_s",
-					"g_BumpmapTexture": "sfx/m33_s04005_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s04005_n"
 				}
 			}
 		]
@@ -2506,8 +2305,7 @@
 					"g_DiffuseTexture": "sfx/m33_s04030_a",
 					"g_SpecularTexture": "sfx/m33_s04030_r",
 					"g_ShininessTexture": "sfx/m33_s04030_n",
-					"g_BumpmapTexture": "sfx/m33_s04030_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s04030_n"
 				}
 			}
 		]
@@ -2521,9 +2319,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s08100_a",
 					"g_SpecularTexture": "sfx/m33_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s08100_n"
 				}
 			},
 			{
@@ -2532,9 +2328,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s08100_a",
 					"g_SpecularTexture": "sfx/m33_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s08100_n"
 				}
 			}
 		]
@@ -2548,9 +2342,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09010_a",
 					"g_SpecularTexture": "sfx/m33_s09010_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09010_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09010_n"
 				}
 			}
 		]
@@ -2564,9 +2356,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09130_a",
 					"g_SpecularTexture": "sfx/m33_s09130_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09130_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09130_n"
 				}
 			}
 		]
@@ -2580,9 +2370,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09140_a",
 					"g_SpecularTexture": "sfx/m33_s09140_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09140_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09140_n"
 				}
 			}
 		]
@@ -2596,9 +2384,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09140_a",
 					"g_SpecularTexture": "sfx/m33_s09140_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09140_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09140_n"
 				}
 			},
 			{
@@ -2607,9 +2393,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09150_a",
 					"g_SpecularTexture": "sfx/m33_s09150_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09150_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09150_n"
 				}
 			},
 			{
@@ -2618,9 +2402,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09153_a",
 					"g_SpecularTexture": "sfx/m33_s09152_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09153_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09153_n"
 				}
 			},
 			{
@@ -2629,9 +2411,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09152_a",
 					"g_SpecularTexture": "sfx/m33_s09152_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09152_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09152_n"
 				}
 			},
 			{
@@ -2640,9 +2420,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s09151_a",
 					"g_SpecularTexture": "sfx/m33_s09151_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m33_s09151_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s09151_n"
 				}
 			}
 		]
@@ -2683,8 +2461,7 @@
 					"g_DiffuseTexture": "sfx/m33_s90010_a",
 					"g_SpecularTexture": "sfx/m33_s00002",
 					"g_ShininessTexture": "sfx/m33_s00002",
-					"g_BumpmapTexture": "sfx/m33_s00002",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m33_s00002"
 				}
 			}
 		]
@@ -2726,9 +2503,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m33_s04008",
 					"g_SpecularTexture": "sfx/m33_s00004",
-					"g_ShininessTexture": "sfx/m33_s00004",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_ShininessTexture": "sfx/m33_s00004"
 				}
 			}
 		]
@@ -2755,8 +2530,7 @@
 					"g_DiffuseTexture": "sfx/m34_s08000_a",
 					"g_SpecularTexture": "sfx/m34_s08000_r",
 					"g_ShininessTexture": "sfx/m34_s08000_s",
-					"g_BumpmapTexture": "sfx/m34_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m34_s08000_n"
 				}
 			}
 		]
@@ -2770,9 +2544,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s08150_a",
 					"g_SpecularTexture": "sfx/m34_s08150_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m34_s08150_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m34_s08150_n"
 				}
 			}
 		]
@@ -2786,9 +2558,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s09090_a",
 					"g_SpecularTexture": "sfx/m34_s09090_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m34_s09090_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m34_s09090_n"
 				}
 			}
 		]
@@ -2802,9 +2572,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s09100_a",
 					"g_SpecularTexture": "sfx/m34_s09100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m34_s09100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m34_s09100_n"
 				}
 			}
 		]
@@ -2818,9 +2586,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s09260_a",
 					"g_SpecularTexture": "sfx/m34_s09260_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m34_s09260_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m34_s09260_n"
 				}
 			}
 		]
@@ -2846,9 +2612,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m34_s04008",
 					"g_SpecularTexture": "sfx/m34_s00004",
-					"g_ShininessTexture": "sfx/m34_s00004",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_ShininessTexture": "sfx/m34_s00004"
 				}
 			}
 		]
@@ -2875,8 +2639,7 @@
 					"g_DiffuseTexture": "sfx/m35_s08000_a",
 					"g_SpecularTexture": "sfx/m35_s08000_r",
 					"g_ShininessTexture": "sfx/m35_s08000_s",
-					"g_BumpmapTexture": "sfx/m35_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s08000_n"
 				}
 			}
 		]
@@ -2890,9 +2653,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s08100_a",
 					"g_SpecularTexture": "sfx/m35_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s08100_n"
 				}
 			},
 			{
@@ -2901,9 +2662,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s08100_a",
 					"g_SpecularTexture": "sfx/m35_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s08100_n"
 				}
 			}
 		]
@@ -2917,9 +2676,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09000_a",
 					"g_SpecularTexture": "sfx/m35_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09000_n"
 				}
 			}
 		]
@@ -2933,9 +2690,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09010_a",
 					"g_SpecularTexture": "sfx/m35_s09010_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09010_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09010_n"
 				}
 			}
 		]
@@ -2949,9 +2704,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09040_a",
 					"g_SpecularTexture": "sfx/m35_s09040_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09040_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09040_n"
 				}
 			}
 		]
@@ -2965,9 +2718,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09160_a",
 					"g_SpecularTexture": "sfx/m35_s09160_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09160_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09160_n"
 				}
 			}
 		]
@@ -2981,9 +2732,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09170_a",
 					"g_SpecularTexture": "sfx/m35_s09170_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09170_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09170_n"
 				}
 			}
 		]
@@ -2997,9 +2746,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09180_a",
 					"g_SpecularTexture": "sfx/m35_s09180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09180_n"
 				}
 			}
 		]
@@ -3013,9 +2760,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m35_s09300_a",
 					"g_SpecularTexture": "sfx/m35_s09300_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m35_s09300_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s09300_n"
 				}
 			}
 		]
@@ -3044,8 +2789,7 @@
 					"g_DiffuseTexture": "sfx/m35_s90010_a",
 					"g_SpecularTexture": "sfx/m35_s00002",
 					"g_ShininessTexture": "sfx/m35_s00002",
-					"g_BumpmapTexture": "sfx/m35_s00002",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m35_s00002"
 				}
 			}
 		]
@@ -3112,8 +2856,7 @@
 					"g_DiffuseTexture": "sfx/m37_s08081_a",
 					"g_SpecularTexture": "sfx/m37_s08081_r",
 					"g_ShininessTexture": "sfx/m37_s08081_n",
-					"g_BumpmapTexture": "sfx/m37_s08081_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s08081_n"
 				}
 			}
 		]
@@ -3127,9 +2870,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s08100_a",
 					"g_SpecularTexture": "sfx/m37_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s08100_n"
 				}
 			},
 			{
@@ -3138,9 +2879,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s08100_a",
 					"g_SpecularTexture": "sfx/m37_s08100_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s08100_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s08100_n"
 				}
 			}
 		]
@@ -3154,9 +2893,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09020_a",
 					"g_SpecularTexture": "sfx/m37_s09020_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09020_n"
 				}
 			}
 		]
@@ -3170,9 +2907,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09190_a",
 					"g_SpecularTexture": "sfx/m37_s09190_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09190_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09190_n"
 				}
 			},
 			{
@@ -3181,9 +2916,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09190_a",
 					"g_SpecularTexture": "sfx/m37_s09190_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09190_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09190_n"
 				}
 			}
 		]
@@ -3197,9 +2930,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09310_a",
 					"g_SpecularTexture": "sfx/m37_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09310_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09310_n"
 				}
 			}
 		]
@@ -3213,9 +2944,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
 					"g_SpecularTexture": "sfx/m37_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09320_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09320_n"
 				}
 			}
 		]
@@ -3229,9 +2958,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
 					"g_SpecularTexture": "sfx/m37_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09331_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09331_n"
 				}
 			},
 			{
@@ -3240,9 +2967,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s09321_a",
 					"g_SpecularTexture": "sfx/m37_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m37_s09330_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m37_s09330_n"
 				}
 			}
 		]
@@ -3256,9 +2981,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m37_s04008",
 					"g_SpecularTexture": "sfx/m37_s00004",
-					"g_ShininessTexture": "sfx/m37_s00004",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_ShininessTexture": "sfx/m37_s00004"
 				}
 			}
 		]
@@ -3286,8 +3009,7 @@
 					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
-					"g_EmissiveTexture": "sfx/m38_s04031_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m38_s04031_e"
 				}
 			},
 			{
@@ -3298,8 +3020,7 @@
 					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
-					"g_EmissiveTexture": "sfx/m38_s04031_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m38_s04031_e"
 				}
 			},
 			{
@@ -3310,8 +3031,7 @@
 					"g_SpecularTexture": "sfx/m38_s04031_r",
 					"g_ShininessTexture": "sfx/m38_s04031_n",
 					"g_BumpmapTexture": "sfx/m38_s04031_n",
-					"g_EmissiveTexture": "sfx/m38_s04031_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m38_s04031_e"
 				}
 			}
 		]
@@ -3327,8 +3047,7 @@
 					"g_SpecularTexture": "sfx/m38_s04040_r",
 					"g_ShininessTexture": "sfx/m38_s04040_n",
 					"g_BumpmapTexture": "sfx/m38_s04040_n",
-					"g_EmissiveTexture": "sfx/m38_s04040_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m38_s04040_e"
 				}
 			}
 		]
@@ -3343,8 +3062,7 @@
 					"g_DiffuseTexture": "sfx/m38_s04041_a",
 					"g_SpecularTexture": "sfx/m38_s04041_r",
 					"g_ShininessTexture": "sfx/m38_s04041_n",
-					"g_BumpmapTexture": "sfx/m38_s04041_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s04041_n"
 				}
 			}
 		]
@@ -3360,8 +3078,7 @@
 					"g_SpecularTexture": "sfx/m38_s00004",
 					"g_ShininessTexture": "sfx/m38_s11604_s",
 					"g_BumpmapTexture": "sfx/m38_s10048_n",
-					"g_EmissiveTexture": "sfx/m38_s10048_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m38_s10048_e"
 				}
 			}
 		]
@@ -3376,8 +3093,7 @@
 					"g_DiffuseTexture": "sfx/m38_s08070_a",
 					"g_SpecularTexture": "sfx/m38_s08070_r",
 					"g_ShininessTexture": "sfx/m38_s08070_s",
-					"g_BumpmapTexture": "sfx/m38_s08070_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s08070_n"
 				}
 			}
 		]
@@ -3391,9 +3107,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09030_a",
 					"g_SpecularTexture": "sfx/m38_s09030_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09030_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09030_n"
 				}
 			},
 			{
@@ -3402,9 +3116,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09031_a",
 					"g_SpecularTexture": "sfx/m38_s09031_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09031_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09031_n"
 				}
 			}
 		]
@@ -3418,9 +3130,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09200_a",
 					"g_SpecularTexture": "sfx/m38_s09200_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09200_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09200_n"
 				}
 			},
 			{
@@ -3429,9 +3139,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09201_a",
 					"g_SpecularTexture": "sfx/m38_s09200_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09201_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09201_n"
 				}
 			}
 		]
@@ -3445,9 +3153,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09210_a",
 					"g_SpecularTexture": "sfx/m38_s09200_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09210_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09210_n"
 				}
 			},
 			{
@@ -3456,9 +3162,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09211_a",
 					"g_SpecularTexture": "sfx/m38_s09200_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09211_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09211_n"
 				}
 			},
 			{
@@ -3467,9 +3171,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09201_a",
 					"g_SpecularTexture": "sfx/m38_s09200_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09201_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09201_n"
 				}
 			}
 		]
@@ -3483,9 +3185,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09220_a",
 					"g_SpecularTexture": "sfx/m38_s09220_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09220_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09220_n"
 				}
 			},
 			{
@@ -3494,9 +3194,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m38_s09221_a",
 					"g_SpecularTexture": "sfx/m38_s09221_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m38_s09221_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s09221_n"
 				}
 			}
 		]
@@ -3511,8 +3209,7 @@
 					"g_DiffuseTexture": "sfx/m38_s10049",
 					"g_SpecularTexture": "sfx/m38_s00003",
 					"g_ShininessTexture": "sfx/m38_s00001",
-					"g_BumpmapTexture": "sfx/m38_s10048_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s10048_n"
 				}
 			}
 		]
@@ -3553,8 +3250,7 @@
 					"g_DiffuseTexture": "sfx/m38_s90010_a",
 					"g_SpecularTexture": "sfx/m38_s00002",
 					"g_ShininessTexture": "sfx/m38_s00002",
-					"g_BumpmapTexture": "sfx/m38_s00002",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m38_s00002"
 				}
 			}
 		]
@@ -3608,9 +3304,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m39_s09230_a",
 					"g_SpecularTexture": "sfx/m39_s09230_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m39_s09230_n ",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m39_s09230_n "
 				}
 			},
 			{
@@ -3619,9 +3313,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m39_s09230_a",
 					"g_SpecularTexture": "sfx/m39_s09230_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m39_s09230_n ",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m39_s09230_n "
 				}
 			}
 		]
@@ -3635,9 +3327,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m39_s09240_a",
 					"g_SpecularTexture": "sfx/m39_s09240_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m39_s09240_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m39_s09240_n"
 				}
 			}
 		]
@@ -3651,9 +3341,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m40_s09250_a",
 					"g_SpecularTexture": "sfx/m40_s09300_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m40_s09250_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m40_s09250_n"
 				}
 			}
 		]
@@ -3667,9 +3355,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m40_s09350_a",
 					"g_SpecularTexture": "sfx/m40_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m40_s09350_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m40_s09350_n"
 				}
 			}
 		]
@@ -3710,8 +3396,7 @@
 					"g_DiffuseTexture": "sfx/m40_s90010_a",
 					"g_SpecularTexture": "sfx/m40_s00002",
 					"g_ShininessTexture": "sfx/m40_s00002",
-					"g_BumpmapTexture": "sfx/m40_s00002",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m40_s00002"
 				}
 			}
 		]
@@ -3753,9 +3438,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m40_s04008",
 					"g_SpecularTexture": "sfx/m40_s00004",
-					"g_ShininessTexture": "sfx/m40_s00004",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_ShininessTexture": "sfx/m40_s00004"
 				}
 			}
 		]
@@ -3806,8 +3489,7 @@
 					"g_DiffuseTexture": "sfx/m40_s50003",
 					"g_SpecularTexture": "sfx/m40_s50039_r",
 					"g_ShininessTexture": "sfx/m40_s50039_s",
-					"g_BumpmapTexture": "sfx/m40_s11021_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m40_s11021_n"
 				}
 			}
 		]
@@ -3821,9 +3503,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m41_s09360_a",
 					"g_SpecularTexture": "sfx/m41_s09360_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m41_s09360_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m41_s09360_n"
 				}
 			}
 		]
@@ -3837,9 +3517,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m41_s09371_a",
 					"g_SpecularTexture": "sfx/m41_s09371_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m41_s09371_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m41_s09371_n"
 				}
 			},
 			{
@@ -3848,9 +3526,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m41_s09370_a",
 					"g_SpecularTexture": "sfx/m41_s09370_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m41_s09370_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m41_s09370_n"
 				}
 			}
 		]
@@ -3877,8 +3553,7 @@
 					"g_DiffuseTexture": "sfx/m45_s11655",
 					"g_SpecularTexture": "sfx/m45_s00002",
 					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s04020_n"
 				}
 			}
 		]
@@ -3893,8 +3568,7 @@
 					"g_DiffuseTexture": "sfx/m45_s11655",
 					"g_SpecularTexture": "sfx/m45_s00002",
 					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s04020_n"
 				}
 			}
 		]
@@ -3909,8 +3583,7 @@
 					"g_DiffuseTexture": "sfx/m45_s11655",
 					"g_SpecularTexture": "sfx/m45_s00002",
 					"g_ShininessTexture": "sfx/m45_s04020_n",
-					"g_BumpmapTexture": "sfx/m45_s04020_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s04020_n"
 				}
 			}
 		]
@@ -3924,9 +3597,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s08110_a",
 					"g_SpecularTexture": "sfx/m45_s08110_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s08110_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s08110_n"
 				}
 			}
 		]
@@ -3942,8 +3613,7 @@
 					"g_SpecularTexture": "sfx/m45_s08120_r",
 					"g_ShininessTexture": "sfx/m45_s08120_n",
 					"g_BumpmapTexture": "sfx/m45_s08120_n",
-					"g_EmissiveTexture": "sfx/m45_s00004",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m45_s00004"
 				}
 			}
 		]
@@ -3970,8 +3640,7 @@
 					"g_DiffuseTexture": "sfx/m45_s08160_a",
 					"g_SpecularTexture": "sfx/m45_s08160_r",
 					"g_ShininessTexture": "sfx/m45_s08160_s",
-					"g_BumpmapTexture": "sfx/m45_s08160_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s08160_n"
 				}
 			}
 		]
@@ -3985,9 +3654,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
 			}
 		]
@@ -4001,9 +3668,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
 			}
 		]
@@ -4017,9 +3682,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s08180_a",
 					"g_SpecularTexture": "sfx/m45_s08180_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s08180_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s08180_n"
 				}
 			}
 		]
@@ -4033,9 +3696,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09000_a",
 					"g_SpecularTexture": "sfx/m45_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09000_n"
 				}
 			}
 		]
@@ -4049,9 +3710,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09010_a",
 					"g_SpecularTexture": "sfx/m45_s09010_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09010_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09010_n"
 				}
 			}
 		]
@@ -4065,9 +3724,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09250_a",
 					"g_SpecularTexture": "sfx/m45_s09300_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09250_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09250_n"
 				}
 			}
 		]
@@ -4081,9 +3738,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09380_a",
 					"g_SpecularTexture": "sfx/m45_s09380_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09380_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09380_n"
 				}
 			},
 			{
@@ -4092,9 +3747,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09381_a",
 					"g_SpecularTexture": "sfx/m45_s09381_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09381_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09381_n"
 				}
 			}
 		]
@@ -4108,9 +3761,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09390_a",
 					"g_SpecularTexture": "sfx/m45_s09390_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09390_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09390_n"
 				}
 			}
 		]
@@ -4124,9 +3775,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09400_a",
 					"g_SpecularTexture": "sfx/m45_s09400_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09400_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09400_n"
 				}
 			}
 		]
@@ -4140,10 +3789,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09411_a",
 					"g_SpecularTexture": "sfx/m45_s09420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m45_s09410_n",
-					"g_EmissiveTexture": "sfx/m45_s09411_a",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m45_s09411_a"
 				}
 			}
 		]
@@ -4157,9 +3804,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09420_a",
 					"g_SpecularTexture": "sfx/m45_s09420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09420_n"
 				}
 			},
 			{
@@ -4168,9 +3813,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09421_a",
 					"g_SpecularTexture": "sfx/m45_s09421_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09421_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09421_n"
 				}
 			}
 		]
@@ -4184,9 +3827,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s09500_a",
 					"g_SpecularTexture": "sfx/m45_s09500_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m45_s09500_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09500_n"
 				}
 			}
 		]
@@ -4202,8 +3843,7 @@
 					"g_SpecularTexture": "sfx/m45_s04009_r",
 					"g_ShininessTexture": "sfx/m45_s09520_n",
 					"g_BumpmapTexture": "sfx/m45_s09520_n",
-					"g_EmissiveTexture": "sfx/m45_s09521_a",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m45_s09521_a"
 				}
 			}
 		]
@@ -4218,8 +3858,7 @@
 					"g_DiffuseTexture": "sfx/m45_s09321_a",
 					"g_SpecularTexture": "sfx/m45_s04009_r",
 					"g_ShininessTexture": "sfx/m45_s09520_n",
-					"g_BumpmapTexture": "sfx/m45_s09520_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m45_s09520_n"
 				}
 			}
 		]
@@ -4255,11 +3894,7 @@
 				"Name": "03 - Default",
 				"MTD": "N:\\NTC\\data\\Material\\mtd\\sfx\\S[A]_al.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "sfx/m45_s00001",
-					"g_SpecularTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummySpecular.tga",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_DiffuseTexture": "sfx/m45_s00001"
 				}
 			}
 		]
@@ -4273,9 +3908,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m45_s04008",
 					"g_SpecularTexture": "sfx/m45_s00004",
-					"g_ShininessTexture": "sfx/m45_s00004",
-					"g_BumpmapTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_ShininessTexture": "sfx/m45_s00004"
 				}
 			}
 		]
@@ -4289,9 +3922,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09051_a",
 					"g_SpecularTexture": "sfx/m46_s09051_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m46_s09051_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m46_s09051_n"
 				}
 			},
 			{
@@ -4300,9 +3931,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09050_a",
 					"g_SpecularTexture": "sfx/m46_s09050_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m46_s09050_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m46_s09050_n"
 				}
 			}
 		]
@@ -4316,9 +3945,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09080_a",
 					"g_SpecularTexture": "sfx/m46_s09080_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m46_s09080_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m46_s09080_n"
 				}
 			},
 			{
@@ -4327,9 +3954,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09080_a",
 					"g_SpecularTexture": "sfx/m46_s09080_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m46_s09080_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m46_s09080_n"
 				}
 			}
 		]
@@ -4343,9 +3968,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m46_s09260_a",
 					"g_SpecularTexture": "sfx/m46_s09260_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m46_s09260_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m46_s09260_n"
 				}
 			}
 		]
@@ -4361,8 +3984,7 @@
 					"g_SpecularTexture": "sfx/m50_s04040_r",
 					"g_ShininessTexture": "sfx/m50_s04040_n",
 					"g_BumpmapTexture": "sfx/m50_s04040_n",
-					"g_EmissiveTexture": "sfx/m50_s04040_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m50_s04040_e"
 				}
 			}
 		]
@@ -4378,8 +4000,7 @@
 					"g_SpecularTexture": "sfx/m50_s00004",
 					"g_ShininessTexture": "sfx/m50_s11604_s",
 					"g_BumpmapTexture": "sfx/m50_s10048_n",
-					"g_EmissiveTexture": "sfx/m50_s10048_e",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m50_s10048_e"
 				}
 			}
 		]
@@ -4394,8 +4015,7 @@
 					"g_DiffuseTexture": "sfx/m50_s08000_a",
 					"g_SpecularTexture": "sfx/m50_s08000_r",
 					"g_ShininessTexture": "sfx/m50_s08000_s",
-					"g_BumpmapTexture": "sfx/m50_s08000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s08000_n"
 				}
 			}
 		]
@@ -4409,10 +4029,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s11604",
 					"g_SpecularTexture": "sfx/m50_s00004",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m50_s08410_n",
-					"g_EmissiveTexture": "sfx/m50_s08410_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m50_s08410_em"
 				}
 			}
 		]
@@ -4426,9 +4044,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09010_a",
 					"g_SpecularTexture": "sfx/m50_s09010_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09010_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09010_n"
 				}
 			}
 		]
@@ -4442,9 +4058,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09051_a",
 					"g_SpecularTexture": "sfx/m50_s09051_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09051_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09051_n"
 				}
 			},
 			{
@@ -4453,9 +4067,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09050_a",
 					"g_SpecularTexture": "sfx/m50_s09050_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09050_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09050_n"
 				}
 			}
 		]
@@ -4469,9 +4081,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09430_a",
 					"g_SpecularTexture": "sfx/m50_s09430_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09430_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09430_n"
 				}
 			},
 			{
@@ -4480,9 +4090,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09431_a",
 					"g_SpecularTexture": "sfx/m50_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09431_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09431_n"
 				}
 			},
 			{
@@ -4491,9 +4099,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09432_a",
 					"g_SpecularTexture": "sfx/m50_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09432_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09432_n"
 				}
 			}
 		]
@@ -4507,9 +4113,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m50_s09440_a",
 					"g_SpecularTexture": "sfx/m50_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m50_s09440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09440_n"
 				}
 			}
 		]
@@ -4524,8 +4128,7 @@
 					"g_DiffuseTexture": "sfx/m50_s09321_a",
 					"g_SpecularTexture": "sfx/m50_s04009_r",
 					"g_ShininessTexture": "sfx/m50_s09520_n",
-					"g_BumpmapTexture": "sfx/m50_s09520_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m50_s09520_n"
 				}
 			}
 		]
@@ -4587,9 +4190,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08213_a",
 					"g_SpecularTexture": "sfx/m51_s08213_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08213_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08213_n"
 				}
 			},
 			{
@@ -4598,9 +4199,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08420_a",
 					"g_SpecularTexture": "sfx/m51_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08420_n"
 				}
 			},
 			{
@@ -4701,10 +4300,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08300_a",
 					"g_SpecularTexture": "sfx/m51_s08300_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m51_s08300_n",
-					"g_EmissiveTexture": "sfx/m51_s08300_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m51_s08300_em"
 				}
 			}
 		]
@@ -4718,10 +4315,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08310_a",
 					"g_SpecularTexture": "sfx/m51_s08310_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m51_s08310_n",
-					"g_EmissiveTexture": "sfx/m51_s08310_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m51_s08310_em"
 				}
 			}
 		]
@@ -4735,10 +4330,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08310_a",
 					"g_SpecularTexture": "sfx/m51_s08310_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m51_s08310_n",
-					"g_EmissiveTexture": "sfx/m51_s08310_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m51_s08310_em"
 				}
 			}
 		]
@@ -4752,10 +4345,8 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08320_a",
 					"g_SpecularTexture": "sfx/m51_s08320_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
 					"g_BumpmapTexture": "sfx/m51_s08320_n",
-					"g_EmissiveTexture": "sfx/m51_s08320_em",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_EmissiveTexture": "sfx/m51_s08320_em"
 				}
 			}
 		]
@@ -4769,9 +4360,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08370_a",
 					"g_SpecularTexture": "sfx/m51_s08370_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08370_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08370_n"
 				}
 			}
 		]
@@ -4797,9 +4386,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08420_a",
 					"g_SpecularTexture": "sfx/m51_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08420_n"
 				}
 			}
 		]
@@ -4813,9 +4400,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08420_a",
 					"g_SpecularTexture": "sfx/m51_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08420_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08420_n"
 				}
 			}
 		]
@@ -4829,9 +4414,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08440_a",
 					"g_SpecularTexture": "sfx/m51_s08440_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08440_n"
 				}
 			}
 		]
@@ -4845,9 +4428,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08440_a",
 					"g_SpecularTexture": "sfx/m51_s08440_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08440_n"
 				}
 			}
 		]
@@ -4861,9 +4442,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08440_a",
 					"g_SpecularTexture": "sfx/m51_s08440_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08440_n"
 				}
 			}
 		]
@@ -4877,9 +4456,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08440_a",
 					"g_SpecularTexture": "sfx/m51_s08440_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08440_n"
 				}
 			}
 		]
@@ -4893,9 +4470,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s08440_a",
 					"g_SpecularTexture": "sfx/m51_s08440_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08440_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08440_n"
 				}
 			}
 		]
@@ -4909,9 +4484,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09000_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09000_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09000_n"
 				}
 			}
 		]
@@ -4925,9 +4498,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09040_a",
 					"g_SpecularTexture": "sfx/m51_s09040_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09040_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09040_n"
 				}
 			}
 		]
@@ -4941,9 +4512,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09450_a",
 					"g_SpecularTexture": "sfx/m51_s08420_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09450_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09450_n"
 				}
 			}
 		]
@@ -4957,9 +4526,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09460_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09460_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09460_n"
 				}
 			}
 		]
@@ -4973,9 +4540,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09480_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09480_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09480_n"
 				}
 			},
 			{
@@ -4984,9 +4549,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09481_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09481_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09481_n"
 				}
 			}
 		]
@@ -5000,9 +4563,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s08310_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s08310_n"
 				}
 			},
 			{
@@ -5011,9 +4572,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09490_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09490_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09490_n"
 				}
 			},
 			{
@@ -5022,9 +4581,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09491_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09491_n"
 				}
 			},
 			{
@@ -5033,9 +4590,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09492_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09492_n"
 				}
 			},
 			{
@@ -5044,9 +4599,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09491_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09495_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09495_n"
 				}
 			},
 			{
@@ -5055,9 +4608,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09494_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09494_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09494_n"
 				}
 			},
 			{
@@ -5066,9 +4617,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09494_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09496_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09496_n"
 				}
 			},
 			{
@@ -5077,9 +4626,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09493_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09493_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09493_n"
 				}
 			}
 		]
@@ -5093,9 +4640,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09497_a",
 					"g_SpecularTexture": "sfx/m51_s09000_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09497_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09497_n"
 				}
 			}
 		]
@@ -5109,9 +4654,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m51_s09500_a",
 					"g_SpecularTexture": "sfx/m51_s09500_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m51_s09500_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09500_n"
 				}
 			}
 		]
@@ -5126,8 +4669,7 @@
 					"g_DiffuseTexture": "sfx/m51_s09321_a",
 					"g_SpecularTexture": "sfx/m51_s04009_r",
 					"g_ShininessTexture": "sfx/m51_s09520_n",
-					"g_BumpmapTexture": "sfx/m51_s09520_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s09520_n"
 				}
 			}
 		]
@@ -5178,8 +4720,7 @@
 					"g_DiffuseTexture": "sfx/m51_s11667",
 					"g_SpecularTexture": "sfx/m51_s07004_r",
 					"g_ShininessTexture": "sfx/m51_s07004_s",
-					"g_BumpmapTexture": "sfx/m51_s07004_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s07004_n"
 				}
 			},
 			{
@@ -5189,8 +4730,7 @@
 					"g_DiffuseTexture": "sfx/m51_s11667",
 					"g_SpecularTexture": "sfx/m51_s07004_r",
 					"g_ShininessTexture": "sfx/m51_s07004_s",
-					"g_BumpmapTexture": "sfx/m51_s07004_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m51_s07004_n"
 				}
 			}
 		]
@@ -5204,9 +4744,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09270_a",
 					"g_SpecularTexture": "sfx/m53_s09270_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09270_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09270_n"
 				}
 			},
 			{
@@ -5215,9 +4753,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09271_a",
 					"g_SpecularTexture": "sfx/m53_s09271_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09271_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09271_n"
 				}
 			}
 		]
@@ -5231,9 +4767,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09280_a",
 					"g_SpecularTexture": "sfx/m53_s09280_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09280_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09280_n"
 				}
 			},
 			{
@@ -5242,9 +4776,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09281_a",
 					"g_SpecularTexture": "sfx/m53_s09281_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09281_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09281_n"
 				}
 			}
 		]
@@ -5258,9 +4790,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09290_a",
 					"g_SpecularTexture": "sfx/m53_s09290_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09290_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09290_n"
 				}
 			},
 			{
@@ -5269,9 +4799,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09291_a",
 					"g_SpecularTexture": "sfx/m53_s09291_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09291_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09291_n"
 				}
 			},
 			{
@@ -5280,9 +4808,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m53_s09292_a",
 					"g_SpecularTexture": "sfx/m53_s09292_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m53_s09292_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m53_s09292_n"
 				}
 			}
 		]
@@ -5296,9 +4822,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09310_a",
 					"g_SpecularTexture": "sfx/m54_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m54_s09310_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m54_s09310_n"
 				}
 			}
 		]
@@ -5312,9 +4836,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
 					"g_SpecularTexture": "sfx/m54_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m54_s09320_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m54_s09320_n"
 				}
 			}
 		]
@@ -5328,9 +4850,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
 					"g_SpecularTexture": "sfx/m54_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m54_s09331_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m54_s09331_n"
 				}
 			},
 			{
@@ -5339,9 +4859,7 @@
 				"Textures": {
 					"g_DiffuseTexture": "sfx/m54_s09321_a",
 					"g_SpecularTexture": "sfx/m54_s09311_r",
-					"g_ShininessTexture": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyShininess.tga",
-					"g_BumpmapTexture": "sfx/m54_s09330_n",
-					"g_DisplacementTexture": "N:\\LiveTokyo\\data\\model\\common\\tex\\dummy128.tga"
+					"g_BumpmapTexture": "sfx/m54_s09330_n"
 				}
 			}
 		]
