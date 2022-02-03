@@ -242,7 +242,6 @@ namespace DS3TexUpUI
             });
         }
 
-
         private (HashSet<TexId> ids, List<string> prefixes) ParseCurrent()
         {
             string GetCurrentFile()
@@ -275,6 +274,100 @@ namespace DS3TexUpUI
             if (ids.Count == 0 && prefixes.Count == 0) prefixes.Add("");
 
             return (ids, prefixes);
+        }
+
+        private UpscaleProject GetProject()
+        {
+            return new UpscaleProject(GetWorkspace())
+            {
+                Textures = new UpscaledTextures()
+                {
+                    Albedo = new TexOverrideList() {
+                        @"D:\DS3\albedo-processed\sharpest",
+                        @"D:\DS3\albedo-raw\GroundTextures",
+                        @"D:\DS3\albedo-processed\ground-moss",
+                        @"C:\DS3TexUp\up-manual\a",
+                    },
+                    Alpha = new TexOverrideList() {
+                        @"D:\DS3\upscaled\alpha",
+                        @"D:\DS3\upscaled\alpha_binary",
+                        @"D:\DS3\upscaled\n_height",
+                        @"C:\DS3TexUp\up-manual\alpha",
+                    },
+
+                    NormalNormal = new TexOverrideList() {
+                        @"D:\DS3\upscaled\n_normal",
+                        @"C:\DS3TexUp\up-manual\n_normal",
+                    },
+                    NormalAlbedo = new TexOverrideList() {
+                        @"D:\DS3\normal-albedo",
+                        @"C:\DS3TexUp\up-manual\n_albedo",
+                    },
+                    NormalGloss = new TexOverrideList() {
+                        @"D:\DS3\upscaled\n_gloss",
+                        @"C:\DS3TexUp\up-manual\n_gloss"
+                    },
+                    NormalHeight = @"D:\DS3\upscaled\n_height",
+
+                    Reflective = @"D:\DS3\upscaled\r",
+                    Shininess = @"D:\DS3\upscaled\s",
+                    Emissive = new TexOverrideList() {
+                        @"D:\DS3\upscaled\em",
+                        @"C:\DS3TexUp\up-manual\em",
+                    },
+                },
+                TemporaryDir = @"C:\DS3TexUp\temp"
+            };
+        }
+        private void CreateUpscaledDDS(IProgressToken token)
+        {
+            token.SubmitStatus("Loading project");
+            var p = GetProject();
+
+            token.SubmitStatus("Selecting ids");
+            var (currentIds, prefixes) = ParseCurrent();
+
+            var ids = DS3.OriginalSize.Keys
+                // no solid colors
+                .Where(id => !id.IsSolidColor())
+                // no unused textures
+                .Except(DS3.Unused)
+                // no ignored textures
+                .Except(DS3.OutputIgnore)
+                .Where(id =>
+                {
+                    var kind = id.GetTexKind();
+                    return kind == TexKind.Albedo || kind == TexKind.Normal || kind == TexKind.Emissive || kind == TexKind.Reflective;
+                });
+
+            if (prefixes.Count == 0)
+            {
+                // ignore ids
+                ids = new TexId[0];
+            }
+            else if (prefixes.Count == 1 && prefixes.First() == "")
+            {
+                // keep ids as is
+            }
+            else
+            {
+                // filter ids
+                ids = ids.Where(id => prefixes.Any(p => id.Value.StartsWith(p)));
+            }
+
+            token.SubmitStatus("Creating DDS overwrite files");
+            token.ForAllParallel(ids.Union(currentIds), id =>
+            {
+                try
+                {
+                    int upscale = DS3.GetOutputUpscale(id);
+                    p.WriteDDS(id, upscale);
+                }
+                catch (System.Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
         }
 
         private void button5_Click(object sender, EventArgs e)
