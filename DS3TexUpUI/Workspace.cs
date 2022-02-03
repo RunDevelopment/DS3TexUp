@@ -448,7 +448,7 @@ namespace DS3TexUpUI
             return result.ToList();
         }
 
-        public void Overwrite(SubProgressToken token)
+        public void Overwrite(SubProgressToken token, Func<TexId, bool>? assumeUnchanged = null)
         {
             token.SubmitStatus($"Searching for overwrite files");
 
@@ -460,15 +460,15 @@ namespace DS3TexUpUI
                 .Select(TexId.FromPath)
                 .ToList();
 
-            Overwrite(token, ids);
+            Overwrite(token, ids, assumeUnchanged);
         }
-        public void Overwrite(SubProgressToken token, IEnumerable<TexId> textures)
+        public void Overwrite(SubProgressToken token, IEnumerable<TexId> textures, Func<TexId, bool>? assumeUnchanged = null)
         {
             token.SubmitStatus($"Filtering overwrite files");
             var valid = textures.Where(id => DS3.GamePath.ContainsKey(id)).ToHashSet();
-            OverwriteValidSet(token, valid);
+            OverwriteValidSet(token, valid, assumeUnchanged ?? (id => false));
         }
-        private void OverwriteValidSet(SubProgressToken token, HashSet<TexId> overwrite)
+        private void OverwriteValidSet(SubProgressToken token, HashSet<TexId> overwrite, Func<TexId, bool> assumeUnchanged)
         {
             token.SubmitStatus($"Restoring previous overwrites");
             var lastOverwrites = File.Exists(LastOverwritesFile)
@@ -483,7 +483,7 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Filtering out unchanged overwrites");
             var newOverwrites = new Dictionary<TexId, string>();
-            token.Reserve(0.1).ForAllParallel(overwrite, id =>
+            token.Reserve(0.1).ForAllParallel(overwrite.Where(id => !assumeUnchanged(id)), id =>
             {
                 var oldHash = lastOverwrites.GetOrDefault(id, "");
                 var newHash = HashFile(GetOverwritePath(id));

@@ -152,7 +152,15 @@ namespace DS3TexUpUI
         }
         private void overwriteButton_Click(object sender, EventArgs e)
         {
-            RunTask(GetWorkspace().Overwrite);
+            RunTask(token =>
+            {
+                var (currentIds, prefixes) = ParseCurrent();
+                GetWorkspace().Overwrite(token, id =>
+                {
+                    if (currentIds.Contains(id)) return false;
+                    return !prefixes.Any(p => id.Value.StartsWith(p));
+                });
+            });
         }
         private void restoreButton_Click(object sender, EventArgs e)
         {
@@ -232,6 +240,41 @@ namespace DS3TexUpUI
                     }));
                 }
             });
+        }
+
+
+        private (HashSet<TexId> ids, List<string> prefixes) ParseCurrent()
+        {
+            string GetCurrentFile()
+            {
+                string? dir = AppDomain.CurrentDomain.BaseDirectory;
+                while (dir != null && dir != "")
+                {
+                    var f = Path.Join(dir, @"current.txt");
+                    if (File.Exists(f)) return f;
+                    dir = Path.GetDirectoryName(dir);
+                }
+                throw new Exception("Unable to find 'current.txt'.");
+            }
+
+            var ignoreChars = new char[] { ' ', '\t', '\r', '\n', '[', ']', ':', ',' };
+            var lines = File.ReadAllText(GetCurrentFile()).Split('\n').Select(s => s.Trim(ignoreChars)).Where(s => s.Length > 0);
+
+            var ids = new HashSet<TexId>();
+            var prefixes = new List<string>();
+
+            foreach (var line in lines)
+            {
+                if (line.EndsWith("*"))
+                    prefixes.Add(line.Substring(0, line.Length - 1));
+                else
+                    ids.Add(TexId.FromPath(line));
+            }
+
+            // if the file was empty, accept all
+            if (ids.Count == 0 && prefixes.Count == 0) prefixes.Add("");
+
+            return (ids, prefixes);
         }
 
         private void button5_Click(object sender, EventArgs e)
