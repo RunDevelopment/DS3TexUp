@@ -229,6 +229,9 @@ namespace DS3TexUpUI
             };
         }
 
+        public static IReadOnlyCollection<TexId> OutputIgnore
+            = DataFile(@"output-ignore.json").LoadJsonFile<HashSet<TexId>>();
+
         public static IReadOnlyDictionary<TexId, ColorCode6x6> ColorCode
             = DataFile(@"color-code.json").LoadJsonFile<Dictionary<TexId, ColorCode6x6>>();
         internal static Action<SubProgressToken> CreateColorCodeIndex()
