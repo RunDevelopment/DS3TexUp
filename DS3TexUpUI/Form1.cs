@@ -256,7 +256,7 @@ namespace DS3TexUpUI
                 throw new Exception("Unable to find 'current.txt'.");
             }
 
-            var ignoreChars = new char[] { ' ', '\t', '\r', '\n', '[', ']', ':', ',' };
+            var ignoreChars = new char[] { ' ', '\t', '\r', '\n', '[', ']', '"', ':', ',' };
             var lines = File.ReadAllText(GetCurrentFile()).Split('\n').Select(s => s.Trim(ignoreChars)).Where(s => s.Length > 0);
 
             var ids = new HashSet<TexId>();
