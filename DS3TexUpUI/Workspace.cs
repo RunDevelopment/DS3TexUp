@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
 using System.IO;
-using System.Text;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Security.Cryptography;
+
+#nullable enable
 
 namespace DS3TexUpUI
 {
@@ -532,36 +531,66 @@ namespace DS3TexUpUI
         {
             token.CheckCanceled();
 
-            static IEnumerable<string> GetParentDirs(IEnumerable<string> files)
+            static HashSet<string> GetYabberDirs(IEnumerable<string> dirs)
             {
-                return files.Select(f => Path.GetDirectoryName(f));
+                var result = new HashSet<string>();
+                var seen = new HashSet<string>();
+
+                var current = dirs.ToHashSet();
+                while (current.Count > 0)
+                {
+                    var next = new HashSet<string>();
+                    foreach (var d in current)
+                    {
+                        if (seen.Contains(d)) continue;
+                        seen.Add(d);
+
+                        if (Directory.GetFiles(d, "_yabber*.xml", SearchOption.TopDirectoryOnly).Any())
+                            result.Add(d);
+
+                        var p = Path.GetDirectoryName(d);
+                        if (p != null && p != "")
+                            next.Add(p);
+                    }
+                    current = next;
+                }
+
+                return result;
             }
             static int CountParts(string path) => path.Count(c => c == '/' || c == '\\');
-            static (List<string> current, List<string> next) SplitDirs(IEnumerable<string> dirs, int stop)
+            static HashSet<string> GetIndependentSubTrees(HashSet<string> dirs)
             {
-                var l = dirs.ToHashSet().Select(d => (d, CountParts(d))).Where(p => p.Item2 >= stop).ToList();
-                if (l.Count == 0) return (new List<string>(), new List<string>());
+                HashSet<string> dependedUpon = new HashSet<string>();
+                void AddToDependedUpon(string? dir)
+                {
+                    while (dir != null && dir != "")
+                    {
+                        if (!dependedUpon.Add(dir)) break;
+                        dir = Path.GetDirectoryName(dir);
+                    }
+                }
 
-                l.Sort((a, b) => -a.Item2.CompareTo(b.Item2));
-                var greatest = l[0].Item2;
-
-                var current = l.Where(p => p.Item2 == greatest).Select(p => p.d).ToList();
-                var next = l.Skip(current.Count).Select(p => p.d).ToList();
-                return (current, next);
+                var result = new HashSet<string>();
+                foreach (var d in dirs.OrderByDescending(CountParts))
+                {
+                    if (!dependedUpon.Contains(d))
+                        result.Add(d);
+                    AddToDependedUpon(d);
+                }
+                return result;
             }
 
-            var stop = CountParts(GameDir);
-            var (current, next) = SplitDirs(GetParentDirs(files), stop);
-
-            while (current.Count > 0)
+            static IEnumerable<string> GetParentDirs(IEnumerable<string> files)
             {
-                var yabberDirs = current
-                    .Where(d => Directory.GetFiles(d, "_yabber*.xml", SearchOption.TopDirectoryOnly).Any())
-                    .ToArray();
-                Yabber.RunParallel(token.Reserve(0.33), yabberDirs);
+                return files.Select(f => Path.GetDirectoryName(f)!);
+            }
 
-                next.AddRange(GetParentDirs(current));
-                (current, next) = SplitDirs(next, stop);
+            var dirs = GetYabberDirs(GetParentDirs(files));
+            while (dirs.Count > 0)
+            {
+                var current = GetIndependentSubTrees(dirs);
+                Yabber.RunParallel(token.Reserve(current.Count / (double)dirs.Count), current.ToArray());
+                dirs.ExceptWith(current);
             }
 
             token.SubmitProgress(1);
@@ -659,7 +688,7 @@ namespace DS3TexUpUI
         {
             PrepareUpscaleDirectory(token, "sfx");
         }
-        private void PrepareUpscaleDirectory(SubProgressToken token, string name, Func<string, bool> ignore = null)
+        private void PrepareUpscaleDirectory(SubProgressToken token, string name, Func<string, bool>? ignore = null)
         {
             ignore ??= _ => false;
 
