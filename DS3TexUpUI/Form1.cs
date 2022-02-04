@@ -413,26 +413,46 @@ namespace DS3TexUpUI
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            TexId GetTexId()
             {
-                var re = new Regex(@"[^\w/]+");
-                var colorCode = new Regex(@"^(?i:[rgbymc]){6}$");
+                var re = new Regex(@"[^\w/\\.]+");
                 var text = re.Replace(textBox1.Text, "");
+
+                var colorCode = new Regex(@"^(?i:[rgbymc]){6}$");
                 if (colorCode.IsMatch(text))
                 {
                     var cc = ColorCode6x6.Parse(text);
                     foreach (var kv in DS3.ColorCode)
-                    {
                         if (kv.Value == cc)
-                        {
-                            text = kv.Key.ToString();
-                            break;
-                        }
-                    }
+                            return kv.Key;
+                }
+
+                if (DS3.Homographs.TryGetValue(text, out var homographs) && homographs.Count == 1)
+                    return homographs.First();
+
+                if (!text.Contains('/') && !text.Contains('\\'))
+                    throw new Exception();
+
+                return TexId.FromPath(text);
+            }
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                TexId id;
+                try
+                {
+                    id = GetTexId();
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show($"\"{textBox1.Text}\" does not map to a unique TexId.");
+                    return;
                 }
 
                 var w = GetWorkspace();
-                var p = Path.Join(w.ExtractDir, text.Replace('/', '\\') + ".dds");
+                var p = Path.Join(w.ExtractDir, id.Category, id.Name.ToString() + ".dds");
+                if (!File.Exists(p)) p = Path.ChangeExtension(p, "png");
+
                 if (File.Exists(p))
                 {
                     using var process = Process.Start(@"C:\Program Files\paint.net\paintdotnet.exe", p);
