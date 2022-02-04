@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using SixLabors.ImageSharp.PixelFormats;
 using SoulsFormats;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public partial class Form1 : Form
@@ -100,6 +102,7 @@ namespace DS3TexUpUI
         {
             InitializeComponent();
 
+            comboBox1.SelectedIndex = 0;
             progressToken = new Form1ProgressToken(this);
         }
 
@@ -143,7 +146,7 @@ namespace DS3TexUpUI
 
         Workspace GetWorkspace()
         {
-            return new Workspace(Path.GetDirectoryName(exeTextBox.Text), workingDirTextBox.Text);
+            return new Workspace(Path.GetDirectoryName(exeTextBox.Text)!, workingDirTextBox.Text);
         }
 
         private void extractButton_Click(object sender, EventArgs e)
@@ -427,11 +430,13 @@ namespace DS3TexUpUI
                             return kv.Key;
                 }
 
-                if (DS3.Homographs.TryGetValue(text, out var homographs) && homographs.Count == 1)
-                    return homographs.First();
-
                 if (!text.Contains('/') && !text.Contains('\\'))
+                {
+                    if (DS3.Homographs.TryGetValue(text, out var homographs) && homographs.Count == 1)
+                        return homographs.First();
+
                     throw new Exception();
+                }
 
                 return TexId.FromPath(text);
             }
@@ -450,7 +455,15 @@ namespace DS3TexUpUI
                 }
 
                 var w = GetWorkspace();
-                var p = Path.Join(w.ExtractDir, id.Category, id.Name.ToString() + ".dds");
+                var selected = comboBox1.SelectedItem.ToString();
+                var dir = selected switch
+                {
+                    "Extract" => w.ExtractDir,
+                    "Overwrite" => w.OverwriteDir,
+                    _ => throw new Exception("Unknown open mode " + selected)
+                };
+
+                var p = Path.Join(dir, id.Category, id.Name.ToString() + ".dds");
                 if (!File.Exists(p)) p = Path.ChangeExtension(p, "png");
 
                 if (File.Exists(p))

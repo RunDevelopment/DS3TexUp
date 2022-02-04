@@ -49,6 +49,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.logRichTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
@@ -222,6 +223,7 @@
             //
             // button6
             //
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Location = new System.Drawing.Point(367, 129);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
@@ -232,9 +234,11 @@
             //
             // textBox1
             //
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(6, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(505, 23);
+            this.textBox1.Size = new System.Drawing.Size(343, 23);
             this.textBox1.TabIndex = 9;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             //
@@ -242,6 +246,7 @@
             //
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 158);
@@ -251,10 +256,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Misc";
             //
+            // comboBox1
+            //
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Extract",
+            "Overwrite"});
+            this.comboBox1.Location = new System.Drawing.Point(517, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 23);
+            this.comboBox1.TabIndex = 11;
+            //
             // label4
             //
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(517, 25);
+            this.label4.Location = new System.Drawing.Point(355, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 15);
             this.label4.TabIndex = 10;
@@ -329,6 +348,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox logRichTextBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
