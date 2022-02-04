@@ -138,6 +138,15 @@
 	"m40/m40_00_tree_300_a": 4,
 	"m40/m40_00_tree_300_n": 4,
 
+	"m54/m54_00_GroundTile_05_a": 4,
+	"m54/m54_00_Outside_GrassyMud_a": 4,
+	"m54/m54_00_Outside_GrassyMud_n": 4,
+	"m54/m54_00_plant_00_a": 4,
+	"m54/m54_00_plant_00_n": 4,
+	"m54/m54_00_plant_01_a": 4,
+	"m54/m54_00_plant_01_n": 4,
+	"m54/m54_00_wall_04_a": 4,
+
 	"obj/o000100_o000100_em": 2,
 	"obj/o008805_o008805_cliff_00_n": 2,
 	"obj/o302590_o302590_c2160_body_a": 2,
