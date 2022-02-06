@@ -10962,7 +10962,7 @@
 	"m40/m40_00_plant_905_00_a": "DX10 BC1_UNORM_SRGB",
 	"m40/m40_00_plant_905_00_n": "DX10 BC7_UNORM",
 	"m40/m40_00_plant_905_00_r": "DX10 BC1_UNORM_SRGB",
-	"m40/m40_00_plant_905_01_a": "None",
+	"m40/m40_00_plant_905_01_a": "DX10 BC7_UNORM",
 	"m40/m40_00_plant_905_01_n": "DX10 BC7_UNORM",
 	"m40/m40_00_plasterwall_600_a": "DX10 BC1_UNORM_SRGB",
 	"m40/m40_00_plasterwall_600_n": "DX10 BC7_UNORM",
