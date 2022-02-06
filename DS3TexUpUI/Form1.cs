@@ -310,11 +310,14 @@ namespace DS3TexUpUI
                     },
                     NormalGloss = new TexOverrideList() {
                         @"D:\DS3\upscaled\n_gloss",
-                        @"C:\DS3TexUp\up-manual\n_gloss"
+                        @"C:\DS3TexUp\up-manual\n_gloss",
                     },
                     NormalHeight = @"D:\DS3\upscaled\n_height",
 
-                    Reflective = @"D:\DS3\upscaled\r",
+                    Reflective = new TexOverrideList() {
+                        @"D:\DS3\upscaled\r",
+                        @"C:\DS3TexUp\up-manual\r",
+                    },
                     Shininess = @"D:\DS3\upscaled\s",
                     Emissive = new TexOverrideList() {
                         @"D:\DS3\upscaled\em",
