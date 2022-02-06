@@ -236,6 +236,8 @@ namespace DS3TexUpUI
                 }
                 finally
                 {
+                    GC.Collect();
+
                     Invoke(new Action(() =>
                     {
                         taskIsRunning = false;
