@@ -122,6 +122,8 @@ namespace DS3TexUpUI
                 token.SubmitSubProgress(done, total);
             }
 
+            GC.Collect();
+            token.CheckCanceled();
             token.SubmitProgress(1);
         }
         public static void ForAll<T>(this IProgressToken token, IEnumerable<T> iter, Action<SubProgressToken, T> action)
@@ -197,8 +199,8 @@ namespace DS3TexUpUI
                 }
             });
 
+            GC.Collect();
             token.CheckCanceled();
-
             token.SubmitProgress(1);
         }
 
