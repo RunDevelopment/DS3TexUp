@@ -167,6 +167,10 @@ namespace DS3TexUpUI
         }
         private void restoreButton_Click(object sender, EventArgs e)
         {
+            var text = "Are you sure that you want to restore? This operation cannot be undone.";
+            if (MessageBox.Show(text, "You sure?", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
             RunTask(GetWorkspace().Restore);
         }
         private void abortButton_Click(object sender, EventArgs e)
