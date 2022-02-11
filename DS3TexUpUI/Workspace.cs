@@ -479,6 +479,7 @@ namespace DS3TexUpUI
             SetEmpty(lastOverwrites, restore);
             lastOverwrites.SaveAsJson(LastOverwritesFile);
             token.Reserve(0.33).ForAllParallel(restore, id => File.Copy(GetExtractPath(id), GetGamePath(id), true));
+            token.SubmitLog($"Restored {restore.Count} files");
 
             token.SubmitStatus($"Filtering out unchanged overwrites");
             var newOverwrites = new Dictionary<TexId, string>();
@@ -499,6 +500,7 @@ namespace DS3TexUpUI
             SetEmpty(lastOverwrites, newOverwrites.Keys);
             lastOverwrites.SaveAsJson(LastOverwritesFile);
             token.Reserve(0.33).ForAllParallel(newOverwrites.Keys, id => File.Copy(GetOverwritePath(id), GetGamePath(id), true));
+            token.SubmitLog($"Overwrote {newOverwrites.Count} files");
 
             Repack(token, newOverwrites.Keys.Union(restore).ToHashSet());
 
