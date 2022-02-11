@@ -336,6 +336,20 @@ namespace DS3TexUpUI
             token.SubmitStatus("Loading project");
             var p = GetProject();
 
+            token.SubmitStatus("Loading upscale factors");
+            DS3.UpscaleFactor outputUpscale;
+            var localDir = Path.GetFullPath("data");
+            if (Directory.Exists(localDir))
+            {
+                token.SubmitLog("Using local data dir for upscale factors: " + Path.GetFullPath(localDir));
+                outputUpscale = DS3.UpscaleFactor.LoadFromDir(localDir);
+            }
+            else
+            {
+                token.SubmitLog("Using application data dir for upscale factors");
+                outputUpscale = DS3.OutputUpscale;
+            }
+
             token.SubmitStatus("Selecting ids");
             var (currentIds, prefixes) = ParseCurrent();
 
@@ -345,7 +359,7 @@ namespace DS3TexUpUI
                 // no unused textures
                 .Except(DS3.Unused)
                 // no ignored textures
-                .Except(DS3.OutputIgnore)
+                .Except(outputUpscale.Ignore)
                 .Where(id =>
                 {
                     var kind = id.GetTexKind();
@@ -372,7 +386,7 @@ namespace DS3TexUpUI
             {
                 try
                 {
-                    int upscale = DS3.GetOutputUpscale(id);
+                    int upscale = outputUpscale[id];
                     p.WriteDDS(id, upscale);
                 }
                 catch (System.Exception e)

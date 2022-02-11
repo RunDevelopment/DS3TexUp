@@ -37,10 +37,8 @@ namespace DS3TexUpUI
             "m54", // Arena - Round Plaza
         };
 
-        private static string DataFile(string name)
-        {
-            return Path.Join(AppDomain.CurrentDomain.BaseDirectory, "data", name);
-        }
+        private static string DataDir() => Path.Join(AppDomain.CurrentDomain.BaseDirectory, "data");
+        private static string DataFile(string name) => Path.Join(DataDir(), name);
 
         public static readonly IReadOnlyList<string> Parts
             = DataFile(@"parts.json").LoadJsonFile<string[]>();
@@ -229,31 +227,47 @@ namespace DS3TexUpUI
             };
         }
 
-        public static IReadOnlyCollection<TexId> OutputIgnore
-            = DataFile(@"output-ignore.json").LoadJsonFile<HashSet<TexId>>();
-        public static IReadOnlyDictionary<TexId, int> OutputUpscale
-            = DataFile(@"output-upscale.json").LoadJsonFile<Dictionary<TexId, int>>();
-        public static IReadOnlyDictionary<string, int> OutputUpscaleChr
-            = DataFile(@"output-upscale-chr.json").LoadJsonFile<Dictionary<string, int>>();
-        public static int GetOutputUpscale(TexId id)
+        public static UpscaleFactor OutputUpscale = UpscaleFactor.LoadFromDir(DataDir());
+
+        public class UpscaleFactor
         {
-            int upscale;
+            public HashSet<TexId> Ignore { get; set; } = new HashSet<TexId>();
+            public Dictionary<string, int> UpscaleChr { get; set; } = new Dictionary<string, int>();
+            public Dictionary<TexId, int> Upscale { get; set; } = new Dictionary<TexId, int>();
 
-            // per-texture overwrites
-            if (OutputUpscale.TryGetValue(id, out upscale))
-                return upscale;
-
-            if (id.Category.Equals("chr", StringComparison.OrdinalIgnoreCase))
+            public int this[TexId id]
             {
-                var cId = id.Name.Slice(0, 5).ToString();
+                get
+                {
+                    int upscale;
 
-                // per-character overwrites
-                if (OutputUpscaleChr.TryGetValue(cId, out upscale))
-                    return upscale;
+                    // per-texture overwrites
+                    if (Upscale.TryGetValue(id, out upscale))
+                        return upscale;
+
+                    if (id.Category.Equals("chr", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var cId = id.Name.Slice(0, 5).ToString();
+
+                        // per-character overwrites
+                        if (UpscaleChr.TryGetValue(cId, out upscale))
+                            return upscale;
+                    }
+
+                    // 2x for maps, 4x for everything else
+                    return id.Category.StartsWith("m") ? 2 : 4;
+                }
             }
 
-            // 2x for maps, 4x for everything else
-            return id.Category.StartsWith("m") ? 2 : 4;
+            public static UpscaleFactor LoadFromDir(string dir)
+            {
+                return new UpscaleFactor()
+                {
+                    Ignore = Path.Join(dir, @"output-ignore.json").LoadJsonFile<HashSet<TexId>>(),
+                    UpscaleChr = Path.Join(dir, @"output-upscale-chr.json").LoadJsonFile<Dictionary<string, int>>(),
+                    Upscale = Path.Join(dir, @"output-upscale.json").LoadJsonFile<Dictionary<TexId, int>>(),
+                };
+            }
         }
 
         public static IReadOnlyDictionary<TexId, ColorCode6x6> ColorCode
