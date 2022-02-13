@@ -249,6 +249,11 @@ namespace DS3TexUpUI
                 _classes.Remove(firstSet);
             }
         }
+        public void Add(IEnumerable<IEnumerable<T>> other)
+        {
+            foreach (var eqClass in other)
+                Add(eqClass);
+        }
         public void Add(EquivalenceCollection<T> other)
         {
             foreach (var eqClass in other.Classes)
@@ -330,6 +335,11 @@ namespace DS3TexUpUI
                 _data.Remove(firstSet.Single());
                 _classes.Remove(firstSet);
             }
+        }
+        public void Set(IEnumerable<IEnumerable<T>> other)
+        {
+            foreach (var eqClass in other)
+                Set(eqClass);
         }
         public void Set(EquivalenceCollection<T> other)
         {
