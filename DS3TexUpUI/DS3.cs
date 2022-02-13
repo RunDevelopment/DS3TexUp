@@ -625,8 +625,12 @@ namespace DS3TexUpUI
             MaxDiff = new Rgba32(255, 255, 8, 255),
             ModifyImage = image =>
             {
-                image.Multiply(new Rgba32(0, 0, 255, 0));
-                image.SetAlpha(255);
+                foreach (ref var p in image.Data.AsSpan())
+                {
+                    p.R = p.B;
+                    p.G = p.B;
+                    p.A = 255;
+                }
             },
         };
 
