@@ -462,6 +462,7 @@ namespace DS3TexUpUI
 
                 return true;
             },
+            CopyHasherFactory = r => new AlphaImageHasher(r),
             CopySpread = image => image.Count <= 64 * 64 ? 12 : 8,
             MaxDiff = new Rgba32(255, 255, 255, 2),
             ModifyImage = image =>
@@ -559,6 +560,7 @@ namespace DS3TexUpUI
 
                 return true;
             },
+            CopyHasherFactory = r => new NormalImageHasher(r),
             CopySpread = image => image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 5 : 3,
             MaxDiff = new Rgba32(2, 2, 255, 255),
             ModifyImage = image =>
@@ -621,6 +623,7 @@ namespace DS3TexUpUI
 
                 return true;
             },
+            CopyHasherFactory = r => new BlueChannelImageHasher(r),
             CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 6 : 4,
             MaxDiff = new Rgba32(255, 255, 8, 255),
             ModifyImage = image =>
@@ -1131,6 +1134,7 @@ namespace DS3TexUpUI
         public DataFile RejectedFile { get; set; } = "";
 
         public bool SameKind { get; set; } = false;
+        public Func<SizeRatio, IImageHasher>? CopyHasherFactory { get; set; } = null;
         public Predicate<TexId> CopyFilter { get; set; } = id => true;
         public Func<ArrayTextureMap<Rgba32>, int> CopySpread { get; set; } = image => 2;
         public Rgba32 MaxDiff { get; set; } = default;
@@ -1175,7 +1179,7 @@ namespace DS3TexUpUI
                     .Where(f => CopyFilter(TexId.FromPath(f)))
                     .ToArray();
 
-                var index = CopyIndex.Create(token.Reserve(0.5), files, r => new BlueChannelImageHasher(r));
+                var index = CopyIndex.Create(token.Reserve(0.5), files, CopyHasherFactory);
 
                 var copies = new EquivalenceCollection<TexId>();
 
