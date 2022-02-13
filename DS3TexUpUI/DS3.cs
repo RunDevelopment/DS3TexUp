@@ -1344,7 +1344,7 @@ namespace DS3TexUpUI
                 });
             };
         }
-        public Action<SubProgressToken> ReadDirectory(Workspace w)
+        public Action<SubProgressToken> ReadUncertainDirectory(Workspace w)
         {
             return token =>
             {
