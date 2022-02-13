@@ -127,8 +127,13 @@
 		"chr/c1102_c1102_body_n",
 		"chr/c1106_c1106_body_n",
 		"chr/c1280_c1280_body_n",
+		"m30/m30_00_o302550_body_n",
+		"m34/m30_00_o302550_body_n",
 		"m50/m50_00_o302550_body_n",
-		"obj/o398710_o398710_c1280_body_n"
+		"obj/o398710_o398710_c1280_body_n",
+		"sfx/m30_s09050_n",
+		"sfx/m46_s09050_n",
+		"sfx/m50_s09050_n"
 	],
 	[
 		"chr/c1101_c1101_lg_n",
@@ -577,11 +582,13 @@
 	[
 		"chr/c2190_c2190_weapon01_n",
 		"chr/c2191_c2191_weapon01_n",
+		"obj/o399910_c2190_weapon01_n",
 		"parts/WP_A_0817_WP_A_0817_n"
 	],
 	[
 		"chr/c2190_c2190_weapon02_n",
-		"chr/c2191_c2191_weapon02_n"
+		"chr/c2191_c2191_weapon02_n",
+		"obj/o399910_c2190_weapon02_n"
 	],
 	[
 		"chr/c2190_c2190_wing_n",
@@ -647,6 +654,10 @@
 	[
 		"chr/c3040_C3040_HD_hair_n",
 		"parts/HD_M_5800_HD_M_5800_hair_n"
+	],
+	[
+		"chr/c3040_c3040_LG_part01_n",
+		"parts/LG_M_5800_LG_M_5800_01_n"
 	],
 	[
 		"chr/c3040_c3040_WP_A_0113_n",
@@ -752,6 +763,10 @@
 		"parts/WP_A_1312_WP_A_1312_n"
 	],
 	[
+		"chr/c5160_c5160_weapon_n",
+		"parts/WP_A_0629_WP_A_0629_n"
+	],
+	[
 		"chr/c5200_c5200_hair_n",
 		"chr/c6081_c6081_fur3_n",
 		"m45/m45_00_c6081_fur3_n"
@@ -779,7 +794,8 @@
 	],
 	[
 		"chr/c5222_c5222_body_02_n",
-		"chr/c5223_c5223_body_02_n"
+		"chr/c5223_c5223_body_02_n",
+		"m35/m35_00_c5223_body_02_n"
 	],
 	[
 		"chr/c5222_c5222_head_02_n",
@@ -1024,16 +1040,17 @@
 		"chr/c6201_c6201_Hair_n"
 	],
 	[
+		"chr/c6200_c6200_Weapon_Dust_n",
+		"chr/c6201_c6201_Weapon_Dust_n",
+		"obj/o007180_o007180_c6201_Weapon_Dust_n"
+	],
+	[
 		"chr/c6200_c6200_Weapon_n",
 		"parts/WP_A_0226_WP_A_0226_n"
 	],
 	[
 		"chr/c6200_c6200_WP_A_1419_n",
 		"parts/WP_A_1419_WP_A_1419_n"
-	],
-	[
-		"chr/c6201_c6201_Weapon_Dust_n",
-		"obj/o007180_o007180_c6201_Weapon_Dust_n"
 	],
 	[
 		"chr/c6210_c6210_ArmLeg_n",
@@ -1700,13 +1717,6 @@
 	[
 		"m30/m30_00_o302530_03_n",
 		"m34/m30_00_o302530_03_n"
-	],
-	[
-		"m30/m30_00_o302550_body_n",
-		"m34/m30_00_o302550_body_n",
-		"sfx/m30_s09050_n",
-		"sfx/m46_s09050_n",
-		"sfx/m50_s09050_n"
 	],
 	[
 		"m30/m30_00_o302550_weapon_n",
@@ -4501,7 +4511,8 @@
 	[
 		"m33/m33_00_brickwall_07_n",
 		"m33/m33_00_o331314_floor_02_n",
-		"m34/m34_00_o331314_floor_02_n"
+		"m34/m34_00_o331314_floor_02_n",
+		"m40/m40_00_floor_302_n"
 	],
 	[
 		"m33/m33_00_c1360_etc_n",
@@ -4816,6 +4827,10 @@
 		"m34/m34_00_o4831_roof_01_n",
 		"m46/m46_00_o4831_roof_01_n",
 		"m51/m51_00_o4831_roof_01_n"
+	],
+	[
+		"m34/m34_01_o309190_01_n",
+		"obj/o309190_m34_01_o309190_01_n"
 	],
 	[
 		"m34/m34_01_o309190_02_n",
