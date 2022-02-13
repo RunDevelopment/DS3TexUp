@@ -1331,7 +1331,7 @@ namespace DS3TexUpUI
 
                         if (ModifyImage == null && width == largest)
                         {
-                            File.Copy(source, target);
+                            File.Copy(source, Path.ChangeExtension(target, "dds"));
                         }
                         else
                         {
