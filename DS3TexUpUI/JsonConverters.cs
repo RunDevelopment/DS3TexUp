@@ -162,9 +162,50 @@ namespace DS3TexUpUI
         public static void SaveAsJson<T>(this T value, string file, bool formatted = true)
         {
             if (File.Exists(file)) File.Delete(file);
-            using var f = File.OpenWrite(file);
-            var jw = new Utf8JsonWriter(f, new JsonWriterOptions() { Indented = formatted });
-            Serialize(jw, value);
+
+            if (formatted)
+            {
+                // We want tab indentation and LF new lines
+                using var ms = new MemoryStream();
+                Serialize(new Utf8JsonWriter(ms, new JsonWriterOptions() { Indented = formatted }), value);
+
+                var bytes = ms.ToArray();
+                using var f = File.OpenWrite(file);
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    var b = bytes[i];
+                    if (b == '\r')
+                    {
+                        // convert line ends and indentation
+                        f.WriteByte((byte)'\n');
+                        i++; // skip \n of \r\n
+
+                        uint spaces = 0;
+                        while (i + 1 < bytes.Length && bytes[i + 1] == ' ')
+                        {
+                            spaces++;
+                            i++;
+                        }
+
+                        spaces >>= 1;
+                        for (; spaces != 0; spaces--)
+                            f.WriteByte((byte)'\t');
+                    }
+                    else
+                    {
+                        f.WriteByte(b);
+                    }
+                }
+
+                // add final new line
+                f.WriteByte((byte)'\n');
+            }
+            else
+            {
+                using var f = File.OpenWrite(file);
+                Serialize(new Utf8JsonWriter(f), value);
+            }
         }
 
         public static T LoadJsonFile<T>(this string file)
