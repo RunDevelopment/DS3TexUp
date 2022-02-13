@@ -14,6 +14,10 @@ namespace DS3TexUpUI
 {
     public static class JsonConverters
     {
+        interface IAdditionalConverters
+        {
+            IEnumerable<JsonConverter> GetConverters();
+        }
         private static readonly Dictionary<Type, JsonConverter> _concreteTypes = new Dictionary<Type, JsonConverter>()
         {
             [typeof(Vector2)] = new Vector2Converter(),
@@ -27,11 +31,22 @@ namespace DS3TexUpUI
         {
             var types = GetTypes(typeof(T));
 
+            var converters = new HashSet<JsonConverter>();
+            void AddConverter(JsonConverter c)
+            {
+                converters.Add(c);
+                if (c is IAdditionalConverters ac)
+                {
+                    foreach (var other in ac.GetConverters())
+                        converters.Add(other);
+                }
+            }
+
             foreach (var type in types)
             {
                 if (_concreteTypes.TryGetValue(type, out var concreteConverter))
                 {
-                    options.Converters.Add(concreteConverter);
+                    AddConverter(concreteConverter);
                 }
                 else if (type.IsGenericType)
                 {
@@ -45,7 +60,7 @@ namespace DS3TexUpUI
                             var cType = typeof(TexIdDictionaryConverter<>).MakeGenericType(args[1]);
                             var ctor = cType.GetConstructor(new Type[0]);
                             var c = ctor.Invoke(null);
-                            options.Converters.Add((JsonConverter)c);
+                            AddConverter((JsonConverter)c);
                         }
                     }
                     else if (typeDef == typeof(ValueTuple<,>))
@@ -53,10 +68,27 @@ namespace DS3TexUpUI
                         var cType = typeof(Tuple2Converter<,>).MakeGenericType(args);
                         var ctor = cType.GetConstructor(new Type[0]);
                         var c = ctor.Invoke(null);
-                        options.Converters.Add((JsonConverter)c);
+                        AddConverter((JsonConverter)c);
+                    }
+                    else if (typeDef == typeof(EquivalenceCollection<>))
+                    {
+                        var cType = typeof(EquivalenceCollectionConverter<>).MakeGenericType(args);
+                        var ctor = cType.GetConstructor(new Type[0]);
+                        var c = ctor.Invoke(null);
+                        AddConverter((JsonConverter)c);
+                    }
+                    else if (typeDef == typeof(DifferenceCollection<>))
+                    {
+                        var cType = typeof(DifferenceCollectionConverter<>).MakeGenericType(args);
+                        var ctor = cType.GetConstructor(new Type[0]);
+                        var c = ctor.Invoke(null);
+                        AddConverter((JsonConverter)c);
                     }
                 }
             }
+
+            foreach (var c in converters)
+                options.Converters.Add(c);
 
             return options;
         }
@@ -116,20 +148,29 @@ namespace DS3TexUpUI
             }
         }
 
+        public static void Serialize<T>(Utf8JsonWriter writer, T value, JsonSerializerOptions options = null)
+        {
+            options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
+            JsonSerializer.Serialize(writer, value, options);
+        }
+        public static T Deserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options = null)
+        {
+            options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
+            return JsonSerializer.Deserialize<T>(ref reader, options);
+        }
+
         public static void SaveAsJson<T>(this T value, string file)
         {
             if (File.Exists(file)) File.Delete(file);
             using var f = File.OpenWrite(file);
             var jw = new Utf8JsonWriter(f);
-            var options = new JsonSerializerOptions().WithConvertersFor<T>();
-            JsonSerializer.Serialize(jw, value, options);
+            Serialize(jw, value);
         }
 
         public static T LoadJsonFile<T>(this string file)
         {
             var jr = new Utf8JsonReader(File.ReadAllBytes(file));
-            var options = new JsonSerializerOptions().WithConvertersFor<T>();
-            return JsonSerializer.Deserialize<T>(ref jr, options);
+            return Deserialize<T>(ref jr);
         }
 
         private sealed class Vector2Converter : JsonConverter<Vector2>
@@ -256,6 +297,67 @@ namespace DS3TexUpUI
             }
         }
 
+        private sealed class EquivalenceCollectionConverter<T> : JsonConverter<EquivalenceCollection<T>>
+        {
+            public override EquivalenceCollection<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var surrogate = JsonSerializer.Deserialize<List<HashSet<T>>>(ref reader, options);
+                return new EquivalenceCollection<T>(surrogate);
+            }
+
+            public override void Write(Utf8JsonWriter writer, EquivalenceCollection<T> value, JsonSerializerOptions options)
+            {
+                var l = value.Classes.Select(eqClass =>
+                {
+                    var l = eqClass.ToList();
+                    l.Sort();
+                    return l;
+                }).ToList();
+
+                var com = Comparer<T>.Default;
+                l.Sort((a, b) => com.Compare(a[0], b[0]));
+
+                JsonSerializer.Serialize(writer, l, options);
+            }
+        }
+        private sealed class DifferenceCollectionConverter<T> : JsonConverter<DifferenceCollection<T>>, IAdditionalConverters
+        {
+            private static readonly JsonConverter[] _converters = new JsonConverter[]{
+                new Tuple2Converter<T, T>(),
+            };
+            public IEnumerable<JsonConverter> GetConverters() => _converters;
+
+            public override DifferenceCollection<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var pairs = JsonSerializer.Deserialize<List<(T, T)>>(ref reader, options);
+                var d = new DifferenceCollection<T>();
+                foreach (var (a, b) in pairs)
+                    d.Set(a, b);
+                return d;
+            }
+
+            public override void Write(Utf8JsonWriter writer, DifferenceCollection<T> value, JsonSerializerOptions options)
+            {
+                var pairs = new List<(T, T)>();
+                foreach (var (a, other) in value)
+                    foreach (var b in other)
+                        pairs.Add((a, b));
+                pairs.Sort();
+
+                var seen = new HashSet<(T, T)>();
+                var unique = pairs.Where(p =>
+                {
+                    var (a, b) = p;
+                    if (seen.Contains((a, b))) return false;
+                    seen.Add((a, b));
+                    seen.Add((b, a));
+                    return true;
+                }).ToList();
+
+                JsonSerializer.Serialize(writer, unique, options);
+            }
+        }
+
         private sealed class TexIdHashSetConverter : JsonConverter<HashSet<TexId>>
         {
             public override HashSet<TexId> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -267,7 +369,7 @@ namespace DS3TexUpUI
             {
                 var list = value.ToList();
                 list.Sort();
-                JsonSerializer.Serialize(writer, list, options);
+                JsonSerializer.Serialize(writer, list, options.WithConvertersFor<List<TexId>>());
             }
         }
 
