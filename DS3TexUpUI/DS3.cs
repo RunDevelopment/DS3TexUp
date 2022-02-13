@@ -1368,5 +1368,17 @@ namespace DS3TexUpUI
                 rejected.SaveAsJson(RejectedFile.Write);
             };
         }
+
+        public Action<SubProgressToken> ManuallyMakeEqual(EquivalenceCollection<TexId> certain)
+        {
+            return token =>
+            {
+                certain.Set(LoadCertain());
+                certain.SaveAsJson(CertainFile.Write);
+
+                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadUncertain(), certain);
+                rejected.SaveAsJson(RejectedFile.Write);
+            };
+        }
     }
 }

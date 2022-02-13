@@ -1671,6 +1671,10 @@
 	],
 	[
 		"chr/c2160_c2160_Tatter_a",
+		"chr/c5229_c5229_Tatter_a",
+		"chr/c6240_c6240_Tatter_a",
+		"m37/m37_00_c5229_Tatter_a",
+		"m50/m50_00_o302590_tatter_a",
 		"sfx/m50_s09432_a"
 	],
 	[
@@ -2477,10 +2481,6 @@
 	[
 		"chr/c5229_c5229_candler_03_r",
 		"m37/m37_00_c5229_candler_03_r"
-	],
-	[
-		"chr/c5229_c5229_Tatter_a",
-		"chr/c6240_c6240_Tatter_a"
 	],
 	[
 		"chr/c5229_c5229_WP_A_0216_a",
@@ -14754,10 +14754,6 @@
 		"m37/m37_00_bridgestatue_n",
 		"sfx/m37_s09310_n",
 		"sfx/m54_s09310_n"
-	],
-	[
-		"m37/m37_00_c5229_Tatter_a",
-		"m50/m50_00_o302590_tatter_a"
 	],
 	[
 		"m37/m37_00_candellabra_01_a",

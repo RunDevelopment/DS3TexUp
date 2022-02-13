@@ -413,6 +413,8 @@
 		"chr/c2160_c2160_Tatter_a",
 		"chr/c5229_c5229_Tatter_a",
 		"chr/c6240_c6240_Tatter_a",
+		"m37/m37_00_c5229_Tatter_a",
+		"m50/m50_00_o302590_tatter_a",
 		"sfx/m50_s09432_a"
 	],
 	[
@@ -2154,10 +2156,6 @@
 		"m51/m51_00_interior_bldgA_wall_00_n",
 		"m51/m51_00_interior_wall_05_n",
 		"m51/m51_00_interior_wall_10_n"
-	],
-	[
-		"m37/m37_00_c5229_Tatter_a",
-		"m50/m50_00_o302590_tatter_a"
 	],
 	[
 		"m37/m37_00_candellabra_01_a",
