@@ -477,7 +477,7 @@ namespace DS3TexUpUI
             token.SubmitStatus($"Restoring previous overwrites");
             var restore = lastOverwrites.Keys.Except(overwrite).ToList();
             SetEmpty(lastOverwrites, restore);
-            lastOverwrites.SaveAsJson(LastOverwritesFile);
+            lastOverwrites.SaveAsJson(LastOverwritesFile, false);
             token.Reserve(0.33).ForAllParallel(restore, id => File.Copy(GetExtractPath(id), GetGamePath(id), true));
             token.SubmitLog($"Restored {restore.Count} files");
 
@@ -498,7 +498,7 @@ namespace DS3TexUpUI
 
             token.SubmitStatus($"Overwriting textures");
             SetEmpty(lastOverwrites, newOverwrites.Keys);
-            lastOverwrites.SaveAsJson(LastOverwritesFile);
+            lastOverwrites.SaveAsJson(LastOverwritesFile, false);
             token.Reserve(0.33).ForAllParallel(newOverwrites.Keys, id => File.Copy(GetOverwritePath(id), GetGamePath(id), true));
             token.SubmitLog($"Overwrote {newOverwrites.Count} files");
 
@@ -508,7 +508,7 @@ namespace DS3TexUpUI
             restore.ForEach(id => lastOverwrites.Remove(id));
             foreach (var (id, hash) in newOverwrites)
                 lastOverwrites[id] = hash;
-            lastOverwrites.SaveAsJson(LastOverwritesFile);
+            lastOverwrites.SaveAsJson(LastOverwritesFile, false);
 
             static string HashFile(string path)
             {

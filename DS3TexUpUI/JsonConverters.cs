@@ -159,17 +159,17 @@ namespace DS3TexUpUI
             return JsonSerializer.Deserialize<T>(ref reader, options);
         }
 
-        public static void SaveAsJson<T>(this T value, string file)
+        public static void SaveAsJson<T>(this T value, string file, bool formatted = true)
         {
             if (File.Exists(file)) File.Delete(file);
             using var f = File.OpenWrite(file);
-            var jw = new Utf8JsonWriter(f);
+            var jw = new Utf8JsonWriter(f, new JsonWriterOptions() { Indented = formatted });
             Serialize(jw, value);
         }
 
         public static T LoadJsonFile<T>(this string file)
         {
-            var jr = new Utf8JsonReader(File.ReadAllBytes(file));
+            var jr = new Utf8JsonReader(File.ReadAllBytes(file), new JsonReaderOptions());
             return Deserialize<T>(ref jr);
         }
 
