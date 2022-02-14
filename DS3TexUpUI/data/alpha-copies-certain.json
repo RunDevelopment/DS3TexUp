@@ -394,6 +394,10 @@
 		"m37/m37_00_c2100_body_a"
 	],
 	[
+		"chr/c2100_c2100_hair_a",
+		"m37/m37_00_c2100_hair_a"
+	],
+	[
 		"chr/c2120_c2120_a",
 		"parts/HD_M_7850_HD_M_7850_mimic_a"
 	],
@@ -415,6 +419,7 @@
 		"chr/c6240_c6240_Tatter_a",
 		"m37/m37_00_c5229_Tatter_a",
 		"m50/m50_00_o302590_tatter_a",
+		"obj/o302590_o302590_c5151_Tatter_a",
 		"sfx/m50_s09432_a"
 	],
 	[
@@ -2174,6 +2179,10 @@
 		"m51/m51_00_interior_wall_10_n"
 	],
 	[
+		"m37/m37_00_Building_05_a",
+		"m41/m41_00_m37_00_Building_05_a"
+	],
+	[
 		"m37/m37_00_candellabra_01_a",
 		"m45/m45_00_candellabra_01_a",
 		"m51/m51_00_candellabra_01_a",
@@ -2517,6 +2526,14 @@
 		"obj/o302571_o302571_BD_M_8800_02_a",
 		"parts/BD_F_8800_BD_F_8800_02_a",
 		"parts/BD_M_8800_BD_M_8800_02_a"
+	],
+	[
+		"obj/o309000_m94_00_cloud_07_a",
+		"obj/o369000_m94_00_cloud_07_a"
+	],
+	[
+		"obj/o309000_m94_sky_03_a",
+		"obj/o369000_m94_sky_03_a"
 	],
 	[
 		"obj/o315600_o315600_cloth_a",

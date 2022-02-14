@@ -71,6 +71,11 @@
 		"chr/c1102_c1102_armour_n",
 		"chr/c1106_c1106_armour_n",
 		"chr/c5280_c5280_HD_a",
+		"chr/c6020_c6020_BD_a",
+		"m34/m34_00_o4821_wood03_n",
+		"m34/m34_o4821_wood_03_n",
+		"parts/BD_F_5650_BD_F_5650_a",
+		"parts/BD_M_5650_BD_M_5650_a",
 		"parts/HD_M_2100_HD_M_2100_a",
 		"parts/HD_M_7300_HD_M_7300_a"
 	],
@@ -90,7 +95,9 @@
 		"chr/c1101_c1101_cappa1_a",
 		"chr/c1101_c1101_cappa2_a",
 		"chr/c1102_c1102_cappa_a",
-		"chr/c1106_c1106_cappa1_a"
+		"chr/c1106_c1106_cappa1_a",
+		"chr/c1109_c1109_cappa2_a",
+		"obj/o398720_o398720_c1109_cappa2_a"
 	],
 	[
 		"chr/c1101_c1101_scarf_01_a",
@@ -116,10 +123,6 @@
 		"chr/c3090_c3090_body2_a",
 		"obj/o398720_o398720_c1109_body2_a",
 		"sfx/m31_s09121_a"
-	],
-	[
-		"chr/c1109_c1109_cappa2_a",
-		"obj/o398720_o398720_c1109_cappa2_a"
 	],
 	[
 		"chr/c1109_c1109_skirt2_a",
@@ -326,6 +329,8 @@
 		"chr/c1391_c1391_WP_A_0701_n",
 		"chr/c1400_c1400_leg_a",
 		"chr/c3230_c3230_a",
+		"chr/c5150_c5150_Back_a",
+		"chr/c5160_c5160_a",
 		"chr/c5240_c5240_Chest_02_a",
 		"chr/c5270_c5270_a",
 		"chr/c6020_c6020_head_a",
@@ -336,36 +341,61 @@
 		"chr/c6320_c6320_LG_a",
 		"m30/m30_00_low_Bossfloor_02_a",
 		"m30/m30_00_o304852_01_a",
+		"m30/m30_00_o304857_01_a",
 		"m30/m30_00_o309313_01_a",
 		"m30/m30_00_o4833_sewer_01_a",
+		"m31/m31_00_corpse_00_a",
+		"m32/m32_00_o390550_a",
 		"m33/m33_00_o331318_wall_03_n",
+		"m33/m33_00_o4821_stone02_n",
+		"m34/m30_00_o304857_01_a",
 		"m34/m34_00_o302040_a",
+		"m34/m34_01_o342000_o000250_a",
+		"m34/m34_o344857_a",
+		"m35/m35_00_o350002_01_a",
 		"m35/m35_00_o350010_a",
 		"m35/m35_00_o350021_01_a",
 		"m35/m35_00_o359100_01_a",
 		"m35/m35_00_test_01_a",
+		"m37/m37_00_GroundTile_07_n",
+		"m37/m37_00_o000250_a",
 		"m37/m37_00_pillar_03_a",
 		"m38/m38_00_o2130_03_n",
 		"m41/m41_00_m30_00_o4833_sewer_01_a",
+		"m50/m50_00_o304857_01_a",
 		"m50/m50_00_o4833_sewer_01_a",
 		"m50/m50_c6320_LG_a",
 		"m51/m51_00_Architecture_meshset_04_a",
 		"m51/m51_00_c6320_LG_a",
 		"m51/m51_00_m35_00_o350010_a",
 		"m51/m51_00_o510301_n",
+		"m53/m53_00_o390550_a",
+		"obj/o000250_o000250_a",
+		"obj/o000260_o000260_corpse_a",
 		"obj/o001020_o001020_woodentable_a",
 		"obj/o001110_o001110_woodenbucket_a",
 		"obj/o001290_o001290_book02_a",
+		"obj/o004662_o4662_a",
 		"obj/o008000_o8000_crystal_a",
+		"obj/o304822_o4822_02_a",
 		"obj/o304860_o304860_12_n",
+		"obj/o390550_o390550_a",
+		"obj/o398700_o398700_o000250_a",
+		"obj/o404822_o4822_02_a",
+		"parts/BD_F_4450_BD_F_4450_a",
+		"parts/BD_F_4450_BD_F_4450_n",
 		"parts/BD_F_4500_BD_F_4500_wood_a",
 		"parts/BD_F_6800_BD_F_6800_2_n",
+		"parts/BD_F_8200_BD_F_8200_A_a",
 		"parts/BD_F_9300_BD_F_9300_01_a",
 		"parts/BD_F_9400_BD_F_9400_01_a",
 		"parts/BD_M_2500_BD_M_2500_a",
+		"parts/BD_M_4450_BD_M_4450_a",
+		"parts/BD_M_4450_BD_M_4450_n",
 		"parts/BD_M_4500_BD_M_4500_wood_a",
 		"parts/BD_M_6800_BD_M_6800_2_n",
 		"parts/BD_M_7800_BD_M_7800_01_a",
+		"parts/BD_M_8200_BD_M_8200_1_a",
 		"parts/BD_M_9000_BD_M_9000_a",
 		"parts/BD_M_9300_BD_M_9300_01_a",
 		"parts/BD_M_9400_BD_M_9400_01_a",
@@ -377,7 +407,9 @@
 		"parts/WP_A_1407_WP_A_1407_a",
 		"parts/WP_A_2123_WP_A_2123_a",
 		"sfx/commoneffects_s06001",
+		"sfx/m30_s09080_a",
 		"sfx/m39_s09230_a",
+		"sfx/m46_s09080_a",
 		"sfx/m51_s08212_a"
 	],
 	[
@@ -454,6 +486,10 @@
 		"m37/m37_00_c2100_body_a"
 	],
 	[
+		"chr/c2100_c2100_hair_a",
+		"m37/m37_00_c2100_hair_a"
+	],
+	[
 		"chr/c2120_c2120_a",
 		"parts/HD_M_7850_HD_M_7850_mimic_a"
 	],
@@ -465,23 +501,34 @@
 		"chr/c2150_c2150",
 		"m30/m30_00_o4810_wall_04_n",
 		"m30/m30_00_o4834_genericwall_02_n",
+		"m31/m31_00_spiderweb_00_a",
 		"m31/m31_00_spiderweb_03_a",
 		"m31/m31_00_swanp_01_n",
 		"m31/m31_00_water_01_n",
 		"m32/m32_00_o324005_wall_damaged_n",
+		"m33/m33_00_o2105_1_a",
 		"m33/m33_00_o2105_a",
 		"m33/m33_00_swanp_01_n",
 		"m35/m35_00_m33_00_swanp_01_n",
+		"m37/m37_00_SpidersWeb_01_a",
+		"m50/m50_00_magicsighn_00_a",
 		"m50/m50_00_swanp_01_n",
 		"m50/m50_00_swanp_03_n",
 		"m51/m51_00_c1220_n",
+		"m51/m51_00_roof_01_n",
+		"m51/m51_00_SpidersWeb_01_a",
 		"m51/m51_00_swanp_01_n",
 		"m53/m53_00_o324005_wall_damaged_n",
 		"m54/m54_00_Outside_GrassyMud_n",
+		"sfx/commoneffects_s02900",
 		"sfx/commoneffects_s10033",
+		"sfx/commoneffects_s10034",
 		"sfx/commoneffects_s11414",
+		"sfx/commoneffects_s11426",
+		"sfx/commoneffects_s11438",
 		"sfx/commoneffects_s11602",
 		"sfx/commoneffects_s11603",
+		"sfx/commoneffects_s11617",
 		"sfx/commoneffects_s11624",
 		"sfx/commoneffects_s11628",
 		"sfx/commoneffects_s11629",
@@ -492,13 +539,20 @@
 		"sfx/commoneffects_s11651",
 		"sfx/commoneffects_s12002",
 		"sfx/commoneffects_s13030",
+		"sfx/commoneffects_s17002",
 		"sfx/commoneffects_s17003",
+		"sfx/commoneffects_s18016",
 		"sfx/commoneffects_s50059",
+		"sfx/commoneffects_s50355",
 		"sfx/dlc1_s11657",
+		"sfx/dlc2_s03001",
 		"sfx/dlc2_s11657",
 		"sfx/m30_s11650",
 		"sfx/m30_s17005",
+		"sfx/m30_s50011",
+		"sfx/m31_s03001",
 		"sfx/m31_s10016",
+		"sfx/m31_s10017",
 		"sfx/m31_s17005",
 		"sfx/m31_s50317",
 		"sfx/m33_s17005",
@@ -508,23 +562,33 @@
 		"sfx/m35_s17005",
 		"sfx/m37_s02910",
 		"sfx/m37_s02911",
+		"sfx/m37_s03001",
 		"sfx/m37_s10051",
 		"sfx/m37_s11423",
 		"sfx/m37_s11450",
+		"sfx/m38_s03001",
+		"sfx/m38_s10036",
+		"sfx/m38_s10043",
 		"sfx/m38_s11450",
 		"sfx/m38_s17005",
 		"sfx/m40_s11650",
 		"sfx/m40_s17005",
+		"sfx/m40_s18002",
+		"sfx/m40_s21010",
 		"sfx/m40_s42001",
 		"sfx/m45_s02040",
 		"sfx/m45_s02041",
 		"sfx/m45_s11657",
 		"sfx/m45_s11662",
 		"sfx/m45_s50012",
+		"sfx/m50_s03001",
+		"sfx/m50_s10004",
 		"sfx/m50_s11657",
 		"sfx/m50_s11662",
 		"sfx/m50_s50012",
 		"sfx/m50_s50272",
+		"sfx/m51_s03001",
+		"sfx/m51_s10004",
 		"sfx/m51_s10016",
 		"sfx/m51_s11657"
 	],
@@ -540,6 +604,9 @@
 		"chr/c2160_c2160_Tatter_a",
 		"chr/c5229_c5229_Tatter_a",
 		"chr/c6240_c6240_Tatter_a",
+		"m37/m37_00_c5229_Tatter_a",
+		"m50/m50_00_o302590_tatter_a",
+		"obj/o302590_o302590_c5151_Tatter_a",
 		"sfx/m50_s09432_a"
 	],
 	[
@@ -547,6 +614,10 @@
 		"m50/m50_00_o302590_weapon_a",
 		"obj/o302590_o302590_c2160_weapon_a",
 		"sfx/m50_s09430_a"
+	],
+	[
+		"chr/c2210_c2210_body_a",
+		"chr/c6010_c6010_a"
 	],
 	[
 		"chr/c2210_c2210_hair_a_a",
@@ -649,6 +720,10 @@
 	[
 		"chr/c3160_c3160_BD2_a",
 		"parts/BD_M_6750_BD_M_7650_2_a"
+	],
+	[
+		"chr/c3160_c3160_HD2_a",
+		"parts/HD_M_6750_HD_M_6750_2_a"
 	],
 	[
 		"chr/c3160_c3160_WP_a",
@@ -791,11 +866,6 @@
 		"parts/WP_A_1207_WP_A_1207_a"
 	],
 	[
-		"chr/c6020_c6020_BD_a",
-		"parts/BD_F_5650_BD_F_5650_a",
-		"parts/BD_M_5650_BD_M_5650_a"
-	],
-	[
 		"chr/c6020_c6020_LG_a",
 		"parts/LG_M_5650_LG_M_5650_a"
 	],
@@ -920,27 +990,41 @@
 	],
 	[
 		"chr/c6280_c6280_Bottom_n",
+		"m30/m30_00_enkei_51_n",
 		"m30/m30_00_grass_04_n",
 		"m30/m30_00_grass_05_n",
 		"m30/m30_00_ivy_03_n",
 		"m30/m30_00_o1080_woodbox_01_n",
+		"m31/m31_00_enkei_02_n",
 		"m32/m32_00_FlatRock_n",
 		"m32/m32_00_o324000_ground_01_n",
 		"m32/m32_00_o324000_wall_02_n",
 		"m32/m32_00_o324000_wall_03_damage_n",
+		"m32/m32_00_o324000_wall_03_n",
 		"m32/m32_00_o324000_wall_ancient_02_n",
 		"m32/m32_00_o324060_wall_01_n",
 		"m32/m32_00_o324060_wall_02_n",
 		"m32/m32_00_o324080_arch_02_n",
+		"m32/m32_00_o324080_railing_01_n",
+		"m32/m32_00_o324080_wall_01_break_n",
+		"m32/m32_00_o324080_wall_01_n",
 		"m32/m32_00_o324103_01_n",
+		"m33/m33_00_enkei_02_n",
 		"m34/m34_00_grass_05_n",
 		"m34/m34_00_ivy_03_n",
 		"m34/m34_00_o4831_arch1_n",
+		"m34/m34_00_o4831_arch_a_n",
 		"m34/m34_00_o4831_arch_b_n",
 		"m34/m34_00_plant_1_n",
+		"m34/m34_o344859_n",
+		"m35/m35_00_enkei_51_n",
+		"m37/m37_00_Ced_wallTile_02_n",
 		"m37/m37_00_floor_02_n",
+		"m37/m37_00_win_02_a",
 		"m37/m37_00_win_07_a",
 		"m38/m38_00_m96_00_clod_01_n",
+		"m39/m39_00_brickwall_00_n",
+		"m39/m39_m29_00_floor_07_n",
 		"m40/m40_00_deadbody_02_n",
 		"m40/m40_00_grass_005_n",
 		"m40/m40_00_ground_011_n",
@@ -953,18 +1037,25 @@
 		"m50/m50_00_ivy_03_n",
 		"m50/m50_00_m40_brick_001_n",
 		"m50/m50_00_wall_013_n",
+		"m51/m51_00_enkei_51_n",
 		"m51/m51_00_grass_05_n",
 		"m51/m51_00_ivy_30_n",
 		"m51/m51_00_wall_00_n",
+		"m51/m51_m29_00_floor_07_n",
 		"m53/m53_00_FlatRock_n",
 		"m53/m53_00_o324000_ground_01_n",
 		"m53/m53_00_o324000_wall_02_n",
 		"m53/m53_00_o324000_wall_03_damage_n",
+		"m53/m53_00_o324000_wall_03_n",
 		"m53/m53_00_o324000_wall_ancient_02_n",
 		"m53/m53_00_o324060_wall_01_n",
 		"m53/m53_00_o324060_wall_02_n",
 		"m53/m53_00_o324080_arch_02_n",
+		"m53/m53_00_o324080_railing_01_n",
+		"m53/m53_00_o324080_wall_01_break_n",
+		"m53/m53_00_o324080_wall_01_n",
 		"m53/m53_00_o324103_01_n",
+		"m54/m54_00_Ced_wallTile_02_n",
 		"parts/WP_A_0802_WP_A_0802_n",
 		"parts/WP_A_2107_WP_A_2107_n"
 	],
@@ -1009,13 +1100,6 @@
 		"m39/m39_00_o331320_ruins_vine_02_a",
 		"m41/m41_00_m40_00_o331320_ruins_vine_02_100_a",
 		"m50/m50_00_branches_04_a"
-	],
-	[
-		"m30/m30_00_enkei_51_n",
-		"m31/m31_00_enkei_02_n",
-		"m33/m33_00_enkei_02_n",
-		"m35/m35_00_enkei_51_n",
-		"m51/m51_00_enkei_51_n"
 	],
 	[
 		"m30/m30_00_enkei_54_a",
@@ -1115,6 +1199,7 @@
 	],
 	[
 		"m30/m30_00_ivy_04_n",
+		"m33/m33_00_brickwall_13_n",
 		"m34/m34_00_ivy_04_n",
 		"m34/m34_00_plant_2_n",
 		"m50/m50_00_ivy_04_n",
@@ -1335,14 +1420,6 @@
 	[
 		"m30/m30_00_o304856_01_a",
 		"m34/m34_o344856_a"
-	],
-	[
-		"m30/m30_00_o304857_01_a",
-		"m34/m30_00_o304857_01_a",
-		"m34/m34_o344857_a",
-		"m50/m50_00_o304857_01_a",
-		"sfx/m30_s09080_a",
-		"sfx/m46_s09080_a"
 	],
 	[
 		"m30/m30_00_o304858_01_a",
@@ -1707,14 +1784,6 @@
 		"m39/m39_00_rippedcloth_00_a"
 	],
 	[
-		"m31/m31_00_corpse_00_a",
-		"m34/m34_01_o342000_o000250_a",
-		"m37/m37_00_o000250_a",
-		"obj/o000250_o000250_a",
-		"obj/o000260_o000260_corpse_a",
-		"obj/o398700_o398700_o000250_a"
-	],
-	[
 		"m31/m31_00_grass_00_a",
 		"m32/m32_00_grass_03_a",
 		"m53/m53_00_grass_03_a",
@@ -1786,10 +1855,6 @@
 		"m31/m31_00_ruinarch_10_a",
 		"m33/m33_00_ruinarch_10_a",
 		"m41/m41_00_m31_00_ruinarch_10_a"
-	],
-	[
-		"m31/m31_00_spiderweb_00_a",
-		"m33/m33_00_o2105_1_a"
 	],
 	[
 		"m31/m31_00_spiderweb_01_a",
@@ -1950,10 +2015,6 @@
 		"m53/m53_00_o324000_ground_02_n"
 	],
 	[
-		"m32/m32_00_o324000_wall_03_n",
-		"m53/m53_00_o324000_wall_03_n"
-	],
-	[
 		"m32/m32_00_o324010_02_a",
 		"m35/m35_00_o324010_02_a",
 		"m53/m53_00_o324010_02_a"
@@ -1975,24 +2036,12 @@
 		"m53/m53_00_o324080_arch_01_n"
 	],
 	[
-		"m32/m32_00_o324080_railing_01_n",
-		"m53/m53_00_o324080_railing_01_n"
-	],
-	[
 		"m32/m32_00_o324080_roof_break_n",
 		"m53/m53_00_o324080_roof_break_n"
 	],
 	[
 		"m32/m32_00_o324080_roof_n",
 		"m53/m53_00_o324080_roof_n"
-	],
-	[
-		"m32/m32_00_o324080_wall_01_break_n",
-		"m53/m53_00_o324080_wall_01_break_n"
-	],
-	[
-		"m32/m32_00_o324080_wall_01_n",
-		"m53/m53_00_o324080_wall_01_n"
 	],
 	[
 		"m32/m32_00_o324103_03_n",
@@ -2029,13 +2078,6 @@
 		"m32/m32_00_o350008_a",
 		"m35/m35_00_o350008_02_a",
 		"m53/m53_00_o350008_a"
-	],
-	[
-		"m32/m32_00_o390550_a",
-		"m53/m53_00_o390550_a",
-		"obj/o304822_o4822_02_a",
-		"obj/o390550_o390550_a",
-		"obj/o404822_o4822_02_a"
 	],
 	[
 		"m32/m32_00_o4520_3_n",
@@ -2107,6 +2149,8 @@
 	[
 		"m33/m33_00_o4500_1_n",
 		"parts/WP_A_0203_WP_A_0203_n",
+		"sfx/commoneffects_s05001",
+		"sfx/commoneffects_s11605",
 		"sfx/commoneffects_s50235",
 		"sfx/commoneffects_s50701",
 		"sfx/m37_s10032",
@@ -2169,8 +2213,16 @@
 		"m50/m50_00_o4785_04_n"
 	],
 	[
-		"m34/m34_00_o4821_wood03_n",
-		"m34/m34_o4821_wood_03_n"
+		"m34/m34_01_o309190_04_a",
+		"obj/o309190_m34_01_o309190_04_a"
+	],
+	[
+		"m34/m34_01_o309190_08_a",
+		"obj/o309190_m34_01_o309190_08_a"
+	],
+	[
+		"m34/m34_01_o309190_09_a",
+		"obj/o309190_m34_01_o309190_09_a"
 	],
 	[
 		"m34/m34_o344854_a",
@@ -2248,18 +2300,14 @@
 		"m51/m51_00_interior_wall_10_n"
 	],
 	[
-		"m37/m37_00_c5229_Tatter_a",
-		"m50/m50_00_o302590_tatter_a"
+		"m37/m37_00_Building_05_a",
+		"m41/m41_00_m37_00_Building_05_a"
 	],
 	[
 		"m37/m37_00_candellabra_01_a",
 		"m45/m45_00_candellabra_01_a",
 		"m51/m51_00_candellabra_01_a",
 		"m51/m51_00_m37_00_candellabra_01_a"
-	],
-	[
-		"m37/m37_00_Ced_wallTile_02_n",
-		"m54/m54_00_Ced_wallTile_02_n"
 	],
 	[
 		"m37/m37_00_Dirty_02_a",
@@ -2345,10 +2393,6 @@
 		"m37/m37_00_win_04_n"
 	],
 	[
-		"m37/m37_00_SpidersWeb_01_a",
-		"m51/m51_00_SpidersWeb_01_a"
-	],
-	[
 		"m37/m37_00_tree_04_03_a",
 		"m51/m51_00_tree_04_03_a"
 	],
@@ -2368,6 +2412,7 @@
 	[
 		"m38/m38_00_o2100_01_a",
 		"m38/m38_00_o2101_01_a",
+		"obj/o962100_o2100_1_a",
 		"obj/o962101_o2101_1_a"
 	],
 	[
@@ -2416,10 +2461,6 @@
 	[
 		"m39/m39_00_Cloud_01_a",
 		"m39/m39_m37_00_kumo_02_a"
-	],
-	[
-		"m39/m39_m29_00_floor_07_n",
-		"m51/m51_m29_00_floor_07_n"
 	],
 	[
 		"m40/m40_00_cloth_50_a",
@@ -2591,6 +2632,14 @@
 		"parts/BD_M_8800_BD_M_8800_02_a"
 	],
 	[
+		"obj/o309000_m94_00_cloud_07_a",
+		"obj/o369000_m94_00_cloud_07_a"
+	],
+	[
+		"obj/o309000_m94_sky_03_a",
+		"obj/o369000_m94_sky_03_a"
+	],
+	[
 		"obj/o315600_o315600_cloth_a",
 		"obj/o381027_o315600_cloth_a"
 	],
@@ -2651,12 +2700,6 @@
 		"parts/BD_M_4400_BD_M_4400_a"
 	],
 	[
-		"parts/BD_F_4450_BD_F_4450_a",
-		"parts/BD_F_4450_BD_F_4450_n",
-		"parts/BD_M_4450_BD_M_4450_a",
-		"parts/BD_M_4450_BD_M_4450_n"
-	],
-	[
 		"parts/BD_F_4450_BD_F_4450_veil_a",
 		"parts/BD_M_4450_BD_M_4450_veil_a"
 	],
@@ -2699,10 +2742,6 @@
 	[
 		"parts/BD_F_7950_BD_F_7950_2_a",
 		"parts/BD_M_7950_BD_M_7950_2_a"
-	],
-	[
-		"parts/BD_F_8200_BD_F_8200_A_a",
-		"parts/BD_M_8200_BD_M_8200_1_a"
 	],
 	[
 		"parts/BD_F_8200_BD_F_8200_B_a",
@@ -2805,8 +2844,23 @@
 		"sfx/m51_s08213_a"
 	],
 	[
+		"sfx/commoneffects_s01000",
 		"sfx/commoneffects_s01001",
-		"sfx/commoneffects_s02070"
+		"sfx/commoneffects_s02070",
+		"sfx/commoneffects_s11401",
+		"sfx/commoneffects_s11402",
+		"sfx/commoneffects_s15001",
+		"sfx/commoneffects_s15014",
+		"sfx/commoneffects_s15015",
+		"sfx/commoneffects_s50065",
+		"sfx/m30_s10010",
+		"sfx/m31_s10010",
+		"sfx/m33_s10010",
+		"sfx/m34_s10010",
+		"sfx/m35_s10010",
+		"sfx/m37_s10010",
+		"sfx/m38_s10010",
+		"sfx/m40_s50020"
 	],
 	[
 		"sfx/commoneffects_s02000",
@@ -2846,22 +2900,6 @@
 		"sfx/m40_s11040"
 	],
 	[
-		"sfx/commoneffects_s11401",
-		"sfx/commoneffects_s11402",
-		"sfx/commoneffects_s15001",
-		"sfx/commoneffects_s15014",
-		"sfx/commoneffects_s15015",
-		"sfx/commoneffects_s50065",
-		"sfx/m30_s10010",
-		"sfx/m31_s10010",
-		"sfx/m33_s10010",
-		"sfx/m34_s10010",
-		"sfx/m35_s10010",
-		"sfx/m37_s10010",
-		"sfx/m38_s10010",
-		"sfx/m40_s50020"
-	],
-	[
 		"sfx/commoneffects_s11422",
 		"sfx/dlc2_s21009",
 		"sfx/dlc2_s46001",
@@ -2873,30 +2911,17 @@
 		"sfx/m51_s02030"
 	],
 	[
-		"sfx/commoneffects_s11426",
-		"sfx/commoneffects_s11438"
-	],
-	[
 		"sfx/commoneffects_s11432",
 		"sfx/m30_s11427"
 	],
 	[
-		"sfx/commoneffects_s17002",
-		"sfx/m30_s50011"
+		"sfx/commoneffects_s18008",
+		"sfx/m31_s13001",
+		"sfx/m35_s13001"
 	],
 	[
 		"sfx/dlc1_s10021",
 		"sfx/m51_s10021"
-	],
-	[
-		"sfx/dlc2_s03001",
-		"sfx/m31_s03001",
-		"sfx/m37_s03001",
-		"sfx/m38_s03001",
-		"sfx/m50_s03001",
-		"sfx/m50_s10004",
-		"sfx/m51_s03001",
-		"sfx/m51_s10004"
 	],
 	[
 		"sfx/dlc2_s11654",
@@ -2928,6 +2953,10 @@
 		"sfx/m40_s41001"
 	],
 	[
+		"sfx/m30_s50263",
+		"sfx/m40_s50228"
+	],
+	[
 		"sfx/m30_s90010_a",
 		"sfx/m33_s90010_a",
 		"sfx/m35_s90010_a",
@@ -2946,24 +2975,17 @@
 		"sfx/m51_s09500_a"
 	],
 	[
-		"sfx/m31_s10017",
-		"sfx/m40_s21010"
-	],
-	[
 		"sfx/m31_s10029",
 		"sfx/m31_s11400",
 		"sfx/m34_s11400",
-		"sfx/m38_s10029"
+		"sfx/m38_s10029",
+		"sfx/m45_s10005"
 	],
 	[
 		"sfx/m31_s11408",
 		"sfx/m37_s11408",
 		"sfx/m38_s11408",
 		"sfx/m51_s11408"
-	],
-	[
-		"sfx/m31_s13001",
-		"sfx/m35_s13001"
 	],
 	[
 		"sfx/m31_s17006",

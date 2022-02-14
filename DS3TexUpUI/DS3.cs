@@ -463,7 +463,7 @@ namespace DS3TexUpUI
                 return true;
             },
             CopyHasherFactory = r => new AlphaImageHasher(r),
-            CopySpread = image => image.Count <= 64 * 64 ? 12 : 8,
+            CopySpread = image => image.Count <= 64 * 64 ? 16 : 10,
             MaxDiff = new Rgba32(255, 255, 255, 2),
             ModifyImage = image =>
             {
