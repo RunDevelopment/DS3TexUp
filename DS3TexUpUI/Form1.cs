@@ -400,6 +400,45 @@ namespace DS3TexUpUI
                 }
             });
         }
+        private void FindUnusedManualOverwrites(IProgressToken token)
+        {
+            var p = GetProject();
+
+            var unused = new List<string>();
+            void AddUnused(IEnumerable<KeyValuePair<TexId, string>> files)
+            {
+                unused.AddRange(files.Select(kv => kv.Value));
+            }
+
+            token.SubmitStatus("Albedo");
+            AddUnused(p.Textures.Albedo.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+
+            token.SubmitStatus("Alpha");
+            AddUnused(p.Textures.Alpha.GetFiles().Where(kv => kv.Key.GetAlphaRepresentative() != kv.Key));
+
+            token.SubmitStatus("Normal normal");
+            AddUnused(p.Textures.NormalNormal.GetFiles().Where(kv => kv.Key.GetNormalRepresentative() != kv.Key));
+
+            token.SubmitStatus("Normal gloss");
+            AddUnused(p.Textures.NormalGloss.GetFiles().Where(kv => kv.Key.GetGlossRepresentative() != kv.Key));
+
+            token.SubmitStatus("Normal albedo");
+            var na = DS3.NormalAlbedo.Values.ToHashSet();
+            AddUnused(p.Textures.NormalAlbedo.GetFiles().Where(kv => !na.Contains(kv.Key)));
+
+            token.SubmitStatus("Reflective");
+            AddUnused(p.Textures.Reflective.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+            token.SubmitStatus("Shininess");
+            AddUnused(p.Textures.Shininess.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+            token.SubmitStatus("Emissive");
+            AddUnused(p.Textures.Emissive.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+
+            token.SubmitStatus("Filtering manual");
+            var manual = @"C:\DS3TexUp\up-manual\";
+            var unusedManual = unused.Where(f => f.StartsWith(manual)).ToHashSet().ToList();
+            unusedManual.Sort();
+            unusedManual.SaveAsJson("unused-manual.json");
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
