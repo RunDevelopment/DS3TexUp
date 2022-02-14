@@ -1162,12 +1162,17 @@ namespace DS3TexUpUI
         }
         private EquivalenceCollection<TexId> LoadUncertain()
         {
-            return UncertainFile.Read.LoadJsonFile<EquivalenceCollection<TexId>>();
+            return Load<EquivalenceCollection<TexId>>(UncertainFile.Read);
         }
         private DifferenceCollection<TexId> LoadRejected()
         {
-            if (!File.Exists(RejectedFile.Read)) return new DifferenceCollection<TexId>();
-            return RejectedFile.Read.LoadJsonFile<DifferenceCollection<TexId>>();
+            return Load<DifferenceCollection<TexId>>(RejectedFile.Read);
+        }
+        private static T Load<T>(string file)
+            where T : new()
+        {
+            if (!File.Exists(file)) return new T();
+            return file.LoadJsonFile<T>();
         }
 
         public Action<SubProgressToken> CreateCopyIndex(Workspace w)
@@ -1323,6 +1328,11 @@ namespace DS3TexUpUI
 
                     // only one texture after identical textures were removed
                     if (eqClass.Count < 2) return;
+
+                    if (eqClass.Count > 20) {
+                        token.SubmitLog($"Equivalence class {i} contains too many unique elements ({eqClass.Count}).");
+                        return;
+                    }
 
                     var dir = Path.Join(uncertainDir, $"{i}");
                     Directory.CreateDirectory(dir);
