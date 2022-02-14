@@ -50,10 +50,15 @@
 		"chr/c1070_c1070_r",
 		"chr/c1470_c1470_1_r",
 		"m40/m40_00_bone_316_r",
+		"obj/o001332_o1330_flesh_s",
 		"obj/o001332_o1330_r",
+		"obj/o001332_o1330_s",
 		"obj/o001332_o1332_r",
+		"obj/o001332_o1332_s",
 		"obj/o001333_o1333_r",
-		"obj/o309800_o0100_02_r"
+		"obj/o001333_o1333_s",
+		"obj/o309800_o0100_02_r",
+		"obj/o309800_o0100_02_s"
 	],
 	[
 		"chr/c1070_c1070_tree_n",
@@ -3762,7 +3767,8 @@
 		"m30/m30_00_Brakewall_a",
 		"m34/m34_00_Brakewall_a",
 		"m39/m39_m40_00_obj_220_a",
-		"m41/m41_00_m30_00_Brakewall_a"
+		"m41/m41_00_m30_00_Brakewall_a",
+		"m50/m50_00_Brakewall_a"
 	],
 	[
 		"m30/m30_00_Brakewall_n",
@@ -3890,6 +3896,10 @@
 		"m30/m30_00_flag_03_n",
 		"m34/m34_00_o304859_2_broken_n",
 		"m34/m34_00_o304859_2_n"
+	],
+	[
+		"m30/m30_00_flag_03_b_r",
+		"m34/m34_00_o304859_2_broken_r"
 	],
 	[
 		"m30/m30_00_flag_03_r",
@@ -5044,6 +5054,10 @@
 		"m39/m39_00_o1290_bookshelf_01_n",
 		"m50/m50_00_o1290_bookshelf_01_n",
 		"obj/o311100_o311100_bookshelf_01_n"
+	],
+	[
+		"m30/m30_00_o1290_bookshelf_01_r",
+		"obj/o001290_o001290_woodenshelf_s"
 	],
 	[
 		"m30/m30_00_o300300_a",
@@ -8979,6 +8993,7 @@
 		"m38/m38_00_maskblend_01",
 		"m40/m40_00_mask_310",
 		"m40/m40_00_mask_312",
+		"m45/m45_00_carpetAmask_01_m",
 		"m51/m51_00_m35_00_maskblend_01"
 	],
 	[
@@ -9160,7 +9175,8 @@
 	],
 	[
 		"m31/m31_00_rope_01_r",
-		"obj/o381027_m31_00_rope_01_r"
+		"obj/o381027_m31_00_rope_01_r",
+		"obj/o381027_m31_00_rope_01_s"
 	],
 	[
 		"m31/m31_00_rope_02_n",
@@ -9813,7 +9829,8 @@
 		"m32/m32_00_chain_01_r",
 		"m38/m38_00_m96_00_chain_01_r",
 		"m53/m53_00_chain_01_r",
-		"obj/o002485_m96_00_chain_01_r"
+		"obj/o002485_m96_00_chain_01_r",
+		"obj/o002485_m96_00_chain_01_s"
 	],
 	[
 		"m32/m32_00_cliff_01_a",
@@ -12256,6 +12273,7 @@
 	],
 	[
 		"m32/m32_00_o329220_05_m",
+		"m37/m37_00_Arch_05_m",
 		"m53/m53_00_o329220_05_m",
 		"obj/o329220_o329220_05_m"
 	],
@@ -15325,6 +15343,10 @@
 		"m39/m39_m37_00_Outside_BridgeStone_n"
 	],
 	[
+		"m37/M37_00_Outside_CedPlaceHolder_a",
+		"m41/m41_00_m37_00_Outside_CedPlaceHolder_a"
+	],
+	[
 		"m37/M37_00_Outside_CedPlaceHolder_n",
 		"m41/m41_00_m37_00_Outside_CedPlaceHolder_n"
 	],
@@ -15621,6 +15643,10 @@
 	[
 		"m37/m37_00_water_02_n",
 		"m45/m45_00_water_06_n"
+	],
+	[
+		"m37/m37_00_win_03_a",
+		"m45/m45_00_stainedglass_02_a"
 	],
 	[
 		"m37/m37_00_win_08_a",
@@ -16920,6 +16946,7 @@
 	],
 	[
 		"m45/m45_00_Flowmap_01_a",
+		"m45/m45_00_Flowmap_02_a",
 		"m51/m51_00_Flowmap_02_a"
 	],
 	[
@@ -17493,13 +17520,6 @@
 	[
 		"obj/o001279_o001279_woodencart_n",
 		"obj/o001280_o001280_woodencart_n"
-	],
-	[
-		"obj/o001332_o1330_flesh_s",
-		"obj/o001332_o1330_s",
-		"obj/o001332_o1332_s",
-		"obj/o001333_o1333_s",
-		"obj/o309800_o0100_02_s"
 	],
 	[
 		"obj/o001332_o1332_flesh_n",
