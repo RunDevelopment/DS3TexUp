@@ -466,7 +466,7 @@ namespace DS3TexUpUI
                     throw new Exception();
                 }
 
-                return TexId.FromPath(text);
+                return TexId.FromPath(text.Replace("\\\\", "\\"));
             }
 
             if (e.KeyCode == Keys.Enter)
