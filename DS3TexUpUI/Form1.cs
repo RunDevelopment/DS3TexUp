@@ -151,19 +151,15 @@ namespace DS3TexUpUI
 
         private void extractButton_Click(object sender, EventArgs e)
         {
+            var text = "Are you sure that you want to extract? This operation cannot be undone.";
+            if (MessageBox.Show(text, "You sure?", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
             RunTask(GetWorkspace().Extract);
         }
         private void overwriteButton_Click(object sender, EventArgs e)
         {
-            RunTask(token =>
-            {
-                var (currentIds, prefixes) = ParseCurrent();
-                GetWorkspace().Overwrite(token, id =>
-                {
-                    if (currentIds.Contains(id)) return false;
-                    return !prefixes.Any(p => id.Value.StartsWith(p));
-                });
-            });
+            RunTask(Overwrite);
         }
         private void restoreButton_Click(object sender, EventArgs e)
         {
@@ -283,6 +279,15 @@ namespace DS3TexUpUI
             if (ids.Count == 0 && prefixes.Count == 0) prefixes.Add("");
 
             return (ids, prefixes);
+        }
+        private void Overwrite(SubProgressToken token)
+        {
+            var (currentIds, prefixes) = ParseCurrent();
+            GetWorkspace().Overwrite(token, id =>
+            {
+                if (currentIds.Contains(id)) return false;
+                return !prefixes.Any(p => id.Value.StartsWith(p));
+            });
         }
 
         private UpscaleProject GetProject()
