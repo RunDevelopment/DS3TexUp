@@ -4331,7 +4331,8 @@
 	[
 		"m30/m30_00_low_Castlewall_02_a",
 		"m40/m40_00_low_Castlewall_902_a",
-		"m41/m41_00_m30_00_low_Castlewall_02_a"
+		"m41/m41_00_m30_00_low_Castlewall_02_a",
+		"obj/o309500_lod_m30_Castlewall_02_a"
 	],
 	[
 		"m30/m30_00_low_Castlewall_02_n",
@@ -5690,7 +5691,8 @@
 	],
 	[
 		"m30/m30_00_o304870_stair_02_a",
-		"m50/m50_00_o304870_stair_02_a"
+		"m50/m50_00_o304870_stair_02_a",
+		"obj/o304860_o304860_16_a"
 	],
 	[
 		"m30/m30_00_o304870_stair_02_n",

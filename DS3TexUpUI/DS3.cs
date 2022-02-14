@@ -322,7 +322,7 @@ namespace DS3TexUpUI
 
                 return true;
             },
-            CopySpread = image => image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 6 : 4,
+            CopySpread = image => image.Count <= 64 * 64 ? 12 : image.Count <= 128 * 128 ? 8 : 5,
             MaxDiff = new Rgba32(2, 2, 2, 2),
         };
 
