@@ -27,7 +27,8 @@ namespace DS3TexUpUI
 
         public void WriteDDS(TexId id, int upscale)
         {
-            switch (id.GetTexKind())
+            var kind = id.GetTexKind();
+            switch (kind)
             {
                 case TexKind.Albedo:
                     WriteSRGB(id, upscale, Textures.Albedo, "albedo");
@@ -44,8 +45,11 @@ namespace DS3TexUpUI
                 case TexKind.Emissive:
                     WriteEmissive(id, upscale, Textures.Emissive, "emissive");
                     break;
+                case TexKind.Mask:
+                    WriteMask(id, upscale);
+                    break;
                 default:
-                    throw new Exception($"Unsupported tex kind {id.GetTexKind()} for {id}.");
+                    throw new Exception($"Unsupported tex kind {kind} for {id}.");
             }
         }
 
@@ -265,6 +269,35 @@ namespace DS3TexUpUI
 
             ToDDS(id, targetFile, deleteAfter: true);
         }
+        private void WriteMask(TexId id, int upscale)
+        {
+            const string kind = "mask";
+            var targetWidth = GetTargetWidth(id, upscale);
+
+            var tex = GetFile(Textures.Mask, id.GetRepresentative());
+            var texWidth = GetPngWidth(tex);
+            CheckWidth(id, upscale, targetWidth, texWidth, kind);
+
+            if (texWidth == targetWidth && !HasAlpha(id))
+            {
+                // fast path
+                ToDDS(id, tex, deleteAfter: false);
+                return;
+            }
+
+            var image = tex.LoadTextureMap();
+            EnsureWidth(ref image, targetWidth, Average.Rgba32, id, kind);
+
+            // set alpha
+            if (TryGetAlpha(id, upscale, targetWidth, out var alphaImage))
+                image.SetAlpha(alphaImage);
+
+            // create temporary file.
+            var targetFile = GetTempPngFile(id);
+            image.SaveAsPng(targetFile);
+
+            ToDDS(id, targetFile, deleteAfter: true);
+        }
     }
 
     public class UpscaledTextures
@@ -280,5 +313,6 @@ namespace DS3TexUpUI
         public TexOverrideList Reflective { get; set; } = new TexOverrideList();
         public TexOverrideList Emissive { get; set; } = new TexOverrideList();
         public TexOverrideList Shininess { get; set; } = new TexOverrideList();
+        public TexOverrideList Mask { get; set; } = new TexOverrideList();
     }
 }
