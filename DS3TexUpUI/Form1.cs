@@ -332,6 +332,7 @@ namespace DS3TexUpUI
                         @"D:\DS3\upscaled\em",
                         @"C:\DS3TexUp\up-manual\em",
                     },
+                    Mask = @"C:\DS3TexUp\up-manual\m",
                 },
                 TemporaryDir = @"C:\DS3TexUp\temp"
             };
@@ -367,6 +368,10 @@ namespace DS3TexUpUI
                 .Except(outputUpscale.Ignore)
                 .Where(id =>
                 {
+                    // allow everything with a manually set factor
+                    if (outputUpscale.Upscale.ContainsKey(id))
+                        return true;
+
                     var kind = id.GetTexKind();
                     return kind == TexKind.Albedo || kind == TexKind.Normal || kind == TexKind.Emissive || kind == TexKind.Reflective;
                 });
