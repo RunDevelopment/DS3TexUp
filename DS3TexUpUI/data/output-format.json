@@ -1322,7 +1322,7 @@
 	"chr/c2210_c2210_weapon03_a": "DX10 BC1_UNORM_SRGB",
 	"chr/c2210_c2210_weapon03_n": "DX10 BC7_UNORM",
 	"chr/c2210_c2210_weapon03_r": "DX10 BC1_UNORM_SRGB",
-	"chr/c2230_c2230_anotherbody_a": "DX10 BC7_UNORM_SRGB",
+	"chr/c2230_c2230_anotherbody_a": "DX10 BC1_UNORM_SRGB",
 	"chr/c2230_c2230_anotheretc_a": "DX10 BC7_UNORM_SRGB",
 	"chr/c2230_c2230_body_a": "DX10 BC1_UNORM_SRGB",
 	"chr/c2230_c2230_body_n": "DX10 BC7_UNORM",
