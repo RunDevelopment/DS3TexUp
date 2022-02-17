@@ -325,6 +325,8 @@ namespace DS3TexUpUI
     {
         public readonly List<string> Directories = new List<string>();
 
+        public Dictionary<TexId, string>? _cache = null;
+
         public TexOverrideList() { }
         public TexOverrideList(string baseDirectory) => Directories.Add(baseDirectory);
         public TexOverrideList(IEnumerable<string> collection) => Directories.AddRange(collection);
@@ -343,6 +345,18 @@ namespace DS3TexUpUI
                 })
                 .GroupBy(kv => kv.Item1)
                 .ToDictionary(g => g.Key, g => g.Last().f);
+        }
+        public IReadOnlyDictionary<TexId, string> GetFilesCached()
+        {
+            if (_cache == null) {
+                lock (this)
+                {
+                    if (_cache == null) {
+                        _cache = GetFiles();
+                    }
+                }
+            }
+            return _cache;
         }
 
         public IEnumerator<string> GetEnumerator()
