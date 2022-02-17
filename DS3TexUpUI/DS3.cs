@@ -233,6 +233,7 @@ namespace DS3TexUpUI
         {
             public HashSet<TexId> Ignore { get; set; } = new HashSet<TexId>();
             public Dictionary<string, int> UpscaleChr { get; set; } = new Dictionary<string, int>();
+            public Dictionary<string, int> UpscaleObj { get; set; } = new Dictionary<string, int>();
             public Dictionary<TexId, int> Upscale { get; set; } = new Dictionary<TexId, int>();
 
             public int this[TexId id]
@@ -254,6 +255,15 @@ namespace DS3TexUpUI
                             return upscale;
                     }
 
+                    if (id.Category.Equals("obj", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var oId = id.Name.Slice(0, 7).ToString();
+
+                        // per-object overwrites
+                        if (UpscaleObj.TryGetValue(oId, out upscale))
+                            return upscale;
+                    }
+
                     // 2x for maps, 4x for everything else
                     return id.Category.StartsWith("m") ? 2 : 4;
                 }
@@ -265,6 +275,7 @@ namespace DS3TexUpUI
                 {
                     Ignore = Path.Join(dir, @"output-ignore.json").LoadJsonFile<HashSet<TexId>>(),
                     UpscaleChr = Path.Join(dir, @"output-upscale-chr.json").LoadJsonFile<Dictionary<string, int>>(),
+                    UpscaleObj = Path.Join(dir, @"output-upscale-obj.json").LoadJsonFile<Dictionary<string, int>>(),
                     Upscale = Path.Join(dir, @"output-upscale.json").LoadJsonFile<Dictionary<TexId, int>>(),
                 };
             }
