@@ -25,7 +25,7 @@ namespace DS3TexUpUI
             TemporaryDir = Path.Join(workspace.TextureDir, "temp");
         }
 
-        public void WriteDDS(TexId id, int upscale)
+        public void WriteDDS(TexId id, int upscale, ILogger logger)
         {
             var kind = id.GetTexKind();
             switch (kind)
@@ -34,7 +34,7 @@ namespace DS3TexUpUI
                     WriteSRGB(id, upscale, Textures.Albedo, "albedo");
                     break;
                 case TexKind.Normal:
-                    WriteNormal(id, upscale);
+                    WriteNormal(id, upscale, logger);
                     break;
                 case TexKind.Reflective:
                     WriteSRGB(id, upscale, Textures.Reflective, "reflective");
@@ -203,7 +203,7 @@ namespace DS3TexUpUI
             ToDDS(id, targetFile, deleteAfter: true);
         }
 
-        private void WriteNormal(TexId id, int upscale)
+        private void WriteNormal(TexId id, int upscale, ILogger logger)
         {
             var targetWidth = GetTargetWidth(id, upscale);
 
@@ -239,6 +239,10 @@ namespace DS3TexUpUI
                         // the easy part
                         normalImage.CombineWith(normalAlbedoImage, MaxStrength);
                     }
+                }
+                else
+                {
+                    logger.SubmitLog($"Warning: normal albedo for {id} too small. {albedoWidth}px < {targetWidth}px");
                 }
             }
 

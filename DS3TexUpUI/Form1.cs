@@ -397,7 +397,7 @@ namespace DS3TexUpUI
                 try
                 {
                     int upscale = outputUpscale[id];
-                    p.WriteDDS(id, upscale);
+                    p.WriteDDS(id, upscale, token);
                 }
                 catch (System.Exception e)
                 {
