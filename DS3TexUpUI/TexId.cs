@@ -183,12 +183,10 @@ namespace DS3TexUpUI
         {
             if (DS3.KnownTexKinds.TryGetValue(this, out var kind))
                 return kind;
-            return GuessTexKind();
+            return GuessTexKind(Name);
         }
-        private TexKind GuessTexKind()
+        internal static TexKind GuessTexKind(ReadOnlySpan<char> n)
         {
-            var n = Name;
-
             // by suffix
             if (n.EndsWith("_a")) return TexKind.Albedo;
             if (n.EndsWith("_n")) return TexKind.Normal;
