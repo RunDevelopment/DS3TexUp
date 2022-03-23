@@ -185,5 +185,60 @@ namespace DS3TexUpUI
         }
 
         public static bool IsDigit(this char c) => c >= '0' && c <= '9';
+
+        public static T MaxBy<T, N>(this IEnumerable<T> collection, Func<T, N> selector)
+            where N : IComparable<N>
+        {
+            T max = default;
+            N score = default;
+            bool first = true;
+            foreach (var item in collection)
+            {
+                if (first)
+                {
+                    max = item;
+                    score = selector(item);
+                    first = false;
+                }
+                else
+                {
+                    var s = selector(item);
+                    if (s.CompareTo(score) > 0)
+                    {
+                        max = item;
+                        score = s;
+                    }
+                }
+            }
+            if (first) throw new Exception("Empty collection");
+            return max;
+        }
+        public static T MinBy<T, N>(this IEnumerable<T> collection, Func<T, N> selector)
+            where N : IComparable<N>
+        {
+            T min = default;
+            N score = default;
+            bool first = true;
+            foreach (var item in collection)
+            {
+                if (first)
+                {
+                    min = item;
+                    score = selector(item);
+                    first = false;
+                }
+                else
+                {
+                    var s = selector(item);
+                    if (s.CompareTo(score) < 0)
+                    {
+                        min = item;
+                        score = s;
+                    }
+                }
+            }
+            if (first) throw new Exception("Empty collection");
+            return min;
+        }
     }
 }
