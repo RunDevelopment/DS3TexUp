@@ -1,0 +1,50 @@
+{
+	"chr/c1090_c1090_jarei_body_01_r": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds"
+	],
+	"m30/m30_00_o309304_parti_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET603_009_a.dds"
+	],
+	"m30/m30_00_WoodFineSplit_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_635_a.dds"
+	],
+	"m31/m31_00_ironbeam_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_538_a.dds"
+	],
+	"m31/m31_00_tombstone_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_511_a.dds"
+	],
+	"m32/m32_00_o324060_stone_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_571_a.dds"
+	],
+	"m32/m32_00_o324102_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m33/m33_00_o331317_edge_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_059_r.dds"
+	],
+	"m33/m33_00_o331318_floor_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_169_r.dds"
+	],
+	"m34/m34_00_o1360_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_598_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET620_039_a.dds"
+	],
+	"m35/m35_00_Stone_Base_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds"
+	],
+	"m37/m37_00_Outside_MudOnly_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"m40/m40_00_books_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_324_a.dds"
+	],
+	"m45/m45_00_o9041_17_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_265_a.dds"
+	],
+	"obj/o314011_o314011_straw_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	]
+}

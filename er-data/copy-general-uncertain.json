@@ -1,0 +1,2541 @@
+{
+	"chr/c1090_c1090_jarei_body_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_040_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_573_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_626_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_496_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_204_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_277_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_135_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_311_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_164_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_640_a.dds"
+	],
+	"chr/c1090_c1090_jarei_body_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_210_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1130_c1130_jarei_body_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1210_c1210_cloth_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds"
+	],
+	"chr/c1211_c1211_wand_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds"
+	],
+	"chr/c1250_c1250_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1320_c1320_botom_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1320_c1320_Skirt02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1320_c1320_Skirt03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_c1321_botom_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_c1321_Skirt01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_c1321_Skirt02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_c1321_Skirt03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_c1321_top_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1321_dummy_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_010_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_052_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_086_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_532_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_573_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_590_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_534_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_537_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_678_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_100_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_187_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_204_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_290_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET201_058_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_133_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_134_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_820_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_060_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET223_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET223_060_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_465_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_135_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_057_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_229_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_267_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_311_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_417_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_080_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_164_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_460_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_125_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c3701-c3701_AM_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4110-c4110_Fur_Color_B_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4460-c4460_Crew_LG_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4480-c4480_Scale_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\AM_M_1130-AM_M_1130_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1561-HD_M_1561_a.dds"
+	],
+	"chr/c1360_c1360_cloth_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1400_c1400_skin_m": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c4710-c4710_body_m.dds"
+	],
+	"chr/c1430_c1430_cape_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1430_c1430_hood_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1430_c1430_tunic_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1445_c1445_tunic_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1446_c1446_hat_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c1450_c1450_02_em": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"chr/c2030_c2030_Cape_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_205_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds"
+	],
+	"chr/c2130_c2130_body_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c2132_c2132_body_e": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"chr/c2132_c2132_c1210_shield01_e": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"chr/c2170_c2170_hairs_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c2191_c2191_wing_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c2210_c2210_hair_a_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"chr/c2240_c2240_child01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_551_a.dds"
+	],
+	"chr/c2240_c2240_child01_e": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds"
+	],
+	"chr/c2240_c2240_child01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds"
+	],
+	"chr/c2280_c2280_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c2290_c2290_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c3060_c3060_weapon_e": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"chr/c3100_c3100_UV04_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c3110_c3110_hair_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds"
+	],
+	"chr/c3120_c3120_Fur_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c3250_c3250_face_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5020_c5020_Damage_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5180_c5180_Body_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5180_c5180_Limbs_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5180_c5180_Tree_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5210_c5210_hair_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5240_c5240_Chest_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_040_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_573_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_626_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_496_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_204_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_277_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_135_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_311_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_164_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_640_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c3701-c3701_AM_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\AM_M_1130-AM_M_1130_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\AM_M_1430-AM_M_1430_a.dds"
+	],
+	"chr/c5240_c5240_Head_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_166_a.dds"
+	],
+	"chr/c5260_c5260_body_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c5280_c5280_BD_addclotharmor_em": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"chr/c6000_c6000_HD02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6010_c6010_hair_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6020_c6020_hair_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6070_c6070_cloth_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6120_c6120_eye_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6120_c6120_hat_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6120_c6120_pants_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_686_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_570_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_104_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_035_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_495_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_759_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_855_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_160_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_421_a.dds"
+	],
+	"chr/c6200_c6200_Hair_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"chr/c6201_c6201_Cape_Dust_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"chr/c6310_c6310_mummy_skin_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_Brakewall_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_floor_01_brick_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_364_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_686_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_570_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_172_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_038_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_104_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_115_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_035_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_495_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_759_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_855_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_860_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_160_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_301_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_410_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_458_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET651_108_a.dds"
+	],
+	"m30/m30_00_foliage_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_grass_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_grass_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"m30/m30_00_grass_050_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_ground_06_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m30/m30_00_leaves_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_leaves_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"m30/m30_00_low_castle_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds"
+	],
+	"m30/m30_00_low_castle_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m30/m30_00_low_castle_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_685_r.dds"
+	],
+	"m30/m30_00_low_castle_05_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_205_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_685_r.dds"
+	],
+	"m30/m30_00_low_castle_07_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_169_r.dds"
+	],
+	"m30/m30_00_low_etower_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds"
+	],
+	"m30/m30_00_low_etower_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds"
+	],
+	"m30/m30_00_low_etower_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_110_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"m30/m30_00_low_hallwall_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"m30/m30_00_low_hallwall_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_low_hall_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds"
+	],
+	"m30/m30_00_low_hall_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_low_hall_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_low_o009055_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_052_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_290_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_820_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_465_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_057_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_267_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_417_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_460_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4110-c4110_Fur_Color_B_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds"
+	],
+	"m30/m30_00_low_square_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"m30/m30_00_o304863_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_640_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\AM_M_1430-AM_M_1430_a.dds"
+	],
+	"m30/m30_00_o309100_wall_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m30/m30_00_o309110_stair_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_271_a.dds"
+	],
+	"m30/m30_00_o309120_frame_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o309304_partf_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o309304_parti_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET603_009_a.dds"
+	],
+	"m30/m30_00_o309321_component_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o329222_2_rubble_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"m30/m30_00_o329223_02_rock_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_261_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m30/m30_00_o329223_1_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o331303_wall_section_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds"
+	],
+	"m30/m30_00_o350212_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o350212_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4800_ground_02_brick_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"m30/m30_00_o4805_ground_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4805_roof_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"m30/m30_00_o4808_door_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m30/m30_00_o4808_groupware_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m30/m30_00_o4834_carving_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_glass_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_063_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_341_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_410_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_356_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_138_a.dds"
+	],
+	"m30/m30_00_o4834_part_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_part_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_pillar_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_wall2_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4834_wall2_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4834_wall3_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_wall4_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4834_wall4_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_00_o4834_wall5_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4834_window_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4835_pedestal_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4836_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_o4836_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"m30/m30_00_o4836_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds"
+	],
+	"m30/m30_00_rocksmall_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_rope_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m30/m30_00_tree_branches_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m30/m30_00_woodenfloor_01_dirt_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_177_a.dds"
+	],
+	"m30/m30_00_WoodFineSplit_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_635_a.dds"
+	],
+	"m30/m30_00_woodplank_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m30/m30_brick_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m31/m31_00_block_05_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds"
+	],
+	"m31/m31_00_brickwall_04_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m31/m31_00_cobbleStone_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds"
+	],
+	"m31/m31_00_elevator_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m31/m31_00_groundmud_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m31/m31_00_groundsand_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds"
+	],
+	"m31/m31_00_groundsand_00_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m31/m31_00_groundsand_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"m31/m31_00_groundsand_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m31/m31_00_groundsand_04_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_092_a.dds"
+	],
+	"m31/m31_00_ironbeam_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_538_a.dds"
+	],
+	"m31/m31_00_plasterwall_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_815_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_151_a.dds"
+	],
+	"m31/m31_00_rockwall_12_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds"
+	],
+	"m31/m31_00_rock_05_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m31/m31_00_ruinpillar_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_300_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_172_a.dds"
+	],
+	"m31/m31_00_spinetiling_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_416_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_230_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_905_a.dds"
+	],
+	"m31/m31_00_stair_04_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds"
+	],
+	"m31/m31_00_stonefloor_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m31/m31_00_stonefloor_00_block_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds"
+	],
+	"m31/m31_00_stonefloor_06_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m31/m31_00_stonefloor_07_block_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_422_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_078_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_546_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_090_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_130_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_363_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_055_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_181_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_228_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_409_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_054_a.dds"
+	],
+	"m31/m31_00_stonefloor_12_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m31/m31_00_straw_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m31/m31_00_tombstone_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_686_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_570_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_041_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_340_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_104_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_214_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_035_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_495_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_421_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_410_a.dds"
+	],
+	"m31/m31_00_tombstone_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_410_a.dds"
+	],
+	"m31/m31_00_tombstone_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_078_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_511_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_050_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_019_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_301_a.dds"
+	],
+	"m31/m31_00_tombstone_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_078_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_228_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_409_a.dds"
+	],
+	"m31/m31_00_tombstone_04_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_686_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_050_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_181_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_301_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_410_a.dds"
+	],
+	"m31/m31_00_woodplank_15_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds"
+	],
+	"m32/m32_00_cobbleStone_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds"
+	],
+	"m32/m32_00_dust_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_088_a.dds"
+	],
+	"m32/m32_00_GroundSand_14_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds"
+	],
+	"m32/m32_00_ground_002_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_kumo_70_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_284_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_018_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m32/m32_00_o301974_01leaves_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_110_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"m32/m32_00_o324000_arch_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m32/m32_00_o324000_beam_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m32/m32_00_o324000_breakbrick_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_break_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_brick_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_grace_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_grace_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_ground_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m32/m32_00_o324000_wall_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324000_wall_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324005_railing_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324005_sculpture_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324013_grace_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324013_grace_04_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324013_pillar_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324013_wall_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324030_branch_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m32/m32_00_o324030_stone_tablet_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324030_stone_tablet_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324030_stone_tablet_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324030_stone_tablet_04_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_arch_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_arch_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_arch_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_grace_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_pillar_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_stone_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_571_a.dds"
+	],
+	"m32/m32_00_o324060_tower_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324060_tower_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_decorate_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_decorate_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_decorate_05_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_grace_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_pillar_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_stone_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_stone_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324061_wood_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324070_pillar_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324080_arch_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324080_railing_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324080_rock_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324080_roof_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324080_steps_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324101_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324102_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324102_06_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324102_08_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o324103_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m32/m32_00_o324103_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m32/m32_00_o329218_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o329222_1_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o329222_2_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o329222_4_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m32/m32_00_o329222_4_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o329502_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o330005_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_00_o331303_wall_section_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_814_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_150_a.dds"
+	],
+	"m32/m32_00_o331306_floor_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"m32/m32_00_o350014_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m32/m32_01_ground_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m33/m33_00_m39_00_brick_053_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_063_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_122_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_542_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_692_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_965_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_069_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_259_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_613_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_894_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_463_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_027_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_079_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_010_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_042_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_044_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_198_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_398_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_087_a.dds"
+	],
+	"m33/m33_00_o331003_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_122_a.dds"
+	],
+	"m33/m33_00_o331060_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m33/m33_00_o331060_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m33/m33_00_o331303_wall_section_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m33/m33_00_o331305_roofing_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_685_r.dds"
+	],
+	"m33/m33_00_o331317_edge_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_059_r.dds"
+	],
+	"m33/m33_00_o331318_floor_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_169_r.dds"
+	],
+	"m33/m33_00_o331319_pillar_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"m33/m33_00_o381003_pillar_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m33/m33_00_sand_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds"
+	],
+	"m33/m33_00_stonefloor_13_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m33/m33_00_stoneout_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m33/m33_00_swanp_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_075_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_418_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_204_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_026_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_496_a.dds"
+	],
+	"m33/m33_00_swanp_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_770_a.dds"
+	],
+	"m34/m34_00_o1360_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_598_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET620_039_a.dds"
+	],
+	"m34/m34_00_o302050_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m34/m34_00_o304871_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds"
+	],
+	"m34/m34_00_o309110_frame_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds"
+	],
+	"m34/m34_00_o309120_floor_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET011_010_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_210_r.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m34/m34_00_o309320_wall_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_291_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_644_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_209_a.dds"
+	],
+	"m34/m34_00_o4808_door_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET730_006_a.dds"
+	],
+	"m34/m34_00_o4818_rottree_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m34/m34_00_o9028_flag_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_110_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"m34/m34_00_RockSingle_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m34/m34_00_wax_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_300_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_172_a.dds"
+	],
+	"m34/m34_o344859_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_573_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_135_a.dds"
+	],
+	"m34/m34_o344863_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_640_a.dds"
+	],
+	"m34/m34_o344883_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_067_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_230_a.dds"
+	],
+	"m34/m34_o344883_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_035_a.dds"
+	],
+	"m35/m35_00_Blood_00_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_685_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_169_r.dds"
+	],
+	"m35/m35_00_Dust_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_284_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_217_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_018_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m35/m35_00_m33_00_mauntain_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m35/m35_00_m33_00_swanp_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_138_a.dds"
+	],
+	"m35/m35_00_o1240_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_113_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_315_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_288_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_605_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_861_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_142_a.dds"
+	],
+	"m35/m35_00_o314030_arch_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o314030_arch_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o340330_metal_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_009_a.dds"
+	],
+	"m35/m35_00_o350011_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds"
+	],
+	"m35/m35_00_o350015_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o350015_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o350021_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m35/m35_00_o350202_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o350209_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m35/m35_00_o359300_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_085_a.dds"
+	],
+	"m35/m35_00_o4820_wall_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m35/m35_00_Stone_Base_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_092_a.dds"
+	],
+	"m35/m35_00_Tree_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_284_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_851_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_018_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m35/m35_00_tree_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_092_a.dds"
+	],
+	"m35/m35_00_Wall_19_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_Arch_04_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m37/m37_00_BonFireChurchGroundTileA_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_BonfireChurchPlasterBumpy_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"m37/m37_00_BonFireChurchPlasterWall_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m37/m37_00_BonfireChurch_Debris_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_Ced_ProperMarble_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_524_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_230_a.dds"
+	],
+	"m37/m37_00_CliffsBorder_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_cupboard_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_135_a.dds"
+	],
+	"m37/m37_00_floor_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_042_a.dds"
+	],
+	"m37/m37_00_GroundTile_05_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_533_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_043_a.dds"
+	],
+	"m37/m37_00_o319602_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_802_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_807_a.dds"
+	],
+	"m37/m37_00_Outside_BridgeStoneDirty_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_059_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds"
+	],
+	"m37/m37_00_Outside_BridgeStone_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_416_a.dds"
+	],
+	"m37/m37_00_Outside_BridgeStone_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_Outside_CemeteryGroundStones_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_Outside_Facades_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_203_a.dds"
+	],
+	"m37/m37_00_Outside_MudOnly_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_145_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_408_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_420_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_579_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_570_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_041_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_314_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_340_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET090_965_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_044_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_165_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_214_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_280_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_752_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_175_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_032_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_051_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_113_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_146_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_185_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m37/m37_00_Outside_MudOnly_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"m37/m37_00_Outside_PavementsStraight_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_Outside_Pavements_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds"
+	],
+	"m37/m37_00_Outside_Pillar_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m37/m37_00_rope_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_539_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_092_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_736_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_314_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_262_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_301_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_053_a.dds"
+	],
+	"m37/m37_00_tree_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_418_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_026_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_053_a.dds"
+	],
+	"m37/m37_00_wall_50_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_145_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_507_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_541_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_364_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_579_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_041_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET090_965_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_021_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_044_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_165_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_194_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_280_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_321_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_752_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_913_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_175_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_032_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_034_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_053_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_113_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_117_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_146_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_250_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET730_006_a.dds"
+	],
+	"m37/m37_00_water_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_051_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_061_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_075_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_108_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_119_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_418_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_423_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_506_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_541_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_110_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_615_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_596_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_250_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_374_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_380_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_556_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_558_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_613_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_616_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_684_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_905_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_997_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_044_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_115_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_013_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_042_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET010_005_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_054_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_115_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_116_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_129_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_146_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_155_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_157_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_232_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_291_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET099_302_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET099_860_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_023_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_049_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET201_091_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET201_092_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_040_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_058_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_060_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_068_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_122_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_124_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_176_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_192_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_391_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_413_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_609_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_277_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_519_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_668_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_801_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_858_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_892_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_960_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_983_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_011_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_008_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_155_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_390_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_431_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_497_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_518_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_554_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_604_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_711_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_881_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_112_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_007_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_011_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_012_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_025_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_127_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_207_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_213_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_214_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_233_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_124_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_137_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_184_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_325_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_654_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_018_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_026_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_030_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_042_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_044_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_082_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_083_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_142_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_148_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_179_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_196_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_202_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_402_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_465_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_469_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_808_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET600_000_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_013_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_073_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_082_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_084_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_092_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c3702-c3702_FC_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4450-c4450_AET230_155_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4600-c4600_stone_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4601-c4601_Stone_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4602-c4602_stone_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4603-c4603_stone_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4640-c4640_Jelly_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\WP_A_0623-WP_A_0623_a.dds"
+	],
+	"m37/m37_00_WoodTile_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_014_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_894_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_027_a.dds"
+	],
+	"m38/m38_00_m000302_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m38/m38_00_m22_00_house_700_500_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"m38/m38_00_m39_00_bricksingle_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m38/m38_00_m93_00_wall_04_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m38/m38_00_m93_sroom_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds"
+	],
+	"m38/m38_00_m96_00_bsroom_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_905_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m38/m38_00_m96_00_bsroom_benom_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m38/m38_00_m96_croom_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m38/m38_00_o1240_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_209_a.dds"
+	],
+	"m38/m38_00_o2400_09_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"m39/m39_00_blood_100_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_431_a.dds"
+	],
+	"m39/m39_00_brickborder_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m39/m39_00_bricksingle_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m39/m39_00_bricksingle_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m39/m39_00_bricksingle_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_905_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m39/m39_00_brick_053_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_075_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_115_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_232_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_060_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_391_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_277_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_960_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_011_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_008_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_012_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_148_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_179_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_202_a.dds"
+	],
+	"m39/m39_00_cobbleStone_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m39/m39_00_danmen_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds"
+	],
+	"m39/m39_00_parts_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m39/m39_00_rocksingle_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m39/m39_00_stairblock_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_905_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_022_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m39/m39_00_treasuretiling_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_088_a.dds"
+	],
+	"m39/m39_00_waterpuddle_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_390_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_085_a.dds"
+	],
+	"m39/m39_m30_00_o309110_wall_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m39/m39_m37_00_Outside_BridgeStone_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_175_a.dds"
+	],
+	"m40/m40_00_ashtiling_45_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_059_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_290_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1561-HD_M_1561_a.dds"
+	],
+	"m40/m40_00_books_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_324_a.dds"
+	],
+	"m40/m40_00_CentralThrone_01_emissve_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds"
+	],
+	"m40/m40_00_GeneralThrone_01_emissve_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds"
+	],
+	"m40/m40_00_GeneralThrone_01_emisve_atif": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_043_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_340_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET813_050_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET816_000_1m.dds"
+	],
+	"m40/m40_00_GeneralThrone_10_emissve_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds"
+	],
+	"m40/m40_00_ground_003_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m40/m40_00_ground_05_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_901_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_902_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_903_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_904_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_905_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_low_Castlewall_906_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_052_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_402_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_00_obj_225_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m40/m40_00_rock_20_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_240_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m40/m40_00_rock_small_050_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"m40/m40_00_smallchair_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_112_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_r.dds"
+	],
+	"m40/m40_00_soil_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds"
+	],
+	"m40/m40_00_stair_302_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_364_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_579_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_686_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_729_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_570_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_041_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_172_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_038_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_115_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_165_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_280_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_035_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_105_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_293_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_495_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_421_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_169_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_301_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_391_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_410_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_551_a.dds"
+	],
+	"m40/m40_00_test_03_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_075_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_418_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_420_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_537_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_003_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_538_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_550_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_169_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_205_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_273_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_293_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_390_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_579_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_219_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_006_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_095_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_126_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_136_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET090_965_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_021_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_058_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_068_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_081_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_121_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_177_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_194_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_509_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_277_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_321_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_752_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_960_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_430_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_883_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_888_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_034_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_026_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_034_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_053_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_053_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_117_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_146_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_141_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_148_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_202_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_250_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_413_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_492_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_496_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_760_a.dds"
+	],
+	"m40/m40_00_Throne_403_A_Stone_emissve_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds"
+	],
+	"m40/m40_00_tombstones_302_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m40/m40_00_tombstones_302_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m40/m40_o364002_trunk_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_bigrock_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_bigrock_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_bigrock_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_bigrock_05_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_o309110_frame_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m30_00_o324102_07_brick_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"m41/m41_00_m30_00_o329222_2_rubble_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m36_00_Test_branch_tiling_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_m37_00_roof_50_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m41/m41_00_m40_00_brick_001_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds"
+	],
+	"m41/m41_00_m40_00_o350102_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET730_006_a.dds"
+	],
+	"m41/m41_00_o364040_bark_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364040_bark_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364040_moss_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364040_treehole_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364041_bark_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364041_weeds_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_bark_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_branch_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_ground_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_treeroot_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_wall_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m41/m41_00_o364045_wall_03_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m45/m45_00_kumo_31_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_088_a.dds"
+	],
+	"m45/m45_00_o9041_17_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_265_a.dds"
+	],
+	"m45/m45_00_rock_Q00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_009_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_010_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_551_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_164_a.dds"
+	],
+	"m45/m45_00_rock_W00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_677_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_067_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_550_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_028_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_230_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_737_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_905_a.dds"
+	],
+	"m45/m45_00_skin_Standard_02_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_416_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_027_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_530_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_625_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_627_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_509_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_490_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_131_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET098_000_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET098_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_306_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_513_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_874_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_897_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_971_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET221_007_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET223_007_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_230_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_121_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_160_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_251_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_124_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_310_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_013_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_035_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_202_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_208_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_905_a.dds"
+	],
+	"m45/m45_00_snow_A01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_078_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_054_a.dds"
+	],
+	"m45/m45_00_stone_tile_H00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_123_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_408_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_418_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_314_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_058_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m45/m45_00_tree_tile_A00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"m45/m45_00_woodfurniture_00_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_905_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_022_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_204_a.dds"
+	],
+	"m50/m50_00_enkei_12_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_722_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_235_a.dds"
+	],
+	"m50/m50_00_m32_00_Outside_Snow_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_025_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_396_r.dds"
+	],
+	"m50/m50_00_o302595_c3140_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m50/m50_00_rock_standard_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_581_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_161_a.dds"
+	],
+	"m51/m51_00_edge_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"m51/m51_00_kumo_31_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET820_088_a.dds"
+	],
+	"m51/m51_00_kumo_32_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET002_501_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_249_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_300_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_172_a.dds"
+	],
+	"m51/m51_00_rock_standard_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m51/m51_00_roof_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_723_a.dds"
+	],
+	"m53/m53_00_storm_20_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_047_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_085_a.dds"
+	],
+	"obj/o000800_o000800_em": [
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds"
+	],
+	"obj/o001240_o1242_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds"
+	],
+	"obj/o007050_o007080_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o009056_o009056_07_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_059_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_063_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_078_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_122_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_143_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_068_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_002_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_612_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_077_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_290_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET099_170_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_063_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_259_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_265_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_341_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET240_089_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_006_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_410_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_423_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET260_356_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_138_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_150_a.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4110-c4110_Fur_Color_B_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1560-HD_M_1560_a.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_1561-HD_M_1561_a.dds"
+	],
+	"obj/o304860_o304860_08_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_076_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_404_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_407_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_422_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_021_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_517_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_530_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_942_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_068_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_032_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_223_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_084_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_098_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_315_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_112_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_390_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_053_a.dds"
+	],
+	"obj/o304860_o304860_15_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_335_a.dds"
+	],
+	"obj/o314011_o314011_straw_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_005_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_117_r.dds"
+	],
+	"obj/o323000_o323000_01_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o323000_o323000_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds"
+	],
+	"obj/o323000_o323000_03_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_022_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_045_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_027_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_073_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_149_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_361_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_394_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_395_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_403_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o331061_o331061_root_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_042_r.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_614_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o381022_o350016_01_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o381051_o381051_02_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o399910_c2190_body_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o399910_c2190_wing_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_349_r.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o401250_o401250_smith_tools_01_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_645_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET210_046_a.dds"
+	],
+	"obj/o404011_o404011_02_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o410100_o410100_o000100_00_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"obj/o962426_o2426_r": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET007_684_r.dds"
+	],
+	"parts/AM_M_2550_AM_M_2550_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"parts/AM_M_2950_AM_M_2950_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"parts/BD_M_6050_BD_M_6050_FurTile_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_063_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET000_122_a.dds"
+	],
+	"parts/HD_M_4700_HD_M_4700_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"parts/HD_M_5550_HD_M_5550_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"parts/LG_F_8250_LG_F_8250_1_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"parts/WP_A_1327_WP_A_1327_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"sfx/commoneffects_s07006_r": [
+		"C:\\DS3TexUp\\extract-er\\parts\\FC_M_0090-FC_M_0000_Underwear_r.dds"
+	],
+	"sfx/commoneffects_s11604": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_319_a.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET250_401_a.dds"
+	],
+	"sfx/commoneffects_s20031": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_340_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET813_050_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET816_000_1m.dds"
+	],
+	"sfx/dlc1_s09360_a": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_028_a.dds"
+	],
+	"sfx/dlc2_s08410_em": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_004_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_263_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET008_350_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_308_em.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_839_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c2070-c2070_fingerprint_em.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4911-c4911_FaceBody_em.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\WP_A_2119-WP_A_2119_em.dds",
+		"C:\\DS3TexUp\\extract-er\\sfx\\commoneffects-ffxbnd-s88052_em.dds"
+	],
+	"sfx/m31_s10049": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_164_a.dds"
+	]
+}
