@@ -513,6 +513,21 @@ namespace DS3TexUpUI
                 return TexId.FromPath(text.Replace("\\\\", "\\"));
             }
 
+            bool TryOpenFileDirectly()
+            {
+                var text = textBox1.Text.Replace("\\\\", "\\");
+                if (File.Exists(text))
+                {
+                    using var process = Process.Start(@"C:\Program Files\paint.net\paintdotnet.exe", text);
+                    textBox1.Text = "";
+
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    return true;
+                }
+                return false;
+            }
+
             if (e.KeyCode == Keys.Enter)
             {
                 TexId id;
@@ -522,6 +537,8 @@ namespace DS3TexUpUI
                 }
                 catch (System.Exception)
                 {
+                    if (TryOpenFileDirectly()) return;
+
                     MessageBox.Show($"\"{textBox1.Text}\" does not map to a unique TexId.");
                     return;
                 }
@@ -548,6 +565,8 @@ namespace DS3TexUpUI
                 }
                 else
                 {
+                    if (TryOpenFileDirectly()) return;
+
                     MessageBox.Show("No such file");
                 }
             }
