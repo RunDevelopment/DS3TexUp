@@ -396,56 +396,10 @@ namespace DS3TexUpUI
                     if (s != 0) return s;
                 }
 
-                static int? GetCompareNumber(DDSFormat format)
-                {
-                    switch (format.FourCC)
-                    {
-                        case CompressionAlgorithm.D3DFMT_DXT1:
-                            return 1;
-                        case CompressionAlgorithm.D3DFMT_DXT5:
-                            return 3;
-                        case CompressionAlgorithm.ATI1:
-                            return 4;
-                        case CompressionAlgorithm.ATI2:
-                            return 5;
-                        case CompressionAlgorithm.DX10:
-                            switch (format.DxgiFormat)
-                            {
-                                case DxgiFormat.BC1_TYPELESS:
-                                case DxgiFormat.BC1_UNORM_SRGB:
-                                case DxgiFormat.BC1_UNORM:
-                                    return 1;
-                                case DxgiFormat.BC3_UNORM_SRGB:
-                                    return 3;
-                                case DxgiFormat.BC4_SNORM:
-                                case DxgiFormat.BC4_TYPELESS:
-                                case DxgiFormat.BC4_UNORM:
-                                    return 4;
-                                case DxgiFormat.BC5_SNORM:
-                                case DxgiFormat.BC5_TYPELESS:
-                                case DxgiFormat.BC5_UNORM:
-                                    return 5;
-                                case DxgiFormat.BC7_UNORM:
-                                case DxgiFormat.BC7_UNORM_SRGB:
-                                    return 7;
-                                case DxgiFormat.B8G8R8A8_UNORM_SRGB:
-                                case DxgiFormat.B8G8R8X8_UNORM_SRGB:
-                                case DxgiFormat.B5G5R5A1_UNORM:
-                                    // uncompressed
-                                    return 10;
-                                default:
-                                    return null;
-                            }
-
-                        default:
-                            return null;
-                    }
-                }
-
                 if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
                 {
-                    var af = GetCompareNumber(aFormat);
-                    var bf = GetCompareNumber(bFormat);
+                    var af = aFormat.QualityScore;
+                    var bf = bFormat.QualityScore;
                     if (af != null && bf != null && af != bf)
                     {
                         return af.Value.CompareTo(bf.Value);
@@ -1340,7 +1294,8 @@ namespace DS3TexUpUI
                     // only one texture after identical textures were removed
                     if (eqClass.Count < 2) return;
 
-                    if (eqClass.Count > 20) {
+                    if (eqClass.Count > 20)
+                    {
                         token.SubmitLog($"Equivalence class {i} contains too many unique elements ({eqClass.Count}).");
                         return;
                     }

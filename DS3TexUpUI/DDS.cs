@@ -90,7 +90,7 @@ namespace DS3TexUpUI
             info.ArgumentList.Add("-d");
             info.ArgumentList.Add("-dx10");
 
-            if (!format.IsSRGB()) info.ArgumentList.Add("-srgbo");
+            if (!format.IsSRGB) info.ArgumentList.Add("-srgbo");
 
             info.ArgumentList.Add("-sx");
             info.ArgumentList.Add(suffix);
@@ -416,6 +416,75 @@ namespace DS3TexUpUI
         public CompressionAlgorithm FourCC { get; }
         public DxgiFormat DxgiFormat { get; }
 
+        public bool IsSRGB
+        {
+            get
+            {
+                switch (ToDX10())
+                {
+                    case DxgiFormat.BC1_UNORM_SRGB:
+                    case DxgiFormat.BC2_UNORM_SRGB:
+                    case DxgiFormat.BC3_UNORM_SRGB:
+                    case DxgiFormat.BC7_UNORM_SRGB:
+                    case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                    case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                    case DxgiFormat.R8G8B8A8_UNORM_SRGB:
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        }
+
+        public int? QualityScore
+        {
+            get
+            {
+                switch (FourCC)
+                {
+                    case CompressionAlgorithm.D3DFMT_DXT1:
+                        return 1;
+                    case CompressionAlgorithm.D3DFMT_DXT5:
+                        return 3;
+                    case CompressionAlgorithm.ATI1:
+                        return 4;
+                    case CompressionAlgorithm.ATI2:
+                        return 5;
+                    case CompressionAlgorithm.DX10:
+                        switch (DxgiFormat)
+                        {
+                            case DxgiFormat.BC1_TYPELESS:
+                            case DxgiFormat.BC1_UNORM_SRGB:
+                            case DxgiFormat.BC1_UNORM:
+                                return 1;
+                            case DxgiFormat.BC3_UNORM_SRGB:
+                                return 3;
+                            case DxgiFormat.BC4_SNORM:
+                            case DxgiFormat.BC4_TYPELESS:
+                            case DxgiFormat.BC4_UNORM:
+                                return 4;
+                            case DxgiFormat.BC5_SNORM:
+                            case DxgiFormat.BC5_TYPELESS:
+                            case DxgiFormat.BC5_UNORM:
+                                return 5;
+                            case DxgiFormat.BC7_UNORM:
+                            case DxgiFormat.BC7_UNORM_SRGB:
+                                return 7;
+                            case DxgiFormat.B8G8R8A8_UNORM_SRGB:
+                            case DxgiFormat.B8G8R8X8_UNORM_SRGB:
+                            case DxgiFormat.B5G5R5A1_UNORM:
+                                // uncompressed
+                                return 10;
+                            default:
+                                return null;
+                        }
+
+                    default:
+                        return null;
+                }
+            }
+        }
+
         public DDSFormat(CompressionAlgorithm fourCC)
         {
             FourCC = fourCC;
@@ -444,23 +513,6 @@ namespace DS3TexUpUI
                 CompressionAlgorithm.BC5U => DxgiFormat.BC5_UNORM,
                 _ => this.DxgiFormat,
             };
-        }
-
-        public bool IsSRGB()
-        {
-            switch (ToDX10())
-            {
-                case DxgiFormat.BC1_UNORM_SRGB:
-                case DxgiFormat.BC2_UNORM_SRGB:
-                case DxgiFormat.BC3_UNORM_SRGB:
-                case DxgiFormat.BC7_UNORM_SRGB:
-                case DxgiFormat.B8G8R8A8_UNORM_SRGB:
-                case DxgiFormat.B8G8R8X8_UNORM_SRGB:
-                case DxgiFormat.R8G8B8A8_UNORM_SRGB:
-                    return true;
-                default:
-                    return false;
-            }
         }
 
         public override string ToString()
