@@ -37,22 +37,19 @@ namespace DS3TexUpUI
             "m54", // Arena - Round Plaza
         };
 
-        private static string DataDir() => Path.Join(AppDomain.CurrentDomain.BaseDirectory, "data");
-        internal static string DataFile(string name) => Path.Join(DataDir(), name);
-
         public static readonly IReadOnlyList<string> Parts
-            = DataFile(@"parts.json").LoadJsonFile<string[]>();
+            = Data.File(@"parts.json").LoadJsonFile<string[]>();
 
         public static readonly IReadOnlyCollection<TexId> GroundTextures
-            = DataFile(@"ground.json").LoadJsonFile<HashSet<TexId>>();
+            = Data.File(@"ground.json").LoadJsonFile<HashSet<TexId>>();
         public static readonly IReadOnlyCollection<TexId> GroundWithMossTextures
-            = DataFile(@"ground-with-moss.json").LoadJsonFile<HashSet<TexId>>();
+            = Data.File(@"ground-with-moss.json").LoadJsonFile<HashSet<TexId>>();
 
         public static readonly IReadOnlyCollection<TexId> SolidColor
-            = DataFile(@"solid-color.json").LoadJsonFile<HashSet<TexId>>();
+            = Data.File(@"solid-color.json").LoadJsonFile<HashSet<TexId>>();
 
         public static readonly IReadOnlyDictionary<TexId, TexKind> KnownTexKinds
-            = DataFile(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
+            = Data.File(@"tex-kinds.json").LoadJsonFile<Dictionary<TexId, TexKind>>();
         internal static Action<SubProgressToken> CreateKnownTexKindsIndex()
         {
             static IEnumerable<(TexId id, TexKind kind)> Selector(FlverMaterialInfo info)
@@ -96,20 +93,20 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus($"Saving index");
-                result.SaveAsJson(DataFile(@"tex-kinds.json"));
+                result.SaveAsJson(Data.File(@"tex-kinds.json"));
             };
         }
 
         public static IReadOnlyDictionary<TexId, TransparencyKind> Transparency
-            = DataFile(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
+            = Data.File(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
-            => CreateExtractedFilesIndexJson(w, DataFile(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
+            => CreateExtractedFilesIndexJson(w, Data.File(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
 
         public static IReadOnlyDictionary<TexId, RgbaDiff> OriginalColorDiff
-            = DataFile(@"original-color-diff.json").LoadJsonFile<Dictionary<TexId, RgbaDiff>>();
+            = Data.File(@"original-color-diff.json").LoadJsonFile<Dictionary<TexId, RgbaDiff>>();
         internal static Action<SubProgressToken> CreateOriginalColorDiffIndex(Workspace w)
         {
-            return CreateExtractedFilesIndexJson(w, DataFile(@"original-color-diff.json"), f =>
+            return CreateExtractedFilesIndexJson(w, Data.File(@"original-color-diff.json"), f =>
             {
                 using var image = DDSImage.Load(f);
                 return image.GetMaxAbsDiff();
@@ -117,10 +114,10 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
-            = DataFile(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
+            = Data.File(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
         {
-            return CreateExtractedFilesIndexJson(w, DataFile(@"original-size.json"), f =>
+            return CreateExtractedFilesIndexJson(w, Data.File(@"original-size.json"), f =>
             {
                 var (header, _) = f.ReadDdsHeader();
                 return new Size((int)header.Width, (int)header.Height);
@@ -128,9 +125,9 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, DDSFormat> OriginalFormat
-            = DataFile(@"original-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
+            = Data.File(@"original-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
         internal static Action<SubProgressToken> CreateOriginalFormatIndex(Workspace w)
-            => CreateExtractedFilesIndexJson(w, DataFile(@"original-format.json"), f => f.ReadDdsHeader().GetFormat());
+            => CreateExtractedFilesIndexJson(w, Data.File(@"original-format.json"), f => f.ReadDdsHeader().GetFormat());
         internal static Action<SubProgressToken> CreateFormatsGroupedByTexKind()
         {
             return token =>
@@ -153,12 +150,12 @@ namespace DS3TexUpUI
                     .ToList();
 
                 token.SubmitStatus("Saving formats");
-                list.SaveAsJson(DataFile(@"format-by-tex-kind.json"));
+                list.SaveAsJson(Data.File(@"format-by-tex-kind.json"));
             };
         }
 
         public static IReadOnlyDictionary<TexId, string> GamePath
-            = DataFile(@"game-path.json").LoadJsonFile<Dictionary<TexId, string>>();
+            = Data.File(@"game-path.json").LoadJsonFile<Dictionary<TexId, string>>();
         internal static Action<SubProgressToken> CreateGamePathIndex(Workspace w)
         {
             return token =>
@@ -166,12 +163,12 @@ namespace DS3TexUpUI
                 var index = w.GetTexFiles(token).ToDictionary(f => f.Id, f => Path.GetRelativePath(w.GameDir, f.GamePath));
 
                 token.SubmitStatus("Saving JSON");
-                index.SaveAsJson(DataFile(@"game-path.json"));
+                index.SaveAsJson(Data.File(@"game-path.json"));
             };
         }
 
         public static IReadOnlyDictionary<string, HashSet<TexId>> Homographs
-            = DataFile(@"homographs.json").LoadJsonFile<Dictionary<string, HashSet<TexId>>>();
+            = Data.File(@"homographs.json").LoadJsonFile<Dictionary<string, HashSet<TexId>>>();
         internal static Action<SubProgressToken> CreateHomographIndex()
         {
             return token =>
@@ -187,15 +184,15 @@ namespace DS3TexUpUI
                     .ToDictionary(p => p.Key, p => p.l);
 
                 token.SubmitStatus("Saving JSON");
-                homographs.SaveAsJson(DataFile(@"homographs.json"));
+                homographs.SaveAsJson(Data.File(@"homographs.json"));
             };
         }
 
         public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
-            = DataFile(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+            = Data.File(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
 
         public static IReadOnlyDictionary<TexId, DDSFormat> OutputFormat
-            = DataFile(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
+            = Data.File(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
         internal static Action<SubProgressToken> CreateOutputFormatIndex(Workspace w)
         {
             static DDSFormat GetOutputFormat(DDSFormat format, TexKind kind)
@@ -223,11 +220,11 @@ namespace DS3TexUpUI
                     .ToList();
 
                 token.SubmitStatus("Saving formats");
-                new Dictionary<TexId, DDSFormat>(e).SaveAsJson(DataFile(@"output-format.json"));
+                new Dictionary<TexId, DDSFormat>(e).SaveAsJson(Data.File(@"output-format.json"));
             };
         }
 
-        public static UpscaleFactor OutputUpscale = UpscaleFactor.LoadFromDir(DataDir());
+        public static UpscaleFactor OutputUpscale = UpscaleFactor.LoadFromDir(Data.Dir());
 
         public class UpscaleFactor
         {
@@ -282,7 +279,7 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<TexId, ColorCode6x6> ColorCode
-            = DataFile(@"color-code.json").LoadJsonFile<Dictionary<TexId, ColorCode6x6>>();
+            = Data.File(@"color-code.json").LoadJsonFile<Dictionary<TexId, ColorCode6x6>>();
         internal static Action<SubProgressToken> CreateColorCodeIndex()
         {
             return token =>
@@ -315,12 +312,12 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                index.SaveAsJson(DataFile(@"color-code.json"));
+                index.SaveAsJson(Data.File(@"color-code.json"));
             };
         }
 
         public static EquivalenceCollection<TexId> CopiesCertain
-            = DataFile(@"copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
+            = Data.File(@"copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
         internal static UncertainCopies _generalCopiesConfig = new UncertainCopies()
         {
             CertainFile = @"copies-certain.json",
@@ -338,7 +335,7 @@ namespace DS3TexUpUI
         };
 
         public static IReadOnlyDictionary<TexId, TexId> RepresentativeOf
-            = DataFile(@"representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+            = Data.File(@"representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         public static IReadOnlyCollection<TexId> Representatives = RepresentativeOf.Values.ToHashSet();
         internal static Action<SubProgressToken> CreateRepresentativeIndex()
         {
@@ -368,7 +365,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(DataFile(@"representative.json"));
+                representative.SaveAsJson(Data.File(@"representative.json"));
             };
         }
         public static int CompareIdsByQuality(TexId a, TexId b)
@@ -411,7 +408,7 @@ namespace DS3TexUpUI
         }
 
         public static EquivalenceCollection<TexId> AlphaCopiesCertain
-            = DataFile(@"alpha-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
+            = Data.File(@"alpha-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
         internal static UncertainCopies _alphaCopiesConfig = new UncertainCopies()
         {
             CertainFile = @"alpha-copies-certain.json",
@@ -443,7 +440,7 @@ namespace DS3TexUpUI
         };
 
         public static IReadOnlyDictionary<TexId, TexId> AlphaRepresentativeOf
-            = DataFile(@"alpha-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+            = Data.File(@"alpha-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         public static IReadOnlyCollection<TexId> AlphaRepresentatives = AlphaRepresentativeOf.Values.ToHashSet();
         internal static Action<SubProgressToken> CreateAlphaRepresentativeIndex(Workspace w)
         {
@@ -505,12 +502,12 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(DataFile(@"alpha-representative.json"));
+                representative.SaveAsJson(Data.File(@"alpha-representative.json"));
             };
         }
 
         public static EquivalenceCollection<TexId> NormalCopiesCertain
-            = DataFile(@"normal-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
+            = Data.File(@"normal-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
         internal static UncertainCopies _normalCopiesConfig = new UncertainCopies()
         {
             CertainFile = @"normal-copies-certain.json",
@@ -536,7 +533,7 @@ namespace DS3TexUpUI
         };
 
         public static IReadOnlyDictionary<TexId, TexId> NormalRepresentativeOf
-            = DataFile(@"normal-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+            = Data.File(@"normal-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         public static IReadOnlyCollection<TexId> NormalRepresentatives = NormalRepresentativeOf.Values.ToHashSet();
         internal static Action<SubProgressToken> CreateNormalRepresentativeIndex()
         {
@@ -566,12 +563,12 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(DataFile(@"normal-representative.json"));
+                representative.SaveAsJson(Data.File(@"normal-representative.json"));
             };
         }
 
         public static EquivalenceCollection<TexId> GlossCopiesCertain
-            = DataFile(@"gloss-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
+            = Data.File(@"gloss-copies-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
         internal static UncertainCopies _glossCopiesConfig = new UncertainCopies()
         {
             CertainFile = @"gloss-copies-certain.json",
@@ -603,7 +600,7 @@ namespace DS3TexUpUI
         };
 
         public static IReadOnlyDictionary<TexId, TexId> GlossRepresentativeOf
-            = DataFile(@"gloss-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+            = Data.File(@"gloss-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         public static IReadOnlyCollection<TexId> GlossRepresentatives = GlossRepresentativeOf.Values.ToHashSet();
         internal static Action<SubProgressToken> CreateGlossRepresentativeIndex()
         {
@@ -633,12 +630,12 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(DataFile(@"gloss-representative.json"));
+                representative.SaveAsJson(Data.File(@"gloss-representative.json"));
             };
         }
 
         public static IReadOnlyDictionary<TexId, Dictionary<string, HashSet<string>>> UsedBy
-            = DataFile(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
+            = Data.File(@"usage.json").LoadJsonFile<Dictionary<TexId, Dictionary<string, HashSet<string>>>>();
         internal static Action<SubProgressToken> CreateTexUsage()
         {
             return token =>
@@ -660,12 +657,12 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus("Saving copies JSON");
-                usage.SaveAsJson(DataFile(@"usage.json"));
+                usage.SaveAsJson(Data.File(@"usage.json"));
             };
         }
 
         public static IReadOnlyCollection<TexId> Unused
-            = DataFile(@"unused.json").LoadJsonFile<HashSet<TexId>>();
+            = Data.File(@"unused.json").LoadJsonFile<HashSet<TexId>>();
         internal static Action<SubProgressToken> CreateUnused()
         {
             return token =>
@@ -675,12 +672,12 @@ namespace DS3TexUpUI
                 unused.Sort();
 
                 token.SubmitStatus("Saving copies JSON");
-                unused.SaveAsJson(DataFile(@"unused.json"));
+                unused.SaveAsJson(Data.File(@"unused.json"));
             };
         }
 
         public static IReadOnlyDictionary<TexId, TexId> NormalAlbedo
-            = DataFile(@"normal-albedo.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+            = Data.File(@"normal-albedo.json").LoadJsonFile<Dictionary<TexId, TexId>>();
         internal static Action<SubProgressToken> CreateNormalAlbedoIndex()
         {
             return token =>
@@ -799,7 +796,7 @@ namespace DS3TexUpUI
                 }
 
                 // token.SubmitStatus("Saving JSON");
-                // index.SaveAsJson(DataFile(@"normal-albedo.json"));
+                // index.SaveAsJson(Data.File(@"normal-albedo.json"));
 
                 token.SubmitStatus($"Categorizing pairings");
                 var certain = new Dictionary<TexId, TexId>();
@@ -839,14 +836,14 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus("Saving JSON");
-                certain.SaveAsJson(DataFile(@"normal-albedo-auto.json"));
-                ambiguous.SaveAsJson(DataFile(@"normal-albedo-manual.json"));
+                certain.SaveAsJson(Data.File(@"normal-albedo-auto.json"));
+                ambiguous.SaveAsJson(Data.File(@"normal-albedo-manual.json"));
             };
         }
 
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
         {
-            foreach (var file in Directory.GetFiles(DataFile(@"materials"), "*.json"))
+            foreach (var file in Directory.GetFiles(Data.File(@"materials"), "*.json"))
                 foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
                     yield return item;
         }
@@ -881,7 +878,7 @@ namespace DS3TexUpUI
                 };
 
                 token.SubmitStatus("Converting files");
-                token.ForAllParallel(Directory.GetFiles(DataFile(@"materials"), "*.json"), file =>
+                token.ForAllParallel(Directory.GetFiles(Data.File(@"materials"), "*.json"), file =>
                 {
                     var items = file.LoadJsonFile<List<FlverMaterialInfo>>().Select(info =>
                     {
@@ -924,7 +921,7 @@ namespace DS3TexUpUI
                         return result;
                     }).ToList();
 
-                    var targetDir = DataFile(@"textures");
+                    var targetDir = Data.File(@"textures");
                     Directory.CreateDirectory(targetDir);
                     items.SaveAsJson(Path.Join(targetDir, Path.GetFileName(file)));
                 });
@@ -1086,7 +1083,7 @@ namespace DS3TexUpUI
         {
             public string Name { get; }
 
-            public string Read => DS3.DataFile(Name);
+            public string Read => Data.File(Name);
             public string Write => Path.Join("data", Name);
 
             public DataFile(string name) { Name = name; }
