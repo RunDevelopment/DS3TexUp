@@ -300,31 +300,44 @@ namespace DS3TexUpUI
                         @"D:\DS3\albedo-processed\sharpest",
                         @"D:\DS3\albedo-raw\GroundTextures",
                         @"D:\DS3\albedo-processed\ground-moss",
+                        @"D:\DS3\er\albedo-processed\sharpest",
+                        @"D:\DS3\er\albedo-raw\GroundTextures",
+                        @"D:\DS3\er\albedo-processed\ground-moss",
                         @"C:\DS3TexUp\up-manual\a",
                     },
                     Alpha = new TexOverrideList() {
                         @"D:\DS3\upscaled\alpha",
                         @"D:\DS3\upscaled\alpha_binary",
                         @"D:\DS3\upscaled\n_height",
+                        @"D:\DS3\er\upscaled\alpha_full",
+                        @"D:\DS3\er\upscaled\alpha_binary",
+                        @"D:\DS3\er\upscaled\n_height",
                         @"C:\DS3TexUp\up-manual\alpha",
                     },
 
                     NormalNormal = new TexOverrideList() {
                         @"D:\DS3\upscaled\n_normal",
+                        @"D:\DS3\er\upscaled\n_normal",
                         @"C:\DS3TexUp\up-manual\n_normal",
                     },
                     NormalAlbedo = new TexOverrideList() {
                         @"D:\DS3\normal-albedo",
+                        @"D:\DS3\er\normal-albedo",
                         @"C:\DS3TexUp\up-manual\n_albedo",
                     },
                     NormalGloss = new TexOverrideList() {
                         @"D:\DS3\upscaled\n_gloss",
+                        @"D:\DS3\er\upscaled\n_gloss",
                         @"C:\DS3TexUp\up-manual\n_gloss",
                     },
-                    NormalHeight = @"D:\DS3\upscaled\n_height",
+                    NormalHeight = new TexOverrideList(){
+                        @"D:\DS3\upscaled\n_height",
+                        @"D:\DS3\er\upscaled\n_height",
+                    },
 
                     Reflective = new TexOverrideList() {
                         @"D:\DS3\upscaled\r",
+                        @"D:\DS3\er\upscaled\r",
                         @"C:\DS3TexUp\up-manual\r",
                     },
                     Shininess = @"D:\DS3\upscaled\s",
