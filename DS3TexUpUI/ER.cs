@@ -17,7 +17,6 @@ namespace DS3TexUpUI
     {
         public const string ExtractDir = @"C:\DS3TexUp\extract-er";
         public const string UpscaleDir = @"C:\DS3TexUp\upscale-er";
-        public const string DataDir = @"C:\Users\micha\Git\DS3TexUp\er-data";
 
         public static void ExtractER(IProgressToken token)
         {
@@ -179,7 +178,7 @@ namespace DS3TexUpUI
         }
 
         public static IReadOnlyDictionary<string, TransparencyKind> Alpha
-            = Path.Join(DataDir, "alpha.json").LoadJsonFile<Dictionary<string, TransparencyKind>>();
+            = Data.File(@"er/alpha.json").LoadJsonFile<Dictionary<string, TransparencyKind>>();
         public static void CreateAlpha(IProgressToken token)
         {
             token.SubmitStatus("Alpha");
@@ -201,11 +200,11 @@ namespace DS3TexUpUI
                 }
             });
 
-            alpha.SaveAsJson(Path.Join(DataDir, "alpha.json"));
+            alpha.SaveAsJson(Data.File(@"er/alpha.json"));
         }
 
         public static IReadOnlyDictionary<string, Size> OriginalSize
-            = Path.Join(DataDir, "size.json").LoadJsonFile<Dictionary<string, Size>>();
+            = Data.File(@"er/size.json").LoadJsonFile<Dictionary<string, Size>>();
         public static void CreateSize(IProgressToken token)
         {
             token.SubmitStatus("Size");
@@ -226,11 +225,11 @@ namespace DS3TexUpUI
                 }
             });
 
-            size.SaveAsJson(Path.Join(DataDir, "size.json"));
+            size.SaveAsJson(Data.File(@"er/size.json"));
         }
 
         public static IReadOnlyDictionary<string, DDSFormat> OriginalFormat
-            = Path.Join(DataDir, "format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
+            = Data.File(@"er/format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
         public static void CreateFormat(IProgressToken token)
         {
             token.SubmitStatus("Format");
@@ -251,11 +250,11 @@ namespace DS3TexUpUI
                 }
             });
 
-            format.SaveAsJson(Path.Join(DataDir, "format.json"));
+            format.SaveAsJson(Data.File(@"er/format.json"));
         }
 
         public static IReadOnlyDictionary<string, TexKind> TexKinds
-            = Path.Join(DataDir, "tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+            = Data.File(@"er/tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
         public static void CreateTexKind(IProgressToken token)
         {
             token.SubmitStatus("Tex kind");
@@ -268,14 +267,14 @@ namespace DS3TexUpUI
                 kind[file] = TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file));
             });
 
-            kind.SaveAsJson(Path.Join(DataDir, "tex-kind.json"));
+            kind.SaveAsJson(Data.File(@"er/tex-kind.json"));
         }
 
         public static ExternalReuse GeneralReuse = new ExternalReuse()
         {
-            CertainFile = Path.Join(DataDir, "copy-general.json"),
-            UncertainFile = Path.Join(DataDir, "copy-general-uncertain.json"),
-            RejectedFile = Path.Join(DataDir, "copy-general-rejected.json"),
+            CertainFile = Data.File(@"er/copy-general.json"),
+            UncertainFile = Data.File(@"er/copy-general-uncertain.json"),
+            RejectedFile = Data.File(@"er/copy-general-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -298,9 +297,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse AlphaReuse = new ExternalReuse()
         {
-            CertainFile = Path.Join(DataDir, "copy-alpha.json"),
-            UncertainFile = Path.Join(DataDir, "copy-alpha-uncertain.json"),
-            RejectedFile = Path.Join(DataDir, "copy-alpha-rejected.json"),
+            CertainFile = Data.File(@"er/copy-alpha.json"),
+            UncertainFile = Data.File(@"er/copy-alpha-uncertain.json"),
+            RejectedFile = Data.File(@"er/copy-alpha-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -339,9 +338,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse NormalReuse = new ExternalReuse()
         {
-            CertainFile = Path.Join(DataDir, "copy-normal.json"),
-            UncertainFile = Path.Join(DataDir, "copy-normal-uncertain.json"),
-            RejectedFile = Path.Join(DataDir, "copy-normal-rejected.json"),
+            CertainFile = Data.File(@"er/copy-normal.json"),
+            UncertainFile = Data.File(@"er/copy-normal-uncertain.json"),
+            RejectedFile = Data.File(@"er/copy-normal-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -367,9 +366,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse GlossReuse = new ExternalReuse()
         {
-            CertainFile = Path.Join(DataDir, "copy-gloss.json"),
-            UncertainFile = Path.Join(DataDir, "copy-gloss-uncertain.json"),
-            RejectedFile = Path.Join(DataDir, "copy-gloss-rejected.json"),
+            CertainFile = Data.File(@"er/copy-gloss.json"),
+            UncertainFile = Data.File(@"er/copy-gloss-uncertain.json"),
+            RejectedFile = Data.File(@"er/copy-gloss-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -400,13 +399,13 @@ namespace DS3TexUpUI
         };
 
         public static IReadOnlyDictionary<TexId, string> GeneralRepresentative
-            = Path.Join(DataDir, "representative-general.json").LoadJsonFile<Dictionary<TexId, string>>();
+            = Data.File(@"er/representative-general.json").LoadJsonFile<Dictionary<TexId, string>>();
         public static IReadOnlyDictionary<TexId, string> AlpaRepresentative
-            = Path.Join(DataDir, "representative-alpha.json").LoadJsonFile<Dictionary<TexId, string>>();
+            = Data.File(@"er/representative-alpha.json").LoadJsonFile<Dictionary<TexId, string>>();
         public static IReadOnlyDictionary<TexId, string> NormalRepresentative
-            = Path.Join(DataDir, "representative-normal.json").LoadJsonFile<Dictionary<TexId, string>>();
+            = Data.File(@"er/representative-normal.json").LoadJsonFile<Dictionary<TexId, string>>();
         public static IReadOnlyDictionary<TexId, string> GlossRepresentative
-            = Path.Join(DataDir, "representative-gloss.json").LoadJsonFile<Dictionary<TexId, string>>();
+            = Data.File(@"er/representative-gloss.json").LoadJsonFile<Dictionary<TexId, string>>();
 
         public static void CreateGeneralRepresentative(IProgressToken token)
         {
@@ -423,7 +422,7 @@ namespace DS3TexUpUI
                 }
             });
 
-            rep.SaveAsJson(Path.Join(DataDir, "representative-general.json"));
+            rep.SaveAsJson(Data.File(@"er/representative-general.json"));
         }
         public static void CreateAlphaRepresentative(IProgressToken token)
         {
@@ -447,7 +446,7 @@ namespace DS3TexUpUI
                 }
             });
 
-            rep.SaveAsJson(Path.Join(DataDir, "representative-alpha.json"));
+            rep.SaveAsJson(Data.File(@"er/representative-alpha.json"));
         }
         public static void CreateNormalRepresentative(IProgressToken token)
         {
@@ -464,7 +463,7 @@ namespace DS3TexUpUI
                 }
             });
 
-            rep.SaveAsJson(Path.Join(DataDir, "representative-normal.json"));
+            rep.SaveAsJson(Data.File(@"er/representative-normal.json"));
         }
         public static void CreateGlossRepresentative(IProgressToken token)
         {
@@ -481,7 +480,7 @@ namespace DS3TexUpUI
                 }
             });
 
-            rep.SaveAsJson(Path.Join(DataDir, "representative-gloss.json"));
+            rep.SaveAsJson(Data.File(@"er/representative-gloss.json"));
         }
 
         private static string GetHighestQualityCopy(IEnumerable<string> copies)
