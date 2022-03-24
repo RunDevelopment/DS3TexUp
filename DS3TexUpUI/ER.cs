@@ -8,7 +8,6 @@ using SoulsFormats;
 using SixLabors.ImageSharp;
 using Pfim;
 using SixLabors.ImageSharp.PixelFormats;
-using System.Numerics;
 
 #nullable enable
 
@@ -180,8 +179,55 @@ namespace DS3TexUpUI
 
         public static IReadOnlyDictionary<string, TransparencyKind> Alpha
             = Path.Join(DataDir, "alpha.json").LoadJsonFile<Dictionary<string, TransparencyKind>>();
+        public static void CreateAlpha(IProgressToken token)
+        {
+            token.SubmitStatus("Alpha");
+
+            var dds = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+            var alpha = new Dictionary<string, TransparencyKind>();
+            token.ForAllParallel(dds, file =>
+            {
+                try
+                {
+                    using var image = DDSImage.Load(file);
+                    var t = image.GetTransparency();
+                    lock (alpha) { alpha[file] = t; }
+                }
+                catch (System.Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
+
+            alpha.SaveAsJson(Path.Join(DataDir, "alpha.json"));
+        }
+
         public static IReadOnlyDictionary<string, Size> OriginalSize
             = Path.Join(DataDir, "size.json").LoadJsonFile<Dictionary<string, Size>>();
+        public static void CreateSize(IProgressToken token)
+        {
+            token.SubmitStatus("Size");
+
+            var dds = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+            var size = new Dictionary<string, Size>();
+            token.ForAllParallel(dds, file =>
+            {
+                try
+                {
+                    using var stream = File.OpenRead(file);
+                    var header = new DdsHeader(stream);
+                    lock (size) { size[file] = new Size((int)header.Width, (int)header.Height); }
+                }
+                catch (System.Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
+
+            size.SaveAsJson(Path.Join(DataDir, "size.json"));
+        }
 
         public static ExternalReuse GeneralReuse = new ExternalReuse()
         {
@@ -310,5 +356,6 @@ namespace DS3TexUpUI
                 }
             },
         };
+
     }
 }

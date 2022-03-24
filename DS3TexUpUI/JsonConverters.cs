@@ -10,6 +10,8 @@ using System.Linq;
 using SixLabors.ImageSharp;
 using SoulsFormats;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public static class JsonConverters
@@ -55,32 +57,38 @@ namespace DS3TexUpUI
 
                     if (typeDef == typeof(Dictionary<,>))
                     {
+                        object? stringConverter = null;
                         if (args[0] == typeof(TexId))
+                            stringConverter = TexIdStringConverter.Instance;
+                        else if (args[0] == typeof(string))
+                            stringConverter = StringStringConverter.Instance;
+
+                        if (stringConverter != null)
                         {
-                            var cType = typeof(TexIdDictionaryConverter<>).MakeGenericType(args[1]);
-                            var ctor = cType.GetConstructor(new Type[0]);
-                            var c = ctor.Invoke(null);
+                            var cType = typeof(StringDictionaryConverter<,>).MakeGenericType(args[0], args[1]);
+                            var ctor = cType.GetConstructor(new Type[] { typeof(StringConverter<>).MakeGenericType(args[0]) })!;
+                            var c = ctor.Invoke(new object[] { stringConverter });
                             AddConverter((JsonConverter)c);
                         }
                     }
                     else if (typeDef == typeof(ValueTuple<,>))
                     {
                         var cType = typeof(Tuple2Converter<,>).MakeGenericType(args);
-                        var ctor = cType.GetConstructor(new Type[0]);
+                        var ctor = cType.GetConstructor(new Type[0])!;
                         var c = ctor.Invoke(null);
                         AddConverter((JsonConverter)c);
                     }
                     else if (typeDef == typeof(EquivalenceCollection<>))
                     {
                         var cType = typeof(EquivalenceCollectionConverter<>).MakeGenericType(args);
-                        var ctor = cType.GetConstructor(new Type[0]);
+                        var ctor = cType.GetConstructor(new Type[0])!;
                         var c = ctor.Invoke(null);
                         AddConverter((JsonConverter)c);
                     }
                     else if (typeDef == typeof(DifferenceCollection<>))
                     {
                         var cType = typeof(DifferenceCollectionConverter<>).MakeGenericType(args);
-                        var ctor = cType.GetConstructor(new Type[0]);
+                        var ctor = cType.GetConstructor(new Type[0])!;
                         var c = ctor.Invoke(null);
                         AddConverter((JsonConverter)c);
                     }
@@ -148,12 +156,12 @@ namespace DS3TexUpUI
             }
         }
 
-        public static void Serialize<T>(Utf8JsonWriter writer, T value, JsonSerializerOptions options = null)
+        public static void Serialize<T>(Utf8JsonWriter writer, T value, JsonSerializerOptions? options = null)
         {
             options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
             JsonSerializer.Serialize(writer, value, options);
         }
-        public static T Deserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options = null)
+        public static T Deserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions? options = null)
         {
             options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
             return JsonSerializer.Deserialize<T>(ref reader, options);
@@ -296,13 +304,19 @@ namespace DS3TexUpUI
             }
         }
 
-        private sealed class TexIdDictionaryConverter<V> : JsonConverter<Dictionary<TexId, V>>
+        private sealed class StringDictionaryConverter<S, V> : JsonConverter<Dictionary<S, V>>
+            where S : notnull
         {
-            public override Dictionary<TexId, V> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            public readonly StringConverter<S> Converter;
+            public StringDictionaryConverter(StringConverter<S> converter)
+            {
+                Converter = converter;
+            }
+            public override Dictionary<S, V> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType != JsonTokenType.StartObject) throw new JsonException();
 
-                var result = new Dictionary<TexId, V>();
+                var result = new Dictionary<S, V>();
 
                 while (reader.Read())
                 {
@@ -310,7 +324,7 @@ namespace DS3TexUpUI
 
                     if (reader.TokenType != JsonTokenType.PropertyName) throw new JsonException();
 
-                    var id = new TexId(reader.GetString());
+                    var id = Converter.Parse(reader.GetString());
                     reader.Read();
 
                     var value = JsonSerializer.Deserialize<V>(ref reader, options);
@@ -321,16 +335,16 @@ namespace DS3TexUpUI
                 throw new JsonException();
             }
 
-            public override void Write(Utf8JsonWriter writer, Dictionary<TexId, V> value, JsonSerializerOptions options)
+            public override void Write(Utf8JsonWriter writer, Dictionary<S, V> value, JsonSerializerOptions options)
             {
                 writer.WriteStartObject();
 
-                var sorted = value.ToList();
+                var sorted = value.Select(kv => new KeyValuePair<string, V>(Converter.Stringify(kv.Key), kv.Value)).ToList();
                 sorted.Sort((a, b) => a.Key.CompareTo(b.Key));
 
                 foreach (var pair in sorted)
                 {
-                    writer.WritePropertyName(pair.Key.Value);
+                    writer.WritePropertyName(pair.Key);
                     JsonSerializer.Serialize(writer, pair.Value, options);
                 }
 
@@ -338,7 +352,28 @@ namespace DS3TexUpUI
             }
         }
 
+        interface StringConverter<S>
+        {
+            string Stringify(S value);
+            S Parse(string value);
+        }
+        public sealed class StringStringConverter : StringConverter<string>
+        {
+            public static readonly StringStringConverter Instance = new StringStringConverter();
+            private StringStringConverter() { }
+            public string Parse(string value) => value;
+            public string Stringify(string value) => value;
+        }
+        public sealed class TexIdStringConverter : StringConverter<TexId>
+        {
+            public static readonly TexIdStringConverter Instance = new TexIdStringConverter();
+            private TexIdStringConverter() { }
+            public TexId Parse(string value) => new TexId(value);
+            public string Stringify(TexId value) => value.Value;
+        }
+
         private sealed class EquivalenceCollectionConverter<T> : JsonConverter<EquivalenceCollection<T>>
+            where T : notnull
         {
             public override EquivalenceCollection<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
@@ -362,6 +397,7 @@ namespace DS3TexUpUI
             }
         }
         private sealed class DifferenceCollectionConverter<T> : JsonConverter<DifferenceCollection<T>>, IAdditionalConverters
+            where T : notnull
         {
             private static readonly JsonConverter[] _converters = new JsonConverter[]{
                 new Tuple2Converter<T, T>(),
@@ -436,6 +472,7 @@ namespace DS3TexUpUI
         }
 
         private sealed class StringParsingConverter<T> : JsonConverter<T>
+            where T : notnull
         {
             private readonly Func<string, T> _parse;
             public StringParsingConverter(Func<string, T> parse) => _parse = parse;
