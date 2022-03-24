@@ -253,6 +253,23 @@ namespace DS3TexUpUI
             format.SaveAsJson(Path.Join(DataDir, "format.json"));
         }
 
+        public static IReadOnlyDictionary<string, TexKind> TexKinds
+            = Path.Join(DataDir, "tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+        public static void CreateTexKind(IProgressToken token)
+        {
+            token.SubmitStatus("Tex kind");
+
+            var dds = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+            var kind = new Dictionary<string, TexKind>();
+            token.ForAll(dds, file =>
+            {
+                kind[file] = TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file));
+            });
+
+            kind.SaveAsJson(Path.Join(DataDir, "tex-kind.json"));
+        }
+
         public static ExternalReuse GeneralReuse = new ExternalReuse()
         {
             CertainFile = Path.Join(DataDir, "copy-general.json"),
@@ -269,7 +286,7 @@ namespace DS3TexUpUI
                 if (id.GetTexKind() == TexKind.Normal) return false;
                 return true;
             },
-            ExternalFilter = file => TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file)) != TexKind.Normal,
+            ExternalFilter = file => TexKinds[file] != TexKind.Normal,
 
             RequireGreater = true,
             SameKind = true,
@@ -335,7 +352,7 @@ namespace DS3TexUpUI
                 if (id.GetTexKind() != TexKind.Normal) return false;
                 return true;
             },
-            ExternalFilter = file => TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file)) == TexKind.Normal,
+            ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
             CopyHasherFactory = r => new NormalImageHasher(r),
             CopySpread = image => image.Count <= 64 * 64 ? 6 : image.Count <= 128 * 128 ? 4 : 3,
@@ -365,7 +382,7 @@ namespace DS3TexUpUI
                 if (DS3.OriginalColorDiff[id].B <= 12) return false;
                 return true;
             },
-            ExternalFilter = file => TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file)) == TexKind.Normal,
+            ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
             CopyHasherFactory = r => new BlueChannelImageHasher(r),
             CopySpread = image => image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 5 : 3,
@@ -380,6 +397,15 @@ namespace DS3TexUpUI
                 }
             },
         };
+
+        public static IReadOnlyDictionary<TexId, string> GeneralRepresentative
+            = Path.Join(DataDir, "representative-general.json").LoadJsonFile<Dictionary<TexId, string>>();
+        public static IReadOnlyDictionary<TexId, string> AlpaRepresentative
+            = Path.Join(DataDir, "representative-alpha.json").LoadJsonFile<Dictionary<TexId, string>>();
+        public static IReadOnlyDictionary<TexId, string> NormalRepresentative
+            = Path.Join(DataDir, "representative-normal.json").LoadJsonFile<Dictionary<TexId, string>>();
+        public static IReadOnlyDictionary<TexId, string> GlossRepresentative
+            = Path.Join(DataDir, "representative-gloss.json").LoadJsonFile<Dictionary<TexId, string>>();
 
         public static void CreateGeneralRepresentative(IProgressToken token)
         {
@@ -407,7 +433,8 @@ namespace DS3TexUpUI
             {
                 var (id, copies) = kv;
 
-                if (id.GetTransparency() == TransparencyKind.Full) {
+                if (id.GetTransparency() == TransparencyKind.Full)
+                {
                     copies.RemoveWhere(f => Alpha[f] != TransparencyKind.Full);
                 }
                 if (copies.Count == 0) return;
