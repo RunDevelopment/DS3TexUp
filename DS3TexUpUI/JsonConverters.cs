@@ -339,12 +339,13 @@ namespace DS3TexUpUI
             {
                 writer.WriteStartObject();
 
-                var sorted = value.Select(kv => new KeyValuePair<string, V>(Converter.Stringify(kv.Key), kv.Value)).ToList();
-                sorted.Sort((a, b) => a.Key.CompareTo(b.Key));
+                var sorted = value.ToList();
+                var comp = Comparer<S>.Default;
+                sorted.Sort((a, b) => comp.Compare(a.Key, b.Key));
 
                 foreach (var pair in sorted)
                 {
-                    writer.WritePropertyName(pair.Key);
+                    writer.WritePropertyName(Converter.Stringify(pair.Key));
                     JsonSerializer.Serialize(writer, pair.Value, options);
                 }
 
