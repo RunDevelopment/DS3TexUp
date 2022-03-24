@@ -216,8 +216,7 @@ namespace DS3TexUpUI
             {
                 try
                 {
-                    using var stream = File.OpenRead(file);
-                    var header = new DdsHeader(stream);
+                    var (header, _) = file.ReadDdsHeader();
                     lock (size) { size[file] = new Size((int)header.Width, (int)header.Height); }
                 }
                 catch (System.Exception e)
@@ -227,6 +226,31 @@ namespace DS3TexUpUI
             });
 
             size.SaveAsJson(Path.Join(DataDir, "size.json"));
+        }
+
+        // public static IReadOnlyDictionary<string, DDSFormat> OriginalFormat
+        //     = Path.Join(DataDir, "format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
+        public static void CreateFormat(IProgressToken token)
+        {
+            token.SubmitStatus("Format");
+
+            var dds = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
+
+            var format = new Dictionary<string, DDSFormat>();
+            token.ForAllParallel(dds, file =>
+            {
+                try
+                {
+                    var f = file.ReadDdsHeader().GetFormat();
+                    lock (format) { format[file] = f; }
+                }
+                catch (System.Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
+
+            format.SaveAsJson(Path.Join(DataDir, "format.json"));
         }
 
         public static ExternalReuse GeneralReuse = new ExternalReuse()
