@@ -228,8 +228,8 @@ namespace DS3TexUpUI
             size.SaveAsJson(Path.Join(DataDir, "size.json"));
         }
 
-        // public static IReadOnlyDictionary<string, DDSFormat> OriginalFormat
-        //     = Path.Join(DataDir, "format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
+        public static IReadOnlyDictionary<string, DDSFormat> OriginalFormat
+            = Path.Join(DataDir, "format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
         public static void CreateFormat(IProgressToken token)
         {
             token.SubmitStatus("Format");
@@ -381,5 +381,116 @@ namespace DS3TexUpUI
             },
         };
 
+        public static void CreateGeneralRepresentative(IProgressToken token)
+        {
+            var certain = GeneralReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+
+            var rep = new Dictionary<TexId, string>();
+            token.ForAll(certain, kv =>
+            {
+                var (id, copies) = kv;
+                var best = GetHighestQualityCopy(copies);
+                if (CopyIsHigherQuality(id, best))
+                {
+                    rep[id] = best;
+                }
+            });
+
+            rep.SaveAsJson(Path.Join(DataDir, "representative-general.json"));
+        }
+        public static void CreateAlphaRepresentative(IProgressToken token)
+        {
+            var certain = AlphaReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+
+            var rep = new Dictionary<TexId, string>();
+            token.ForAll(certain, kv =>
+            {
+                var (id, copies) = kv;
+
+                if (id.GetTransparency() == TransparencyKind.Full) {
+                    copies.RemoveWhere(f => Alpha[f] != TransparencyKind.Full);
+                }
+                if (copies.Count == 0) return;
+
+                var best = GetHighestQualityCopy(copies);
+                if (CopyIsHigherQuality(id, best))
+                {
+                    rep[id] = best;
+                }
+            });
+
+            rep.SaveAsJson(Path.Join(DataDir, "representative-alpha.json"));
+        }
+        public static void CreateNormalRepresentative(IProgressToken token)
+        {
+            var certain = NormalReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+
+            var rep = new Dictionary<TexId, string>();
+            token.ForAll(certain, kv =>
+            {
+                var (id, copies) = kv;
+                var best = GetHighestQualityCopy(copies);
+                if (CopyIsHigherQuality(id, best))
+                {
+                    rep[id] = best;
+                }
+            });
+
+            rep.SaveAsJson(Path.Join(DataDir, "representative-normal.json"));
+        }
+        public static void CreateGlossRepresentative(IProgressToken token)
+        {
+            var certain = GlossReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+
+            var rep = new Dictionary<TexId, string>();
+            token.ForAll(certain, kv =>
+            {
+                var (id, copies) = kv;
+                var best = GetHighestQualityCopy(copies);
+                if (CopyIsHigherQuality(id, best))
+                {
+                    rep[id] = best;
+                }
+            });
+
+            rep.SaveAsJson(Path.Join(DataDir, "representative-gloss.json"));
+        }
+
+        private static string GetHighestQualityCopy(IEnumerable<string> copies)
+        {
+            var l = copies.ToList();
+            l.Sort((a, b) =>
+            {
+                var q = CompareQuality(
+                    (OriginalSize[a], OriginalFormat[a]),
+                    (OriginalSize[b], OriginalFormat[b])
+                );
+                if (q != 0) return q;
+                return -a.CompareTo(b);
+            });
+            return l.Last();
+        }
+        private static int CompareQuality((Size Size, DDSFormat Format) a, (Size Size, DDSFormat Format) b)
+        {
+            var s = a.Size.Width.CompareTo(b.Size.Width);
+            if (s != 0) return s;
+
+            var af = a.Format.QualityScore;
+            var bf = b.Format.QualityScore;
+            if (af != null && bf != null && af != bf)
+            {
+                return af.Value.CompareTo(bf.Value);
+            }
+
+            return 0;
+        }
+        private static bool CopyIsHigherQuality(TexId id, string copy)
+        {
+            var q = CompareQuality(
+                (DS3.OriginalSize[id], DS3.OriginalFormat[id]),
+                (OriginalSize[copy], OriginalFormat[copy])
+            );
+            return q < 0;
+        }
     }
 }
