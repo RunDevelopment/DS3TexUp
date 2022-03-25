@@ -56,7 +56,7 @@ namespace DS3TexUpUI
             info.RedirectStandardInput = true;
             info.CreateNoWindow = true;
 
-            var process = new Process();
+            using var process = new Process();
             process.StartInfo = info;
             process.Start();
 
