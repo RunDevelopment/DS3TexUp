@@ -1230,5 +1230,17 @@ namespace DS3TexUpUI
             foreach (ref var p in map.Data.AsSpan())
                 p = p > threshold ? (byte)255 : (byte)0;
         }
+
+        public static ArrayTextureMap<T> GetCut<T>(this ArrayTextureMap<T> map, int x, int y, int width, int height)
+            where T : struct
+        {
+            var result = new T[width * height];
+            var input = map.Data;
+
+            for (int i = 0; i < height; i++)
+                Array.Copy(input, (y + i) * map.Width + x, result, i * width, width);
+
+            return result.AsTextureMap(width);
+        }
     }
 }
