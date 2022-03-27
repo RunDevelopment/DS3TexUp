@@ -74,7 +74,15 @@ namespace DS3TexUpUI
         }
 
         private static readonly Random _rng = new Random();
-        internal static void ToDDSUsingTexConv(string file, string target, DDSFormat format)
+        internal static void ToDDSUsingTexConv(
+            string file,
+            string target,
+            DDSFormat format,
+            bool uniformWeighting = false,
+            bool dithering = true,
+            bool minimalCompression = false,
+            bool maximumCompression = false
+        )
         {
             var dir = Path.GetDirectoryName(target);
             var suffix = "-temp" + _rng.Next();
@@ -86,8 +94,16 @@ namespace DS3TexUpUI
 
             info.ArgumentList.Add("-f"); // output format
             info.ArgumentList.Add(ToTexConvFormat(format));
-            info.ArgumentList.Add("-bc");
-            info.ArgumentList.Add("-d");
+            if (uniformWeighting || dithering || minimalCompression || maximumCompression)
+            {
+                info.ArgumentList.Add("-bc");
+                var f = "-";
+                if (uniformWeighting) f += "u";
+                if (dithering) f += "d";
+                if (minimalCompression) f += "q";
+                if (maximumCompression) f += "x";
+                info.ArgumentList.Add(f);
+            }
             info.ArgumentList.Add("-dx10");
 
             if (!format.IsSRGB) info.ArgumentList.Add("-srgbo");
