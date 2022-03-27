@@ -165,11 +165,33 @@ namespace DS3TexUpUI
 
         public static ArrayTextureMap<byte> GetAlpha(this ArrayTextureMap<Rgba32> map)
         {
-            var alpha = new byte[map.Count];
-            for (int i = 0; i < alpha.Length; i++)
-                alpha[i] = map.Data[i].A;
-            return alpha.AsTextureMap(map.Width);
+            var result = new byte[map.Count];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = map.Data[i].A;
+            return result.AsTextureMap(map.Width);
         }
+        public static ArrayTextureMap<byte> GetRed(this ArrayTextureMap<Rgba32> map)
+        {
+            var result = new byte[map.Count];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = map.Data[i].R;
+            return result.AsTextureMap(map.Width);
+        }
+        public static ArrayTextureMap<byte> GetGreen(this ArrayTextureMap<Rgba32> map)
+        {
+            var result = new byte[map.Count];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = map.Data[i].G;
+            return result.AsTextureMap(map.Width);
+        }
+        public static ArrayTextureMap<byte> GetBlue(this ArrayTextureMap<Rgba32> map)
+        {
+            var result = new byte[map.Count];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = map.Data[i].B;
+            return result.AsTextureMap(map.Width);
+        }
+
         public static void SetNoisyAlpha(this ArrayTextureMap<Rgba32> color, ArrayTextureMap<Rgba32> alpha)
         {
             color.CheckSameSize(alpha);
