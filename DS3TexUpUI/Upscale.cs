@@ -224,7 +224,7 @@ namespace DS3TexUpUI
                     var normalAlbedoImage = DS3NormalMap.Of(albedo.LoadTextureMap()).Normals.Clone();
                     EnsureWidth(ref normalAlbedoImage, targetWidth, Average.Normal, albedoId, "normal albedo");
 
-                    const float MaxStrength = 0.75f;
+                    const float MaxStrength = 0.4f;
                     if (TryGetAlpha(albedoId, upscale, targetWidth, out var albedoAlphaImage))
                     {
                         // we want to take the alpha of the albedo into account when applying the normal map
