@@ -121,7 +121,7 @@ namespace DS3TexUpUI
             }
         }
 
-        private bool TryGetAlpha(TexId id, int upscale, int targetWidth, out ArrayTextureMap<byte> alphaImage)
+        private bool TryGetAlpha(TexId id, int upscale, int targetWidth, out ArrayTextureMap<byte> alphaImage, bool upsample = false)
         {
             if (!HasAlpha(id))
             {
@@ -131,9 +131,16 @@ namespace DS3TexUpUI
 
             var alpha = GetFile(Textures.Alpha, id.GetAlphaRepresentative());
             var alphaWidth = GetPngWidth(alpha);
-            CheckWidth(id, upscale, targetWidth, alphaWidth, "alpha");
+            if (!upsample) CheckWidth(id, upscale, targetWidth, alphaWidth, "alpha");
 
             alphaImage = alpha.LoadTextureMap().GreyMinMaxBlend();
+
+            if (upsample && alphaImage.Width < targetWidth)
+            {
+                alphaImage = alphaImage.UpSample(targetWidth / alphaImage.Width);
+                CheckWidth(id, upscale, targetWidth, alphaImage.Width, "alpha");
+            }
+
             EnsureWidth(ref alphaImage, targetWidth, Average.Byte, id, "alpha");
 
             if (id.GetTransparency() == TransparencyKind.Binary)
@@ -225,7 +232,7 @@ namespace DS3TexUpUI
                     EnsureWidth(ref normalAlbedoImage, targetWidth, Average.Normal, albedoId, "normal albedo");
 
                     const float MaxStrength = 0.4f;
-                    if (TryGetAlpha(albedoId, upscale, targetWidth, out var albedoAlphaImage))
+                    if (TryGetAlpha(albedoId, upscale, targetWidth, out var albedoAlphaImage, upsample: true))
                     {
                         // we want to take the alpha of the albedo into account when applying the normal map
                         albedoAlphaImage = albedoAlphaImage.Blur(1);
