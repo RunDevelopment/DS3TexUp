@@ -427,7 +427,7 @@ namespace DS3TexUpUI
         Full = 3,
     }
 
-    public readonly struct DDSFormat
+    public readonly struct DDSFormat : IEquatable<DDSFormat>
     {
         public CompressionAlgorithm FourCC { get; }
         public DxgiFormat DxgiFormat { get; }
@@ -543,8 +543,20 @@ namespace DS3TexUpUI
             return Enum.Parse<CompressionAlgorithm>(input);
         }
 
+        public override bool Equals(object? obj) => obj is DDSFormat other && Equals(other);
+        public bool Equals(DDSFormat other)
+        {
+            return FourCC == other.FourCC &&
+                   DxgiFormat == other.DxgiFormat;
+        }
+
+        public override int GetHashCode() => HashCode.Combine(FourCC, DxgiFormat);
+
         public static implicit operator DDSFormat(CompressionAlgorithm fourCC) => new DDSFormat(fourCC);
         public static implicit operator DDSFormat(DxgiFormat dxgiFormat) => new DDSFormat(dxgiFormat);
+
+        public static bool operator ==(DDSFormat left, DDSFormat right) => left.Equals(right);
+        public static bool operator !=(DDSFormat left, DDSFormat right) => left.Equals(right);
     }
 
     public readonly struct MinMax
