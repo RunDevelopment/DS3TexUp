@@ -53,7 +53,8 @@ namespace DS3TexUpUI
 
         public static void ToDDS(this string file, string target, DDSFormat format, TexId id)
         {
-            ToDDSUsingTexConv(file, target, format);
+            var uniform = id.GetTexKind() == TexKind.Normal;
+            ToDDSUsingTexConv(file, target, format, uniformWeighting: uniform);
         }
 
         private static Random _tempRandom = new Random();
