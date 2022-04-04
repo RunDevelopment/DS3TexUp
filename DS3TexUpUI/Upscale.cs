@@ -70,11 +70,22 @@ namespace DS3TexUpUI
             Directory.CreateDirectory(Path.GetDirectoryName(target));
             return target;
         }
-        private void ToDDS(TexId id, string png, bool deleteAfter = false)
+        private void ToDDS(TexId id, string png, int upscale, bool deleteAfter = false)
         {
             try
             {
-                DDSExtensions.ToDDS(png, GetOutputFile(id), DS3.OutputFormat[id], id);
+                var format = DS3.OutputFormat[id];
+                if (upscale >= 4 && id.GetTexKind() == TexKind.Normal && !HasAlpha(id) && format == DxgiFormat.BC7_UNORM)
+                {
+                    var (width, height) = DS3.OriginalSize[id];
+                    var targetPixels = upscale * upscale * width * height;
+                    if (targetPixels >= 2048 * 2048)
+                    {
+                        format = DxgiFormat.BC1_UNORM;
+                    }
+                }
+
+                DDSExtensions.ToDDS(png, GetOutputFile(id), format, id);
             }
             finally
             {
@@ -159,7 +170,7 @@ namespace DS3TexUpUI
             if (texWidth == targetWidth && !HasAlpha(id))
             {
                 // fast path
-                ToDDS(id, tex, deleteAfter: false);
+                ToDDS(id, tex, upscale, deleteAfter: false);
                 return;
             }
 
@@ -174,7 +185,7 @@ namespace DS3TexUpUI
             var targetFile = GetTempPngFile(id);
             image.SaveAsPng(targetFile);
 
-            ToDDS(id, targetFile, deleteAfter: true);
+            ToDDS(id, targetFile, upscale, deleteAfter: true);
         }
 
         private void WriteEmissive(TexId id, int upscale, TexOverrideList source, string kind)
@@ -207,7 +218,7 @@ namespace DS3TexUpUI
             var targetFile = GetTempPngFile(id);
             image.SaveAsPng(targetFile);
 
-            ToDDS(id, targetFile, deleteAfter: true);
+            ToDDS(id, targetFile, upscale, deleteAfter: true);
         }
 
         private void WriteNormal(TexId id, int upscale, ILogger logger)
@@ -278,7 +289,7 @@ namespace DS3TexUpUI
             var targetFile = GetTempPngFile(id);
             image.SaveAsPng(targetFile);
 
-            ToDDS(id, targetFile, deleteAfter: true);
+            ToDDS(id, targetFile, upscale, deleteAfter: true);
         }
         private void WriteMask(TexId id, int upscale)
         {
@@ -292,7 +303,7 @@ namespace DS3TexUpUI
             if (texWidth == targetWidth && !HasAlpha(id))
             {
                 // fast path
-                ToDDS(id, tex, deleteAfter: false);
+                ToDDS(id, tex, upscale, deleteAfter: false);
                 return;
             }
 
@@ -307,7 +318,7 @@ namespace DS3TexUpUI
             var targetFile = GetTempPngFile(id);
             image.SaveAsPng(targetFile);
 
-            ToDDS(id, targetFile, deleteAfter: true);
+            ToDDS(id, targetFile, upscale, deleteAfter: true);
         }
     }
 
