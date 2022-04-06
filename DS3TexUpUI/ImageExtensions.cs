@@ -461,14 +461,16 @@ namespace DS3TexUpUI
             return new Rgba32(r, g, b, a);
         }
 
-        public static ArrayTextureMap<byte> Blur(this ArrayTextureMap<byte> map, int radius)
+        public static ArrayTextureMap<P> Blur<P, A>(this ArrayTextureMap<P> map, int radius, AverageAccumulatorFactory<P, A> factory)
+            where P : struct
+            where A : IAverageAccumulator<P>, new()
         {
-            if (radius == 0) throw new ArgumentException();
+            if (radius <= 0) throw new ArgumentException();
 
             var w = map.Width;
             var h = map.Height;
 
-            var result = new byte[w * h];
+            var result = new P[w * h];
 
             for (int y = 0; y < h; y++)
             {
@@ -479,18 +481,18 @@ namespace DS3TexUpUI
                     var xMin = Math.Max(0, x - radius);
                     var xMax = Math.Min(w - 1, x + radius);
 
-                    var total = 0;
+                    var total = factory.Create();
                     for (int i = yMin; i <= yMax; i++)
                         for (int j = xMin; j <= xMax; j++)
-                            total += map[i * w + j];
+                            total.Add(map[i * w + j]);
 
-                    var count = (yMax - yMin + 1) * (xMax - xMin + 1);
-                    result[y * w + x] = (byte)(total / count);
+                    result[y * w + x] = total.Result;
                 }
             }
 
             return result.AsTextureMap(w);
         }
+
         public static void Min(this ArrayTextureMap<byte> map, ArrayTextureMap<byte> other)
         {
             map.CheckSameSize(other);

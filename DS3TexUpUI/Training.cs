@@ -152,7 +152,7 @@ namespace DS3TexUpUI
                 }
             });
         }
-        public static void CreateAlbedoLR(IProgressToken token, string inputDir, string outputDir, LRCompression compression)
+        public static void CreateAlbedoLR(IProgressToken token, string inputDir, string outputDir, LRCompression compression, double blur = 0)
         {
             var tempDir = Path.Join(outputDir, "temp");
             Directory.CreateDirectory(tempDir);
@@ -168,6 +168,7 @@ namespace DS3TexUpUI
                     var target = Path.Join(outputDir, name);
 
                     var image = imageFile.LoadTextureMap();
+                    if (random.NextDouble() < blur) image = image.Blur(1, Average.Rgba32GammaAlpha);
 
                     var small = random.NextDouble() < 0.1
                         ? image.DownSample(Average.Rgba32, 4)

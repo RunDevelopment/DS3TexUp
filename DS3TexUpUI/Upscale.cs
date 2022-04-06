@@ -246,7 +246,7 @@ namespace DS3TexUpUI
                     if (TryGetAlpha(albedoId, upscale, targetWidth, out var albedoAlphaImage, upsample: true))
                     {
                         // we want to take the alpha of the albedo into account when applying the normal map
-                        albedoAlphaImage = albedoAlphaImage.Blur(1);
+                        albedoAlphaImage = albedoAlphaImage.Blur(1, Average.Byte);
                         var strength = new float[albedoAlphaImage.Count].AsTextureMap(targetWidth);
                         for (int i = 0; i < strength.Data.Length; i++)
                             strength[i] = Math.Min(1f, albedoAlphaImage[i] / 63f) * MaxStrength;
