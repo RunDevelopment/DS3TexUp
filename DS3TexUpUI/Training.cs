@@ -186,13 +186,11 @@ namespace DS3TexUpUI
                         DDSExtensions.ToDDSUsingTexConv(
                             tempPng,
                             tempDds,
-                            format: compression == LRCompression.BC1 ? DxgiFormat.BC1_UNORM : DxgiFormat.BC7_UNORM,
+                            format: compression == LRCompression.BC1 ? DxgiFormat.BC1_UNORM_SRGB : DxgiFormat.BC7_UNORM_SRGB,
                             dithering: random.NextDouble() < 0.2
                         );
 
-                        var dds = tempDds.LoadTextureMap();
-                        dds.Multiply(new Rgba32(255, 255, 0, 255));
-                        dds.SaveAsPng(target);
+                        tempDds.ToPNG(target);
 
                         File.Delete(tempPng);
                         File.Delete(tempDds);
