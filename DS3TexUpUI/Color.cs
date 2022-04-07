@@ -51,11 +51,11 @@ namespace DS3TexUpUI
 
     public struct HSV
     {
-        // [0, 360)
+        /// [0, 360)
         public float H;
-        // [0, 1]
+        /// [0, 1]
         public float S;
-        // [0, 1]
+        /// [0, 1]
         public float V;
 
         public HSV(float h, float s, float v)

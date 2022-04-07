@@ -333,11 +333,7 @@ namespace DS3TexUpUI
         public static void PickValidation(IProgressToken token, string[] dirs, double ratio = 0.1)
         {
             var r = new Random();
-            var l = dirs.SelectMany(Directory.GetFiles).GroupBy(Path.GetFileName).Where(g => g.Count() == dirs.Length).ToList();
-            l.Sort((a, b) => r.Next(-10, 11));
-            l.Sort((a, b) => r.Next(-10, 11));
-            l.Sort((a, b) => r.Next(-10, 11));
-            l.Sort((a, b) => r.Next(-10, 11));
+            var l = dirs.SelectMany(Directory.GetFiles).GroupBy(Path.GetFileName).Select(g => g.ToList()).Where(g => g.Count() == dirs.Length).OrderBy(_ => r.Next()).ToList();
 
             token.ForAllParallel(l.Take((int)(l.Count * ratio)), g =>
             {
