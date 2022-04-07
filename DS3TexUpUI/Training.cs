@@ -123,16 +123,13 @@ namespace DS3TexUpUI
                 var image = imageFile.LoadTextureMap();
                 image.SetAlpha(255);
 
-                if (image.Width % HRSize != 0 || image.Height % HRSize != 0 || !image.Width.IsPowerOfTwo() || !image.Height.IsPowerOfTwo())
-                {
-                    token.SubmitLog($"Cannot processes {imageFile} because of its size.");
-                    return;
-                }
-
                 var r = new Random(id);
 
                 while (image.Width >= HRSize && image.Height >= HRSize)
                 {
+                    if (image.Width % HRSize != 0 || image.Height % HRSize != 0)
+                        image = image.GetCut(0, 0, image.Width / HRSize * HRSize, image.Height / HRSize * HRSize);
+
                     var totalCuts = image.Width / HRSize * image.Height / HRSize;
                     var maxCount = 16;
                     var chance = Math.Min(1.0, maxCount / (double)totalCuts);
