@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -110,11 +111,28 @@ namespace DS3TexUpUI
         const int HRSize = 512;
         const int LRSize = HRSize / 4;
 
-        public static void CreateAlbedoHR(IProgressToken token, string inputDir, string outputDir)
+        public static void CreateAlbedoHR(IProgressToken token, string inputDir, string outputDir, bool shiftHue = false)
         {
             Directory.CreateDirectory(outputDir);
             var images = Directory.GetFiles(inputDir, "*.png", SearchOption.AllDirectories);
             Array.Sort(images);
+
+            static void ApplyHSVTransformation(ref ArrayTextureMap<Rgba32> map, float hOffset, float sFactor)
+            {
+                foreach (ref var p in map.Data.AsSpan())
+                {
+                    var hsv = HSV.FromRgb(p);
+
+                    hsv.H += hOffset;
+                    if (hsv.H < 0) hsv.H += 360;
+                    else if (hsv.H >= 360) hsv.H -= 360;
+
+                    hsv.S *= sFactor;
+                    if (hsv.S > 1) hsv.S = 1;
+
+                    p.Rgb = hsv.ToRgb();
+                }
+            }
 
             token.ForAllParallel(images.Select((x, i) => (x, i)), p =>
             {
@@ -132,16 +150,36 @@ namespace DS3TexUpUI
 
                     var totalCuts = image.Width / HRSize * image.Height / HRSize;
                     var maxCount = 16;
-                    var chance = Math.Min(1.0, maxCount / (double)totalCuts);
+
+                    var cuts = new List<(string, ArrayTextureMap<Rgba32>)>();
                     for (int x = 0; x < image.Width; x += HRSize)
                     {
                         for (int y = 0; y < image.Height; y += HRSize)
                         {
-                            if (r.NextDouble() > chance) continue;
-
                             token.CheckCanceled();
                             var cut = image.GetCut(x, y, HRSize, HRSize);
-                            cut.SaveAsPng(Path.Join(outputDir, $"i{id}-{image.Width}-tile-{x}-{y}-{HRSize}.png"));
+                            cuts.Add(($"i{id}-{image.Width}-tile-{x}-{y}-{HRSize}", cut));
+                        }
+                    }
+
+                    foreach (var cutPair in cuts.OrderByDescending(p => p.Item2.GetSharpnessScore()).Take(maxCount))
+                    {
+                        var (name, cut) = cutPair;
+                        token.CheckCanceled();
+
+                        cut.SaveAsPng(Path.Join(outputDir, $"{name}.png"));
+
+                        if (shiftHue)
+                        {
+                            const double HOffsetMin = -10;
+                            const double HOffsetMax = 30;
+                            const double SFactorMin = 0.4;
+                            const double SFactorMax = 1.2;
+
+                            var hOffset = r.NextDouble() * (HOffsetMax - HOffsetMin) + HOffsetMin;
+                            var sFactor = r.NextDouble() * (SFactorMax - SFactorMin) + SFactorMin;
+                            ApplyHSVTransformation(ref cut, (float)hOffset, (float)sFactor);
+                            cut.SaveAsPng(Path.Join(outputDir, $"{name}-shift.png"));
                         }
                     }
 
