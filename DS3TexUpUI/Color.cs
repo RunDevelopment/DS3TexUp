@@ -49,7 +49,7 @@ namespace DS3TexUpUI
         public static implicit operator Rgb24(YCbCr c) => c.ToRgb();
     }
 
-    public struct HSV
+    public struct HSV : IEquatable<HSV>
     {
         /// [0, 360)
         public float H;
@@ -88,6 +88,10 @@ namespace DS3TexUpUI
         public static HSV FromRgb(Rgb24 color) => FromRgb(color.R, color.G, color.B);
         public static HSV FromRgb(Rgba32 color) => FromRgb(color.R, color.G, color.B);
 
+        public override bool Equals(object obj) => obj is HSV other ? Equals(other) : false;
+        public bool Equals(HSV other) => H == other.H && S == other.S && V == other.V;
+        public override int GetHashCode() => HashCode.Combine(H, S, V);
+
         public Rgb24 ToRgb()
         {
             return new Rgb24(ToRgbComponent(5), ToRgbComponent(3), ToRgbComponent(1));
@@ -105,6 +109,9 @@ namespace DS3TexUpUI
             s = S;
             v = V;
         }
+
+        public static bool operator ==(HSV l, HSV r) => l.Equals(r);
+        public static bool operator !=(HSV l, HSV r) => !l.Equals(r);
 
         public static explicit operator HSV(Rgba32 c) => FromRgb(c);
         public static implicit operator HSV(Rgb24 c) => FromRgb(c);
