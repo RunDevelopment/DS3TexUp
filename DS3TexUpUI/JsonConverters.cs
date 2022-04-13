@@ -28,6 +28,7 @@ namespace DS3TexUpUI
             [typeof(DDSFormat)] = new StringParsingConverter<DDSFormat>(DDSFormat.Parse),
             [typeof(ColorCode6x6)] = new StringParsingConverter<ColorCode6x6>(ColorCode6x6.Parse),
             [typeof(HashSet<TexId>)] = new TexIdHashSetConverter(),
+            [typeof(DS3.AlbedoNormalReflective)] = new AlbedoNormalReflectiveConverter(),
         };
         public static JsonSerializerOptions WithConvertersFor<T>(this JsonSerializerOptions options)
         {
@@ -469,6 +470,28 @@ namespace DS3TexUpUI
             {
                 public int Width { get; set; }
                 public int Height { get; set; }
+            }
+        }
+
+        private sealed class AlbedoNormalReflectiveConverter : JsonConverter<DS3.AlbedoNormalReflective>
+        {
+            public override DS3.AlbedoNormalReflective Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var s = JsonSerializer.Deserialize<Surrogate>(ref reader, options);
+                return new DS3.AlbedoNormalReflective(s.A, s.N, s.R);
+            }
+
+            public override void Write(Utf8JsonWriter writer, DS3.AlbedoNormalReflective value, JsonSerializerOptions options)
+            {
+                var s = new Surrogate() { A = value.A, N = value.N, R = value.R };
+                JsonSerializer.Serialize(writer, s, options);
+            }
+
+            private struct Surrogate
+            {
+                public TexId A { get; set; }
+                public TexId N { get; set; }
+                public TexId R { get; set; }
             }
         }
 

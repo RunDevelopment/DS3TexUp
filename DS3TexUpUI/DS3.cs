@@ -841,6 +841,184 @@ namespace DS3TexUpUI
             };
         }
 
+        public readonly struct AlbedoNormalReflective : IEquatable<AlbedoNormalReflective>
+        {
+            public TexId A { get; }
+            public TexId N { get; }
+            public TexId R { get; }
+
+            public AlbedoNormalReflective(TexId a, TexId n, TexId r) => (A, N, R) = (a, n, r);
+
+            public override bool Equals(object? obj) => obj is AlbedoNormalReflective other ? Equals(other) : false;
+            public bool Equals(AlbedoNormalReflective other) => A == other.A && N == other.N && R == other.R;
+            public override int GetHashCode() => HashCode.Combine(A, N, R);
+
+            public void Deconstruct(out TexId a, out TexId n, out TexId r) => (a, n, r) = (A, N, R);
+
+            public static implicit operator AlbedoNormalReflective((TexId a, TexId n, TexId r) tuple)
+                => new AlbedoNormalReflective(tuple.a, tuple.n, tuple.r);
+        }
+
+        public static IReadOnlyDictionary<TexId, AlbedoNormalReflective> ReflectiveANR
+            = Data.File(@"reflective-anr.json").LoadJsonFile<Dictionary<TexId, AlbedoNormalReflective>>();
+        internal static Action<SubProgressToken> CreateReflectiveANRIndex()
+        {
+            return token =>
+            {
+                var anrIndex = new List<AlbedoNormalReflective>();
+
+                void AddToIndex(
+                    (IReadOnlyCollection<TexId> ids, Vector2 scale) albedo,
+                    (IReadOnlyCollection<TexId> ids, Vector2 scale) normal,
+                    (IReadOnlyCollection<TexId> ids, Vector2 scale) reflective
+                )
+                {
+                    if (albedo.scale != normal.scale || albedo.scale != reflective.scale) return;
+
+                    foreach (var a in albedo.ids)
+                    {
+                        if (a.IsSolidColor()) continue;
+                        foreach (var n in normal.ids)
+                        {
+                            if (n.IsSolidColor()) continue;
+                            foreach (var r in reflective.ids)
+                            {
+                                if (r.IsSolidColor()) continue;
+
+                                if (!DS3.OriginalSize.TryGetValue(a, out var aSize)) continue;
+                                if (!DS3.OriginalSize.TryGetValue(n, out var nSize)) continue;
+                                if (!DS3.OriginalSize.TryGetValue(r, out var rSize)) continue;
+
+                                var aRatio = SizeRatio.Of(aSize);
+                                var nRatio = SizeRatio.Of(nSize);
+                                var rRatio = SizeRatio.Of(rSize);
+
+                                if (aRatio == nRatio && aRatio == rRatio)
+                                    anrIndex.Add((a, n, r));
+                            }
+                        }
+                    }
+                };
+
+                token.SubmitStatus($"Analysing flver files");
+                token.Reserve(0.5).ForAll(DS3.ReadAllFlverMaterialInfo(), info =>
+                {
+                    var a = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();
+                    var n = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();
+                    var r = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();
+                    foreach (var mat in info.Materials)
+                    {
+                        a.Clear();
+                        n.Clear();
+                        r.Clear();
+                        foreach (var tex in mat.Textures)
+                        {
+                            var i = TexId.FromTexturePath(tex, info.FlverPath);
+
+                            var kind = DS3.TextureTypeToTexKind.GetOrDefault(tex.Type, TexKind.Unknown);
+                            if (kind == TexKind.Albedo)
+                                a.Add(((i, tex.Scale), tex.Type));
+                            else if (kind == TexKind.Normal)
+                                n.Add(((i, tex.Scale), tex.Type));
+                            else if (kind == TexKind.Reflective)
+                                r.Add(((i, tex.Scale), tex.Type));
+                        }
+
+                        if (a.Count == 0 || n.Count == 0 || r.Count == 0) continue;
+
+                        // There is a pattern where they types would end with _0, _1, and so on.
+                        for (int i = 0; i < 10; i++)
+                        {
+                            static bool TryGetSuffix(List<((IReadOnlyCollection<TexId>, Vector2) id, string type)> list, string suffix, out int index)
+                            {
+                                index = -1;
+                                for (int i = 0; i < list.Count; i++)
+                                {
+                                    if (list[i].type.EndsWith(suffix))
+                                    {
+                                        index = i;
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            }
+
+                            var suffix = $"_{i}";
+                            if (!TryGetSuffix(a, suffix, out var aIndex)) continue;
+                            if (!TryGetSuffix(n, suffix, out var nIndex)) continue;
+                            if (!TryGetSuffix(r, suffix, out var rIndex)) continue;
+
+                            AddToIndex(a[aIndex].id, n[nIndex].id, r[rIndex].id);
+                            a.RemoveAt(aIndex);
+                            n.RemoveAt(nIndex);
+                            r.RemoveAt(rIndex);
+                        }
+
+                        if (a.Count == 0 || n.Count == 0 || r.Count == 0) continue;
+
+                        if (a.Count == 1 && n.Count == 1 && r.Count == 1)
+                        {
+                            // simple case
+                            AddToIndex(a[0].id, n[0].id, r[0].id);
+                            continue;
+                        }
+
+                        if (a.Count == 2 && n.Count == 2 && r.Count == 2 &&
+                            a[0].type.EndsWith("Texture") && n[0].type.EndsWith("Texture") && r[0].type.EndsWith("Texture") &&
+                            a[1].type.EndsWith("Texture2") && n[1].type.EndsWith("Texture2") && r[1].type.EndsWith("Texture2"))
+                        {
+                            AddToIndex(a[0].id, n[0].id, r[0].id);
+                            AddToIndex(a[1].id, n[1].id, r[1].id);
+                            continue;
+                        }
+
+                        if (a.Count == 2 && n.Count == 3 && r.Count == 2 &&
+                            mat.MTD.Contains("_Water", StringComparison.OrdinalIgnoreCase) &&
+                            a[0].type.EndsWith("Texture") && n[0].type.EndsWith("Texture") && r[0].type.EndsWith("Texture") &&
+                            a[1].type.EndsWith("Texture2") && n[1].type.EndsWith("Texture2") && r[1].type.EndsWith("Texture2") &&
+                            n[2].type.EndsWith("Texture3"))
+                        {
+                            AddToIndex(a[0].id, n[0].id, r[0].id);
+                            AddToIndex(a[1].id, n[1].id, r[1].id);
+                            continue;
+                        }
+                    }
+                });
+
+                token.SubmitStatus($"Categorizing triplets");
+                anrIndex = anrIndex.Select(t => new AlbedoNormalReflective(
+                    t.A.GetRepresentative(),
+                    t.N.GetGlossRepresentative(),
+                    t.R.GetRepresentative()
+                )).ToHashSet().ToList();
+
+                var known = anrIndex
+                    .GroupBy(t => t.R)
+                    .SelectMany(g =>
+                    {
+                        var set = g.ToHashSet();
+                        if (set.Count == 1) return set.ToArray();
+
+                        var r = g.Key;
+                        if (r.Name.EndsWith("_r"))
+                        {
+                            var baseName = r.Name.Slice(0, r.Name.Length - 1).ToString();
+                            var a = new TexId(r.Category, baseName + "a").GetRepresentative();
+                            var n = new TexId(r.Category, baseName + "n").GetGlossRepresentative();
+                            AlbedoNormalReflective anr = (a, n, r);
+                            if (set.Contains(anr)) return new[] { anr };
+                        }
+
+                        return new AlbedoNormalReflective[] { };
+                    })
+                    .ToHashSet();
+
+                // Some triplets are still left, but this only affects 9 r textures. It really doesn't matter.
+
+                known.ToDictionary(t => t.R).SaveAsJson(@"data/reflective-anr.json");
+            };
+        }
+
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
         {
             foreach (var file in Directory.GetFiles(Data.File(@"materials"), "*.json"))
