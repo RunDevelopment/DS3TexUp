@@ -240,5 +240,22 @@ namespace DS3TexUpUI
             if (first) throw new Exception("Empty collection");
             return min;
         }
+
+        public static List<T> Shuffle<T>(this IEnumerable<T> collection, int seed = int.MinValue)
+        {
+            var r = seed == int.MinValue ? new Random() : new Random(seed);
+
+            var list = new List<T>(collection);
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = r.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+            return list;
+        }
     }
 }
