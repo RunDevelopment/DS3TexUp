@@ -29,6 +29,7 @@ namespace DS3TexUpUI
             [typeof(ColorCode6x6)] = new StringParsingConverter<ColorCode6x6>(ColorCode6x6.Parse),
             [typeof(HashSet<TexId>)] = new TexIdHashSetConverter(),
             [typeof(DS3.AlbedoNormalReflective)] = new AlbedoNormalReflectiveConverter(),
+            [typeof(List<Metalness.DataPoint>)] = new MetalnessDataPointsConverter(),
         };
         public static JsonSerializerOptions WithConvertersFor<T>(this JsonSerializerOptions options)
         {
@@ -492,6 +493,45 @@ namespace DS3TexUpUI
                 public TexId A { get; set; }
                 public TexId N { get; set; }
                 public TexId R { get; set; }
+            }
+        }
+
+        private sealed class MetalnessDataPointsConverter : JsonConverter<List<Metalness.DataPoint>>
+        {
+            public override List<Metalness.DataPoint> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var d = JsonSerializer.Deserialize<Dictionary<string, bool>>(ref reader, options);
+                return d.Select(kv => new Metalness.DataPoint(StringToMaterial(kv.Key), kv.Value)).ToList();
+            }
+
+            public override void Write(Utf8JsonWriter writer, List<Metalness.DataPoint> value, JsonSerializerOptions options)
+            {
+                var d = value.ToDictionary(v => MaterialToString(v.Material), v => v.Metal);
+                JsonSerializer.Serialize(writer, d, options);
+            }
+
+
+            private static string MaterialToString(Metalness.MaterialPoint m)
+            {
+                return $"{m.A.R:x2}{m.A.G:x2}{m.A.B:x2}{m.S:x2}{m.R.R:x2}{m.R.G:x2}{m.R.B:x2}";
+            }
+            private static Metalness.MaterialPoint StringToMaterial(ReadOnlySpan<char> s)
+            {
+                if (s.Length != 14) throw new Exception($"Invalid material string: {s.ToString()}");
+
+                return new Metalness.MaterialPoint(
+                    new SixLabors.ImageSharp.PixelFormats.Rgb24(
+                        byte.Parse(s.Slice(0, 2), System.Globalization.NumberStyles.HexNumber),
+                        byte.Parse(s.Slice(2, 2), System.Globalization.NumberStyles.HexNumber),
+                        byte.Parse(s.Slice(4, 2), System.Globalization.NumberStyles.HexNumber)
+                    ),
+                    byte.Parse(s.Slice(6, 2), System.Globalization.NumberStyles.HexNumber),
+                    new SixLabors.ImageSharp.PixelFormats.Rgb24(
+                        byte.Parse(s.Slice(8, 2), System.Globalization.NumberStyles.HexNumber),
+                        byte.Parse(s.Slice(10, 2), System.Globalization.NumberStyles.HexNumber),
+                        byte.Parse(s.Slice(12, 2), System.Globalization.NumberStyles.HexNumber)
+                    )
+                );
             }
         }
 
