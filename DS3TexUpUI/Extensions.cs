@@ -241,11 +241,20 @@ namespace DS3TexUpUI
             return min;
         }
 
-        public static List<T> Shuffle<T>(this IEnumerable<T> collection, int seed = int.MinValue)
+        public static List<T> Shuffle<T>(this IEnumerable<T> collection)
         {
-            var r = seed == int.MinValue ? new Random() : new Random(seed);
-
             var list = new List<T>(collection);
+            Shuffle(list, new Random());
+            return list;
+        }
+        public static List<T> Shuffle<T>(this IEnumerable<T> collection, int seed)
+        {
+            var list = new List<T>(collection);
+            Shuffle(list, new Random(seed));
+            return list;
+        }
+        private static void Shuffle<T>(List<T> list, Random r)
+        {
             int n = list.Count;
             while (n > 1)
             {
@@ -255,7 +264,6 @@ namespace DS3TexUpUI
                 list[k] = list[n];
                 list[n] = value;
             }
-            return list;
         }
     }
 }
