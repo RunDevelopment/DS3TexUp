@@ -48,14 +48,13 @@ DS3 normal textures contains 3 different material maps that all have to be handl
 
 ### Normal part
 
-- `4x-UniScale_Restore` 50% + `4x_UniversalUpscalerV2-Neutral_115000_swaG` 50% on the extracted normal maps
+- `4x-Normal-RG0-BC1` for BC1-compressed normals and BC7-compressed normals with alpha
+- `4x-Normal-RG0-BC7` for BC7-compressed normals without alpha
 - `1x_NormalMapGenerator-CX-Lite_200000_G` on the upscaled albedo for high-frequency normals
 
-DS3's normal maps really don't have a lot of detail on them so upscaling them produces very flat materials. The problem is that the upscaled normal map only contains the low-frequency structure of the original, it does not contain any of the "new" high-frequency details of the upscaled albedo.
+The `4x-Normal-RG0-BCx` models produce quite good upscaled normals. They are generally quite good although a bit flat at times. It nicely adds high-frequency details in a lot of places and nicely smooths the quantization artifacts.
 
-To solve this, I also generate a normal map from the upscaled albedo. The generated normal map contains (almost exclusively) the high-frequency details of the albedo. This is perfect for us.
-
-The 2 maps (same size) are then combined using a height map addition (see the `DS3NormalMap` class). This produces a combined normal map with the low-frequency structure of the original upscaled normal map and the high-frequency details of the generated normal map.
+However, they aren't perfect and run the risk of producing different high-frequency details when compared to the upscaled albedo. To solve this, I also generate a normal map from the upscaled albedo. The 2 maps (same size) are then combined using a height map addition (see the `DS3NormalMap` class). This produces a combined normal map with the low-frequency structure of the original upscaled normal map and the high-frequency details of the generated normal map.
 
 ### Gloss part
 
