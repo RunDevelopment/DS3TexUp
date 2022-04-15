@@ -40,20 +40,31 @@ namespace DS3TexUpUI
             public int NonMetal = 0;
         }
 
-        public static byte Estimate(MaterialPoint p)
+        private static float Max(float a) => a;
+        private static float Max(float a, float b) => a < b ? b : a;
+        private static float Max(params float[] a) => a.Max();
+
+        public static byte DefaultEstimator(MaterialPoint p)
         {
             var (a, s, r) = p;
             static byte ToByte(float f) => (byte)Math.Clamp((int)(f * 255), 0, 255);
 
+            HSV aHsv = a;
             HSV rHsv = r;
 
-            return Math.Max(
-                ToByte((rHsv.S * rHsv.V).ExtendOut(0.125f, 0.25f)),
-                ToByte(rHsv.V.ExtendOut(0.5f, 0.7f))
-            );
+            return ToByte(Max(
+                // Most metals have quite a bright reflective value.
+                rHsv.V.ExtendOut(0.4f, 0.7f),
+                // Typically, only metals have a noticeable hue.
+                // Brightness is only considered to prevent artifacts from noise.
+                rHsv.S.ExtendOut(0.05f, 0.25f) * rHsv.V.ExtendOut(0f, 0.1f),
+                // Some metals (like somewhat rusty iron) have a bit lower brightness in their reflective value,
+                // but are very dark in their alebdo.
+                rHsv.V.ExtendOut(0.25f, 0.6f) * (1 - aHsv.V.ExtendOut(0.1f, 0.2f))
+            ));
         }
 
-        public static ArrayTextureMap<byte> Estimate(ref ArrayTextureMap<Rgba32> a, ref ArrayTextureMap<byte> s, ArrayTextureMap<Rgba32> r)
+        public static ArrayTextureMap<byte> Estimate(ref ArrayTextureMap<Rgba32> a, ref ArrayTextureMap<byte> s, ArrayTextureMap<Rgba32> r, Func<MaterialPoint, byte> estimator, int scale = 1)
         {
             if (SizeRatio.Of(r) != SizeRatio.Of(a) || SizeRatio.Of(r) != SizeRatio.Of(s))
                 throw new Exception("Incompatible size ratios");
@@ -66,13 +77,26 @@ namespace DS3TexUpUI
             r.CheckSameSize(a);
             r.CheckSameSize(s);
 
-            var result = new byte[a.Count];
-            for (var i = 0; i < result.Length; i++)
-                result[i] = Estimate(new MaterialPoint(a[i].Rgb, s[i], r[i].Rgb));
-            return result.AsTextureMap(r.Width);
+            var f = scale * scale;
+            var result = new byte[a.Count / f].AsTextureMap(r.Width / scale);
+            for (int y = 0; y < result.Height; y++)
+            {
+                for (int x = 0; x < result.Width; x++)
+                {
+                    var iR = y * result.Width + x;
+                    var iS = scale * (y * r.Width + x);
+                    result[iR] = estimator(new MaterialPoint(a[iS].Rgb, s[iS], r[iS].Rgb));
+                }
+            }
+
+            if (scale != 1)
+            {
+                result = result.UpSample(scale);
+            }
+            return result;
         }
 
-        public static void Test(Workspace w, DS3.AlbedoNormalReflective t, string targetDir)
+        public static void Test(Workspace w, DS3.AlbedoNormalReflective t, string targetDir, Func<MaterialPoint, byte> estimator, int scale = 1)
         {
             var a = w.GetExtractPath(t.A).LoadTextureMap();
             a.SetAlpha(255);
@@ -82,7 +106,7 @@ namespace DS3TexUpUI
             var r = w.GetExtractPath(t.R).LoadTextureMap();
             r.SetAlpha(255);
 
-            var m = Metalness.Estimate(ref a, ref s, r);
+            var m = Metalness.Estimate(ref a, ref s, r, estimator, scale);
 
             Directory.CreateDirectory(targetDir);
             a.SaveAsPng(Path.Join(targetDir, "a.png"));
