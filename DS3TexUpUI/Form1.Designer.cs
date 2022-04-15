@@ -52,6 +52,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.logRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             //
@@ -292,12 +293,24 @@
             this.logRichTextBox.TabIndex = 11;
             this.logRichTextBox.Text = "";
             //
+            // button7
+            //
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Location = new System.Drawing.Point(448, 129);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Upscale";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            //
             // Form1
             //
             this.ClientSize = new System.Drawing.Size(697, 471);
             this.Controls.Add(this.logRichTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusTextBox);
@@ -349,6 +362,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox logRichTextBox;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button7;
     }
 }
 

@@ -178,6 +178,10 @@ namespace DS3TexUpUI
         {
             RunTask(GetWorkspace().PrepareUpscale);
         }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RunTask(CreateUpscaledDDS);
+        }
 
         void RunTask(Action<SubProgressToken> task)
         {
