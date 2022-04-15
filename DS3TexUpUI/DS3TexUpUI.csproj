@@ -28,6 +28,8 @@
     <PackageReference Include="SoulsFormats" Version="1.0.0" />
     <PackageReference Include="Pfim" Version="0.10.3" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
+    <PackageReference Include="Accord" Version="3.8.2-alpha" />
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.2-alpha" />
   </ItemGroup>
 
 </Project>
