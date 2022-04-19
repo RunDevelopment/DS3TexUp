@@ -1151,6 +1151,66 @@ namespace DS3TexUpUI
 
             return result;
         }
+        public static ArrayTextureMap<float> UpSample(this ArrayTextureMap<float> source, int scale)
+        {
+            var sW = source.Width;
+            var sH = source.Height;
+
+            var result = new float[sW * scale * sH * scale].AsTextureMap(sW * scale);
+            var rW = sW * scale;
+            var rH = sH * scale;
+
+            for (var y = 0; y < rH; y++)
+            {
+                for (var x = 0; x < rW; x++)
+                {
+                    var xs = (x + .5) / scale - .5;
+                    var ys = (y + .5) / scale - .5;
+                    var xsFloor = (int)Math.Floor(xs);
+                    var ysFloor = (int)Math.Floor(ys);
+
+                    var xBlend = (float)(xs - xsFloor);
+                    var yBlend = (float)(ys - ysFloor);
+                    var x0 = Math.Max(0, xsFloor - 1);
+                    var x1 = Math.Max(0, xsFloor);
+                    var x2 = Math.Min(sW - 1, xsFloor + 1);
+                    var x3 = Math.Min(sW - 1, xsFloor + 2);
+                    var y0 = Math.Max(0, ysFloor - 1);
+                    var y1 = Math.Max(0, ysFloor);
+                    var y2 = Math.Min(sH - 1, ysFloor + 1);
+                    var y3 = Math.Min(sH - 1, ysFloor + 2);
+
+                    var a00 = source[x0, y0];
+                    var a01 = source[x0, y1];
+                    var a02 = source[x0, y2];
+                    var a03 = source[x0, y3];
+                    var a10 = source[x1, y0];
+                    var a11 = source[x1, y1];
+                    var a12 = source[x1, y2];
+                    var a13 = source[x1, y3];
+                    var a20 = source[x2, y0];
+                    var a21 = source[x2, y1];
+                    var a22 = source[x2, y2];
+                    var a23 = source[x2, y3];
+                    var a30 = source[x3, y0];
+                    var a31 = source[x3, y1];
+                    var a32 = source[x3, y2];
+                    var a33 = source[x3, y3];
+
+                    var v = Cubic(
+                        Cubic(a00, a10, a20, a30, xBlend),
+                        Cubic(a01, a11, a21, a31, xBlend),
+                        Cubic(a02, a12, a22, a32, xBlend),
+                        Cubic(a03, a13, a23, a33, xBlend),
+                        yBlend
+                    );
+
+                    result[x, y] = v;
+                }
+            }
+
+            return result;
+        }
         public static ArrayTextureMap<Normal> UpSampleNormals(this ITextureMap<Normal> map, int scale)
         {
             var source = map.Convert(NormalAngle.FromNormal);
@@ -1327,6 +1387,100 @@ namespace DS3TexUpUI
                 Array.Copy(input, (y + i) * map.Width + x, result, i * width, width);
 
             return result.AsTextureMap(width);
+        }
+
+        public static void CopyBrightnessAndSaturationFrom(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> source, int mapBlurRadius = 0, int sourceBlurRadius = 0)
+        {
+            var factor = map.Width / source.Width;
+
+            var sourceS = new float[source.Count].AsTextureMap(source.Width);
+            var sourceV = new float[source.Count].AsTextureMap(source.Width);
+            for (int i = 0; i < source.Count; i++)
+            {
+                HSV c = source[i].Rgb;
+                sourceS[i] = c.S;
+                sourceV[i] = c.V;
+            }
+
+            if (factor != 1)
+            {
+                sourceS = sourceS.UpSample(factor);
+                sourceV = sourceV.UpSample(factor);
+            }
+            CheckSameSize(map, sourceS);
+
+            var mapSmall = factor == 1 ? map : map.DownSample(Average.Rgba32GammaAlpha, factor);
+            var mapS = new float[mapSmall.Count].AsTextureMap(mapSmall.Width);
+            var mapV = new float[mapSmall.Count].AsTextureMap(mapSmall.Width);
+            for (int i = 0; i < mapSmall.Count; i++)
+            {
+                HSV c = mapSmall[i].Rgb;
+                mapS[i] = c.S;
+                mapV[i] = c.V;
+            }
+
+            if (factor != 1)
+            {
+                mapS = mapS.UpSample(factor);
+                mapV = mapV.UpSample(factor);
+            }
+
+            if (mapBlurRadius > 0)
+            {
+                mapS = mapS.Blur(mapBlurRadius, Average.Float);
+                mapV = mapV.Blur(mapBlurRadius, Average.Float);
+            }
+            if (sourceBlurRadius > 0)
+            {
+                sourceS = sourceS.Blur(sourceBlurRadius, Average.Float);
+                sourceV = sourceV.Blur(sourceBlurRadius, Average.Float);
+            }
+
+
+            for (int y = 0; y < map.Height; y++)
+            {
+                for (int x = 0; x < map.Width; x++)
+                {
+                    var p = map[x, y];
+                    HSV c = p.Rgb;
+                    c.S = Math.Clamp((c.S + sourceS[x, y] - mapS[x, y]) * c.V.ExtendOut(0, 0.15f), 0, 1);
+                    c.V = Math.Clamp(c.V + sourceV[x, y] - mapV[x, y], 0, 1);
+                    p.Rgb = c;
+                    map[x, y] = p;
+                }
+            }
+        }
+        public static void CopyColorFrom(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> source)
+        {
+            var factor = map.Width / source.Width;
+
+            if (factor < 2) {
+                throw new Exception("The source image has to be smaller than this image");
+            }
+
+            var sourceRgb = source.UpSample(factor);
+            CheckSameSize(map, sourceRgb);
+
+            var mapRgb = map.DownSample(Average.Rgba32GammaAlpha, factor).UpSample(factor);
+
+            for (int y = 0; y < map.Height; y++)
+            {
+                for (int x = 0; x < map.Width; x++)
+                {
+                    var p = map[x, y];
+
+                    p.R = (byte)Math.Clamp(p.R + sourceRgb[x, y].R - mapRgb[x, y].R, 0, 255);
+                    p.G = (byte)Math.Clamp(p.G + sourceRgb[x, y].G - mapRgb[x, y].G, 0, 255);
+                    p.B = (byte)Math.Clamp(p.B + sourceRgb[x, y].B - mapRgb[x, y].B, 0, 255);
+
+                    map[x, y] = p;
+                }
+            }
+        }
+        private static T Sample<T>(this ArrayTextureMap<T> map, int x, int y)
+            where T : struct
+        {
+            return map[Math.Clamp(x, 0, map.Width - 1), Math.Clamp(y, 0, map.Height - 1)];
         }
     }
 }
