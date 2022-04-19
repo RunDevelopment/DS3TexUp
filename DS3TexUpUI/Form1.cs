@@ -321,6 +321,7 @@ namespace DS3TexUpUI
 
                     NormalNormal = new TexOverrideList() {
                         @"D:\DS3\upscaled\n_normal",
+                        @"D:\DS3\upscaled\n_normal-v2",
                         @"D:\DS3\er\upscaled\n_normal",
                         @"C:\DS3TexUp\up-manual\n_normal",
                     },
