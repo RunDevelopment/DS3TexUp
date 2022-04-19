@@ -21,8 +21,8 @@ namespace DS3TexUpUI
         {
             return new YCbCr(
                 (byte)Math.Clamp((int)(0f + 0.299f * r + 0.587f * g + 0.114f * b), 0, 255),
-                (byte)Math.Clamp((int)(128f - 0.168736f * r + 0.331264f * g + 0.5f * b), 0, 255),
-                (byte)Math.Clamp((int)(128f + 0.5f * r + 0.418688f * g + 0.081312f * b), 0, 255)
+                (byte)Math.Clamp((int)(128f - 0.1687f * r - 0.3313f * g + 0.5f * b), 0, 255),
+                (byte)Math.Clamp((int)(128f + 0.5f * r - 0.4187f * g - 0.0813f * b), 0, 255)
             );
         }
         public static YCbCr FromRgb(Rgb24 color) => FromRgb(color.R, color.G, color.B);
@@ -32,7 +32,7 @@ namespace DS3TexUpUI
         {
             return new Rgb24(
                 (byte)Math.Clamp((int)(Y + 1.402f * (Cr - 128)), 0, 255),
-                (byte)Math.Clamp((int)(Y - 0.344136f * (Cb - 128) - 0.714136f * (Cr - 128)), 0, 255),
+                (byte)Math.Clamp((int)(Y - 0.3441f * (Cb - 128) - 0.7141f * (Cr - 128)), 0, 255),
                 (byte)Math.Clamp((int)(Y + 1.772f * (Cb - 128)), 0, 255)
             );
         }
