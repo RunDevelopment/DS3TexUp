@@ -1496,7 +1496,7 @@ namespace DS3TexUpUI
                         {
                             var image = source.LoadTextureMap();
                             ModifyImage?.Invoke(image);
-                            if (width < largest) image = image.UpSample(largest / image.Width);
+                            if (width < largest) image = image.UpSample(largest / image.Width, BiCubic.Rgba);
                             image.SaveAsPng(target);
                         }
                     }

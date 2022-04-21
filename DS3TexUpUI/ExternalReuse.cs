@@ -239,7 +239,7 @@ namespace DS3TexUpUI
                         var idImage = w.GetExtractPath(id).LoadTextureMap();
                         var target = Path.Join(dir, $"_@{idImage.Width}px.png");
                         ModifyImage?.Invoke(idImage);
-                        if (idImage.Width < maxWidth) idImage = idImage.UpSample(maxWidth / idImage.Width);
+                        if (idImage.Width < maxWidth) idImage = idImage.UpSample(maxWidth / idImage.Width, BiCubic.Rgba);
                         idImage.SaveAsPng(target);
                     }
 
@@ -249,7 +249,7 @@ namespace DS3TexUpUI
 
                         var image = f.LoadTextureMap();
                         ModifyImage?.Invoke(image);
-                        if (image.Width < maxWidth) image = image.UpSample(maxWidth / image.Width);
+                        if (image.Width < maxWidth) image = image.UpSample(maxWidth / image.Width, BiCubic.Rgba);
                         image.SaveAsPng(Path.Join(dir, GetUncertainFileName(f)));
                     }
                 });

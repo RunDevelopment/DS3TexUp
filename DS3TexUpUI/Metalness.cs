@@ -73,9 +73,9 @@ namespace DS3TexUpUI
                 throw new Exception("Incompatible size ratios");
 
             if (a.Width > r.Width) a = a.DownSample(Average.Rgba32GammaAlpha, a.Width / r.Width);
-            else if (a.Width < r.Width) a = a.UpSample(r.Width / a.Width);
+            else if (a.Width < r.Width) a = a.UpSample(r.Width / a.Width, BiCubic.Rgba);
             if (s.Width > r.Width) s = s.DownSample(Average.Byte, s.Width / r.Width);
-            else if (s.Width < r.Width) s = s.UpSample(r.Width / s.Width);
+            else if (s.Width < r.Width) s = s.UpSample(r.Width / s.Width, BiCubic.Byte);
 
             r.CheckSameSize(a);
             r.CheckSameSize(s);
@@ -94,7 +94,7 @@ namespace DS3TexUpUI
 
             if (scale != 1)
             {
-                result = result.UpSample(scale);
+                result = result.UpSample(scale, BiCubic.Byte);
             }
             return result;
         }
@@ -134,9 +134,9 @@ namespace DS3TexUpUI
                         var r = w.GetExtractPath(t.R).LoadTextureMap();
 
                         if (a.Width > r.Width) a = a.DownSample(Average.Rgba32GammaAlpha, a.Width / r.Width);
-                        else if (a.Width < r.Width) a = a.UpSample(r.Width / a.Width);
+                        else if (a.Width < r.Width) a = a.UpSample(r.Width / a.Width, BiCubic.Rgba);
                         if (s.Width > r.Width) s = s.DownSample(Average.Byte, s.Width / r.Width);
-                        else if (s.Width < r.Width) s = s.UpSample(r.Width / s.Width);
+                        else if (s.Width < r.Width) s = s.UpSample(r.Width / s.Width, BiCubic.Byte);
 
                         var m = new byte[r.Count].AsTextureMap(r.Width);
                         m.Data.AsSpan().Fill(128);

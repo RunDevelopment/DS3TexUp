@@ -1005,164 +1005,39 @@ namespace DS3TexUpUI
             }
         }
 
-
-        public static ArrayTextureMap<Rgba32> UpSample(this ArrayTextureMap<Rgba32> source, int scale)
+        public static ArrayTextureMap<P> UpSample<P, I>(this ITextureMap<P> map, int scale, I interpolator)
+            where P : struct
+            where I : IBiCubicInterpolator<P>
         {
-            var sW = source.Width;
-            var sH = source.Height;
-
-            var result = new Rgba32[sW * scale * sH * scale].AsTextureMap(sW * scale);
-            var rW = sW * scale;
-            var rH = sH * scale;
-
-            for (var y = 0; y < rH; y++)
-            {
-                for (var x = 0; x < rW; x++)
-                {
-                    var xs = (x + .5) / scale - .5;
-                    var ys = (y + .5) / scale - .5;
-                    var xsFloor = (int)Math.Floor(xs);
-                    var ysFloor = (int)Math.Floor(ys);
-
-                    var xBlend = (float)(xs - xsFloor);
-                    var yBlend = (float)(ys - ysFloor);
-                    var x0 = Math.Max(0, xsFloor - 1);
-                    var x1 = Math.Max(0, xsFloor);
-                    var x2 = Math.Min(sW - 1, xsFloor + 1);
-                    var x3 = Math.Min(sW - 1, xsFloor + 2);
-                    var y0 = Math.Max(0, ysFloor - 1);
-                    var y1 = Math.Max(0, ysFloor);
-                    var y2 = Math.Min(sH - 1, ysFloor + 1);
-                    var y3 = Math.Min(sH - 1, ysFloor + 2);
-
-                    // Interpolate the angle, not the normals
-                    var a00 = source[x0, y0];
-                    var a01 = source[x0, y1];
-                    var a02 = source[x0, y2];
-                    var a03 = source[x0, y3];
-                    var a10 = source[x1, y0];
-                    var a11 = source[x1, y1];
-                    var a12 = source[x1, y2];
-                    var a13 = source[x1, y3];
-                    var a20 = source[x2, y0];
-                    var a21 = source[x2, y1];
-                    var a22 = source[x2, y2];
-                    var a23 = source[x2, y3];
-                    var a30 = source[x3, y0];
-                    var a31 = source[x3, y1];
-                    var a32 = source[x3, y2];
-                    var a33 = source[x3, y3];
-
-                    var r = Cubic(
-                        Cubic(a00.R, a10.R, a20.R, a30.R, xBlend),
-                        Cubic(a01.R, a11.R, a21.R, a31.R, xBlend),
-                        Cubic(a02.R, a12.R, a22.R, a32.R, xBlend),
-                        Cubic(a03.R, a13.R, a23.R, a33.R, xBlend),
-                        yBlend
-                    );
-                    var g = Cubic(
-                        Cubic(a00.G, a10.G, a20.G, a30.G, xBlend),
-                        Cubic(a01.G, a11.G, a21.G, a31.G, xBlend),
-                        Cubic(a02.G, a12.G, a22.G, a32.G, xBlend),
-                        Cubic(a03.G, a13.G, a23.G, a33.G, xBlend),
-                        yBlend
-                    );
-                    var b = Cubic(
-                        Cubic(a00.B, a10.B, a20.B, a30.B, xBlend),
-                        Cubic(a01.B, a11.B, a21.B, a31.B, xBlend),
-                        Cubic(a02.B, a12.B, a22.B, a32.B, xBlend),
-                        Cubic(a03.B, a13.B, a23.B, a33.B, xBlend),
-                        yBlend
-                    );
-                    var a = Cubic(
-                        Cubic(a00.A, a10.A, a20.A, a30.A, xBlend),
-                        Cubic(a01.A, a11.A, a21.A, a31.A, xBlend),
-                        Cubic(a02.A, a12.A, a22.A, a32.A, xBlend),
-                        Cubic(a03.A, a13.A, a23.A, a33.A, xBlend),
-                        yBlend
-                    );
-
-                    static byte ToByte(float v) => (byte)Math.Clamp((int)v, 0, 255);
-                    result[x, y] = new Rgba32(ToByte(r), ToByte(g), ToByte(b), ToByte(a));
-                }
-            }
-
-            return result;
+            return UpSample<P, I>(map is ArrayTextureMap<P> arrayMap ? arrayMap : map.Clone(), scale, interpolator);
         }
-        public static ArrayTextureMap<byte> UpSample(this ArrayTextureMap<byte> source, int scale)
+        public static ArrayTextureMap<P> UpSample<P, I>(this ArrayTextureMap<P> map, int scale, I interpolator)
+            where P : struct
+            where I : IBiCubicInterpolator<P>
         {
-            var sW = source.Width;
-            var sH = source.Height;
-
-            var result = new byte[sW * scale * sH * scale].AsTextureMap(sW * scale);
-            var rW = sW * scale;
-            var rH = sH * scale;
-
-            for (var y = 0; y < rH; y++)
-            {
-                for (var x = 0; x < rW; x++)
-                {
-                    var xs = (x + .5) / scale - .5;
-                    var ys = (y + .5) / scale - .5;
-                    var xsFloor = (int)Math.Floor(xs);
-                    var ysFloor = (int)Math.Floor(ys);
-
-                    var xBlend = (float)(xs - xsFloor);
-                    var yBlend = (float)(ys - ysFloor);
-                    var x0 = Math.Max(0, xsFloor - 1);
-                    var x1 = Math.Max(0, xsFloor);
-                    var x2 = Math.Min(sW - 1, xsFloor + 1);
-                    var x3 = Math.Min(sW - 1, xsFloor + 2);
-                    var y0 = Math.Max(0, ysFloor - 1);
-                    var y1 = Math.Max(0, ysFloor);
-                    var y2 = Math.Min(sH - 1, ysFloor + 1);
-                    var y3 = Math.Min(sH - 1, ysFloor + 2);
-
-                    // Interpolate the angle, not the normals
-                    var a00 = source[x0, y0];
-                    var a01 = source[x0, y1];
-                    var a02 = source[x0, y2];
-                    var a03 = source[x0, y3];
-                    var a10 = source[x1, y0];
-                    var a11 = source[x1, y1];
-                    var a12 = source[x1, y2];
-                    var a13 = source[x1, y3];
-                    var a20 = source[x2, y0];
-                    var a21 = source[x2, y1];
-                    var a22 = source[x2, y2];
-                    var a23 = source[x2, y3];
-                    var a30 = source[x3, y0];
-                    var a31 = source[x3, y1];
-                    var a32 = source[x3, y2];
-                    var a33 = source[x3, y3];
-
-                    var v = Cubic(
-                        Cubic(a00, a10, a20, a30, xBlend),
-                        Cubic(a01, a11, a21, a31, xBlend),
-                        Cubic(a02, a12, a22, a32, xBlend),
-                        Cubic(a03, a13, a23, a33, xBlend),
-                        yBlend
-                    );
-
-                    static byte ToByte(float v) => (byte)Math.Clamp((int)v, 0, 255);
-                    result[x, y] = ToByte(v);
-                }
-            }
-
-            return result;
+            return UpSample<P, P, BiCubicInterpolatorAdaptor<P, I>>(map, scale, new BiCubicInterpolatorAdaptor<P, I>(interpolator));
         }
-        public static ArrayTextureMap<float> UpSample(this ArrayTextureMap<float> source, int scale)
+        public static ArrayTextureMap<P> UpSample<P, T, I>(this ITextureMap<P> map, int scale, I interpolator)
+            where P : struct
+            where T : struct
+            where I : IBiCubicInterpolator<P, T>
         {
-            var sW = source.Width;
-            var sH = source.Height;
+            return UpSample<P, T, I>(map is ArrayTextureMap<P> arrayMap ? arrayMap : map.Clone(), scale, interpolator);
+        }
+        public static ArrayTextureMap<P> UpSample<P, T, I>(this ArrayTextureMap<P> map, int scale, I interpolator)
+            where P : struct
+            where T : struct
+            where I : IBiCubicInterpolator<P, T>
+        {
+            var source = interpolator.Preprocess(map);
+            var sW = map.Width;
+            var sH = map.Height;
 
-            var result = new float[sW * scale * sH * scale].AsTextureMap(sW * scale);
-            var rW = sW * scale;
-            var rH = sH * scale;
+            var result = new P[sW * scale * sH * scale].AsTextureMap(sW * scale);
 
-            for (var y = 0; y < rH; y++)
+            for (var y = 0; y < result.Height; y++)
             {
-                for (var x = 0; x < rW; x++)
+                for (var x = 0; x < result.Width; x++)
                 {
                     var xs = (x + .5) / scale - .5;
                     var ys = (y + .5) / scale - .5;
@@ -1197,98 +1072,17 @@ namespace DS3TexUpUI
                     var a32 = source[x3, y2];
                     var a33 = source[x3, y3];
 
-                    var v = Cubic(
-                        Cubic(a00, a10, a20, a30, xBlend),
-                        Cubic(a01, a11, a21, a31, xBlend),
-                        Cubic(a02, a12, a22, a32, xBlend),
-                        Cubic(a03, a13, a23, a33, xBlend),
-                        yBlend
+                    result[x, y] = interpolator.BiInterpolate(
+                        xBlend, yBlend,
+                        a00, a10, a20, a30,
+                        a01, a11, a21, a31,
+                        a02, a12, a22, a32,
+                        a03, a13, a23, a33
                     );
-
-                    result[x, y] = v;
                 }
             }
 
             return result;
-        }
-        public static ArrayTextureMap<Normal> UpSampleNormals(this ITextureMap<Normal> map, int scale)
-        {
-            var source = map.Convert(NormalAngle.FromNormal);
-            var sW = source.Width;
-            var sH = source.Height;
-
-            var result = new Normal[sW * scale * sH * scale].AsTextureMap(sW * scale);
-            var rW = sW * scale;
-            var rH = sH * scale;
-
-            for (var y = 0; y < rH; y++)
-            {
-                for (var x = 0; x < rW; x++)
-                {
-                    var xs = (x + .5) / scale - .5;
-                    var ys = (y + .5) / scale - .5;
-                    var xsFloor = (int)Math.Floor(xs);
-                    var ysFloor = (int)Math.Floor(ys);
-
-                    var xBlend = (float)(xs - xsFloor);
-                    var yBlend = (float)(ys - ysFloor);
-                    var x0 = Math.Max(0, xsFloor - 1);
-                    var x1 = Math.Max(0, xsFloor);
-                    var x2 = Math.Min(sW - 1, xsFloor + 1);
-                    var x3 = Math.Min(sW - 1, xsFloor + 2);
-                    var y0 = Math.Max(0, ysFloor - 1);
-                    var y1 = Math.Max(0, ysFloor);
-                    var y2 = Math.Min(sH - 1, ysFloor + 1);
-                    var y3 = Math.Min(sH - 1, ysFloor + 2);
-
-                    // Interpolate the angle, not the normals
-                    var a00 = source[x0, y0];
-                    var a01 = source[x0, y1];
-                    var a02 = source[x0, y2];
-                    var a03 = source[x0, y3];
-                    var a10 = source[x1, y0];
-                    var a11 = source[x1, y1];
-                    var a12 = source[x1, y2];
-                    var a13 = source[x1, y3];
-                    var a20 = source[x2, y0];
-                    var a21 = source[x2, y1];
-                    var a22 = source[x2, y2];
-                    var a23 = source[x2, y3];
-                    var a30 = source[x3, y0];
-                    var a31 = source[x3, y1];
-                    var a32 = source[x3, y2];
-                    var a33 = source[x3, y3];
-
-                    var aX = Cubic(
-                        Cubic(a00.X, a10.X, a20.X, a30.X, xBlend),
-                        Cubic(a01.X, a11.X, a21.X, a31.X, xBlend),
-                        Cubic(a02.X, a12.X, a22.X, a32.X, xBlend),
-                        Cubic(a03.X, a13.X, a23.X, a33.X, xBlend),
-                        yBlend
-                    );
-                    var aY = Cubic(
-                        Cubic(a00.Y, a10.Y, a20.Y, a30.Y, xBlend),
-                        Cubic(a01.Y, a11.Y, a21.Y, a31.Y, xBlend),
-                        Cubic(a02.Y, a12.Y, a22.Y, a32.Y, xBlend),
-                        Cubic(a03.Y, a13.Y, a23.Y, a33.Y, xBlend),
-                        yBlend
-                    );
-
-                    result[x, y] = new NormalAngle(aX, aY);
-                }
-            }
-
-            return result;
-        }
-        private static float Cubic(float v0, float v1, float v2, float v3, float blend)
-        {
-            // Cubic spline interpolation
-            float a = (-v0 + 3 * v1 - 3 * v2 + v3) * .5f;
-            float b = v0 + (-5 * v1 + 4 * v2 - v3) * .5f;
-            float c = (v2 - v0) * .5f;
-            float d = v1;
-
-            return d + blend * (c + blend * (b + blend * a));
         }
 
         public static void AddColorCode(this ArrayTextureMap<Rgba32> map, Span<Rgba32> code)
@@ -1404,8 +1198,8 @@ namespace DS3TexUpUI
 
             if (factor != 1)
             {
-                sourceS = sourceS.UpSample(factor);
-                sourceV = sourceV.UpSample(factor);
+                sourceS = sourceS.UpSample(factor, BiCubic.Float);
+                sourceV = sourceV.UpSample(factor, BiCubic.Float);
             }
             CheckSameSize(map, sourceS);
 
@@ -1421,8 +1215,8 @@ namespace DS3TexUpUI
 
             if (factor != 1)
             {
-                mapS = mapS.UpSample(factor);
-                mapV = mapV.UpSample(factor);
+                mapS = mapS.UpSample(factor, BiCubic.Float);
+                mapV = mapV.UpSample(factor, BiCubic.Float);
             }
 
             if (mapBlurRadius > 0)
@@ -1454,14 +1248,15 @@ namespace DS3TexUpUI
         {
             var factor = map.Width / source.Width;
 
-            if (factor < 2) {
+            if (factor < 2)
+            {
                 throw new Exception("The source image has to be smaller than this image");
             }
 
-            var sourceRgb = source.UpSample(factor);
+            var sourceRgb = source.UpSample(factor, BiCubic.Rgba);
             CheckSameSize(map, sourceRgb);
 
-            var mapRgb = map.DownSample(Average.Rgba32GammaAlpha, factor).UpSample(factor);
+            var mapRgb = map.DownSample(Average.Rgba32GammaAlpha, factor).UpSample(factor, BiCubic.Rgba);
 
             for (int y = 0; y < map.Height; y++)
             {

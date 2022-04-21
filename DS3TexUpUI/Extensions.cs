@@ -265,5 +265,7 @@ namespace DS3TexUpUI
                 list[n] = value;
             }
         }
+
+        public static byte ToByteClamp(this float v) => (byte)Math.Clamp((int)v, 0, 255);
     }
 }
