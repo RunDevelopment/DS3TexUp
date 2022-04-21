@@ -50,12 +50,11 @@ namespace DS3TexUpUI
         public static byte DefaultEstimator(MaterialPoint p)
         {
             var (a, s, r) = p;
-            static byte ToByte(float f) => (byte)Math.Clamp((int)(f * 255), 0, 255);
 
             HSV aHsv = a;
             HSV rHsv = r;
 
-            return ToByte(Max(
+            return Max(
                 // Most metals have quite a bright reflective value.
                 rHsv.V.ExtendOut(0.4f, 0.7f),
                 // Typically, only metals have a noticeable hue.
@@ -64,7 +63,7 @@ namespace DS3TexUpUI
                 // Some metals (like somewhat rusty iron) have a bit lower brightness in their reflective value,
                 // but are very dark in their alebdo.
                 rHsv.V.ExtendOut(0.25f, 0.6f) * (1 - aHsv.V.ExtendOut(0.1f, 0.2f))
-            ));
+            ).ToByteClamp();
         }
 
         public static ArrayTextureMap<byte> Estimate(ref ArrayTextureMap<Rgba32> a, ref ArrayTextureMap<byte> s, ArrayTextureMap<Rgba32> r, Func<MaterialPoint, byte> estimator, int scale = 1)
