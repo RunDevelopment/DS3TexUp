@@ -457,6 +457,62 @@ namespace DS3TexUpUI
         }
     }
 
+    public class NormBrightnessImageHasher : IImageHasher
+    {
+        public const int MinPixels = 256;
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+        public int ByteCount => MinWidth * MinHeight;
+
+        public NormBrightnessImageHasher(SizeRatio ratio)
+        {
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
+        }
+
+        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+
+        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+        {
+            if (!IsSupported(image))
+            {
+                bytes = new byte[0];
+                return false;
+            }
+
+            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
+            bytes = new byte[small.Data.Length];
+
+            for (int i = 0; i < small.Data.Length; i++)
+            {
+                bytes[i] = small[i].GetGreyBrightness();
+            }
+
+            int avg = 0;
+            foreach (var b in bytes) avg += b;
+            avg /= bytes.Length;
+
+            var variance = 0;
+            foreach (var b in bytes) variance += (avg - b) * (avg - b);
+
+            var sigma = MathF.Sqrt(variance);
+
+            foreach (ref var b in bytes.AsSpan())
+                b = ((b - avg) / (sigma * 2) * 127.5f + 127.5f).ToByteClamp();
+
+            return true;
+        }
+    }
+
     public struct CopyIndexEntry
     {
         public string File;

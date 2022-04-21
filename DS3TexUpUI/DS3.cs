@@ -370,7 +370,7 @@ namespace DS3TexUpUI
         }
         public static int CompareIdsByQuality(TexId a, TexId b)
         {
-            var q = CompareQuality(a, b);
+            var q = CompareOnlyQuality(a, b);
             if (q != 0) return q;
 
             // try not to pick one that isn't used in game
@@ -380,31 +380,27 @@ namespace DS3TexUpUI
             // if it doesn't matter which one we pick, pick the one with the smaller ID.
             return -a.CompareTo(b);
 
-
-            static bool IsUsedInGame(TexId id)
+            static bool IsUsedInGame(TexId id) => DS3.UsedBy.ContainsKey(id);
+        }
+        internal static int CompareOnlyQuality(TexId a, TexId b)
+        {
+            if (DS3.OriginalSize.TryGetValue(a, out var aSize) && DS3.OriginalSize.TryGetValue(b, out var bSize))
             {
-                return DS3.UsedBy.ContainsKey(id);
+                var s = aSize.Width.CompareTo(bSize.Width);
+                if (s != 0) return s;
             }
-            static int CompareQuality(TexId a, TexId b)
+
+            if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
             {
-                if (DS3.OriginalSize.TryGetValue(a, out var aSize) && DS3.OriginalSize.TryGetValue(b, out var bSize))
+                var af = aFormat.QualityScore;
+                var bf = bFormat.QualityScore;
+                if (af != null && bf != null && af != bf)
                 {
-                    var s = aSize.Width.CompareTo(bSize.Width);
-                    if (s != 0) return s;
+                    return af.Value.CompareTo(bf.Value);
                 }
-
-                if (DS3.OriginalFormat.TryGetValue(a, out var aFormat) && DS3.OriginalFormat.TryGetValue(b, out var bFormat))
-                {
-                    var af = aFormat.QualityScore;
-                    var bf = bFormat.QualityScore;
-                    if (af != null && bf != null && af != bf)
-                    {
-                        return af.Value.CompareTo(bf.Value);
-                    }
-                }
-
-                return 0;
             }
+
+            return 0;
         }
 
         public static EquivalenceCollection<TexId> AlphaCopiesCertain
@@ -631,6 +627,69 @@ namespace DS3TexUpUI
 
                 token.SubmitStatus("Saving JSON");
                 representative.SaveAsJson(Data.File(@"gloss-representative.json"));
+            };
+        }
+
+        public static EquivalenceCollection<TexId> BrightnessSimilarCertain
+            = Data.File(@"brightness-similar-certain.json").LoadJsonFile<EquivalenceCollection<TexId>>();
+        internal static UncertainCopies _brightnessSimilarConfig = new UncertainCopies()
+        {
+            CertainFile = @"brightness-similar-certain.json",
+            UncertainFile = @"brightness-similar-uncertain.json",
+            RejectedFile = @"brightness-similar-rejected.json",
+            CopyFilter = id =>
+            {
+                // ignore all images that are just solid colors
+                if (id.IsSolidColor()) return false;
+                // only normals
+                if (id.GetTexKind() != TexKind.Albedo) return false;
+                if (id.GetRepresentative() != id) return false;
+
+                return true;
+            },
+            CopyHasherFactory = r => new NormBrightnessImageHasher(r),
+            CopySpread = image => image.Count <= 64 * 64 ? 7 : image.Count <= 128 * 128 ? 7 : 7,
+            MaxDiff = new Rgba32(2, 2, 2, 255),
+            ModifyImage = image =>
+            {
+                foreach (ref var p in image.Data.AsSpan())
+                {
+                    p.A = 255;
+                }
+            }
+        };
+
+        public static IReadOnlyDictionary<TexId, TexId> BrightnessSimilarRepresentativeOf
+            = Data.File(@"brightness-similar-representative.json").LoadJsonFile<Dictionary<TexId, TexId>>();
+        public static IReadOnlyCollection<TexId> BrightnessSimilarRepresentatives = BrightnessSimilarRepresentativeOf.Values.ToHashSet();
+        internal static Action<SubProgressToken> CreateBrightnessSimilarRepresentativeIndex()
+        {
+            return token =>
+            {
+                token.SubmitStatus($"Searching for files");
+                var ids = DS3.OriginalSize.Keys.ToList();
+                ids.Sort();
+
+                token.SubmitStatus($"Indexing");
+                var representative = new Dictionary<TexId, TexId>();
+                token.ForAllParallel(ids, id =>
+                {
+                    if (!BrightnessSimilarCertain.TryGetValue(id, out var othersSet) || othersSet.Count == 0) return;
+
+                    var others = othersSet.ToList();
+                    others.Sort(CompareIdsByQuality);
+
+                    var r = others.Last();
+                    if (CompareOnlyQuality(r, id) == 0) return;
+
+                    lock (representative)
+                    {
+                        representative[id] = r;
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                representative.SaveAsJson(Data.File(@"brightness-similar-representative.json"));
             };
         }
 
