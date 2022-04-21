@@ -148,7 +148,7 @@ namespace DS3TexUpUI
 
             if (upsample && alphaImage.Width < targetWidth)
             {
-                alphaImage = alphaImage.UpSample(targetWidth / alphaImage.Width);
+                alphaImage = alphaImage.UpSample(targetWidth / alphaImage.Width, BiCubic.Byte);
                 CheckWidth(id, upscale, targetWidth, alphaImage.Width, "alpha");
             }
 
