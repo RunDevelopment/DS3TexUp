@@ -289,6 +289,59 @@ namespace DS3TexUpUI
             });
         }
 
+        public static void ScaleAndConvertToDDS(IProgressToken token, TexOverrideList input, Func<TexId, int> getScale, string outputDir, Func<string, bool>? didChange = null)
+        {
+            token.SubmitStatus("Searching for files");
+            var files = input.GetFiles();
+            RemoveUnchanged(new[] { files }, didChange);
+
+            token.SubmitStatus($"Scaling and converting files");
+            token.ForAllParallel(files, kv =>
+            {
+                try
+                {
+                    var (id, file) = kv;
+
+                    var scale = getScale(id);
+                    var targetWidth = DS3.OriginalSize[id].Width * scale;
+                    var targetFormat = DS3.OutputFormat[id];
+
+                    var image = file.LoadTextureMap();
+                    if (image.Width < targetWidth)
+                    {
+                        token.SubmitLog($"Cannot {scale}x upscale {id}. Image width: {image.Width}. Target width: {targetWidth}. File: {file}");
+                    }
+                    else if (image.Width > targetWidth)
+                    {
+                        var downSampleScale = image.Width / targetWidth;
+                        var kind = id.GetTexKind();
+
+                        // The down sampler used depends on the image kind
+                        switch (kind)
+                        {
+                            case TexKind.Albedo:
+                            case TexKind.Emissive:
+                            case TexKind.Reflective:
+                                image = image.DownSample(Average.Rgba32GammaAlpha, downSampleScale);
+                                break;
+                            default:
+                                image = image.DownSample(Average.Rgba32, downSampleScale);
+                                break;
+                        }
+                    }
+
+                    var target = Path.Join(outputDir, id.Category, id.Name.ToString() + ".dds");
+                    Directory.CreateDirectory(Path.GetDirectoryName(target));
+
+                    image.SaveAsDDS(target, targetFormat, id);
+                }
+                catch (System.Exception e)
+                {
+                    token.LogException(e);
+                }
+            });
+        }
+
         public static void CreateIdTextures(IProgressToken token, Workspace w, string outputDir)
         {
             token.SubmitStatus("Creating id textures");
@@ -348,10 +401,12 @@ namespace DS3TexUpUI
         }
         public IReadOnlyDictionary<TexId, string> GetFilesCached()
         {
-            if (_cache == null) {
+            if (_cache == null)
+            {
                 lock (this)
                 {
-                    if (_cache == null) {
+                    if (_cache == null)
+                    {
                         _cache = GetFiles();
                     }
                 }
