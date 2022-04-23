@@ -270,11 +270,36 @@ namespace DS3TexUpUI
             kind.SaveAsJson(Data.File(@"er/tex-kind.json"));
         }
 
+        public static ExternalReuse Similar = new ExternalReuse()
+        {
+            CertainFile = @"er/similar.json",
+            UncertainFile = @"er/similar-uncertain.json",
+            RejectedFile = @"er/similar-rejected.json",
+
+            ExternalDir = ExtractDir,
+            ExternalSize = OriginalSize,
+
+            Ds3Filter = id =>
+            {
+                if (id.GetRepresentative() != id) return false;
+                if (id.IsSolidColor()) return false;
+                if (id.GetTexKind() != TexKind.Albedo && id.GetTexKind() != TexKind.Reflective) return false;
+                return true;
+            },
+            ExternalFilter = file => TexKinds[file] != TexKind.Normal,
+
+            RequireGreater = true,
+            SameKind = true,
+
+            CopySpread = image => 6,
+            MaxDiff = new Rgba32(2, 2, 2, 255),
+        };
+
         public static ExternalReuse GeneralReuse = new ExternalReuse()
         {
-            CertainFile = Data.File(@"er/copy-general.json"),
-            UncertainFile = Data.File(@"er/copy-general-uncertain.json"),
-            RejectedFile = Data.File(@"er/copy-general-rejected.json"),
+            CertainFile = @"er/copy-general.json",
+            UncertainFile = @"er/copy-general-uncertain.json",
+            RejectedFile = @"er/copy-general-rejected.json",
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -297,9 +322,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse AlphaReuse = new ExternalReuse()
         {
-            CertainFile = Data.File(@"er/copy-alpha.json"),
-            UncertainFile = Data.File(@"er/copy-alpha-uncertain.json"),
-            RejectedFile = Data.File(@"er/copy-alpha-rejected.json"),
+            CertainFile = @"er/copy-alpha.json",
+            UncertainFile = @"er/copy-alpha-uncertain.json",
+            RejectedFile = @"er/copy-alpha-rejected.json",
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -338,9 +363,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse NormalReuse = new ExternalReuse()
         {
-            CertainFile = Data.File(@"er/copy-normal.json"),
-            UncertainFile = Data.File(@"er/copy-normal-uncertain.json"),
-            RejectedFile = Data.File(@"er/copy-normal-rejected.json"),
+            CertainFile = (@"er/copy-normal.json"),
+            UncertainFile = (@"er/copy-normal-uncertain.json"),
+            RejectedFile = (@"er/copy-normal-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -366,9 +391,9 @@ namespace DS3TexUpUI
 
         public static ExternalReuse GlossReuse = new ExternalReuse()
         {
-            CertainFile = Data.File(@"er/copy-gloss.json"),
-            UncertainFile = Data.File(@"er/copy-gloss-uncertain.json"),
-            RejectedFile = Data.File(@"er/copy-gloss-rejected.json"),
+            CertainFile = (@"er/copy-gloss.json"),
+            UncertainFile = (@"er/copy-gloss-uncertain.json"),
+            RejectedFile = (@"er/copy-gloss-rejected.json"),
 
             ExternalDir = ExtractDir,
             ExternalSize = OriginalSize,
@@ -409,7 +434,7 @@ namespace DS3TexUpUI
 
         public static void CreateGeneralRepresentative(IProgressToken token)
         {
-            var certain = GeneralReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+            var certain = GeneralReuse.CertainFile.Read.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
 
             var rep = new Dictionary<TexId, string>();
             token.ForAll(certain, kv =>
@@ -426,7 +451,7 @@ namespace DS3TexUpUI
         }
         public static void CreateAlphaRepresentative(IProgressToken token)
         {
-            var certain = AlphaReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+            var certain = AlphaReuse.CertainFile.Read.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
 
             var rep = new Dictionary<TexId, string>();
             token.ForAll(certain, kv =>
@@ -450,7 +475,7 @@ namespace DS3TexUpUI
         }
         public static void CreateNormalRepresentative(IProgressToken token)
         {
-            var certain = NormalReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+            var certain = NormalReuse.CertainFile.Read.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
 
             var rep = new Dictionary<TexId, string>();
             token.ForAll(certain, kv =>
@@ -467,7 +492,7 @@ namespace DS3TexUpUI
         }
         public static void CreateGlossRepresentative(IProgressToken token)
         {
-            var certain = GlossReuse.CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+            var certain = GlossReuse.CertainFile.Read.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
 
             var rep = new Dictionary<TexId, string>();
             token.ForAll(certain, kv =>

@@ -16,9 +16,21 @@ namespace DS3TexUpUI
 {
     public class ExternalReuse
     {
-        public string CertainFile { get; set; } = "";
-        public string UncertainFile { get; set; } = "";
-        public string RejectedFile { get; set; } = "";
+        public class DataFile
+        {
+            public string Name { get; }
+
+            public string Read => Data.File(Name);
+            public string Write => Path.Join("data", Name);
+
+            public DataFile(string name) { Name = name; }
+
+            public static implicit operator DataFile(string value) => new DataFile(value);
+        }
+
+        public DataFile CertainFile { get; set; } = "";
+        public DataFile UncertainFile { get; set; } = "";
+        public DataFile RejectedFile { get; set; } = "";
 
         public string ExternalDir { get; set; } = "";
         public IReadOnlyDictionary<string, Size> ExternalSize { get; set; } = new Dictionary<string, Size>();
@@ -67,15 +79,15 @@ namespace DS3TexUpUI
 
         private Dictionary<TexId, HashSet<string>> LoadCertain()
         {
-            return CertainFile.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+            return CertainFile.Read.LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
         }
         private Dictionary<TexId, HashSet<string>> LoadUncertain()
         {
-            return Load<Dictionary<TexId, HashSet<string>>>(UncertainFile);
+            return Load<Dictionary<TexId, HashSet<string>>>(UncertainFile.Read);
         }
         private Dictionary<TexId, HashSet<string>> LoadRejected()
         {
-            return Load<Dictionary<TexId, HashSet<string>>>(RejectedFile);
+            return Load<Dictionary<TexId, HashSet<string>>>(RejectedFile.Read);
         }
         private static T Load<T>(string file)
             where T : new()
@@ -140,7 +152,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                copies.SaveAsJson(UncertainFile);
+                copies.SaveAsJson(UncertainFile.Write);
             };
         }
 
@@ -197,7 +209,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                identical.SaveAsJson(CertainFile);
+                identical.SaveAsJson(CertainFile.Write);
             };
         }
 
@@ -290,7 +302,7 @@ namespace DS3TexUpUI
                     l.Sort();
                     newCertain[id] = l;
                 }
-                newCertain.SaveAsJson(CertainFile);
+                newCertain.SaveAsJson(CertainFile.Write);
 
                 var rejected = new Dictionary<TexId, List<string>>();
                 foreach (var (id, copies) in LoadUncertain())
@@ -302,7 +314,7 @@ namespace DS3TexUpUI
                         rejected[id] = r;
                     }
                 }
-                rejected.SaveAsJson(RejectedFile);
+                rejected.SaveAsJson(RejectedFile.Write);
             };
         }
 
@@ -321,7 +333,7 @@ namespace DS3TexUpUI
                         rejected[id] = r;
                     }
                 }
-                rejected.SaveAsJson(RejectedFile);
+                rejected.SaveAsJson(RejectedFile.Write);
             };
         }
 
