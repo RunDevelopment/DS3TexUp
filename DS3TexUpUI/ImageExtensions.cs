@@ -1005,55 +1005,43 @@ namespace DS3TexUpUI
             }
         }
 
-        public static ArrayTextureMap<P> UpSample<P, I>(this ITextureMap<P> map, int scale, I interpolator)
-            where P : struct
-            where I : IBiCubicInterpolator<P>
+        public static ArrayTextureMap<P> UpSample<P, I, S>(this ITextureMap<P> map, int scale, BiCubicFactory<P, I, S> factory)
+                    where P : struct
+                    where I : struct
+                    where S : IBiCubicSample<P, I>, new()
         {
-            return UpSample<P, I>(map is ArrayTextureMap<P> arrayMap ? arrayMap : map.Clone(), scale, interpolator);
+            return UpSample(map is ArrayTextureMap<P> arrayMap ? arrayMap : map.Clone(), scale, factory);
         }
-        public static ArrayTextureMap<P> UpSample<P, I>(this ArrayTextureMap<P> map, int scale, I interpolator)
+        public static ArrayTextureMap<P> UpSample<P, I, S>(this ArrayTextureMap<P> map, int scale, BiCubicFactory<P, I, S> factory)
             where P : struct
-            where I : IBiCubicInterpolator<P>
+            where I : struct
+            where S : IBiCubicSample<P, I>, new()
         {
-            return UpSample<P, P, BiCubicInterpolatorAdaptor<P, I>>(map, scale, new BiCubicInterpolatorAdaptor<P, I>(interpolator));
-        }
-        public static ArrayTextureMap<P> UpSample<P, T, I>(this ITextureMap<P> map, int scale, I interpolator)
-            where P : struct
-            where T : struct
-            where I : IBiCubicInterpolator<P, T>
-        {
-            return UpSample<P, T, I>(map is ArrayTextureMap<P> arrayMap ? arrayMap : map.Clone(), scale, interpolator);
-        }
-        public static ArrayTextureMap<P> UpSample<P, T, I>(this ArrayTextureMap<P> map, int scale, I interpolator)
-            where P : struct
-            where T : struct
-            where I : IBiCubicInterpolator<P, T>
-        {
-            var source = interpolator.Preprocess(map);
-            var sW = map.Width;
-            var sH = map.Height;
+            if (scale < 2) throw new ArgumentOutOfRangeException(nameof(scale));
+            if (scale % 2 != 0) throw new ArgumentOutOfRangeException(nameof(scale));
+
+            var source = factory.Preprocess(map);
+
+            var sW = source.Width;
+            var sH = source.Height;
 
             var result = new P[sW * scale * sH * scale].AsTextureMap(sW * scale);
+            var scaleHalf = scale / 2;
 
-            for (var y = 0; y < result.Height; y++)
+            var sample = factory.createSample();
+
+            for (var y = -1; y < sW; y++)
             {
-                for (var x = 0; x < result.Width; x++)
+                for (var x = -1; x < sH; x++)
                 {
-                    var xs = (x + .5) / scale - .5;
-                    var ys = (y + .5) / scale - .5;
-                    var xsFloor = (int)Math.Floor(xs);
-                    var ysFloor = (int)Math.Floor(ys);
-
-                    var xBlend = (float)(xs - xsFloor);
-                    var yBlend = (float)(ys - ysFloor);
-                    var x0 = Math.Max(0, xsFloor - 1);
-                    var x1 = Math.Max(0, xsFloor);
-                    var x2 = Math.Min(sW - 1, xsFloor + 1);
-                    var x3 = Math.Min(sW - 1, xsFloor + 2);
-                    var y0 = Math.Max(0, ysFloor - 1);
-                    var y1 = Math.Max(0, ysFloor);
-                    var y2 = Math.Min(sH - 1, ysFloor + 1);
-                    var y3 = Math.Min(sH - 1, ysFloor + 2);
+                    var x0 = Math.Max(0, x - 1);
+                    var x1 = Math.Max(0, x);
+                    var x2 = Math.Min(sW - 1, x + 1);
+                    var x3 = Math.Min(sW - 1, x + 2);
+                    var y0 = Math.Max(0, y - 1);
+                    var y1 = Math.Max(0, y);
+                    var y2 = Math.Min(sH - 1, y + 1);
+                    var y3 = Math.Min(sH - 1, y + 2);
 
                     var a00 = source[x0, y0];
                     var a01 = source[x0, y1];
@@ -1072,13 +1060,35 @@ namespace DS3TexUpUI
                     var a32 = source[x3, y2];
                     var a33 = source[x3, y3];
 
-                    result[x, y] = interpolator.BiInterpolate(
-                        xBlend, yBlend,
+                    sample.Assign(
                         a00, a10, a20, a30,
                         a01, a11, a21, a31,
                         a02, a12, a22, a32,
                         a03, a13, a23, a33
                     );
+
+                    var rXMin = x * scale + scaleHalf;
+                    var rYMin = y * scale + scaleHalf;
+
+                    var rXStart = Math.Max(0, rXMin);
+                    var rXEnd = Math.Min(result.Width, rXMin + scale);
+                    var rYStart = Math.Max(0, rYMin);
+                    var rYEnd = Math.Min(result.Height, rYMin + scale);
+
+                    for (int rY = rYStart; rY < rYEnd; rY++)
+                    {
+                        for (int rX = rXStart; rX < rXEnd; rX++)
+                        {
+                            // 0 <= i,j < scale
+                            var i = rX - rXMin;
+                            var j = rY - rYMin;
+
+                            var xBlend = (i + 0.5f) / scale;
+                            var yBlend = (j + 0.5f) / scale;
+
+                            result[rX, rY] = sample.Interpolate(xBlend, yBlend);
+                        }
+                    }
                 }
             }
 
