@@ -74,6 +74,7 @@ namespace DS3TexUpUI
             var encoder = new PngEncoder();
             encoder.Gamma = 1 / 2.19995f;
             encoder.ChunkFilter = PngChunkFilter.None;
+            encoder.CompressionLevel = PngCompressionLevel.BestSpeed;
             image.SaveAsPng(file, encoder);
         }
 
