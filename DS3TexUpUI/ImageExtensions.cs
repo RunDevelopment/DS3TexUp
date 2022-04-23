@@ -1030,9 +1030,9 @@ namespace DS3TexUpUI
 
             var sample = factory.createSample();
 
-            for (var y = -1; y < sW; y++)
+            for (var y = -1; y < sH; y++)
             {
-                for (var x = -1; x < sH; x++)
+                for (var x = -1; x < sW; x++)
                 {
                     var x0 = Math.Max(0, x - 1);
                     var x1 = Math.Max(0, x);
