@@ -54,7 +54,17 @@
             this.logRichTextBox = new System.Windows.Forms.RichTextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.copyColorRefTextbox = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.copyColorSmallTextbox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             //
             // label1
@@ -189,7 +199,7 @@
             //
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 273);
+            this.progressBar.Location = new System.Drawing.Point(12, 349);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(673, 23);
             this.progressBar.TabIndex = 4;
@@ -198,7 +208,7 @@
             //
             this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusTextBox.Location = new System.Drawing.Point(12, 244);
+            this.statusTextBox.Location = new System.Drawing.Point(12, 320);
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.ReadOnly = true;
             this.statusTextBox.Size = new System.Drawing.Size(673, 23);
@@ -207,7 +217,7 @@
             // label3
             //
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 226);
+            this.label3.Location = new System.Drawing.Point(12, 302);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 6;
@@ -253,7 +263,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 158);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(673, 59);
+            this.groupBox1.Size = new System.Drawing.Size(673, 54);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Misc";
@@ -287,10 +297,10 @@
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logRichTextBox.Location = new System.Drawing.Point(12, 302);
+            this.logRichTextBox.Location = new System.Drawing.Point(12, 378);
             this.logRichTextBox.Name = "logRichTextBox";
             this.logRichTextBox.ReadOnly = true;
-            this.logRichTextBox.Size = new System.Drawing.Size(673, 157);
+            this.logRichTextBox.Size = new System.Drawing.Size(673, 140);
             this.logRichTextBox.TabIndex = 11;
             this.logRichTextBox.Text = "";
             //
@@ -316,9 +326,101 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             //
+            // numericUpDown1
+            //
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Location = new System.Drawing.Point(606, 51);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDown1.TabIndex = 12;
+            //
+            // label5
+            //
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(517, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Down scale 2^";
+            //
+            // copyColorRefTextbox
+            //
+            this.copyColorRefTextbox.AllowDrop = true;
+            this.copyColorRefTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.copyColorRefTextbox.Location = new System.Drawing.Point(6, 22);
+            this.copyColorRefTextbox.Name = "copyColorRefTextbox";
+            this.copyColorRefTextbox.Size = new System.Drawing.Size(343, 23);
+            this.copyColorRefTextbox.TabIndex = 14;
+            this.copyColorRefTextbox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AcceptFileTextboxDragDrop);
+            this.copyColorRefTextbox.DragEnter += new System.Windows.Forms.DragEventHandler(this.AllowFilesDragDrop);
+            //
+            // groupBox2
+            //
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.copyColorSmallTextbox);
+            this.groupBox2.Controls.Add(this.copyColorRefTextbox);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 218);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(673, 81);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Copy color";
+            //
+            // button9
+            //
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button9.Location = new System.Drawing.Point(517, 22);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(150, 23);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "Copy color";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            //
+            // label7
+            //
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(355, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 15);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Small";
+            //
+            // label6
+            //
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(355, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 15);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Reference";
+            //
+            // copyColorSmallTextbox
+            //
+            this.copyColorSmallTextbox.AllowDrop = true;
+            this.copyColorSmallTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.copyColorSmallTextbox.Location = new System.Drawing.Point(6, 51);
+            this.copyColorSmallTextbox.Name = "copyColorSmallTextbox";
+            this.copyColorSmallTextbox.Size = new System.Drawing.Size(343, 23);
+            this.copyColorSmallTextbox.TabIndex = 14;
+            this.copyColorSmallTextbox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AcceptFileTextboxDragDrop);
+            this.copyColorSmallTextbox.DragEnter += new System.Windows.Forms.DragEventHandler(this.AllowFilesDragDrop);
+            //
             // Form1
             //
-            this.ClientSize = new System.Drawing.Size(697, 471);
+            this.ClientSize = new System.Drawing.Size(697, 530);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.logRichTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
@@ -344,6 +446,9 @@
             this.Text = "Dark Souls III TextureUp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,6 +482,14 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox copyColorRefTextbox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox copyColorSmallTextbox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button9;
     }
 }
 

@@ -701,5 +701,53 @@ namespace DS3TexUpUI
                 }
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var downScale = 1 << (int)numericUpDown1.Value;
+            var refFile = copyColorRefTextbox.Text;
+            var smallFile = copyColorSmallTextbox.Text;
+
+            RunTask(token =>
+            {
+                token.SubmitStatus("Loading files");
+                if (!File.Exists(refFile))
+                {
+                    token.SubmitLog("Error: ref file does not exist: " + refFile);
+                    return;
+                }
+                if (!File.Exists(smallFile))
+                {
+                    token.SubmitLog("Error: small file does not exist: " + smallFile);
+                    return;
+                }
+                var r = refFile.LoadTextureMap();
+                var s = smallFile.LoadTextureMap();
+
+                token.SubmitStatus("Copying color");
+                r.CopyColorFrom(s, downScale);
+
+                token.SubmitStatus("Saving result");
+                const string TargetDir = @"C:\DS3TexUp\up-manual-new";
+                var name = $"{Path.GetFileNameWithoutExtension(smallFile)}-adjusted{downScale}";
+                var target = Path.Join(TargetDir, $"{name}.png");
+                for (var i = 2; File.Exists(target); i++)
+                    target = Path.Join(TargetDir, $"{name}-{i}.png");
+                r.SaveAsPng(target);
+            });
+        }
+        private void AllowFilesDragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+                e.Effect = DragDropEffects.Link;
+        }
+        private void AcceptFileTextboxDragDrop(object sender, DragEventArgs e)
+        {
+            if (!(sender is TextBox textbox)) return;
+
+            var data = e.Data.GetData(DataFormats.FileDrop);
+            if (data is string file) textbox.Text = file;
+            if (data is string[] files) textbox.Text = files.Length == 0 ? "no files" : files[0];
+        }
     }
 }
