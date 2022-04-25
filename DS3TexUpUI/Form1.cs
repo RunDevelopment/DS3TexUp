@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -181,6 +183,10 @@ namespace DS3TexUpUI
         private void button7_Click(object sender, EventArgs e)
         {
             RunTask(CreateUpscaledDDS);
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RunTask(UpdateManualNormalAlbedo);
         }
 
         void RunTask(Action<SubProgressToken> task)
@@ -455,6 +461,118 @@ namespace DS3TexUpUI
             var unusedManual = unused.Where(f => f.StartsWith(manual)).ToHashSet().ToList();
             unusedManual.Sort();
             unusedManual.SaveAsJson("unused-manual.json");
+        }
+
+        private void UpdateManualNormalAlbedo(IProgressToken token)
+        {
+            const string ManualDir = @"C:\DS3TexUp\up-manual";
+            const string ManualDirAlbedo = ManualDir + @"\a";
+            const string ManualDirNormalAlbedo = @"C:\DS3TexUp\up-manual" + @"\n_albedo";
+            const string ManualDirAlbedoTodo = ManualDir + @"\TODO-a";
+            const string ManualDirNormalAlbedoTodo = @"C:\DS3TexUp\up-manual" + @"\TODO-n_albedo";
+
+            bool FindDuplicates(IEnumerable<string> files, string dir)
+            {
+                token.SubmitStatus("Searching for duplicates in " + dir);
+                var duplicate = files.GroupBy(TexId.FromPath).Where(g => g.Count() > 1).ToList();
+                if (duplicate.Count > 0)
+                {
+                    token.SubmitLog($"Error: Found {duplicate.Count} duplicates:");
+                    foreach (var g in duplicate.OrderBy(g => g.Key))
+                    {
+                        token.SubmitLog($"{g.Key}: {string.Join(" ", g.Select(f => Path.GetRelativePath(dir, f)))}");
+                    }
+                    return true;
+                }
+                return false;
+            }
+            bool ReadDir(string dir, out Dictionary<TexId, string> files)
+            {
+                files = new Dictionary<TexId, string>();
+
+                var list = Directory.Exists(dir)
+                    ? Directory.GetFiles(dir, "*.png", SearchOption.AllDirectories)
+                    : new string[0];
+                if (FindDuplicates(list, dir)) return false;
+                files = list.ToDictionary(TexId.FromPath);
+                return true;
+            }
+
+            if (!ReadDir(ManualDirAlbedo, out var albedo)) return;
+            if (!ReadDir(ManualDirNormalAlbedo, out var normalAlbedo)) return;
+            if (!ReadDir(ManualDirNormalAlbedoTodo, out var normalAlbedoTodo)) return;
+            if (Directory.Exists(ManualDirAlbedoTodo)) Directory.Delete(ManualDirAlbedoTodo, true);
+
+            var hashCache = new ConcurrentDictionary<string, string>();
+            static string HashFile(string path)
+            {
+                using var md5 = MD5.Create();
+                using var stream = File.OpenRead(path);
+                var hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            }
+            string GetHash(string file) => hashCache!.GetOrAdd(file, HashFile);
+
+            token.SubmitStatus("Processing TODOs");
+            token.ForAllParallel(normalAlbedoTodo, kv =>
+            {
+                var (id, file) = kv;
+
+                if (!albedo.TryGetValue(id, out var albedoFile))
+                {
+                    token.SubmitLog($"No albedo for normal albedo TODO {id}");
+                    return;
+                }
+
+                var hash = GetHash(albedoFile);
+                var target = Path.Join(ManualDirNormalAlbedo, id.Category, $"{id.Name.ToString()}-@{hash}.png");
+                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                File.Move(file, target, true);
+                lock (normalAlbedo) normalAlbedo[id] = target;
+            });
+
+            token.SubmitStatus("Removing empty directories");
+            if (Directory.Exists(ManualDirNormalAlbedoTodo))
+            {
+                foreach (var dir in Directory.GetDirectories(ManualDirNormalAlbedoTodo, "*", SearchOption.AllDirectories))
+                {
+                    if (Directory.Exists(dir) && Directory.GetFiles(dir, "*", SearchOption.AllDirectories).Length == 0)
+                        Directory.Delete(dir, true);
+                }
+            }
+
+            token.SubmitStatus("Detecting unused normal albedos");
+            token.ForAllParallel(normalAlbedo, kv =>
+            {
+                var (id, file) = kv;
+
+                static string ParseHash(string file)
+                {
+                    var name = Path.GetFileNameWithoutExtension(file);
+                    var start = name.IndexOf("-@");
+                    if (start == -1) return "";
+                    return name.Substring(start + 2).ToLowerInvariant();
+                }
+                var hash = ParseHash(file);
+
+                if (!albedo.TryGetValue(id, out var albedoFile) || hash != GetHash(albedoFile))
+                {
+                    token.SubmitLog($"Delete unused normal albedo {id}");
+                    File.Delete(file);
+                    lock (normalAlbedo) normalAlbedo.Remove(id);
+                }
+            });
+
+            token.SubmitStatus("Adding albedos without normal albedo to TODO");
+            token.ForAllParallel(albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)), kv =>
+            {
+                var (id, file) = kv;
+
+                var target = Path.Join(ManualDirAlbedoTodo, id.Category, $"{id.Name.ToString()}.png");
+                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
+                File.Copy(file, target);
+            });
         }
 
         private void button5_Click(object sender, EventArgs e)
