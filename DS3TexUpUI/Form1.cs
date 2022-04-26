@@ -186,7 +186,199 @@ namespace DS3TexUpUI
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            RunTask(UpdateManualNormalAlbedo);
+            const string ManualDir = @"C:\DS3TexUp\up-manual\";
+
+            RunTask(token =>
+            {
+                token.SubmitStatus("Searching for invalid ids");
+                var invalidFiles = Directory.GetFiles(ManualDir, "*.png", SearchOption.AllDirectories)
+                    .Where(f => !DS3.OriginalSize.ContainsKey(TexId.FromPath(f)))
+                    .ToList();
+                if (invalidFiles.Count > 0)
+                {
+                    token.SubmitLog($"Found {invalidFiles.Count} invalid files");
+                    foreach (var f in invalidFiles)
+                        token.SubmitLog($"  {f}");
+                    return;
+                }
+
+                token.SubmitStatus("Validating categories");
+                var cagetories = new (string, TexKind)[]{
+                    ("a", TexKind.Albedo),
+                    ("n_normal", TexKind.Normal),
+                    ("n_gloss", TexKind.Normal),
+                    ("r", TexKind.Reflective),
+                    ("em", TexKind.Emissive),
+                    ("m", TexKind.Mask),
+                };
+                foreach (var (relPath, kind) in cagetories)
+                {
+                    var files = Directory.GetFiles(Path.Join(ManualDir, relPath), "*.png", SearchOption.AllDirectories)
+                        .Where(f => TexId.FromPath(f).GetTexKind() != kind)
+                        .ToList();
+                    if (files.Count > 0)
+                    {
+                        token.SubmitLog($"Error: Found {files.Count} non-{kind} textures in {Path.Join(ManualDir, relPath)}:");
+                        foreach (var f in files)
+                            token.SubmitLog($"  {f}");
+                        return;
+                    }
+                }
+
+                FindUnusedManualOverwrites(token.Reserve(0));
+                UpdateManualNormalAlbedo(token);
+            });
+        }
+        private void FindUnusedManualOverwrites(IProgressToken token)
+        {
+            var p = GetProject();
+
+            var unused = new List<string>();
+            void AddUnused(IEnumerable<KeyValuePair<TexId, string>> files)
+            {
+                unused.AddRange(files.Select(kv => kv.Value));
+            }
+
+            token.SubmitStatus("Albedo");
+            AddUnused(p.Textures.Albedo.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+
+            token.SubmitStatus("Alpha");
+            AddUnused(p.Textures.Alpha.GetFiles().Where(kv => kv.Key.GetAlphaRepresentative() != kv.Key));
+
+            token.SubmitStatus("Normal normal");
+            AddUnused(p.Textures.NormalNormal.GetFiles().Where(kv => kv.Key.GetNormalRepresentative() != kv.Key));
+
+            token.SubmitStatus("Normal gloss");
+            AddUnused(p.Textures.NormalGloss.GetFiles().Where(kv => kv.Key.GetGlossRepresentative() != kv.Key));
+
+            token.SubmitStatus("Reflective");
+            AddUnused(p.Textures.Reflective.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+            token.SubmitStatus("Shininess");
+            AddUnused(p.Textures.Shininess.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+            token.SubmitStatus("Emissive");
+            AddUnused(p.Textures.Emissive.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
+
+            token.SubmitStatus("Filtering manual");
+            var manual = @"C:\DS3TexUp\up-manual\";
+            var unusedManual = unused.Where(f => f.StartsWith(manual)).ToHashSet().ToList();
+            unusedManual.Sort();
+
+            if (unusedManual.Count > 0)
+            {
+                token.SubmitLog($"Found {unusedManual.Count} unused manual texture overrides:");
+                token.SubmitLog(string.Join("\n", unusedManual.Select(s => $"  {TexId.FromPath(s)}  {s}")));
+            }
+        }
+        private void UpdateManualNormalAlbedo(IProgressToken token)
+        {
+            const string ManualDir = @"C:\DS3TexUp\up-manual";
+            const string ManualDirAlbedo = ManualDir + @"\a";
+            const string ManualDirNormalAlbedo = @"C:\DS3TexUp\up-manual" + @"\n_albedo";
+            const string ManualDirAlbedoTodo = ManualDir + @"\TODO-a";
+            const string ManualDirNormalAlbedoTodo = @"C:\DS3TexUp\up-manual" + @"\TODO-n_albedo";
+
+            bool FindDuplicates(IEnumerable<string> files, string dir)
+            {
+                token.SubmitStatus("Searching for duplicates in " + dir);
+                var duplicate = files.GroupBy(TexId.FromPath).Where(g => g.Count() > 1).ToList();
+                if (duplicate.Count > 0)
+                {
+                    token.SubmitLog($"Error: Found {duplicate.Count} duplicates:");
+                    foreach (var g in duplicate.OrderBy(g => g.Key))
+                    {
+                        token.SubmitLog($"{g.Key}: {string.Join(" ", g.Select(f => Path.GetRelativePath(dir, f)))}");
+                    }
+                    return true;
+                }
+                return false;
+            }
+            bool ReadDir(string dir, out Dictionary<TexId, string> files)
+            {
+                files = new Dictionary<TexId, string>();
+
+                var list = Directory.Exists(dir)
+                    ? Directory.GetFiles(dir, "*.png", SearchOption.AllDirectories)
+                    : new string[0];
+                if (FindDuplicates(list, dir)) return false;
+                files = list.ToDictionary(TexId.FromPath);
+                return true;
+            }
+
+            if (!ReadDir(ManualDirAlbedo, out var albedo)) return;
+            if (!ReadDir(ManualDirNormalAlbedo, out var normalAlbedo)) return;
+            if (!ReadDir(ManualDirNormalAlbedoTodo, out var normalAlbedoTodo)) return;
+            if (Directory.Exists(ManualDirAlbedoTodo)) Directory.Delete(ManualDirAlbedoTodo, true);
+
+            var hashCache = new ConcurrentDictionary<string, string>();
+            static string HashFile(string path)
+            {
+                using var md5 = MD5.Create();
+                using var stream = File.OpenRead(path);
+                var hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            }
+            string GetHash(string file) => hashCache!.GetOrAdd(file, HashFile);
+
+            token.SubmitStatus("Processing TODOs");
+            token.ForAllParallel(normalAlbedoTodo, kv =>
+            {
+                var (id, file) = kv;
+
+                if (!albedo.TryGetValue(id, out var albedoFile))
+                {
+                    token.SubmitLog($"No albedo for normal albedo TODO {id}");
+                    return;
+                }
+
+                var hash = GetHash(albedoFile);
+                var target = Path.Join(ManualDirNormalAlbedo, id.Category, $"{id.Name.ToString()}-@{hash}.png");
+                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                File.Move(file, target, true);
+                lock (normalAlbedo) normalAlbedo[id] = target;
+            });
+
+            token.SubmitStatus("Removing empty directories");
+            if (Directory.Exists(ManualDirNormalAlbedoTodo))
+            {
+                foreach (var dir in Directory.GetDirectories(ManualDirNormalAlbedoTodo, "*", SearchOption.AllDirectories))
+                {
+                    if (Directory.Exists(dir) && Directory.GetFiles(dir, "*", SearchOption.AllDirectories).Length == 0)
+                        Directory.Delete(dir, true);
+                }
+            }
+
+            token.SubmitStatus("Detecting unused normal albedos");
+            token.ForAllParallel(normalAlbedo, kv =>
+            {
+                var (id, file) = kv;
+
+                static string ParseHash(string file)
+                {
+                    var name = Path.GetFileNameWithoutExtension(file);
+                    var start = name.IndexOf("-@");
+                    if (start == -1) return "";
+                    return name.Substring(start + 2).ToLowerInvariant();
+                }
+                var hash = ParseHash(file);
+
+                if (!albedo.TryGetValue(id, out var albedoFile) || hash != GetHash(albedoFile))
+                {
+                    token.SubmitLog($"Delete unused normal albedo {id}");
+                    File.Delete(file);
+                    lock (normalAlbedo) normalAlbedo.Remove(id);
+                }
+            });
+
+            token.SubmitStatus("Adding albedos without normal albedo to TODO");
+            token.ForAllParallel(albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)), kv =>
+            {
+                var (id, file) = kv;
+
+                var target = Path.Join(ManualDirAlbedoTodo, id.Category, $"{id.Name.ToString()}.png");
+                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
+                File.Copy(file, target);
+            });
         }
 
         void RunTask(Action<SubProgressToken> task)
@@ -423,162 +615,38 @@ namespace DS3TexUpUI
                 }
             });
         }
-        private void FindUnusedManualOverwrites(IProgressToken token)
-        {
-            var p = GetProject();
-
-            var unused = new List<string>();
-            void AddUnused(IEnumerable<KeyValuePair<TexId, string>> files)
-            {
-                unused.AddRange(files.Select(kv => kv.Value));
-            }
-
-            token.SubmitStatus("Albedo");
-            AddUnused(p.Textures.Albedo.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
-
-            token.SubmitStatus("Alpha");
-            AddUnused(p.Textures.Alpha.GetFiles().Where(kv => kv.Key.GetAlphaRepresentative() != kv.Key));
-
-            token.SubmitStatus("Normal normal");
-            AddUnused(p.Textures.NormalNormal.GetFiles().Where(kv => kv.Key.GetNormalRepresentative() != kv.Key));
-
-            token.SubmitStatus("Normal gloss");
-            AddUnused(p.Textures.NormalGloss.GetFiles().Where(kv => kv.Key.GetGlossRepresentative() != kv.Key));
-
-            token.SubmitStatus("Normal albedo");
-            var na = DS3.NormalAlbedo.Values.ToHashSet();
-            AddUnused(p.Textures.NormalAlbedo.GetFiles().Where(kv => !na.Contains(kv.Key)));
-
-            token.SubmitStatus("Reflective");
-            AddUnused(p.Textures.Reflective.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
-            token.SubmitStatus("Shininess");
-            AddUnused(p.Textures.Shininess.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
-            token.SubmitStatus("Emissive");
-            AddUnused(p.Textures.Emissive.GetFiles().Where(kv => kv.Key.GetRepresentative() != kv.Key));
-
-            token.SubmitStatus("Filtering manual");
-            var manual = @"C:\DS3TexUp\up-manual\";
-            var unusedManual = unused.Where(f => f.StartsWith(manual)).ToHashSet().ToList();
-            unusedManual.Sort();
-            unusedManual.SaveAsJson("unused-manual.json");
-        }
-
-        private void UpdateManualNormalAlbedo(IProgressToken token)
-        {
-            const string ManualDir = @"C:\DS3TexUp\up-manual";
-            const string ManualDirAlbedo = ManualDir + @"\a";
-            const string ManualDirNormalAlbedo = @"C:\DS3TexUp\up-manual" + @"\n_albedo";
-            const string ManualDirAlbedoTodo = ManualDir + @"\TODO-a";
-            const string ManualDirNormalAlbedoTodo = @"C:\DS3TexUp\up-manual" + @"\TODO-n_albedo";
-
-            bool FindDuplicates(IEnumerable<string> files, string dir)
-            {
-                token.SubmitStatus("Searching for duplicates in " + dir);
-                var duplicate = files.GroupBy(TexId.FromPath).Where(g => g.Count() > 1).ToList();
-                if (duplicate.Count > 0)
-                {
-                    token.SubmitLog($"Error: Found {duplicate.Count} duplicates:");
-                    foreach (var g in duplicate.OrderBy(g => g.Key))
-                    {
-                        token.SubmitLog($"{g.Key}: {string.Join(" ", g.Select(f => Path.GetRelativePath(dir, f)))}");
-                    }
-                    return true;
-                }
-                return false;
-            }
-            bool ReadDir(string dir, out Dictionary<TexId, string> files)
-            {
-                files = new Dictionary<TexId, string>();
-
-                var list = Directory.Exists(dir)
-                    ? Directory.GetFiles(dir, "*.png", SearchOption.AllDirectories)
-                    : new string[0];
-                if (FindDuplicates(list, dir)) return false;
-                files = list.ToDictionary(TexId.FromPath);
-                return true;
-            }
-
-            if (!ReadDir(ManualDirAlbedo, out var albedo)) return;
-            if (!ReadDir(ManualDirNormalAlbedo, out var normalAlbedo)) return;
-            if (!ReadDir(ManualDirNormalAlbedoTodo, out var normalAlbedoTodo)) return;
-            if (Directory.Exists(ManualDirAlbedoTodo)) Directory.Delete(ManualDirAlbedoTodo, true);
-
-            var hashCache = new ConcurrentDictionary<string, string>();
-            static string HashFile(string path)
-            {
-                using var md5 = MD5.Create();
-                using var stream = File.OpenRead(path);
-                var hash = md5.ComputeHash(stream);
-                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-            }
-            string GetHash(string file) => hashCache!.GetOrAdd(file, HashFile);
-
-            token.SubmitStatus("Processing TODOs");
-            token.ForAllParallel(normalAlbedoTodo, kv =>
-            {
-                var (id, file) = kv;
-
-                if (!albedo.TryGetValue(id, out var albedoFile))
-                {
-                    token.SubmitLog($"No albedo for normal albedo TODO {id}");
-                    return;
-                }
-
-                var hash = GetHash(albedoFile);
-                var target = Path.Join(ManualDirNormalAlbedo, id.Category, $"{id.Name.ToString()}-@{hash}.png");
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
-                File.Move(file, target, true);
-                lock (normalAlbedo) normalAlbedo[id] = target;
-            });
-
-            token.SubmitStatus("Removing empty directories");
-            if (Directory.Exists(ManualDirNormalAlbedoTodo))
-            {
-                foreach (var dir in Directory.GetDirectories(ManualDirNormalAlbedoTodo, "*", SearchOption.AllDirectories))
-                {
-                    if (Directory.Exists(dir) && Directory.GetFiles(dir, "*", SearchOption.AllDirectories).Length == 0)
-                        Directory.Delete(dir, true);
-                }
-            }
-
-            token.SubmitStatus("Detecting unused normal albedos");
-            token.ForAllParallel(normalAlbedo, kv =>
-            {
-                var (id, file) = kv;
-
-                static string ParseHash(string file)
-                {
-                    var name = Path.GetFileNameWithoutExtension(file);
-                    var start = name.IndexOf("-@");
-                    if (start == -1) return "";
-                    return name.Substring(start + 2).ToLowerInvariant();
-                }
-                var hash = ParseHash(file);
-
-                if (!albedo.TryGetValue(id, out var albedoFile) || hash != GetHash(albedoFile))
-                {
-                    token.SubmitLog($"Delete unused normal albedo {id}");
-                    File.Delete(file);
-                    lock (normalAlbedo) normalAlbedo.Remove(id);
-                }
-            });
-
-            token.SubmitStatus("Adding albedos without normal albedo to TODO");
-            token.ForAllParallel(albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)), kv =>
-            {
-                var (id, file) = kv;
-
-                var target = Path.Join(ManualDirAlbedoTodo, id.Category, $"{id.Name.ToString()}.png");
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
-                Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
-                File.Copy(file, target);
-            });
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             // m37_00_00_00_020151
             var w = GetWorkspace();
+
+            var ids = ParseCurrent().ids;
+            var rep = DS3.RepresentativeOf.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
+            var na = DS3.NormalAlbedo.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
+            ids = ids.SelectMany(id => rep.GetOrNew(id).Append(id)).SelectMany(id => na.GetOrNew(id).Append(id)).ToHashSet();
+            Clipboard.SetText(string.Join("\n", ids));
+
+            // var tiles = new Dictionary<TexId, List<Tile>>();
+            // foreach (var id in ParseCurrent().ids)
+            // {
+            //     tiles.Add(id, new List<Tile>() {
+            //         new Tile(2, 0, 0, 1, 1),
+            //         new Tile(2, 0, 1, 1, 1),
+            //         new Tile(2, 1, 0, 1, 1),
+            //         new Tile(2, 1, 1, 1, 1),
+            //     });
+
+            //     var t = Path.Join(@"C:\DS3TexUp\bar", $"{id.Category.ToString()}-{id.Name.ToString()}.dds");
+            //     File.Copy(w.GetExtractPath(id), t);
+            // }
+            // tiles.SaveAsJson("tiles-2.json");
+
+            // var l = @"C:\DS3TexUp\up-manual-new\o962120_o2120_a.png".LoadTextureMap();
+            // var s = @"C:\DS3TexUp\up-manual-new\m30_00_o962120_02_a-1x_BC1-smooth2.png".LoadTextureMap();
+            // l.CopyColorFrom(s, downScale: 1);
+            // l.SaveAsPng(@"C:\DS3TexUp\up-manual-new\m30_00_o962120_02_a.png");
+
 
             // RunTask(token =>
             // {
