@@ -207,16 +207,18 @@ namespace DS3TexUpUI
             var nZ = n.Z < 0.001 ? 0.001f : n.Z;
             var mZ = m.Z < 0.001 ? 0.001f : m.Z;
 
-            var nF = nStrength / -nZ;
-            var mF = mStrength / -mZ;
+            var nF = nStrength / nZ;
+            var mF = mStrength / mZ;
 
-            var a = new Vector3(1f, 0f, n.X * nF + m.X * mF);
-            var b = new Vector3(0f, 1f, n.Y * nF + m.Y * mF);
+            var aZ = n.X * nF + m.X * mF;
+            var bZ = n.Y * nF + m.Y * mF;
 
-            var r = Vector3.Cross(a, b);
-            if (r.Z < 0f) r = -r;
+            var lR = 1 / MathF.Sqrt(aZ * aZ + bZ * bZ + 1);
+            var x = aZ * lR;
+            var y = bZ * lR;
+            var z = lR;
 
-            return FromVector(r);
+            return new Normal(x, y, z);
         }
 
         public (byte r, byte g) ToRG() => (
