@@ -18,6 +18,7 @@ namespace DS3TexUpUI
         public Workspace Workspace { get; }
         public UpscaledTextures Textures { get; set; } = new UpscaledTextures();
         public string TemporaryDir { get; set; }
+        public Dictionary<TexId, DDSFormat> FormatOverrides { get; set; } = new Dictionary<TexId, DDSFormat>();
 
         public UpscaleProject(Workspace workspace)
         {
@@ -75,7 +76,11 @@ namespace DS3TexUpUI
             try
             {
                 var format = DS3.OutputFormat[id];
-                if (upscale >= 4 && id.GetTexKind() == TexKind.Normal && !HasAlpha(id) && format == DxgiFormat.BC7_UNORM)
+                if (FormatOverrides.TryGetValue(id, out var overrideFormat))
+                {
+                    format = overrideFormat;
+                }
+                else if (upscale >= 4 && id.GetTexKind() == TexKind.Normal && !HasAlpha(id) && format == DxgiFormat.BC7_UNORM)
                 {
                     var (width, height) = DS3.OriginalSize[id];
                     var targetPixels = upscale * upscale * width * height;

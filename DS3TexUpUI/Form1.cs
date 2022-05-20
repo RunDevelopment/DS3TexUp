@@ -560,7 +560,8 @@ namespace DS3TexUpUI
 
             token.SubmitStatus("Loading upscale factors");
             var dir = Data.Dir(Data.Source.Local);
-            var outputUpscale = DS3.UpscaleFactor.LoadFromDir(Data.Dir(Data.Source.Local));
+            var outputUpscale = DS3.UpscaleFactor.LoadFromDir(dir);
+            p.FormatOverrides = Path.Join(dir, @"output-format-override.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
             if (Data.HasLocal)
                 token.SubmitLog("Using local data dir for upscale factors: " + Path.GetFullPath(dir));
             else
