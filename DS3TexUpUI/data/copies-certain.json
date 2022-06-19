@@ -18782,6 +18782,14 @@
 		"parts/FG_A_1602_FG_A_1602_a"
 	],
 	[
+		"parts/FG_A_1500_FG_A_1500_r",
+		"parts/FG_A_1501_FG_A_1501_r",
+		"parts/FG_A_1502_FG_A_1502_r",
+		"parts/FG_A_1600_FG_A_1600_r",
+		"parts/FG_A_1601_FG_A_1601_r",
+		"parts/FG_A_1602_FG_A_1602_r"
+	],
+	[
 		"parts/FG_A_1503_FG_A_1503_a",
 		"parts/FG_A_1504_FG_A_1504_a",
 		"parts/FG_A_1505_FG_A_1505_a",
@@ -18945,6 +18953,27 @@
 		"parts/HR_A_0109_HR_A_0000_a",
 		"parts/HR_A_0110_HR_A_0000_a",
 		"parts/HR_A_0111_HR_A_0000_a"
+	],
+	[
+		"parts/HR_A_0002_HR_A_0000_r",
+		"parts/HR_A_0003_HR_A_0000_r",
+		"parts/HR_A_0005_HR_A_0000_r",
+		"parts/HR_A_0006_HR_A_0000_r",
+		"parts/HR_A_0007_HR_A_0000_r",
+		"parts/HR_A_0008_HR_A_0000_r",
+		"parts/HR_A_0009_HR_A_0000_r",
+		"parts/HR_A_0010_HR_A_0000_r",
+		"parts/HR_A_0011_HR_A_0000_r",
+		"parts/HR_A_0101_HR_A_0000_r",
+		"parts/HR_A_0102_HR_A_0000_r",
+		"parts/HR_A_0103_HR_A_0000_r",
+		"parts/HR_A_0104_HR_A_0000_r",
+		"parts/HR_A_0105_HR_A_0000_r",
+		"parts/HR_A_0106_HR_A_0000_r",
+		"parts/HR_A_0108_HR_A_0000_r",
+		"parts/HR_A_0109_HR_A_0000_r",
+		"parts/HR_A_0110_HR_A_0000_r",
+		"parts/HR_A_0111_HR_A_0000_r"
 	],
 	[
 		"parts/HR_A_0009_HR_A_0009_a",
@@ -19189,6 +19218,28 @@
 		"parts/WP_A_7611_WP_A_7610_a"
 	],
 	[
+		"parts/WP_A_7000_WP_A_7000_r",
+		"parts/WP_A_7001_WP_A_7000_r",
+		"parts/WP_A_7010_WP_A_7010_r",
+		"parts/WP_A_7011_WP_A_7010_r",
+		"parts/WP_A_7020_WP_A_7020_r",
+		"parts/WP_A_7021_WP_A_7020_r",
+		"parts/WP_A_7030_WP_A_7030_r",
+		"parts/WP_A_7031_WP_A_7030_r",
+		"parts/WP_A_7040_WP_A_7040_r",
+		"parts/WP_A_7041_WP_A_7040_r",
+		"parts/WP_A_7060_WP_A_7060_r",
+		"parts/WP_A_7061_WP_A_7060_r",
+		"parts/WP_A_7600_WP_A_7600_r",
+		"parts/WP_A_7601_WP_A_7600_r",
+		"parts/WP_A_7610_WP_A_7610_r",
+		"parts/WP_A_7611_WP_A_7610_r",
+		"parts/WP_A_7620_WP_A_7620_r",
+		"parts/WP_A_7621_WP_A_7620_r",
+		"parts/WP_A_7630_WP_A_7630_r",
+		"parts/WP_A_7631_WP_A_7630_r"
+	],
+	[
 		"parts/WP_A_7010_WP_A_7010_a",
 		"parts/WP_A_7011_WP_A_7010_a",
 		"parts/WP_A_7020_WP_A_7020_a",
@@ -19280,6 +19331,10 @@
 		"parts/WP_A_7650_WP_A_7650_r",
 		"parts/WP_A_7651_WP_A_7650_r",
 		"sfx/commoneffects_s08025_r"
+	],
+	[
+		"parts/WP_A_7660_WP_A_7660_a",
+		"parts/WP_A_7661_WP_A_7660_a"
 	],
 	[
 		"parts/WP_A_7660_WP_A_7660_n",
