@@ -27,6 +27,7 @@ namespace DS3TexUpUI
             [typeof(Size)] = new SizeConverter(),
             [typeof(DDSFormat)] = new StringParsingConverter<DDSFormat>(DDSFormat.Parse),
             [typeof(ColorCode6x6)] = new StringParsingConverter<ColorCode6x6>(ColorCode6x6.Parse),
+            [typeof(Tile)] = new StringParsingConverter<Tile>(Tile.Parse),
             [typeof(HashSet<TexId>)] = new TexIdHashSetConverter(),
             [typeof(DS3.AlbedoNormalReflective)] = new AlbedoNormalReflectiveConverter(),
             [typeof(List<Metalness.DataPoint>)] = new MetalnessDataPointsConverter(),

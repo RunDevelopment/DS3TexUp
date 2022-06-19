@@ -1,0 +1,268 @@
+{
+	"m30/m30_00_o302550_weapon_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:4",
+		"Tile 4 x:3 y:0 w:1 h:4"
+	],
+	"m30/m30_00_o302550_weapon_r": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:4",
+		"Tile 4 x:3 y:0 w:1 h:4"
+	],
+	"m30/m30_00_o309307_book_01_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m33/m33_00_c3040_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m33/m33_00_c3040_r": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m33/m33_00_M5500_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m33/m33_00_M5500_r": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m34/m34_00_o309307_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m41/m41_00_o302550_weapon_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:4",
+		"Tile 4 x:3 y:0 w:1 h:4"
+	],
+	"m45/m45_00_decal_set_a": [
+		"Tile 4 x:0 y:0 w:1 h:1",
+		"Tile 4 x:0 y:1 w:1 h:1",
+		"Tile 4 x:0 y:2 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:0 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:1 y:2 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:2 y:1 w:1 h:1",
+		"Tile 4 x:2 y:2 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 4 x:3 y:1 w:1 h:1",
+		"Tile 4 x:3 y:2 w:1 h:1",
+		"Tile 4 x:3 y:3 w:1 h:1"
+	],
+	"m45/m45_00_meshes_set_01_a": [
+		"Tile 4 x:0 y:0 w:1 h:1",
+		"Tile 4 x:1 y:0 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:3 w:1 h:1",
+		"Tile 8 x:0 y:2 w:1 h:2"
+	],
+	"m45/m45_00_meshes_set_01_r": [
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 8 x:0 y:2 w:1 h:2"
+	],
+	"m45/m45_00_meshes_set_02_a": [
+		"Tile 4 x:0 y:0 w:1 h:1",
+		"Tile 4 x:1 y:0 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:3 w:1 h:1",
+		"Tile 8 x:0 y:2 w:1 h:2"
+	],
+	"m45/m45_00_meshes_set_a": [
+		"Tile 4 x:0 y:0 w:1 h:1",
+		"Tile 4 x:1 y:0 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 4 x:0 y:1 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:2 y:1 w:1 h:1",
+		"Tile 4 x:0 y:2 w:1 h:1",
+		"Tile 4 x:2 y:2 w:1 h:1",
+		"Tile 4 x:3 y:2 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:3 w:1 h:1",
+		"Tile 8 x:6 y:2 w:1 h:1",
+		"Tile 8 x:7 y:2 w:1 h:1",
+		"Tile 8 x:6 y:3 w:1 h:1",
+		"Tile 8 x:7 y:3 w:1 h:1",
+		"Tile 8 x:2 y:4 w:1 h:1",
+		"Tile 8 x:3 y:4 w:1 h:1",
+		"Tile 8 x:2 y:5 w:1 h:1",
+		"Tile 8 x:3 y:5 w:1 h:1"
+	],
+	"m45/m45_00_weapon_set_a": [
+		"Tile 4 x:2 y:2 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:2 w:1 h:2",
+		"Tile 4 x:0 y:2 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:2 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 8 x:4 y:2 w:2 h:1",
+		"Tile 8 x:6 y:2 w:2 h:1",
+		"Tile 8 x:4 y:3 w:4 h:1",
+		"Tile 8 x:1 y:0 w:1 h:2",
+		"Tile 8 x:2 y:0 w:1 h:4",
+		"Tile 16 x:0 y:0 w:1 h:4",
+		"Tile 16 x:1 y:0 w:1 h:4",
+		"Tile 16 x:6 y:0 w:1 h:8",
+		"Tile 16 x:0 y:4 w:1 h:4",
+		"Tile 16 x:1 y:4 w:1 h:4",
+		"Tile 16 x:2 y:4 w:1 h:4"
+	],
+	"m45/m45_00_weapon_set_r": [
+		"Tile 4 x:2 y:2 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:2 w:1 h:2",
+		"Tile 4 x:0 y:2 w:1 h:1",
+		"Tile 4 x:0 y:3 w:1 h:1",
+		"Tile 4 x:1 y:2 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:1",
+		"Tile 4 x:3 y:0 w:1 h:1",
+		"Tile 8 x:4 y:2 w:2 h:1",
+		"Tile 8 x:6 y:2 w:2 h:1",
+		"Tile 8 x:4 y:3 w:4 h:1",
+		"Tile 8 x:1 y:0 w:1 h:2",
+		"Tile 8 x:2 y:0 w:1 h:4",
+		"Tile 16 x:0 y:0 w:1 h:4",
+		"Tile 16 x:1 y:0 w:1 h:4",
+		"Tile 16 x:6 y:0 w:1 h:8",
+		"Tile 16 x:0 y:4 w:1 h:4",
+		"Tile 16 x:1 y:4 w:1 h:4",
+		"Tile 16 x:2 y:4 w:1 h:4"
+	],
+	"m50/m50_00_o302550_weapon_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:4",
+		"Tile 4 x:3 y:0 w:1 h:4"
+	],
+	"m50/m50_00_o302550_weapon_r": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:4",
+		"Tile 4 x:3 y:0 w:1 h:4"
+	],
+	"m51/m51_00_Architecture_meshset_00_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_01_a": [
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1",
+		"Tile 4 x:1 y:2 w:1 h:1",
+		"Tile 4 x:1 y:3 w:1 h:1",
+		"Tile 4 x:0 y:2 w:1 h:2",
+		"Tile 4 x:0 y:1 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:0 y:0 w:2 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_02_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_04_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_05_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_06_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_Architecture_meshset_07_a": [
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1",
+		"Tile 4 x:0 y:0 w:2 h:1",
+		"Tile 4 x:0 y:1 w:1 h:1",
+		"Tile 4 x:1 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:1 h:2",
+		"Tile 8 x:6 y:0 w:1 h:2",
+		"Tile 8 x:6 y:2 w:1 h:2",
+		"Tile 8 x:7 y:0 w:1 h:4"
+	],
+	"m51/m51_00_Building_00_a": [
+		"Tile 2 x:0 y:0 w:1 h:2",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 4 x:2 y:2 w:1 h:1",
+		"Tile 4 x:3 y:2 w:1 h:1",
+		"Tile 4 x:2 y:3 w:1 h:1",
+		"Tile 4 x:3 y:3 w:1 h:1"
+	],
+	"m51/m51_00_Building_02_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"m51/m51_00_ivy_Meshset_00_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1",
+		"Tile 4 x:2 y:0 w:2 h:1",
+		"Tile 4 x:2 y:1 w:2 h:1"
+	],
+	"obj/o401250_o401250_smith_tools_01_a": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	],
+	"obj/o401250_o401250_smith_tools_01_r": [
+		"Tile 2 x:0 y:0 w:1 h:1",
+		"Tile 2 x:0 y:1 w:1 h:1",
+		"Tile 2 x:1 y:0 w:1 h:1",
+		"Tile 2 x:1 y:1 w:1 h:1"
+	]
+}
