@@ -1257,7 +1257,7 @@ namespace DS3TexUpUI
         public static void CopyColorFrom(this ArrayTextureMap<Rgba32> map, ArrayTextureMap<Rgba32> source, int downScale = 1)
         {
             if (downScale < 1) throw new ArgumentOutOfRangeException(nameof(downScale));
-            if (downScale > 1) source = source.DownSample(Average.Rgba32GammaAlpha, downScale);
+            if (downScale > 1) source = source.DownSample(Average.Rgba32, downScale);
 
             var factor = map.Width / source.Width;
             if (factor < 2) throw new Exception("The source image has to be smaller than this image");
@@ -1265,7 +1265,7 @@ namespace DS3TexUpUI
             var sourceRgb = source.UpSample(factor, BiCubic.Rgba);
             CheckSameSize(map, sourceRgb);
 
-            var mapRgb = map.DownSample(Average.Rgba32GammaAlpha, factor).UpSample(factor, BiCubic.Rgba);
+            var mapRgb = map.DownSample(Average.Rgba32, factor).UpSample(factor, BiCubic.Rgba);
 
             for (int y = 0; y < map.Height; y++)
             {
