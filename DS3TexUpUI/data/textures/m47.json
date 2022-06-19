@@ -6,53 +6,53 @@
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a",
-					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n"
+					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n",
+					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a"
 				}
 			},
 			{
 				"Name": "o4800_wall01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
 				"Textures": {
-					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
-					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
-					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a",
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_brickWall_03_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			},
 			{
 				"Name": "brick",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a"
 				}
 			},
 			{
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a"
 				}
 			}
 		]
@@ -64,137 +64,137 @@
 				"Name": "o4800_roof01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_roof_01_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_roof_01_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_o309100_roof_01_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a"
 				}
 			},
 			{
 				"Name": "o4800_wall01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
 				"Textures": {
-					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
-					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
-					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a",
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_brickWall_03_a",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_brickWall_03_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m40_00_wall_012_n",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m40_00_wall_012_a"
 				}
 			},
 			{
 				"Name": "Material #149479305",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_edge_01_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m30_00_o309100_edge_01_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m30_00_o309100_edge_01_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a"
 				}
 			},
 			{
 				"Name": "o309120_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a"
 				}
 			},
 			{
 				"Name": "Material #149479328",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m40_00_wall_012_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_m40_00_wall_012_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_m40_00_wall_012_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a"
 				}
 			},
 			{
 				"Name": "\u738B\u57CE2\u6C4E\u7528\u58C1_2m",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o309100_wall_01_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o309100_wall_03_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_mask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o309100_wall_01_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o309100_wall_01_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o309100_wall_03_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o309100_wall_03_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o309100_wall_03_a"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o309100_edge_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o309100_edge_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o309100_edge_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o309100_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o309110_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309120_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309120_frame_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309120_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o309320_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309100_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o309100_edge_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o309100_edge_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o309100_edge_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o309100_edge_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			},
 			{
 				"Name": "brick",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_brickWall_03_a"
 				}
 			}
 		]
@@ -206,18 +206,18 @@
 				"Name": "Weapon",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n",
 					"g_DiffuseTexture": "m47/m47_00_o302550_weapon_a",
-					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r",
-					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n"
+					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r"
 				}
 			},
 			{
 				"Name": "o302550_body",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n",
 					"g_DiffuseTexture": "m47/m47_00_o302550_weapon_a",
-					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r",
-					"g_BumpmapTexture": "m47/m47_00_o302550_weapon_n"
+					"g_SpecularTexture": "m47/m47_00_o302550_weapon_r"
 				}
 			}
 		]
@@ -229,28 +229,28 @@
 				"Name": "Material #2",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
 				"Textures": {
-					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
-					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_m40_00_x_ground_03_a",
-					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a",
-					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m47/m47_00_m40_00_x_floor_03_white_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_ash_01_m",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
 					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_ash_100_n",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_m40_00_x_ground_02_n",
 					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
-					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m47/m47_00_m40_00_x_floor_03_white_n"
+					"MultiBlend4_et1_snp_Texture2D_16_GSBlendMap_NormalMap_3": "m47/m47_00_m40_00_x_floor_03_white_n",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_m40_00_x_ground_03_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a",
+					"MultiBlend4_et1_snp_Texture2D_4_GSBlendMap_AlbedoMap_3": "m47/m47_00_m40_00_x_floor_03_white_a"
 				}
 			},
 			{
 				"Name": "Material #4",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_3m_l.mtd",
 				"Textures": {
-					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
-					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364045_wall_01_a",
-					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a",
 					"MultiBlend3_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m30_00_ash_01_m",
+					"MultiBlend3_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_ash_101_a",
 					"MultiBlend3_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_ash_100_n",
 					"MultiBlend3_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364045_wall_01_n",
-					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"MultiBlend3_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"MultiBlend3_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364045_wall_01_a",
+					"MultiBlend3_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_m30_00_o329222_2_rubble_02_a"
 				}
 			}
 		]
@@ -262,21 +262,21 @@
 				"Name": "m41_00_o364040_bark_03",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
 				"Textures": {
-					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
-					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
-					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_o324110_mask_image_m",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
 					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364040_bark_03_n",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364040_moss_n",
-					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n"
+					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a"
 				}
 			},
 			{
 				"Name": "Material #4",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a"
 				}
 			}
 		]
@@ -288,21 +288,21 @@
 				"Name": "m41_00_o364040_bark_03",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_4m_l.mtd",
 				"Textures": {
-					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
-					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
-					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a",
 					"MultiBlend4_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_o324110_mask_image_m",
+					"MultiBlend4_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364040_bark_03_a",
 					"MultiBlend4_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364040_bark_03_n",
 					"MultiBlend4_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_o364040_moss_n",
-					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n"
+					"MultiBlend4_et1_snp_Texture2D_15_GSBlendMap_NormalMap_2": "m47/m47_00_o364041_bark_n",
+					"MultiBlend4_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_o364040_moss_a",
+					"MultiBlend4_et1_snp_Texture2D_3_GSBlendMap_AlbedoMap_2": "m47/m47_00_o364041_bark_a"
 				}
 			},
 			{
 				"Name": "Material #1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a"
 				}
 			}
 		]
@@ -328,8 +328,8 @@
 				"Name": "Material #4848",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
 					"g_BumpmapTexture": "m47/m47_00_m27_00_grass_002_n",
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
 					"g_EmissiveTexture": "m47/m47_00_m27_00_grass_002_emissive_a"
 				}
 			},
@@ -337,8 +337,8 @@
 				"Name": "Material #4849",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
 					"g_BumpmapTexture": "m47/m47_00_m27_00_m22_00_house_700_500_n",
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
 					"g_EmissiveTexture": "m47/m47_00_m27_00_m22_00_house_700_500_emissive_a"
 				}
 			}
@@ -365,8 +365,8 @@
 				"Name": "Material #4848",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
 					"g_BumpmapTexture": "m47/m47_00_m27_00_grass_002_n",
+					"g_DiffuseTexture": "m47/m47_00_m27_00_grass_002_a",
 					"g_EmissiveTexture": "m47/m47_00_m27_00_grass_002_emissive_a"
 				}
 			},
@@ -374,8 +374,8 @@
 				"Name": "Material #4849",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_em_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
 					"g_BumpmapTexture": "m47/m47_00_m27_00_m22_00_house_700_500_n",
+					"g_DiffuseTexture": "m47/m47_00_m27_00_m22_00_house_700_500_a",
 					"g_EmissiveTexture": "m47/m47_00_m27_00_m22_00_house_700_500_emissive_a"
 				}
 			}
@@ -388,32 +388,32 @@
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			},
 			{
 				"Name": "o324102_07",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a"
 				}
 			},
 			{
 				"Name": "o329222_pubble",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			}
 		]
@@ -425,16 +425,16 @@
 				"Name": "Material #149480396",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480397",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			}
 		]
@@ -446,32 +446,32 @@
 				"Name": "o324102_07",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a"
 				}
 			},
 			{
 				"Name": "o329222_pubble",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			}
 		]
@@ -483,32 +483,32 @@
 				"Name": "o324102_07",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a"
 				}
 			},
 			{
 				"Name": "o329222_pubble",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			}
 		]
@@ -520,32 +520,32 @@
 				"Name": "o324102_07",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a"
 				}
 			},
 			{
 				"Name": "o329222_pubble",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			}
 		]
@@ -557,32 +557,32 @@
 				"Name": "o324102_07",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o324102_07_brick_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o324102_07_brick_01_a"
 				}
 			},
 			{
 				"Name": "o329222_pubble",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329222_2_rubble_01_a"
 				}
 			},
 			{
 				"Name": "Material #149480386",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a",
-					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n"
+					"g_BumpmapTexture": "m47/m47_00_m32_00_o324005_ruins_n",
+					"g_DiffuseTexture": "m47/m47_00_m32_00_o324005_ruins_a"
 				}
 			},
 			{
 				"Name": "Material #149480388",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a",
-					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n"
+					"g_BumpmapTexture": "m47/m47_00_m30_00_o329223_02_rock_01_n",
+					"g_DiffuseTexture": "m47/m47_00_m30_00_o329223_02_rock_01_a"
 				}
 			}
 		]
@@ -594,8 +594,8 @@
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a"
 				}
 			}
 		]
@@ -607,8 +607,8 @@
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364040_bark_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364040_bark_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364040_bark_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364040_bark_01_a"
 				}
 			}
 		]
@@ -620,16 +620,16 @@
 				"Name": "o364041_bark",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a",
-					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n"
+					"g_BumpmapTexture": "m47/m47_00_o364041_bark_n",
+					"g_DiffuseTexture": "m47/m47_00_o364041_bark_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			}
 		]
@@ -641,35 +641,35 @@
 				"Name": "o364041_weeds_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_01_a"
 				}
 			},
 			{
 				"Name": "wall_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a"
 				}
 			},
 			{
 				"Name": "Material #148",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364045_wall_01_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m47/m47_00_m32_00_blendmask_01_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m47/m47_00_o364045_wall_01_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m47/m47_00_o364045_wall_01_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m47/m47_00_ash_100_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m47/m47_00_ash_100_a"
 				}
 			},
 			{
 				"Name": "Material #14",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l_e.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364041_weeds_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364041_weeds_02_a"
 				}
 			}
 		]
@@ -681,8 +681,8 @@
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a"
 				}
 			}
 		]
@@ -694,8 +694,8 @@
 				"Name": "o364045_bark_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_bark_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_bark_01_a"
 				}
 			}
 		]
@@ -707,8 +707,8 @@
 				"Name": "Material #144",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_wall_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_wall_01_a"
 				}
 			}
 		]
@@ -720,16 +720,16 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -741,24 +741,24 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -770,24 +770,24 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -799,24 +799,24 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -828,16 +828,16 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -849,16 +849,16 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -870,16 +870,16 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -891,24 +891,24 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -920,24 +920,24 @@
 				"Name": "0364045_treeroot_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_01_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_01_a"
 				}
 			},
 			{
 				"Name": "o364045_treeroot_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treeroot_02_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treeroot_02_a"
 				}
 			},
 			{
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -949,8 +949,8 @@
 				"Name": "treehole",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a",
-					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n"
+					"g_BumpmapTexture": "m47/m47_00_o364045_treehole_n",
+					"g_DiffuseTexture": "m47/m47_00_o364045_treehole_a"
 				}
 			}
 		]
@@ -997,11 +997,11 @@
 				"Name": "\u5C71\u30D6\u30EC\u30F3\u30C93",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m47/m47_00_m32_00_Mountain_a",
-					"g_DiffuseTexture2": "m47/m47_00_m32_00_Outside_Snow_a",
+					"g_BlendMaskTexture": "m47/m47_00_m37_00_Mountain_100_m",
 					"g_BumpmapTexture": "m47/m47_00_m37_00_Mountain_102_n",
 					"g_BumpmapTexture2": "m47/m47_00_m37_00_Mountain_102_n",
-					"g_BlendMaskTexture": "m47/m47_00_m37_00_Mountain_100_m"
+					"g_DiffuseTexture": "m47/m47_00_m32_00_Mountain_a",
+					"g_DiffuseTexture2": "m47/m47_00_m32_00_Outside_Snow_a"
 				}
 			}
 		]

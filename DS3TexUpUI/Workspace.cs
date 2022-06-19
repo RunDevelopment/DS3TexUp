@@ -164,10 +164,7 @@ namespace DS3TexUpUI
 
             var files = Directory
                 .GetFiles(PartsDir, "*.partsbnd.dcx", SearchOption.TopDirectoryOnly)
-                .Select(f => Path.GetFileName(f))
-                .Select(f => f.Substring(0, f.Length - ".partsbnd.dcx".Length))
-                .Intersect(DS3.Parts)
-                .Select(f => Path.Join(PartsDir, f + ".partsbnd.dcx"))
+                .Where(f => !f.EndsWith("_l.partsbnd.dcx"))
                 .ToArray();
 
             token.SubmitStatus($"Unpacking {files.Length} parts files");
@@ -182,7 +179,7 @@ namespace DS3TexUpUI
                 {
                     // XX_X_XXXX
                     var id = Path.GetFileName(d).Substring(0, 9).ToUpperInvariant();
-                    var type = id.StartsWith("WP") ? "Weapon" : "FullBody";
+                    var type = GetPartsType(id);
                     return Path.Join(d, "parts", type, id, id + ".tpf");
                 })
                 .Where(File.Exists)
@@ -302,7 +299,7 @@ namespace DS3TexUpUI
         }
         private List<TexFile> GetHighResMapTexFiles(SubProgressToken token, string map)
         {
-            token.SubmitStatus($"Seaching for {map} textue files");
+            token.SubmitStatus($"Searching for {map} texture files");
             token.SubmitProgress(0);
 
             var result = GetUnpackedMapTextureFolders(map)
@@ -327,7 +324,7 @@ namespace DS3TexUpUI
         }
         private List<TexFile> GetChrTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Seaching for chr textue files");
+            token.SubmitStatus($"Searching for chr texture files");
             token.SubmitProgress(0);
 
             var result = Directory
@@ -353,7 +350,7 @@ namespace DS3TexUpUI
         }
         private List<TexFile> GetObjTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Seaching for obj textue files");
+            token.SubmitStatus($"Searching for obj texture files");
             token.SubmitProgress(0);
 
             var result = Directory
@@ -383,7 +380,7 @@ namespace DS3TexUpUI
         }
         private List<TexFile> GetPartsTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Seaching for parts textue files");
+            token.SubmitStatus($"Searching for parts texture files");
             token.SubmitProgress(0);
 
             var result = Directory
@@ -392,7 +389,7 @@ namespace DS3TexUpUI
                 {
                     // XX_X_XXXX
                     var id = Path.GetFileName(d).Substring(0, 9).ToUpperInvariant();
-                    var type = id.StartsWith("WP") ? "Weapon" : "FullBody";
+                    var type = GetPartsType(id);
 
                     var tpf = Path.Join(d, "parts", type, id, id + "-tpf");
 
@@ -415,7 +412,7 @@ namespace DS3TexUpUI
         }
         private List<TexFile> GetSfxTexFiles(SubProgressToken token)
         {
-            token.SubmitStatus($"Seaching for sfx textue files");
+            token.SubmitStatus($"Searching for sfx texture files");
             token.SubmitProgress(0);
 
             var result = Directory
@@ -818,6 +815,22 @@ namespace DS3TexUpUI
                 list.AddRange(Directory.GetDirectories(folder, "m*-tpf-dcx", SearchOption.TopDirectoryOnly));
 
             return list.ToArray();
+        }
+
+        internal static string GetPartsType(string name)
+        {
+            return name.Substring(0, 2).ToUpperInvariant() switch
+            {
+                "AM" => "FullBody",
+                "BD" => "FullBody",
+                "FC" => "Face",
+                "FG" => "Face",
+                "HD" => "FullBody",
+                "HR" => "Hair",
+                "LG" => "FullBody",
+                "WP" => "Weapon",
+                _ => throw new Exception("Invalid parts name: " + name)
+            };
         }
     }
 

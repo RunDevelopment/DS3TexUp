@@ -247,7 +247,8 @@
 	],
 	[
 		"chr/c1109_c1109_scarf_01_n",
-		"obj/o398720_o398720_c1109_scarf_01_n"
+		"obj/o398720_o398720_c1109_scarf_01_n",
+		"parts/HD_M_4010_HD_M_4010_n"
 	],
 	[
 		"chr/c1109_c1109_shoes2_n",
@@ -416,6 +417,10 @@
 		"chr/c1240_c1240_weapons_3_n",
 		"chr/c1241_c1241_weapons_3_n",
 		"parts/WP_A_0816_WP_A_0816_n"
+	],
+	[
+		"chr/c1240_c1240_wepon_n",
+		"parts/WP_A_0910_WP_A_0910_n"
 	],
 	[
 		"chr/c1250_c1250_sword_n",
@@ -632,6 +637,10 @@
 	],
 	[
 		"chr/c1410_c1410_arrow_n",
+		"parts/WP_A_7300_WP_A_7300_n",
+		"parts/WP_A_7301_WP_A_7300_n",
+		"parts/WP_A_7310_WP_A_7310_n",
+		"parts/WP_A_7311_WP_A_7310_n",
 		"sfx/commoneffects_s08040_n"
 	],
 	[
@@ -700,6 +709,10 @@
 	[
 		"chr/c1449_c1449_WP_A_1306_n",
 		"parts/WP_A_1306_WP_A_1306_n"
+	],
+	[
+		"chr/c1449_c1449_wp_a_8000_n",
+		"parts/WP_A_8000_wp_a_8000_n"
 	],
 	[
 		"chr/c2030_c2030_Weapon_n",
@@ -788,7 +801,8 @@
 	[
 		"chr/c2190_c2190_weapon02_n",
 		"chr/c2191_c2191_weapon02_n",
-		"obj/o399910_c2190_weapon02_n"
+		"obj/o399910_c2190_weapon02_n",
+		"parts/WP_A_0911_WP_A_0911_n"
 	],
 	[
 		"chr/c2190_c2190_wing_n",
@@ -1276,7 +1290,8 @@
 	],
 	[
 		"chr/c6060_c6060_hair002_n",
-		"m45/m45_00_c6060_hair_n"
+		"m45/m45_00_c6060_hair_n",
+		"parts/HR_A_0111_HR_A_0111_n"
 	],
 	[
 		"chr/c6060_c6060_n",
@@ -1364,7 +1379,8 @@
 	],
 	[
 		"chr/c6100_c6100_SHIELD_n",
-		"m45/m45_00_c6100_SHIELD_n"
+		"m45/m45_00_c6100_SHIELD_n",
+		"parts/WP_A_2130_WP_A_2130_n"
 	],
 	[
 		"chr/c6100_c6100_STONEHAMMER_n",
@@ -1404,11 +1420,13 @@
 	],
 	[
 		"chr/c6200_c6200_Face_n",
-		"chr/c6201_c6201_Face_n"
+		"chr/c6201_c6201_Face_n",
+		"parts/FC_M_0003_FC_M_0003_Face_n"
 	],
 	[
 		"chr/c6200_c6200_Hair_n",
-		"chr/c6201_c6201_Hair_n"
+		"chr/c6201_c6201_Hair_n",
+		"parts/FC_M_0003_FC_M_0003_Hair_n"
 	],
 	[
 		"chr/c6200_c6200_Weapon_Dust_n",
@@ -2506,7 +2524,9 @@
 		"obj/o452100_o9569_n",
 		"obj/o452105_o9569_n",
 		"obj/o969007_o9569_n",
-		"parts/WP_A_2300_WP_A_2300_n"
+		"parts/WP_A_2200_WP_A_2200_n",
+		"parts/WP_A_2300_WP_A_2300_n",
+		"parts/WP_A_9569_WP_A_9569_n"
 	],
 	[
 		"m30/m30_00_o304864_01_n",
@@ -7846,8 +7866,16 @@
 		"obj/o302570_o302570_n"
 	],
 	[
+		"obj/o007110_o007110_n",
+		"parts/WP_A_8005_wp_a_8005_n"
+	],
+	[
 		"obj/o007120_o007120_n",
 		"parts/HD_M_7400_HD_M_7400_n"
+	],
+	[
+		"obj/o007130_o007130_wp_a_8001_n",
+		"parts/WP_A_8001_wp_a_8001_n"
 	],
 	[
 		"obj/o007140_o007140_WP_A_2114_n",
@@ -8095,6 +8123,10 @@
 		"parts/BD_F_3010_BD_F_3010_n"
 	],
 	[
+		"parts/BD_F_3100_BD_F_3100_n",
+		"parts/BD_F_3110_BD_F_3110_n"
+	],
+	[
 		"parts/BD_F_4400_BD_F_4400_n",
 		"parts/BD_M_4400_BD_M_4400_n"
 	],
@@ -8232,6 +8264,23 @@
 		"parts/BD_M_3010_BD_M_3010_n"
 	],
 	[
+		"parts/BD_M_3100_BD_M_3100_n",
+		"parts/BD_M_3110_BD_M_3110_n"
+	],
+	[
+		"parts/FG_A_2001_FG_A_2001_n",
+		"parts/FG_A_2011_FG_A_2011_n",
+		"parts/FG_A_2012_FG_A_2012_n",
+		"parts/FG_A_2013_FG_A_2013_n",
+		"parts/FG_A_2014_FG_A_2014_n",
+		"parts/FG_A_2015_FG_A_2015_n",
+		"parts/FG_A_2016_FG_A_2016_n"
+	],
+	[
+		"parts/FG_A_2002_FG_A_2002_n",
+		"parts/FG_A_2007_FG_A_2007_n"
+	],
+	[
 		"parts/HD_F_0100_HD_F_0100_hair_n",
 		"parts/HD_M_0100_HD_M_0100_hair_n"
 	],
@@ -8274,6 +8323,33 @@
 	[
 		"parts/HD_M_2300_HD_M_2300_n",
 		"parts/HD_M_2310_HD_M_2310_n"
+	],
+	[
+		"parts/HR_A_0002_HR_A_0000_n",
+		"parts/HR_A_0003_HR_A_0000_n",
+		"parts/HR_A_0005_HR_A_0000_n",
+		"parts/HR_A_0006_HR_A_0000_n",
+		"parts/HR_A_0007_HR_A_0000_n",
+		"parts/HR_A_0008_HR_A_0000_n",
+		"parts/HR_A_0009_HR_A_0000_n",
+		"parts/HR_A_0010_HR_A_0000_n",
+		"parts/HR_A_0011_HR_A_0000_n",
+		"parts/HR_A_0101_HR_A_0000_n",
+		"parts/HR_A_0102_HR_A_0000_n",
+		"parts/HR_A_0103_HR_A_0000_n",
+		"parts/HR_A_0104_HR_A_0000_n",
+		"parts/HR_A_0105_HR_A_0000_n",
+		"parts/HR_A_0106_HR_A_0000_n",
+		"parts/HR_A_0107_HR_A_0000_n",
+		"parts/HR_A_0108_HR_A_0000_n",
+		"parts/HR_A_0109_HR_A_0000_n",
+		"parts/HR_A_0110_HR_A_0000_n",
+		"parts/HR_A_0111_HR_A_0000_n",
+		"parts/HR_A_0112_HR_A_0112_n"
+	],
+	[
+		"parts/HR_A_0010_HR_A_0010_n",
+		"parts/HR_A_0106_HR_A_0106_n"
 	],
 	[
 		"parts/LG_F_2250_LG_F_2250_n",
@@ -8360,8 +8436,65 @@
 		"parts/WP_A_1612_WP_A_1612_n"
 	],
 	[
+		"parts/WP_A_6400_WP_A_6400_n",
+		"parts/WP_A_9400_WP_A_9400_n"
+	],
+	[
+		"parts/WP_A_6700_WP_A_6700_n",
+		"parts/WP_A_9700_WP_A_9700_n"
+	],
+	[
+		"parts/WP_A_7000_WP_A_7000_n",
+		"parts/WP_A_7001_WP_A_7000_n",
+		"parts/WP_A_7010_WP_A_7010_n",
+		"parts/WP_A_7011_WP_A_7010_n",
+		"parts/WP_A_7020_WP_A_7020_n",
+		"parts/WP_A_7021_WP_A_7020_n",
+		"parts/WP_A_7030_WP_A_7030_n",
+		"parts/WP_A_7031_WP_A_7030_n",
+		"parts/WP_A_7040_WP_A_7040_n",
+		"parts/WP_A_7041_WP_A_7040_n",
+		"parts/WP_A_7060_WP_A_7060_n",
+		"parts/WP_A_7061_WP_A_7060_n",
+		"parts/WP_A_7600_WP_A_7600_n",
+		"parts/WP_A_7601_WP_A_7600_n",
+		"parts/WP_A_7610_WP_A_7610_n",
+		"parts/WP_A_7611_WP_A_7610_n",
+		"parts/WP_A_7620_WP_A_7620_n",
+		"parts/WP_A_7621_WP_A_7620_n",
+		"parts/WP_A_7630_WP_A_7630_n",
+		"parts/WP_A_7631_WP_A_7630_n",
+		"parts/WP_A_7640_WP_A_7640_n",
+		"parts/WP_A_7641_WP_A_7640_n",
 		"sfx/commoneffects_s08000_n",
 		"sfx/commoneffects_s08024_n"
+	],
+	[
+		"parts/WP_A_7050_WP_A_7050_n",
+		"parts/WP_A_7051_WP_A_7050_n",
+		"sfx/commoneffects_s08005_n"
+	],
+	[
+		"parts/WP_A_7070_WP_A_7070_n",
+		"parts/WP_A_7071_WP_A_7070_n",
+		"sfx/commoneffects_s08007_n"
+	],
+	[
+		"parts/WP_A_7320_WP_A_7320_n",
+		"parts/WP_A_7321_WP_A_7320_n",
+		"parts/WP_A_7330_WP_A_7330_n",
+		"parts/WP_A_7331_WP_A_7331_n",
+		"sfx/commoneffects_s08044_n"
+	],
+	[
+		"parts/WP_A_7650_WP_A_7650_n",
+		"parts/WP_A_7651_WP_A_7650_n",
+		"sfx/commoneffects_s08025_n"
+	],
+	[
+		"parts/WP_A_7660_WP_A_7660_n",
+		"parts/WP_A_7661_WP_A_7660_n",
+		"sfx/commoneffects_s08027_n"
 	],
 	[
 		"sfx/dlc1_s09370_n",

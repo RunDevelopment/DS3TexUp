@@ -164,11 +164,6 @@
 		"N": "chr/c1180_c1180_weapon1_n",
 		"R": "chr/c1180_c1180_weapon1_r"
 	},
-	"chr/c1190_c1190_Crossbow_r": {
-		"A": "parts/WP_A_1411_WP_A_1411_a",
-		"N": "chr/c1190_c1190_Crossbow_n",
-		"R": "chr/c1190_c1190_Crossbow_r"
-	},
 	"chr/c1190_c1190_r": {
 		"A": "chr/c1190_c1190_a",
 		"N": "chr/c1190_c1190_n",
@@ -843,11 +838,6 @@
 		"A": "chr/c1449_c1449_WP_A_1306_a",
 		"N": "chr/c1449_c1449_WP_A_1306_n",
 		"R": "chr/c1449_c1449_WP_A_1306_r"
-	},
-	"chr/c1449_c1449_wp_a_8000_r": {
-		"A": "chr/c1449_c1449_wp_a_8000_a",
-		"N": "chr/c1449_c1449_wp_a_8000_n",
-		"R": "chr/c1449_c1449_wp_a_8000_r"
 	},
 	"chr/c1450_c1450_01_r": {
 		"A": "chr/c1450_c1450_01_a",
@@ -1909,11 +1899,6 @@
 		"N": "chr/c6100_c6100_Helmet_01_n",
 		"R": "chr/c6100_c6100_Helmet_01_r"
 	},
-	"chr/c6100_c6100_SHIELD_r": {
-		"A": "chr/c6100_c6100_SHIELD_a",
-		"N": "chr/c6100_c6100_SHIELD_n",
-		"R": "chr/c6100_c6100_SHIELD_r"
-	},
 	"chr/c6120_c6120_cloth_r": {
 		"A": "chr/c6120_c6120_cloth_a",
 		"N": "chr/c6120_c6120_cloth_n",
@@ -1955,8 +1940,8 @@
 		"R": "chr/c6200_c6200_Body_r"
 	},
 	"chr/c6200_c6200_Hair_r": {
-		"A": "chr/c6200_c6200_Hair_a",
-		"N": "chr/c6200_c6200_Hair_n",
+		"A": "parts/FC_M_0003_FC_M_0003_Hair_a",
+		"N": "parts/FC_M_0003_FC_M_0003_Hair_n",
 		"R": "chr/c6200_c6200_Hair_r"
 	},
 	"chr/c6200_c6200_Weapon_r": {
@@ -3750,7 +3735,7 @@
 		"R": "m37/m37_00_Door_07_r"
 	},
 	"m37/m37_00_firebrand_01_r": {
-		"A": "m38/m38_00_o9569_a",
+		"A": "parts/WP_A_2200_WP_A_2200_a",
 		"N": "parts/WP_A_2300_WP_A_2300_n",
 		"R": "m37/m37_00_firebrand_01_r"
 	},
@@ -4449,16 +4434,6 @@
 		"N": "obj/o007090_o007090_01_n",
 		"R": "obj/o007090_o007090_01_r"
 	},
-	"obj/o007110_o007110_r": {
-		"A": "obj/o007110_o007110_a",
-		"N": "obj/o007110_o007110_n",
-		"R": "obj/o007110_o007110_r"
-	},
-	"obj/o007130_o007130_wp_a_8001_r": {
-		"A": "obj/o007130_o007130_wp_a_8001_a",
-		"N": "obj/o007130_o007130_wp_a_8001_n",
-		"R": "obj/o007130_o007130_wp_a_8001_r"
-	},
 	"obj/o009010_m20_01_o0462_00_p": {
 		"A": "obj/o009010_m20_01_o0462_00_a",
 		"N": "obj/o009010_m20_01_o0462_00_n",
@@ -4498,11 +4473,6 @@
 		"A": "obj/o301100_o301100_01_a",
 		"N": "obj/o301100_o301100_01_n",
 		"R": "obj/o301100_o301100_01_r"
-	},
-	"obj/o302505_o302505_WP_A_0200_r": {
-		"A": "obj/o302505_o302505_WP_A_0200_a",
-		"N": "obj/o302505_o302505_WP_A_0200_n",
-		"R": "obj/o302505_o302505_WP_A_0200_r"
 	},
 	"obj/o302506_o302506_WP_A_0100_r": {
 		"A": "obj/o302506_o302506_WP_A_0100_a",
@@ -5804,6 +5774,11 @@
 		"N": "parts/BD_M_3100_BD_M_3100_n",
 		"R": "parts/BD_M_3100_BD_M_3100_r"
 	},
+	"parts/BD_M_3110_BD_M_3110_r": {
+		"A": "parts/BD_M_3100_BD_M_3100_a",
+		"N": "parts/BD_M_3100_BD_M_3100_n",
+		"R": "parts/BD_M_3110_BD_M_3110_r"
+	},
 	"parts/BD_M_3200_BD_M_3200_r": {
 		"A": "parts/BD_M_3200_BD_M_3200_a",
 		"N": "parts/BD_M_3200_BD_M_3200_n",
@@ -6184,6 +6159,46 @@
 		"N": "parts/BD_M_9700_BD_M_9700_2_n",
 		"R": "parts/BD_M_9700_BD_M_9700_2_r"
 	},
+	"parts/FC_M_0003_FC_M_0003_Hair_r": {
+		"A": "parts/FC_M_0003_FC_M_0003_Hair_a",
+		"N": "parts/FC_M_0003_FC_M_0003_Hair_n",
+		"R": "parts/FC_M_0003_FC_M_0003_Hair_r"
+	},
+	"parts/FG_A_0100_FG_A_0100_r": {
+		"A": "parts/FG_A_0101_FG_face_gen",
+		"N": "parts/FG_A_0100_FG_A_0100_n",
+		"R": "parts/FG_A_0100_FG_A_0100_r"
+	},
+	"parts/FG_A_0101_FC_M_0000_r": {
+		"A": "parts/FG_A_0101_FC_M_0000_a",
+		"N": "parts/FG_A_0101_FC_M_0000_n",
+		"R": "parts/FG_A_0101_FC_M_0000_r"
+	},
+	"parts/FG_A_0101_FG_A_0101_r": {
+		"A": "parts/FG_A_0101_FG_face_gen",
+		"N": "parts/FG_A_0101_FG_A_0101_n",
+		"R": "parts/FG_A_0101_FG_A_0101_r"
+	},
+	"parts/FG_A_0102_FG_A_0102_r": {
+		"A": "parts/FG_A_0101_FG_face_gen",
+		"N": "parts/FG_A_0102_FG_A_0102_n",
+		"R": "parts/FG_A_0102_FG_A_0102_r"
+	},
+	"parts/FG_A_0150_FC_M_0050_r": {
+		"A": "parts/FG_A_0150_FC_M_0050_a",
+		"N": "parts/FG_A_0150_FC_M_0050_n",
+		"R": "parts/FG_A_0150_FC_M_0050_r"
+	},
+	"parts/FG_A_0150_FG_A_0150_r": {
+		"A": "parts/FG_A_0101_FG_face_gen",
+		"N": "parts/FG_A_0150_FG_A_0150_n",
+		"R": "parts/FG_A_0150_FG_A_0150_r"
+	},
+	"parts/FG_A_1506_FG_A_1506_r": {
+		"A": "parts/FG_A_1506_FG_A_1506_a",
+		"N": "parts/FG_A_1506_FG_A_1506_n",
+		"R": "parts/FG_A_1506_FG_A_1506_r"
+	},
 	"parts/HD_F_0100_HD_F_0100_hair_r": {
 		"A": "parts/HD_F_0100_HD_F_0100_hair_a",
 		"N": "parts/HD_F_0100_HD_F_0100_hair_n",
@@ -6379,6 +6394,11 @@
 		"N": "parts/HD_M_4000_HD_M_4000_n",
 		"R": "parts/HD_M_4000_HD_M_4000_r"
 	},
+	"parts/HD_M_4010_HD_M_4010_r": {
+		"A": "chr/c1109_c1109_scarf_01_a",
+		"N": "parts/HD_M_4010_HD_M_4010_n",
+		"R": "parts/HD_M_4010_HD_M_4010_r"
+	},
 	"parts/HD_M_4020_HD_M_4020_r": {
 		"A": "parts/HD_M_4020_HD_M_4020_a",
 		"N": "parts/HD_M_4020_HD_M_4020_n",
@@ -6543,6 +6563,11 @@
 		"A": "parts/HD_M_6600_HD_M_6600_a",
 		"N": "parts/HD_M_6600_HD_M_6600_n",
 		"R": "parts/HD_M_6600_HD_M_6600_r"
+	},
+	"parts/HD_M_6700_HD_M_6700_r": {
+		"A": "parts/HD_M_6700_HD_M_6700_a",
+		"N": "parts/HD_M_6700_HD_M_6700_n",
+		"R": "parts/HD_M_6700_HD_M_6700_r"
 	},
 	"parts/HD_M_6750_HD_M_6750_2_r": {
 		"A": "parts/HD_M_6750_HD_M_6750_2_a",
@@ -7789,6 +7814,11 @@
 		"N": "parts/WP_A_0908_WP_A_0908_n",
 		"R": "parts/WP_A_0908_WP_A_0908_r"
 	},
+	"parts/WP_A_0910_WP_A_0910_r": {
+		"A": "parts/WP_A_0910_WP_A_0910_a",
+		"N": "parts/WP_A_0910_WP_A_0910_n",
+		"R": "parts/WP_A_0910_WP_A_0910_r"
+	},
 	"parts/WP_A_0913_WP_A_0913_r": {
 		"A": "parts/WP_A_0913_WP_A_0913_a",
 		"N": "chr/c2070_c2070_lance_n",
@@ -7814,6 +7844,16 @@
 		"N": "parts/WP_A_0919_WP_A_0919_n",
 		"R": "parts/WP_A_0919_WP_A_0919_r"
 	},
+	"parts/WP_A_0920_WP_A_0920_r": {
+		"A": "parts/WP_A_0920_WP_A_0920_a",
+		"N": "parts/WP_A_0920_WP_A_0920_n",
+		"R": "parts/WP_A_0920_WP_A_0920_r"
+	},
+	"parts/WP_A_0921_WP_A_0921_r": {
+		"A": "parts/WP_A_0921_WP_A_0921_a",
+		"N": "parts/WP_A_0921_WP_A_0921_n",
+		"R": "parts/WP_A_0921_WP_A_0921_r"
+	},
 	"parts/WP_A_0922_WP_A_0922_r": {
 		"A": "parts/WP_A_0922_WP_A_0922_a",
 		"N": "parts/WP_A_0922_WP_A_0922_n",
@@ -7833,6 +7873,11 @@
 		"A": "parts/WP_A_0926_WP_A_0926_a",
 		"N": "parts/WP_A_0926_WP_A_0926_n",
 		"R": "parts/WP_A_0926_WP_A_0926_r"
+	},
+	"parts/WP_A_1000_WP_A_1000_r": {
+		"A": "parts/WP_A_1000_WP_A_1000_a",
+		"N": "parts/WP_A_1000_WP_A_1000_n",
+		"R": "parts/WP_A_1000_WP_A_1000_r"
 	},
 	"parts/WP_A_1001_WP_A_1001_r": {
 		"A": "parts/WP_A_1001_WP_A_1001_a",
@@ -8088,6 +8133,11 @@
 		"A": "parts/WP_A_1418_WP_A_1418_a",
 		"N": "parts/WP_A_1418_WP_A_1418_n",
 		"R": "parts/WP_A_1418_WP_A_1418_r"
+	},
+	"parts/WP_A_1600_WP_A_1600_r": {
+		"A": "parts/WP_A_1600_WP_A_1600_a",
+		"N": "parts/WP_A_1600_WP_A_1600_n",
+		"R": "parts/WP_A_1600_WP_A_1600_r"
 	},
 	"parts/WP_A_1602_WP_A_1602_r": {
 		"A": "parts/WP_A_1602_WP_A_1602_a",
@@ -8369,10 +8419,20 @@
 		"N": "parts/WP_A_2129_WP_A_2129_n",
 		"R": "parts/WP_A_2129_WP_A_2129_r"
 	},
+	"parts/WP_A_2130_WP_A_2130_r": {
+		"A": "parts/WP_A_2130_WP_A_2130_a",
+		"N": "parts/WP_A_2130_WP_A_2130_n",
+		"R": "parts/WP_A_2130_WP_A_2130_r"
+	},
 	"parts/WP_A_2131_WP_A_2131_r": {
 		"A": "parts/WP_A_2131_WP_A_2131_a",
 		"N": "chr/c6260_c6260_Shield_n",
 		"R": "parts/WP_A_2131_WP_A_2131_r"
+	},
+	"parts/WP_A_2200_WP_A_2200_r": {
+		"A": "parts/WP_A_2200_WP_A_2200_a",
+		"N": "parts/WP_A_2200_WP_A_2200_n",
+		"R": "parts/WP_A_2200_WP_A_2200_r"
 	},
 	"parts/WP_A_2202_WP_A_2202_r": {
 		"A": "parts/WP_A_2202_WP_A_2202_a",
@@ -8438,6 +8498,146 @@
 		"A": "parts/WP_A_2301_WP_A_2301_a",
 		"N": "parts/WP_A_2301_WP_A_2301_n",
 		"R": "parts/WP_A_2301_WP_A_2301_r"
+	},
+	"parts/WP_A_7000_WP_A_7000_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7000_WP_A_7000_r"
+	},
+	"parts/WP_A_7001_WP_A_7000_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7001_WP_A_7000_r"
+	},
+	"parts/WP_A_7010_WP_A_7010_r": {
+		"A": "parts/WP_A_7010_WP_A_7010_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7010_WP_A_7010_r"
+	},
+	"parts/WP_A_7011_WP_A_7010_r": {
+		"A": "parts/WP_A_7010_WP_A_7010_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7011_WP_A_7010_r"
+	},
+	"parts/WP_A_7020_WP_A_7020_r": {
+		"A": "parts/WP_A_7010_WP_A_7010_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7020_WP_A_7020_r"
+	},
+	"parts/WP_A_7021_WP_A_7020_r": {
+		"A": "parts/WP_A_7010_WP_A_7010_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7021_WP_A_7020_r"
+	},
+	"parts/WP_A_7030_WP_A_7030_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7030_WP_A_7030_r"
+	},
+	"parts/WP_A_7031_WP_A_7030_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7031_WP_A_7030_r"
+	},
+	"parts/WP_A_7040_WP_A_7040_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7040_WP_A_7040_r"
+	},
+	"parts/WP_A_7041_WP_A_7040_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7041_WP_A_7040_r"
+	},
+	"parts/WP_A_7060_WP_A_7060_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7060_WP_A_7060_r"
+	},
+	"parts/WP_A_7061_WP_A_7060_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7061_WP_A_7060_r"
+	},
+	"parts/WP_A_7600_WP_A_7600_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7600_WP_A_7600_r"
+	},
+	"parts/WP_A_7601_WP_A_7600_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7601_WP_A_7600_r"
+	},
+	"parts/WP_A_7610_WP_A_7610_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7610_WP_A_7610_r"
+	},
+	"parts/WP_A_7611_WP_A_7610_r": {
+		"A": "parts/WP_A_7000_WP_A_7000_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7611_WP_A_7610_r"
+	},
+	"parts/WP_A_7620_WP_A_7620_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7620_WP_A_7620_r"
+	},
+	"parts/WP_A_7621_WP_A_7620_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7621_WP_A_7620_r"
+	},
+	"parts/WP_A_7630_WP_A_7630_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7630_WP_A_7630_r"
+	},
+	"parts/WP_A_7631_WP_A_7630_r": {
+		"A": "parts/WP_A_7040_WP_A_7040_a",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
+		"R": "parts/WP_A_7631_WP_A_7630_r"
+	},
+	"parts/WP_A_8000_wp_a_8000_r": {
+		"A": "parts/WP_A_8000_wp_a_8000_a",
+		"N": "chr/c1449_c1449_wp_a_8000_n",
+		"R": "parts/WP_A_8000_wp_a_8000_r"
+	},
+	"parts/WP_A_8001_wp_a_8001_r": {
+		"A": "parts/WP_A_8001_wp_a_8001_a",
+		"N": "parts/WP_A_8001_wp_a_8001_n",
+		"R": "parts/WP_A_8001_wp_a_8001_r"
+	},
+	"parts/WP_A_8002_wp_a_8002_r": {
+		"A": "parts/WP_A_8002_wp_a_8002_a",
+		"N": "parts/WP_A_8002_wp_a_8002_n",
+		"R": "parts/WP_A_8002_wp_a_8002_r"
+	},
+	"parts/WP_A_8003_wp_a_8003_r": {
+		"A": "parts/WP_A_8003_wp_a_8003_a",
+		"N": "parts/WP_A_8003_wp_a_8003_n",
+		"R": "parts/WP_A_8003_wp_a_8003_r"
+	},
+	"parts/WP_A_8005_wp_a_8005_r": {
+		"A": "parts/WP_A_8005_wp_a_8005_a",
+		"N": "parts/WP_A_8005_wp_a_8005_n",
+		"R": "parts/WP_A_8005_wp_a_8005_r"
+	},
+	"parts/WP_A_8006_wp_a_8006_r": {
+		"A": "parts/WP_A_8006_wp_a_8006_a",
+		"N": "parts/WP_A_8006_wp_a_8006_n",
+		"R": "parts/WP_A_8006_wp_a_8006_r"
+	},
+	"parts/WP_A_9000_WP_1000_M_p": {
+		"A": "parts/WP_A_9000_WP_1000_M_d",
+		"N": "parts/WP_A_9000_WP_1000_M_n",
+		"R": "parts/WP_A_9000_WP_1000_M_p"
+	},
+	"parts/WP_A_9400_WP_A_9400_r": {
+		"A": "parts/WP_A_6400_WP_A_6400_a",
+		"N": "parts/WP_A_6400_WP_A_6400_n",
+		"R": "parts/WP_A_9400_WP_A_9400_r"
 	},
 	"sfx/commoneffects_s04000_r": {
 		"A": "sfx/commoneffects_s04000_a",
@@ -8521,32 +8721,32 @@
 	},
 	"sfx/commoneffects_s08000_r": {
 		"A": "sfx/commoneffects_s08000_a",
-		"N": "sfx/commoneffects_s08000_n",
+		"N": "parts/WP_A_7000_WP_A_7000_n",
 		"R": "sfx/commoneffects_s08000_r"
 	},
 	"sfx/commoneffects_s08005_r": {
 		"A": "sfx/commoneffects_s08005_a",
-		"N": "sfx/commoneffects_s08005_n",
+		"N": "parts/WP_A_7050_WP_A_7050_n",
 		"R": "sfx/commoneffects_s08005_r"
 	},
 	"sfx/commoneffects_s08007_r": {
 		"A": "sfx/commoneffects_s08007_a",
-		"N": "sfx/commoneffects_s08007_n",
+		"N": "parts/WP_A_7070_WP_A_7070_n",
 		"R": "sfx/commoneffects_s08007_r"
 	},
 	"sfx/commoneffects_s08024_r": {
 		"A": "sfx/commoneffects_s08024_a",
-		"N": "sfx/commoneffects_s08024_n",
+		"N": "parts/WP_A_7640_WP_A_7640_n",
 		"R": "sfx/commoneffects_s08024_r"
 	},
 	"sfx/commoneffects_s08025_r": {
-		"A": "sfx/commoneffects_s08025_a",
-		"N": "sfx/commoneffects_s08025_n",
+		"A": "parts/WP_A_7650_WP_A_7650_a",
+		"N": "parts/WP_A_7650_WP_A_7650_n",
 		"R": "sfx/commoneffects_s08025_r"
 	},
 	"sfx/commoneffects_s08027_r": {
 		"A": "sfx/commoneffects_s08027_a",
-		"N": "sfx/commoneffects_s08027_n",
+		"N": "parts/WP_A_7660_WP_A_7660_n",
 		"R": "sfx/commoneffects_s08027_r"
 	},
 	"sfx/commoneffects_s08040_r": {
@@ -8556,7 +8756,7 @@
 	},
 	"sfx/commoneffects_s08044_r": {
 		"A": "sfx/commoneffects_s08044_a",
-		"N": "sfx/commoneffects_s08044_n",
+		"N": "parts/WP_A_7320_WP_A_7320_n",
 		"R": "sfx/commoneffects_s08044_r"
 	},
 	"sfx/commoneffects_s08060_r": {

@@ -67,16 +67,16 @@
 				"Name": "Roof1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			},
 			{
 				"Name": "o309110_edge",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			}
 		]
@@ -88,8 +88,8 @@
 				"Name": "Roof",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			}
 		]
@@ -101,32 +101,32 @@
 				"Name": "o309320_roof_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309120_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			}
 		]
@@ -138,8 +138,8 @@
 				"Name": "Roof",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			}
 		]
@@ -151,73 +151,73 @@
 				"Name": "Wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309100_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			},
 			{
 				"Name": "o331317_windows_06",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a",
-					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n"
+					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n",
+					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a"
 				}
 			},
 			{
 				"Name": "o309110_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309100_brick_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a"
 				}
 			},
 			{
 				"Name": "o309320_roof",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			},
 			{
 				"Name": "o309130_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309130_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309130_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309130_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309130_frame_01_a"
 				}
 			}
 		]
@@ -229,49 +229,49 @@
 				"Name": "o309100_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309309_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309309_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309309_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309309_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309309_frame_02_a"
 				}
 			}
 		]
@@ -283,16 +283,16 @@
 				"Name": "Roof1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			},
 			{
 				"Name": "StoneEdge",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			}
 		]
@@ -304,8 +304,8 @@
 				"Name": "Roof1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			}
 		]
@@ -317,129 +317,129 @@
 				"Name": "Wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309100_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			},
 			{
 				"Name": "o331317_windows_06",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a",
-					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n"
+					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n",
+					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a"
 				}
 			},
 			{
 				"Name": "o309110_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309100_brick_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a"
 				}
 			},
 			{
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309120_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309100_brick_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a"
 				}
 			},
 			{
 				"Name": "o309110_stair_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_stair_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_stair_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_stair_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_stair_01_a"
 				}
 			}
 		]
@@ -451,89 +451,89 @@
 				"Name": "Wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309100_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			},
 			{
 				"Name": "o331317_windows_06",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a",
-					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n"
+					"g_BumpmapTexture": "m46/m46_00_o331317_windows_06_n",
+					"g_DiffuseTexture": "m46/m46_00_o331317_windows_06_a"
 				}
 			},
 			{
 				"Name": "o309110_Edge1",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a"
 				}
 			}
 		]
@@ -545,65 +545,65 @@
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309100_brick_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309100_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			}
 		]
@@ -615,90 +615,90 @@
 				"Name": "o309320_wall",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_wall_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_wall_01_a"
 				}
 			},
 			{
 				"Name": "o309320_floor_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_floor_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_floor_01_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309320_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_02_a"
 				}
 			},
 			{
 				"Name": "o309100_edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309100_edge_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309100_edge_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309100_edge_01_r"
 				}
 			},
 			{
 				"Name": "o309130_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
+					"g_BumpmapTexture": "m46/m46_00_o309130_frame_01_n",
 					"g_DiffuseTexture": "m46/m46_00_o309130_frame_01_a",
-					"g_SpecularTexture": "m46/m46_00_o309130_frame_01_r",
-					"g_BumpmapTexture": "m46/m46_00_o309130_frame_01_n"
+					"g_SpecularTexture": "m46/m46_00_o309130_frame_01_r"
 				}
 			},
 			{
 				"Name": "o309120_frame_02",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a",
-					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n"
+					"g_BumpmapTexture": "m46/m46_00_o309120_frame_02_n",
+					"g_DiffuseTexture": "m46/m46_00_o309120_frame_02_a"
 				}
 			},
 			{
 				"Name": "m46_00_o309320_roof_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_roof_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_roof_01_a"
 				}
 			}
 		]
@@ -710,43 +710,43 @@
 				"Name": "Material #149480677",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\MultiBlend\\M[ARSN]_2m_l.mtd",
 				"Textures": {
-					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m46/m46_00_o309110_wall_02_a",
-					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m46/m46_00_o309110_wall_03_a",
 					"MultiBlend2_et1_snp_Texture2D_0_GSBlendMap_BlendEdgeTexture": "m46/m46_00_o309110_wall_m",
+					"MultiBlend2_et1_snp_Texture2D_1_GSBlendMap_AlbedoMap_0": "m46/m46_00_o309110_wall_02_a",
 					"MultiBlend2_et1_snp_Texture2D_13_GSBlendMap_NormalMap_0": "m46/m46_00_o309110_wall_02_n",
-					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m46/m46_00_o309110_wall_03_n"
+					"MultiBlend2_et1_snp_Texture2D_14_GSBlendMap_NormalMap_1": "m46/m46_00_o309110_wall_03_n",
+					"MultiBlend2_et1_snp_Texture2D_2_GSBlendMap_AlbedoMap_1": "m46/m46_00_o309110_wall_03_a"
 				}
 			},
 			{
 				"Name": "edge_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_edge_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_edge_01_a"
 				}
 			},
 			{
 				"Name": "o309110_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309110_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309110_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309120_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309120_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309120_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309120_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309120_frame_01_a"
 				}
 			},
 			{
 				"Name": "o309100_brick_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309100_brick_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309100_brick_01_a"
 				}
 			}
 		]
@@ -758,8 +758,8 @@
 				"Name": "o309320_frame_01",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_l.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a",
-					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n"
+					"g_BumpmapTexture": "m46/m46_00_o309320_frame_01_n",
+					"g_DiffuseTexture": "m46/m46_00_o309320_frame_01_a"
 				}
 			}
 		]
@@ -771,71 +771,71 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u6C34",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5C71",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_mountain_60_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u68EE",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_p_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_enkei_51_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_enkei_51_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_enkei_51_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5E73\u5730",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u6D45\u702C",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_p_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a"
 				}
 			},
 			{
 				"Name": "\u6C34\uFF0B\u6D45\u702C",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a",
+					"g_BlendMaskTexture": "m46/m46_00_enkei_53_m",
 					"g_BumpmapTexture": "m46/m46_00_water_53_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_enkei_53_m"
+					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a"
 				}
 			},
 			{
@@ -854,29 +854,29 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5C71",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_mountain_60_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5E73\u5730",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]
@@ -888,16 +888,16 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u6700\u9060\u666F",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_al.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]
@@ -909,10 +909,10 @@
 				"Name": "\u5730\u9762\uFF0B\u6C34",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
@@ -938,8 +938,8 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]
@@ -951,8 +951,8 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]
@@ -964,71 +964,71 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u6C34",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5C71",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_mountain_60_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u68EE",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_p_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_enkei_51_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_enkei_51_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_enkei_51_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5E73\u5730",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u6D45\u702C",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_p_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a"
 				}
 			},
 			{
 				"Name": "\u6C34\uFF0B\u6D45\u702C",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_water_53_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture2": "m46/m46_00_enkei_53_a"
 				}
 			},
 			{
@@ -1047,10 +1047,10 @@
 				"Name": "\u5730\u9762\uFF0B\u6C34",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_water_53_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]
@@ -1062,29 +1062,29 @@
 				"Name": "\u5C71\u30C6\u30B9\u30C8",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN].mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_BumpmapTexture": "m46/m46_00_mountain_60_n"
+					"g_BumpmapTexture": "m46/m46_00_mountain_60_n",
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5C71",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
 					"g_BumpmapTexture2": "m46/m46_00_mountain_60_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			},
 			{
 				"Name": "\u5730\u9762\uFF0B\u5E73\u5730",
 				"MTD": "N:\\FDP\\data\\Material\\mtd\\map\\M[ARSN]_m.mtd",
 				"Textures": {
-					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
-					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a",
+					"g_BlendMaskTexture": "m46/m46_00_water_50_m",
 					"g_BumpmapTexture": "m46/m46_00_enkei_50_n",
-					"g_BlendMaskTexture": "m46/m46_00_water_50_m"
+					"g_DiffuseTexture": "m46/m46_00_mountain_60_a",
+					"g_DiffuseTexture2": "m46/m46_00_mountain_60_a"
 				}
 			}
 		]

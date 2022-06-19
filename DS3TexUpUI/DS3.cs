@@ -40,6 +40,9 @@ namespace DS3TexUpUI
         public static readonly IReadOnlyList<string> Parts
             = Data.File(@"parts.json").LoadJsonFile<string[]>();
 
+        public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
+            = Data.File(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
+
         public static readonly IReadOnlyCollection<TexId> GroundTextures
             = Data.File(@"ground.json").LoadJsonFile<HashSet<TexId>>();
         public static readonly IReadOnlyCollection<TexId> GroundWithMossTextures
@@ -93,20 +96,20 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus($"Saving index");
-                result.SaveAsJson(Data.File(@"tex-kinds.json"));
+                result.SaveAsJson(Data.File(@"tex-kinds.json", Data.Source.Local));
             };
         }
 
         public static IReadOnlyDictionary<TexId, TransparencyKind> Transparency
             = Data.File(@"alpha.json").LoadJsonFile<Dictionary<TexId, TransparencyKind>>();
         internal static Action<SubProgressToken> CreateTransparencyIndex(Workspace w)
-            => CreateExtractedFilesIndexJson(w, Data.File(@"alpha.json"), f => DDSImage.Load(f).GetTransparency());
+            => CreateExtractedFilesIndexJson(w, Data.File(@"alpha.json", Data.Source.Local), f => DDSImage.Load(f).GetTransparency());
 
         public static IReadOnlyDictionary<TexId, RgbaDiff> OriginalColorDiff
             = Data.File(@"original-color-diff.json").LoadJsonFile<Dictionary<TexId, RgbaDiff>>();
         internal static Action<SubProgressToken> CreateOriginalColorDiffIndex(Workspace w)
         {
-            return CreateExtractedFilesIndexJson(w, Data.File(@"original-color-diff.json"), f =>
+            return CreateExtractedFilesIndexJson(w, Data.File(@"original-color-diff.json", Data.Source.Local), f =>
             {
                 using var image = DDSImage.Load(f);
                 return image.GetMaxAbsDiff();
@@ -117,7 +120,7 @@ namespace DS3TexUpUI
             = Data.File(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
         {
-            return CreateExtractedFilesIndexJson(w, Data.File(@"original-size.json"), f =>
+            return CreateExtractedFilesIndexJson(w, Data.File(@"original-size.json", Data.Source.Local), f =>
             {
                 var (header, _) = f.ReadDdsHeader();
                 return new Size((int)header.Width, (int)header.Height);
@@ -127,7 +130,7 @@ namespace DS3TexUpUI
         public static IReadOnlyDictionary<TexId, DDSFormat> OriginalFormat
             = Data.File(@"original-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
         internal static Action<SubProgressToken> CreateOriginalFormatIndex(Workspace w)
-            => CreateExtractedFilesIndexJson(w, Data.File(@"original-format.json"), f => f.ReadDdsHeader().GetFormat());
+            => CreateExtractedFilesIndexJson(w, Data.File(@"original-format.json", Data.Source.Local), f => f.ReadDdsHeader().GetFormat());
         internal static Action<SubProgressToken> CreateFormatsGroupedByTexKind()
         {
             return token =>
@@ -150,7 +153,7 @@ namespace DS3TexUpUI
                     .ToList();
 
                 token.SubmitStatus("Saving formats");
-                list.SaveAsJson(Data.File(@"format-by-tex-kind.json"));
+                list.SaveAsJson(Data.File(@"format-by-tex-kind.json", Data.Source.Local));
             };
         }
 
@@ -163,7 +166,7 @@ namespace DS3TexUpUI
                 var index = w.GetTexFiles(token).ToDictionary(f => f.Id, f => Path.GetRelativePath(w.GameDir, f.GamePath));
 
                 token.SubmitStatus("Saving JSON");
-                index.SaveAsJson(Data.File(@"game-path.json"));
+                index.SaveAsJson(Data.File(@"game-path.json", Data.Source.Local));
             };
         }
 
@@ -184,12 +187,9 @@ namespace DS3TexUpUI
                     .ToDictionary(p => p.Key, p => p.l);
 
                 token.SubmitStatus("Saving JSON");
-                homographs.SaveAsJson(Data.File(@"homographs.json"));
+                homographs.SaveAsJson(Data.File(@"homographs.json", Data.Source.Local));
             };
         }
-
-        public static IReadOnlyDictionary<string, TexKind> TextureTypeToTexKind
-            = Data.File(@"texture-type-to-tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
 
         public static IReadOnlyDictionary<TexId, DDSFormat> OutputFormat
             = Data.File(@"output-format.json").LoadJsonFile<Dictionary<TexId, DDSFormat>>();
@@ -220,7 +220,7 @@ namespace DS3TexUpUI
                     .ToList();
 
                 token.SubmitStatus("Saving formats");
-                new Dictionary<TexId, DDSFormat>(e).SaveAsJson(Data.File(@"output-format.json"));
+                new Dictionary<TexId, DDSFormat>(e).SaveAsJson(Data.File(@"output-format.json", Data.Source.Local));
             };
         }
 
@@ -365,7 +365,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(Data.File(@"representative.json"));
+                representative.SaveAsJson(Data.File(@"representative.json", Data.Source.Local));
             };
         }
         public static int CompareIdsByQuality(TexId a, TexId b)
@@ -498,7 +498,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(Data.File(@"alpha-representative.json"));
+                representative.SaveAsJson(Data.File(@"alpha-representative.json", Data.Source.Local));
             };
         }
 
@@ -559,7 +559,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(Data.File(@"normal-representative.json"));
+                representative.SaveAsJson(Data.File(@"normal-representative.json", Data.Source.Local));
             };
         }
 
@@ -626,7 +626,7 @@ namespace DS3TexUpUI
                 });
 
                 token.SubmitStatus("Saving JSON");
-                representative.SaveAsJson(Data.File(@"gloss-representative.json"));
+                representative.SaveAsJson(Data.File(@"gloss-representative.json", Data.Source.Local));
             };
         }
 
@@ -716,7 +716,7 @@ namespace DS3TexUpUI
                 }
 
                 token.SubmitStatus("Saving copies JSON");
-                usage.SaveAsJson(Data.File(@"usage.json"));
+                usage.SaveAsJson(Data.File(@"usage.json", Data.Source.Local));
             };
         }
 
@@ -731,7 +731,7 @@ namespace DS3TexUpUI
                 unused.Sort();
 
                 token.SubmitStatus("Saving copies JSON");
-                unused.SaveAsJson(Data.File(@"unused.json"));
+                unused.SaveAsJson(Data.File(@"unused.json", Data.Source.Local));
             };
         }
 
@@ -839,7 +839,7 @@ namespace DS3TexUpUI
                     }
                 }
 
-                token.SubmitStatus($"Analysing texture files");
+                token.SubmitStatus($"Analyzing texture files");
                 var forbidden = new HashSet<TexId>() {
                     new TexId("m32/m32_00_o4520_3_n"),
                     new TexId("m37/M37_00_Outside_CedPlaceHolder_n"),
@@ -890,13 +890,19 @@ namespace DS3TexUpUI
                             continue;
                         }
 
+                        if (NormalAlbedo.TryGetValue(n, out var oldA) && byCount.ContainsKey(oldA))
+                        {
+                            certain[n] = oldA;
+                            continue;
+                        }
+
                         ambiguous[n] = byCount;
                     }
                 }
 
                 token.SubmitStatus("Saving JSON");
-                certain.SaveAsJson(Data.File(@"normal-albedo-auto.json"));
-                ambiguous.SaveAsJson(Data.File(@"normal-albedo-manual.json"));
+                certain.SaveAsJson(Data.File(@"normal-albedo-auto.json", Data.Source.Local));
+                ambiguous.SaveAsJson(Data.File(@"normal-albedo-manual.json", Data.Source.Local));
             };
         }
 
@@ -924,7 +930,7 @@ namespace DS3TexUpUI
         {
             return token =>
             {
-                var anrIndex = new List<AlbedoNormalReflective>();
+                List<AlbedoNormalReflective> anrIndex = new List<AlbedoNormalReflective>();
 
                 void AddToIndex(
                     (IReadOnlyCollection<TexId> ids, Vector2 scale) albedo,
@@ -1074,7 +1080,7 @@ namespace DS3TexUpUI
 
                 // Some triplets are still left, but this only affects 9 r textures. It really doesn't matter.
 
-                known.ToDictionary(t => t.R).SaveAsJson(@"data/reflective-anr.json");
+                known.ToDictionary(t => t.R).SaveAsJson(Data.File(@"reflective-anr.json", Data.Source.Local));
             };
         }
 
@@ -1158,7 +1164,7 @@ namespace DS3TexUpUI
                         return result;
                     }).ToList();
 
-                    var targetDir = Data.File(@"textures");
+                    var targetDir = Data.File(@"textures", Data.Source.Local);
                     Directory.CreateDirectory(targetDir);
                     items.SaveAsJson(Path.Join(targetDir, Path.GetFileName(file)));
                 });
@@ -1320,8 +1326,8 @@ namespace DS3TexUpUI
         {
             public string Name { get; }
 
-            public string Read => Data.File(Name);
-            public string Write => Path.Join("data", Name);
+            public string Read => Data.File(Name, Data.Source.Local);
+            public string Write => Data.File(Name, Data.Source.Local);
 
             public DataFile(string name) { Name = name; }
 
@@ -1528,7 +1534,7 @@ namespace DS3TexUpUI
                     // only one texture after identical textures were removed
                     if (eqClass.Count < 2) return;
 
-                    if (eqClass.Count > 20)
+                    if (eqClass.Count > 35)
                     {
                         token.SubmitLog($"Equivalence class {i} contains too many unique elements ({eqClass.Count}).");
                         return;
