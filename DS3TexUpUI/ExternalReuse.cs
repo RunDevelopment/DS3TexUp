@@ -20,12 +20,19 @@ namespace DS3TexUpUI
         {
             public string Name { get; }
 
-            public string Read => Data.File(Name);
-            public string Write => Path.Join("data", Name);
+            public string Read => Data.File(Name, Data.Source.Local);
+            public string Write => Data.File(Name, Data.Source.Local);
 
             public DataFile(string name) { Name = name; }
 
             public static implicit operator DataFile(string value) => new DataFile(value);
+        }
+
+        public enum SizeReq
+        {
+            None,
+            GtOrEq,
+            Gt,
         }
 
         public DataFile CertainFile { get; set; } = "";
@@ -38,7 +45,7 @@ namespace DS3TexUpUI
         public Func<TexId, bool> Ds3Filter { get; set; } = id => true;
         public Func<string, bool> ExternalFilter { get; set; } = file => true;
 
-        public bool RequireGreater { get; set; } = false;
+        public SizeReq RequireSize { get; set; } = SizeReq.GtOrEq;
         public bool SameKind { get; set; } = false;
         public Func<SizeRatio, IImageHasher>? CopyHasherFactory { get; set; } = null;
         public Func<ArrayTextureMap<Rgba32>, int> CopySpread { get; set; } = image => 2;
@@ -56,7 +63,8 @@ namespace DS3TexUpUI
                 return Directory.GetFiles(ExternalDir, "*.dds", SearchOption.AllDirectories).ToDictionary(f => f, f =>
                 {
                     var hash = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(f));
-                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                    var id = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant().Substring(0, 8);
+                    return $"{id}-{Path.GetFileName(Path.GetDirectoryName(f))}-{Path.GetFileNameWithoutExtension(f)}";
                 });
             });
         }
@@ -108,12 +116,13 @@ namespace DS3TexUpUI
                 var index = CopyIndex.Create(token.Reserve(0.5), files, CopyHasherFactory);
 
                 var copies = new Dictionary<TexId, List<string>>();
+                var prev = LoadUncertain();
 
                 token.SubmitStatus($"Looking up files");
                 token.ForAllParallel(DS3.OriginalSize.Keys.Where(Ds3Filter), id =>
                 {
                     var width = DS3.OriginalSize[id].Width;
-                    var set = new HashSet<string>();
+                    var set = prev.GetOrNew(id);
 
                     try
                     {
@@ -121,7 +130,15 @@ namespace DS3TexUpUI
                         var similar = index.GetSimilar(image, (byte)CopySpread(image));
                         if (similar != null)
                         {
-                            set.UnionWith(similar.Where(e => RequireGreater ? e.Width > width : e.Width >= width).Select(e => e.File));
+                            set.UnionWith(similar.Where(e =>
+                            {
+                                return RequireSize switch
+                                {
+                                    SizeReq.Gt => e.Width > width,
+                                    SizeReq.GtOrEq => e.Width >= width,
+                                    _ => true
+                                };
+                            }).Select(e => e.File));
                         }
                     }
                     catch (System.Exception e)

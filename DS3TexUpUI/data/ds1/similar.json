@@ -1,0 +1,215 @@
+{
+	"chr/c2110_c2110_rat": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c1200-c1200_rat.dds"
+	],
+	"chr/c3190_c3190_hair_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2640-c2640_hair.dds"
+	],
+	"chr/c3190_c3190_hammer_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2640-c2640_hammer.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0656-WP_A_0656.dds"
+	],
+	"chr/c3230_c3230_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2430-c2430_o4830_01.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4830_01.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o4830-o4830_01.dds"
+	],
+	"m38/m38_00_c2230_WP_A_0653_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2230-c2230_WP_A_0653.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0653-WP_A_0653.dds"
+	],
+	"m38/m38_00_c2240_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2240-c2240.dds"
+	],
+	"m38/m38_00_c2240_WP_A_0270_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2240-c2240_WP_A_0270.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0270-WP_A_0270.dds"
+	],
+	"m38/m38_00_c2250_WP_A_0651_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2250-c2250_WP_A_0651.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0651-WP_A_0651.dds"
+	],
+	"m38/m38_00_c5340_body": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5340-c5340_body.dds"
+	],
+	"m38/m38_00_m14_egg": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_egg.dds"
+	],
+	"m40/m40_00_ashtiling_45_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_obj_elevator_03_s.dds"
+	],
+	"m40/m40_00_m13_B_floor_06_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_floor_06.dds"
+	],
+	"m40/m40_00_m13_N_wall_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_wall_06.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o3881-o3880.dds"
+	],
+	"m41/m41_00_m40_00_x_ground_02_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_00_ground_02.dds"
+	],
+	"m45/m45_00_o1550_handle_a": [
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o1550-o1550_handle.dds"
+	],
+	"m50/m50_00_base_floor_ground_02_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_02.dds"
+	],
+	"m50/m50_00_Cage_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_obj_cage_01.dds"
+	],
+	"m50/m50_00_x_floor_03_white_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_floor_03_white.dds"
+	],
+	"m50/m50_wall_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_dome_wall.dds"
+	],
+	"obj/o007010_o007010_WP_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_WP_A_0710.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0710-WP_A_0710.dds"
+	],
+	"obj/o300500_o300500_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_lever_01.dds"
+	],
+	"obj/o300500_o300500_01_s": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_lever_01_s.dds"
+	],
+	"obj/o309800_o0100_a": [
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o0200-o0200.dds"
+	],
+	"obj/o371000_o371000_hammer_a": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2869-c2869_hammer.dds"
+	],
+	"obj/o401250_o401250_smith_tools_01_s": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_smith_tools_01_s.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_smith_tools_s.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_smith_tools_01_s.dds"
+	],
+	"obj/o401250_o401250_smith_tools_04_s": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_smith_tools_04_s.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_smith_tools_04_s.dds"
+	],
+	"obj/o401250_o401250_smith_tools_05_a": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_smith_tools_05.dds"
+	],
+	"obj/o401250_o401250_smith_tools_05_s": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_smith_tools_05_s.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_smith_tools_05_s.dds"
+	],
+	"obj/o934630_o4630_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o0200-o0200_base.dds"
+	],
+	"obj/o999992_o0150": [
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o0150-o0150.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9800-o0150.dds"
+	],
+	"obj/o999992_o999992_s": [
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o0150-o0150_s.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9800-o0150_s.dds"
+	],
+	"parts/AM_F_7750_AM_F_7750_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9380-AM_M_9380.dds"
+	],
+	"parts/AM_M_7450_AM_M_7450_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9360-AM_F_9360.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9360-AM_M_9360.dds"
+	],
+	"parts/AM_M_7800_AM_M_7800_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9450-AM_M_9450.dds"
+	],
+	"parts/AM_M_7950_AM_M_7950_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9521-AM_F_9521.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9521-AM_M_9521_AM_F_9521.dds"
+	],
+	"parts/AM_M_8200_AM_M_8200_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9440-AM_M_9440.dds"
+	],
+	"parts/AM_M_8700_AM_M_8700_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9280-AM_F_9280_AM_M_9280.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9280-AM_M_9280.dds"
+	],
+	"parts/AM_M_9100_AM_M_9100_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9430-AM_F_9430_AM_M_9430.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9430-AM_M_9430.dds"
+	],
+	"parts/BD_F_7000_BD_F_7000_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1.dds"
+	],
+	"parts/BD_M_7500_BD_M_7500_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9570-BD_A_9570_1.dds"
+	],
+	"parts/BD_M_7750_BD_M_7750_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9380-BD_M_9380_1.dds"
+	],
+	"parts/BD_M_7800_BD_M_7800_01_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9450-BD_M_9450_1.dds"
+	],
+	"parts/HD_F_7950_HD_F_7950_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_F_9521-HD_F_9521.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9521-HD_M_9521_HD_F_9521.dds"
+	],
+	"parts/HD_M_7500_HD_M_7500_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_A_9570-HD_A_9570.dds"
+	],
+	"parts/HD_M_7750_HD_M_7750_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9380-HD_M_9380.dds"
+	],
+	"parts/LG_M_7500_LG_M_7500_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9570-LG_F_9570_LG_M_9570.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9570-LG_M_9570.dds"
+	],
+	"parts/LG_M_7550_LG_M_7550_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9320-LG_M_9320.dds"
+	],
+	"parts/WP_A_0101_WP_A_0101_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0101-WP_A_0101.dds"
+	],
+	"parts/WP_A_0221_WP_A_0221_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0264-WP_A_0264.dds"
+	],
+	"parts/WP_A_0500_WP_A_0500_1_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0402-WP_A_0402.dds"
+	],
+	"parts/WP_A_1318_WP_A_1318_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0901-WP_A_0901.dds"
+	],
+	"parts/WP_A_1320_WP_A_1320_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0916-WP_A_0916.dds"
+	],
+	"parts/WP_A_2022_WP_A_2022_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1526-WP_A_1526.dds"
+	],
+	"parts/WP_A_2116_WP_A_2116_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1511-WP_A_1511.dds"
+	],
+	"parts/WP_A_2119_WP_A_2119_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1520-WP_A_1520.dds"
+	],
+	"parts/WP_A_6700_WP_A_6700_a": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1700-WP_A_1700.dds"
+	],
+	"parts/WP_A_9000_WP_1000_M_d": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0100-WP_A_0100.dds"
+	],
+	"sfx/commoneffects_s00043_a": [
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\c4100-s03011.dds",
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\CommonEffects-s03035.dds",
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\m14-s03011.dds"
+	],
+	"sfx/commoneffects_s50058": [
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\CommonEffects-s00019.dds"
+	],
+	"sfx/commoneffects_s50907": [
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\CommonEffects-s00907.dds"
+	],
+	"sfx/dlc1_s07100": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5370-c5370_HD_A_5370.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_A_5370-HD_A_5370.dds",
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\m12_01-s04050.dds"
+	],
+	"sfx/m30_s53005": [
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\CommonEffects-s03005.dds"
+	],
+	"sfx/m37_s50053": [
+		"C:\\DS3TexUp\\extract-ds1\\sfx\\CommonEffects-s01005.dds"
+	]
+}

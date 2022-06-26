@@ -1,0 +1,1328 @@
+{
+	"chr/c1210_c1210_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"chr/c1241_c1241_WP_A_0252_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2660-c2660_WP_A_0252_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0252-WP_A_0252_n.dds"
+	],
+	"chr/c1300_c1300_weapon3_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0731-WP_A_0731_n.dds"
+	],
+	"chr/c1410_c1410_spear_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1101-WP_A_1101_n.dds"
+	],
+	"chr/c3110_c3110_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"chr/c3190_c3190_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2640-c2640_hair_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_Andre_n.dds"
+	],
+	"chr/c3230_c3230_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2231-c2231_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2239-c2239_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2430-c2430_o4830_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4830_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o4830-o4830_n.dds"
+	],
+	"chr/c5019_c5019_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds"
+	],
+	"chr/c5140_c5140_wings_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5310-c5310_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"chr/c5210_c5210_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5310-c5310_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"chr/c6030_c6030_hairTEST_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"chr/c6030_c6030_Hair_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2730-c2730_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_Sealed_door_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9520-LG_F_9520_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9520-LG_M_9520_LG_F_9520_n.dds"
+	],
+	"chr/c6121_c6121_mohu_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_obj_pot_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_wall_plaster_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"m30/m30_00_ash_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"m30/m30_00_m37_00_tree_06_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m30/m30_00_o4801_roof_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m30/m30_00_o4820_carpet_b_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m30/m30_00_o4820_carpet_b_04_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"m30/m30_00_o4820_DirtCarpet_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m30/m30_00_o4820_stairs_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds"
+	],
+	"m30/m30_00_o4834_stair_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds"
+	],
+	"m30/m30_00_wallTile_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m31/m31_00_cloth_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_mausoleum_floor_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"m31/m31_00_sniperbow_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_obj_bow_n.dds"
+	],
+	"m31/m31_00_spiderweb_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_mausoleum_floor_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"m31/m31_00_spiderweb_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m31/m31_00_spiderweb_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m31/m31_00_stonefloor_12_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds"
+	],
+	"m31/m31_00_straw_00_edge_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m32/m32_00_c3010_hairs_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m32/m32_00_o324005_sand_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds"
+	],
+	"m32/m32_00_o324030_branch_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds"
+	],
+	"m32/m32_00_plant_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m33/m33_00_bloody_decal_000_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2711-c2711_AM_F_9480_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5310-c5310_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0103-WP_A_0103_n.dds"
+	],
+	"m33/m33_00_c2270_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2270-c2270_n.dds"
+	],
+	"m33/m33_00_c2280_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2280-c2280_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\c2280_n.dds"
+	],
+	"m33/m33_00_moss_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"m33/m33_00_o331040_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds"
+	],
+	"m33/m33_00_scroll_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_obj_statue_c5270_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"m34/m34_00_o304882_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m34/m34_00_o4820_carpet_broken_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds"
+	],
+	"m34/m34_01_o309190_07_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds"
+	],
+	"m34/m34_o344883_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3511-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5300-WP_A_0283_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_sofa_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0103-WP_A_0103_n.dds"
+	],
+	"m35/m35_00_o331102_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds"
+	],
+	"m35/m35_00_o331103_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"m35/m35_00_o4820_carpet_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_cloth_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_wall_plaster_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"m37/m37_00_DirtyTile_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m37/m37_00_floor_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5310-c5310_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_mausoleum_floor_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m37/m37_00_grass_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds"
+	],
+	"m37/m37_00_metalTile_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m37/m37_00_pan_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m37/m37_00_plate_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3511-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m37/m37_00_sofa_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m37/m37_00_wallpaper_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds"
+	],
+	"m37/m37_00_wallTile_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds"
+	],
+	"m37/m37_00_win_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m38/m38_00_c2230_WP_A_0653_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2230-c2230_WP_A_0653_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2231-WP_A_0653_Fire_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0653-WP_A_0653_n.dds"
+	],
+	"m38/m38_00_c2240_WP_A_0270_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2240-c2240_WP_A_0270_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0270-WP_A_0270_n.dds"
+	],
+	"m38/m38_00_c2250_body_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2250-c2250_body_n.dds"
+	],
+	"m38/m38_00_c5200_centipede_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5200-c5200_centipede_n.dds"
+	],
+	"m38/m38_00_m96_croom_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds"
+	],
+	"m40/m40_00_GraveStone_599_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9380-LG_F_9380_n.dds"
+	],
+	"m40/m40_00_m13_B_floor_06_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_floor_06_n.dds"
+	],
+	"m40/m40_00_m13_B_wall_09_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_09_n.dds"
+	],
+	"m40/m40_00_m13_B_wall_10_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_10_n.dds"
+	],
+	"m40/m40_00_m13_B_wall_54_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_54_n.dds"
+	],
+	"m40/m40_00_o2400_10_pattern2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m40/m40_00_o4820_carpet_c_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m40/m40_00_o4820_carpet_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"m40/m40_00_water_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m41/m41_00_m36_Test_branch_04_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds"
+	],
+	"m41/m41_00_m40_00_x_ground_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_00_ground_02_n.dds"
+	],
+	"m41/m41_00_o364045_cobweb_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m45/m45_00_grass_tile_B00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds"
+	],
+	"m45/m45_00_ice_A00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m45/m45_00_ice_V00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds"
+	],
+	"m45/m45_00_rock_tile_C00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds"
+	],
+	"m45/m45_00_snow_L00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds"
+	],
+	"m45/m45_00_SpidersWeb_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"m45/m45_00_stone_tile_C00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds"
+	],
+	"m46/m46_00_o309320_wall_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m50/m50_00_base_floor_ground_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_02_n.dds"
+	],
+	"m50/m50_00_base_stair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_stair_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_m10_base_stair_n.dds"
+	],
+	"m50/m50_00_outerwall_07_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"m50/m50_00_wall_stone_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_stone_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o8320-m10_wall_stone_n.dds"
+	],
+	"m50/m50_00_x_floor_03_white_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_floor_03_white_n.dds"
+	],
+	"m50/m50_o304860_14_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"m51/m51_00_interior_wallTile_05_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds"
+	],
+	"m51/m51_00_stone_base_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_00_waterfall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_wall_plaster_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"m51/m51_00_water_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds"
+	],
+	"m51/m51_01_sabaku_07_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds"
+	],
+	"m51/m51_01_sabaku_11_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_damage_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_room_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_stone_09_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m16_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"obj/o004200_o004200_pot_00_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"obj/o324112_o324112_plant_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5300-WP_A_0283_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_mausoleum_floor_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_sofa_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0103-WP_A_0103_n.dds"
+	],
+	"obj/o359101_o359101_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5220-c5220_Head_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_12.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_floor_01_n.dds"
+	],
+	"obj/o407200_o407200_03_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9500-BD_A_9500_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9509-BD_A_9509_BD_A_9500_2_n.dds"
+	],
+	"parts/AM_F_7000_AM_F_7000_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9300-AM_F_9300_n.dds"
+	],
+	"parts/AM_F_7200_AM_F_7200_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_A_9500-AM_A_9500_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_A_9550-AM_A_9550_n.dds"
+	],
+	"parts/AM_F_9300_AM_F_9300_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-c5271_AM_A_9470_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_A_9470-AM_A_9470_n.dds"
+	],
+	"parts/AM_M_7750_AM_M_7750_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9380-AM_F_9380_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9380-AM_M_9380_n.dds"
+	],
+	"parts/AM_M_8300_AM_M_8300_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds"
+	],
+	"parts/AM_M_8700_AM_M_8700_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9280-AM_F_9280_AM_M_9280_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9280-AM_M_9280_n.dds"
+	],
+	"parts/AM_M_9800_AM_M_9800_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_01_chair_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_base_floor_ground_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_08_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_detail_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_ground_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_floor_wood_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_pillar_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_stair_spiral_top_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_inner_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m11_wall_stone_snow_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m12_dlc_vsmap_floor_ground_03_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_B_wall_00_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_chapel_floor_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_obj_pot_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_gear_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_Stairs_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\obj\\o9100-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_6200-BD_M_6200_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1504-WP_A_1504_n.dds"
+	],
+	"parts/BD_F_7200_BD_F_7200_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9500-BD_A_9500_1_n.dds"
+	],
+	"parts/BD_F_7200_BD_F_7200_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9500-BD_A_9500_2_n.dds"
+	],
+	"parts/BD_F_7450_BD_F_7450_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9360-BD_F_9360_2_n.dds"
+	],
+	"parts/BD_F_7600_BD_F_7600_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9420-BD_F_9420_2_n.dds"
+	],
+	"parts/BD_F_7750_BD_F_7750_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9380-BD_F_9380_2_n.dds"
+	],
+	"parts/BD_F_7950_BD_F_7950_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9521-BD_F_9521_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9521-BD_M_9521_BD_F_9521_1_n.dds"
+	],
+	"parts/BD_F_9300_BD_F_9300_01_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-c5271_BD_A_9470_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9470-BD_A_9470_1_n.dds"
+	],
+	"parts/BD_F_9300_BD_F_9300_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-c5271_BD_A_9470_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9470-BD_A_9470_2_n.dds"
+	],
+	"parts/BD_M_7100_BD_M_7100_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9550-BD_A_9550_2_n.dds"
+	],
+	"parts/BD_M_7400_BD_M_7400_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_1000-BD_A_1000_n.dds"
+	],
+	"parts/BD_M_7450_BD_M_7450_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9360-BD_M_9360_1_n.dds"
+	],
+	"parts/BD_M_7450_BD_M_7450_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9360-BD_M_9360_2_n.dds"
+	],
+	"parts/BD_M_7500_BD_M_7500_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9570-BD_A_9570_1_n.dds"
+	],
+	"parts/BD_M_7500_BD_M_7500_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9570-BD_A_9570_2_n.dds"
+	],
+	"parts/BD_M_7600_BD_M_7600_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9420-BD_M_9420_2_n.dds"
+	],
+	"parts/BD_M_7800_BD_M_7800_02_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9450-BD_M_9450_2_n.dds"
+	],
+	"parts/BD_M_8300_BD_M_8300_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9220-BD_F_9220_BD_M_9220_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9220-BD_M_9220_2_n.dds"
+	],
+	"parts/BD_M_8300_BD_M_8300_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9220-BD_F_9220_BD_M_9220_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9220-BD_M_9220_1_n.dds"
+	],
+	"parts/BD_M_8400_BD_M_8400_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9610-BD_F_9610_BD_M_9610_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9610-BD_M_9610_2_n.dds"
+	],
+	"parts/BD_M_8400_BD_M_8400_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9610-BD_F_9610_BD_M_9610_1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_M_9610-BD_M_9610_1_n.dds"
+	],
+	"parts/BD_M_9000_BD_M_9000_2_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m18_Sealed_door_00_n.dds"
+	],
+	"parts/BD_M_9600_BD_M_9600_A_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_A_9390-BD_A_9390_1_n.dds"
+	],
+	"parts/FG_A_3001_FG_A_3001_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3511-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5300-WP_A_0283_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m10_wall_building_12_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_sofa_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0103-WP_A_0103_n.dds"
+	],
+	"parts/FG_A_3003_FG_A_3003_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3470-c3470_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c3510-c3510_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5270-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-M_9470_hair_L_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5300-WP_A_0283_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m14_B_wall_02_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion1_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cushion2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_building_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds"
+	],
+	"parts/FG_A_7001_FG_A_7001_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"parts/FG_A_7003_FG_A_7003_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"parts/HD_F_0100_HD_F_0100_hair_n": [
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_14_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m13_N_floor_70_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_queen_cloth_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m15_wall_roomwall_04_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m17_00_wood_07_n.dds"
+	],
+	"parts/HD_F_7600_HD_F_7600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_F_9420-HD_F_9420_n.dds"
+	],
+	"parts/HD_M_7550_HD_M_7550_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9320-HD_M_9320_n.dds"
+	],
+	"parts/HD_M_7600_HD_M_7600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9420-HD_M_9420_n.dds"
+	],
+	"parts/HD_M_7700_HD_M_7700_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9370-HD_M_9370_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9372-HD_M_9372_n.dds"
+	],
+	"parts/HD_M_7950_HD_M_7950_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_F_9521-HD_F_9521_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9521-HD_M_9521_HD_F_9521_n.dds"
+	],
+	"parts/HD_M_8200_HD_M_8200_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_F_9440-HD_F_9440_HD_M_9440_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9440-HD_M_9440_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9590-HD_M_9590_n.dds"
+	],
+	"parts/HD_M_8300_HD_M_8300_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_A_9220-HD_A_9220_n.dds"
+	],
+	"parts/HD_M_8400_HD_M_8400_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_F_9610-HD_F_9610_HD_M_9610_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_M_9610-HD_M_9610_n.dds"
+	],
+	"parts/HD_M_9600_HD_M_9600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\HD_A_9390-HD_A_9390_n.dds"
+	],
+	"parts/LG_F_7200_LG_F_7200_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9500-LG_F_9500_LG_M_9500_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9500-LG_M_9500_n.dds"
+	],
+	"parts/LG_F_7550_LG_F_7550_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9320-LG_F_9320_n.dds"
+	],
+	"parts/LG_F_7600_LG_F_7600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9420-LG_F_9420_n.dds"
+	],
+	"parts/LG_F_7800_LG_F_7800_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9450-LG_F_9450_n.dds"
+	],
+	"parts/LG_F_8250_LG_F_8250_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c2260-c2260_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_anC_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_B_wall_01_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\m19_wall_11_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_F_9480-AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\AM_M_9480-AM_M_9480_AM_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\BD_F_9300-BD_F_9300_1_n.dds"
+	],
+	"parts/LG_F_9300_LG_F_9300_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5271-c5271_LG_M_9470_n.dds"
+	],
+	"parts/LG_F_9800_LG_F_9800_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9480-LG_F_9480_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9480-LG_M_9480_LG_F_9480_n.dds"
+	],
+	"parts/LG_M_7200_LG_M_7200_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9500-LG_F_9500_LG_M_9500_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9500-LG_M_9500_n.dds"
+	],
+	"parts/LG_M_7450_LG_M_7450_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9360-LG_M_9360_n.dds"
+	],
+	"parts/LG_M_7550_LG_M_7550_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9320-LG_M_9320_n.dds"
+	],
+	"parts/LG_M_7600_LG_M_7600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9420-LG_M_9420_n.dds"
+	],
+	"parts/LG_M_8500_LG_M_8500_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9560-LG_F_9560_LG_M_9560_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9560-LG_M_9560_n.dds"
+	],
+	"parts/LG_M_9600_LG_M_9600_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_F_9390-LG_F_9390_LG_M_9390_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\parts\\LG_M_9390-LG_M_9390_n.dds"
+	],
+	"parts/WP_A_0101_WP_A_0101_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0101-WP_A_0101_n.dds"
+	],
+	"parts/WP_A_0211_WP_A_0211_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c4520-c4520_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5210-c5210_2_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\chr\\c5400-c5400_arm_n.dds",
+		"C:\\DS3TexUp\\extract-ds1\\map\\o4461_c5400_arm_n.dds"
+	],
+	"parts/WP_A_0303_WP_A_0303_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0302-WP_A_0302_n.dds"
+	],
+	"parts/WP_A_0500_WP_A_0500_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0402-WP_A_0402_n.dds"
+	],
+	"parts/WP_A_0501_WP_A_0501_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0450-WP_A_0450_n.dds"
+	],
+	"parts/WP_A_0707_WP_A_0707_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0252-WP_A_0252_n.dds"
+	],
+	"parts/WP_A_0824_WP_A_0824_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0604-WP_A_0604_n.dds"
+	],
+	"parts/WP_A_1360_WP_A_1360_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1360-WP_A_1360_n.dds"
+	],
+	"parts/WP_A_1608_WP_A_1608_1_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_0110-WP_A_0110_n.dds"
+	],
+	"parts/WP_A_2118_WP_A_2118_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1541-WP_A_1541_n.dds"
+	],
+	"parts/WP_A_2120_WP_A_2120_n": [
+		"C:\\DS3TexUp\\extract-ds1\\parts\\WP_A_1517-WP_A_1517_n.dds"
+	]
+}

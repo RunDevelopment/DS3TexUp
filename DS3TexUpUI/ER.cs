@@ -288,7 +288,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] != TexKind.Normal,
 
-            RequireGreater = true,
+            RequireSize = ExternalReuse.SizeReq.Gt,
             SameKind = true,
 
             CopySpread = image => 6,
@@ -313,7 +313,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] != TexKind.Normal,
 
-            RequireGreater = true,
+            RequireSize = ExternalReuse.SizeReq.Gt,
             SameKind = true,
 
             CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 8 : 6,
