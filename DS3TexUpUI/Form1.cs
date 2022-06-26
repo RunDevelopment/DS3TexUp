@@ -707,6 +707,10 @@ namespace DS3TexUpUI
                     if (DS3.Homographs.TryGetValue(text, out var homographs) && homographs.Count == 1)
                         return homographs.First();
 
+                    var byName = DS3.OriginalSize.Keys.Where(id => id.Name.SequenceEqual(text)).ToList();
+                    if (byName.Count == 1)
+                        return byName.Single();
+
                     throw new Exception();
                 }
 
