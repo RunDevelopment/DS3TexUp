@@ -1,0 +1,554 @@
+{
+	"chr/c2110_c2110_fur_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"chr/c2240_c2240_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png"
+	],
+	"chr/c3110_c3110_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"chr/c5019_c5019_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"chr/c5140_c5140_wings_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"chr/c5210_c5210_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"chr/c6020_c6020_mayu_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"chr/c6030_c6030_hairTEST_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"chr/c6121_c6121_mohu_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"chr/c6310_c6310_EyebrowsAndEyelashes_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"m30/m30_00_ash_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m30/m30_00_o4820_carpet_b_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"m30/m30_00_o4820_DirtCarpet_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m30/m30_00_o4820_stairs_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-cloth_31_n.png"
+	],
+	"m30/m30_00_o4834_stair_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"m30/m30_00_spiderWeb_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png"
+	],
+	"m30/m30_00_wallTile_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m31/m31_00_cloth_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m31/m31_00_ironcage_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-antique_cage_01_n.png"
+	],
+	"m31/m31_00_spiderweb_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m31/m31_00_spiderweb_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"m31/m31_00_spiderweb_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m31/m31_00_spiderweb_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m32/m32_00_c3010_hairs_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-Stairs_00_m_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\FG_7011_M_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m32/m32_00_plant_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o25_1030-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m33/m33_00_bloody_decal_000_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-Stairs_00_m_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\FG_7011_M_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m34/m34_00_o304882_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"m34/m34_01_o309190_07_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m34/m34_o344883_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o25_1030-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m35/m35_00_o331103_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"m35/m35_00_o4820_carpet_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m37/m37_00_DirtyTile_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"m37/m37_00_floor_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m37/m37_00_metalTile_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m37/m37_00_pan_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"m37/m37_00_plate_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m37/m37_00_sofa_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m37/m37_00_wall_04_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"m38/m38_00_m22_00_grass_502_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m39/m39_00_treasure_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-o80_8127_02_n.png"
+	],
+	"m40/m40_00_o2400_10_pattern2_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png"
+	],
+	"m40/m40_00_water_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m41/m41_00_o364045_cobweb_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"m45/m45_00_canvas_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"m45/m45_00_ice_A00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png"
+	],
+	"m50/m50_00_mushroom_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"m51/m51_00_interior_wallTile_05_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m51/m51_00_stone_base_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"m51/m51_01_sabaku_11_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"obj/o004200_o004200_pot_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"obj/o300390_o300390_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png"
+	],
+	"obj/o324112_o324112_plant_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"obj/o329700_m32_00_c5170_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"parts/AM_M_9800_AM_M_9800_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"parts/FG_A_3001_FG_A_3001_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"parts/FG_A_3003_FG_A_3003_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"parts/FG_A_3004_FG_A_3004_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o25_1030-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"parts/FG_A_7001_FG_A_7001_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3097-BD_c3097_2_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"parts/FG_A_7002_FG_A_7002_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-WP_2090_M_n.png"
+	],
+	"parts/FG_A_7003_FG_A_7003_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3097-BD_c3097_2_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png"
+	],
+	"parts/HD_F_0100_HD_F_0100_hair_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-text_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-metal_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-Stairs_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	],
+	"parts/HD_M_9000_HD_M_9000_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wall_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-minato_housewall_in02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-wall_01_n.png"
+	],
+	"parts/HR_A_0002_HR_A_0002_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png"
+	],
+	"parts/HR_A_0004_HR_A_0004_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood1601_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-wood_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-floor_00_n.png"
+	],
+	"parts/WP_A_0211_WP_A_0211_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7770-c7770_FUR_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-cloth_31_n.png"
+	],
+	"parts/WP_A_0404_WP_A_0404_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1330-WP_1600_M_n.png"
+	],
+	"sfx/dlc2_s08360_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6250-HR_c6250_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-grass_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_27_00_00-wall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-river_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-wall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-Stairs_00_m_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_M_1360_n.png"
+	]
+}

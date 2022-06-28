@@ -1,0 +1,113 @@
+{
+	"chr/c1090_c1090_jarei_body_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-blood_00_a.png"
+	],
+	"chr/c1321_dummy_a": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1490-WP_c1490_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3160-AM_c3160_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o99_0005-SD_1650_M_a.png"
+	],
+	"m30/m30_00_floor_01_brick_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_goddess_a.png"
+	],
+	"m30/m30_00_o4808_door_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-Pillar_05_a.png"
+	],
+	"m31/m31_00_tombstone_04_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_goddess_a.png"
+	],
+	"m31/m31_00_water_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_31_00_00-sea_00_a.png"
+	],
+	"m32/m32_00_kumo_70_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-wall_06_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-Debris_01_a.png"
+	],
+	"m32/m32_00_Outside_Snow_a": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6000-c6000_1_ao.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-c6000_1_ao.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-C_wall_00_ao.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-gate_00_ao.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\AM_1490_F_ao.png"
+	],
+	"m33/m33_00_m39_00_brick_053_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-metal_00_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-wall_26_a.png"
+	],
+	"m34/m34_00_wax_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_34_00_00-nezumi_00_a.png"
+	],
+	"m35/m35_00_Dust_00_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-Debris_01_a.png"
+	],
+	"m37/m37_00_wall_50_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_34_00_00-wall_05_a.png"
+	],
+	"m37/m37_00_water_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3150-Bronze_00_a.png"
+	],
+	"m39/m39_00_bricksingle_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-ground_05_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-rock_10_a.png"
+	],
+	"m39/m39_00_ground_00_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-wood_00_a.png"
+	],
+	"m39/m39_00_treasuretiling_00_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-mask_40.png"
+	],
+	"m39/m39_00_waterpuddle_01_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-Pillar_05_a.png"
+	],
+	"m40/m40_00_ashtiling_45_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_19_00_00-Stone_shinen_01_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-ground_stone_02_a.png"
+	],
+	"m40/m40_00_GeneralThrone_01_emisve_atif": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-mask_40.png"
+	],
+	"m40/m40_00_rock_20_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-Debris_01_a.png"
+	],
+	"m40/m40_00_stair_302_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_goddess_a.png"
+	],
+	"m40/m40_00_test_03_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-ground_05_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-Pillar_05_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-rock_10_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-wall_24_a.png"
+	],
+	"m45/m45_00_skin_Standard_02_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-outerwall_06_a.png"
+	],
+	"m50/m50_00_chain_00_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-Chain_00_a.png"
+	],
+	"m50/m50_00_wall_10_a": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_wall06_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_21_00_00-Innerwall_10_a.png"
+	],
+	"obj/o001240_o1242_s": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3150-Bronze_00_a.png"
+	],
+	"obj/o309301_o309301_wall_01_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Metal_00_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-metal_00_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-wall_26_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-Pillar_01_a.png"
+	],
+	"obj/o350051_o350051_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-ground_40_a.png"
+	],
+	"obj/o381024_m35_00_o350053_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_goddess_a.png"
+	],
+	"obj/o381025_m35_00_o350019_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-Metal_00_a.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-Metal_00_a.png"
+	],
+	"obj/o391000_Candle_01_s": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_32_00_00-Stone_shinen_01_a.png"
+	]
+}

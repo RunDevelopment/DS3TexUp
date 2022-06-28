@@ -809,6 +809,106 @@ namespace DS3TexUpUI
                 r = Interpolate(r, smooth.Data[i]);
             }
         }
+        public static ArrayTextureMap<float> GetMossMap(this ArrayTextureMap<Rgba32> image)
+        {
+            static float Greenness(float hue)
+            {
+                const float Low = 40;
+                const float Mid1 = 80;
+                const float Mid2 = 120;
+                const float High = 180;
+
+                if (hue < Low) return 0;
+                if (hue < Mid1) return (hue - Low) / (Mid1 - Low);
+                if (hue < Mid2) return 1;
+                if (hue < High) return 1 - (hue - Mid2) / (High - Mid2);
+                return 0;
+            }
+
+            var data = new float[image.Count];
+            for (int i = 0; i < image.Data.Length; i++)
+            {
+                var (hue, sat, v) = (HSV)image.Data[i];
+
+                var g = Greenness(hue);
+                var sat_ = sat.ExtendOut(0.1f, 0.4f);
+
+                data[i] = MathF.Sqrt(g * sat_);
+            }
+
+            return data.AsTextureMap(image.Width);
+        }
+
+
+        public static RgbaDiff GetMaxAbsDiff(this ArrayTextureMap<Rgba32> image)
+        {
+            byte minR = 255;
+            byte maxR = 0;
+            byte minG = 255;
+            byte maxG = 0;
+            byte minB = 255;
+            byte maxB = 0;
+            byte minA = 255;
+            byte maxA = 0;
+
+            for (int y = 1; y < image.Height - 1; y++)
+            {
+                for (int x = 1; x < image.Width - 1; x++)
+                {
+                    var c = image[x, y];
+                    minR = c.R < minR ? c.R : minR;
+                    maxR = c.R > maxR ? c.R : maxR;
+                    minG = c.G < minG ? c.G : minG;
+                    maxG = c.G > maxG ? c.G : maxG;
+                    minB = c.B < minB ? c.B : minB;
+                    maxB = c.B > maxB ? c.B : maxB;
+                    minA = c.A < minA ? c.A : minA;
+                    maxA = c.A > maxA ? c.A : maxA;
+                }
+            }
+
+            var dR = (byte)(maxR - minR);
+            var dG = (byte)(maxG - minG);
+            var dB = (byte)(maxB - minB);
+            var dA = (byte)(maxA - minA);
+
+            return new RgbaDiff(dR, dG, dB, dA);
+        }
+        public static TransparencyKind GetTransparency(this ArrayTextureMap<Rgba32> image)
+        {
+            var map = new bool[256];
+            foreach (ref var p in image.Data.AsSpan())
+            {
+                map[p.A] = true;
+            }
+
+            var min = 255;
+            for (int i = 0; i < 256; i++)
+            {
+                if (map[i])
+                {
+                    min = i;
+                    break;
+                }
+            }
+
+            if (min == 255) return TransparencyKind.None;
+            if (min >= 250) return TransparencyKind.Unnoticeable;
+
+            var hasMin = false;
+            for (int i = 6; i < 250; i++)
+            {
+                if (map[i])
+                {
+                    hasMin = true;
+                    break;
+                }
+            }
+
+            return hasMin ? TransparencyKind.Full : TransparencyKind.Binary;
+        }
+
+
 
         public static (double color, double feature) GetSimilarityScore(this ArrayTextureMap<Rgba32> a, ArrayTextureMap<Rgba32> b)
         {

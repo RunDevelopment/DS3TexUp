@@ -1,0 +1,370 @@
+{
+	"chr/c1070_c1070_WP_A_1406_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1020-WP_4210_M_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1570-c1320_WP_A_1301_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_4290_M_n.png"
+	],
+	"chr/c1241_c1241_WP_A_0252_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-WP_2090_M_n.png"
+	],
+	"chr/c1449_c1449_WP_A_1306_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_3800_M_n.png"
+	],
+	"chr/c2110_c2110_rat_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c2260-c2260_rat_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c2261-c2261_rat_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_34_00_00-c2260_rat_n.png"
+	],
+	"chr/c3210_c3210_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c2050-c2050_n.png"
+	],
+	"m30/m30_00_o007200_statue_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-m10_01_statue_02_n.png"
+	],
+	"m31/m31_00_ironladder_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_33_00_00-Ladder_frame_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o00_0902-o00_0900_n.png"
+	],
+	"m31/m31_00_stoneborder_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Border_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_23_00_00-Border_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_34_00_00-Border_00_n.png"
+	],
+	"m31/m31_00_water_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-sea_03_n.png"
+	],
+	"m35/m35_00_Debris_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-Debris_01_n.png"
+	],
+	"m35/m35_00_o000700_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-Wood_Ladder_n.png"
+	],
+	"m35/m35_00_Undermine_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-tree_34_n.png"
+	],
+	"m37/m37_00_ash_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-o0200_base_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-o0200_base_n.png"
+	],
+	"m38/m38_00_o4100_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-Rock_07_n.png"
+	],
+	"m39/m39_00_c3240_bd_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7045-BD_c7040_M_n.png"
+	],
+	"m39/m39_00_c3240_eye_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7045-EYE_c7040_M_n.png"
+	],
+	"m39/m39_00_treasure_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_35_00_00-teapot_00_n.png"
+	],
+	"m40/m40_00_nests_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-tree_03_n.png"
+	],
+	"m40/m40_00_rain_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-rain_00_n.png"
+	],
+	"m45/m45_00_debris_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Debris_10_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-Debris_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-Debris_01_n.png"
+	],
+	"m50/m50_00_base_floor_ground_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-m10_04_grass05_n.png"
+	],
+	"m50/m50_00_Border_04_k_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Border_04_k_n.png"
+	],
+	"m50/m50_00_Border_13_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Border_13_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-Border_02_n.png"
+	],
+	"m50/m50_00_brickwall_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_brickwall_00_n.png"
+	],
+	"m50/m50_00_BrickWall_04_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-outerwall_06_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-BrickWall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-BrickWall_00_n.png"
+	],
+	"m50/m50_00_Cage_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-Cage_01_n.png"
+	],
+	"m50/m50_00_destruction_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3270-destruction_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_14_destruction_n.png"
+	],
+	"m50/m50_00_Gareki_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Gareki_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_23_00_00-rock_00_n.png"
+	],
+	"m50/m50_00_ground_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-ground_cave_00_n.png"
+	],
+	"m50/m50_00_ground_08_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_ground_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-ground_08_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-ground_02_n.png"
+	],
+	"m50/m50_00_Innerfloor_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-IndoorFloor_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-Floor_03_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-Innerfloor_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-Floor_03_n.png"
+	],
+	"m50/m50_00_m10_00_Border_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Border_00_n.png"
+	],
+	"m50/m50_00_m10_00_floor_07_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-floor_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-floor_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-floor_09_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-m10_04_ground_07_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-floor_04_n.png"
+	],
+	"m50/m50_00_m10_00_stairs_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Stairs_00_n.png"
+	],
+	"m50/m50_00_m10_04_brickwall_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_brickwall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_04_brickwall_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_18_00_00-brickwall_01_n.png"
+	],
+	"m50/m50_00_m10_04_brick_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_brick_01_n.png"
+	],
+	"m50/m50_00_m10_04_Brick_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Brick_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_37_00_00-Brick_02_n.png"
+	],
+	"m50/m50_00_m10_04_stone_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_rock_01_n.png"
+	],
+	"m50/m50_00_m10_04_wood_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood02_n.png"
+	],
+	"m50/m50_00_Moss_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-Moss_00_n.png"
+	],
+	"m50/m50_00_Obelisk_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Obelisk_00_n.png"
+	],
+	"m50/m50_00_Ornament_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-m10_04_Ornament_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-Ornament_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-Ornament_00_n.png"
+	],
+	"m50/m50_00_Ornament_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Ornament_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-Ornament_01_n.png"
+	],
+	"m50/m50_00_Pillar_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Pillar_02_n.png"
+	],
+	"m50/m50_00_Plate_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Plate_00_n.png"
+	],
+	"m50/m50_00_rope_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-rope_00_n.png"
+	],
+	"m50/m50_00_rope_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-rope_02_n.png"
+	],
+	"m50/m50_00_Sekiban_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-Sekiban_00_n.png"
+	],
+	"m50/m50_00_TopStone_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-TopStone_00_n.png"
+	],
+	"m50/m50_00_tree_piller_00_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-tree_piller_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_24_00_00-wood_01_n.png"
+	],
+	"m50/m50_00_wall_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-wall_01_n.png"
+	],
+	"m50/m50_00_wall_03_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_34_00_00-wall_03_n.png"
+	],
+	"m50/m50_00_wall_09_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-wall_09_n.png"
+	],
+	"m50/m50_00_wall_10_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_16_00_00-BrickWall_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-wall_10_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_23_00_00-brickwall_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-BrickWall_00_n.png"
+	],
+	"m50/m50_00_wall_20_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_04_00_00-wall_20_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_29_00_00-wall_20_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m20_11_00_00-BrickWall_00_n.png"
+	],
+	"m50/m50_00_window_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_17_00_00-window_02_n.png"
+	],
+	"m50/m50_WoodBoard_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-WoodBoard_01_n.png"
+	],
+	"obj/o001241_o1240_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-candle_00_n.png"
+	],
+	"obj/o300500_o300500_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o00_0640-m17_00_lever_01_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o19_0660-m17_00_lever_01_n.png"
+	],
+	"obj/o331001_o7040_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_23_00_00-tree_23_n.png"
+	],
+	"obj/o400510_o300510_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-o80_2502_00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m50_36_00_00-lever_02_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o00_0600-o80_2502_00_n.png"
+	],
+	"obj/o409070_BD_c3091_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3096-BD_c3091_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-BD_c3091_n.png"
+	],
+	"obj/o409070_tree_04_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-tree_04_n.png"
+	],
+	"obj/o409070_wood_20_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_02_00_00-Wood00_n.png",
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_14_00_00-m10_03_wood00_n.png"
+	],
+	"obj/o934010_o4010_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-Rock_05_n.png"
+	],
+	"obj/o934630_o4630_n": [
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o00_1010-o1010_01_n.png"
+	],
+	"parts/AM_F_8800_AM_F_8800_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\AM_1600_M_n.png"
+	],
+	"parts/AM_M_8000_AM_M_8000_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\AM_1490_F_n.png"
+	],
+	"parts/BD_F_7900_BD_F_7900_A_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_7420_F_1_n.png"
+	],
+	"parts/BD_F_7900_BD_F_7900_B_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_7420_F_2_n.png"
+	],
+	"parts/BD_F_8800_BD_F_8800_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_1600_M_1_n.png"
+	],
+	"parts/BD_F_8800_BD_F_8800_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_1600_M_2_n.png"
+	],
+	"parts/BD_F_9400_BD_F_9400_02_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_9905_M_2_n.png"
+	],
+	"parts/BD_M_8000_BD_M_8000_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_1490_F_1_n.png"
+	],
+	"parts/BD_M_8000_BD_M_8000_2_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_1490_F_2_n.png"
+	],
+	"parts/BD_M_8050_BD_M_8050_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_3250_F_1_n.png"
+	],
+	"parts/BD_M_8050_BD_M_8050_2_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_3250_F_2_n.png"
+	],
+	"parts/BD_M_8600_BD_M_8600_2_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_7520_F_2_n.png"
+	],
+	"parts/BD_M_8600_BD_M_8600_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_7520_F_1_n.png"
+	],
+	"parts/BD_M_9400_BD_M_9400_01_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\BD_9905_M_1_n.png"
+	],
+	"parts/HD_F_7750_HD_F_7750_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_1070_F_n.png"
+	],
+	"parts/HD_F_8800_HD_F_8800_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_1600_M_n.png"
+	],
+	"parts/HD_M_8000_HD_M_8000_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_1490_F_n.png"
+	],
+	"parts/HD_M_8050_HD_M_8050_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_3250_F_n.png"
+	],
+	"parts/HD_M_8250_HD_M_8250_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_1501_M_n.png"
+	],
+	"parts/HD_M_8350_HD_M_8350_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_1500_F_n.png"
+	],
+	"parts/HD_M_8600_HD_M_8600_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\HD_7520_F_n.png"
+	],
+	"parts/LG_F_8800_LG_F_8800_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\LG_1600_F_n.png"
+	],
+	"parts/LG_M_8000_LG_M_8000_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\LG_1490_F_n.png"
+	],
+	"parts/LG_M_8050_LG_M_8050_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\LG_3250_F_n.png"
+	],
+	"parts/WP_A_0101_WP_A_0101_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1460-WP_1010_M_n.png"
+	],
+	"parts/WP_A_0202_WP_A_0202_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_1230_M_n.png"
+	],
+	"parts/WP_A_0302_WP_A_0302_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_1500_M_n.png"
+	],
+	"parts/WP_A_0403_WP_A_0403_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1130-WP_1650_M_n.png"
+	],
+	"parts/WP_A_0404_WP_A_0404_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_1600_M_n.png"
+	],
+	"parts/WP_A_0500_WP_A_0500_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c7510-WP_1700_M_n.png"
+	],
+	"parts/WP_A_0501_WP_A_0501_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_1710_M_n.png"
+	],
+	"parts/WP_A_0600_WP_A_0600_1_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_10_00_00-Weapon_00_n.png"
+	],
+	"parts/WP_A_0635_WP_A_0635_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6750-WP_5250_M_n.png"
+	],
+	"parts/WP_A_0707_WP_A_0707_n": [
+		"C:\\DS3TexUp\\extract-ds2\\map\\m10_15_00_00-WP_2090_M_n.png"
+	],
+	"parts/WP_A_1013_WP_A_1013_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c6270-WP_3070_M_n.png"
+	],
+	"parts/WP_A_1320_WP_A_1320_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\WP_A_0916_n.png"
+	],
+	"parts/WP_A_2123_WP_A_2123_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\SD_1210_M_n.png"
+	],
+	"parts/WP_A_2124_WP_A_2124_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\SD_1220_M_n.png"
+	],
+	"parts/WP_A_2126_WP_A_2126_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\SD_1300_M_n.png"
+	],
+	"parts/WP_A_2128_WP_A_2128_n": [
+		"C:\\DS3TexUp\\extract-ds2\\obj\\o38_2001-SD_c5140_M_n.png"
+	],
+	"parts/WP_A_2210_WP_A_2210_n": [
+		"C:\\DS3TexUp\\extract-ds2\\parts\\SD_1500_M_n.png"
+	],
+	"parts/WP_A_2211_WP_A_2211_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c3310-SD_1650_M_n.png"
+	],
+	"parts/WP_A_9000_WP_1000_M_n": [
+		"C:\\DS3TexUp\\extract-ds2\\chr\\c1150-WP_1000_M_n.png"
+	]
+}

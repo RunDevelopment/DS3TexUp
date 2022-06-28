@@ -60,12 +60,14 @@ namespace DS3TexUpUI
             {
                 using var md5 = System.Security.Cryptography.MD5.Create();
 
-                return Directory.GetFiles(ExternalDir, "*.dds", SearchOption.AllDirectories).ToDictionary(f => f, f =>
-                {
-                    var hash = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(f));
-                    var id = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant().Substring(0, 8);
-                    return $"{id}-{Path.GetFileName(Path.GetDirectoryName(f))}-{Path.GetFileNameWithoutExtension(f)}";
-                });
+                return Directory.GetFiles(ExternalDir, "*.dds", SearchOption.AllDirectories)
+                    .Concat(Directory.GetFiles(ExternalDir, "*.png", SearchOption.AllDirectories))
+                    .ToDictionary(f => f, f =>
+                    {
+                        var hash = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(f));
+                        var id = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant().Substring(0, 8);
+                        return $"{id}-{Path.GetFileName(Path.GetDirectoryName(f))}-{Path.GetFileNameWithoutExtension(f)}";
+                    });
             });
         }
 
