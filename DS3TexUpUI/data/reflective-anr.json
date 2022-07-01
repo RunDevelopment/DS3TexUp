@@ -1939,11 +1939,6 @@
 		"N": "chr/c6200_c6200_Body_n",
 		"R": "chr/c6200_c6200_Body_r"
 	},
-	"chr/c6200_c6200_Hair_r": {
-		"A": "parts/FC_M_0003_FC_M_0003_Hair_a",
-		"N": "parts/FC_M_0003_FC_M_0003_Hair_n",
-		"R": "chr/c6200_c6200_Hair_r"
-	},
 	"chr/c6200_c6200_Weapon_r": {
 		"A": "parts/WP_A_0226_WP_A_0226_a",
 		"N": "chr/c6200_c6200_Weapon_n",

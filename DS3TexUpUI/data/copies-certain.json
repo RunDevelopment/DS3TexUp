@@ -3297,11 +3297,13 @@
 	],
 	[
 		"chr/c6200_c6200_Hair_n",
-		"chr/c6201_c6201_Hair_n"
+		"chr/c6201_c6201_Hair_n",
+		"parts/FC_M_0003_FC_M_0003_Hair_n"
 	],
 	[
 		"chr/c6200_c6200_Hair_r",
-		"chr/c6201_c6201_Hair_r"
+		"chr/c6201_c6201_Hair_r",
+		"parts/FC_M_0003_FC_M_0003_Hair_r"
 	],
 	[
 		"chr/c6200_c6200_Weapon_a",
