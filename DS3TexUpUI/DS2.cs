@@ -194,31 +194,6 @@ namespace DS3TexUpUI
             size.SaveAsJson(Data.File(@"ds2/size.json", Data.Source.Local));
         }
 
-        // public static IReadOnlyDictionary<string, DDSFormat> OriginalFormat
-        //     = Data.File(@"ds2/format.json").LoadJsonFile<Dictionary<string, DDSFormat>>();
-        // public static void CreateFormat(IProgressToken token)
-        // {
-        //     token.SubmitStatus("Format");
-
-        //     var dds = Directory.GetFiles(ExtractDir, "*.dds", SearchOption.AllDirectories);
-
-        //     var format = new Dictionary<string, DDSFormat>();
-        //     token.ForAllParallel(dds, file =>
-        //     {
-        //         try
-        //         {
-        //             var f = file.ReadDdsHeader().GetFormat();
-        //             lock (format) { format[file] = f; }
-        //         }
-        //         catch (System.Exception e)
-        //         {
-        //             token.LogException(e);
-        //         }
-        //     });
-
-        //     format.SaveAsJson(Data.File(@"ds2/format.json", Data.Source.Local));
-        // }
-
         public static IReadOnlyDictionary<string, TexKind> TexKinds
             = Data.File(@"ds2/tex-kind.json").LoadJsonFile<Dictionary<string, TexKind>>();
         public static void CreateTexKind(IProgressToken token)
@@ -237,7 +212,9 @@ namespace DS3TexUpUI
             kind.SaveAsJson(Data.File(@"ds2/tex-kind.json", Data.Source.Local));
         }
 
-        public static ExternalReuse Similar = new ExternalReuse()
+        public static IReadOnlyDictionary<TexId, HashSet<string>> Similar
+            = Data.File(@"ds2/similar.json").LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+        public static ExternalReuse SimilarConfig = new ExternalReuse()
         {
             CertainFile = @"ds2/similar.json",
             UncertainFile = @"ds2/similar-uncertain.json",
@@ -264,31 +241,9 @@ namespace DS3TexUpUI
             MaxDiff = new Rgba32(2, 2, 2, 100),
         };
 
-        // public static ExternalReuse GeneralReuse = new ExternalReuse()
-        // {
-        //     CertainFile = @"er/copy-general.json",
-        //     UncertainFile = @"er/copy-general-uncertain.json",
-        //     RejectedFile = @"er/copy-general-rejected.json",
-
-        //     ExternalDir = ExtractDir,
-        //     ExternalSize = OriginalSize,
-
-        //     Ds3Filter = id =>
-        //     {
-        //         if (id.GetRepresentative() != id) return false;
-        //         if (id.IsSolidColor()) return false;
-        //         if (id.GetTexKind() == TexKind.Normal) return false;
-        //         return true;
-        //     },
-        //     ExternalFilter = file => TexKinds[file] != TexKind.Normal,
-
-        //     SameKind = true,
-
-        //     CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 8 : 6,
-        //     MaxDiff = new Rgba32(2, 2, 2, 2),
-        // };
-
-        public static ExternalReuse AlphaReuse = new ExternalReuse()
+        public static IReadOnlyDictionary<TexId, HashSet<string>> AlphaSimilar
+            = Data.File(@"ds2/copy-alpha.json").LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+        public static ExternalReuse AlphaSimilarConfig = new ExternalReuse()
         {
             CertainFile = @"ds2/copy-alpha.json",
             UncertainFile = @"ds2/copy-alpha-uncertain.json",
@@ -330,7 +285,9 @@ namespace DS3TexUpUI
             },
         };
 
-        public static ExternalReuse NormalReuse = new ExternalReuse()
+        public static IReadOnlyDictionary<TexId, HashSet<string>> NormalSimilar
+            = Data.File(@"ds2/copy-normal.json").LoadJsonFile<Dictionary<TexId, HashSet<string>>>();
+        public static ExternalReuse NormalSimilarConfig = new ExternalReuse()
         {
             CertainFile = (@"ds2/copy-normal.json"),
             UncertainFile = (@"ds2/copy-normal-uncertain.json"),
