@@ -260,6 +260,7 @@ namespace DS3TexUpUI
 
             if (unused.Count > 0) token.SubmitLog($"Found {unused.Count} unused manual texture overrides:");
         }
+        private DateTime? lastFullNAValidation = null;
         private void UpdateManualNormalAlbedo(IProgressToken token)
         {
             const string ManualDir = @"C:\DS3TexUp\up-manual";
@@ -352,16 +353,25 @@ namespace DS3TexUpUI
                 }
                 var hash = ParseHash(file);
 
-                if (!albedo.TryGetValue(id, out var albedoFile) || hash != GetHash(albedoFile))
+                var unused =
+                    !albedo.TryGetValue(id, out var albedoFile)
+                    || (
+                        (lastFullNAValidation == null || File.GetLastWriteTimeUtc(file) >= lastFullNAValidation.Value || File.GetLastWriteTimeUtc(albedoFile) >= lastFullNAValidation.Value) &&
+                        hash != GetHash(albedoFile)
+                    );
+
+                if (unused)
                 {
                     token.SubmitLog($"Delete unused normal albedo {id}");
                     File.Delete(file);
-                    lock (normalAlbedo) normalAlbedo.Remove(id);
+                    lock (normalAlbedo!) normalAlbedo.Remove(id);
                 }
             });
+            if (lastFullNAValidation == null) lastFullNAValidation = DateTime.UtcNow;
 
             token.SubmitStatus("Adding albedos without normal albedo to TODO");
-            token.ForAllParallel(albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)), kv =>
+            var albedoWithNA = albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)).ToList();
+            token.ForAllParallel(albedoWithNA, kv =>
             {
                 var (id, file) = kv;
 
@@ -370,6 +380,9 @@ namespace DS3TexUpUI
                 Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
                 File.Copy(file, target);
             });
+            if (albedoWithNA.Count > 0) {
+                token.SubmitLog($"Added {albedoWithNA.Count} albedo with normal albedo to TODO dir.");
+            }
         }
 
         void RunTask(Action<SubProgressToken> task)
