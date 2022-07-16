@@ -250,7 +250,7 @@ namespace DS3TexUpUI
                 }
             });
 
-            format.SaveAsJson(Data.File(@"er/format.json"));
+            format.SaveAsJson(Data.File(@"er/format.json", Data.Source.Local));
         }
 
         public static IReadOnlyDictionary<string, TexKind> TexKinds
@@ -264,10 +264,13 @@ namespace DS3TexUpUI
             var kind = new Dictionary<string, TexKind>();
             token.ForAll(dds, file =>
             {
-                kind[file] = TexId.GuessTexKind(Path.GetFileNameWithoutExtension(file));
+                var name = Path.GetFileNameWithoutExtension(file);
+                kind[file] = TexId.GuessTexKind(name);
+                if (name.EndsWith("_1m"))
+                    kind[file] = TexKind.Mask;
             });
 
-            kind.SaveAsJson(Data.File(@"er/tex-kind.json"));
+            kind.SaveAsJson(Data.File(@"er/tex-kind.json", Data.Source.Local));
         }
 
         public static ExternalReuse Similar = new ExternalReuse()
@@ -421,6 +424,28 @@ namespace DS3TexUpUI
                     p.A = 255;
                 }
             },
+        };
+        public static ExternalReuse MaskReuse = new ExternalReuse()
+        {
+            CertainFile = (@"er/copy-mask.json"),
+            UncertainFile = (@"er/copy-mask-uncertain.json"),
+            RejectedFile = (@"er/copy-mask-rejected.json"),
+
+            ExternalDir = ExtractDir,
+            ExternalSize = OriginalSize,
+
+            Ds3Filter = id =>
+            {
+                if (id.GetGlossRepresentative() != id) return false;
+                if (id.IsSolidColor()) return false;
+                if (id.GetTexKind() != TexKind.Mask) return false;
+                return true;
+            },
+            ExternalFilter = file => TexKinds[file] == TexKind.Mask,
+
+            CopyHasherFactory = r => new RgbaImageHasher(r),
+            CopySpread = image => 3,
+            MaxDiff = new Rgba32(4, 4, 4, 255),
         };
 
         public static IReadOnlyDictionary<TexId, string> GeneralRepresentative
