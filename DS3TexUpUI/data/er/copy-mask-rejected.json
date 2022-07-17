@@ -1,0 +1,24 @@
+{
+	"chr/c1400_c1400_skin_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_303_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_606_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_655_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_042_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_043_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_044_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_242_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_270_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_340_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET813_050_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET816_000_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c3670-c3670_body_m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4710-c4710_body_m.dds"
+	],
+	"chr/c6310_c6310_head_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_823_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4220-c4220_m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4230-c4230_m.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_2290-HD_M_2290_m.dds",
+		"C:\\DS3TexUp\\extract-er\\sfx\\c4220-ffxbnd-s88120_m.dds"
+	]
+}

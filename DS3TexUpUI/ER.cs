@@ -436,7 +436,7 @@ namespace DS3TexUpUI
 
             Ds3Filter = id =>
             {
-                if (id.GetGlossRepresentative() != id) return false;
+                if (id.GetRepresentative() != id) return false;
                 if (id.IsSolidColor()) return false;
                 if (id.GetTexKind() != TexKind.Mask) return false;
                 return true;
@@ -444,7 +444,7 @@ namespace DS3TexUpUI
             ExternalFilter = file => TexKinds[file] == TexKind.Mask,
 
             CopyHasherFactory = r => new RgbaImageHasher(r),
-            CopySpread = image => 3,
+            CopySpread = image => 6,
             MaxDiff = new Rgba32(4, 4, 4, 255),
         };
 

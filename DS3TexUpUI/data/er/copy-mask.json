@@ -1,0 +1,36 @@
+{
+	"m30/m30_00_mask_02": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_113_1m.dds"
+	],
+	"m31/m31_00_mask_07": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_014_1m.dds"
+	],
+	"m31/m31_00_mask_19": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_046_1m.dds"
+	],
+	"m32/m32_00_o329220_05_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_024_1m.dds"
+	],
+	"m33/m33_00_m34_o344883_03_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET099_012_1m.dds"
+	],
+	"m35/maskblend_02": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_150_1m.dds"
+	],
+	"m45/m45_00_carpetAmask_01_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_397_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_043_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_009_1m.dds"
+	],
+	"m45/m45_00_mask_00_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_029_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_150_1m.dds"
+	],
+	"m50/m50_00_mask_04_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_007_1m.dds"
+	],
+	"m50/m50_00_mask_05_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_013_1m.dds"
+	]
+}

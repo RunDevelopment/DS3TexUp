@@ -1,0 +1,58 @@
+{
+	"chr/c1400_c1400_skin_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_303_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_606_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_655_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_042_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_043_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET270_044_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET700_242_m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_270_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET801_340_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET813_050_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET816_000_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c3670-c3670_body_m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4710-c4710_body_m.dds"
+	],
+	"chr/c6310_c6310_head_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET220_823_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4220-c4220_m.dds",
+		"C:\\DS3TexUp\\extract-er\\chr\\c4230-c4230_m.dds",
+		"C:\\DS3TexUp\\extract-er\\parts\\HD_M_2290-HD_M_2290_m.dds",
+		"C:\\DS3TexUp\\extract-er\\sfx\\c4220-ffxbnd-s88120_m.dds"
+	],
+	"m30/m30_00_mask_02": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_113_1m.dds"
+	],
+	"m31/m31_00_mask_07": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_014_1m.dds"
+	],
+	"m31/m31_00_mask_19": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_046_1m.dds"
+	],
+	"m32/m32_00_o329220_05_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET001_024_1m.dds"
+	],
+	"m33/m33_00_m34_o344883_03_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET099_012_1m.dds"
+	],
+	"m35/maskblend_02": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_400_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_150_1m.dds"
+	],
+	"m45/m45_00_carpetAmask_01_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET003_397_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET200_043_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_009_1m.dds"
+	],
+	"m45/m45_00_mask_00_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET030_029_1m.dds",
+		"C:\\DS3TexUp\\extract-er\\asset\\AET230_150_1m.dds"
+	],
+	"m50/m50_00_mask_04_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_007_1m.dds"
+	],
+	"m50/m50_00_mask_05_m": [
+		"C:\\DS3TexUp\\extract-er\\asset\\AET602_013_1m.dds"
+	]
+}
