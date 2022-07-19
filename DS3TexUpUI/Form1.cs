@@ -260,7 +260,23 @@ namespace DS3TexUpUI
 
             if (unused.Count > 0) token.SubmitLog($"Found {unused.Count} unused manual texture overrides:");
         }
-        private DateTime? lastFullNAValidation = null;
+
+        private ConcurrentDictionary<string, (string hash, DateTime timestamp)> hashFileCache = new ConcurrentDictionary<string, (string, DateTime)>();
+        private string HashFile(string file)
+        {
+            if (hashFileCache.TryGetValue(file, out var cached))
+            {
+                var lastMod = File.GetLastWriteTimeUtc(file);
+                if (lastMod <= cached.timestamp) return cached.hash;
+            }
+
+            using var md5 = MD5.Create();
+            using var stream = File.OpenRead(file);
+            var hashBytes = md5.ComputeHash(stream);
+            var hash = BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
+            hashFileCache[file] = (hash, DateTime.UtcNow);
+            return hash;
+        }
         private void UpdateManualNormalAlbedo(IProgressToken token)
         {
             const string ManualDir = @"C:\DS3TexUp\up-manual";
@@ -301,16 +317,6 @@ namespace DS3TexUpUI
             if (!ReadDir(ManualDirNormalAlbedoTodo, out var normalAlbedoTodo)) return;
             if (Directory.Exists(ManualDirAlbedoTodo)) Directory.Delete(ManualDirAlbedoTodo, true);
 
-            var hashCache = new ConcurrentDictionary<string, string>();
-            static string HashFile(string path)
-            {
-                using var md5 = MD5.Create();
-                using var stream = File.OpenRead(path);
-                var hash = md5.ComputeHash(stream);
-                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-            }
-            string GetHash(string file) => hashCache!.GetOrAdd(file, HashFile);
-
             token.SubmitStatus("Processing TODOs");
             token.ForAllParallel(normalAlbedoTodo, kv =>
             {
@@ -322,7 +328,7 @@ namespace DS3TexUpUI
                     return;
                 }
 
-                var hash = GetHash(albedoFile);
+                var hash = HashFile(albedoFile);
                 var target = Path.Join(ManualDirNormalAlbedo, id.Category, $"{id.Name.ToString()}-@{hash}.png");
                 Directory.CreateDirectory(Path.GetDirectoryName(target));
                 File.Move(file, target, true);
@@ -353,21 +359,13 @@ namespace DS3TexUpUI
                 }
                 var hash = ParseHash(file);
 
-                var unused =
-                    !albedo.TryGetValue(id, out var albedoFile)
-                    || (
-                        (lastFullNAValidation == null || File.GetLastWriteTimeUtc(file) >= lastFullNAValidation.Value || File.GetLastWriteTimeUtc(albedoFile) >= lastFullNAValidation.Value) &&
-                        hash != GetHash(albedoFile)
-                    );
-
-                if (unused)
+                if (!albedo.TryGetValue(id, out var albedoFile) || hash != HashFile(albedoFile))
                 {
                     token.SubmitLog($"Delete unused normal albedo {id}");
                     File.Delete(file);
                     lock (normalAlbedo!) normalAlbedo.Remove(id);
                 }
             });
-            if (lastFullNAValidation == null) lastFullNAValidation = DateTime.UtcNow;
 
             token.SubmitStatus("Adding albedos without normal albedo to TODO");
             var albedoWithNA = albedo.Where(kv => !normalAlbedo.ContainsKey(kv.Key)).ToList();
@@ -380,7 +378,8 @@ namespace DS3TexUpUI
                 Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
                 File.Copy(file, target);
             });
-            if (albedoWithNA.Count > 0) {
+            if (albedoWithNA.Count > 0)
+            {
                 token.SubmitLog($"Added {albedoWithNA.Count} albedo with normal albedo to TODO dir.");
             }
         }
