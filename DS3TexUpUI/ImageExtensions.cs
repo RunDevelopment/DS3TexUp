@@ -1386,5 +1386,25 @@ namespace DS3TexUpUI
         {
             return map[Math.Clamp(x, 0, map.Width - 1), Math.Clamp(y, 0, map.Height - 1)];
         }
+
+        public static ArrayTextureMap<Rgba32> GetHighFreqOverlay(this ArrayTextureMap<Rgba32> image, int down, int blur)
+        {
+            var low = image;
+            if (down > 1) low = low.DownSample(Average.Rgba32, down);
+            if (blur > 0) low = low.Blur(blur, Average.Rgba32);
+            if (down > 1) low = low.UpSample(down, BiCubic.Rgba);
+
+            for (int i = 0; i < low.Data.Length; i++)
+            {
+                ref var p = ref low.Data[i];
+                var c = image.Data[i];
+                p.R = (byte)(127 + c.R - p.R);
+                p.G = (byte)(127 + c.G - p.G);
+                p.B = (byte)(127 + c.B - p.B);
+                p.A = 255;
+            }
+
+            return low;
+        }
     }
 }
