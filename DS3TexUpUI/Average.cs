@@ -191,4 +191,26 @@ namespace DS3TexUpUI
             _count++;
         }
     }
+
+
+    public static class MaxAcc
+    {
+        public static readonly AverageAccumulatorFactory<float, FloatMaxAccumulator> Float = default;
+    }
+
+    public struct FloatMaxAccumulator : IAverageAccumulator<float>
+    {
+        private float _max;
+        private bool _init;
+
+        public float Result => _max;
+
+        public void Add(float value)
+        {
+            if (!_init) _max = float.NegativeInfinity;
+            _init = true;
+            _max = MathF.Max(_max, value);
+        }
+    }
+
 }

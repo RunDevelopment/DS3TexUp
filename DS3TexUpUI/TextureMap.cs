@@ -32,6 +32,8 @@ namespace DS3TexUpUI
         {
             Width = width;
             Height = height;
+            if (data.Length < width * height) throw new ArgumentException("Data array is too short", nameof(data));
+            if (data.Length > width * height) data = data.Slice(0, width * height);
             Data = data;
         }
 
