@@ -968,7 +968,7 @@ namespace DS3TexUpUI
                     }
                 };
 
-                token.SubmitStatus($"Analysing flver files");
+                token.SubmitStatus($"Analyzing flver files");
                 token.Reserve(0.5).ForAll(DS3.ReadAllFlverMaterialInfo(), info =>
                 {
                     var a = new List<((IReadOnlyCollection<TexId>, Vector2) id, string type)>();

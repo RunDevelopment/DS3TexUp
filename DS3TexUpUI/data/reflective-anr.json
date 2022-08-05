@@ -1040,7 +1040,7 @@
 		"R": "chr/c2191_c2191_weapon01_r"
 	},
 	"chr/c2191_c2191_weapon02_r": {
-		"A": "chr/c2191_c2191_weapon02_a",
+		"A": "parts/WP_A_0911_WP_A_0911_a",
 		"N": "chr/c2190_c2190_weapon02_n",
 		"R": "chr/c2191_c2191_weapon02_r"
 	},
@@ -4554,10 +4554,10 @@
 		"N": "obj/o309984_m36_cliff_tiling_01_n",
 		"R": "obj/o309984_m36_cliff_tiling_01_r"
 	},
-	"obj/o309984_m36_cliff_tiling_02_r": {
+	"obj/o309984_m36_cliff_tiling_02_s": {
 		"A": "obj/o309984_m36_cliff_tiling_02_a",
 		"N": "obj/o309984_m36_cliff_tiling_02_n",
-		"R": "obj/o309984_m36_cliff_tiling_02_r"
+		"R": "obj/o309984_m36_cliff_tiling_02_s"
 	},
 	"obj/o310310_o310310_door_00_r": {
 		"A": "obj/o310310_o310310_door_00_a",
@@ -4808,16 +4808,6 @@
 		"A": "obj/o381500_o381500_G_a",
 		"N": "obj/o381500_o381500_G_n",
 		"R": "obj/o381500_o381500_G_r"
-	},
-	"obj/o389000_m33_00_mauntain_02_r": {
-		"A": "m33/m33_00_mauntain_02_a",
-		"N": "obj/o389000_m33_00_mauntain_02_n",
-		"R": "obj/o389000_m33_00_mauntain_02_r"
-	},
-	"obj/o389000_m33_00_mauntain_03_r": {
-		"A": "obj/o389000_m33_00_mauntain_03_a",
-		"N": "obj/o389000_m33_00_mauntain_03_n",
-		"R": "obj/o389000_m33_00_mauntain_03_r"
 	},
 	"obj/o390500_o390500_r": {
 		"A": "obj/o390500_o390500_a",
@@ -5769,11 +5759,6 @@
 		"N": "parts/BD_M_3100_BD_M_3100_n",
 		"R": "parts/BD_M_3100_BD_M_3100_r"
 	},
-	"parts/BD_M_3110_BD_M_3110_r": {
-		"A": "parts/BD_M_3100_BD_M_3100_a",
-		"N": "parts/BD_M_3100_BD_M_3100_n",
-		"R": "parts/BD_M_3110_BD_M_3110_r"
-	},
 	"parts/BD_M_3200_BD_M_3200_r": {
 		"A": "parts/BD_M_3200_BD_M_3200_a",
 		"N": "parts/BD_M_3200_BD_M_3200_n",
@@ -5998,11 +5983,6 @@
 		"A": "parts/BD_M_7550_BD_M_7550_2_a",
 		"N": "parts/BD_M_7550_BD_M_7550_2_n",
 		"R": "parts/BD_M_7550_BD_M_7550_2_r"
-	},
-	"parts/BD_M_7600_BD_M_7600_02_r": {
-		"A": "parts/BD_M_7600_BD_M_7600_02_a",
-		"N": "parts/BD_M_7600_BD_M_7600_02_n",
-		"R": "parts/BD_M_7600_BD_M_7600_02_r"
 	},
 	"parts/BD_M_7700_BD_M_7700_1_r": {
 		"A": "parts/BD_M_7700_BD_M_7700_1_a",
@@ -8494,11 +8474,6 @@
 		"N": "parts/WP_A_2301_WP_A_2301_n",
 		"R": "parts/WP_A_2301_WP_A_2301_r"
 	},
-	"parts/WP_A_7000_WP_A_7000_r": {
-		"A": "parts/WP_A_7000_WP_A_7000_a",
-		"N": "parts/WP_A_7000_WP_A_7000_n",
-		"R": "parts/WP_A_7000_WP_A_7000_r"
-	},
 	"parts/WP_A_8000_wp_a_8000_r": {
 		"A": "parts/WP_A_8000_wp_a_8000_a",
 		"N": "chr/c1449_c1449_wp_a_8000_n",
@@ -8645,7 +8620,7 @@
 		"R": "sfx/commoneffects_s08025_r"
 	},
 	"sfx/commoneffects_s08027_r": {
-		"A": "sfx/commoneffects_s08027_a",
+		"A": "parts/WP_A_7660_WP_A_7660_a",
 		"N": "parts/WP_A_7660_WP_A_7660_n",
 		"R": "sfx/commoneffects_s08027_r"
 	},
