@@ -19,9 +19,9 @@ namespace DS3TexUpUI
 
         public IEnumerable<CopyIndexEntry> Entries => BySize.Values.SelectMany(i => i.Entries);
 
-        public CopyIndex(Func<SizeRatio, IImageHasher>? hasherFactory = null)
+        public CopyIndex(Func<SizeRatio, IImageHasher> hasherFactory)
         {
-            HasherFactory = hasherFactory ?? (r => new RgbaImageHasher(r));
+            HasherFactory = hasherFactory;
         }
 
         public bool AddImage(string file) => AddImage(file.LoadTextureMap(), file);
@@ -52,7 +52,7 @@ namespace DS3TexUpUI
             }
         }
 
-        public static CopyIndex Create(SubProgressToken token, IReadOnlyCollection<string> files, Func<SizeRatio, IImageHasher>? hasherFactory = null)
+        public static CopyIndex Create(SubProgressToken token, IReadOnlyCollection<string> files, Func<SizeRatio, IImageHasher> hasherFactory)
         {
             var index = new CopyIndex(hasherFactory);
 
@@ -267,249 +267,168 @@ namespace DS3TexUpUI
         }
     }
 
+    public readonly struct SizeInfo
+    {
+        public int MinPixels { get; }
+
+        public SizeRatio Ratio { get; }
+        public int ScaleFactor { get; }
+
+        public int MinWidth => ScaleFactor * Ratio.W;
+        public int MinHeight => ScaleFactor * Ratio.H;
+
+        public SizeInfo(SizeRatio ratio, int minPixels)
+        {
+            MinPixels = minPixels;
+            Ratio = ratio;
+            ScaleFactor = ratio.GetUpscaleFactor(minPixels);
+        }
+
+        public bool Supports(ArrayTextureMap<Rgba32> image)
+        {
+            return image.Width >= MinWidth
+                && Ratio == SizeRatio.Of(image)
+                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
+        }
+    }
     public interface IImageHasher
     {
-        int MinWidth { get; }
-        SizeRatio Ratio { get; }
+        SizeInfo Size { get; }
         int ByteCount { get; }
-
-        bool IsSupported(ArrayTextureMap<Rgba32> image);
         bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes);
     }
-    public class RgbaImageHasher : IImageHasher
+    public interface IHasherFactory
     {
-        public const int MinPixels = 256;
-
-        public SizeRatio Ratio { get; }
-        public int ScaleFactor { get; }
-
-        public int MinWidth => ScaleFactor * Ratio.W;
-        public int MinHeight => ScaleFactor * Ratio.H;
-        public int ByteCount => MinWidth * MinHeight * 4;
-
-        public RgbaImageHasher(SizeRatio ratio)
-        {
-            Ratio = ratio;
-            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
-        }
-
-        public bool IsSupported(ArrayTextureMap<Rgba32> image)
-        {
-            return image.Width >= MinWidth
-                && Ratio == SizeRatio.Of(image)
-                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-
-        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
-        {
-            if (!IsSupported(image))
-            {
-                bytes = new byte[0];
-                return false;
-            }
-
-            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
-            bytes = new byte[small.Data.Length * 4];
-
-            const float WeightR = 0.25f;
-            const float WeightG = 0.5f;
-            const float WeightB = 0.25f;
-            const float WeightA = 0.25f;
-
-            for (int i = 0; i < small.Data.Length; i++)
-            {
-                var p = small.Data[i];
-
-                bytes[i * 4 + 0] = (byte)(p.R * WeightR);
-                bytes[i * 4 + 1] = (byte)(p.G * WeightG);
-                bytes[i * 4 + 2] = (byte)(p.B * WeightB);
-                bytes[i * 4 + 3] = (byte)(p.A * WeightA);
-            }
-
-            return true;
-        }
+        IImageHasher Create(SizeRatio ratio, int mixPixelScale);
     }
-    public class AlphaImageHasher : IImageHasher
+    public static class Hasher
     {
-        public const int MinPixels = 256;
-
-        public SizeRatio Ratio { get; }
-        public int ScaleFactor { get; }
-
-        public int MinWidth => ScaleFactor * Ratio.W;
-        public int MinHeight => ScaleFactor * Ratio.H;
-        public int ByteCount => MinWidth * MinHeight;
-
-        public AlphaImageHasher(SizeRatio ratio)
+        private class Factory : IHasherFactory
         {
-            Ratio = ratio;
-            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
-        }
+            private int MinPixels;
+            private int Channels;
+            private Action<ArrayTextureMap<Rgba32>, int, byte[]> Writer;
 
-        public bool IsSupported(ArrayTextureMap<Rgba32> image)
-        {
-            return image.Width >= MinWidth
-                && Ratio == SizeRatio.Of(image)
-                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-
-        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
-        {
-            if (!IsSupported(image))
+            public Factory(int minPixels, int channels, Action<ArrayTextureMap<Rgba32>, int, byte[]> writer)
             {
-                bytes = new byte[0];
-                return false;
+                MinPixels = minPixels;
+                Channels = channels;
+                Writer = writer;
             }
 
-            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
-            bytes = new byte[small.Data.Length];
-
-            for (int i = 0; i < small.Data.Length; i++)
-                bytes[i] = (byte)(small.Data[i].A >> 2); // divide by 4 to get rid of noise
-
-            return true;
-        }
-    }
-    public class NormalImageHasher : IImageHasher
-    {
-        public const int MinPixels = 512;
-
-        public SizeRatio Ratio { get; }
-        public int ScaleFactor { get; }
-
-        public int MinWidth => ScaleFactor * Ratio.W;
-        public int MinHeight => ScaleFactor * Ratio.H;
-        public int ByteCount => MinWidth * MinHeight * 2;
-
-        public NormalImageHasher(SizeRatio ratio)
-        {
-            Ratio = ratio;
-            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
-        }
-
-        public bool IsSupported(ArrayTextureMap<Rgba32> image)
-        {
-            return image.Width >= MinWidth
-                && Ratio == SizeRatio.Of(image)
-                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-
-        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
-        {
-            if (!IsSupported(image))
+            public IImageHasher Create(SizeRatio ratio, int mixPixelScale)
             {
-                bytes = new byte[0];
-                return false;
+                return new Hasher(new SizeInfo(ratio, MinPixels * mixPixelScale), Channels, Writer);
             }
 
-            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
-            bytes = new byte[small.Data.Length * 2];
-
-            for (int i = 0; i < small.Data.Length; i++)
+            private class Hasher : IImageHasher
             {
-                bytes[i * 2 + 0] = (byte)(small.Data[i].R >> 1); // divide by 2 to get rid of noise
-                bytes[i * 2 + 1] = (byte)(small.Data[i].G >> 1); // divide by 2 to get rid of noise
+                public SizeInfo Size { get; }
+                private int Channels;
+                private Action<ArrayTextureMap<Rgba32>, int, byte[]> Writer;
+
+                public int ByteCount => Size.MinWidth * Size.MinHeight * Channels;
+
+                public Hasher(SizeInfo size, int channels, Action<ArrayTextureMap<Rgba32>, int, byte[]> writer)
+                {
+                    Size = size;
+                    Channels = channels;
+                    Writer = writer;
+                }
+
+                public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
+                {
+                    if (!Size.Supports(image))
+                    {
+                        bytes = new byte[0];
+                        return false;
+                    }
+
+                    bytes = new byte[ByteCount];
+                    Writer(image, image.Width / Size.MinWidth, bytes);
+                    return true;
+                }
             }
-
-            return true;
-        }
-    }
-
-    public class BlueChannelImageHasher : IImageHasher
-    {
-        public const int MinPixels = 512;
-
-        public SizeRatio Ratio { get; }
-        public int ScaleFactor { get; }
-
-        public int MinWidth => ScaleFactor * Ratio.W;
-        public int MinHeight => ScaleFactor * Ratio.H;
-        public int ByteCount => MinWidth * MinHeight;
-
-        public BlueChannelImageHasher(SizeRatio ratio)
-        {
-            Ratio = ratio;
-            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
         }
 
-        public bool IsSupported(ArrayTextureMap<Rgba32> image)
+        public static IHasherFactory Rgba(int minPixels = 256)
         {
-            return image.Width >= MinWidth
-                && Ratio == SizeRatio.Of(image)
-                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-
-        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
-        {
-            if (!IsSupported(image))
+            return new Factory(minPixels, channels: 4, writer: (image, downScale, bytes) =>
             {
-                bytes = new byte[0];
-                return false;
-            }
+                var small = image.DownSample(Average.Rgba32, downScale);
 
-            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
-            bytes = new byte[small.Data.Length];
+                const float WeightR = 0.25f;
+                const float WeightG = 0.5f;
+                const float WeightB = 0.25f;
+                const float WeightA = 0.25f;
 
-            for (int i = 0; i < small.Data.Length; i++)
-                bytes[i] = (byte)(small.Data[i].B >> 1); // divide by 2 to get rid of noise
+                for (int i = 0; i < small.Data.Length; i++)
+                {
+                    var p = small.Data[i];
 
-            return true;
+                    bytes[i * 4 + 0] = (byte)(p.R * WeightR);
+                    bytes[i * 4 + 1] = (byte)(p.G * WeightG);
+                    bytes[i * 4 + 2] = (byte)(p.B * WeightB);
+                    bytes[i * 4 + 3] = (byte)(p.A * WeightA);
+                }
+            });
         }
-    }
-
-    public class NormBrightnessImageHasher : IImageHasher
-    {
-        public const int MinPixels = 256;
-
-        public SizeRatio Ratio { get; }
-        public int ScaleFactor { get; }
-
-        public int MinWidth => ScaleFactor * Ratio.W;
-        public int MinHeight => ScaleFactor * Ratio.H;
-        public int ByteCount => MinWidth * MinHeight;
-
-        public NormBrightnessImageHasher(SizeRatio ratio)
+        public static IHasherFactory Alpha(int minPixels = 256)
         {
-            Ratio = ratio;
-            ScaleFactor = ratio.GetUpscaleFactor(MinPixels);
-        }
-
-        public bool IsSupported(ArrayTextureMap<Rgba32> image)
-        {
-            return image.Width >= MinWidth
-                && Ratio == SizeRatio.Of(image)
-                && image.Width.IsPowerOfTwo() && image.Height.IsPowerOfTwo();
-        }
-
-        public bool TryGetBytes(ArrayTextureMap<Rgba32> image, out byte[] bytes)
-        {
-            if (!IsSupported(image))
+            return new Factory(minPixels, channels: 1, writer: (image, downScale, bytes) =>
             {
-                bytes = new byte[0];
-                return false;
-            }
+                var small = image.DownSample(Average.Rgba32, downScale);
 
-            var small = image.DownSample(Average.Rgba32, image.Width / MinWidth);
-            bytes = new byte[small.Data.Length];
-
-            for (int i = 0; i < small.Data.Length; i++)
+                for (int i = 0; i < small.Data.Length; i++)
+                    bytes[i] = (byte)(small.Data[i].A >> 2); // divide by 4 to get rid of noise
+            });
+        }
+        public static IHasherFactory Normal(int minPixels = 512)
+        {
+            return new Factory(minPixels, channels: 2, writer: (image, downScale, bytes) =>
             {
-                bytes[i] = small[i].GetGreyBrightness();
-            }
+                var small = image.DownSample(Average.Rgba32, downScale);
 
-            int avg = 0;
-            foreach (var b in bytes) avg += b;
-            avg /= bytes.Length;
+                for (int i = 0; i < small.Data.Length; i++)
+                {
+                    bytes[i * 2 + 0] = (byte)(small.Data[i].R >> 1); // divide by 2 to get rid of noise
+                    bytes[i * 2 + 1] = (byte)(small.Data[i].G >> 1); // divide by 2 to get rid of noise
+                }
+            });
+        }
+        public static IHasherFactory BlueChannel(int minPixels = 512)
+        {
+            return new Factory(minPixels, channels: 1, writer: (image, downScale, bytes) =>
+            {
+                var small = image.DownSample(Average.Rgba32, downScale);
 
-            var variance = 0;
-            foreach (var b in bytes) variance += (avg - b) * (avg - b);
+                for (int i = 0; i < small.Data.Length; i++)
+                    bytes[i] = (byte)(small.Data[i].B >> 1); // divide by 2 to get rid of noise
+            });
+        }
+        public static IHasherFactory NormBrightness(int minPixels = 256)
+        {
+            return new Factory(minPixels, channels: 1, writer: (image, downScale, bytes) =>
+            {
+                var small = image.DownSample(Average.Rgba32, downScale);
 
-            var sigma = MathF.Sqrt(variance);
+                for (int i = 0; i < small.Data.Length; i++)
+                {
+                    bytes[i] = small[i].GetGreyBrightness();
+                }
 
-            foreach (ref var b in bytes.AsSpan())
-                b = ((b - avg) / (sigma * 2) * 127.5f + 127.5f).ToByteClamp();
+                int avg = 0;
+                foreach (var b in bytes) avg += b;
+                avg /= bytes.Length;
 
-            return true;
+                var variance = 0;
+                foreach (var b in bytes) variance += (avg - b) * (avg - b);
+
+                var sigma = MathF.Sqrt(variance);
+
+                foreach (ref var b in bytes.AsSpan())
+                    b = ((b - avg) / (sigma * 2) * 127.5f + 127.5f).ToByteClamp();
+            });
         }
     }
 

@@ -47,7 +47,7 @@ namespace DS3TexUpUI
 
         public SizeReq RequireSize { get; set; } = SizeReq.GtOrEq;
         public bool SameKind { get; set; } = false;
-        public Func<SizeRatio, IImageHasher>? CopyHasherFactory { get; set; } = null;
+        public IHasherFactory CopyHasherFactory { get; set; } = Hasher.Rgba();
         public Func<ArrayTextureMap<Rgba32>, int> CopySpread { get; set; } = image => 2;
         public Rgba32 MaxDiff { get; set; } = default;
         public Action<ArrayTextureMap<Rgba32>>? ModifyImage { get; set; } = null;
@@ -115,7 +115,7 @@ namespace DS3TexUpUI
                 token.SubmitStatus("Searching for files");
                 var files = ExternalFiles.Value.Keys.Where(ExternalFilter).ToArray();
 
-                var index = CopyIndex.Create(token.Reserve(0.5), files, CopyHasherFactory);
+                var index = CopyIndex.Create(token.Reserve(0.5), files, r => CopyHasherFactory.Create(r, 1));
 
                 var copies = new Dictionary<TexId, List<string>>();
                 var prev = LoadUncertain();

@@ -269,7 +269,7 @@ namespace DS3TexUpUI
                 return true;
             },
 
-            CopyHasherFactory = r => new AlphaImageHasher(r),
+            CopyHasherFactory = Hasher.Alpha(),
             CopySpread = image => 9,
             RequireSize = ExternalReuse.SizeReq.Gt,
             MaxDiff = new Rgba32(255, 255, 255, 2),
@@ -307,7 +307,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
-            CopyHasherFactory = r => new NormalImageHasher(r),
+            CopyHasherFactory = Hasher.Normal(),
             CopySpread = image => 4,
             RequireSize = ExternalReuse.SizeReq.Gt,
             MaxDiff = new Rgba32(2, 2, 255, 255),

@@ -349,7 +349,7 @@ namespace DS3TexUpUI
                 return true;
             },
 
-            CopyHasherFactory = r => new AlphaImageHasher(r),
+            CopyHasherFactory = Hasher.Alpha(),
             CopySpread = image => image.Count <= 64 * 64 ? 4 : 2,
             MaxDiff = new Rgba32(255, 255, 255, 2),
             ModifyImage = image =>
@@ -382,7 +382,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
-            CopyHasherFactory = r => new NormalImageHasher(r),
+            CopyHasherFactory = Hasher.Normal(),
             CopySpread = image => image.Count <= 64 * 64 ? 6 : image.Count <= 128 * 128 ? 4 : 3,
             MaxDiff = new Rgba32(2, 2, 255, 255),
             ModifyImage = image =>
@@ -412,7 +412,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
-            CopyHasherFactory = r => new BlueChannelImageHasher(r),
+            CopyHasherFactory = Hasher.BlueChannel(),
             CopySpread = image => image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 5 : 3,
             MaxDiff = new Rgba32(255, 255, 8, 255),
             ModifyImage = image =>
@@ -443,7 +443,7 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] == TexKind.Mask,
 
-            CopyHasherFactory = r => new RgbaImageHasher(r),
+            CopyHasherFactory = Hasher.Rgba(),
             CopySpread = image => 6,
             MaxDiff = new Rgba32(4, 4, 4, 255),
         };
