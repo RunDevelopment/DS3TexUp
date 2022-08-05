@@ -218,11 +218,11 @@ namespace DS3TexUpUI
 
             _classes.Add(set);
         }
-        public void Add(IEnumerable<T> equivlanceClass)
+        public void Add(IEnumerable<T> equivalenceClass)
         {
             HashSet<T>? firstSet = null;
 
-            foreach (var item in equivlanceClass)
+            foreach (var item in equivalenceClass)
             {
                 if (firstSet == null)
                 {
@@ -306,11 +306,11 @@ namespace DS3TexUpUI
                 }
             }
         }
-        public void Set(IEnumerable<T> equivlanceClass)
+        public void Set(IEnumerable<T> equivalenceClass)
         {
             HashSet<T>? firstSet = null;
 
-            foreach (var item in equivlanceClass)
+            foreach (var item in equivalenceClass)
             {
                 if (firstSet == null)
                 {
@@ -373,7 +373,7 @@ namespace DS3TexUpUI
     public class DifferenceCollection<T> : IReadOnlyDictionary<T, IReadOnlyCollection<T>>
         where T : notnull
     {
-        private readonly Dictionary<T, HashSet<T>> _data = new Dictionary<T, HashSet<T>>();
+        private readonly Dictionary<T, HashSet<T>> _data;
 
         public IReadOnlyCollection<T> this[T key] => _data[key];
 
@@ -381,9 +381,21 @@ namespace DS3TexUpUI
         public IEnumerable<IReadOnlyCollection<T>> Values => _data.Values;
         public int Count => _data.Count;
 
-        public static DifferenceCollection<T> FromUncertain(EquivalenceCollection<T> uncertain, EquivalenceCollection<T> certain)
+        public DifferenceCollection()
         {
-            var d = new DifferenceCollection<T>();
+            _data = new Dictionary<T, HashSet<T>>();
+        }
+        public DifferenceCollection(DifferenceCollection<T> prev) : this()
+        {
+            foreach (var (k, v) in prev._data)
+            {
+                _data[k] = v.ToHashSet();
+            }
+        }
+
+        public static DifferenceCollection<T> FromUncertain(DifferenceCollection<T> prev, EquivalenceCollection<T> uncertain, EquivalenceCollection<T> certain)
+        {
+            var d = new DifferenceCollection<T>(prev);
             foreach (var eqClass in uncertain.Classes)
             {
                 var array = eqClass.ToArray();

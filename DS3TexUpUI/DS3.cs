@@ -331,6 +331,7 @@ namespace DS3TexUpUI
                 return true;
             },
             CopySpread = image => image.Count <= 64 * 64 ? 12 : image.Count <= 128 * 128 ? 8 : 5,
+            MaxEqClassSize = 15,
             MaxDiff = new Rgba32(2, 2, 2, 2),
         };
 
@@ -414,7 +415,7 @@ namespace DS3TexUpUI
             {
                 // ignore all images that are just solid colors
                 if (id.IsSolidColor()) return false;
-                // ignore all images that aren't transparanet
+                // ignore all images that aren't transparent
                 var t = id.GetTransparency();
                 if (t != TransparencyKind.Binary && t != TransparencyKind.Full) return false;
 
@@ -422,6 +423,7 @@ namespace DS3TexUpUI
             },
             CopyHasherFactory = Hasher.Alpha(),
             CopySpread = image => image.Count <= 64 * 64 ? 16 : 10,
+            MaxEqClassSize = 10,
             MaxDiff = new Rgba32(255, 255, 255, 2),
             ModifyImage = image =>
             {
@@ -519,7 +521,7 @@ namespace DS3TexUpUI
                 return true;
             },
             CopyHasherFactory = Hasher.Normal(),
-            CopySpread = image => image.Count <= 64 * 64 ? 8 : image.Count <= 128 * 128 ? 5 : 3,
+            CopySpread = image => image.Count <= 64 * 64 ? 9 : image.Count <= 128 * 128 ? 7 : 5,
             MaxDiff = new Rgba32(2, 2, 255, 255),
             ModifyImage = image =>
             {
@@ -582,7 +584,8 @@ namespace DS3TexUpUI
                 return true;
             },
             CopyHasherFactory = Hasher.BlueChannel(),
-            CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 6 : 4,
+            CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 7 : 5,
+            MaxEqClassSize = 15,
             MaxDiff = new Rgba32(255, 255, 8, 255),
             ModifyImage = image =>
             {
@@ -1345,6 +1348,8 @@ namespace DS3TexUpUI
         public Rgba32 MaxDiff { get; set; } = default;
         public Action<ArrayTextureMap<Rgba32>>? ModifyImage { get; set; } = null;
 
+        public int MaxEqClassSize { get; set; } = 10;
+
         private static string GetFileName(TexId id)
         {
             var atSize = DS3.OriginalSize.TryGetValue(id, out var size) ? $"@{size.Width}px" : "";
@@ -1363,7 +1368,7 @@ namespace DS3TexUpUI
 
         internal EquivalenceCollection<TexId> LoadCertain()
         {
-            return CertainFile.Read.LoadJsonFile<EquivalenceCollection<TexId>>();
+            return Load<EquivalenceCollection<TexId>>(CertainFile.Read);
         }
         internal EquivalenceCollection<TexId> LoadUncertain()
         {
@@ -1380,6 +1385,15 @@ namespace DS3TexUpUI
             return file.LoadJsonFile<T>();
         }
 
+        private static TexId SelectRep(EquivalenceCollection<TexId> eq, TexId id)
+        {
+            var set = eq.Get(id);
+            if (set.Count == 1) return id;
+            var list = set.ToList();
+            list.Sort();
+            return list.MaxBy(id => DS3.OriginalSize[id].Width);
+        }
+
         public Action<SubProgressToken> CreateCopyIndex(Workspace w)
         {
             return token =>
@@ -1389,52 +1403,83 @@ namespace DS3TexUpUI
                     .Where(f => CopyFilter(TexId.FromPath(f)))
                     .ToArray();
 
-                var index = CopyIndex.Create(token.Reserve(0.5), files, r => CopyHasherFactory.Create(r, 1));
+                var certain = LoadCertain();
+                var final = new EquivalenceCollection<TexId>(certain.Classes);
 
-                var copies = new EquivalenceCollection<TexId>();
-
-                token.SubmitStatus($"Looking up files");
-                token.ForAllParallel(files, f =>
+                const int MaxNumberOfPasses = 4;
+                for (int pass = 1; true; pass++)
                 {
-                    var id = TexId.FromPath(f);
-                    var set = new HashSet<TexId>() { id };
+                    var mixPixelScale = (int)Math.Pow(4, pass - 1);
+                    var index = CopyIndex.Create(token.Reserve(0.5), files, r => CopyHasherFactory.Create(r, mixPixelScale));
 
-                    try
+                    var copies = new EquivalenceCollection<TexId>();
+
+                    token.SubmitStatus($"Looking up files");
+                    token.ForAllParallel(files, f =>
                     {
-                        var image = f.LoadTextureMap();
-                        var similar = index.GetSimilar(image, (byte)CopySpread(image));
-                        if (similar != null)
+                        var id = TexId.FromPath(f);
+                        var set = new HashSet<TexId>() { id };
+
+                        try
                         {
-                            foreach (var e in similar)
+                            var image = f.LoadTextureMap();
+                            var similar = index.GetSimilar(image, (byte)CopySpread(image));
+                            if (similar != null)
                             {
-                                var eId = TexId.FromPath(e.File);
-                                set.Add(eId);
+                                foreach (var e in similar)
+                                {
+                                    var eId = TexId.FromPath(e.File);
+                                    set.Add(eId);
+                                }
                             }
                         }
-                    }
-                    catch (System.Exception e)
-                    {
-                        lock (token.Lock)
+                        catch (System.Exception e)
                         {
-                            token.SubmitLog($"Ignoring {f} due to error");
-                            token.LogException(e);
+                            lock (token.Lock)
+                            {
+                                token.SubmitLog($"Ignoring {f} due to error");
+                                token.LogException(e);
+                            }
                         }
-                    }
 
-                    if (SameKind)
-                    {
-                        var kind = id.GetTexKind();
-                        set.RemoveWhere(i => i.GetTexKind() != kind);
-                    }
+                        if (SameKind)
+                        {
+                            var kind = id.GetTexKind();
+                            set.RemoveWhere(i => i.GetTexKind() != kind);
+                        }
 
-                    lock (copies)
+                        lock (copies)
+                        {
+                            copies.Set(set);
+                        }
+                    });
+
+                    var classes = copies.Classes
+                        .Select(c =>
+                        {
+                            var unique = c.Select(id => SelectRep(certain, id)).ToHashSet().Count;
+                            return (c, unique);
+                        })
+                        .ToList();
+                    var largeClasses = classes.Where(p => p.unique > MaxEqClassSize).Select(p => p.c).ToList();
+                    var smallClasses = classes.Where(p => p.unique <= MaxEqClassSize).Select(p => p.c).ToList();
+
+                    if (pass < MaxNumberOfPasses && largeClasses.Count > 0)
                     {
-                        copies.Set(set);
+                        // only add small eq classes and try to further split large classes
+                        final.Set(smallClasses);
+
+                        files = largeClasses.SelectMany(c => c).Select(w.GetExtractPath).ToArray();
                     }
-                });
+                    else
+                    {
+                        final.Set(copies);
+                        break;
+                    }
+                }
 
                 token.SubmitStatus("Saving JSON");
-                copies.SaveAsJson(UncertainFile.Write);
+                final.SaveAsJson(UncertainFile.Write);
             };
         }
 
@@ -1515,30 +1560,16 @@ namespace DS3TexUpUI
                     return equal.Except(different);
                 }).Classes.OrderByDescending(l => l.Count).ToList();
 
-                TexId SelectRepresentative(TexId id)
-                {
-                    var ids = certain.Get(id).ToList();
-                    if (ids.Count == 1) return id;
-                    ids.Sort();
-                    return ids.OrderByDescending(id => DS3.OriginalSize[id].Width).First();
-                }
-
                 token.SubmitStatus("Copying files");
                 token.ForAllParallel(classes.Select((x, i) => (x, i)), pair =>
                 {
                     var (eqClass, i) = pair;
 
                     // Remove identical textures
-                    eqClass = eqClass.Select(SelectRepresentative).ToHashSet().ToList();
+                    eqClass = eqClass.Select(id => SelectRep(certain, id)).ToHashSet().ToList();
 
                     // only one texture after identical textures were removed
                     if (eqClass.Count < 2) return;
-
-                    if (eqClass.Count > 35)
-                    {
-                        token.SubmitLog($"Equivalence class {i} contains too many unique elements ({eqClass.Count}).");
-                        return;
-                    }
 
                     var dir = Path.Join(uncertainDir, $"{i}");
                     Directory.CreateDirectory(dir);
@@ -1568,6 +1599,7 @@ namespace DS3TexUpUI
                 });
             };
         }
+
         public Action<SubProgressToken> ReadUncertainDirectory(Workspace w)
         {
             return token =>
@@ -1579,7 +1611,7 @@ namespace DS3TexUpUI
                 newCertain.Set(LoadCertain());
                 newCertain.SaveAsJson(CertainFile.Write);
 
-                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadUncertain(), newCertain);
+                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadRejected(), LoadUncertain(), newCertain);
                 rejected.SaveAsJson(RejectedFile.Write);
             };
         }
@@ -1588,7 +1620,7 @@ namespace DS3TexUpUI
         {
             return token =>
             {
-                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadUncertain(), LoadCertain());
+                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadRejected(), LoadUncertain(), LoadCertain());
                 rejected.SaveAsJson(RejectedFile.Write);
             };
         }
@@ -1600,7 +1632,7 @@ namespace DS3TexUpUI
                 certain.Set(LoadCertain());
                 certain.SaveAsJson(CertainFile.Write);
 
-                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadUncertain(), certain);
+                var rejected = DifferenceCollection<TexId>.FromUncertain(LoadRejected(), LoadUncertain(), certain);
                 rejected.SaveAsJson(RejectedFile.Write);
             };
         }

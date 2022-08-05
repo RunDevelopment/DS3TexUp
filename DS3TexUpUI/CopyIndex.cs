@@ -32,7 +32,7 @@ namespace DS3TexUpUI
 
             var r = SizeRatio.Of(image);
             SameRatioCopyIndex index;
-            lock (this)
+            lock (BySize)
             {
                 index = BySize.GetOrAdd(r, r => new SameRatioCopyIndex(HasherFactory(r)));
             }
@@ -133,6 +133,7 @@ namespace DS3TexUpUI
 
         private readonly List<int>[] _grid;
 
+        private readonly (Object obj, int start, int end)[] _gridLocks;
 
         public SameRatioCopyIndex(IImageHasher hasher)
         {
@@ -140,6 +141,17 @@ namespace DS3TexUpUI
             _grid = new List<int>[hasher.ByteCount * 256];
             for (int i = 0; i < _grid.Length; i++)
                 _grid[i] = new List<int>();
+
+            const int Locks = 4;
+            _gridLocks = Enumerable.Range(0, Locks)
+                .Select(i =>
+                {
+                    var len = hasher.ByteCount / Locks;
+                    var start = i * len;
+                    var end = i == Locks - 1 ? hasher.ByteCount : (i + 1) * len;
+                    return (new object(), start, end);
+                })
+                .ToArray();
         }
 
         private int AddEntry(ArrayTextureMap<Rgba32> image, string file)
@@ -157,11 +169,17 @@ namespace DS3TexUpUI
         {
             if (Hasher.TryGetBytes(image, out var bytes))
             {
-                lock (this)
+                if (bytes.Length != Hasher.ByteCount)
+                    throw new Exception("Invalid number of bytes");
+
+                var id = AddEntry(image, file);
+                foreach (var (lockObj, start, end) in _gridLocks)
                 {
-                    var id = AddEntry(image, file);
-                    for (int i = 0; i < bytes.Length; i++)
-                        GetGridCell(i, bytes[i]).Add(id);
+                    lock (lockObj)
+                    {
+                        for (int i = start; i < end; i++)
+                            GetGridCell(i, bytes[i]).Add(id);
+                    }
                 }
                 return true;
             }

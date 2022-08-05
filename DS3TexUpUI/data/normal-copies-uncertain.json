@@ -21,13 +21,16 @@
 		"chr/c1470_c1470_1_n",
 		"m30/m30_00_o001330_born_01_n",
 		"m31/m31_00_bone_00_n",
+		"m38/m38_00_o1330_n",
 		"m39/m39_m30_00_o001330_born_01_n",
 		"m40/m40_00_bone_316_n",
 		"m51/m51_00_o001330_born_01_n",
+		"m51/m51_00_o1330_n",
 		"obj/o001332_o1330_n",
 		"obj/o001332_o1332_n",
 		"obj/o001333_o1333_n",
-		"obj/o309800_o0100_02_n"
+		"obj/o309800_o0100_02_n",
+		"sfx/m38_s09201_n"
 	],
 	[
 		"chr/c1070_c1070_tree_n",
@@ -154,10 +157,15 @@
 		"chr/c1281_c1281_body_n",
 		"chr/c1282_c1282_body_n",
 		"chr/c1283_c1283_body_n",
+		"m30/m30_00_o302550_body_n",
+		"m34/m30_00_o302550_body_n",
 		"m41/m41_00_o302550_body_n",
 		"m47/m47_00_o302550_body_n",
 		"m50/m50_00_o302550_body_n",
-		"obj/o398710_o398710_c1280_body_n"
+		"obj/o398710_o398710_c1280_body_n",
+		"sfx/m30_s09050_n",
+		"sfx/m46_s09050_n",
+		"sfx/m50_s09050_n"
 	],
 	[
 		"chr/c1101_c1101_lg_n",
@@ -199,388 +207,66 @@
 	],
 	[
 		"chr/c1109_c1109_hood_n",
-		"chr/c1210_c1210_hair_n",
-		"chr/c1211_c1211_hair_n",
 		"chr/c1320_c1320_Ball_n",
 		"chr/c1321_c1321_Ball_n",
-		"chr/c1350_c1350_hair_n",
-		"chr/c2040_c2040_body_n",
-		"chr/c2040_c2040_hair_n",
-		"chr/c2110_c2110_fur_n",
 		"chr/c2170_c2170_eye_n",
-		"chr/c2210_c2210_hair_a_n",
-		"chr/c2210_c2210_hair_b_n",
-		"chr/c2240_c2240_hair_n",
-		"chr/c2250_c2250_hair_n",
 		"chr/c2280_c2280_FUR_n",
-		"chr/c3040_C3040_HD_hair_n",
-		"chr/c3070_c3070_hair_n",
-		"chr/c3080_c3080web_n",
-		"chr/c3110_c3110_hair_n",
-		"chr/c3160_c3160_HD2_n",
-		"chr/c3190_c3190_hair_n",
-		"chr/c5019_c5019_hair_n",
-		"chr/c5140_c5140_wings_n",
-		"chr/c5200_c5200_hair_n",
 		"chr/c5210_c5210_hair_n",
-		"chr/c6000_c6000_hair_n",
-		"chr/c6010_c6010_fether_n",
-		"chr/c6010_c6010_fur2_n",
 		"chr/c6010_c6010_hair_n",
-		"chr/c6020_c6020_hair_n",
-		"chr/c6030_c6030_hairTEST_n",
-		"chr/c6030_c6030_Hair_01_n",
-		"chr/c6040_c6040_Hair_01_n",
-		"chr/c6050_c6050_Hair_01_n",
-		"chr/c6080_c6080_fur2_n",
-		"chr/c6080_c6080_fur_n",
-		"chr/c6081_c6081_fur3_n",
-		"chr/c6121_c6121_mohu_n",
-		"chr/c6290_c6290_hair_n",
-		"m30/m30_00_ash_01_n",
-		"m30/m30_00_enkei_52_n",
 		"m30/m30_00_grass_03_n",
-		"m30/m30_00_ivy_01_n",
-		"m30/m30_00_low_hall_02_n",
-		"m30/m30_00_m37_00_enkei_70_n",
-		"m30/m30_00_m37_00_tree_06_n",
-		"m30/m30_00_o0462_00_n",
 		"m30/m30_00_o1080_woodbox_01_n",
-		"m30/m30_00_o304868_wall_01_b_n",
-		"m30/m30_00_o304868_wall_01_n",
-		"m30/m30_00_o304868_wall_02_b_n",
-		"m30/m30_00_o304868_wall_02_n",
-		"m30/m30_00_o304871_floor_01_b_n",
-		"m30/m30_00_o304871_floor_01_n",
-		"m30/m30_00_o309188_02_n",
-		"m30/m30_00_o309304_partg_01_n",
-		"m30/m30_00_o344883_03_n",
-		"m30/m30_00_o4801_roof_02_n",
 		"m30/m30_00_o4820_carpet_b_02_n",
-		"m30/m30_00_o4820_carpet_b_03_n",
-		"m30/m30_00_o4820_carpet_b_04_n",
-		"m30/m30_00_o4820_carpet_b_bl_04_n",
 		"m30/m30_00_o4820_carpet_n",
 		"m30/m30_00_o4820_DirtCarpet_01_n",
-		"m30/m30_00_o4820_wall_02_n",
 		"m30/m30_00_o4834_glass_01_n",
-		"m30/m30_00_o4834_wall5_01_n",
 		"m30/m30_00_rust_n",
-		"m30/m30_00_spiderWeb_01_n",
-		"m30/m30_00_tapestry_01_n",
-		"m30/m30_00_wallTile_01_n",
-		"m30/m30_00_Water_03_n",
-		"m30/m30_00_water_53_n",
 		"m31/m31_00_blooddecal_00_n",
-		"m31/m31_00_cloth_01_n",
 		"m31/m31_00_dirtdecal_00_n",
-		"m31/m31_00_enkei_03_n",
 		"m31/m31_00_grass_00_n",
 		"m31/m31_00_grass_01_n",
 		"m31/m31_00_grass_04_n",
 		"m31/m31_00_ironrust_00_n",
 		"m31/m31_00_ironrust_01_n",
-		"m31/m31_00_ivy_00_n",
-		"m31/m31_00_pan_00_n",
-		"m31/m31_00_plasterwall_01_n",
-		"m31/m31_00_plate_00_n",
-		"m31/m31_00_spiderweb_00_n",
-		"m31/m31_00_spiderweb_01_n",
-		"m31/m31_00_spiderweb_02_n",
-		"m31/m31_00_spiderweb_03_n",
-		"m31/m31_00_spiderweb_04_n",
-		"m31/m31_00_straw_00_edge_n",
-		"m31/m31_00_straw_00_n",
-		"m31/m31_00_treebranch_00_n",
 		"m31/m31_00_treebranch_03_n",
-		"m31/m31_00_water_00_n",
-		"m31/m31_00_water_02_n",
-		"m32/m32_00_c3010_hairs_n",
-		"m32/m32_00_c5010_hair_n",
 		"m32/m32_00_grass_03_n",
-		"m32/m32_00_kumo_40_n",
-		"m32/m32_00_o2400_10_pattern2_n",
-		"m32/m32_00_o324000_wall_03_n",
-		"m32/m32_00_o324013_roof_01_n",
-		"m32/m32_00_o324013_wall_01_n",
-		"m32/m32_00_o324030_floor_02_n",
-		"m32/m32_00_o329219_4_n",
-		"m32/m32_00_plant_02_n",
-		"m32/m40_00_kumo_40_n",
-		"m33/m33_00_bloody_decal_000_n",
 		"m33/m33_00_dirtdecal_00_n",
-		"m33/m33_00_enkei_03_n",
-		"m33/m33_00_m30_00_tapestry_01_b_n",
-		"m33/m33_00_moss_00_n",
-		"m33/m33_00_o2105_1_n",
-		"m33/m33_00_o2105_2_n",
-		"m33/m33_00_o2105_3_n",
-		"m33/m33_00_o2105_n",
-		"m33/m33_00_o331041_n",
-		"m33/m33_00_o331403_woodenchair_n",
 		"m33/m33_00_o4820_carpet_b_02_n",
-		"m33/m33_m31_00_water_02_n",
 		"m34/m34_00_grass_003_n",
-		"m34/m34_00_o304859_tapestry_n",
-		"m34/m34_00_o304871_01_n",
-		"m34/m34_00_o304881_03_n",
-		"m34/m34_00_o304882_01_n",
-		"m34/m34_00_o309304_partg_01_n",
-		"m34/m34_00_o309320_wall_03_n",
 		"m34/m34_00_o4820_carpet_broken_02_n",
-		"m34/m34_00_o4820_carpet_broken_03_n",
-		"m34/m34_00_o4820_wall02_n",
-		"m34/m34_00_o4820_wall07_n",
-		"m34/m34_01_o309190_07_n",
-		"m34/m34_01_o401156_02_n",
 		"m34/m34_m30_00_grass_003_n",
-		"m34/m34_o0462_00_n",
 		"m34/m34_o344859_n",
-		"m34/m34_o344883_03_n",
-		"m35/m35_00_Blood_00_n",
-		"m35/m35_00_Door_Marks_00_n",
-		"m35/m35_00_enkei_52_n",
-		"m35/m35_00_Floor_01_n",
-		"m35/m35_00_Floor_02_n",
-		"m35/m35_00_Floor_03_n",
-		"m35/m35_00_m37_00_enkei_70_n",
-		"m35/m35_00_m37_00_tree_06_n",
-		"m35/m35_00_o301972_01_n",
-		"m35/m35_00_o350105_02_n",
-		"m35/m35_00_o4820_carpet_03_n",
 		"m35/m35_00_o4820_carpet_n",
-		"m35/m35_00_o4820_wall_02_n",
-		"m35/m35_00_SpiderWeb_00_n",
 		"m35/m35_00_Stone_Base_00_n",
-		"m35/m35_00_water_53_n",
-		"m37/m37_00_BonFireChurchPlasterWall_n",
 		"m37/m37_00_carpet_n",
-		"m37/m37_00_Ced_ProperMarble_n",
 		"m37/m37_00_DirtyTile_01_n",
 		"m37/m37_00_DirtyTile_02_n",
-		"m37/m37_00_enkei_70_n",
-		"m37/m37_00_fireplacewood_01_n",
-		"m37/m37_00_floor_01_n",
-		"m37/m37_00_floor_02_n",
-		"m37/m37_00_grass_00_n",
-		"m37/m37_00_iron_Standard_02_n",
-		"m37/m37_00_metalTile_00_n",
-		"m37/m37_00_nabe_01_n",
-		"m37/m37_00_obj_10_n",
-		"m37/m37_00_obj_20_n",
-		"m37/m37_00_pan_01_n",
-		"m37/m37_00_plant_05_n",
-		"m37/m37_00_plate_02_n",
 		"m37/m37_00_sofa_00_n",
-		"m37/m37_00_SpidersWeb_01_n",
-		"m37/m37_00_tree_04_03_n",
 		"m37/m37_00_tree_05_n",
-		"m37/m37_00_tree_06_n",
-		"m37/m37_00_wallpaper_01_n",
-		"m37/m37_00_wallTile_01_n",
-		"m37/m37_00_wallTile_02_n",
-		"m37/m37_00_wallTile_05_n",
-		"m37/m37_00_wall_04_n",
-		"m37/m37_00_water_03_n",
-		"m37/m37_00_win_02_n",
-		"m37/m37_00_win_08_n",
-		"m38/m38_00_m22_00_grass_502_n",
-		"m38/m38_00_m22_00_house_700_500_n",
-		"m38/m38_00_m96_00_clod_01_n",
-		"m38/m38_00_o2400_09_n",
-		"m38/m38_00_o331103_02_n",
-		"m38/m38_00_o364041_weeds_01_n",
-		"m39/m39_00_blood_100_n",
-		"m39/m39_00_moss_309_n",
 		"m39/m39_00_rust_00_n",
-		"m39/m39_00_water_01_n",
-		"m39/m39_00_water_03_n",
 		"m39/m39_m30_00_grass_03_n",
-		"m39/m39_m32_00_c3010_hairs_n",
-		"m39/m39_m32_00_o2400_10_pattern2_n",
-		"m39/m39_m37_00_BonFireChurchPlasterWall_n",
-		"m39/m39_m37_00_obj_10_n",
-		"m39/m39_m37_00_wallTile_02_n",
-		"m40/m40_00_grass02_321_n",
-		"m40/m40_00_grass_320_n",
 		"m40/m40_00_grass_357_n",
-		"m40/m40_00_ground_003_n",
-		"m40/m40_00_ivy_316_n",
-		"m40/m40_00_kumo_30_n",
-		"m40/m40_00_kumo_40_n",
-		"m40/m40_00_o2400_10_pattern2_n",
-		"m40/m40_00_o4801_roof_02_353_n",
-		"m40/m40_00_o4820_carpet_b_03_n",
-		"m40/m40_00_o4820_carpet_c_03_n",
 		"m40/m40_00_o4820_carpet_n",
-		"m40/m40_00_spiderWeb_901_n",
-		"m40/m40_00_stonecoffin_002_n",
-		"m40/m40_00_water_01_n",
-		"m40/m40_00_water_02_n",
-		"m40/m40_00_water_03_n",
 		"m41/m41_00_m31_00_dirtdecal_00_n",
-		"m41/m41_00_m37_00_wall_04_n",
-		"m41/m41_00_m40_00_kumo_30_n",
 		"m41/m41_00_m40_00_o4820_carpet_b_02_n",
-		"m41/m41_00_m40_00_o4820_carpet_b_03_n",
 		"m41/m41_00_m40_00_o4820_carpet_n",
-		"m41/m41_00_o364041_weeds_01_n",
 		"m41/m41_00_o364045_cobweb_n",
-		"m45/m45_00_altarC_01_n",
-		"m45/m45_00_altarC_04_n",
-		"m45/m45_00_BonFireChurchPlasterWall_n",
-		"m45/m45_00_c6000_hair_n",
-		"m45/m45_00_c6080_fur2_n",
-		"m45/m45_00_c6080_fur_n",
-		"m45/m45_00_c6081_fur3_n",
-		"m45/m45_00_c6110_Hair_01_n",
-		"m45/m45_00_canvas_02_n",
-		"m45/m45_00_carpetA_03_n",
-		"m45/m45_00_enkei_70_n",
-		"m45/m45_00_fireplacewood_01_n",
-		"m45/m45_00_floor_03_n",
-		"m45/m45_00_ice_A00_n",
-		"m45/m45_00_ice_V00_n",
-		"m45/m45_00_ivy_31_n",
-		"m45/m45_00_nabe_01_n",
-		"m45/m45_00_o450310_03_n",
-		"m45/m45_00_o459200_03_stonewall_01_n",
-		"m45/m45_00_paintbox_01_n",
-		"m45/m45_00_pan_01_n",
-		"m45/m45_00_plate_02_n",
-		"m45/m45_00_SpidersWeb_01_n",
-		"m45/m45_00_SpidersWeb_02_n",
-		"m45/m45_00_stonewall_01_n",
 		"m45/m45_00_tree_05_n",
-		"m45/m45_00_tree_06_n",
-		"m45/m45_00_wall_04_n",
-		"m45/m45_00_water_02_n",
-		"m45/m45_00_water_03_n",
-		"m45/m45_00_win_08_n",
-		"m46/m46_00_o309320_wall_03_n",
-		"m46/m46_00_water_53_n",
-		"m47/m47_00_o364041_weeds_01_n",
-		"m50/m50_00_ash_01_n",
 		"m50/m50_00_grass_03_n",
-		"m50/m50_00_ivy_31_n",
 		"m50/m50_00_m40_brick_001_n",
-		"m50/m50_00_mushroom_n",
-		"m50/m50_00_o304868_wall_02_b_n",
-		"m50/m50_00_o304868_wall_02_n",
-		"m50/m50_00_o304871_floor_01_n",
-		"m50/m50_00_o304882_01_n",
-		"m50/m50_00_o309304_partg_01_n",
-		"m50/m50_00_o4801_roof_02_n",
 		"m50/m50_00_o4820_DirtCarpet_01_n",
-		"m50/m50_00_SpidersWeb_01_n",
 		"m50/m50_00_wall_013_n",
-		"m50/m50_o0462_00_n",
-		"m50/m50_o344883_03_n",
-		"m51/m51_00_interior_Ced_ProperMarble_n",
-		"m51/m51_00_interior_obj_20_n",
-		"m51/m51_00_interior_wallTile_05_n",
-		"m51/m51_00_interior_win_08_n",
-		"m51/m51_00_ivy_00_n",
-		"m51/m51_00_ivy_01_n",
-		"m51/m51_00_ivy_31_n",
-		"m51/m51_00_m35_00_Floor_02_n",
-		"m51/m51_00_m35_00_Floor_03_n",
-		"m51/m51_00_m40_00_ground_003_n",
-		"m51/m51_00_SpidersWeb_01_n",
-		"m51/m51_00_stone_base_00_n",
-		"m51/m51_00_tree_04_03_n",
-		"m51/m51_00_tree_06_n",
-		"m51/m51_00_wall_01_n",
-		"m51/m51_00_water_03_n",
-		"m51/m51_01_sabaku_02_n",
-		"m51/m51_01_sabaku_06_n",
-		"m51/m51_01_sabaku_07_n",
-		"m51/m51_01_sabaku_11_n",
-		"m51/m51_m37_00_BonFireChurchPlasterWall_n",
-		"m53/m40_00_kumo_40_n",
-		"m53/m53_00_c3010_hairs_n",
-		"m53/m53_00_c5010_hair_n",
 		"m53/m53_00_grass_03_n",
 		"m53/m53_00_ironrust_01_n",
-		"m53/m53_00_kumo_40_n",
-		"m53/m53_00_o2400_10_pattern2_n",
-		"m53/m53_00_o324000_wall_03_n",
-		"m53/m53_00_o324013_roof_01_n",
-		"m53/m53_00_o324013_wall_01_n",
-		"m53/m53_00_o324030_floor_02_n",
-		"m53/m53_00_o329219_4_n",
-		"m53/m53_00_plant_02_n",
-		"obj/o001000_o452230_n",
-		"obj/o001002_o001002_n",
-		"obj/o001050_o001050_woodenchair_n",
-		"obj/o004200_o004200_pot_00_n",
-		"obj/o300390_o300390_02_n",
-		"obj/o300390_o300390_04_n",
-		"obj/o300390_o300390_07_n",
-		"obj/o304864_o4820_wall02_n",
-		"obj/o324112_o324112_plant_01_n",
-		"obj/o329700_m32_00_c5170_hair_n",
 		"obj/o392500_o392500_Cloth1_n",
-		"obj/o401156_o401156_02_n",
-		"obj/o409020_o409020_02_n",
-		"obj/o450310_o450310_03_n",
-		"obj/o452230_o452230_n",
-		"parts/AM_M_9000_AM_M_9000_n",
-		"parts/AM_M_9800_AM_M_9800_n",
-		"parts/BD_F_7550_BD_F_7550_1_n",
-		"parts/BD_F_9300_BD_F_9300_01_n",
-		"parts/BD_M_7400_BD_M_7400_n",
-		"parts/BD_M_7450_BD_M_7450_1_n",
-		"parts/BD_M_7550_BD_M_7550_1_n",
-		"parts/BD_M_8300_BD_M_8300_n",
-		"parts/BD_M_9300_BD_M_9300_01_n",
-		"parts/BD_M_9600_BD_M_9600_A_n",
-		"parts/FG_A_0100_FG_A_0100_n",
 		"parts/FG_A_1506_FG_A_1506_n",
 		"parts/FG_A_1507_FG_A_1507_n",
 		"parts/FG_A_1508_FG_A_1508_n",
 		"parts/FG_A_1606_FG_A_1606_n",
 		"parts/FG_A_1607_FG_A_1607_n",
 		"parts/FG_A_1608_FG_A_1608_n",
-		"parts/FG_A_3001_FG_A_3001_n",
-		"parts/FG_A_3003_FG_A_3003_n",
-		"parts/FG_A_3004_FG_A_3004_n",
-		"parts/FG_A_3005_FG_A_3005_n",
-		"parts/FG_A_3006_FG_A_3006_n",
-		"parts/FG_A_3007_FG_A_3007_n",
-		"parts/FG_A_3008_FG_A_3008_n",
-		"parts/FG_A_3009_FG_A_3009_n",
-		"parts/FG_A_3010_FG_A_3010_n",
-		"parts/FG_A_3011_FG_A_3011_n",
-		"parts/HD_F_0100_HD_F_0100_hair_n",
 		"parts/HD_F_7000_HD_M_7000_n",
-		"parts/HD_M_0100_HD_M_0100_hair_n",
-		"parts/HD_M_5700_HD_M_5700_hair_n",
-		"parts/HD_M_5800_HD_M_5800_hair_n",
-		"parts/HD_M_6750_HD_M_6750_2_n",
-		"parts/HD_M_7700_HD_M_7700_n",
-		"parts/HD_M_8400_HD_M_8400_n",
-		"parts/HD_M_9000_HD_M_9000_n",
-		"parts/HR_A_0001_HR_A_0001_n",
-		"parts/HR_A_0002_HR_A_0002_n",
-		"parts/HR_A_0004_HR_A_0004_n",
-		"parts/HR_A_0005_HR_A_0005_n",
-		"parts/HR_A_0008_HR_A_0008_n",
-		"parts/HR_A_0009_HR_A_0009_n",
-		"parts/HR_A_0101_HR_A_0101_n",
-		"parts/HR_A_0102_HR_A_0102_n",
-		"parts/WP_A_1014_WP_A_1014_n",
-		"parts/WP_A_1409_WP_A_1409_n",
 		"parts/WP_A_2023_WP_A_2023_n",
-		"parts/WP_A_2116_WP_A_2116_n",
-		"parts/WP_A_2119_WP_A_2119_n",
-		"sfx/dlc2_s08360_n",
-		"sfx/m35_s09000_n",
-		"sfx/m45_s02041",
-		"sfx/m45_s09000_n",
-		"sfx/m45_s11663",
-		"sfx/m50_s11663",
-		"sfx/m51_s09000_n"
+		"parts/WP_A_2119_WP_A_2119_n"
 	],
 	[
 		"chr/c1109_c1109_light_n",
@@ -692,6 +378,10 @@
 		"chr/c1211_c1211_cloth_n"
 	],
 	[
+		"chr/c1210_c1210_hair_n",
+		"chr/c1211_c1211_hair_n"
+	],
+	[
 		"chr/c1210_c1210_machete1_n",
 		"parts/WP_A_0104_WP_A_0104_n"
 	],
@@ -713,6 +403,7 @@
 	[
 		"chr/c1220_c1220_n",
 		"m39/m39_00_c1220_n",
+		"m45/m45_00_corpse_00_n",
 		"m51/m51_00_c1220_n"
 	],
 	[
@@ -761,41 +452,6 @@
 		"parts/WP_A_0910_WP_A_0910_n"
 	],
 	[
-		"chr/c1241_c1241_WP_A_0252_n",
-		"chr/c6020_c6020_mayu_n",
-		"chr/c6120_c6120_mayu_n",
-		"chr/c6121_c6120_mayu_n",
-		"chr/c6310_c6310_EyebrowsAndEyelashes_n",
-		"m30/m30_00_o4820_stairs_01_n",
-		"m30/m30_00_o4834_stair_01_n",
-		"m33/m33_00_o331100_02_n",
-		"m33/m33_00_o331102_02_n",
-		"m33/m33_00_scroll_01_n",
-		"m35/m35_00_o331100_02_n",
-		"m35/m35_00_o331102_02_n",
-		"m35/m35_00_o331103_02_n",
-		"m37/m37_00_obj_34_n",
-		"m38/m38_00_o331100_02_n",
-		"m40/m40_00_grass_002_n",
-		"m50/m50_00_outerwall_07_n",
-		"m50/m50_00_waterplant_04_n",
-		"parts/FG_A_2001_FG_A_2001_n",
-		"parts/FG_A_2004_FG_A_2004_n",
-		"parts/FG_A_2011_FG_A_2011_n",
-		"parts/FG_A_2012_FG_A_2012_n",
-		"parts/FG_A_2013_FG_A_2013_n",
-		"parts/FG_A_2014_FG_A_2014_n",
-		"parts/FG_A_2015_FG_A_2015_n",
-		"parts/FG_A_2016_FG_A_2016_n",
-		"parts/FG_A_7001_FG_A_7001_n",
-		"parts/FG_A_7002_FG_A_7002_n",
-		"parts/FG_A_7003_FG_A_7003_n",
-		"parts/WP_A_0211_WP_A_0211_1_n",
-		"parts/WP_A_0707_WP_A_0707_n",
-		"sfx/commoneffects_s11605_n",
-		"sfx/commoneffects_s11606_n"
-	],
-	[
 		"chr/c1250_c1250_sword_n",
 		"parts/WP_A_1602_WP_A_1602_n"
 	],
@@ -809,6 +465,11 @@
 		"chr/c1260_c1260_cloth_n",
 		"obj/o319180_o319180_cloth_n",
 		"obj/o319181_o319181_cloth_n"
+	],
+	[
+		"chr/c1260_c1260_wood_n",
+		"parts/BD_F_4500_BD_F_4500_wood_n",
+		"parts/BD_M_4500_BD_M_4500_wood_n"
 	],
 	[
 		"chr/c1280_c1280_cloak_n",
@@ -916,6 +577,7 @@
 	],
 	[
 		"chr/c1300_c1300_weapon3_n",
+		"parts/HD_M_9300_HD_M_9300_hair_n",
 		"parts/WP_A_1015_WP_A_1015_n",
 		"parts/WP_A_7050_WP_A_7050_n",
 		"parts/WP_A_7051_WP_A_7050_n",
@@ -964,6 +626,13 @@
 	[
 		"chr/c1350_c1350_0602_n",
 		"parts/WP_A_0602_WP_A_0602_n"
+	],
+	[
+		"chr/c1350_c1350_hair_n",
+		"chr/c5019_c5019_hair_n",
+		"m32/m32_00_c5010_hair_n",
+		"m53/m53_00_c5010_hair_n",
+		"parts/HD_M_5700_HD_M_5700_hair_n"
 	],
 	[
 		"chr/c1350_c1350_wand_n",
@@ -1162,6 +831,7 @@
 	],
 	[
 		"chr/c2190_c2190_body_n",
+		"chr/c2191_c2191_body_n",
 		"m30/m30_00_o302570_06_n",
 		"m50/m50_00_o302570_06_n",
 		"obj/o399910_c2190_body_n"
@@ -1169,11 +839,13 @@
 	[
 		"chr/c2190_c2190_weapon01_n",
 		"chr/c2191_c2191_weapon01_n",
+		"obj/o399910_c2190_weapon01_n",
 		"parts/WP_A_0817_WP_A_0817_n"
 	],
 	[
 		"chr/c2190_c2190_weapon02_n",
 		"chr/c2191_c2191_weapon02_n",
+		"obj/o399910_c2190_weapon02_n",
 		"parts/WP_A_0911_WP_A_0911_n"
 	],
 	[
@@ -1181,6 +853,13 @@
 		"m30/m30_00_o302570_07_n",
 		"m50/m50_00_o302570_07_n",
 		"obj/o399910_c2190_wing_n"
+	],
+	[
+		"chr/c2210_c2210_hair_a_n",
+		"chr/c6010_c6010_fether_n",
+		"m34/m34_01_o401156_02_n",
+		"obj/o401156_o401156_02_n",
+		"obj/o409020_o409020_02_n"
 	],
 	[
 		"chr/c2210_c2210_weapon01_n",
@@ -1211,8 +890,20 @@
 		"parts/WP_A_0112_WP_A_0112_n"
 	],
 	[
+		"chr/c2240_c2240_hair_n",
+		"chr/c3160_c3160_HD2_n",
+		"chr/c5200_c5200_hair_n",
+		"chr/c6081_c6081_fur3_n",
+		"m45/m45_00_c6081_fur3_n",
+		"parts/HD_M_6750_HD_M_6750_2_n"
+	],
+	[
 		"chr/c2240_c2240_weapon_01_n",
 		"parts/WP_A_0818_WP_A_0818_n"
+	],
+	[
+		"chr/c2250_c2250_hair_n",
+		"chr/c6030_c6030_hairTEST_n"
 	],
 	[
 		"chr/c2260_c2260_01_n",
@@ -1262,7 +953,14 @@
 	],
 	[
 		"chr/c3040_c3040_BD_Chest_n",
-		"parts/BD_F_5800_BD_F_5800_01_n"
+		"parts/BD_F_5800_BD_F_5800_01_n",
+		"parts/BD_M_5800_BD_M_5800_01_n"
+	],
+	[
+		"chr/c3040_C3040_HD_hair_n",
+		"parts/HD_M_5800_HD_M_5800_hair_n",
+		"parts/HR_A_0009_HR_A_0009_n",
+		"parts/HR_A_0101_HR_A_0101_n"
 	],
 	[
 		"chr/c3040_c3040_HD_n",
@@ -1322,8 +1020,18 @@
 		"obj/o302593_o302593_c3080branch_n"
 	],
 	[
+		"chr/c3080_c3080hair02_n",
+		"obj/o302593_o302593_c3080hair02_n"
+	],
+	[
 		"chr/c3080_c3080tail_n",
 		"obj/o302593_o302593_c3080tail_n"
+	],
+	[
+		"chr/c3080_c3080web_n",
+		"m30/m30_00_spiderWeb_01_n",
+		"m35/m35_00_SpiderWeb_00_n",
+		"m40/m40_00_spiderWeb_901_n"
 	],
 	[
 		"chr/c3080_c3080wing_n",
@@ -1338,6 +1046,10 @@
 	[
 		"chr/c3160_c3160_AM_n",
 		"parts/AM_M_6750_AM_M_7650_1_n"
+	],
+	[
+		"chr/c3160_c3160_BD2_n",
+		"parts/BD_M_6750_BD_M_7650_2_n"
 	],
 	[
 		"chr/c3160_c3160_LG_n",
@@ -1557,6 +1269,10 @@
 		"parts/BD_M_5850_BD_M_5850_n"
 	],
 	[
+		"chr/c6000_c6000_hair_n",
+		"m45/m45_00_c6000_hair_n"
+	],
+	[
 		"chr/c6000_c6000_HD02_n",
 		"m45/m45_00_c6000_HD02_n"
 	],
@@ -1588,6 +1304,11 @@
 		"parts/WP_A_2030_WP_A_2030_n"
 	],
 	[
+		"chr/c6010_c6010_fur2_n",
+		"chr/c6080_c6080_fur2_n",
+		"m45/m45_00_c6080_fur2_n"
+	],
+	[
 		"chr/c6010_c6010_magma_01_n",
 		"m38/m38_00_magma_01_n"
 	],
@@ -1610,6 +1331,12 @@
 		"parts/LG_M_5650_LG_M_5650_n"
 	],
 	[
+		"chr/c6020_c6020_mayu_n",
+		"chr/c6120_c6120_mayu_n",
+		"chr/c6121_c6120_mayu_n",
+		"chr/c6310_c6310_EyebrowsAndEyelashes_n"
+	],
+	[
 		"chr/c6020_c6020_WP_n",
 		"parts/WP_A_1018_WP_A_1018_n",
 		"sfx/dlc1_s08120_n",
@@ -1617,9 +1344,12 @@
 	],
 	[
 		"chr/c6030_c6030_Hair_02_n",
-		"chr/c6280_c6280_Hair_n",
 		"parts/BD_F_9100_BD_F_9100_n",
 		"parts/BD_M_9100_BD_M_9100_n"
+	],
+	[
+		"chr/c6040_c6040_Hair_01_n",
+		"chr/c6050_c6050_Hair_01_n"
 	],
 	[
 		"chr/c6040_c6040_n",
@@ -1643,6 +1373,10 @@
 		"parts/WP_A_1615_WP_A_1615_n",
 		"sfx/dlc1_s08110_n",
 		"sfx/m45_s08110_n"
+	],
+	[
+		"chr/c6080_c6080_fur_n",
+		"m45/m45_00_c6080_fur_n"
 	],
 	[
 		"chr/c6081_c6081_bandage_n",
@@ -1745,6 +1479,7 @@
 	],
 	[
 		"chr/c6200_c6200_Body_Dust_n",
+		"chr/c6200_c6200_Body_n",
 		"chr/c6201_c6201_Body_Dust_n"
 	],
 	[
@@ -1763,16 +1498,17 @@
 		"parts/FC_M_0003_FC_M_0003_Hair_n"
 	],
 	[
+		"chr/c6200_c6200_Weapon_Dust_n",
+		"chr/c6201_c6201_Weapon_Dust_n",
+		"obj/o007180_o007180_c6201_Weapon_Dust_n"
+	],
+	[
 		"chr/c6200_c6200_Weapon_n",
 		"parts/WP_A_0226_WP_A_0226_n"
 	],
 	[
 		"chr/c6200_c6200_WP_A_1419_n",
 		"parts/WP_A_1419_WP_A_1419_n"
-	],
-	[
-		"chr/c6201_c6201_Weapon_Dust_n",
-		"obj/o007180_o007180_c6201_Weapon_Dust_n"
 	],
 	[
 		"chr/c6210_c6210_ArmLeg_n",
@@ -1878,6 +1614,10 @@
 		"chr/c6310_c6310_mummy_cieclet_n"
 	],
 	[
+		"chr/c6310_c6310_dress_n",
+		"chr/c6310_c6310_mummy_dress_n"
+	],
+	[
 		"chr/c6310_c6310_egg_n",
 		"m51/m51_00_moon_00_n"
 	],
@@ -1916,6 +1656,12 @@
 		"chr/c6339_c6339_wing_n"
 	],
 	[
+		"m30/m30_00_ash_01_n",
+		"m32/m32_00_o329219_4_n",
+		"m50/m50_00_ash_01_n",
+		"m53/m53_00_o329219_4_n"
+	],
+	[
 		"m30/m30_00_bigrock_01_n",
 		"m32/m32_00_o324101_01_n",
 		"m34/m34_00_o324101_01_n",
@@ -1952,6 +1698,7 @@
 		"m34/m34_00_o324101_05_n",
 		"m41/m41_00_m30_00_bigrock_05_n",
 		"m50/m50_00_bigrock_05_n",
+		"m50/m50_00_m30_00_bigrock_05_n",
 		"m51/m51_00_m32_00_o324101_05_n",
 		"m53/m53_00_o324101_05_n"
 	],
@@ -2007,6 +1754,12 @@
 		"m33/m33_00_enkei_02_n",
 		"m35/m35_00_enkei_51_n",
 		"m51/m51_00_enkei_51_n"
+	],
+	[
+		"m30/m30_00_enkei_52_n",
+		"m31/m31_00_enkei_03_n",
+		"m33/m33_00_enkei_03_n",
+		"m35/m35_00_enkei_52_n"
 	],
 	[
 		"m30/m30_00_flag_01_n",
@@ -2098,6 +1851,7 @@
 	],
 	[
 		"m30/m30_00_GroundTile_01_n",
+		"m35/m35_00_Floor_00_n",
 		"m40/m40_00_GroundTile_301_n",
 		"m50/m50_00_GroundTile_01_n"
 	],
@@ -2159,7 +1913,8 @@
 	[
 		"m30/m30_00_ground_puddle_000_n",
 		"m34/m34_00_ground_puddle_000_n",
-		"m41/m41_00_m30_00_ground_puddle_000_n"
+		"m41/m41_00_m30_00_ground_puddle_000_n",
+		"m50/m50_00_ground_puddle_000_n"
 	],
 	[
 		"m30/m30_00_ground_puddle_000_water_n",
@@ -2169,11 +1924,22 @@
 		"m50/m50_00_ground_puddle_000_water_n"
 	],
 	[
+		"m30/m30_00_ivy_01_n",
+		"m31/m31_00_ivy_00_n",
+		"m35/m35_00_o301972_01_n",
+		"m40/m40_00_ivy_316_n",
+		"m45/m45_00_ivy_31_n",
+		"m50/m50_00_ivy_31_n",
+		"m51/m51_00_ivy_31_n",
+		"obj/o300390_o300390_07_n"
+	],
+	[
 		"m30/m30_00_ivy_02_n",
 		"m35/m35_00_o301972_02_n",
 		"m39/m39_m30_00_ivy_02_n",
 		"m45/m45_00_ivy_02_n",
-		"m50/m50_00_ivy_02_n"
+		"m50/m50_00_ivy_02_n",
+		"obj/o300390_o300390_06_n"
 	],
 	[
 		"m30/m30_00_ivy_03_n",
@@ -2355,10 +2121,13 @@
 	],
 	[
 		"m30/m30_00_m31_00_rockwall_04_n",
+		"m31/m31_00_rockwall_03_n",
 		"m31/m31_00_rockwall_04_n",
+		"m31/m31_00_rockwall_12_n",
 		"m33/m33_00_m31_00_rockwall_04_n",
 		"m33/m33_00_m33_00_rockwall_04_n",
 		"m33/m33_m31_00_rockwall_04_n",
+		"m39/m39_00_rockwall_03_n",
 		"m40/m40_00_rockwall_321_n",
 		"obj/o009057_o009057_02_n"
 	],
@@ -2403,6 +2172,19 @@
 		"m39/m39_m37_00_enkei_05_n",
 		"m40/m40_00_enkei_05_n",
 		"m45/m45_00_enkei_05_n"
+	],
+	[
+		"m30/m30_00_m37_00_enkei_70_n",
+		"m35/m35_00_m37_00_enkei_70_n",
+		"m37/m37_00_enkei_70_n",
+		"m45/m45_00_enkei_70_n"
+	],
+	[
+		"m30/m30_00_m37_00_tree_06_n",
+		"m35/m35_00_m37_00_tree_06_n",
+		"m37/m37_00_tree_06_n",
+		"m45/m45_00_tree_06_n",
+		"m51/m51_00_tree_06_n"
 	],
 	[
 		"m30/m30_00_m39_IronBeam_01_n",
@@ -2468,6 +2250,11 @@
 		"m39/m39_00_low_bridge_01_n",
 		"obj/o008821_o008821_low_01_n",
 		"obj/o999320_m39_00_low_bridge_01_n"
+	],
+	[
+		"m30/m30_00_o0462_00_n",
+		"m34/m34_o0462_00_n",
+		"m50/m50_o0462_00_n"
 	],
 	[
 		"m30/m30_00_o0462_01_n",
@@ -2549,6 +2336,7 @@
 		"m33/m33_00_o300300_n",
 		"m35/m35_00_o300300_n",
 		"m45/m45_00_grate_door_00_n",
+		"m50/m50_00_o300300_n",
 		"m51/m51_00_o300300_n",
 		"m53/m53_00_o300300_n",
 		"obj/o000351_o0351_n",
@@ -2613,13 +2401,6 @@
 	[
 		"m30/m30_00_o302530_03_n",
 		"m34/m30_00_o302530_03_n"
-	],
-	[
-		"m30/m30_00_o302550_body_n",
-		"m34/m30_00_o302550_body_n",
-		"sfx/m30_s09050_n",
-		"sfx/m46_s09050_n",
-		"sfx/m50_s09050_n"
 	],
 	[
 		"m30/m30_00_o302550_weapon_n",
@@ -2798,11 +2579,14 @@
 	],
 	[
 		"m30/m30_00_o304860_11_n",
+		"m33/m33_00_o331314_floor_01_n",
+		"m38/m38_00_o331314_floor_01_n",
 		"m50/m50_00_o304860_11_n"
 	],
 	[
 		"m30/m30_00_o304860_12_n",
-		"m50/m50_00_o304860_12_n"
+		"m50/m50_00_o304860_12_n",
+		"obj/o304860_o304860_12_n"
 	],
 	[
 		"m30/m30_00_o304861_01_n",
@@ -2893,6 +2677,15 @@
 		"m41/m41_00_m40_00_stair_302_n"
 	],
 	[
+		"m30/m30_00_o304868_wall_01_n",
+		"m30/m30_00_o304868_wall_02_n",
+		"m50/m50_00_o304868_wall_02_n"
+	],
+	[
+		"m30/m30_00_o304868_wall_02_b_n",
+		"m50/m50_00_o304868_wall_02_b_n"
+	],
+	[
 		"m30/m30_00_o304870_stair_01_n",
 		"m32/m32_00_o304870_n",
 		"m34/m34_00_o304870_n",
@@ -2905,7 +2698,14 @@
 		"m30/m30_00_o304870_stair_02_n",
 		"m32/m32_00_o304870_02_n",
 		"m50/m50_00_o304870_stair_02_n",
-		"m53/m53_00_o304870_02_n"
+		"m53/m53_00_o304870_02_n",
+		"obj/o304860_o304860_16_n"
+	],
+	[
+		"m30/m30_00_o304871_floor_01_n",
+		"m35/m35_00_Floor_01_n",
+		"m45/m45_00_altarC_01_n",
+		"m50/m50_00_o304871_floor_01_n"
 	],
 	[
 		"m30/m30_00_o304871_tile_01_n",
@@ -3008,10 +2808,19 @@
 	],
 	[
 		"m30/m30_00_o309100_roof_01_n",
+		"m32/m32_00_o329100_roof_01_n",
+		"m34/m34_00_o309100_roof_01_n",
+		"m34/m34_00_o309320_roof_01_n",
+		"m39/m39_m34_00_o309320_roof_01_n",
+		"m40/m40_00_o309320_roof_301_n",
 		"m41/m41_00_m30_00_o309100_roof_01_n",
+		"m41/m41_00_m40_00_o309320_roof_301_n",
+		"m46/m46_00_o309320_roof_01_n",
 		"m47/m47_00_m30_00_o309100_roof_01_n",
 		"m47/m47_00_o309100_roof_01_n",
-		"m50/m50_00_o309100_roof_01_n"
+		"m50/m50_00_o309100_roof_01_n",
+		"m50/m50_00_o309320_roof_01_n",
+		"m53/m53_00_o329100_roof_01_n"
 	],
 	[
 		"m30/m30_00_o309100_roof_02_n",
@@ -3094,6 +2903,8 @@
 	],
 	[
 		"m30/m30_00_o309110_wall_01_n",
+		"m34/m34_00_o309110_wall_01_n",
+		"m40/m40_00_o309110_wall_01_348_n",
 		"m41/m41_00_m30_00_o309110_wall_01_n",
 		"m50/m50_00_o309110_wall_01_n"
 	],
@@ -3327,6 +3138,11 @@
 		"m34/m34_00_o309304_partf_02_n"
 	],
 	[
+		"m30/m30_00_o309304_partg_01_n",
+		"m34/m34_00_o309304_partg_01_n",
+		"m50/m50_00_o309304_partg_01_n"
+	],
+	[
 		"m30/m30_00_o309304_parth_01_n",
 		"m34/m34_00_o309304_parth_01_n"
 	],
@@ -3499,18 +3315,24 @@
 	[
 		"m30/m30_00_o331303_floor_01_n",
 		"m32/m32_00_o331303_floor_01_n",
+		"m32/m32_00_o331306_floor_01_n",
 		"m35/m35_00_o331303_floor_01_n",
+		"m40/m40_00_floor_001_n",
 		"m50/m50_00_o331303_floor_01_n",
 		"m51/m51_00_o331303_floor_01_n",
-		"m53/m53_00_o331303_floor_01_n"
+		"m53/m53_00_o331303_floor_01_n",
+		"m53/m53_00_o331306_floor_01_n"
 	],
 	[
 		"m30/m30_00_o331303_wall_section_01_n",
+		"m31/m31_00_danmen_01_n",
 		"m32/m32_00_o331303_wall_section_02_n",
+		"m33/m33_00_danmen_01_n",
 		"m33/m33_00_o331303_wall_section_02_n",
 		"m34/m34_00_o331303_wall_section_01_n",
 		"m39/m39_00_danmen_01_n",
 		"m40/m40_00_wall_012_n",
+		"m41/m41_00_m31_00_danmen_01_n",
 		"m41/m41_00_m32_00_o331303_wall_section_02_n",
 		"m41/m41_00_m40_00_wall_012_n",
 		"m47/m47_00_m40_00_wall_012_n",
@@ -3523,15 +3345,21 @@
 	],
 	[
 		"m30/m30_00_o331306_brick_01_n",
+		"m31/m31_00_block_07_n",
 		"m31/m31_00_block_19_n",
+		"m32/m32_00_o331306_brick_01_n",
 		"m33/m33_00_m39_m31_00_block_19_n",
+		"m33/m33_00_o331306_brick_01_a_n",
+		"m33/m33_00_o331306_brick_01_n",
+		"m33/m33_00_o970502_brick_01_n",
 		"m35/m35_00_o331306_brick_01_n",
 		"m39/m39_m31_00_block_19_n",
 		"m41/m41_00_m30_00_o331306_brick_01_n",
 		"m41/m41_00_m32_00_o331306_brick_01_n",
 		"m50/m50_00_m31_00_block_19_n",
 		"m50/m50_00_o331306_brick_01_n",
-		"m51/m51_m31_00_block_19_n"
+		"m51/m51_m31_00_block_19_n",
+		"m53/m53_00_o331306_brick_01_n"
 	],
 	[
 		"m30/m30_00_o331309_edge_01_n",
@@ -3573,6 +3401,11 @@
 		"m50/m50_o344883_02_n"
 	],
 	[
+		"m30/m30_00_o344883_03_n",
+		"m34/m34_o344883_03_n",
+		"m50/m50_o344883_03_n"
+	],
+	[
 		"m30/m30_00_o349380_01_n",
 		"m34/m34_00_o349380_n",
 		"sfx/m34_s09260_n",
@@ -3612,6 +3445,7 @@
 	],
 	[
 		"m30/m30_00_o4800_wall_01_n",
+		"m31/m31_00_brickwall_07_n",
 		"m50/m50_00_o4800_wall_01_n"
 	],
 	[
@@ -3628,8 +3462,14 @@
 		"m50/m50_00_o4801_roof_01_n"
 	],
 	[
+		"m30/m30_00_o4801_roof_02_n",
+		"m40/m40_00_o4801_roof_02_353_n",
+		"m50/m50_00_o4801_roof_02_n"
+	],
+	[
 		"m30/m30_00_o4801_wood_01_n",
-		"m34/m34_00_o4801_wood01_n"
+		"m34/m34_00_o4801_wood01_n",
+		"m50/m50_00_o4801_wood_01_n"
 	],
 	[
 		"m30/m30_00_o4802_door_01_n",
@@ -3674,6 +3514,7 @@
 	],
 	[
 		"m30/m30_00_o4805_sewage_01_n",
+		"m30/m30_00_sludge_01_n",
 		"m39/m39_00_m30_00_sewage_01_n"
 	],
 	[
@@ -3783,6 +3624,11 @@
 		"m53/m53_00_o4810_decoration_01_n"
 	],
 	[
+		"m30/m30_00_o4810_decoration_02_n",
+		"m32/m32_00_o4810_decoration_02_n",
+		"m53/m53_00_o4810_decoration_02_n"
+	],
+	[
 		"m30/m30_00_o4810_decoration_03_n",
 		"m32/m32_00_o4810_decoration_03_n",
 		"m33/m33_00_brick_04_n",
@@ -3802,19 +3648,24 @@
 	],
 	[
 		"m30/m30_00_o4810_wall_03_n",
+		"m32/m32_00_o324102_01_n",
 		"m33/m33_00_wall_011_n",
 		"m33/m33_00_wall_013_n",
 		"m33/m33_00_wall_wet_013_n",
 		"m38/m38_00_m40_00_wall_011_n",
 		"m40/m40_00_wall_011_n",
 		"m40/m40_00_wall_013_n",
+		"m40/m40_00_wall_014_n",
 		"m41/m41_00_m40_00_wall_011_n",
 		"m41/m41_00_m40_00_wall_013_n",
+		"m41/m41_00_m40_00_wall_014_n",
 		"m45/m45_00_stone_tile_E00_n",
 		"m50/m50_00_m40_00_wall_011_n",
 		"m50/m50_00_stone_tile_E00_n",
 		"m50/m50_00_stone_tile_F00_n",
 		"m50/m50_00_wall_011_n",
+		"m51/m51_00_m32_00_o324102_04_n",
+		"m53/m53_00_o324102_01_n",
 		"obj/o381000_o381000_03_n"
 	],
 	[
@@ -3865,6 +3716,18 @@
 		"m32/m32_00_carpet_broken_n",
 		"m34/m34_00_o4820_carpet_broken_n",
 		"m53/m53_00_carpet_broken_n"
+	],
+	[
+		"m30/m30_00_o4820_carpet_b_03_n",
+		"m34/m34_00_o4820_carpet_broken_03_n",
+		"m35/m35_00_o4820_carpet_03_n",
+		"m40/m40_00_o4820_carpet_b_03_n",
+		"m41/m41_00_m40_00_o4820_carpet_b_03_n",
+		"m45/m45_00_carpetA_03_n"
+	],
+	[
+		"m30/m30_00_o4820_carpet_b_04_n",
+		"m30/m30_00_o4820_carpet_b_bl_04_n"
 	],
 	[
 		"m30/m30_00_o4820_door_01_n",
@@ -3950,9 +3813,23 @@
 		"m50/m50_00_o4820_roof_n"
 	],
 	[
+		"m30/m30_00_o4820_stairs_01_n",
+		"m30/m30_00_o4834_stair_01_n"
+	],
+	[
 		"m30/m30_00_o4820_wall_01_n",
 		"m34/m34_00_o4820_wall01_n",
 		"m50/m50_00_o4820_wall_01_n"
+	],
+	[
+		"m30/m30_00_o4820_wall_02_n",
+		"m32/m32_00_o324013_wall_01_n",
+		"m34/m34_00_o4820_wall02_n",
+		"m34/m34_00_o4820_wall07_n",
+		"m35/m35_00_o4820_wall_02_n",
+		"m51/m51_00_wall_01_n",
+		"m53/m53_00_o324013_wall_01_n",
+		"obj/o304864_o4820_wall02_n"
 	],
 	[
 		"m30/m30_00_o4820_wall_03_n",
@@ -4276,6 +4153,7 @@
 	],
 	[
 		"m30/m30_00_tapestry_01_b_n",
+		"m34/m34_00_o304859_tapestry_broken_n",
 		"obj/o319550_o319550_tapestry_00_n"
 	],
 	[
@@ -4326,6 +4204,20 @@
 		"m30/m30_00_Water_02_n",
 		"m30/m30_00_water_10_n",
 		"m39/m39_00_Water_10_n"
+	],
+	[
+		"m30/m30_00_Water_03_n",
+		"m30/m30_00_water_53_n",
+		"m31/m31_00_water_02_n",
+		"m33/m33_m31_00_water_02_n",
+		"m35/m35_00_water_53_n",
+		"m37/m37_00_water_03_n",
+		"m39/m39_00_water_03_n",
+		"m40/m40_00_water_01_n",
+		"m45/m45_00_water_02_n",
+		"m45/m45_00_water_03_n",
+		"m46/m46_00_water_53_n",
+		"m51/m51_00_water_03_n"
 	],
 	[
 		"m30/m30_00_WoodFineSplit_01_n",
@@ -4418,6 +4310,7 @@
 	],
 	[
 		"m31/m31_00_a_o364000_branch_01_n",
+		"m38/m38_00_o364000_branch_01_n",
 		"m40/m40_o364000_branch_01_n"
 	],
 	[
@@ -4455,20 +4348,14 @@
 		"m33/m33_00_o331303_brick_01_n",
 		"m33/m33_00_o970500_brick_rock_01_n",
 		"m35/m35_00_o970500_brick_rock_01_n",
-		"m37/m37_00_brick_rock_01_n"
+		"m37/m37_00_brick_rock_01_n",
+		"m37/m37_00_kamadorenga_01_n",
+		"m45/m45_00_kamadorenga_01_n"
 	],
 	[
 		"m31/m31_00_block_06_n",
 		"m33/m33_00_o331314_brick_01_n",
 		"m33/m33_00_o970501_brick_01_n"
-	],
-	[
-		"m31/m31_00_block_07_n",
-		"m32/m32_00_o331306_brick_01_n",
-		"m33/m33_00_o331306_brick_01_a_n",
-		"m33/m33_00_o331306_brick_01_n",
-		"m33/m33_00_o970502_brick_01_n",
-		"m53/m53_00_o331306_brick_01_n"
 	],
 	[
 		"m31/m31_00_block_10_n",
@@ -4496,6 +4383,7 @@
 		"m31/m31_00_brickwall_00_n",
 		"m33/m33_00_cobblestone_00_n",
 		"m33/m33_00_o331303_wall_02_n",
+		"obj/o304860_o304860_09_n",
 		"obj/o319800_BrickWall_00_n"
 	],
 	[
@@ -4546,6 +4434,13 @@
 		"obj/o389041_c1040_c1_n"
 	],
 	[
+		"m31/m31_00_cloth_01_n",
+		"m32/m32_00_o2400_10_pattern2_n",
+		"m39/m39_m32_00_o2400_10_pattern2_n",
+		"m40/m40_00_o2400_10_pattern2_n",
+		"m53/m53_00_o2400_10_pattern2_n"
+	],
+	[
 		"m31/m31_00_cloth_03_n",
 		"m39/m39_00_rippedcloth_00_n",
 		"m50/m50_o302052_n",
@@ -4567,11 +4462,6 @@
 		"m40/m40_00_danmen_309_n",
 		"m50/m50_00_danmen_00_n",
 		"m51/m51_00_danmen_00_n"
-	],
-	[
-		"m31/m31_00_danmen_01_n",
-		"m33/m33_00_danmen_01_n",
-		"m41/m41_00_m31_00_danmen_01_n"
 	],
 	[
 		"m31/m31_00_door_00_n",
@@ -4613,6 +4503,11 @@
 	[
 		"m31/m31_00_groundmud_02_n",
 		"m39/m39_00_ground_00_n"
+	],
+	[
+		"m31/m31_00_groundsand_02_n",
+		"m39/m39_m31_00_groundsand_02_n",
+		"m51/m51_m31_00_groundsand_02_n"
 	],
 	[
 		"m31/m31_00_ironcage_00_n",
@@ -4658,9 +4553,19 @@
 		"m32/m32_00_Mountain007_n"
 	],
 	[
+		"m31/m31_00_pan_00_n",
+		"m37/m37_00_pan_01_n",
+		"m45/m45_00_pan_01_n"
+	],
+	[
 		"m31/m31_00_plasterwall_00_n",
 		"m39/m39_m31_00_plasterwall_00_n",
 		"m50/m50_00_plasterwall_00_n"
+	],
+	[
+		"m31/m31_00_plate_00_n",
+		"m37/m37_00_plate_02_n",
+		"m45/m45_00_plate_02_n"
 	],
 	[
 		"m31/m31_00_plate_01_n",
@@ -4688,11 +4593,6 @@
 		"m39/m39_00_rockwall_02_n"
 	],
 	[
-		"m31/m31_00_rockwall_03_n",
-		"m31/m31_00_rockwall_12_n",
-		"m39/m39_00_rockwall_03_n"
-	],
-	[
 		"m31/m31_00_rockwall_05_n",
 		"m40/m40_00_rockwall_322_n"
 	],
@@ -4701,6 +4601,11 @@
 		"m33/m33_00_o324110_wall_01_n",
 		"m39/m39_00_rockwall_01_n",
 		"obj/o324110_o324110_wall_01_n"
+	],
+	[
+		"m31/m31_00_rockwall_08_n",
+		"m32/m32_00_cliff_01_n",
+		"m53/m53_00_cliff_01_n"
 	],
 	[
 		"m31/m31_00_rockwall_09_n",
@@ -4838,6 +4743,26 @@
 		"m39/m39_00_stonesmooth_00_n"
 	],
 	[
+		"m31/m31_00_sniperbow_00_n",
+		"m35/m31_00_sniperbow_00_n"
+	],
+	[
+		"m31/m31_00_spiderweb_00_n",
+		"m33/m33_00_o2105_1_n"
+	],
+	[
+		"m31/m31_00_spiderweb_01_n",
+		"m33/m33_00_o2105_2_n"
+	],
+	[
+		"m31/m31_00_spiderweb_02_n",
+		"m33/m33_00_o2105_3_n"
+	],
+	[
+		"m31/m31_00_spiderweb_03_n",
+		"m33/m33_00_o2105_n"
+	],
+	[
 		"m31/m31_00_stair_00_n",
 		"m31/m31_00_stair_01_n",
 		"m33/m33_00_stair_01_n",
@@ -4920,6 +4845,10 @@
 		"m33/m33_00_o331303_windows_01_n"
 	],
 	[
+		"m31/m31_00_straw_00_edge_n",
+		"m31/m31_00_straw_00_n"
+	],
+	[
 		"m31/m31_00_straw_02_n",
 		"m45/m45_00_straw_02_n"
 	],
@@ -4939,12 +4868,21 @@
 		"m50/m50_00_swanp_01_n"
 	],
 	[
+		"m31/m31_00_treebranch_00_n",
+		"m37/m37_00_tree_04_03_n",
+		"m51/m51_00_tree_04_03_n"
+	],
+	[
 		"m31/m31_00_tree_01_n",
 		"m35/m35_00_tree_01_n"
 	],
 	[
 		"m31/m31_00_tree_02_n",
 		"m35/m35_00_tree_02_n"
+	],
+	[
+		"m31/m31_00_water_00_n",
+		"m39/m39_00_water_01_n"
 	],
 	[
 		"m31/m31_00_water_01_n",
@@ -4974,7 +4912,9 @@
 	],
 	[
 		"m31/m31_00_woodbox_00_n",
+		"m33/m33_00_o331404_woodenbox_n",
 		"m35/m35_00_o001080_woodenbox_n",
+		"m45/m45_00_o331404_woodenbox_n",
 		"m51/m51_00_m35_00_o001080_woodenbox_n",
 		"obj/o001080_o001080_woodenbox_n",
 		"sfx/m30_s09010_n",
@@ -5051,6 +4991,11 @@
 		"sfx/m53_s09271_n"
 	],
 	[
+		"m32/m32_00_c3010_hairs_n",
+		"m39/m39_m32_00_c3010_hairs_n",
+		"m53/m53_00_c3010_hairs_n"
+	],
+	[
 		"m32/m32_00_c3010_n",
 		"m39/m39_m32_00_c3010_n",
 		"m53/m53_00_c3010_n",
@@ -5073,10 +5018,6 @@
 		"m32/m32_00_c5170_wings_n",
 		"m53/m53_00_c5170_wings_n",
 		"obj/o329700_m32_00_c5170_wings_n"
-	],
-	[
-		"m32/m32_00_cliff_01_n",
-		"m53/m53_00_cliff_01_n"
 	],
 	[
 		"m32/m32_00_FlatRock_n",
@@ -5114,6 +5055,15 @@
 		"m40/m40_00_kumo_20_n",
 		"m53/m40_00_kumo_20_n",
 		"m53/m53_00_kumo_20_n"
+	],
+	[
+		"m32/m32_00_kumo_40_n",
+		"m32/m40_00_kumo_40_n",
+		"m40/m40_00_kumo_30_n",
+		"m40/m40_00_kumo_40_n",
+		"m41/m41_00_m40_00_kumo_30_n",
+		"m53/m40_00_kumo_40_n",
+		"m53/m53_00_kumo_40_n"
 	],
 	[
 		"m32/m32_00_kumo_60_n",
@@ -5239,11 +5189,9 @@
 	],
 	[
 		"m32/m32_00_o324000_grace_02",
-		"m53/m53_00_o324000_grace_02"
-	],
-	[
 		"m32/m32_00_o324000_grace_02_n",
 		"m35/m35_00_o324000_grace_02_n",
+		"m53/m53_00_o324000_grace_02",
 		"m53/m53_00_o324000_grace_02_n"
 	],
 	[
@@ -5301,6 +5249,10 @@
 		"m53/m53_00_o324000_wall_03_damage_n"
 	],
 	[
+		"m32/m32_00_o324000_wall_03_n",
+		"m53/m53_00_o324000_wall_03_n"
+	],
+	[
 		"m32/m32_00_o324005_arch_01_n",
 		"m33/m33_00_o324005_arch_01_n",
 		"m50/m50_00_o324005_arch_01_n",
@@ -5341,6 +5293,11 @@
 	],
 	[
 		"m32/m32_00_o324005_railing_n",
+		"m33/m33_00_m40_railing_000_n",
+		"m40/m40_00_railing_000_n",
+		"m41/m41_00_m32_00_o324005_railing_n",
+		"m41/m41_00_m40_00_railing_000_n",
+		"m50/m50_00_m40_railing_000_n",
 		"m51/m51_00_m32_00_o324005_railing_n",
 		"m53/m53_00_o324005_railing_n"
 	],
@@ -5440,6 +5397,10 @@
 		"m53/m53_00_o324013_rock_n"
 	],
 	[
+		"m32/m32_00_o324013_roof_01_n",
+		"m53/m53_00_o324013_roof_01_n"
+	],
+	[
 		"m32/m32_00_o324013_roof_02_n",
 		"m53/m53_00_o324013_roof_02_n"
 	],
@@ -5467,6 +5428,10 @@
 	[
 		"m32/m32_00_o324030_branch_02_n",
 		"m53/m53_00_o324030_branch_02_n"
+	],
+	[
+		"m32/m32_00_o324030_floor_02_n",
+		"m53/m53_00_o324030_floor_02_n"
 	],
 	[
 		"m32/m32_00_o324030_stone_tablet_01_n",
@@ -5707,12 +5672,6 @@
 		"m53/m53_00_o324101_5_n"
 	],
 	[
-		"m32/m32_00_o324102_01_n",
-		"m40/m40_00_wall_014_n",
-		"m41/m41_00_m40_00_wall_014_n",
-		"m53/m53_00_o324102_01_n"
-	],
-	[
 		"m32/m32_00_o324102_02_n",
 		"m53/m53_00_o324102_02_n"
 	],
@@ -5757,17 +5716,6 @@
 	[
 		"m32/m32_00_o324600_02_n",
 		"m53/m53_00_o324600_02_n"
-	],
-	[
-		"m32/m32_00_o329100_roof_01_n",
-		"m34/m34_00_o309100_roof_01_n",
-		"m34/m34_00_o309320_roof_01_n",
-		"m39/m39_m34_00_o309320_roof_01_n",
-		"m40/m40_00_o309320_roof_301_n",
-		"m41/m41_00_m40_00_o309320_roof_301_n",
-		"m46/m46_00_o309320_roof_01_n",
-		"m50/m50_00_o309320_roof_01_n",
-		"m53/m53_00_o329100_roof_01_n"
 	],
 	[
 		"m32/m32_00_o329210_1_n",
@@ -6031,16 +5979,14 @@
 		"m53/m53_00_o331305_edge_01_n"
 	],
 	[
-		"m32/m32_00_o331306_floor_01_n",
-		"m40/m40_00_floor_001_n",
-		"m53/m53_00_o331306_floor_01_n"
-	],
-	[
 		"m32/m32_00_o331306_floor_02_n",
 		"m53/m53_00_o331306_floor_02_n"
 	],
 	[
 		"m32/m32_00_o331317_e_01_n",
+		"m33/m33_00_o331317_edge_02_n",
+		"m34/m34_00_o309322_edge_01_n",
+		"m35/m35_00_o331317_edge_02_n",
 		"m53/m53_00_o331317_e_01_n"
 	],
 	[
@@ -6078,15 +6024,15 @@
 		"m53/m53_00_o4520_3_n"
 	],
 	[
-		"m32/m32_00_o4810_decoration_02_n",
-		"m53/m53_00_o4810_decoration_02_n"
-	],
-	[
 		"m32/m32_00_Outside_Snow_n",
 		"m37/m37_00_Outside_Snow_n",
 		"m45/m45_00_Outside_Snow_n",
 		"m53/m53_00_Outside_Snow_n",
 		"m54/m54_00_Outside_Snow_n"
+	],
+	[
+		"m32/m32_00_plant_02_n",
+		"m53/m53_00_plant_02_n"
 	],
 	[
 		"m33/m33_00_broom_01_n",
@@ -6128,13 +6074,6 @@
 		"obj/o329250_m32_00_o324010_01_n"
 	],
 	[
-		"m33/m33_00_m40_railing_000_n",
-		"m40/m40_00_railing_000_n",
-		"m41/m41_00_m32_00_o324005_railing_n",
-		"m41/m41_00_m40_00_railing_000_n",
-		"m50/m50_00_m40_railing_000_n"
-	],
-	[
 		"m33/m33_00_m40_steps_000_n",
 		"m39/m39_00_stairblock_02_n",
 		"m40/m40_00_steps_000_n",
@@ -6155,6 +6094,10 @@
 		"m33/m33_00_mauntain_04_n",
 		"obj/o309985_m33_00_mauntain_04_n",
 		"obj/o389000_m33_00_mauntain_04_n"
+	],
+	[
+		"m33/m33_00_moss_00_n",
+		"m39/m39_00_moss_309_n"
 	],
 	[
 		"m33/m33_00_o1340_n",
@@ -6213,6 +6156,17 @@
 		"m35/m35_00_o331005_03_n"
 	],
 	[
+		"m33/m33_00_o331100_02_n",
+		"m35/m35_00_o331100_02_n",
+		"m38/m38_00_o331100_02_n"
+	],
+	[
+		"m33/m33_00_o331102_02_n",
+		"m35/m35_00_o331102_02_n",
+		"m40/m40_00_grass_002_n",
+		"m50/m50_00_waterplant_04_n"
+	],
+	[
 		"m33/m33_00_o331201_n",
 		"sfx/m33_s09152_n"
 	],
@@ -6233,10 +6187,6 @@
 		"m38/m38_00_o331312_02_n"
 	],
 	[
-		"m33/m33_00_o331314_floor_01_n",
-		"m38/m38_00_o331314_floor_01_n"
-	],
-	[
 		"m33/m33_00_o331314_floor_02_n",
 		"m34/m34_00_o331314_floor_02_n",
 		"m38/m38_00_o331314_floor_02_n",
@@ -6244,12 +6194,10 @@
 	],
 	[
 		"m33/m33_00_o331314_stairs_01_n",
-		"m35/m35_00_o331314_stairs_01_n",
-		"m51/m51_00_o331314_stairs_01_n"
-	],
-	[
 		"m33/m33_00_o331314_stairs_02_n",
-		"m50/m50_00_o331314_stairs_02_n"
+		"m35/m35_00_o331314_stairs_01_n",
+		"m50/m50_00_o331314_stairs_02_n",
+		"m51/m51_00_o331314_stairs_01_n"
 	],
 	[
 		"m33/m33_00_o331317_edge_01_n",
@@ -6257,11 +6205,6 @@
 		"m45/m45_00_stone_edge_01_n",
 		"m50/m50_00_o331317_edge_01_n",
 		"m50/m50_00_stone_edge_01_n"
-	],
-	[
-		"m33/m33_00_o331317_edge_02_n",
-		"m34/m34_00_o309322_edge_01_n",
-		"m35/m35_00_o331317_edge_02_n"
 	],
 	[
 		"m33/m33_00_o331317_windows_02_n",
@@ -6279,7 +6222,8 @@
 	],
 	[
 		"m33/m33_00_o331317_windows_05_n",
-		"m35/m35_00_o331317_windows_05_n"
+		"m35/m35_00_o331317_windows_05_n",
+		"m37/m37_00_windows_01_n"
 	],
 	[
 		"m33/m33_00_o331317_windows_06_n",
@@ -6327,8 +6271,11 @@
 		"m50/m50_00_stone_edge_02_n"
 	],
 	[
-		"m33/m33_00_o331404_woodenbox_n",
-		"m45/m45_00_o331404_woodenbox_n"
+		"m33/m33_00_o331403_woodenchair_n",
+		"obj/o001050_o001050_woodenchair_n",
+		"sfx/m35_s09000_n",
+		"sfx/m45_s09000_n",
+		"sfx/m51_s09000_n"
 	],
 	[
 		"m33/m33_00_o331408_n",
@@ -6393,6 +6340,12 @@
 		"obj/o001320_o1320_n"
 	],
 	[
+		"m33/m33_00_scroll_01_n",
+		"m35/m35_00_o331103_02_n",
+		"parts/FG_A_7001_FG_A_7001_n",
+		"parts/WP_A_0211_WP_A_0211_1_n"
+	],
+	[
 		"m33/m33_00_spawn_00_n",
 		"m45/m45_00_spawn_00_n",
 		"m50/m50_00_m33_00_spawn_00_n"
@@ -6442,6 +6395,7 @@
 	],
 	[
 		"m33/m33_leaf_000_n",
+		"m34/m34_leaf_000_n",
 		"m50/m50_leaf_000_n",
 		"m51/m51_00_m33_leaf_000_n"
 	],
@@ -6467,8 +6421,8 @@
 		"m38/m38_00m34_00_o304870_02_n"
 	],
 	[
-		"m34/m34_00_o309110_wall_01_n",
-		"m40/m40_00_o309110_wall_01_348_n"
+		"m34/m34_00_o304882_01_n",
+		"m50/m50_00_o304882_01_n"
 	],
 	[
 		"m34/m34_00_o309120_frame_02_n",
@@ -6516,6 +6470,10 @@
 		"obj/o309301_o309301_wall_01_n"
 	],
 	[
+		"m34/m34_00_o309320_wall_03_n",
+		"m46/m46_00_o309320_wall_03_n"
+	],
+	[
 		"m34/m34_00_o309331_n",
 		"m34/m34_o349331_n",
 		"m51/m51_00_o309331_n"
@@ -6526,6 +6484,9 @@
 		"parts/WP_A_7321_WP_A_7320_n",
 		"parts/WP_A_7330_WP_A_7330_n",
 		"parts/WP_A_7331_WP_A_7331_n",
+		"parts/WP_A_7650_WP_A_7650_n",
+		"parts/WP_A_7651_WP_A_7650_n",
+		"sfx/commoneffects_s08025_n",
 		"sfx/commoneffects_s08044_n"
 	],
 	[
@@ -6538,12 +6499,36 @@
 		"m39/m39_00_stonefloor_01_n"
 	],
 	[
+		"m34/m34_01_o309190_01_n",
+		"obj/o309190_m34_01_o309190_01_n"
+	],
+	[
+		"m34/m34_01_o309190_02_n",
+		"obj/o309190_m34_01_o309190_02_n"
+	],
+	[
 		"m34/m34_01_o309190_03_n",
 		"obj/o309190_m34_01_o309190_03_n"
 	],
 	[
+		"m34/m34_01_o309190_04_n",
+		"obj/o309190_m34_01_o309190_04_n"
+	],
+	[
 		"m34/m34_01_o309190_05_n",
 		"obj/o309190_m34_01_o309190_05_n"
+	],
+	[
+		"m34/m34_01_o309190_06_n",
+		"obj/o309190_m34_01_o309190_06_n"
+	],
+	[
+		"m34/m34_01_o309190_08_n",
+		"obj/o309190_m34_01_o309190_08_n"
+	],
+	[
+		"m34/m34_01_o309190_09_n",
+		"obj/o309190_m34_01_o309190_09_n"
 	],
 	[
 		"m34/m34_01_Statue_202_n",
@@ -6626,6 +6611,14 @@
 		"m38/m38_00_Debris_01_n"
 	],
 	[
+		"m35/m35_00_Floor_02_n",
+		"m51/m51_00_m35_00_Floor_02_n"
+	],
+	[
+		"m35/m35_00_Floor_03_n",
+		"m51/m51_00_m35_00_Floor_03_n"
+	],
+	[
 		"m35/m35_00_m33_ground_02_n",
 		"m51/m51_00_m35_00_m33_ground_02_n"
 	],
@@ -6705,6 +6698,7 @@
 	],
 	[
 		"m35/m35_00_o350016_01_n",
+		"obj/o381022_o350016_01_n",
 		"sfx/m35_s09170_n"
 	],
 	[
@@ -6714,7 +6708,8 @@
 	[
 		"m35/m35_00_o350019_n",
 		"m45/m45_00_grave_03_n",
-		"m51/m51_00_o350019_n"
+		"m51/m51_00_o350019_n",
+		"obj/o381025_m35_00_o350019_n"
 	],
 	[
 		"m35/m35_00_o350043_n",
@@ -6727,6 +6722,10 @@
 	[
 		"m35/m35_00_o350051_n",
 		"sfx/m35_s09300_n"
+	],
+	[
+		"m35/m35_00_o350053_n",
+		"obj/o381024_m35_00_o350053_n"
 	],
 	[
 		"m35/m35_00_o350100_n",
@@ -6751,6 +6750,10 @@
 		"m35/m35_00_o350104_02_n",
 		"m45/m45_00_altarC_03_n",
 		"m51/m51_00_o350104_02_n"
+	],
+	[
+		"m35/m35_00_o350105_02_n",
+		"m45/m45_00_altarC_04_n"
 	],
 	[
 		"m35/m35_00_o350111_02_n",
@@ -6831,7 +6834,10 @@
 	],
 	[
 		"m37/m37_00_bldgA_wall_00_n",
-		"m51/m51_00_interior_bldgA_wall_00_n"
+		"m37/m37_00_wall_10_n",
+		"m41/m41_00_m37_00_bldgA_wall_00_n",
+		"m51/m51_00_interior_bldgA_wall_00_n",
+		"m51/m51_00_interior_wall_10_n"
 	],
 	[
 		"m37/m37_00_bldgB_arch_04_n",
@@ -6866,6 +6872,11 @@
 	[
 		"m37/m37_00_BonFireChurchPillar_n",
 		"m45/m45_00_BonFireChurchPillar_n"
+	],
+	[
+		"m37/m37_00_BonFireChurchPlasterWall_n",
+		"m39/m39_m37_00_BonFireChurchPlasterWall_n",
+		"m51/m51_m37_00_BonFireChurchPlasterWall_n"
 	],
 	[
 		"m37/m37_00_boundary_02_n",
@@ -6951,6 +6962,10 @@
 		"m51/m51_00_m37_00_carpetB_01_n"
 	],
 	[
+		"m37/m37_00_Ced_ProperMarble_n",
+		"m51/m51_00_interior_Ced_ProperMarble_n"
+	],
+	[
 		"m37/m37_00_Ced_wallTile_02_n",
 		"m54/m54_00_Ced_wallTile_02_n"
 	],
@@ -6993,6 +7008,10 @@
 		"m45/m45_00_fireplacewall_02_n"
 	],
 	[
+		"m37/m37_00_fireplacewood_01_n",
+		"m45/m45_00_fireplacewood_01_n"
+	],
+	[
 		"m37/m37_00_fireplace_01_n",
 		"m45/m45_00_fireplace_01_n"
 	],
@@ -7007,6 +7026,10 @@
 	[
 		"m37/m37_00_GroundTile_11_n",
 		"m54/m54_00_GroundTile_11_n"
+	],
+	[
+		"m37/m37_00_handrail_00_n",
+		"m39/m39_m37_00_handrail_00_n"
 	],
 	[
 		"m37/m37_00_handrail_01_n",
@@ -7027,10 +7050,6 @@
 		"m37/m37_00_HD_M_7200_n",
 		"parts/HD_F_7200_HD_F_7200_n",
 		"parts/HD_M_7200_HD_M_7200_n"
-	],
-	[
-		"m37/m37_00_kamadorenga_01_n",
-		"m45/m45_00_kamadorenga_01_n"
 	],
 	[
 		"m37/m37_00_kamado_01_n",
@@ -7082,6 +7101,11 @@
 		"m51/m51_00_o309307_01_stone_n"
 	],
 	[
+		"m37/m37_00_nabe_01_n",
+		"m45/m45_00_nabe_01_n",
+		"obj/o004200_o004200_pot_00_n"
+	],
+	[
 		"m37/m37_00_o374011_13_n",
 		"m41/m41_00_m37_00_o374011_13_n"
 	],
@@ -7121,6 +7145,13 @@
 		"m39/m39_m37_00_obj_09_n"
 	],
 	[
+		"m37/m37_00_obj_10_n",
+		"m37/m37_00_obj_20_n",
+		"m39/m39_m37_00_obj_10_n",
+		"m40/m40_00_stonecoffin_002_n",
+		"m51/m51_00_interior_obj_20_n"
+	],
+	[
 		"m37/m37_00_obj_14_n",
 		"m39/m39_m37_00_obj_14_n"
 	],
@@ -7149,6 +7180,7 @@
 	],
 	[
 		"m37/m37_00_Outside_BaseWall_n",
+		"m38/m38_00_m37_00_Outside_BaseWall_n",
 		"m54/m54_00_Outside_BaseWall_n"
 	],
 	[
@@ -7261,6 +7293,13 @@
 		"m37/m37_00_win_04_n"
 	],
 	[
+		"m37/m37_00_SpidersWeb_01_n",
+		"m45/m45_00_SpidersWeb_01_n",
+		"m45/m45_00_SpidersWeb_02_n",
+		"m50/m50_00_SpidersWeb_01_n",
+		"m51/m51_00_SpidersWeb_01_n"
+	],
+	[
 		"m37/m37_00_statue_06_n",
 		"m54/m54_00_statue_06_n"
 	],
@@ -7286,15 +7325,21 @@
 		"m45/m45_00_Tombstone_00_n"
 	],
 	[
+		"m37/m37_00_wallTile_02_n",
+		"m39/m39_m37_00_wallTile_02_n"
+	],
+	[
 		"m37/m37_00_wall_01_n",
 		"m37/m37_00_wall_05_n",
 		"m40/m40_00_wall_201_n",
 		"m51/m51_00_interior_wall_05_n"
 	],
 	[
-		"m37/m37_00_wall_10_n",
-		"m41/m41_00_m37_00_bldgA_wall_00_n",
-		"m51/m51_00_interior_wall_10_n"
+		"m37/m37_00_wall_04_n",
+		"m41/m41_00_m37_00_wall_04_n",
+		"m45/m45_00_o459200_03_stonewall_01_n",
+		"m45/m45_00_stonewall_01_n",
+		"m45/m45_00_wall_04_n"
 	],
 	[
 		"m37/m37_00_wall_50_n",
@@ -7308,6 +7353,11 @@
 		"m37/m37_00_water_02_n",
 		"m39/m39_00_water_02_n",
 		"m45/m45_00_water_06_n"
+	],
+	[
+		"m37/m37_00_win_08_n",
+		"m45/m45_00_win_08_n",
+		"m51/m51_00_interior_win_08_n"
 	],
 	[
 		"m37/m37_00_wood_01_n",
@@ -7325,6 +7375,14 @@
 	[
 		"m38/m38_00_m0151B_20_n",
 		"m51/m51_00_m0151B_10_n"
+	],
+	[
+		"m38/m38_00_m22_00_grass_502_n",
+		"m40/m40_00_grass02_321_n"
+	],
+	[
+		"m38/m38_00_m22_00_house_700_500_n",
+		"m40/m40_00_grass_320_n"
 	],
 	[
 		"m38/m38_00_m39_00_brickpillar_00_n",
@@ -7359,11 +7417,6 @@
 		"obj/o331406_o1060_n"
 	],
 	[
-		"m38/m38_00_o1330_n",
-		"m51/m51_00_o1330_n",
-		"sfx/m38_s09201_n"
-	],
-	[
 		"m38/m38_00_o2400_7_n",
 		"m38/m38_00_remainparts_01_n"
 	],
@@ -7382,6 +7435,11 @@
 		"m38/m38_00_o364041_bark_n",
 		"m41/m41_00_o364041_bark_n",
 		"m47/m47_00_o364041_bark_n"
+	],
+	[
+		"m38/m38_00_o364041_weeds_01_n",
+		"m41/m41_00_o364041_weeds_01_n",
+		"m47/m47_00_o364041_weeds_01_n"
 	],
 	[
 		"m38/m38_00_o364041_weeds_02_n",
@@ -7442,10 +7500,6 @@
 	[
 		"m39/m39_m29_00_floor_07_n",
 		"m51/m51_m29_00_floor_07_n"
-	],
-	[
-		"m39/m39_m31_00_groundsand_02_n",
-		"m51/m51_m31_00_groundsand_02_n"
 	],
 	[
 		"m39/m39_m40_00_Plinth_of_fire_00_n",
@@ -7538,6 +7592,10 @@
 	[
 		"m40/m40_00_GraveStone_599_n",
 		"m41/m41_00_m40_00_GraveStone_599_n"
+	],
+	[
+		"m40/m40_00_ground_003_n",
+		"m51/m51_00_m40_00_ground_003_n"
 	],
 	[
 		"m40/m40_00_ground_01_n",
@@ -7697,6 +7755,10 @@
 		"m41/m41_00_o364045_wall_03_n"
 	],
 	[
+		"m45/m45_00_carpetA_01_n",
+		"m51/m51_00_m35_00_o4820_carpet_02_n"
+	],
+	[
 		"m45/m45_00_debris_n",
 		"m50/m50_00_debris_n",
 		"m50/m50_00_m10_04_Debris_10_n"
@@ -7744,6 +7806,11 @@
 	[
 		"m45/m45_00_o450310_02_n",
 		"obj/o450310_o450310_02_n"
+	],
+	[
+		"m45/m45_00_o450310_03_n",
+		"obj/o300390_o300390_02_n",
+		"obj/o450310_o450310_03_n"
 	],
 	[
 		"m45/m45_00_o450310_04_n",
@@ -7826,6 +7893,14 @@
 		"m51/m51_00_rock_46_n"
 	],
 	[
+		"m50/m50_00_rock_47_n",
+		"m51/m51_00_rock_47_n"
+	],
+	[
+		"m50/m50_00_rope_00_n",
+		"m51/m51_00_landscape_01_n"
+	],
+	[
 		"m50/m50_00_swanp_03_n",
 		"m51/m51_00_swanp_01_n"
 	],
@@ -7871,6 +7946,11 @@
 	[
 		"obj/o000800_o000800_n",
 		"obj/o962101_o2101_n"
+	],
+	[
+		"obj/o001000_o452230_n",
+		"obj/o001002_o001002_n",
+		"obj/o452230_o452230_n"
 	],
 	[
 		"obj/o001030_o001030_n",
@@ -7959,6 +8039,10 @@
 		"obj/o404822_o4822_n"
 	],
 	[
+		"obj/o309000_m94_00_cloud_07_n",
+		"obj/o369000_m94_00_cloud_07_n"
+	],
+	[
 		"obj/o310310_o310310_door_00_n",
 		"obj/o450300_o450300_door_00_n"
 	],
@@ -7992,8 +8076,36 @@
 		"obj/o389041_c1040_c3_n"
 	],
 	[
+		"obj/o331030_c1040_c4_n",
+		"obj/o389041_c1040_c4_n"
+	],
+	[
 		"obj/o331030_c1040_n",
 		"obj/o389041_c1040_n"
+	],
+	[
+		"obj/o331030_o9041_12_n",
+		"obj/o389041_o9041_12_n"
+	],
+	[
+		"obj/o331030_o9041_16_n",
+		"obj/o389041_o9041_16_n"
+	],
+	[
+		"obj/o331030_o9041_17_n",
+		"obj/o389041_o9041_17_n"
+	],
+	[
+		"obj/o331030_o9041_18_n",
+		"obj/o389041_o9041_18_n"
+	],
+	[
+		"obj/o331030_o9041_22_n",
+		"obj/o389041_o9041_22_n"
+	],
+	[
+		"obj/o331030_o9041_2_n",
+		"obj/o389041_o9041_2_n"
 	],
 	[
 		"obj/o381000_o381000_ground_n",
@@ -8035,6 +8147,16 @@
 		"parts/AM_M_7200_AM_M_7200_n"
 	],
 	[
+		"obj/o407200_o407200_02_n",
+		"parts/BD_F_7200_BD_F_7200_01_n",
+		"parts/BD_M_7200_BD_M_7200_01_n"
+	],
+	[
+		"obj/o407200_o407200_03_n",
+		"parts/BD_F_7200_BD_F_7200_02_n",
+		"parts/BD_M_7200_BD_M_7200_02_n"
+	],
+	[
 		"obj/o407200_o407200_04_n",
 		"parts/LG_F_7200_LG_F_7200_n",
 		"parts/LG_M_7200_LG_M_7200_n"
@@ -8051,6 +8173,10 @@
 	[
 		"obj/o409070_BD_c3091_n",
 		"obj/o409070_o401250_taitans_tree_01_n"
+	],
+	[
+		"obj/o409070_o401250_taitans_tree_04_n",
+		"obj/o409070_tree_04_n"
 	],
 	[
 		"obj/o999992_o0150_n",
@@ -8153,10 +8279,6 @@
 		"parts/BD_M_4500_BD_M_4500_n"
 	],
 	[
-		"parts/BD_F_4500_BD_F_4500_wood_n",
-		"parts/BD_M_4500_BD_M_4500_wood_n"
-	],
-	[
 		"parts/BD_F_4600_BD_F_4600_n",
 		"parts/BD_M_4600_BD_M_4600_n"
 	],
@@ -8167,14 +8289,6 @@
 	[
 		"parts/BD_F_4700_BD_F_4700_2_n",
 		"parts/BD_M_4700_BD_M_4700_2_n"
-	],
-	[
-		"parts/BD_F_7200_BD_F_7200_01_n",
-		"parts/BD_M_7200_BD_M_7200_01_n"
-	],
-	[
-		"parts/BD_F_7200_BD_F_7200_02_n",
-		"parts/BD_M_7200_BD_M_7200_02_n"
 	],
 	[
 		"parts/BD_F_7900_BD_F_7900_A_n",
@@ -8225,8 +8339,20 @@
 		"parts/BD_M_9100_BD_M_9100_1_n"
 	],
 	[
+		"parts/BD_F_9200_BD_F_9200_02_n",
+		"parts/BD_M_9200_BD_M_9200_02_n"
+	],
+	[
+		"parts/BD_F_9300_BD_F_9300_01_n",
+		"parts/BD_M_9300_BD_M_9300_01_n"
+	],
+	[
 		"parts/BD_F_9300_BD_F_9300_02_n",
 		"parts/BD_M_9300_BD_M_9300_02_n"
+	],
+	[
+		"parts/BD_F_9400_BD_F_9400_01_n",
+		"parts/BD_M_9400_BD_M_9400_01_n"
 	],
 	[
 		"parts/BD_F_9400_BD_F_9400_02_n",
@@ -8270,8 +8396,34 @@
 		"parts/BD_M_3110_BD_M_3110_n"
 	],
 	[
+		"parts/FG_A_2001_FG_A_2001_n",
+		"parts/FG_A_2011_FG_A_2011_n",
+		"parts/FG_A_2012_FG_A_2012_n",
+		"parts/FG_A_2013_FG_A_2013_n",
+		"parts/FG_A_2014_FG_A_2014_n",
+		"parts/FG_A_2015_FG_A_2015_n",
+		"parts/FG_A_2016_FG_A_2016_n"
+	],
+	[
 		"parts/FG_A_2002_FG_A_2002_n",
 		"parts/FG_A_2007_FG_A_2007_n"
+	],
+	[
+		"parts/FG_A_3003_FG_A_3003_n",
+		"parts/FG_A_3006_FG_A_3006_n",
+		"parts/FG_A_3007_FG_A_3007_n",
+		"parts/FG_A_3008_FG_A_3008_n"
+	],
+	[
+		"parts/FG_A_3004_FG_A_3004_n",
+		"parts/FG_A_3005_FG_A_3005_n",
+		"parts/FG_A_3009_FG_A_3009_n",
+		"parts/FG_A_3010_FG_A_3010_n",
+		"parts/FG_A_3011_FG_A_3011_n"
+	],
+	[
+		"parts/HD_F_0100_HD_F_0100_hair_n",
+		"parts/HD_M_0100_HD_M_0100_hair_n"
 	],
 	[
 		"parts/HD_F_0100_HD_F_0100_n",
@@ -8464,11 +8616,6 @@
 		"sfx/commoneffects_s08007_n"
 	],
 	[
-		"parts/WP_A_7650_WP_A_7650_n",
-		"parts/WP_A_7651_WP_A_7650_n",
-		"sfx/commoneffects_s08025_n"
-	],
-	[
 		"parts/WP_A_7660_WP_A_7660_n",
 		"parts/WP_A_7661_WP_A_7660_n",
 		"sfx/commoneffects_s08027_n"
@@ -8519,5 +8666,9 @@
 	[
 		"sfx/m38_s04040_n",
 		"sfx/m50_s04040_n"
+	],
+	[
+		"sfx/m45_s11663",
+		"sfx/m50_s11663"
 	]
 ]
