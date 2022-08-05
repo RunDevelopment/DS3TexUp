@@ -38,10 +38,10 @@ namespace DS3TexUpUI
                     WriteNormal(id, upscale, logger);
                     break;
                 case TexKind.Reflective:
-                    WriteSRGB(id, upscale, Textures.Reflective, "reflective");
+                    WriteSRGB(id, upscale, new[] { Textures.Reflective, Textures.Shininess }, "reflective");
                     break;
                 case TexKind.Shininess:
-                    WriteSRGB(id, upscale, Textures.Shininess, "shininess");
+                    WriteSRGB(id, upscale, new[] { Textures.Shininess, Textures.Reflective }, "shininess");
                     break;
                 case TexKind.Emissive:
                     WriteEmissive(id, upscale, Textures.Emissive, "emissive");
@@ -101,6 +101,15 @@ namespace DS3TexUpUI
         {
             if (source.GetFilesCached().TryGetValue(id, out var file)) return file;
             throw new Exception($"Cannot find {id} in directories {string.Join(" ; ", source.Directories)}");
+        }
+        private string GetFile(TexOverrideList[] sources, TexId id)
+        {
+            foreach (var source in sources)
+            {
+                if (source.GetFilesCached().TryGetValue(id, out var file))
+                    return file;
+            }
+            throw new Exception($"Cannot find {id} in directories {string.Join(" ; ", sources.SelectMany(s => s.Directories))}");
         }
         private bool HasAlpha(TexId id)
         {
@@ -165,10 +174,12 @@ namespace DS3TexUpUI
             return true;
         }
         private void WriteSRGB(TexId id, int upscale, TexOverrideList source, string kind)
+            => WriteSRGB(id, upscale, new[] { source }, kind);
+        private void WriteSRGB(TexId id, int upscale, TexOverrideList[] sources, string kind)
         {
             var targetWidth = GetTargetWidth(id, upscale);
 
-            var tex = GetFile(source, id.GetRepresentative());
+            var tex = GetFile(sources, id.GetRepresentative());
             var texWidth = GetPngWidth(tex);
             CheckWidth(id, upscale, targetWidth, texWidth, kind);
 
