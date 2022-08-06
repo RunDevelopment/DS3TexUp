@@ -505,6 +505,7 @@ namespace DS3TexUpUI
                         @"D:\DS3\albedo-processed\sharpest",
                         @"D:\DS3\albedo-raw\GroundTextures",
                         @"D:\DS3\albedo-processed\ground-moss",
+                        @"D:\DS3\ds2\a",
                         @"D:\DS3\er\albedo-processed\sharpest",
                         @"D:\DS3\er\albedo-raw\GroundTextures",
                         @"D:\DS3\er\albedo-processed\ground-moss",
@@ -528,6 +529,7 @@ namespace DS3TexUpUI
                     },
                     NormalAlbedo = new TexOverrideList() {
                         @"D:\DS3\normal-albedo",
+                        @"D:\DS3\ds2\normal_albedo",
                         @"D:\DS3\er\normal-albedo",
                         @"C:\DS3TexUp\up-manual\n_albedo",
                     },
