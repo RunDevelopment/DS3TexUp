@@ -575,27 +575,20 @@ namespace DS3TexUpUI
             token.SubmitStatus("Selecting ids");
             var (currentIds, prefixes) = ParseCurrent();
 
-            var ids = DS3.OriginalSize.Keys
-                // no solid colors
-                .Where(id => !id.IsSolidColor())
-                // no unused textures
-                .Except(DS3.Unused)
-                // no ignored textures
-                .Except(outputUpscale.Ignore)
-                .Where(id =>
-                {
-                    // allow everything with a manually set factor
-                    if (outputUpscale.Upscale.ContainsKey(id))
-                        return true;
+            var allIds = DS3.OriginalSize.Keys.Where(id =>
+            {
+                // allow everything with a manually set factor
+                if (outputUpscale.Upscale.ContainsKey(id))
+                    return true;
 
-                    var kind = id.GetTexKind();
-                    return kind == TexKind.Albedo || kind == TexKind.Normal || kind == TexKind.Emissive || kind == TexKind.Reflective;
-                });
+                var kind = id.GetTexKind();
+                return kind == TexKind.Albedo || kind == TexKind.Normal || kind == TexKind.Emissive || kind == TexKind.Reflective;
+            });
 
             if (prefixes.Count == 0)
             {
                 // ignore ids
-                ids = new TexId[0];
+                allIds = new TexId[0];
             }
             else if (prefixes.Count == 1 && prefixes.First() == "")
             {
@@ -604,11 +597,20 @@ namespace DS3TexUpUI
             else
             {
                 // filter ids
-                ids = ids.Where(id => prefixes.Any(p => id.Value.StartsWith(p)));
+                allIds = allIds.Where(id => prefixes.Any(p => id.Value.StartsWith(p)));
             }
 
+            var finalIds = allIds
+                .Union(currentIds)
+                // no unused textures
+                .Except(DS3.Unused)
+                // no ignored textures
+                .Except(outputUpscale.Ignore)
+                // no solid colors
+                .Where(id => !id.IsSolidColor());
+
             token.SubmitStatus("Creating DDS overwrite files");
-            token.ForAllParallel(ids.Union(currentIds), id =>
+            token.ForAllParallel(finalIds, id =>
             {
                 try
                 {
