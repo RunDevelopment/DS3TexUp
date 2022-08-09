@@ -298,7 +298,7 @@
 			},
 			{
 				"Fromat": "D3DFMT_DXT1",
-				"Count": 106,
+				"Count": 105,
 				"Textures": [
 					"chr/c1200_c1200_axe",
 					"chr/c1201_c1201_axe",
@@ -311,7 +311,6 @@
 					"m38/m38_00_magma_01_",
 					"m53/m53_00_sky_01",
 					"obj/o350000_o35000_dummy_01",
-					"parts/FG_A_0101_FG_face_gen",
 					"parts/FG_A_0101_sssmask",
 					"parts/FG_A_1500_FG_A_1500_highlight",
 					"parts/FG_A_1501_FG_A_1501_highlight",
@@ -433,13 +432,6 @@
 				"Textures": [
 					"m39/m39_00_sky_HDR"
 				]
-			},
-			{
-				"Fromat": "D3DFMT_DXT5",
-				"Count": 1,
-				"Textures": [
-					"parts/WP_A_9000_WP_1000_M_p"
-				]
 			}
 		]
 	},
@@ -448,7 +440,7 @@
 		"Fromats": [
 			{
 				"Fromat": "DX10 BC1_UNORM_SRGB",
-				"Count": 7400,
+				"Count": 7407,
 				"Textures": [
 					"chr/c1070_c1070_2_a",
 					"chr/c1070_c1070_a",
@@ -7027,6 +7019,12 @@
 					"parts/BD_M_9700_BD_M_9700_2_a",
 					"parts/BD_M_9800_BD_M_9800_a",
 					"parts/BD_M_9900_BD_M_9900_a",
+					"parts/common_body_FC_F_0000_a",
+					"parts/common_body_FC_F_0000_hairoff_a",
+					"parts/common_body_FC_M_0000_a",
+					"parts/common_body_FC_M_0000_hairoff_a",
+					"parts/common_body_FC_M_0000_Underwear_a",
+					"parts/common_body_FC_M_0050_a",
 					"parts/FC_M_0003_FC_M_0003_Face_a",
 					"parts/FC_M_0003_FC_M_0003_Hair_a",
 					"parts/FG_A_0101_FC_M_0000_a",
@@ -7715,6 +7713,7 @@
 					"parts/WP_A_8003_wp_a_8003_a",
 					"parts/WP_A_8005_wp_a_8005_a",
 					"parts/WP_A_8006_wp_a_8006_a",
+					"parts/WP_A_9000_WP_1000_M_d",
 					"parts/WP_A_9400_WP_A_9400_a",
 					"parts/WP_A_9569_WP_A_9569_a",
 					"parts/WP_A_9700_WP_A_9700_a",
@@ -7854,7 +7853,7 @@
 			},
 			{
 				"Fromat": "DX10 BC7_UNORM_SRGB",
-				"Count": 320,
+				"Count": 322,
 				"Textures": [
 					"chr/c1283_c1283_WP_A_0925_flag_a",
 					"chr/c1400_c1400_hair_a",
@@ -8074,6 +8073,8 @@
 					"obj/o452230_o452230_a",
 					"parts/BD_F_4450_BD_F_4450_veil_a",
 					"parts/BD_M_4450_BD_M_4450_veil_a",
+					"parts/common_body_FC_F_0000_hairy_a",
+					"parts/common_body_FC_M_0000_hairy_a",
 					"parts/FG_A_1500_FG_A_1500_a",
 					"parts/FG_A_1501_FG_A_1501_a",
 					"parts/FG_A_1502_FG_A_1502_a",
@@ -8266,7 +8267,7 @@
 			},
 			{
 				"Fromat": "D3DFMT_DXT1",
-				"Count": 38,
+				"Count": 39,
 				"Textures": [
 					"chr/c1400_c1400_skin_a",
 					"m38/m38_00_Base_01",
@@ -8274,6 +8275,7 @@
 					"m40/m40_00_ashtiling_45_a",
 					"obj/o009057_o009057_04",
 					"obj/o009057_o009057_05",
+					"parts/FG_A_0101_FG_face_gen",
 					"sfx/commoneffects_s02001",
 					"sfx/commoneffects_s08080",
 					"sfx/commoneffects_s10020",
@@ -8407,7 +8409,7 @@
 		"Fromats": [
 			{
 				"Fromat": "DX10 BC7_UNORM",
-				"Count": 7164,
+				"Count": 7180,
 				"Textures": [
 					"chr/c1070_c1070_cloth_n",
 					"chr/c1070_c1070_flesh_n",
@@ -14633,6 +14635,22 @@
 					"parts/BD_M_9700_BD_M_9700_2_n",
 					"parts/BD_M_9800_BD_M_9800_n",
 					"parts/BD_M_9900_BD_M_9900_n",
+					"parts/common_body_BD_Ghost_Scroll_1_n",
+					"parts/common_body_BD_Ghost_Scroll_2_n",
+					"parts/common_body_FC_F_0000_02_n",
+					"parts/common_body_FC_F_0000_n",
+					"parts/common_body_FC_F_0001_02_n",
+					"parts/common_body_FC_F_0001_n",
+					"parts/common_body_FC_F_0002_02_n",
+					"parts/common_body_FC_F_0002_n",
+					"parts/common_body_FC_M_0000_02_n",
+					"parts/common_body_FC_M_0000_n",
+					"parts/common_body_FC_M_0000_Underwear_n",
+					"parts/common_body_FC_M_0001_02_n",
+					"parts/common_body_FC_M_0001_n",
+					"parts/common_body_FC_M_0002_02_n",
+					"parts/common_body_FC_M_0002_n",
+					"parts/common_body_FC_M_0050_n",
 					"parts/FC_M_0003_FC_M_0003_Face_n",
 					"parts/FC_M_0003_FC_M_0003_Hair_n",
 					"parts/FG_A_0100_FG_A_0100_n",
@@ -15912,7 +15930,7 @@
 		"Fromats": [
 			{
 				"Fromat": "DX10 BC1_UNORM_SRGB",
-				"Count": 5105,
+				"Count": 5111,
 				"Textures": [
 					"chr/c1070_c1070_cloth_r",
 					"chr/c1070_c1070_flesh_r",
@@ -20127,6 +20145,12 @@
 					"parts/BD_M_9700_BD_M_9700_2_r",
 					"parts/BD_M_9800_BD_M_9800_r",
 					"parts/BD_M_9900_BD_M_9900_r",
+					"parts/common_body_BD_Ghost_Scroll_1_r",
+					"parts/common_body_BD_Ghost_Scroll_2_r",
+					"parts/common_body_FC_F_0000_r",
+					"parts/common_body_FC_M_0000_r",
+					"parts/common_body_FC_M_0000_Underwear_r",
+					"parts/common_body_FC_M_0050_r",
 					"parts/FC_M_0003_FC_M_0003_Face_r",
 					"parts/FC_M_0003_FC_M_0003_Hair_r",
 					"parts/FG_A_0100_FG_A_0100_r",
@@ -21044,10 +21068,11 @@
 			},
 			{
 				"Fromat": "D3DFMT_DXT5",
-				"Count": 2,
+				"Count": 3,
 				"Textures": [
 					"obj/o009010_m20_01_o0462_00_p",
-					"obj/o009010_m20_01_o0462_01_p"
+					"obj/o009010_m20_01_o0462_01_p",
+					"parts/WP_A_9000_WP_1000_M_p"
 				]
 			},
 			{
@@ -21064,7 +21089,7 @@
 		"Fromats": [
 			{
 				"Fromat": "ATI1",
-				"Count": 494,
+				"Count": 495,
 				"Textures": [
 					"chr/c1283_c1283_ivy_s",
 					"chr/c6030_c6030_s",
@@ -21553,6 +21578,7 @@
 					"parts/BD_M_2000_BD_M_2000_s",
 					"parts/BD_M_2000_Chainmail_damage_s",
 					"parts/BD_M_2000_Chainmail_s",
+					"parts/common_body_FC_F_0000_s",
 					"parts/FG_A_0101_FC_M_0000_s",
 					"parts/FG_A_0101_FG_A_face_s",
 					"parts/WP_A_1207_c6010_wip_s",
@@ -21780,8 +21806,10 @@
 			},
 			{
 				"Fromat": "DX10 BC7_UNORM_SRGB",
-				"Count": 2,
+				"Count": 4,
 				"Textures": [
+					"parts/common_body_BD_Ghost_Scroll_1_a",
+					"parts/common_body_BD_Ghost_Scroll_2_a",
 					"parts/WP_A_0506_WP_A_0506_1_em",
 					"parts/WP_A_0925_WP_A_0925_flag_em"
 				]
@@ -22299,12 +22327,11 @@
 			},
 			{
 				"Fromat": "DX10 BC1_UNORM_SRGB",
-				"Count": 4,
+				"Count": 3,
 				"Textures": [
 					"obj/o409070_tree_04_d",
 					"obj/o409070_tree_11_d",
-					"obj/o409070_wood_20_d",
-					"parts/WP_A_9000_WP_1000_M_d"
+					"obj/o409070_wood_20_d"
 				]
 			}
 		]

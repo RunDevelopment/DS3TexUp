@@ -994,6 +994,7 @@
 		"parts/BD_M_0100_BD_M_0100_r",
 		"parts/BD_M_5800_BD_M_5800_02_r",
 		"parts/BD_M_8250_BD_M_8250_1_r",
+		"parts/common_body_FC_M_0050_r",
 		"parts/FG_A_0150_FC_M_0050_r",
 		"parts/HD_M_4700_HD_M_4700_r",
 		"parts/HD_M_8250_HD_M_8250_a",
@@ -10018,7 +10019,11 @@
 	],
 	[
 		"m31/m31_00_spiderweb_03_a",
-		"m33/m33_00_o2105_a"
+		"m33/m33_00_o2105_a",
+		"parts/common_body_FC_F_0000_hairoff_a",
+		"parts/common_body_FC_M_0000_hairoff_a",
+		"sfx/m37_s02911",
+		"sfx/m37_s10051"
 	],
 	[
 		"m31/m31_00_stair_00_a",
@@ -19214,6 +19219,10 @@
 	[
 		"parts/BD_M_3100_BD_M_3100_r",
 		"parts/BD_M_3110_BD_M_3110_r"
+	],
+	[
+		"parts/common_body_FC_M_0050_a",
+		"parts/FG_A_0150_FC_M_0050_a"
 	],
 	[
 		"parts/FG_A_0100_FG_A_0100_r",

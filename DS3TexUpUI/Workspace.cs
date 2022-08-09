@@ -186,6 +186,9 @@ namespace DS3TexUpUI
                 .ToArray();
 
             Yabber.RunParallel(token, tpfFiles);
+
+            token.SubmitStatus("Unpacking common body");
+            Yabber.Run(Path.Join(PartsDir, "common_body.tpf.dcx"));
         }
         private void UnpackSfx(SubProgressToken token)
         {
@@ -405,10 +408,24 @@ namespace DS3TexUpUI
                                 Id = new TexId("parts", $"{id}_{Path.GetFileNameWithoutExtension(f)}"),
                             };
                         });
-                });
+                })
+                .ToList();
+
+            var body = Directory
+                .GetFiles(Path.Join(PartsDir, "common_body-tpf-dcx"), "*.dds")
+                .Select(f =>
+                {
+                    return new TexFile()
+                    {
+                        GamePath = f,
+                        Id = new TexId("parts", $"common_body_{Path.GetFileNameWithoutExtension(f)}"),
+                    };
+                })
+                .ToList();
+            result.AddRange(body);
 
             token.SubmitProgress(1);
-            return result.ToList();
+            return result;
         }
         private List<TexFile> GetSfxTexFiles(SubProgressToken token)
         {

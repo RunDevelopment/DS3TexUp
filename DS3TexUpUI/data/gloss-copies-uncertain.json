@@ -6575,6 +6575,30 @@
 		"parts/BD_M_3110_BD_M_3110_n"
 	],
 	[
+		"parts/common_body_FC_F_0000_02_n",
+		"parts/common_body_FC_F_0000_n"
+	],
+	[
+		"parts/common_body_FC_F_0001_02_n",
+		"parts/common_body_FC_F_0001_n"
+	],
+	[
+		"parts/common_body_FC_F_0002_02_n",
+		"parts/common_body_FC_F_0002_n"
+	],
+	[
+		"parts/common_body_FC_M_0000_02_n",
+		"parts/common_body_FC_M_0000_n"
+	],
+	[
+		"parts/common_body_FC_M_0001_02_n",
+		"parts/common_body_FC_M_0001_n"
+	],
+	[
+		"parts/common_body_FC_M_0002_02_n",
+		"parts/common_body_FC_M_0002_n"
+	],
+	[
 		"parts/FG_A_0100_FG_A_0100_n",
 		"parts/FG_A_0101_FG_A_0101_n"
 	],

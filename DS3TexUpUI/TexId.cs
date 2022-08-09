@@ -18,6 +18,7 @@ namespace DS3TexUpUI
     /// - m[0-9]{2}/(?"ign".+)
     /// - obj/o[0-9]{6}_(?"ign".+)
     /// - parts/[a-z]{2}_[mfa]_[0-9]{4}_(?"ign".+)
+    /// - parts/common_body_(?"ign".+)
     /// - sfx/commoneffects_(?"ign".+)
     /// - sfx/dlc[12]_(?"ign".+)
     /// - sfx/m[0-9]{2}_(?"ign".+)
@@ -158,7 +159,11 @@ namespace DS3TexUpUI
             if (c.Equals("chr", StringComparison.Ordinal)) return Name.Slice(6);
             if (c.Length == 3 && c[0] == 'm' && c[1].IsDigit() && c[2].IsDigit()) return Name;
             if (c.Equals("obj", StringComparison.Ordinal)) return Name.Slice(8);
-            if (c.Equals("parts", StringComparison.Ordinal)) return Name.Slice(10);
+            if (c.Equals("parts", StringComparison.Ordinal))
+            {
+                if (Name.StartsWith("common_body_")) return Name.Slice("common_body_".Length);
+                return Name.Slice(10);
+            }
             if (c.Equals("sfx", StringComparison.Ordinal))
             {
                 if (Name.StartsWith("commoneffects")) return Name.Slice(14);

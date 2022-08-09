@@ -74827,6 +74827,138 @@
 		"Width": 1024,
 		"Height": 2048
 	},
+	"parts/common_body_BD_Ghost_Scroll_1_a": {
+		"Width": 512,
+		"Height": 512
+	},
+	"parts/common_body_BD_Ghost_Scroll_1_n": {
+		"Width": 32,
+		"Height": 32
+	},
+	"parts/common_body_BD_Ghost_Scroll_1_r": {
+		"Width": 32,
+		"Height": 32
+	},
+	"parts/common_body_BD_Ghost_Scroll_2_a": {
+		"Width": 512,
+		"Height": 512
+	},
+	"parts/common_body_BD_Ghost_Scroll_2_n": {
+		"Width": 32,
+		"Height": 32
+	},
+	"parts/common_body_BD_Ghost_Scroll_2_r": {
+		"Width": 32,
+		"Height": 32
+	},
+	"parts/common_body_FC_F_0000_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0000_a": {
+		"Width": 2048,
+		"Height": 2048
+	},
+	"parts/common_body_FC_F_0000_hairoff_a": {
+		"Width": 16,
+		"Height": 16
+	},
+	"parts/common_body_FC_F_0000_hairy_a": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0000_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0000_r": {
+		"Width": 512,
+		"Height": 512
+	},
+	"parts/common_body_FC_F_0000_s": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0001_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0001_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0002_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_F_0002_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_a": {
+		"Width": 2048,
+		"Height": 2048
+	},
+	"parts/common_body_FC_M_0000_hairoff_a": {
+		"Width": 16,
+		"Height": 16
+	},
+	"parts/common_body_FC_M_0000_hairy_a": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_r": {
+		"Width": 512,
+		"Height": 512
+	},
+	"parts/common_body_FC_M_0000_Underwear_a": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_Underwear_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0000_Underwear_r": {
+		"Width": 512,
+		"Height": 512
+	},
+	"parts/common_body_FC_M_0001_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0001_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0002_02_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0002_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0050_a": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0050_n": {
+		"Width": 1024,
+		"Height": 1024
+	},
+	"parts/common_body_FC_M_0050_r": {
+		"Width": 512,
+		"Height": 512
+	},
 	"parts/FC_M_0003_FC_M_0003_Face_a": {
 		"Width": 2048,
 		"Height": 2048

@@ -779,6 +779,7 @@
 	[
 		"chr/c6120_c6120_skin_a",
 		"chr/c6121_c6120_skin_a",
+		"parts/common_body_FC_F_0000_a",
 		"parts/FG_A_0101_FC_M_0000_a"
 	],
 	[
@@ -1651,11 +1652,6 @@
 		"obj/o323000_o323000_03_a"
 	],
 	[
-		"m31/m31_00_grass_04_a",
-		"m38/m38_00_m22_00_grass_502_a",
-		"m40/m40_00_grass02_321_a"
-	],
-	[
 		"m31/m31_00_grass_05_a",
 		"m45/m45_00_grass_em_05_a"
 	],
@@ -1777,6 +1773,7 @@
 	],
 	[
 		"m31/m31_00_water_01_n",
+		"parts/common_body_BD_Ghost_Scroll_1_a",
 		"sfx/commoneffects_s11414"
 	],
 	[
@@ -2352,6 +2349,10 @@
 	[
 		"m37/m37_00_tree_05_a",
 		"m45/m45_00_tree_71_a"
+	],
+	[
+		"m38/m38_00_m22_00_grass_502_a",
+		"m40/m40_00_grass02_321_a"
 	],
 	[
 		"m38/m38_00_m22_00_house_700_500_a",

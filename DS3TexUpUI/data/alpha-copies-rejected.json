@@ -909,6 +909,10 @@
 	],
 	[
 		"m31/m31_00_water_01_n",
+		"parts/common_body_BD_Ghost_Scroll_1_a"
+	],
+	[
+		"m31/m31_00_water_01_n",
 		"sfx/commoneffects_s11414"
 	],
 	[
@@ -1994,6 +1998,10 @@
 	[
 		"parts/BD_M_9000_BD_M_9000_a",
 		"sfx/commoneffects_s06001"
+	],
+	[
+		"parts/common_body_BD_Ghost_Scroll_1_a",
+		"sfx/commoneffects_s11414"
 	],
 	[
 		"parts/FG_A_1503_FG_A_1503_a",

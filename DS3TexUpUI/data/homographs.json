@@ -1610,6 +1610,24 @@
 	"bd_f_9900_r": [
 		"parts/BD_F_9900_BD_F_9900_r"
 	],
+	"bd_ghost_scroll_1_a": [
+		"parts/common_body_BD_Ghost_Scroll_1_a"
+	],
+	"bd_ghost_scroll_1_n": [
+		"parts/common_body_BD_Ghost_Scroll_1_n"
+	],
+	"bd_ghost_scroll_1_r": [
+		"parts/common_body_BD_Ghost_Scroll_1_r"
+	],
+	"bd_ghost_scroll_2_a": [
+		"parts/common_body_BD_Ghost_Scroll_2_a"
+	],
+	"bd_ghost_scroll_2_n": [
+		"parts/common_body_BD_Ghost_Scroll_2_n"
+	],
+	"bd_ghost_scroll_2_r": [
+		"parts/common_body_BD_Ghost_Scroll_2_r"
+	],
 	"bd_m_0100_a": [
 		"parts/BD_M_0100_BD_M_0100_a"
 	],
@@ -11041,17 +11059,83 @@
 		"chr/c3160_dummy_r",
 		"parts/WP_A_1609_dummy_r"
 	],
+	"fc_f_0000_02_n": [
+		"parts/common_body_FC_F_0000_02_n"
+	],
+	"fc_f_0000_a": [
+		"parts/common_body_FC_F_0000_a"
+	],
+	"fc_f_0000_hairoff_a": [
+		"parts/common_body_FC_F_0000_hairoff_a"
+	],
+	"fc_f_0000_hairy_a": [
+		"parts/common_body_FC_F_0000_hairy_a"
+	],
+	"fc_f_0000_n": [
+		"parts/common_body_FC_F_0000_n"
+	],
+	"fc_f_0000_r": [
+		"parts/common_body_FC_F_0000_r"
+	],
+	"fc_f_0000_s": [
+		"parts/common_body_FC_F_0000_s"
+	],
+	"fc_f_0001_02_n": [
+		"parts/common_body_FC_F_0001_02_n"
+	],
+	"fc_f_0001_n": [
+		"parts/common_body_FC_F_0001_n"
+	],
+	"fc_f_0002_02_n": [
+		"parts/common_body_FC_F_0002_02_n"
+	],
+	"fc_f_0002_n": [
+		"parts/common_body_FC_F_0002_n"
+	],
+	"fc_m_0000_02_n": [
+		"parts/common_body_FC_M_0000_02_n"
+	],
 	"fc_m_0000_a": [
+		"parts/common_body_FC_M_0000_a",
 		"parts/FG_A_0101_FC_M_0000_a"
 	],
+	"fc_m_0000_hairoff_a": [
+		"parts/common_body_FC_M_0000_hairoff_a"
+	],
+	"fc_m_0000_hairy_a": [
+		"parts/common_body_FC_M_0000_hairy_a"
+	],
 	"fc_m_0000_n": [
+		"parts/common_body_FC_M_0000_n",
 		"parts/FG_A_0101_FC_M_0000_n"
 	],
 	"fc_m_0000_r": [
+		"parts/common_body_FC_M_0000_r",
 		"parts/FG_A_0101_FC_M_0000_r"
 	],
 	"fc_m_0000_s": [
 		"parts/FG_A_0101_FC_M_0000_s"
+	],
+	"fc_m_0000_underwear_a": [
+		"parts/common_body_FC_M_0000_Underwear_a"
+	],
+	"fc_m_0000_underwear_n": [
+		"parts/common_body_FC_M_0000_Underwear_n"
+	],
+	"fc_m_0000_underwear_r": [
+		"parts/common_body_FC_M_0000_Underwear_r"
+	],
+	"fc_m_0001_02_n": [
+		"parts/common_body_FC_M_0001_02_n"
+	],
+	"fc_m_0001_n": [
+		"parts/common_body_FC_M_0001_n"
+	],
+	"fc_m_0002_02_n": [
+		"parts/common_body_FC_M_0002_02_n"
+	],
+	"fc_m_0002_n": [
+		"parts/common_body_FC_M_0002_n"
 	],
 	"fc_m_0003_face_a": [
 		"parts/FC_M_0003_FC_M_0003_Face_a"
@@ -11072,12 +11156,15 @@
 		"parts/FC_M_0003_FC_M_0003_Hair_r"
 	],
 	"fc_m_0050_a": [
+		"parts/common_body_FC_M_0050_a",
 		"parts/FG_A_0150_FC_M_0050_a"
 	],
 	"fc_m_0050_n": [
+		"parts/common_body_FC_M_0050_n",
 		"parts/FG_A_0150_FC_M_0050_n"
 	],
 	"fc_m_0050_r": [
+		"parts/common_body_FC_M_0050_r",
 		"parts/FG_A_0150_FC_M_0050_r"
 	],
 	"fg_a_0100_m": [

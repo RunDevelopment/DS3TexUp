@@ -18819,6 +18819,18 @@
 		"parts/BD_M_3110_BD_M_3110_r"
 	],
 	[
+		"parts/common_body_FC_F_0000_hairoff_a",
+		"parts/common_body_FC_M_0000_hairoff_a"
+	],
+	[
+		"parts/common_body_FC_M_0050_a",
+		"parts/FG_A_0150_FC_M_0050_a"
+	],
+	[
+		"parts/common_body_FC_M_0050_r",
+		"parts/FG_A_0150_FC_M_0050_r"
+	],
+	[
 		"parts/FG_A_0101_FG_A_0101_a",
 		"parts/FG_A_0102_FG_A_0102_a"
 	],
