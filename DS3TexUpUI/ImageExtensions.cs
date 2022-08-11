@@ -1406,5 +1406,61 @@ namespace DS3TexUpUI
 
             return low;
         }
+
+        public static ArrayTextureMap<Rgba32> GetDifferenceAdditiveOverlay(this ArrayTextureMap<Rgba32> image, ArrayTextureMap<Rgba32> final)
+        {
+            if (image.Width > final.Width)
+                image = image.DownSample(Average.Rgba32, image.Width / final.Width);
+
+            if (image.Width != final.Width || image.Height != final.Height)
+                throw new ArgumentException("Image sizes are not compatible.");
+
+            var result = new Rgba32[image.Count];
+            for (int i = 0; i < image.Data.Length; i++)
+            {
+                var b = image.Data[i];
+                var f = final.Data[i];
+
+                result[i] = new Rgba32(
+                    (byte)(127 + (f.R - b.R) / 2),
+                    (byte)(127 + (f.G - b.G) / 2),
+                    (byte)(127 + (f.B - b.B) / 2)
+                );
+            }
+
+            return result.AsTextureMap(image.Width);
+        }
+        public static ArrayTextureMap<Rgba32> GetDifferenceMultiplicativeOverlay(this ArrayTextureMap<Rgba32> image, ArrayTextureMap<Rgba32> final)
+        {
+            if (image.Width > final.Width)
+                image = image.DownSample(Average.Rgba32, image.Width / final.Width);
+
+            if (image.Width != final.Width || image.Height != final.Height)
+                throw new ArgumentException("Image sizes are not compatible.");
+
+            var result = new Rgba32[image.Count];
+            for (int i = 0; i < image.Data.Length; i++)
+            {
+                var b = image.Data[i];
+                var f = final.Data[i];
+
+                static byte GetOverlay(byte b, byte f)
+                {
+                    if (f == b) return 127;
+                    if (f < b) return (byte)(255 * f / (2 * b));
+                    var bf = b / 255f;
+                    var ff = f / 255f;
+                    return (byte)Math.Round(255 * (1 - (1 - ff) / (2 * (1 - bf))));
+                }
+
+                result[i] = new Rgba32(
+                    GetOverlay(b.R, f.R),
+                    GetOverlay(b.G, f.G),
+                    GetOverlay(b.B, f.B)
+                );
+            }
+
+            return result.AsTextureMap(image.Width);
+        }
     }
 }
