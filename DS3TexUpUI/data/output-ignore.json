@@ -350,5 +350,17 @@
 	"parts/WP_A_0101_WP_A_0101_1_r",
 	"parts/WP_A_0201_WP_A_0201_1_a",
 	"parts/WP_A_0201_WP_A_0201_1_n",
-	"parts/WP_A_0201_WP_A_0201_1_r"
+	"parts/WP_A_0201_WP_A_0201_1_r",
+
+	"sfx/commoneffects_s02012",
+	"sfx/commoneffects_s11790",
+	"sfx/commoneffects_s99215",
+	"sfx/m30_s21015",
+	"sfx/m31_s11408",
+	"sfx/m31_s21015",
+	"sfx/m37_s11408",
+	"sfx/m38_s11408",
+	"sfx/m46_s99220",
+	"sfx/m51_s11408",
+	"sfx/m53_s99220"
 ]
