@@ -3,5 +3,5 @@
 	"TexConvExe": "C:\\DS3TexUp\\texconv.exe",
 	"CompressonatorCliExe": "C:\\Program Files (x86)\\Compressonator_4.2.5185\\bin\\CLI\\compressonatorcli.exe",
 	"NVCompressExe": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA Texture Tools\\nvcompress.exe",
-	"MaxDegreeOfParallelism": 0
+	"MaxDegreeOfParallelism": 6
 }
