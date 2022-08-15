@@ -6,5 +6,6 @@
 	"chr/c1106_c1106_body3_n": "DX10 BC1_UNORM",
 	"chr/c2150_c2150_n": "DX10 BC7_UNORM",
 	"chr/c5020_c5020_UV01_n": "DX10 BC7_UNORM",
-	"chr/c5250_c5250_Helmet_n": "DX10 BC7_UNORM"
+	"chr/c5250_c5250_Helmet_n": "DX10 BC7_UNORM",
+	"parts/common_body_FC_M_0000_Underwear_n": "DX10 BC7_UNORM"
 }
