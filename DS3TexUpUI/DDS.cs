@@ -85,7 +85,7 @@ namespace DS3TexUpUI
             bool maximumCompression = false
         )
         {
-            var dir = Path.GetDirectoryName(target);
+            var dir = Path.GetDirectoryName(target)!;
             var suffix = "-temp" + _rng.Next();
 
             // https://github.com/Microsoft/DirectXTex/wiki/Texconv
@@ -121,7 +121,7 @@ namespace DS3TexUpUI
             info.RedirectStandardInput = true;
             info.CreateNoWindow = true;
 
-            using var p = Process.Start(info);
+            using var p = Process.Start(info)!;
             var output = p.StandardOutput.ReadToEnd();
             if (p.ExitCode != 0)
                 throw new Exception("Unable to convert file: " + output);
@@ -159,7 +159,7 @@ namespace DS3TexUpUI
             info.RedirectStandardInput = true;
             info.RedirectStandardOutput = true;
 
-            var p = Process.Start(info);
+            var p = Process.Start(info)!;
             p.WaitForExit();
             if (p.ExitCode != 0)
                 throw new Exception("Unable to convert file: " + p.StandardOutput.ReadToEnd());
@@ -192,7 +192,7 @@ namespace DS3TexUpUI
             info.RedirectStandardInput = true;
             info.RedirectStandardOutput = true;
 
-            var p = Process.Start(info);
+            var p = Process.Start(info)!;
             p.WaitForExit();
             if (p.ExitCode != 0)
                 throw new Exception("Unable to convert file: " + p.StandardOutput.ReadToEnd());

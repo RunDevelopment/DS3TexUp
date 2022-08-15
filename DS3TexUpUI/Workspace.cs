@@ -723,7 +723,7 @@ namespace DS3TexUpUI
             static string JoinFile(params string[] parts)
             {
                 var dir = Path.Join(parts);
-                Directory.CreateDirectory(Path.GetDirectoryName(dir));
+                Directory.CreateDirectory(Path.GetDirectoryName(dir)!);
                 return dir;
             }
 
@@ -809,7 +809,7 @@ namespace DS3TexUpUI
                 var source = Path.Join(ExtractDir, cat, name + ".dds");
                 var target = Path.Join(outDir, cat, name + ".png");
 
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 source.ToPNG(target);
             });
         }

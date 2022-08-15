@@ -168,7 +168,7 @@ namespace DS3TexUpUI
         public static T Deserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions? options = null)
         {
             options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
-            return JsonSerializer.Deserialize<T>(ref reader, options);
+            return JsonSerializer.Deserialize<T>(ref reader, options)!;
         }
 
         public static void SaveAsJson<T>(this T value, string file, bool formatted = true)
@@ -276,9 +276,9 @@ namespace DS3TexUpUI
                 if (reader.TokenType != JsonTokenType.StartArray) throw new JsonException();
 
                 reader.Read();
-                var item1 = JsonSerializer.Deserialize<A>(ref reader, options);
+                var item1 = JsonSerializer.Deserialize<A>(ref reader, options)!;
                 reader.Read();
-                var item2 = JsonSerializer.Deserialize<B>(ref reader, options);
+                var item2 = JsonSerializer.Deserialize<B>(ref reader, options)!;
                 reader.Read();
                 if (reader.TokenType != JsonTokenType.EndArray) throw new JsonException();
 
@@ -299,7 +299,7 @@ namespace DS3TexUpUI
             public override TexId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType != JsonTokenType.String) throw new JsonException();
-                return new TexId(reader.GetString());
+                return new TexId(reader.GetString()!);
             }
 
             public override void Write(Utf8JsonWriter writer, TexId value, JsonSerializerOptions options)
@@ -328,10 +328,10 @@ namespace DS3TexUpUI
 
                     if (reader.TokenType != JsonTokenType.PropertyName) throw new JsonException();
 
-                    var id = Converter.Parse(reader.GetString());
+                    var id = Converter.Parse(reader.GetString()!);
                     reader.Read();
 
-                    var value = JsonSerializer.Deserialize<V>(ref reader, options);
+                    var value = JsonSerializer.Deserialize<V>(ref reader, options)!;
 
                     result[id] = value;
                 }
@@ -382,7 +382,7 @@ namespace DS3TexUpUI
         {
             public override EquivalenceCollection<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                var surrogate = JsonSerializer.Deserialize<List<HashSet<T>>>(ref reader, options);
+                var surrogate = JsonSerializer.Deserialize<List<HashSet<T>>>(ref reader, options)!;
                 return new EquivalenceCollection<T>(surrogate);
             }
 
@@ -411,7 +411,7 @@ namespace DS3TexUpUI
 
             public override DifferenceCollection<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                var pairs = JsonSerializer.Deserialize<List<(T, T)>>(ref reader, options);
+                var pairs = JsonSerializer.Deserialize<List<(T, T)>>(ref reader, options)!;
                 var d = new DifferenceCollection<T>();
                 foreach (var (a, b) in pairs)
                     d.Set(a, b);
@@ -444,7 +444,7 @@ namespace DS3TexUpUI
         {
             public override HashSet<TexId> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                var list = JsonSerializer.Deserialize<List<TexId>>(ref reader, options);
+                var list = JsonSerializer.Deserialize<List<TexId>>(ref reader, options)!;
                 return new HashSet<TexId>(list);
             }
             public override void Write(Utf8JsonWriter writer, HashSet<TexId> value, JsonSerializerOptions options)
@@ -524,7 +524,7 @@ namespace DS3TexUpUI
         {
             public override List<Metalness.DataPoint> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                var d = JsonSerializer.Deserialize<Dictionary<string, bool>>(ref reader, options);
+                var d = JsonSerializer.Deserialize<Dictionary<string, bool>>(ref reader, options)!;
                 return d.Select(kv => new Metalness.DataPoint(StringToMaterial(kv.Key), kv.Value)).ToList();
             }
 
@@ -568,7 +568,7 @@ namespace DS3TexUpUI
             public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType != JsonTokenType.String) throw new JsonException();
-                return _parse(reader.GetString());
+                return _parse(reader.GetString()!);
             }
             public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
             {

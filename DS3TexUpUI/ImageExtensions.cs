@@ -70,9 +70,13 @@ namespace DS3TexUpUI
                 for (var y = 0; y < image.Height; y++)
                 {
                     var stride = image.Width * y;
-                    var row = image.GetPixelRowSpan(y);
-                    for (int x = 0; x < row.Length; x++)
-                        data[stride + x] = map(row[x]);
+                    image.ProcessPixelRows(accessor =>
+                    {
+                        var row = accessor.GetRowSpan(y);
+                        for (int x = 0; x < row.Length; x++)
+                            data[stride + x] = map(row[x]);
+                    });
+
                 }
                 return data;
             }

@@ -10,7 +10,7 @@
 			"request": "launch",
 			"preLaunchTask": "build",
 			// If you have changed target frameworks, make sure to update the program path.
-			"program": "${workspaceFolder}/DS3TexUpUI/bin/Debug/netcoreapp3.1/DS3TexUpUI.dll",
+			"program": "${workspaceFolder}/DS3TexUpUI/bin/Debug/net6.0-windows/DS3TexUpUI.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/DS3TexUpUI",
 			// For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

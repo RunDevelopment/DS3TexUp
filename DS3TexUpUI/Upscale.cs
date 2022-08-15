@@ -62,13 +62,13 @@ namespace DS3TexUpUI
         private string GetTempPngFile(TexId id)
         {
             var target = Path.Join(TemporaryDir, id.Category, $"{id.Name.ToString()}.png");
-            Directory.CreateDirectory(Path.GetDirectoryName(target));
+            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
             return target;
         }
         private string GetOutputFile(TexId id)
         {
             var target = Path.Join(Workspace.OverwriteDir, id.Category, $"{id.Name.ToString()}.dds");
-            Directory.CreateDirectory(Path.GetDirectoryName(target));
+            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
             return target;
         }
         private void ToDDS(TexId id, string png, int upscale, bool deleteAfter = false)

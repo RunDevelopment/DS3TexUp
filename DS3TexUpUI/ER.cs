@@ -596,7 +596,7 @@ namespace DS3TexUpUI
                 var t = Alpha[reFile];
 
                 var target = Path.Join(UpscaleDir, kind, id.Category, $"{id.Name.ToString()}.png");
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
 
                 if (t == TransparencyKind.Binary || t == TransparencyKind.Full)
                 {
@@ -604,7 +604,7 @@ namespace DS3TexUpUI
 
                     var alphaKind = t == TransparencyKind.Binary ? "alpha_binary" : "alpha_full";
                     var alphaTarget = Path.Join(UpscaleDir, alphaKind, id.Category, $"{id.Name.ToString()}.png");
-                    Directory.CreateDirectory(Path.GetDirectoryName(alphaTarget));
+                    Directory.CreateDirectory(Path.GetDirectoryName(alphaTarget)!);
                     image.GetAlpha().SaveAsPng(alphaTarget);
 
                     image.FillSmallHoles3();
@@ -631,7 +631,7 @@ namespace DS3TexUpUI
                 };
                 var target = Path.Join(UpscaleDir, kind, id.Category, $"{id.Name.ToString()}.png");
 
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 if (File.Exists(target)) File.Delete(target);
                 reFile.LoadTextureMap().GetAlpha().SaveAsPng(target);
             });
@@ -645,7 +645,7 @@ namespace DS3TexUpUI
 
                 var target = Path.Join(UpscaleDir, "n_normal", id.Category, $"{id.Name.ToString()}.png");
 
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 DS3NormalMap.Load(reFile).Normals.SaveAsPng(target);
             });
         }
@@ -658,7 +658,7 @@ namespace DS3TexUpUI
 
                 var target = Path.Join(UpscaleDir, "n_gloss", id.Category, $"{id.Name.ToString()}.png");
 
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 DS3NormalMap.Load(reFile).Gloss.SaveAsPng(target);
             });
         }

@@ -139,7 +139,7 @@ namespace DS3TexUpUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", Path.GetDirectoryName(exeTextBox.Text));
+            Process.Start("explorer.exe", Path.GetDirectoryName(exeTextBox.Text)!);
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -330,7 +330,7 @@ namespace DS3TexUpUI
 
                 var hash = HashFile(albedoFile);
                 var target = Path.Join(ManualDirNormalAlbedo, id.Category, $"{id.Name.ToString()}-@{hash}.png");
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 File.Move(file, target, true);
                 lock (normalAlbedo) normalAlbedo[id] = target;
             });
@@ -374,7 +374,7 @@ namespace DS3TexUpUI
                 var (id, file) = kv;
 
                 var target = Path.Join(ManualDirAlbedoTodo, id.Category, $"{id.Name.ToString()}.png");
-                Directory.CreateDirectory(Path.GetDirectoryName(target));
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 Directory.CreateDirectory(ManualDirNormalAlbedoTodo);
                 File.Copy(file, target);
             });
@@ -866,14 +866,14 @@ namespace DS3TexUpUI
         }
         private void AllowFilesDragDrop(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+            if (e.Data!.GetDataPresent(DataFormats.FileDrop, false) == true)
                 e.Effect = DragDropEffects.Link;
         }
         private void AcceptFileTextboxDragDrop(object sender, DragEventArgs e)
         {
             if (!(sender is TextBox textbox)) return;
 
-            var data = e.Data.GetData(DataFormats.FileDrop);
+            var data = e.Data!.GetData(DataFormats.FileDrop);
             if (data is string file) textbox.Text = file;
             if (data is string[] files) textbox.Text = files.Length == 0 ? "no files" : files[0];
         }

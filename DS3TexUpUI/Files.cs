@@ -25,7 +25,7 @@ namespace DS3TexUpUI
             {
                 var (from, toRelative) = pair;
                 var to = Path.Join(target, toRelative);
-                Directory.CreateDirectory(Path.GetDirectoryName(to));
+                Directory.CreateDirectory(Path.GetDirectoryName(to)!);
                 File.Copy(from, to, true);
             });
         }
@@ -127,7 +127,7 @@ namespace DS3TexUpUI
         private static string GetOutputFile(this TexId id, string outputDir)
         {
             var file = Path.Join(outputDir, id.Category, $"{id.Name.ToString()}.png");
-            Directory.CreateDirectory(Path.GetDirectoryName(file));
+            Directory.CreateDirectory(Path.GetDirectoryName(file)!);
             return file;
         }
         private static void RemoveUnchanged(IReadOnlyCollection<Dictionary<TexId, string>> files, Func<string, bool>? didChange)
@@ -331,7 +331,7 @@ namespace DS3TexUpUI
                     }
 
                     var target = Path.Join(outputDir, id.Category, id.Name.ToString() + ".dds");
-                    Directory.CreateDirectory(Path.GetDirectoryName(target));
+                    Directory.CreateDirectory(Path.GetDirectoryName(target)!);
 
                     image.SaveAsDDS(target, targetFormat, id);
                 }
@@ -356,7 +356,7 @@ namespace DS3TexUpUI
                     i.AddColorCode(code.GetColors());
 
                     var target = Path.Join(outputDir, id.Category, Path.GetFileName(exPath));
-                    Directory.CreateDirectory(Path.GetDirectoryName(target));
+                    Directory.CreateDirectory(Path.GetDirectoryName(target)!);
 
                     var format = DS3.OutputFormat[id];
                     if (format.DxgiFormat == DxgiFormat.BC1_UNORM) format = DxgiFormat.R8G8B8A8_UNORM;
