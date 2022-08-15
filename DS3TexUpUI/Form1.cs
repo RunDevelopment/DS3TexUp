@@ -629,64 +629,102 @@ namespace DS3TexUpUI
             // m37_00_00_00_020151
             var w = GetWorkspace();
 
-            foreach (var f in Directory.GetFiles(@"C:\Users\micha\Desktop\n"))
-            {
-                var image = f.LoadTextureMap();
-                var blurred = image.Blur(3, Average.Rgba32);
 
-                for (int i = 0; i < image.Data.Length; i++)
-                {
-                    var pi = image[i];
-                    var pb = blurred[i];
-                    var ni = Normal.FromRG(pi.R, pi.G);
-                    var nb = Normal.FromRG(pb.R, pb.G);
-                    var (r, g) = Normal.HeightMapAddition(ni, 1, nb, -1).ToRG();
-                    image.Data[i].R = r;
-                    image.Data[i].G = g;
-                }
 
-                blurred = image.Blur(2, Average.Rgba32);
+            // var b = @"C:\DS3TexUp\up-manual-new\m31_00_woodbox_00_a.png";
+            // var o = @"C:\DS3TexUp\up-manual-new\m33_00_o331404_woodenbox_a-1x_BC1-smooth2.png";
+            // var t = Path.Join(Path.GetDirectoryName(o), Path.GetFileNameWithoutExtension(o) + "-overlay.png");
+            // b.LoadTextureMap().GetDifferenceMultiplicativeOverlay(o.LoadTextureMap()).SaveAsPng(t);
 
-                for (int i = 0; i < image.Data.Length; i++)
-                {
-                    var pi = image[i];
-                    var pb = blurred[i];
-                    var ni = Normal.FromRG(pi.R, pi.G);
-                    var nb = Normal.FromRG(pb.R, pb.G);
-                    var (r, g) = Normal.HeightMapAddition(ni, 1, nb, -1).ToRG();
-                    image.Data[i].R = r;
-                    image.Data[i].G = g;
-                }
+            // RunTask(token => {
+            //     DS3.CreateNormalAlbedoIndex()(token);
+            // });
 
-                image.SaveAsPng(Path.Join(@"C:\Users\micha\Desktop\n\high-3-2", $"{Path.GetFileNameWithoutExtension(f)}.png"));
-            }
+            // RunTask(token =>
+            // {
+            //     token.ForAllParallel(Directory.GetFiles(@"C:\Users\micha\Desktop\gold test\r"), r =>
+            //     {
+            //         var g = MaterialMasks.DetectGold(r.LoadTextureMap());
+            //         var p = Path.Join(@"C:\Users\micha\Desktop\gold test\gold_", Path.GetFileName(r));
+            //         Directory.CreateDirectory(Path.GetDirectoryName(p));
+            //         g.SaveAsPng(p);
+            //     });
+            // });
+
+            // RunTask(token =>
+            // {
+            //     token.ForAllParallel(DS3.OriginalSize.Keys.Where(id => id.GetTexKind() == TexKind.Reflective), id =>
+            //     {
+            //         try
+            //         {
+            //             if (id != id.GetRepresentative()) return;
+            //             var image = w.GetExtractPath(id).LoadTextureMap();
+            //             var goldMask = MaterialMasks.DetectGold(image);
+            //             if (goldMask.All(f => f < 0.1)) return;
+            //             var target = Path.Join(@"D:\DS3\material-masks\gold", id.Category, $"{id.Name.ToString()}.png");
+            //             Directory.CreateDirectory(Path.GetDirectoryName(target));
+            //             goldMask.SaveAsPng(target);
+            //         }
+            //         catch (System.Exception e)
+            //         {
+            //             token.LogException(e);
+            //             throw;
+            //         }
+            //     });
+            // });
+
+            // var i = @"C:\DS3TexUp\up-manual-new\c1440_c1440_WP_A_1322_r-1x_BC1-smooth2-adjusted1.png".LoadTextureMap();
+            // i.GetHighFreqOverlay(8,0).SaveAsPng(@"C:\DS3TexUp\up-manual-new\c1440_c1440_WP_A_1322_r-1x_BC1-smooth2-adjusted1-ov.png");
+
+            // RunTask(token =>
+            // {
+            //     token.ForAllParallel(DS2.Similar, kv =>
+            //     {
+            //         var (id, files) = kv;
+
+            //         var targetDir = Path.Join(@"C:\DS3TexUp\ds2", id.Category);
+            //         Directory.CreateDirectory(targetDir);
+
+            //         var largest = files.Select(f => DS2.OriginalSize[f].Width).Max();
+            //         var selected = files.Where(f => DS2.OriginalSize[f].Width == largest).ToList();
+
+            //         for (int i = 0; i < selected.Count; i++)
+            //         {
+            //             var f = selected[i];
+            //             var prefix = selected.Count == 1 ? "" : $"_{i}-";
+            //             var target = Path.Join(targetDir, $"{prefix}{id.Name.ToString()}.png");
+
+            //             var image = f.LoadTextureMap();
+            //             if (DS2.Alpha[f] != TransparencyKind.None)
+            //                 image.FillSmallHoles3();
+            //             image.SaveAsPng(target);
+            //         }
+            //     });
+            // });
+
+            // RunTask(token =>
+            // {
+            //     var files = Directory.GetFiles(@"C:\DS3TexUp\up-manual-new");
+            //     var categories = DS3.OriginalSize.Keys.Select(id => id.Category.ToString()).ToHashSet();
+            //     token.ForAllParallel(files, file =>
+            //     {
+            //         var ids = categories.Select(c => TexId.FromPath(Path.Join(c, Path.GetFileName(file)))).Where(id => DS3.OriginalSize.ContainsKey(id)).ToHashSet();
+            //         if (ids.Count != 1) return;
+            //         var id = ids.Single();
+
+            //         if (id.GetTexKind() == TexKind.Normal) return;
+
+            //         if (id.GetRepresentative() != id || id.IsUnwanted()) {
+            //             File.Delete(file);
+            //         }
+            //     });
+            // });
 
             // var ids = ParseCurrent().ids;
             // var rep = DS3.RepresentativeOf.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
             // var na = DS3.NormalAlbedo.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
             // ids = ids.SelectMany(id => rep.GetOrNew(id).Append(id)).SelectMany(id => na.GetOrNew(id).Append(id)).ToHashSet();
-            // Clipboard.SetText(string.Join("\n", ids));
-
-            // var tiles = new Dictionary<TexId, List<Tile>>();
-            // foreach (var id in ParseCurrent().ids)
-            // {
-            //     tiles.Add(id, new List<Tile>() {
-            //         new Tile(2, 0, 0, 1, 1),
-            //         new Tile(2, 0, 1, 1, 1),
-            //         new Tile(2, 1, 0, 1, 1),
-            //         new Tile(2, 1, 1, 1, 1),
-            //     });
-
-            //     var t = Path.Join(@"C:\DS3TexUp\bar", $"{id.Category.ToString()}-{id.Name.ToString()}.dds");
-            //     File.Copy(w.GetExtractPath(id), t);
-            // }
-            // tiles.SaveAsJson("tiles-2.json");
-
-            // var l = @"C:\DS3TexUp\up-manual-new\o962120_o2120_a.png".LoadTextureMap();
-            // var s = @"C:\DS3TexUp\up-manual-new\m30_00_o962120_02_a-1x_BC1-smooth2.png".LoadTextureMap();
-            // l.CopyColorFrom(s, downScale: 1);
-            // l.SaveAsPng(@"C:\DS3TexUp\up-manual-new\m30_00_o962120_02_a.png");
-
+            // Clipboard.SetText(string.Join("\n", ids.Except(DS3.Unused.Except(DS3.Representatives))));
 
             // RunTask(token =>
             // {
