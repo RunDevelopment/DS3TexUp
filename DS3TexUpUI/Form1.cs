@@ -554,6 +554,8 @@ namespace DS3TexUpUI
                         @"C:\DS3TexUp\up-manual\em",
                     },
                     Mask = @"C:\DS3TexUp\up-manual\m",
+
+                    Full = @"C:\DS3TexUp\up-manual\full",
                 },
                 TemporaryDir = @"C:\DS3TexUp\temp"
             };

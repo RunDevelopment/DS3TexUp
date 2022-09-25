@@ -28,6 +28,12 @@ namespace DS3TexUpUI
 
         public void WriteDDS(TexId id, int upscale, ILogger logger)
         {
+            if (Textures.Full.GetFilesCached().TryGetValue(id, out var fullPng))
+            {
+                WriteFull(id, fullPng, upscale);
+                return;
+            }
+
             var kind = id.GetTexKind();
             switch (kind)
             {
@@ -144,6 +150,29 @@ namespace DS3TexUpUI
 
                 image = image.DownSample(factory, factor);
             }
+        }
+
+        private void WriteFull(TexId id, string png, int upscale)
+        {
+            var fullWidth = GetPngWidth(png);
+            var targetWidth = GetTargetWidth(id, upscale);
+
+            if (targetWidth > fullWidth)
+                throw new Exception($"Full image of {id} has width {fullWidth}, but {targetWidth} ({upscale}x) was requested.");
+
+            var targetFile = png;
+            var deleteAfter = false;
+            if (targetWidth < fullWidth)
+            {
+                var image = png.LoadTextureMap();
+                EnsureWidth(ref image, targetWidth, Average.Rgba32GammaAlpha, id, "texture");
+
+                targetFile = GetTempPngFile(id);
+                deleteAfter = true;
+                image.SaveAsPng(targetFile);
+            }
+
+            ToDDS(id, targetFile, upscale, deleteAfter: deleteAfter);
         }
 
         private bool TryGetAlpha(TexId id, int upscale, int targetWidth, out ArrayTextureMap<byte> alphaImage, bool upsample = false)
@@ -352,5 +381,7 @@ namespace DS3TexUpUI
         public TexOverrideList Emissive { get; set; } = new TexOverrideList();
         public TexOverrideList Shininess { get; set; } = new TexOverrideList();
         public TexOverrideList Mask { get; set; } = new TexOverrideList();
+
+        public TexOverrideList Full { get; set; } = new TexOverrideList();
     }
 }
