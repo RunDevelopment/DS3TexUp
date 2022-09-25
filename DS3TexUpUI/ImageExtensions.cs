@@ -87,6 +87,7 @@ namespace DS3TexUpUI
                 Image<Bgra32> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, p.A)),
                 Image<Rgba32> i => MapRows(i, p => p),
                 Image<Rgb24> i => MapRows(i, p => new Rgba32(p.R, p.G, p.B, 255)),
+                Image<L8> i => MapRows(i, p => new Rgba32(p.PackedValue, p.PackedValue, p.PackedValue, 255)),
                 _ => throw new Exception("Invalid format: " + image.PixelType.ToString())
             };
             return new ArrayTextureMap<Rgba32>(data, image.Width, image.Height);
