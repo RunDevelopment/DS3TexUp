@@ -1187,6 +1187,59 @@ namespace DS3TexUpUI
 
         }
 
+        public static IEnumerable<(string name, MTD mtd)> ReadAllMTD(Workspace w)
+        {
+            var mtdBasePath = Path.Join(w.GameDir, "mtd");
+            var mtdDir = Path.Join(mtdBasePath, "allmaterialbnd-mtdbnd-dcx");
+            if (!Directory.Exists(mtdDir))
+            {
+                Yabber.Run(Path.Join(mtdBasePath, "allmaterialbnd.mtdbnd.dcx"));
+            }
+
+            foreach (var f in Directory.GetFiles(mtdDir, "*.mtd"))
+            {
+                yield return (Path.GetFileName(f), MTD.Read(f));
+            }
+        }
+        internal static void CreateMTDJson(Workspace w)
+        {
+            var data = DS3.ReadAllMTD(w).Select(pair =>
+            {
+                var (name, mtd) = pair;
+                return new
+                {
+                    Name = name,
+                    Description = mtd.Description,
+                    ShaderPath = mtd.ShaderPath,
+                    Textures = mtd.Textures.Select(t =>
+                    {
+                        return new
+                        {
+                            Type = t.Type,
+                            UVNumber = t.UVNumber,
+                            ShaderDataIndex = t.ShaderDataIndex,
+                        };
+                    }).ToList(),
+                    Params = mtd.Params.ToDictionary(
+                        p => p.Name,
+                        p => p.Value switch
+                        {
+                            int i => p.Name switch
+                            {
+                                "g_BlendMode" => ((MTD.BlendMode)i).ToString(),
+                                "g_LightingType" => ((MTD.LightingType)i).ToString(),
+                                _ => i
+                            },
+                            float or bool => p.Value,
+                            float[] a => string.Join(" ", a.Select(n => n.ToString(System.Globalization.CultureInfo.InvariantCulture))),
+                            int[] a => string.Join(" ", a.Select(n => n.ToString(System.Globalization.CultureInfo.InvariantCulture))),
+                            _ => p.Value.ToString()
+                        }
+                    ),
+                };
+            }).ToList();
+            data.SaveAsJson(Data.File("mtd.json", Data.Source.Local));
+        }
 
         private static Action<SubProgressToken> CreateExtractedFilesIndexJson<T>(Workspace w, string outputFile, Func<string, T> valueSector)
         {
