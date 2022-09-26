@@ -23,7 +23,7 @@ namespace DS3TexUpUI
 
         public int Width { get; }
         public int Height { get; }
-        public int Count => Width * Height;
+        public int Count => Data.Length;
 
         public T this[int index] { get => Data[index]; set => Data[index] = value; }
         public T this[int x, int y] { get => this[y * Width + x]; set => this[y * Width + x] = value; }

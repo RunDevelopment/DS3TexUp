@@ -749,7 +749,54 @@ namespace DS3TexUpUI
             // DoIteration(workingCopy, map);
         }
 
-        public static ArrayTextureMap<T> CobmineTiles<T>(this ArrayTextureMap<T>[,] tiles)
+        public static ArrayTextureMap<T> Crop<T>(this ArrayTextureMap<T> image, int left, int top, int width, int height)
+            where T : struct
+        {
+            if (left < 0 || top < 0 || width < 0 || height < 0)
+                throw new ArgumentException();
+            if (left + width > image.Width || top + height > image.Height)
+                throw new ArgumentException();
+
+            var result = new T[width * height];
+
+            for (int i = 0; i < height; i++)
+            {
+                Array.Copy(image.Data, left + (top + i) * image.Width, result, i * width, width);
+            }
+
+            return result.AsTextureMap(width);
+        }
+
+        public static ArrayTextureMap<T> Tile<T>(this ArrayTextureMap<T> image, int x, int y)
+            where T : struct
+        {
+            if (x <= 0 || y <= 0)
+                throw new ArgumentException("Expected tile x and y to be at least 1");
+
+            var resultWidth = image.Width * x;
+            var result = new T[image.Width * x * image.Height * y];
+
+            for (int tileX = 0; tileX < x; tileX++)
+            {
+                for (int tileY = 0; tileY < y; tileY++)
+                {
+                    for (int i = 0; i < image.Height; i++)
+                    {
+                        Array.Copy(
+                            image.Data,
+                            i * image.Width,
+                            result,
+                            (i + tileY * image.Height) * resultWidth + tileX * image.Width,
+                            image.Width
+                        );
+                    }
+                }
+            }
+
+            return result.AsTextureMap(resultWidth);
+        }
+
+        public static ArrayTextureMap<T> CombineTiles<T>(this ArrayTextureMap<T>[,] tiles)
             where T : struct
         {
             var tilesY = tiles.GetLength(0);
