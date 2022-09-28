@@ -43,19 +43,10 @@ namespace DS3TexUpUI
         }
 
         /// <summary>
-        /// A mapping from all known GX00 ids to its Unk04 value.
-        /// </summary>
-        public static IReadOnlyDictionary<string, int> GX00Unk04
-            = Data.File("gx/gx00-unk04.json").LoadJsonFile<Dictionary<string, int>>();
-        /// <summary>
         /// All observed Unk04 values for GXMD.
         /// </summary>
         public static IReadOnlyList<int> GXMDUnk04
             = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
-
-        public static Dictionary<string, List<GXValueType>> GX00ValueType
-            = Data.File("gx/gx00-value-type.json").LoadJsonFile<Dictionary<string, List<GXValueType>>>();
-
     }
 
     public enum GXIdType
@@ -90,10 +81,43 @@ namespace DS3TexUpUI
         }
     }
 
-    public enum GXValueType
+    public class GX00ItemListDescriptor
     {
+        // E.g. "GX00", "GX80"
+        public string ID { get; set; } = "Unknown";
+        // The Unk04 value of this GX00.
+        // All GX00 item lists seem to have a unique Unk04 value.
+        public int Unk04 { get; set; }
+        // If the category is not null, then all items are grouped together.
+        // Note: Multiple item lists can have the same category.
+        public string? Category { get; set; }
+        public List<GX00ItemDescriptor> Items { get; set; } = new List<GX00ItemDescriptor>();
+    }
+
+    public class GX00ItemDescriptor
+    {
+        public string Name { get; set; } = "Unknown";
+        public GX00ItemType Type { get; set; } = GX00ItemType.Unknown;
+        // If the type is Int or Float, then this is the smallest accepted value.
+        public float? Min { get; set; }
+        // If the type is Int or Float, then this is the largest accepted value.
+        public float? Max { get; set; }
+        // If the type is Enum, then this lists all variants. This is a mapping from value to label.
+        public Dictionary<int, string>? Enum { get; set; }
+    }
+    public enum GX00ItemType
+    {
+        // The type is unknown. This might be because the item is unused.
         Unknown = 0,
+        // The type is int32.
         Int = 1,
+        // The type is float.
         Float = 2,
+        // The type is int32, but only certain values are allowed.
+        // See GX00ItemDescriptor#Enum for all accepted values.
+        Enum = 3,
+        // The type is int32, but only 0 (false) and 1 (true) are accepted.
+        Bool = 4,
+    }
     }
 }
