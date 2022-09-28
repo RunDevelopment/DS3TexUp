@@ -4,6 +4,8 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using SoulsFormats;
 
+#nullable enable
+
 namespace DS3TexUpUI
 {
     public static class GX
@@ -44,12 +46,16 @@ namespace DS3TexUpUI
         /// A mapping from all known GX00 ids to its Unk04 value.
         /// </summary>
         public static IReadOnlyDictionary<string, int> GX00Unk04
-            = Data.File("gx/gx00-unk04").LoadJsonFile<Dictionary<string, int>>();
+            = Data.File("gx/gx00-unk04.json").LoadJsonFile<Dictionary<string, int>>();
         /// <summary>
         /// All observed Unk04 values for GXMD.
         /// </summary>
         public static IReadOnlyList<int> GXMDUnk04
-            = Data.File("gx/gxmd-unk04").LoadJsonFile<List<int>>();
+            = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
+
+        public static Dictionary<string, List<GXValueType>> GX00ValueType
+            = Data.File("gx/gx00-value-type.json").LoadJsonFile<Dictionary<string, List<GXValueType>>>();
+
     }
 
     public enum GXIdType
