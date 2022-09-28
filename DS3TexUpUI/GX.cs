@@ -49,8 +49,8 @@ namespace DS3TexUpUI
         /// </summary>
         public static IReadOnlyList<int> GXMDUnk04
             = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
-        public static IReadOnlyDictionary<string, GX00ItemListDescriptor> GX00Descriptor
-            = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemListDescriptor>>().ToDictionary(i => i.ID);
+        public static IReadOnlyDictionary<string, GX00ItemDescriptor> GX00Descriptor
+            = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemDescriptor>>().ToDictionary(i => i.ID);
     }
 
     public enum GXIdType
@@ -85,7 +85,7 @@ namespace DS3TexUpUI
         }
     }
 
-    public class GX00ItemListDescriptor
+    public class GX00ItemDescriptor
     {
         // E.g. "GX00", "GX80"
         public string ID { get; set; } = "Unknown";
@@ -95,13 +95,13 @@ namespace DS3TexUpUI
         // If the category is not null, then all items are grouped together.
         // Note: Multiple item lists can have the same category.
         public string? Category { get; set; }
-        public List<GX00ItemDescriptor> Items { get; set; } = new List<GX00ItemDescriptor>();
+        public List<GX00ItemValueDescriptor> Items { get; set; } = new List<GX00ItemValueDescriptor>();
     }
 
-    public class GX00ItemDescriptor
+    public class GX00ItemValueDescriptor
     {
         public string Name { get; set; } = "Unknown";
-        public GX00ItemType Type { get; set; } = GX00ItemType.Unknown;
+        public GX00ItemValueType Type { get; set; } = GX00ItemValueType.Unknown;
         // If the type is Int or Float, then this is the smallest accepted value.
         public float? Min { get; set; }
         // If the type is Int or Float, then this is the largest accepted value.
@@ -109,7 +109,7 @@ namespace DS3TexUpUI
         // If the type is Enum, then this lists all variants. This is a mapping from value to label.
         public Dictionary<int, string>? Enum { get; set; }
     }
-    public enum GX00ItemType
+    public enum GX00ItemValueType
     {
         // The type is unknown. This might be because the item is unused.
         Unknown = 0,
