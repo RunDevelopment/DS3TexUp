@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Globalization;
+using System.Linq;
+using System.Numerics;
+using System.Runtime.InteropServices;
 using SoulsFormats;
 
 #nullable enable
@@ -47,6 +49,8 @@ namespace DS3TexUpUI
         /// </summary>
         public static IReadOnlyList<int> GXMDUnk04
             = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
+        public static IReadOnlyDictionary<string, GX00ItemListDescriptor> GX00Descriptor
+            = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemListDescriptor>>().ToDictionary(i => i.ID);
     }
 
     public enum GXIdType
