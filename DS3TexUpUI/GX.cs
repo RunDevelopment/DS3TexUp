@@ -123,5 +123,229 @@ namespace DS3TexUpUI
         // The type is int32, but only 0 (false) and 1 (true) are accepted.
         Bool = 4,
     }
+
+    public enum GXMDItemType
+    {
+        /// <summary>
+        /// The value is a <code>float</code>.
+        /// <summary>
+        Float = 1,
+        /// <summary>
+        /// The value is a <code>Vector2</code>.
+        /// <summary>
+        Float2 = 2,
+        /// <summary>
+        /// The value is a <code>Vector3</code>.
+        /// <summary>
+        Float3 = 3,
+        /// <summary>
+        /// The value is a <code>Float5</code>.
+        /// <summary>
+        Float5 = 11,
+    }
+
+    public struct Float5
+    {
+        public float Item0;
+        public float Item1;
+        public float Item2;
+        public float Item3;
+        public float Item4;
+
+        public Float5(float all)
+        {
+            Item0 = all;
+            Item1 = all;
+            Item2 = all;
+            Item3 = all;
+            Item4 = all;
+        }
+        public Float5(float item0, float item1, float item2, float item3, float item4)
+        {
+            Item0 = item0;
+            Item1 = item1;
+            Item2 = item2;
+            Item3 = item3;
+            Item4 = item4;
+        }
+    }
+
+    public class GXMDItem
+    {
+        public GXMDItemType Type { get; set; }
+        public object Value { get; set; }
+
+        public GXMDItem(GXMDItemType type, object value)
+        {
+            Type = type;
+            Value = value;
+        }
+        public GXMDItem() : this(GXMDItemType.Float, 0f) { }
+        public GXMDItem(float value) : this(GXMDItemType.Float, value) { }
+        public GXMDItem(Vector2 value) : this(GXMDItemType.Float2, value) { }
+        public GXMDItem(Vector3 value) : this(GXMDItemType.Float3, value) { }
+        public GXMDItem(Float5 value) : this(GXMDItemType.Float5, value) { }
+
+        public void Validate()
+        {
+            void AssertType<T>()
+            {
+                if (Value is null)
+                    throw new FormatException($"Expected {Type} item to have a {typeof(T)} value but found null.");
+                if (!(Value is T))
+                    throw new FormatException($"Expected {Type} item to have a {typeof(T)} value but found {Value.GetType()}.");
+            }
+
+            switch (Type)
+            {
+                case GXMDItemType.Float:
+                    AssertType<float>();
+                    break;
+                case GXMDItemType.Float2:
+                    AssertType<Vector2>();
+                    break;
+                case GXMDItemType.Float3:
+                    AssertType<Vector3>();
+                    break;
+                case GXMDItemType.Float5:
+                    AssertType<Float5>();
+                    break;
+                default:
+                    throw new FormatException($"{Type} is not a valid type.");
+            }
+        }
+    }
+
+    public class GXMD
+    {
+        public Dictionary<int, GXMDItem> Items { get; set; }
+
+        public GXMD(Dictionary<int, GXMDItem> items)
+        {
+            Items = items;
+        }
+        public GXMD() : this(new Dictionary<int, GXMDItem>()) { }
+
+        private struct GXValueReader
+        {
+            private int index;
+            private GXValue[] values;
+
+            public bool End => index == values.Length;
+
+            public GXValueReader(byte[] data)
+            {
+                index = 0;
+                values = data.ToGxValues();
+            }
+
+            private GXValue Read()
+            {
+                if (index >= values.Length)
+                {
+                    throw new FormatException("Stream of GXValues ended early.");
+                }
+                return values[index++];
+            }
+            public int ReadInt() => Read().I;
+            public float ReadFloat() => Read().F;
+        }
+
+        public static GXMD FromBytes(byte[] data)
+        {
+            var reader = new GXValueReader(data);
+
+            var result = new Dictionary<int, GXMDItem>();
+
+            var count = reader.ReadInt();
+            for (var j = 0; j < count; j++)
+            {
+                var id = reader.ReadInt();
+                var dataType = (GXMDItemType)reader.ReadInt();
+
+                GXMDItem item;
+                switch (dataType)
+                {
+                    case GXMDItemType.Float:
+                        item = new GXMDItem(reader.ReadFloat());
+                        break;
+                    case GXMDItemType.Float2:
+                        item = new GXMDItem(new Vector2(reader.ReadFloat(), reader.ReadFloat()));
+                        break;
+                    case GXMDItemType.Float3:
+                        item = new GXMDItem(new Vector3(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
+                        break;
+                    case GXMDItemType.Float5:
+                        item = new GXMDItem(new Float5(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
+                        break;
+                    default:
+                        throw new FormatException($"Unknown data type {dataType}");
+                }
+
+                result.Add(id, item);
+            }
+
+            if (!reader.End)
+                throw new FormatException($"Invalid bytes. There are still values left after parsing the GXMD.");
+
+            return new GXMD(result);
+        }
+
+        private List<GXValue> ToValues()
+        {
+            var result = new List<GXValue>();
+            void WriteInt(int i) => result.Add(new GXValue(i: i));
+            void WriteFloat(float f) => result.Add(new GXValue(f: f));
+
+            WriteInt(Items.Count);
+
+            foreach (var (id, item) in Items)
+            {
+                WriteInt(id);
+                WriteInt((int)item.Type);
+
+                item.Validate();
+
+                switch (item.Type)
+                {
+                    case GXMDItemType.Float:
+                        {
+                            var value = (float)item.Value;
+                            WriteFloat(value);
+                            break;
+                        }
+                    case GXMDItemType.Float2:
+                        {
+                            var value = (Vector2)item.Value;
+                            WriteFloat(value.X);
+                            WriteFloat(value.Y);
+                            break;
+                        }
+                    case GXMDItemType.Float3:
+                        {
+                            var value = (Vector3)item.Value;
+                            WriteFloat(value.X);
+                            WriteFloat(value.Y);
+                            WriteFloat(value.Z);
+                            break;
+                        }
+                    case GXMDItemType.Float5:
+                        {
+                            var value = (Float5)item.Value;
+                            WriteFloat(value.Item0);
+                            WriteFloat(value.Item1);
+                            WriteFloat(value.Item2);
+                            WriteFloat(value.Item3);
+                            WriteFloat(value.Item4);
+                            break;
+                        }
+                    default:
+                        throw new FormatException($"Invalid item type {item.Type}");
+                }
+            }
+
+            return result;
+        }
+        public byte[] ToBytes() => ToValues().ToGxDataBytes();
     }
 }
