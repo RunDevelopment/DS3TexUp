@@ -66,6 +66,8 @@ namespace DS3TexUpUI
                             stringConverter = TexIdStringConverter.Instance;
                         else if (args[0] == typeof(string))
                             stringConverter = StringStringConverter.Instance;
+                        else if (args[0] == typeof(int))
+                            stringConverter = IntStringConverter.Instance;
 
                         if (stringConverter != null)
                         {
@@ -368,6 +370,13 @@ namespace DS3TexUpUI
             private StringStringConverter() { }
             public string Parse(string value) => value;
             public string Stringify(string value) => value;
+        }
+        public sealed class IntStringConverter : StringConverter<int>
+        {
+            public static readonly IntStringConverter Instance = new IntStringConverter();
+            private IntStringConverter() { }
+            public int Parse(string value) => int.Parse(value, System.Globalization.CultureInfo.InvariantCulture);
+            public string Stringify(int value) => value.ToString(System.Globalization.CultureInfo.InvariantCulture);
         }
         public sealed class TexIdStringConverter : StringConverter<TexId>
         {
