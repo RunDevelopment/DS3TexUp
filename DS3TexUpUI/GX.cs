@@ -21,15 +21,15 @@ namespace DS3TexUpUI
         public static bool IsGXMD(string id) => id.ParseGXId() == GXIdType.GXMD;
         public static bool IsGX00(string id) => id.ParseGXId() == GXIdType.GX00;
 
-        public static List<GXValue> ToGxValues(this byte[] bytes) => ToGxValues(bytes.AsSpan());
-        public static List<GXValue> ToGxValues(this ReadOnlySpan<byte> bytes)
+        public static GXValue[] ToGxValues(this byte[] bytes) => ToGxValues(bytes.AsSpan());
+        public static GXValue[] ToGxValues(this ReadOnlySpan<byte> bytes)
         {
             if (bytes.Length % 4 != 0)
                 throw new ArgumentException("The number of bytes has to be divisible by 4.");
 
-            var values = new List<GXValue>();
-            for (int i = 0; i < bytes.Length; i += 4)
-                values.Add(BitConverter.ToInt32(bytes.Slice(i, 4)));
+            var values = new GXValue[bytes.Length / 4];
+            for (int i = 0; i < values.Length; i++)
+                values[i] = new GXValue(i: BitConverter.ToInt32(bytes.Slice(i * 4, 4)));
             return values;
         }
         public static byte[] ToGxDataBytes(this IEnumerable<GXValue> values)
@@ -82,11 +82,6 @@ namespace DS3TexUpUI
         {
             return I.ToString(CultureInfo.InvariantCulture) + "/" + F.ToString(CultureInfo.InvariantCulture);
         }
-
-        public static implicit operator int(GXValue v) => v.I;
-        public static implicit operator float(GXValue v) => v.F;
-        public static implicit operator GXValue(int i) => new GXValue(i);
-        public static implicit operator GXValue(float f) => new GXValue(f);
     }
 
     public enum GXValueType
