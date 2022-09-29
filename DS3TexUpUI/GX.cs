@@ -174,6 +174,7 @@ namespace DS3TexUpUI
     {
         public GXMDItemType Type { get; set; }
         public object Value { get; set; }
+        public bool? Flagged { get; set; } = null;
 
         public GXMDItem(GXMDItemType type, object value)
         {
@@ -261,28 +262,48 @@ namespace DS3TexUpUI
             for (var j = 0; j < count; j++)
             {
                 var id = reader.ReadInt();
-                var dataType = (GXMDItemType)reader.ReadInt();
+                var dataType = reader.ReadInt();
 
-                GXMDItem item;
-                switch (dataType)
+                if (dataType == 0)
                 {
-                    case GXMDItemType.Float:
-                        item = new GXMDItem(reader.ReadFloat());
-                        break;
-                    case GXMDItemType.Float2:
-                        item = new GXMDItem(new Vector2(reader.ReadFloat(), reader.ReadFloat()));
-                        break;
-                    case GXMDItemType.Float3:
-                        item = new GXMDItem(new Vector3(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
-                        break;
-                    case GXMDItemType.Float5:
-                        item = new GXMDItem(new Float5(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
-                        break;
-                    default:
-                        throw new FormatException($"Unknown data type {dataType}");
-                }
+                    var value = reader.ReadInt();
+                    if (value != 0 && value != 1)
+                        throw new FormatException($"Invalid flag value {value}. Expected 0 or 1.");
 
-                result.Add(id, item);
+                    if (result.TryGetValue(id, out var item))
+                    {
+                        if (item.Flagged != null)
+                            throw new FormatException($"{id} cannot be flagged twice.");
+                        item.Flagged = value != 0;
+                    }
+                    else
+                    {
+                        throw new FormatException($"{id} cannot be flagged because it doesn't exist.");
+                    }
+                }
+                else
+                {
+                    GXMDItem item;
+                    switch ((GXMDItemType)dataType)
+                    {
+                        case GXMDItemType.Float:
+                            item = new GXMDItem(reader.ReadFloat());
+                            break;
+                        case GXMDItemType.Float2:
+                            item = new GXMDItem(new Vector2(reader.ReadFloat(), reader.ReadFloat()));
+                            break;
+                        case GXMDItemType.Float3:
+                            item = new GXMDItem(new Vector3(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
+                            break;
+                        case GXMDItemType.Float5:
+                            item = new GXMDItem(new Float5(reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat(), reader.ReadFloat()));
+                            break;
+                        default:
+                            throw new FormatException($"Unknown data type {dataType}");
+                    }
+
+                    result.Add(id, item);
+                }
             }
 
             if (!reader.End)
@@ -297,7 +318,7 @@ namespace DS3TexUpUI
             void WriteInt(int i) => result.Add(new GXValue(i: i));
             void WriteFloat(float f) => result.Add(new GXValue(f: f));
 
-            WriteInt(Items.Count);
+            WriteInt(Items.Count + Items.Values.Where(i => i.Flagged.HasValue).Count());
 
             foreach (var (id, item) in Items)
             {
@@ -341,6 +362,13 @@ namespace DS3TexUpUI
                         }
                     default:
                         throw new FormatException($"Invalid item type {item.Type}");
+                }
+
+                if (item.Flagged.HasValue)
+                {
+                    WriteInt(id);
+                    WriteInt(0);
+                    WriteInt(item.Flagged.Value ? 1 : 0);
                 }
             }
 
