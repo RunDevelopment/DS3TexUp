@@ -1516,5 +1516,56 @@ namespace DS3TexUpUI
 
             return result.AsTextureMap(image.Width);
         }
+
+        public static ArrayTextureMap<Rgba32> Overlay(this ArrayTextureMap<Rgba32> bottom, ArrayTextureMap<Rgba32> top)
+        {
+            if (bottom.Width != top.Width || bottom.Height != top.Height)
+                throw new ArgumentException();
+
+            var result = new Rgba32[bottom.Count];
+            for (int i = 0; i < result.Length; i++)
+            {
+                var b = bottom[i];
+                var t = top[i];
+
+                var bA = b.A / 255f;
+                var tA = t.A / 255f;
+
+                var finalA = 1 - (1 - bA) * (1 - tA);
+                if (finalA == 0) continue;
+
+                var tStr = tA;
+                var bStr = bA - tA * bA;
+
+                result[i] = new Rgba32(
+                    ((b.R * bStr + t.R * tStr) / finalA).ToByteClamp(),
+                    ((b.G * bStr + t.G * tStr) / finalA).ToByteClamp(),
+                    ((b.B * bStr + t.B * tStr) / finalA).ToByteClamp(),
+                    (finalA * 255).ToByteClamp()
+                );
+            }
+
+            return result.AsTextureMap(bottom.Width);
+        }
+
+        public static ArrayTextureMap<Rgba32> Translate(this ArrayTextureMap<Rgba32> img, int x, int y)
+        {
+            var result = new Rgba32[img.Count];
+
+            var startX = Math.Max(0, x);
+            var endX = Math.Min(img.Width, img.Width + x);
+            var startY = Math.Max(0, y);
+            var endY = Math.Min(img.Height, img.Height + y);
+
+            for (int i = startY; i < endY; i++)
+            {
+                for (int j = startX; j < endX; j++)
+                {
+                    result[i * img.Width + j] = img[j - x, i - y];
+                }
+            }
+
+            return result.AsTextureMap(img.Width);
+        }
     }
 }
