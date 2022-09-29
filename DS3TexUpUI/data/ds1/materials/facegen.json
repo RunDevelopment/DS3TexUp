@@ -1,0 +1,278 @@
+[
+	{
+		"FlverPath": "facegen\\FaceGen-fgbnd\\FaceGen\\GameData\\win32\\face.flver",
+		"GXLists": [],
+		"Materials": [
+			{
+				"Name": "#12#",
+				"MTD": "N:\\FRPG\\data\\INTERROOT_win32\\mtd\\parts\\Special\\Ps_FaceGen[DS][M].mtd",
+				"Flags": 870,
+				"Textures": [
+					{
+						"Type": "g_Diffuse",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_gen.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Specular",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_s.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Bumpmap",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_m_face_n.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Diffuse_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_m_face_org_d.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Specular_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\fg_face_org_s.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Bumpmap_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_org_n.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": -1,
+				"Unk18": 0
+			},
+			{
+				"Name": "#13#",
+				"MTD": "N:\\FRPG\\data\\INTERROOT_win32\\mtd\\parts\\Special\\Ps_FaceGen[DS][M].mtd",
+				"Flags": 870,
+				"Textures": [
+					{
+						"Type": "g_Diffuse",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_gen.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Specular",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_s.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Bumpmap",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_m_face_n.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Diffuse_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_m_face_org_d.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Specular_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\fg_face_org_s.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Bumpmap_2",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_face_org_n.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": -1,
+				"Unk18": 0
+			},
+			{
+				"Name": "#12#",
+				"MTD": "N:\\FRPG\\data\\INTERROOT_win32\\mtd\\parts\\Special\\Ps_Eye[DS].mtd",
+				"Flags": 340,
+				"Textures": [
+					{
+						"Type": "g_Diffuse",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_eye.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_Specular",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_eye_s.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": -1,
+				"Unk18": 0
+			},
+			{
+				"Name": "#12#",
+				"MTD": "N:\\FRPG\\data\\INTERROOT_win32\\mtd\\map\\M[D]_Alp.mtd",
+				"Flags": 244,
+				"Textures": [
+					{
+						"Type": "g_Diffuse",
+						"Path": "N:\\FRPG\\data\\FaceGen\\Texture\\FG_eye.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DetailBumpmap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": -1,
+				"Unk18": 0
+			}
+		]
+	}
+]

@@ -18,6 +18,13 @@ namespace DS3TexUpUI
         public const string ExtractDir = @"C:\DS3TexUp\extract-ds1";
         public const string UpscaleDir = @"C:\DS3TexUp\upscale-ds1";
 
+        public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
+        {
+            foreach (var file in Directory.GetFiles(Data.File(name: @"ds1/materials"), "*.json"))
+                foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
+                    yield return item;
+        }
+
         public static void RemoveSolidColor(IProgressToken token)
         {
             token.SubmitStatus("Gathering files");
