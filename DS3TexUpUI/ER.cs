@@ -662,5 +662,12 @@ namespace DS3TexUpUI
                 DS3NormalMap.Load(reFile).Gloss.SaveAsPng(target);
             });
         }
+
+        public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
+        {
+            foreach (var file in Directory.GetFiles(Data.File(@"er/materials"), "*.json"))
+                foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
+                    yield return item;
+        }
     }
 }

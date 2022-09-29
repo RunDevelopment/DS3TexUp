@@ -1,0 +1,9266 @@
+[
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_026-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_026\\sib\\AEG005_026.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 192,
+					"Data": "BQAAAGUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD9nAAAACwAAAAAAgD8AAIA/AACAPwAAgD8AAIA/GwAAAAEAAAAAAIA/HAAAAAEAAAAAAKBANQAAAAEAAAAAAIA/"
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 133,
+					"Data": "AQAAAPUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD8="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m60_fort_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_017.matxml",
+				"Flags": 696,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_13_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_14_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_0_GSBlendMap__BlendEdge",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m60_fort_020",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_020.matxml",
+				"Flags": 310,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 1
+			},
+			{
+				"Name": "m60_fort_212",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_212.matxml",
+				"Flags": 696,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_13_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_14_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_0_GSBlendMap__BlendEdge",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m60_fort_213",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_213.matxml",
+				"Flags": 310,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 3
+			},
+			{
+				"Name": "AET602_015",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_Base\\M[AMSN_V].mtd",
+				"Flags": 512,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_2_AlbedoMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET602\\AET602_015_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 0.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_1_NormalMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET602\\AET602_015_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 0.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 4
+			},
+			{
+				"Name": "AET652_026",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_Base\\M[AMSN_V].mtd",
+				"Flags": 512,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_2_AlbedoMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET652\\AET652_026_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_1_NormalMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET652\\AET652_026_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 5
+			},
+			{
+				"Name": "AET602_015",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_Base\\M[AMSN_V].mtd",
+				"Flags": 512,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_2_AlbedoMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET602\\AET602_015_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 0.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__snp_Texture2D_1_NormalMap_0",
+						"Path": "N:\\GR\\data\\Asset\\Environment\\texture\\AET602\\AET602_015_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 0.5
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_031-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_031\\sib\\AEG005_031.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 192,
+					"Data": "BQAAAGUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD9nAAAACwAAAAAAgD8AAIA/AACAPwAAgD8AAIA/GwAAAAEAAAAAAIA/HAAAAAEAAAAAAKBANQAAAAEAAAAAAIA/"
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m60_fort_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_017.matxml",
+				"Flags": 696,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_13_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_14_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_0_GSBlendMap__BlendEdge",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m60_fort_212",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_212.matxml",
+				"Flags": 696,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_1_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_13_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_14_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2__snp_Texture2D_0_GSBlendMap__BlendEdge",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_040-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_040\\sib\\AEG005_040.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_041-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_041\\sib\\AEG005_041.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_042-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_042\\sib\\AEG005_042.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_043-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_043\\sib\\AEG005_043.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_044-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_044\\sib\\AEG005_044.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_045-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_045\\sib\\AEG005_045.flver",
+		"GXLists": [],
+		"Materials": []
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_100-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_100\\sib\\AEG005_100.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m60_fort_216",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_216.matxml",
+				"Flags": 992,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_6_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_101-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_101\\sib\\AEG005_101.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m60_fort_216",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_216.matxml",
+				"Flags": 992,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_6_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg005\\aeg005_102-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG005\\AEG005_102\\sib\\AEG005_102.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m60_fort_216",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m60_fort\\matxml\\m60_fort_216.matxml",
+				"Flags": 992,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_6_GSBlendMap_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_AN__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg095\\aeg095_002-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG095\\AEG095_002\\sib\\AEG095_002.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m10_00_662",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m10_00\\matxml\\m10_00_662.matxml",
+				"Flags": 286,
+				"Textures": [
+					{
+						"Type": "M_Birds__snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Birds__snp_Texture2D_2_VectorMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg095\\aeg095_003-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG095\\AEG095_003\\sib\\AEG095_003.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m10_00_662",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m10_00\\matxml\\m10_00_662.matxml",
+				"Flags": 286,
+				"Textures": [
+					{
+						"Type": "M_Birds__snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Birds__snp_Texture2D_2_VectorMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_001-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_001\\sib\\AEG225_001.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_00_480",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_00\\matxml\\m11_00_480.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_00_481",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_00\\matxml\\m11_00_481.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_00_482",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_00\\matxml\\m11_00_482.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_002-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_002\\sib\\AEG225_002.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 132,
+					"Data": "AgAAAPUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD/yAAAAAQAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_71_001",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_001.matxml",
+				"Flags": 318,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_004-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_004\\sib\\AEG225_004.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 132,
+					"Data": "AgAAAPUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD/yAAAAAQAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_003",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_003.matxml",
+				"Flags": 318,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_005-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_005\\sib\\AEG225_005.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 132,
+					"Data": "AgAAAPUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD/yAAAAAQAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_71_002",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_002.matxml",
+				"Flags": 318,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_006-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_006\\sib\\AEG225_006.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_037",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_037.matxml",
+				"Flags": 1944,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_8_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_4_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_0_GSBlendMap_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_7_GSBlendMap_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_10_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_2_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_5_GSBlendMap_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_6_GSBlendMap_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_9_GSBlendMap_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_3_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_007-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_007\\sib\\AEG225_007.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_037",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_037.matxml",
+				"Flags": 1944,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_8_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_4_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_0_GSBlendMap_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_7_GSBlendMap_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_10_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_2_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_5_GSBlendMap_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_6_GSBlendMap_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_9_GSBlendMap_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N_Mb4_ColorAdjust_3Mask_ch18__snp_Texture2D_3_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_009-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_009\\sib\\AEG225_009.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 132,
+					"Data": "AgAAAPUAAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD/yAAAAAQAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 460,
+					"Data": "CgAAABsAAAABAAAAAACAPxsAAAAAAAAAAAAAAGQAAAABAAAAAACAP2QAAAAAAAAAAAAAAKwAAAABAAAAAACAP6wAAAAAAAAAAAAAAK0AAAABAAAAAACAP60AAAAAAAAAAAAAAFkBAAABAAAAAACAP1kBAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_003",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_003.matxml",
+				"Flags": 318,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_2_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V__Edge_snp_Texture2D_1_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_005",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_005.matxml",
+				"Flags": 1730,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_13_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_1_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_2_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_8_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_11_AlbedoMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_5_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_6_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_15_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_16_NormalMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_0_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_3_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_4_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 2,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_033",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_033.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 2,
+				"Unk18": 3
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_010-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_010\\sib\\AEG225_010.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 460,
+					"Data": "CgAAABsAAAABAAAAAACAPxsAAAAAAAAAAAAAAGQAAAABAAAAAACAP2QAAAAAAAAAAAAAAKwAAAABAAAAAACAP6wAAAAAAAAAAAAAAK0AAAABAAAAAACAP60AAAAAAAAAAAAAAFkBAAABAAAAAACAP1kBAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_006",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_006.matxml",
+				"Flags": 1730,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_13_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_1_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_2_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_8_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_11_AlbedoMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_5_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_6_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_15_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_16_NormalMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_0_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_3_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_4_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_034",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_034.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 2
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_011-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_011\\sib\\AEG225_011.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 460,
+					"Data": "CgAAABsAAAABAAAAAACAPxsAAAAAAAAAAAAAAGQAAAABAAAAAACAP2QAAAAAAAAAAAAAAKwAAAABAAAAAACAP6wAAAAAAAAAAAAAAK0AAAABAAAAAACAP60AAAAAAAAAAAAAAFkBAAABAAAAAACAP1kBAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_007",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_007.matxml",
+				"Flags": 1730,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_13_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_1_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_2_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_8_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_11_AlbedoMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_5_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_6_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_15_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_16_NormalMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_0_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_3_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_4_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_034",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_034.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 2
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_012-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_012\\sib\\AEG225_012.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 460,
+					"Data": "CgAAABsAAAABAAAAAACAPxsAAAAAAAAAAAAAAGQAAAABAAAAAACAP2QAAAAAAAAAAAAAAKwAAAABAAAAAACAP6wAAAAAAAAAAAAAAK0AAAABAAAAAACAP60AAAAAAAAAAAAAAFkBAAABAAAAAACAP1kBAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_008",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_008.matxml",
+				"Flags": 1730,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_13_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_1_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_2_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_8_AlbedoMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_11_AlbedoMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_5_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_6_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_15_NormalMap_3",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_16_NormalMap_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_0_Mask3Map_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_3_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb4_3Mask_Ov_AN_magma__snp_Texture2D_4_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_036",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_036.matxml",
+				"Flags": 406,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_8_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_7_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Ov_N__snp_Texture2D_2_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 2
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_013-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_013\\sib\\AEG225_013.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_009",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_009.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_011",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_011.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_012",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_012.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_014-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_014\\sib\\AEG225_014.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_014",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_014.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_015",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_015.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_016",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_016.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_017.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_015-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_015\\sib\\AEG225_015.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_017.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_018",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_018.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_019",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_019.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_020",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_020.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_017-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_017\\sib\\AEG225_017.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_009",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_009.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_011",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_011.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_012",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_012.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_025",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_025.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_018-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_018\\sib\\AEG225_018.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_013",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_013.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_014",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_014.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_015",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_015.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_016",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_016.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_026",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_026.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_019-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_019\\sib\\AEG225_019.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_017.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_019",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_019.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_020",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_020.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_027",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_027.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_020-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_020\\sib\\AEG225_020.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_021",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_021.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_022",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_022.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_023",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_023.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_024",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_024.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_028",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_028.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_021-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_021\\sib\\AEG225_021.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_009",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_009.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_010",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_010.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_011",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_011.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_012",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_012.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_025",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_025.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_022-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_022\\sib\\AEG225_022.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_013",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_013.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_014",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_014.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_015",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_015.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_016",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_016.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_026",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_026.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_023-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_023\\sib\\AEG225_023.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_017",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_017.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_018",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_018.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_019",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_019.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_020",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_020.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_027",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_027.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_024-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_024\\sib\\AEG225_024.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_021",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_021.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "m11_70_022",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_022.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			},
+			{
+				"Name": "m11_70_023",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_023.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 2
+			},
+			{
+				"Name": "m11_70_024",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_024.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 3
+			},
+			{
+				"Name": "m11_70_028",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_028.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 4
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_025-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_025\\sib\\AEG225_025.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_029",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_029.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_026-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_026\\sib\\AEG225_026.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_030",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_030.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_027-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_027\\sib\\AEG225_027.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_031",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_031.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_028-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_028\\sib\\AEG225_028.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_032",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_032.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_029-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_029\\sib\\AEG225_029.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_029",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_029.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_030-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_030\\sib\\AEG225_030.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_030",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_030.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_031-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_031\\sib\\AEG225_031.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_031",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_031.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "asset\\aeg\\aeg225\\aeg225_032-geombnd-dcx\\GR\\data\\INTERROOT_win64\\asset\\aeg\\AEG225\\AEG225_032\\sib\\AEG225_032.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "m11_70_032",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m11_70\\matxml\\m11_70_032.matxml",
+				"Flags": 1048,
+				"Textures": [
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_2_GSBlendMap_AlbedoMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_3_GSBlendMap_AlbedoMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_0_GSBlendMap_NormalMap_1",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_1_GSBlendMap_NormalMap_2",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_5_GSBlendMap_NormalMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_4_GSBlendMap_Mask1Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_AMSN_V_Mb2_Ov_N_magma__snp_Texture2D_7_GSBlendMap_Mask3Map_4",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	}
+]
