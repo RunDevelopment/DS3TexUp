@@ -4,7 +4,6 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text.Json;
-using Accord.MachineLearning;
 using Pfim;
 using SixLabors.ImageSharp.PixelFormats;
 
@@ -224,72 +223,6 @@ namespace DS3TexUpUI
 
                 data.SaveAsJson("foo.json");
             };
-        }
-
-        public class Learning
-        {
-            public enum Kind : int
-            {
-                Metal = 0,
-                NonMetal = 1,
-            }
-
-            public static List<Metalness.DataPoint> ReadData()
-            {
-                byte[] bytes;
-                using (var fs = File.OpenRead(@"metalness-data.json.gz"))
-                using (var gz = new GZipStream(fs, CompressionMode.Decompress))
-                using (var ms = new MemoryStream())
-                {
-                    gz.CopyTo(ms);
-                    bytes = ms.ToArray();
-                }
-
-                var jr = new Utf8JsonReader(bytes, new JsonReaderOptions());
-                return JsonConverters.Deserialize<List<Metalness.DataPoint>>(ref jr);
-            }
-
-            public static Func<Metalness.MaterialPoint, byte> CreateEstimator(IProgressToken token)
-            {
-                static double[] ToInputs(MaterialPoint m)
-                {
-                    HSV a = m.A;
-                    HSV r = m.R;
-
-                    return new double[] {
-                        a.H / 360f,
-                        a.S,
-                        a.V,
-                        m.S / 255f,
-                        r.H / 360f,
-                        r.S,
-                        r.V,
-                    };
-                }
-
-                token.SubmitStatus("Loading data");
-                var metalData = ReadData();
-
-                token.SubmitStatus("Transforming data");
-                var inputs = new List<double[]>();
-                var outputs = new List<int>();
-                foreach (var dp in metalData)
-                {
-                    inputs.Add(ToInputs(dp.Material));
-                    outputs.Add((int)(dp.Metal ? Kind.Metal : Kind.NonMetal));
-                }
-
-                token.SubmitStatus("Learning");
-                var knn = new KNearestNeighbors(k: 4);
-                // We learn the algorithm:
-                knn.Learn(inputs.ToArray(), outputs.ToArray());
-
-                return m =>
-                {
-                    var result = knn.Decide(ToInputs(m));
-                    return result == (int)Kind.Metal ? (byte)255 : (byte)0;
-                };
-            }
         }
     }
 }
