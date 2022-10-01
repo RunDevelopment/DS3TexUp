@@ -81,6 +81,7 @@ namespace DS3TexUpUI
 
         public override string ToString()
         {
+            if (I == 0) return "0";
             return I.ToString(CultureInfo.InvariantCulture) + "/" + F.ToString(CultureInfo.InvariantCulture);
         }
     }
