@@ -63,6 +63,153 @@
 		]
 	},
 	{
+		"ID": "GX00",
+		"Unk04": 101,
+		"Category": null,
+		"Items": [
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			}
+		]
+	},
+	{
+		"ID": "GX00",
+		"Unk04": 102,
+		"Category": null,
+		"Items": [
+			{
+				"Name": "Unknown",
+				"Type": 1,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 1,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 1,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 1,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			}
+		]
+	},
+	{
 		"ID": "GX01",
 		"Unk04": 101,
 		"Category": null,
@@ -256,7 +403,7 @@
 			{
 				"Name": "Tess Factor (Inside)",
 				"Type": 2,
-				"Min": 1,
+				"Min": 0.5,
 				"Max": 64,
 				"Enum": null
 			},
@@ -264,7 +411,7 @@
 				"Name": "Back Face Cull",
 				"Type": 2,
 				"Min": 0,
-				"Max": 1,
+				"Max": 5,
 				"Enum": null
 			},
 			{
@@ -1537,7 +1684,7 @@
 			{
 				"Name": "Soft Volume",
 				"Type": 2,
-				"Min": 0.001,
+				"Min": 0,
 				"Max": 10,
 				"Enum": null
 			},

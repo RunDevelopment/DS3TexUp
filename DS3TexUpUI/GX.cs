@@ -49,8 +49,8 @@ namespace DS3TexUpUI
         /// </summary>
         public static IReadOnlyList<int> GXMDUnk04
             = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
-        public static IReadOnlyDictionary<string, GX00ItemDescriptor> GX00Descriptor
-            = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemDescriptor>>().ToDictionary(i => i.ID);
+        public static IReadOnlyDictionary<(string id, int unk04), GX00ItemDescriptor> GX00Descriptor
+            = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemDescriptor>>().ToDictionary(i => (i.ID, i.Unk04));
     }
 
     public enum GXIdType
