@@ -97,6 +97,27 @@ namespace DS3TexUpUI
         // Note: Multiple item lists can have the same category.
         public string? Category { get; set; }
         public List<GX00ItemValueDescriptor> Items { get; set; } = new List<GX00ItemValueDescriptor>();
+
+        public bool Fits(FLVER2.GXItem item)
+        {
+            if (item.ID != ID || item.Unk04 != Unk04) return false;
+            return Fits(item.Data);
+        }
+        public bool Fits(byte[] data)
+        {
+            if (data.Length % 4 != 0) return false;
+            return Fits(data.ToGxValues());
+        }
+        public bool Fits(GXValue[] values)
+        {
+            if (values.Length != Items.Count) return false;
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (!Items[i].Fits(values[i]))
+                    return false;
+            }
+            return true;
+        }
     }
 
     public class GX00ItemValueDescriptor
@@ -109,6 +130,35 @@ namespace DS3TexUpUI
         public float? Max { get; set; }
         // If the type is Enum, then this lists all variants. This is a mapping from value to label.
         public Dictionary<int, string>? Enum { get; set; }
+
+        public bool Fits(int value)
+        {
+            return Type switch
+            {
+                GX00ItemValueType.Unknown => value == 0,
+                GX00ItemValueType.Int => (Min == null || Min.Value <= value) && (Max == null || Max.Value >= value),
+                GX00ItemValueType.Enum => Enum != null && Enum.ContainsKey(value),
+                GX00ItemValueType.Bool => value == 0 || value == 1,
+                _ => false
+            };
+        }
+        public bool Fits(float value)
+        {
+            return Type switch
+            {
+                GX00ItemValueType.Unknown => value == 0f,
+                GX00ItemValueType.Float => (Min == null || Min.Value <= value) && (Max == null || Max.Value >= value),
+                _ => false
+            };
+        }
+        public bool Fits(GXValue value)
+        {
+            return Type switch
+            {
+                GX00ItemValueType.Float => Fits(value.F),
+                _ => Fits(value.I)
+            };
+        }
     }
     public enum GX00ItemValueType
     {
