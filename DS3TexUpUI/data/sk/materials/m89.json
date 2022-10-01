@@ -1,0 +1,1939 @@
+[
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900000-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900000\\m89_00_00_99_900000_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900000-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900000\\m89_00_00_99_900000.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900000\u3010\u5929\u7403_\u671D\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Morning.mtd",
+				"Flags": 330,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900010-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900010\\m89_00_00_99_900010_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900010-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900010\\m89_00_00_99_900010.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900010\u3010\u5929\u7403_\u663C\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Afternoon.mtd",
+				"Flags": 334,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900015-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900015\\m89_00_00_99_900015_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900015-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900015\\m89_00_00_99_900015.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900010\u3010\u5929\u7403_\u663C\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Afternoon.mtd",
+				"Flags": 334,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900020-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900020\\m89_00_00_99_900020_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900020-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900020\\m89_00_00_99_900020.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900020\u3010\u5929\u7403_\u5915\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Evening.mtd",
+				"Flags": 330,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900030-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900030\\m89_00_00_99_900030_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900030-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900030\\m89_00_00_99_900030.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900030\u3010\u5929\u7403_\u591C\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Night.mtd",
+				"Flags": 326,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900040-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900040\\m89_00_00_99_900040_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900040-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900040\\m89_00_00_99_900040.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900040\u3010\u5929\u7403_\u904E\u53BB\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_PastNight.mtd",
+				"Flags": 336,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900050-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900050\\m89_00_00_99_900050_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900050-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900050\\m89_00_00_99_900050.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900050\u3010\u5929\u7403_\u671D\u713C\u3051\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Dawn.mtd",
+				"Flags": 328,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900060-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900060\\m89_00_00_99_900060_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900060-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900060\\m89_00_00_99_900060.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "09 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_Cloud.mtd",
+				"Flags": 196,
+				"Textures": [
+					{
+						"Type": "M_Sky__Cloud_snp_Texture2D_1_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "M_m900040\u3010\u5929\u7403_\u904E\u53BB\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[m10_00]_SkyDome_Night1.mtd",
+				"Flags": 336,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900070-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900070\\m89_00_00_99_900070_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900070-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900070\\m89_00_00_99_900070.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "09 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_Cloud.mtd",
+				"Flags": 354,
+				"Textures": [
+					{
+						"Type": "M_Sky__Cloud_snp_Texture2D_0_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__Cloud_snp_Texture2D_1_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__Cloud_snp_Texture2D_2_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "M_m900040\u3010\u5929\u7403_\u904E\u53BB\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[m25_00]_SkyDome_Night1.mtd",
+				"Flags": 308,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_0_Star",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_2_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 1
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900075-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900075\\m89_00_00_99_900075_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900075-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900075\\m89_00_00_99_900075.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900075\u3010\u5929\u7403_\u6697\u96F2\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_DarkClouds.mtd",
+				"Flags": 338,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900080-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900080\\m89_00_00_99_900080_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900080-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900080\\m89_00_00_99_900080.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 1648,
+					"Data": "AgAAAHsMAAACAAAAAADgQAAA4EB7DAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900080\u3010\u5929\u7403_\u5D50\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Storm.mtd",
+				"Flags": 462,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_0_Star",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_1_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_2_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_4_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900085-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900085\\m89_00_00_99_900085_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900085-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900085\\m89_00_00_99_900085.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 1674,
+					"Data": "AgAAAHsMAAACAAAAAADgQAAA4EB7DAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900085\u3010\u5929\u7403_\u9727\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Fog.mtd",
+				"Flags": 540,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_0_Star",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_1_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_2_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_4_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900090-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900090\\m89_00_00_99_900090_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900090-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900090\\m89_00_00_99_900090.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 1674,
+					"Data": "AgAAAHsMAAACAAAAAADgQAAA4EB7DAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900090\u3010\u5929\u7403_\u96F2\u6D77\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_CloudSea.mtd",
+				"Flags": 552,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_0_Star",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_1_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_2_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_snp_Texture2D_4_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900095-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900095\\m89_00_00_99_900095_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900095-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900095\\m89_00_00_99_900095.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "M_m900095\u3010\u5929\u7403_\u706B\u4E8B\u3011",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Sky]_SkyDome_Fire.mtd",
+				"Flags": 326,
+				"Textures": [
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_3_Mask3Map",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "M_Sky__SkyDome_Ver2_snp_Texture2D_5_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900100-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900100\\m89_00_00_99_900100_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900100-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900100\\m89_00_00_99_900100.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Morning.mtd",
+				"Flags": 252,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900110-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900110\\m89_00_00_99_900110_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900110-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900110\\m89_00_00_99_900110.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Afternoon.mtd",
+				"Flags": 256,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900115-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900115\\m89_00_00_99_900115_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900115-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900115\\m89_00_00_99_900115.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Afternoon.mtd",
+				"Flags": 256,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900120-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900120\\m89_00_00_99_900120_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900120-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900120\\m89_00_00_99_900120.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Evening.mtd",
+				"Flags": 252,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900130-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900130\\m89_00_00_99_900130_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900130-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900130\\m89_00_00_99_900130.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Night.mtd",
+				"Flags": 248,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900140-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900140\\m89_00_00_99_900140_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900140-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900140\\m89_00_00_99_900140.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_PastNight.mtd",
+				"Flags": 256,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900150-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900150\\m89_00_00_99_900150_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900150-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900150\\m89_00_00_99_900150.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Dawn.mtd",
+				"Flags": 246,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900160-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900160\\m89_00_00_99_900160_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900160-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900160\\m89_00_00_99_900160.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_RainNight.mtd",
+				"Flags": 256,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900170-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900170\\m89_00_00_99_900170_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900170-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900170\\m89_00_00_99_900170.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[m25_00]_FarMtn_Night1.mtd",
+				"Flags": 244,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900175-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900175\\m89_00_00_99_900175_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900175-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900175\\m89_00_00_99_900175.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_DarkClouds.mtd",
+				"Flags": 258,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900180-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900180\\m89_00_00_99_900180_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900180-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900180\\m89_00_00_99_900180.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Storm.mtd",
+				"Flags": 248,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900190-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900190\\m89_00_00_99_900190_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900190-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900190\\m89_00_00_99_900190.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_SeaOfCloud.mtd",
+				"Flags": 258,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900200-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900200\\m89_00_00_99_900200_S.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "shadow",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[Shadow].mtd",
+				"Flags": 100,
+				"Textures": [],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	},
+	{
+		"FlverPath": "map\\m89_00_00_99\\m89_00_00_99_900200-mapbnd-dcx\\map\\m89_00_00_99\\m89_00_00_99_900200\\m89_00_00_99_900200.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "07 - Default",
+				"MTD": "N:\\NTC\\data\\Material\\mtd\\map\\M[LandScape]_FarMtn_Fire.mtd",
+				"Flags": 246,
+				"Textures": [
+					{
+						"Type": "M_LandScape__FarMountain_snp_Texture2D_0_AlbedoMap",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			}
+		]
+	}
+]
