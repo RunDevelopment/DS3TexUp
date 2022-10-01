@@ -8,8 +8,6 @@ namespace DS3TexUpUI
     {
         public string YabberExe { get; set; }
         public string TexConvExe { get; set; }
-        public string CompressonatorCliExe { get; set; }
-        public string NVCompressExe { get; set; }
         public int MaxDegreeOfParallelism { get; set; }
 
         public static readonly AppConfig Instance = LoadInstance();
@@ -29,8 +27,6 @@ namespace DS3TexUpUI
                 throw new Exception($"The path to {nameof(YabberExe)} does not exist. {change}");
             if (!File.Exists(TexConvExe))
                 throw new Exception($"The path to {nameof(TexConvExe)} does not exist. {change}");
-            if (!File.Exists(CompressonatorCliExe))
-                throw new Exception($"The path to {nameof(CompressonatorCliExe)} does not exist. {change}");
 
             if (MaxDegreeOfParallelism <= 0)
             {

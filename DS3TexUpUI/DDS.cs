@@ -136,67 +136,6 @@ namespace DS3TexUpUI
                 throw new Exception("Invalid format: " + format);
             }
         }
-
-        internal static void ToDDSUsingCompressonator(string file, string target)
-        {
-            var info = new ProcessStartInfo(AppConfig.Instance.CompressonatorCliExe);
-            info.ArgumentList.Add("-fd");
-            info.ArgumentList.Add("BC1");
-            info.ArgumentList.Add("-DXT1UseAlpha");
-            info.ArgumentList.Add("1");
-            // info.ArgumentList.Add("-EncodeWith");
-            // info.ArgumentList.Add("GPU");
-            info.ArgumentList.Add("-RefineSteps");
-            info.ArgumentList.Add("2");
-            info.ArgumentList.Add("-miplevels");
-            info.ArgumentList.Add("20");
-
-            info.ArgumentList.Add(file);
-            info.ArgumentList.Add(target);
-
-            info.CreateNoWindow = true;
-            info.RedirectStandardError = true;
-            info.RedirectStandardInput = true;
-            info.RedirectStandardOutput = true;
-
-            var p = Process.Start(info)!;
-            p.WaitForExit();
-            if (p.ExitCode != 0)
-                throw new Exception("Unable to convert file: " + p.StandardOutput.ReadToEnd());
-        }
-
-        internal static void ToDDSUsingNVCompress(string file, string target, DDSFormat format)
-        {
-            var info = new ProcessStartInfo(AppConfig.Instance.NVCompressExe);
-            info.ArgumentList.Add("-dds10");
-            info.ArgumentList.Add("-silent");
-            info.ArgumentList.Add("-alpha");
-            info.ArgumentList.Add("-alpha_dithering");
-
-
-            info.ArgumentList.Add("BC1");
-            info.ArgumentList.Add("-DXT1UseAlpha");
-            info.ArgumentList.Add("1");
-            info.ArgumentList.Add("-EncodeWith");
-            info.ArgumentList.Add("GPU");
-            info.ArgumentList.Add("-RefineSteps");
-            info.ArgumentList.Add("2");
-            info.ArgumentList.Add("-miplevels");
-            info.ArgumentList.Add("20");
-
-            info.ArgumentList.Add(file);
-            info.ArgumentList.Add(target);
-
-            info.CreateNoWindow = true;
-            info.RedirectStandardError = true;
-            info.RedirectStandardInput = true;
-            info.RedirectStandardOutput = true;
-
-            var p = Process.Start(info)!;
-            p.WaitForExit();
-            if (p.ExitCode != 0)
-                throw new Exception("Unable to convert file: " + p.StandardOutput.ReadToEnd());
-        }
     }
 
     public class DDSImage : IDisposable
