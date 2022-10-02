@@ -175,7 +175,10 @@ namespace DS3TexUpUI
 
         public static void SaveAsJson<T>(this T value, string file, bool formatted = true)
         {
+            file = Path.GetFullPath(file);
             if (File.Exists(file)) File.Delete(file);
+            var parentDir = Path.GetDirectoryName(file)!;
+            if (!Directory.Exists(file)) Directory.CreateDirectory(parentDir);
 
             if (formatted)
             {
