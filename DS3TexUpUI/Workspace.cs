@@ -85,7 +85,7 @@ namespace DS3TexUpUI
                 token.SubmitStatus($"Unpacking {map} map files");
 
                 var mapDir = Path.Join(MapsDir, map);
-                Yabber.RunParallel(Directory.GetFiles(mapDir, $"{map}*.tpfbhd", SearchOption.TopDirectoryOnly));
+                Yabber.RunParallel(token, Directory.GetFiles(mapDir, $"{map}*.tpfbhd", SearchOption.TopDirectoryOnly));
 
                 var files = new List<string>();
                 foreach (var unpackedDir in GetUnpackedMapFileFolders(map))
