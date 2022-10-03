@@ -1158,14 +1158,14 @@
 		"Items": [
 			{
 				"Name": "Reflectance2 ScrollSpeedU",
-				"Type": 0,
+				"Type": 2,
 				"Min": null,
 				"Max": null,
 				"Enum": null
 			},
 			{
 				"Name": "Reflectance2 ScrollSpeedV",
-				"Type": 0,
+				"Type": 2,
 				"Min": null,
 				"Max": null,
 				"Enum": null
@@ -1214,7 +1214,7 @@
 		"Items": [
 			{
 				"Name": "Shininess2 ScrollSpeedU",
-				"Type": 0,
+				"Type": 2,
 				"Min": null,
 				"Max": null,
 				"Enum": null
