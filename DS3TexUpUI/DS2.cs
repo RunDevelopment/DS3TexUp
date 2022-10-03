@@ -18,6 +18,13 @@ namespace DS3TexUpUI
         public const string GameDir = @"C:\Program Files (x86)\Steam\steamapps\common\Dark Souls II Scholar of the First Sin\Game";
         public const string ExtractDir = @"C:\DS3TexUp\extract-ds2";
 
+        public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
+        {
+            foreach (var file in Directory.GetFiles(Data.File(name: @"ds2/materials"), "*.json"))
+                foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
+                    yield return item;
+        }
+
         private static void CopyDDS(string ddsFile, string dir, string? prefix = null)
         {
             var i = ddsFile.LoadTextureMap();

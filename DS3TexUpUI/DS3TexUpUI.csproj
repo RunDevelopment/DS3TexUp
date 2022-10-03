@@ -31,6 +31,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\ds2\%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
+    <ContentWithTargetPath Include="data\ds2\materials\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)\data\ds2\materials\%(Filename)%(Extension)</TargetPath>
+    </ContentWithTargetPath>
     <ContentWithTargetPath Include="data\er\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\er\%(Filename)%(Extension)</TargetPath>
