@@ -98,6 +98,39 @@ namespace DS3TexUpUI
                 )
                 .SaveAsJson(Data.File("gx/gx00-values-by-index.json", Data.Source.Local));
         }
+        internal static void CreateGX00UsagePerGame()
+        {
+            static IEnumerable<(string Game, string ID, int Unk04)> Tag(string game, IEnumerable<FlverMaterialInfo> infos)
+            {
+                return infos
+                    .SelectMany(i => i.GXLists.SelectMany(l => l))
+                    .Where(g => g.ID != "GXMD")
+                    .Select(gx => (game, gx.ID, gx.Unk04));
+            }
+
+            var data = Tag("SK", Sekiro.ReadAllFlverMaterialInfo())
+                .Concat(Tag("ER", ER.ReadAllFlverMaterialInfo()))
+                .Concat(Tag("DS3", DS3.ReadAllFlverMaterialInfo()))
+                .Concat(Tag("BB", BB.ReadAllFlverMaterialInfo()));
+
+            data
+                .GroupBy(g => g.ID)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g
+                        .GroupBy(g => g.Unk04)
+                        .ToDictionary(
+                            g => g.Key,
+                            g => g
+                                .GroupBy(g => g.Game)
+                                .ToDictionary(
+                                    g => g.Key,
+                                    g => g.Count()
+                                )
+                        )
+                )
+                .SaveAsJson(Data.File("gx/gx00-usage-per-game.json", Data.Source.Local));
+        }
     }
 
     public enum GXIdType
