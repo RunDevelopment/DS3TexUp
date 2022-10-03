@@ -51,6 +51,53 @@ namespace DS3TexUpUI
             = Data.File("gx/gxmd-unk04.json").LoadJsonFile<List<int>>();
         public static IReadOnlyDictionary<(string id, int unk04), GX00ItemDescriptor> GX00Descriptor
             = Data.File("gx/gx00-descriptors.json").LoadJsonFile<List<GX00ItemDescriptor>>().ToDictionary(i => (i.ID, i.Unk04));
+
+        internal static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
+        {
+            return Sekiro.ReadAllFlverMaterialInfo()
+                .Concat(ER.ReadAllFlverMaterialInfo())
+                .Concat(DS3.ReadAllFlverMaterialInfo())
+                .Concat(BB.ReadAllFlverMaterialInfo());
+        }
+        internal static void CreateGXMDUnk04()
+        {
+            ReadAllFlverMaterialInfo()
+                .SelectMany(i => i.GXLists.SelectMany(l => l))
+                .Where(g => g.ID == "GXMD")
+                .Select(g => g.Unk04)
+                .ToHashSet()
+                .OrderBy(i => i)
+                .ToList()
+                .SaveAsJson(Data.File("gx/gxmd-unk04.json", Data.Source.Local));
+        }
+        internal static void CreateGX00ValuesByIndex()
+        {
+            ReadAllFlverMaterialInfo()
+                .SelectMany(i => i.GXLists.SelectMany(l => l))
+                .Where(g => g.ID != "GXMD")
+                .GroupBy(g => g.ID)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g
+                        .GroupBy(g => g.Unk04)
+                        .ToDictionary(
+                            g => g.Key,
+                            g => g
+                                .SelectMany(gx => gx.Data.ToGxValues().Select((v, i) => (v, i)))
+                                .GroupBy(gx => gx.i)
+                                .ToDictionary(
+                                    g => g.Key,
+                                    g => g
+                                        .Select(gx => gx.v)
+                                        .GroupBy(gx => gx.I)
+                                        .OrderByDescending(g => g.Count())
+                                        .Select(g => g.Count().ToString().PadRight(10) + g.First().ToString())
+                                        .ToList()
+                                )
+                        )
+                )
+                .SaveAsJson(Data.File("gx/gx00-values-by-index.json", Data.Source.Local));
+        }
     }
 
     public enum GXIdType
