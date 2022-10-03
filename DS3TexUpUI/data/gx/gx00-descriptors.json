@@ -396,14 +396,14 @@
 			{
 				"Name": "Tess Factor (Edge)",
 				"Type": 2,
-				"Min": 1,
+				"Min": 0,
 				"Max": 64,
 				"Enum": null
 			},
 			{
 				"Name": "Tess Factor (Inside)",
 				"Type": 2,
-				"Min": 0.5,
+				"Min": 0,
 				"Max": 64,
 				"Enum": null
 			},
@@ -418,21 +418,21 @@
 				"Name": "Distance-Min",
 				"Type": 2,
 				"Min": 0,
-				"Max": 100,
+				"Max": 1000,
 				"Enum": null
 			},
 			{
 				"Name": "Distance-Max",
 				"Type": 2,
 				"Min": 0,
-				"Max": 100,
+				"Max": 1000,
 				"Enum": null
 			},
 			{
 				"Name": "Displacement Bias",
 				"Type": 2,
 				"Min": 0,
-				"Max": 1,
+				"Max": 5,
 				"Enum": null
 			},
 			{
