@@ -753,6 +753,48 @@
 		]
 	},
 	{
+		"ID": "GX08",
+		"Unk04": 100,
+		"Category": null,
+		"Items": [
+			{
+				"Name": "Frozen Threshold",
+				"Type": 2,
+				"Min": 0,
+				"Max": 1,
+				"Enum": null
+			},
+			{
+				"Name": "Frozen Pow",
+				"Type": 2,
+				"Min": 0,
+				"Max": 1,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			},
+			{
+				"Name": "Unknown",
+				"Type": 0,
+				"Min": null,
+				"Max": null,
+				"Enum": null
+			}
+		]
+	},
+	{
 		"ID": "GX09",
 		"Unk04": 100,
 		"Category": null,
