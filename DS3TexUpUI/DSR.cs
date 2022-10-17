@@ -306,31 +306,6 @@ namespace DS3TexUpUI
             MaxDiff = new Rgba32(2, 2, 2, 100),
         };
 
-        // public static ExternalReuse GeneralReuse = new ExternalReuse()
-        // {
-        //     CertainFile = @"er/copy-general.json",
-        //     UncertainFile = @"er/copy-general-uncertain.json",
-        //     RejectedFile = @"er/copy-general-rejected.json",
-
-        //     ExternalDir = ExtractDir,
-        //     ExternalSize = OriginalSize,
-
-        //     Ds3Filter = id =>
-        //     {
-        //         if (id.GetRepresentative() != id) return false;
-        //         if (id.IsSolidColor()) return false;
-        //         if (id.GetTexKind() == TexKind.Normal) return false;
-        //         return true;
-        //     },
-        //     ExternalFilter = file => TexKinds[file] != TexKind.Normal,
-
-        //     RequireGreater = true,
-        //     SameKind = true,
-
-        //     CopySpread = image => image.Count <= 64 * 64 ? 10 : image.Count <= 128 * 128 ? 8 : 6,
-        //     MaxDiff = new Rgba32(2, 2, 2, 2),
-        // };
-
         public static ExternalReuse AlphaReuse = new ExternalReuse()
         {
             CertainFile = @"dsr/copy-alpha.json",
@@ -358,7 +333,7 @@ namespace DS3TexUpUI
             },
 
             CopyHasherFactory = Hasher.Alpha(),
-            CopySpread = image => 9,
+            CopySpread = image => 6,
             MaxDiff = new Rgba32(255, 255, 255, 2),
             ModifyImage = image =>
             {
@@ -392,8 +367,8 @@ namespace DS3TexUpUI
             },
             ExternalFilter = file => TexKinds[file] == TexKind.Normal,
 
-            CopyHasherFactory = Hasher.Normal(),
-            CopySpread = image => 40,
+            CopyHasherFactory = Hasher.NormalDirection(mid: false),
+            CopySpread = image => 20,
             MaxDiff = new Rgba32(2, 2, 255, 255),
             ModifyImage = image =>
             {
