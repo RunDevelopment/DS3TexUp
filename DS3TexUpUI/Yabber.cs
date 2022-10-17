@@ -16,7 +16,7 @@ namespace DS3TexUpUI
                 .Where(f =>
                 {
                     var ext = Path.GetExtension(f);
-                    if (ext != null && (ext == ".dcx" || ext.EndsWith("bnd")))
+                    if (ext != null && (ext == ".dcx" || ext == ".tpf" || ext.EndsWith("bnd")))
                     {
                         // yabber might have decompressed certain archives already,
                         // in which case we don't have to do it again
