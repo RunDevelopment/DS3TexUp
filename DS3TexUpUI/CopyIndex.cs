@@ -414,6 +414,49 @@ namespace DS3TexUpUI
                 }
             });
         }
+        public static IHasherFactory NormalDirection(int minPixels = 512, bool mid = true)
+        {
+            return new Factory(minPixels, channels: 2, writer: (image, downScale, bytes) =>
+            {
+                byte rMid = 127;
+                byte gMid = 127;
+                if (mid)
+                {
+                    int rTotal = 0;
+                    int gTotal = 0;
+                    for (int i = 0; i < image.Data.Length; i++)
+                    {
+                        rTotal += image.Data[i].R;
+                        gTotal += image.Data[i].G;
+                    }
+                    rMid = (byte)(rTotal / image.Data.Length);
+                    gMid = (byte)(gTotal / image.Data.Length);
+                }
+
+                var r = new byte[image.Data.Length];
+                var g = new byte[image.Data.Length];
+                for (int i = 0; i < image.Data.Length; i++)
+                {
+                    r[i] = toDirection(image.Data[i].R, rMid);
+                    g[i] = toDirection(image.Data[i].G, gMid);
+                }
+
+                static byte toDirection(byte n, byte mid)
+                {
+                    var low = (n - mid) / 2; // divide by 2 to get rid of noise
+                    return low < 0 ? (byte)0 : (byte)64;
+                }
+
+                var rSmall = r.AsTextureMap(image.Width).DownSample(Average.Byte, downScale);
+                var gSmall = g.AsTextureMap(image.Width).DownSample(Average.Byte, downScale);
+
+                for (int i = 0; i < rSmall.Data.Length; i++)
+                {
+                    bytes[i * 2 + 0] = rSmall.Data[i];
+                    bytes[i * 2 + 1] = gSmall.Data[i];
+                }
+            });
+        }
         public static IHasherFactory BlueChannel(int minPixels = 512)
         {
             return new Factory(minPixels, channels: 1, writer: (image, downScale, bytes) =>
