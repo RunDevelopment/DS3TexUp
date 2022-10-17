@@ -391,6 +391,26 @@ namespace DS3TexUpUI
                 }
             });
         }
+        public static IHasherFactory Rgb(int minPixels = 256)
+        {
+            return new Factory(minPixels, channels: 3, writer: (image, downScale, bytes) =>
+            {
+                var small = image.DownSample(Average.Rgba32, downScale);
+
+                const float WeightR = 0.25f;
+                const float WeightG = 0.5f;
+                const float WeightB = 0.25f;
+
+                for (int i = 0; i < small.Data.Length; i++)
+                {
+                    var p = small.Data[i];
+
+                    bytes[i * 3 + 0] = (byte)(p.R * WeightR);
+                    bytes[i * 3 + 1] = (byte)(p.G * WeightG);
+                    bytes[i * 3 + 2] = (byte)(p.B * WeightB);
+                }
+            });
+        }
         public static IHasherFactory Alpha(int minPixels = 256)
         {
             return new Factory(minPixels, channels: 1, writer: (image, downScale, bytes) =>
