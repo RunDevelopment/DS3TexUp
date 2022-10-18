@@ -291,19 +291,32 @@ namespace DS3TexUpUI
             {
                 if (id.GetRepresentative() != id) return false;
                 if (id.IsSolidColor()) return false;
-                if (id.GetTexKind() == TexKind.Normal) return false;
-                if (id.GetTexKind() == TexKind.Reflective) return false;
-                if (id.GetTexKind() == TexKind.Emissive) return false;
-                if (id.GetTexKind() == TexKind.Mask) return false;
+                if (id.GetTexKind() != TexKind.Albedo) return false;
+                if (DS3.OriginalColorDiff.TryGetValue(id, out var diff))
+                {
+                    if (diff.R < 10 && diff.G < 10 && diff.B < 10) return false;
+                }
+                else
+                {
+                    return false;
+                }
                 return true;
             },
-            ExternalFilter = file => TexKinds[file] != TexKind.Normal,
+            ExternalFilter = file => TexKinds[file] == TexKind.Albedo,
 
             RequireSize = ExternalReuse.SizeReq.GtOrEq,
             SameKind = false,
 
-            CopySpread = image => 6,
-            MaxDiff = new Rgba32(2, 2, 2, 100),
+            CopyHasherFactory = Hasher.NormBrightness(),
+            CopySpread = image => 7,
+            MaxDiff = new Rgba32(2, 2, 2, 2),
+            ModifyImage = image =>
+            {
+                foreach (ref var p in image.Data.AsSpan())
+                {
+                    p.A = 255;
+                }
+            },
         };
 
         public static ExternalReuse AlphaReuse = new ExternalReuse()
