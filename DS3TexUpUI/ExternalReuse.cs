@@ -298,6 +298,11 @@ namespace DS3TexUpUI
             return token =>
             {
                 var uncertainDir = GetUncertainDir(w);
+                if (!Directory.Exists(uncertainDir))
+                {
+                    token.SubmitLog("Uncertain directory does not exist.");
+                    return;
+                }
 
                 var files = Directory
                     .GetFiles(uncertainDir, "*", SearchOption.AllDirectories)
@@ -341,6 +346,9 @@ namespace DS3TexUpUI
                     }
                 }
                 rejected.SaveAsJson(RejectedFile.Write);
+
+                Directory.Delete(uncertainDir, recursive: true);
+                Directory.CreateDirectory(uncertainDir);
             };
         }
 
