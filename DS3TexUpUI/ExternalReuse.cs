@@ -117,11 +117,18 @@ namespace DS3TexUpUI
 
                 var index = CopyIndex.Create(token.Reserve(0.5), files, r => CopyHasherFactory.Create(r, 1));
 
+                var toProcess = DS3.OriginalSize.Keys.Where(Ds3Filter).ToList();
                 var copies = new Dictionary<TexId, List<string>>();
                 var prev = LoadUncertain();
+                foreach (var p in prev.ExceptBy(toProcess, p => p.Key))
+                {
+                    var l = p.Value.ToList();
+                    l.Sort();
+                    copies[p.Key] = l;
+                }
 
                 token.SubmitStatus($"Looking up files");
-                token.ForAllParallel(DS3.OriginalSize.Keys.Where(Ds3Filter), id =>
+                token.ForAllParallel(toProcess, id =>
                 {
                     var width = DS3.OriginalSize[id].Width;
                     var set = prev.GetOrNew(id);
