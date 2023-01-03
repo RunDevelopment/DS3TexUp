@@ -37,6 +37,29 @@ namespace DS3TexUpUI
             "m54", // Arena - Round Plaza
         };
 
+        public static readonly string[] MapPieces = new string[]{
+            "m30_00", // High Wall of Lothric, Consumed King's Garden
+            "m30_01", // Lothric Castle
+            "m31_00", // Undead Settlement
+            "m32_00", // Archdragon Peak
+            "m33_00", // Road of Sacrifices, Farron Keep
+            "m34_01", // Grand Archives
+            "m35_00", // Cathedral of the Deep
+            "m37_00", // Irithyll of the Boreal Valley, Anor Londo
+            "m38_00", // Catacombs of Carthus, Smouldering Lake
+            "m39_00", // Irithyll Dungeon, Profaned Capital
+            "m40_00", // Cemetary of Ash, Firelink Shrine, and Untended Graves
+            "m41_00", // Kiln of the First Flame, Flameless Shrine
+            "m45_00", // Painted World of Ariandel
+            "m46_00", // Arena - Grand Roof
+            "m47_00", // Arena - Kiln of Flame
+            "m50_00", // Dreg Heap
+            "m51_00", // The Ringed City
+            "m51_01", // Filianore's Rest
+            "m53_00", // Arena - Dragon Ruins
+            "m54_00", // Arena - Round Plaza
+        };
+
         public static readonly IReadOnlyList<string> Parts
             = Data.File(@"parts.json").LoadJsonFile<string[]>();
 
