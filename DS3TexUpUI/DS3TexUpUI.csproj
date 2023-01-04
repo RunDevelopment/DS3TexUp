@@ -59,6 +59,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\gx\%(Filename)%(Extension)</TargetPath>
     </ContentWithTargetPath>
+    <ContentWithTargetPath Include="data\gparam\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>%(RecursiveDir)\data\gparam\%(Filename)%(Extension)</TargetPath>
+    </ContentWithTargetPath>
     <ContentWithTargetPath Include="data\materials\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>%(RecursiveDir)\data\materials\%(Filename)%(Extension)</TargetPath>
