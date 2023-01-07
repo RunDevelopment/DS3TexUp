@@ -18,6 +18,8 @@ namespace DS3TexUpUI
             => LoadFile<Dictionary<string, (float, float)>>(@"corrected-light-angles.json");
         public static HashSet<string> GetFilesWithLight()
             => LoadFile<HashSet<string>>(@"with-light.json");
+        public static HashSet<string> GetBuggedShadowParam()
+            => LoadFile<HashSet<string>>(@"bugged-shadow-param.json");
 
         private static string GetMapPieceId(string path)
         {
@@ -41,22 +43,21 @@ namespace DS3TexUpUI
 
             var filesWithLight = GetFilesWithLight();
             var correctedAngles = GetCorrectedLightAngles();
-
+            var buggedShadowParam = GetBuggedShadowParam();
 
             foreach (var file in files)
             {
                 var name = Path.GetFileName(file).Substring(0, "m??_??_????".Length);
-                if (!filesWithLight.Contains(name))
-                    continue;
 
                 var gparam = GPARAM.Read(file);
                 var changed = false;
 
+                var lightAngle = gparam.GetGroup("LightSet ParamEditor")?.GetParam("Directional Light Angle0");
+                var hasMainLight = lightAngle != null && lightAngle.ValueIDs.Count > 0 && lightAngle.ValueIDs[0] == 0;
+
                 // correct light angle
                 if (correctedAngles.TryGetValue(GetMapPieceId(file), out var correctAngle))
                 {
-                    var lightAngle = gparam.GetGroup("LightSet ParamEditor")?.GetParam("Directional Light Angle0");
-                    var hasMainLight = lightAngle != null && lightAngle.ValueIDs.Count > 0 && lightAngle.ValueIDs[0] == 0;
                     if (lightAngle != null && hasMainLight)
                     {
                         lightAngle.Values[0] = new Vector2(correctAngle.Item1, correctAngle.Item2);
@@ -66,7 +67,12 @@ namespace DS3TexUpUI
 
                 // change shadow params
                 var shadowGroup = gparam.GetGroup("ShadowParam ParamEditor");
-                if (shadowGroup != null && shadowGroup.Params[0].ValueIDs.Count == 0)
+                if (
+                    true
+                    && !buggedShadowParam.Contains(name)
+                    && shadowGroup != null
+                    && shadowGroup.Params[0].ValueIDs.Count == 0
+                )
                 {
                     shadowGroup.AddParams(0, new Dictionary<string, object>()
                     {
@@ -76,10 +82,10 @@ namespace DS3TexUpUI
                         ["Cascade Dist 0->1"] = (float)3f,
                         ["Cascade Dist 1->2"] = (float)12f,
                         ["Cascade Dist 2->3"] = (float)20f,
-                        ["Far Fade Start"] = (float)45f,
-                        ["Far Fade Dist"] = (float)30f,
+                        ["Far Fade Start"] = (float)50f,
+                        ["Far Fade Dist"] = (float)25f,
                         ["Shadow Map FilterMode"] = (int)2, // 0=PCF4 1=PCF9 2=SOFT
-                        ["Depth Offset"] = (float)-0.006f,
+                        ["Depth Offset"] = (float)-0.015f,
                         ["Volume Depth"] = (float)100f,
                         ["Slope Scaled Depth Bias"] = (float)0.005f,
                         ["Shadow Model Cull Flip"] = false,
@@ -91,7 +97,7 @@ namespace DS3TexUpUI
                         ["Blur Count"] = (int)1,
                         ["Blur Radius"] = (float)2f,
                         // ["Shadow Color"] = new byte[] { 10, 30, 50, 128 }, // BGRA color (byte4)
-                        ["Shadow Map Resolution"] = (int)3, // 0=2048x2048(Default) 1=1024x1024 2=2048x2048 3=4096x4096
+                        ["Shadow Map Resolution"] = (int)3, // (doesn't work) 0=2048x2048(Default) 1=1024x1024 2=2048x2048 3=4096x4096
                     });
                     changed = true;
                 }
