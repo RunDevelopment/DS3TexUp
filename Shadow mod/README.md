@@ -13,9 +13,9 @@ This greatly improves the quality of shadows and fixes light bugs in many areas.
 ### Enabling shadows
 
 After installing with UMX or Mod Engine, be sure to enable shadows.
-When in game, go to _System_ > _Graphics_ > _Advanced Settings_ and make sure that _Shadow quality_ is set to at least _Low_.
+When in game, go to _System_ > _Graphics_ > _Advanced Settings_ and make sure that _Shadow quality_ is set to at least _Low_, _Medium_, _High_, or _Max_.
 
-If _Shadow quality_ is set to _Off_, this mod will be turned off.
+If _Shadow quality_ is set to _Off_, this mod will be turned off and have no effect.
 
 ## Online
 
@@ -36,23 +36,23 @@ Generally, the performance impact is as follows:
 | High           | 17%                                       | 25%                     |
 | Max            | 25%                                       | 40%                     |
 
-Generally, _Low_ and _Medium_ have the same performance cost, but _Medium_ looks significantly better.
+Generally, _Low_ and _Medium_ have the pretty much same performance cost, but _Medium_ looks significantly better.
 The jump from _Medium_ to _High_ is quite large in terms of quality at only a small performance cost.
 
 You should only set _Shadow quality_ to _Max_ if your machine can smoothly run this mod at this setting.
 The relatively small improvement in quality is not worth any frame drops.
 
-Note: If *Shadow quality* is to *Off*, this mod will be turned off and have no performance impact at all.
+Note: If _Shadow quality_ is set to _Off_, this mod will be turned off and have no performance impact at all.
 
 ## Credit
 
-A huge thanks to the folks over at ?ServerName?! This mod would not have been possible without the tools and resources you folks provide.
+A huge thanks to the folks over at ?ServerName?! This mod would not have been possible without the tools and resources they provide.
 
 Used tools:
 
 -   Yabber+
--   UXM Selective Unpacker
--   DSMapStudio 1.03
+-   UXM Selective Unpacker (https://www.nexusmods.com/eldenring/mods/1651)
+-   DSMapStudio (https://github.com/soulsmods/DSMapStudio)
 -   DS3 DebugMenuEx v1.1
 -   SoulsFormats (C# library)
 
