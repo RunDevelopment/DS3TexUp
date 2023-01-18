@@ -1,0 +1,16 @@
+{
+	"m30_01": {
+		"Cascade Dist 0->1": 3,
+		"Cascade Dist 1->2": 15,
+		"Cascade Dist 2->3": 35,
+		"Far Fade Start": 90,
+		"Far Fade Dist": 25
+	},
+	"m50_00": {
+		"Cascade Dist 0->1": 3,
+		"Cascade Dist 1->2": 15,
+		"Cascade Dist 2->3": 45,
+		"Far Fade Start": 120,
+		"Far Fade Dist": 25
+	}
+}

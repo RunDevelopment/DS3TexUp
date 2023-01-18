@@ -172,6 +172,11 @@ namespace DS3TexUpUI
             options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
             return JsonSerializer.Deserialize<T>(ref reader, options)!;
         }
+        public static T Deserialize<T>(JsonElement element, JsonSerializerOptions? options = null)
+        {
+            options = (options ?? new JsonSerializerOptions()).WithConvertersFor<T>();
+            return JsonSerializer.Deserialize<T>(element, options)!;
+        }
 
         public static void SaveAsJson<T>(this T value, string file, bool formatted = true)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
 using System.Linq;
+using System.Text.Json;
 using SoulsFormats;
 
 #nullable enable
@@ -20,6 +21,8 @@ namespace DS3TexUpUI
             => LoadFile<HashSet<string>>(@"with-light.json");
         public static HashSet<string> GetBuggedShadowParam()
             => LoadFile<HashSet<string>>(@"bugged-shadow-param.json");
+        public static Dictionary<string, Dictionary<string, object>> GetShadowParamOverrides()
+            => LoadFile<Dictionary<string, Dictionary<string, object>>>(@"shadow-param-overrides.json");
 
         private static string GetMapPieceId(string path)
         {
@@ -29,6 +32,56 @@ namespace DS3TexUpUI
                 throw new ArgumentException("Invalid map piece id: " + name);
             }
             return name.Substring(0, "m??_??".Length);
+        }
+
+        private static Dictionary<string, object> GetShadowParams(IReadOnlyDictionary<string, object> overrides)
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+
+            void Add<T>(string name, T defaultValue)
+                where T : notnull
+            {
+                T value = defaultValue;
+                if (overrides.TryGetValue(name, out var over))
+                {
+                    if (over is JsonElement json)
+                    {
+                        value = JsonConverters.Deserialize<T>(json);
+                    }
+                    else
+                    {
+                        value = (T)over;
+                    }
+                }
+                result[name] = value;
+            }
+            void AddF(string name, float defaultValue) => Add<float>(name, defaultValue);
+            void AddI(string name, int defaultValue) => Add<int>(name, defaultValue);
+
+            Add<Vector2>("Angle", new Vector2(0, 0));
+            AddI("Shadow  Light  Id", 0);
+            AddF("Near", 0.1f);
+            AddF("Cascade Dist 0->1", 3f);
+            AddF("Cascade Dist 1->2", 12f);
+            AddF("Cascade Dist 2->3", 25f);
+            AddF("Far Fade Start", 60f);
+            AddF("Far Fade Dist", 25f);
+            AddI("Shadow Map FilterMode", 2); // 0=PCF4 1=PCF9 2=SOFT
+            AddF("Depth Offset", -0.015f);
+            AddF("Volume Depth", 100f);
+            AddF("Slope Scaled Depth Bias", 0.005f);
+            Add<bool>("Shadow Model Cull Flip", false);
+            Add<bool>("AlignTexel", true);
+            AddF("DepthRate", 0.1f);
+            AddF("DepthScale", 10f);
+            AddF("KernelScale", 1f);
+            AddF("DepthOffsetScale", 0f);
+            AddI("Blur Count", 1);
+            AddF("Blur Radius", 2f);
+            // Add("Shadow Color", new byte[] { 10, 30, 50, 128 }); // BGRA color (byte4)
+            AddI("Shadow Map Resolution", 3); // (doesn't work) 0=2048x2048(Default) 1=1024x1024 2=2048x2048 3=4096x4096
+
+            return result;
         }
 
         internal static void CreateModdedDrawParams()
@@ -44,10 +97,15 @@ namespace DS3TexUpUI
             var filesWithLight = GetFilesWithLight();
             var correctedAngles = GetCorrectedLightAngles();
             var buggedShadowParam = GetBuggedShadowParam();
+            var shadowParamOverrides = GetShadowParamOverrides();
 
             foreach (var file in files)
             {
                 var name = Path.GetFileName(file).Substring(0, "m??_??_????".Length);
+                if (name.StartsWith("m38"))
+                {
+                    int asdas = 0;
+                }
 
                 var gparam = GPARAM.Read(file);
                 var changed = false;
@@ -74,31 +132,7 @@ namespace DS3TexUpUI
                     && shadowGroup.Params[0].ValueIDs.Count == 0
                 )
                 {
-                    shadowGroup.AddParams(0, new Dictionary<string, object>()
-                    {
-                        ["Angle"] = new Vector2(0, 0),
-                        ["Shadow  Light  Id"] = (int)0,
-                        ["Near"] = (float)0.1f,
-                        ["Cascade Dist 0->1"] = (float)3f,
-                        ["Cascade Dist 1->2"] = (float)12f,
-                        ["Cascade Dist 2->3"] = (float)20f,
-                        ["Far Fade Start"] = (float)50f,
-                        ["Far Fade Dist"] = (float)25f,
-                        ["Shadow Map FilterMode"] = (int)2, // 0=PCF4 1=PCF9 2=SOFT
-                        ["Depth Offset"] = (float)-0.015f,
-                        ["Volume Depth"] = (float)100f,
-                        ["Slope Scaled Depth Bias"] = (float)0.005f,
-                        ["Shadow Model Cull Flip"] = false,
-                        ["AlignTexel"] = true,
-                        ["DepthRate"] = (float)0.1f,
-                        ["DepthScale"] = (float)10f,
-                        ["KernelScale"] = (float)1f,
-                        ["DepthOffsetScale"] = (float)0f,
-                        ["Blur Count"] = (int)1,
-                        ["Blur Radius"] = (float)2f,
-                        // ["Shadow Color"] = new byte[] { 10, 30, 50, 128 }, // BGRA color (byte4)
-                        ["Shadow Map Resolution"] = (int)3, // (doesn't work) 0=2048x2048(Default) 1=1024x1024 2=2048x2048 3=4096x4096
-                    });
+                    shadowGroup.AddParams(0, GetShadowParams(shadowParamOverrides.GetOrNew(GetMapPieceId(file))));
                     changed = true;
                 }
 
