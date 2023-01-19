@@ -1567,5 +1567,22 @@ namespace DS3TexUpUI
 
             return result.AsTextureMap(img.Width);
         }
+
+        public static ArrayTextureMap<float> LongShadow(this ArrayTextureMap<byte> img, float distanceAdd)
+        {
+            var distance = new float[img.Count].AsTextureMap(img.Width);
+
+            for (var y = 0; y < img.Height; y++)
+            {
+                for (var x = 0; x < img.Width; x++)
+                {
+                    var blend = img[x, y] / 255f;
+                    var prev = y > 0 && x > 0 ? Math.Min(distance[x - 1, y - 1] + distanceAdd, 1f) : 1f;
+                    distance[x, y] = blend * prev;
+                }
+            }
+
+            return distance;
+        }
     }
 }
