@@ -753,13 +753,27 @@ namespace DS3TexUpUI
             return token =>
             {
                 token.SubmitStatus($"Searching for files");
-                var unused = DS3.OriginalSize.Keys.Where(id => !UsedBy.ContainsKey(id)).ToList();
+                var unused = DS3.OriginalSize.Keys
+                    .Where(id => (
+                        // FG includes tattoos and other cosmetic textures
+                        !id.Value.StartsWith("parts/FG_")
+                        // some FXR references the texture
+                        && !FXRSFX.Contains(id)
+                        // referenced in any flver file
+                        && !UsedBy.ContainsKey(id)
+                    ))
+                    .ToList();
                 unused.Sort();
 
                 token.SubmitStatus("Saving copies JSON");
                 unused.SaveAsJson(Data.File(@"unused.json", Data.Source.Local));
             };
         }
+
+        /// SFX textures referenced by FXR files.
+        /// Data can be found here: https://docs.google.com/spreadsheets/d/1gmUiSpJtxFFl0g04MWMIIs37W13Yjp-WUxtbyv99JIQ/edit#gid=31255113
+        public static IReadOnlyCollection<TexId> FXRSFX
+            = Data.File(@"fxr-textures.json").LoadJsonFile<HashSet<TexId>>();
 
         public static IReadOnlyDictionary<TexId, TexId> NormalAlbedo
             = Data.File(@"normal-albedo.json").LoadJsonFile<Dictionary<TexId, TexId>>();
