@@ -715,6 +715,14 @@ namespace DS3TexUpUI
                 token.SubmitStatus("Unpacking sfx ffxbnd");
                 Yabber.RunParallel(token, ffxbnd);
             }
+            void UnpackOther(SubProgressToken token)
+            {
+                token.SubmitStatus("Unpacking other");
+
+                var sfxDir = Path.Join(GameDir, "facegen", "facegen.fgbnd.dcx");
+
+                Yabber.Run(sfxDir);
+            }
 
             void Unpack(SubProgressToken token)
             {
@@ -723,7 +731,8 @@ namespace DS3TexUpUI
                     UnpackChr,
                     UnpackMap,
                     UnpackParts,
-                    UnpackSfx
+                    UnpackSfx,
+                    UnpackOther
                 );
             }
 
@@ -802,6 +811,67 @@ namespace DS3TexUpUI
             foreach (var file in Directory.GetFiles(Data.File(@"er/materials"), "*.json"))
                 foreach (var item in file.LoadJsonFile<List<FlverMaterialInfo>>())
                     yield return item;
+        }
+
+
+        public static List<MTDInfo> GetMTDInfo()
+        {
+            return Data.File("er/mtd.json", Data.Source.Local).LoadJsonFile<List<MTDInfo>>();
+        }
+
+        public static IEnumerable<(string name, MTD mtd)> ReadAllMTD()
+        {
+            var mtdBasePath = Path.Join(GameDir, "mtd");
+
+            var mtdDir = Path.Join(mtdBasePath, "allmaterialbnd-mtdbnd-dcx");
+            if (!Directory.Exists(mtdDir))
+            {
+                Yabber.Run(Path.Join(mtdBasePath, "allmaterialbnd.mtdbnd.dcx"));
+            }
+
+            foreach (var f in Directory.GetFiles(mtdDir, "*.mtd", SearchOption.AllDirectories))
+            {
+                yield return (Path.GetFileName(f), MTD.Read(f));
+            }
+        }
+        internal static void CreateMTDJson()
+        {
+            var data = ReadAllMTD().Select(pair =>
+            {
+                var (name, mtd) = pair;
+                return new MTDInfo
+                {
+                    Name = name,
+                    Description = mtd.Description,
+                    ShaderPath = mtd.ShaderPath,
+                    Textures = mtd.Textures.Select(t =>
+                    {
+                        return new MTDInfo.Texture
+                        {
+                            Type = t.Type,
+                            UVNumber = t.UVNumber,
+                            ShaderDataIndex = t.ShaderDataIndex,
+                        };
+                    }).ToList(),
+                    Params = mtd.Params.ToDictionary(
+                        p => p.Name,
+                        p => p.Value switch
+                        {
+                            int i => p.Name switch
+                            {
+                                "g_BlendMode" => ((MTD.BlendMode)i).ToString(),
+                                "g_LightingType" => ((MTD.LightingType)i).ToString(),
+                                _ => i
+                            },
+                            float or bool => p.Value,
+                            float[] a => string.Join(" ", a.Select(n => n.ToString(System.Globalization.CultureInfo.InvariantCulture))),
+                            int[] a => string.Join(" ", a.Select(n => n.ToString(System.Globalization.CultureInfo.InvariantCulture))),
+                            _ => p.Value.ToString()
+                        }
+                    ),
+                };
+            }).ToList();
+            data.SaveAsJson(Data.File("er/mtd.json", Data.Source.Local));
         }
     }
 }

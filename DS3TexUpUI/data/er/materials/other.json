@@ -1,0 +1,280 @@
+[
+	{
+		"FlverPath": "facegen\\facegen-fgbnd-dcx\\facegen\\GameData\\face.flver",
+		"GXLists": [
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX21",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX23",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX25",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX27",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				}
+			],
+			[
+				{
+					"ID": "GX00",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+				},
+				{
+					"ID": "GX09",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAD8AAAAAAAAAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				},
+				{
+					"ID": "GX20",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX22",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX24",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX26",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				},
+				{
+					"ID": "GX30",
+					"Unk04": 100,
+					"Data": "AAAAAAAAAAAAAAAA"
+				}
+			]
+		],
+		"Materials": [
+			{
+				"Name": "Material #13",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\character\\C[Face].mtd",
+				"Flags": 1136,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_m_face_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_DiffuseTexture2",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_m_face_org_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_m_face_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture2",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_face_org_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_m_face_s.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture2",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_face_org_s.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_m_face_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture2",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_face_org_n.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 0,
+				"Unk18": 0
+			},
+			{
+				"Name": "Material #14",
+				"MTD": "N:\\FDP\\data\\Material\\mtd\\character\\C[Eye].mtd",
+				"Flags": 740,
+				"Textures": [
+					{
+						"Type": "g_DiffuseTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_eye_a.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_SpecularTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_eye_r.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_ShininessTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_eye_s.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_BumpmapTexture",
+						"Path": "N:\\SPRJ\\data\\Other\\SysTex\\SYSTEX_DummyNormal.tga",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					},
+					{
+						"Type": "g_HighLightTexture",
+						"Path": "N:\\FDP\\data\\FaceGen\\Texture\\FG_eye_highlight.tif",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 1,
+						"Unk11": true,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 1,
+				"Unk18": 0
+			}
+		]
+	}
+]

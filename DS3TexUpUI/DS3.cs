@@ -1224,7 +1224,12 @@ namespace DS3TexUpUI
 
         }
 
-        public static IEnumerable<(string name, MTD mtd)> ReadAllMTD(Workspace w)
+        public static List<MTDInfo> GetMTDInfo()
+        {
+            return Data.File("mtd.json", Data.Source.Local).LoadJsonFile<List<MTDInfo>>();
+        }
+
+        internal static IEnumerable<(string name, MTD mtd)> ReadAllMTD(Workspace w)
         {
             var mtdBasePath = Path.Join(w.GameDir, "mtd");
             var mtdDir = Path.Join(mtdBasePath, "allmaterialbnd-mtdbnd-dcx");
@@ -1243,14 +1248,14 @@ namespace DS3TexUpUI
             var data = DS3.ReadAllMTD(w).Select(pair =>
             {
                 var (name, mtd) = pair;
-                return new
+                return new MTDInfo
                 {
                     Name = name,
                     Description = mtd.Description,
                     ShaderPath = mtd.ShaderPath,
                     Textures = mtd.Textures.Select(t =>
                     {
-                        return new
+                        return new MTDInfo.Texture
                         {
                             Type = t.Type,
                             UVNumber = t.UVNumber,
@@ -1315,6 +1320,59 @@ namespace DS3TexUpUI
         public string FlverPath { get; set; }
         public List<FLVER2.GXList> GXLists { get; set; }
         public List<FLVER2.Material> Materials { get; set; }
+    }
+
+    public struct MTDInfo
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string ShaderPath { get; set; }
+        public List<Texture> Textures { get; set; }
+        public Dictionary<string, object?> Params { get; set; }
+
+        public struct Texture
+        {
+            public string Type { get; set; }
+            public int UVNumber { get; set; }
+            public int ShaderDataIndex { get; set; }
+        }
+
+        public static (Dictionary<MTDInfo, int> usage, HashSet<string> unresolved) CategorizeMTDUsage(
+            IEnumerable<MTDInfo> mtds,
+            IEnumerable<FlverMaterialInfo> flvers)
+        {
+            static string getKey(string path)
+            {
+                return Path.GetFileNameWithoutExtension(path).ToLower();
+            }
+
+            Dictionary<string, MTDInfo> byName = new Dictionary<string, MTDInfo>();
+            foreach (var mtd in mtds)
+            {
+                var key = getKey(mtd.Name);
+                byName[key] = mtd;
+            }
+
+            Dictionary<MTDInfo, int> usage = byName.Values.ToDictionary(m => m, m => 0);
+            HashSet<string> unresolved = new HashSet<string>();
+
+            foreach (var flver in flvers)
+            {
+                foreach (var mat in flver.Materials)
+                {
+                    if (byName.TryGetValue(getKey(mat.MTD), out var mtd))
+                    {
+                        usage[mtd]++;
+                    }
+                    else
+                    {
+                        unresolved.Add(Path.GetFileName(mat.MTD));
+                    }
+                }
+            }
+
+            return (usage, unresolved);
+        }
     }
 
     public readonly struct ColorCode6x6 : IEquatable<ColorCode6x6>
