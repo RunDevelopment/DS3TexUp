@@ -88968,6 +88968,18 @@
 					"Unk04": 102,
 					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 				}
+			],
+			[
+				{
+					"ID": "GXMD",
+					"Unk04": 400,
+					"Data": "AQAAAI4BAAALAAAAAACAPwAAgD8AAIA/AACAPwAAgD8="
+				},
+				{
+					"ID": "GX00",
+					"Unk04": 102,
+					"Data": "AAAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+				}
 			]
 		],
 		"Materials": [
@@ -89234,6 +89246,28 @@
 				"Unk18": 5
 			},
 			{
+				"Name": "m14_00_001",
+				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m14_00\\m14_00_001.mtd",
+				"Flags": 190,
+				"Textures": [
+					{
+						"Type": "M_A__snp_Texture2D_0_AlbedoMap_0",
+						"Path": "",
+						"Scale": {
+							"X": 1,
+							"Y": 1
+						},
+						"Unk10": 0,
+						"Unk11": false,
+						"Unk14": 0,
+						"Unk18": 0,
+						"Unk1C": 0
+					}
+				],
+				"GXIndex": 2,
+				"Unk18": 6
+			},
+			{
 				"Name": "m14_00_013",
 				"MTD": "N:\\GR\\data\\Material\\mtd\\Map_m14_00\\m14_00_013.mtd",
 				"Flags": 278,
@@ -89336,7 +89370,7 @@
 					}
 				],
 				"GXIndex": 0,
-				"Unk18": 8
+				"Unk18": 9
 			},
 			{
 				"Name": "m14_00_232",
@@ -89825,7 +89859,7 @@
 					}
 				],
 				"GXIndex": 0,
-				"Unk18": 19
+				"Unk18": 20
 			}
 		]
 	},

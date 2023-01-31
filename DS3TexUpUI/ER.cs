@@ -17,11 +17,10 @@ namespace DS3TexUpUI
     {
         public const string ExtractDir = @"C:\DS3TexUp\extract-er";
         public const string UpscaleDir = @"C:\DS3TexUp\upscale-er";
+        private const string GameDir = @"C:\Program Files (x86)\Steam\steamapps\common\ELDEN RING\Game";
 
         public static void ExtractER(IProgressToken token)
         {
-            const string GameDir = @"C:\Program Files (x86)\Steam\steamapps\common\ELDEN RING\Game";
-
             Directory.CreateDirectory(ExtractDir);
 
             void ExtractAsset(SubProgressToken token)
@@ -661,6 +660,141 @@ namespace DS3TexUpUI
                 Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 DS3NormalMap.Load(reFile).Gloss.SaveAsPng(target);
             });
+        }
+
+
+        internal static void ExtractFlverMaterialInfo(IProgressToken token)
+        {
+            void UnpackAsset(SubProgressToken token)
+            {
+                token.SubmitStatus("asset");
+
+                var assetDir = Path.Join(GameDir, "asset", "aeg");
+                var geombnd = Directory.GetFiles(assetDir, "*.geombnd.dcx", SearchOption.AllDirectories);
+
+                token.SubmitStatus("Unpacking asset");
+                Yabber.RunParallel(token, geombnd);
+            }
+            void UnpackChr(SubProgressToken token)
+            {
+                token.SubmitStatus("chr");
+
+                var chrDir = Path.Join(GameDir, "chr");
+                var chrbnd = Directory.GetFiles(chrDir, "*.chrbnd.dcx", SearchOption.AllDirectories);
+
+                token.SubmitStatus("Unpacking chr chrbnd");
+                Yabber.RunParallel(token.Reserve(0.5), chrbnd);
+            }
+            void UnpackMap(SubProgressToken token)
+            {
+                token.SubmitStatus("map");
+
+                var mapDir = Path.Join(GameDir, "map");
+                var mapbnd = Directory.GetFiles(mapDir, "*.mapbnd.dcx", SearchOption.AllDirectories);
+
+                token.SubmitStatus("Unpacking map mapbnd");
+                Yabber.RunParallel(token, mapbnd);
+            }
+            void UnpackParts(SubProgressToken token)
+            {
+                token.SubmitStatus("parts");
+
+                var partsDir = Path.Join(GameDir, "parts");
+                var partsbnd = Directory.GetFiles(partsDir, "*.partsbnd.dcx", SearchOption.AllDirectories);
+
+                token.SubmitStatus("Unpacking parts partsbnd");
+                Yabber.RunParallel(token, partsbnd);
+            }
+            void UnpackSfx(SubProgressToken token)
+            {
+                token.SubmitStatus("sfx");
+
+                var sfxDir = Path.Join(GameDir, "sfx");
+                var ffxbnd = Directory.GetFiles(sfxDir, "*.ffxbnd.dcx", SearchOption.AllDirectories);
+
+                token.SubmitStatus("Unpacking sfx ffxbnd");
+                Yabber.RunParallel(token, ffxbnd);
+            }
+
+            void Unpack(SubProgressToken token)
+            {
+                token.SplitEqually(
+                    UnpackAsset,
+                    UnpackChr,
+                    UnpackMap,
+                    UnpackParts,
+                    UnpackSfx
+                );
+            }
+
+            string GetKey(string path)
+            {
+                if (path.StartsWith("chr\\")) return "chr";
+                if (path.StartsWith("map\\")) return "map";
+                if (path.StartsWith("sfx\\")) return "sfx";
+                if (path.StartsWith("parts\\"))
+                {
+                    var type = path.Substring("parts\\".Length, 3).ToLower();
+                    return type switch
+                    {
+                        "am_" => "parts-am",
+                        "lg_" => "parts-lg",
+                        "hd_" => "parts-hd",
+                        "bd_" => "parts-bd",
+                        "wp_" => "parts-wp",
+                        _ => "parts-other",
+                    };
+                }
+                if (path.StartsWith("asset\\aeg\\aeg"))
+                {
+                    var number = path.Substring("asset\\aeg\\aeg".Length, 3);
+                    return "asset-aegXX" + number[2];
+                }
+                return "other";
+            }
+            void ReadFlver(SubProgressToken token)
+            {
+                token.SubmitStatus(status: "Reading flver files");
+
+                var flvers = Directory.GetFiles(GameDir, "*.flver", SearchOption.AllDirectories);
+
+                var result = new Dictionary<string, List<FlverMaterialInfo>>();
+
+                token.ForAllParallel(flvers, file =>
+                {
+                    try
+                    {
+                        var path = Path.GetRelativePath(GameDir, file);
+                        var key = GetKey(path);
+                        var f = FLVER2.Read(file);
+                        var info = new FlverMaterialInfo()
+                        {
+                            FlverPath = path,
+                            GXLists = f.GXLists,
+                            Materials = f.Materials
+                        };
+
+                        lock (result)
+                        {
+                            var list = result.GetOrAdd(key);
+                            list.Add(info);
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        token.LogException(e);
+                    }
+                });
+
+                token.SubmitStatus(status: "Writing result");
+                foreach (var (key, list) in result)
+                {
+                    list.Sort((a, b) => a.FlverPath.CompareTo(b.FlverPath));
+                    list.SaveAsJson(Data.File("er/materials/" + key + ".json", Data.Source.Local));
+                }
+            }
+
+            token.SplitEqually(Unpack, ReadFlver);
         }
 
         public static IEnumerable<FlverMaterialInfo> ReadAllFlverMaterialInfo()
