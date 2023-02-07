@@ -61,9 +61,9 @@ namespace DS3TexUpUI
             Add<Vector2>("Angle", new Vector2(0, 0));
             AddI("Shadow  Light  Id", 0);
             AddF("Near", 0.1f);
-            AddF("Cascade Dist 0->1", 3f);
-            AddF("Cascade Dist 1->2", 12f);
-            AddF("Cascade Dist 2->3", 25f);
+            AddF("Cascade Dist 0->1", 3.5f);
+            AddF("Cascade Dist 1->2", 14f);
+            AddF("Cascade Dist 2->3", 30f);
             AddF("Far Fade Start", 60f);
             AddF("Far Fade Dist", 25f);
             AddI("Shadow Map FilterMode", 2); // 0=PCF4 1=PCF9 2=SOFT
@@ -73,11 +73,11 @@ namespace DS3TexUpUI
             Add<bool>("Shadow Model Cull Flip", false);
             Add<bool>("AlignTexel", true);
             AddF("DepthRate", 0.1f);
-            AddF("DepthScale", 10f);
+            AddF("DepthScale", 5f);
             AddF("KernelScale", 1f);
             AddF("DepthOffsetScale", 0f);
             AddI("Blur Count", 1);
-            AddF("Blur Radius", 2f);
+            AddF("Blur Radius", 1f);
             // Add("Shadow Color", new byte[] { 10, 30, 50, 128 }); // BGRA color (byte4)
             AddI("Shadow Map Resolution", 3); // (doesn't work) 0=2048x2048(Default) 1=1024x1024 2=2048x2048 3=4096x4096
 
@@ -102,7 +102,7 @@ namespace DS3TexUpUI
             foreach (var file in files)
             {
                 var name = Path.GetFileName(file).Substring(0, "m??_??_????".Length);
-                if (name.StartsWith("m38"))
+                if (name.StartsWith("m51"))
                 {
                     int asdas = 0;
                 }
