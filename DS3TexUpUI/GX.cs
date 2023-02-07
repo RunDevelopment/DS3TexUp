@@ -299,6 +299,11 @@ namespace DS3TexUpUI
             Item3 = item3;
             Item4 = item4;
         }
+
+        public override string ToString()
+        {
+            return $"<{Item0} {Item1} {Item2} {Item3} {Item4}>";
+        }
     }
 
     public class GXMDItem
@@ -345,6 +350,11 @@ namespace DS3TexUpUI
                 default:
                     throw new FormatException($"{Type} is not a valid type.");
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{Type}: {Value}";
         }
     }
 
