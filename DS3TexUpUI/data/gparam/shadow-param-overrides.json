@@ -23,7 +23,8 @@
 		"Far Fade Dist": 25
 	},
 	"m31_00": {
-		"Volume Depth": 140
+		"Far Fade Start": 70,
+		"Volume Depth": 200
 	},
 	"m32_00": {
 		"Cascade Dist 0->1": 3.5,
@@ -34,7 +35,7 @@
 		"Volume Depth": 150
 	},
 	"m37_00": {
-		"Volume Depth": 140
+		"Volume Depth": 160
 	},
 	"m45_00": {
 		"Cascade Dist 0->1": 3.5,
