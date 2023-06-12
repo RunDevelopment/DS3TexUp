@@ -129,11 +129,19 @@ namespace DS3TexUpUI
                     true
                     && !buggedShadowParam.Contains(name)
                     && shadowGroup != null
-                    && shadowGroup.Params[0].ValueIDs.Count == 0
                 )
                 {
-                    shadowGroup.AddParams(0, GetShadowParams(shadowParamOverrides.GetOrNew(GetMapPieceId(file))));
-                    changed = true;
+                    var newParams = GetShadowParams(shadowParamOverrides.GetOrNew(GetMapPieceId(file)));
+                    if (shadowGroup.Params[0].ValueIDs.Count == 0)
+                    {
+                        shadowGroup.AddParams(0, newParams);
+                        changed = true;
+                    }
+                    else
+                    {
+                        shadowGroup.AddOrSetParams(0, newParams);
+                        changed = true;
+                    }
                 }
 
                 if (changed)
@@ -167,6 +175,27 @@ namespace DS3TexUpUI
 
                 param.ValueIDs.Add(id);
                 param.Values.Add(value);
+            }
+        }
+        public static void AddOrSetParams(this GPARAM.Group group, int id, Dictionary<string, object> values)
+        {
+            foreach (var param in group.Params)
+            {
+                if (!values.TryGetValue(param.Name2, out var value))
+                    continue;
+
+                var index = param.ValueIDs.IndexOf(id);
+                if (index == -1)
+                {
+                    // Add
+                    param.ValueIDs.Add(id);
+                    param.Values.Add(value);
+                }
+                else
+                {
+                    // Set
+                    param.Values[index] = value;
+                }
             }
         }
     }
