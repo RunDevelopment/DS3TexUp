@@ -72,7 +72,7 @@ namespace DS3TexUpUI
                 ExtractSfxTexture
             );
         }
-        private void UnpackMap(SubProgressToken token)
+        internal void UnpackMap(SubProgressToken token)
         {
             UnpackMap(token, f => !f.EndsWith("_l.tpf.dcx"));
         }
@@ -98,7 +98,7 @@ namespace DS3TexUpUI
             });
             token.SubmitProgress(1);
         }
-        private void UnpackChr(SubProgressToken token)
+        internal void UnpackChr(SubProgressToken token)
         {
             token.SubmitStatus("Unpacking all chr files");
 
@@ -131,7 +131,7 @@ namespace DS3TexUpUI
 
             Yabber.RunParallel(token, tpfFiles);
         }
-        private void UnpackObj(SubProgressToken token)
+        internal void UnpackObj(SubProgressToken token)
         {
             token.SubmitStatus("Unpacking all obj files");
 
@@ -158,7 +158,7 @@ namespace DS3TexUpUI
 
             Yabber.RunParallel(token, tpfFiles);
         }
-        private void UnpackParts(SubProgressToken token)
+        internal void UnpackParts(SubProgressToken token)
         {
             token.SubmitStatus("Unpacking all parts files");
 
@@ -190,7 +190,7 @@ namespace DS3TexUpUI
             token.SubmitStatus("Unpacking common body");
             Yabber.Run(Path.Join(PartsDir, "common_body.tpf.dcx"));
         }
-        private void UnpackSfx(SubProgressToken token)
+        internal void UnpackSfx(SubProgressToken token)
         {
             token.SubmitStatus("Unpacking all sfx files");
 
