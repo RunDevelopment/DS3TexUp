@@ -138,6 +138,14 @@ namespace DS3TexUpUI
             return val;
         }
 
+        public static void Update<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, TValue addValue, Func<TValue, TValue> updater)
+        {
+            if (dict.TryGetValue(key, out TValue val))
+                dict[key] = updater(val);
+            else
+                dict.Add(key, addValue);
+        }
+
         public static TValue GetOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dict, TKey key, TValue defaultValue)
         {
             if (dict.TryGetValue(key, out TValue val))

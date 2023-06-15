@@ -134,6 +134,19 @@ namespace DS3TexUpUI
             _totalA += 255;
             _count++;
         }
+
+        public Vector4 GetNormalizedResult()
+        {
+            if (_count == 0) return new Vector4(0, 0, 0, 0);
+
+            var factor = 1 / (double)_count / 255;
+            return new Vector4(
+                (float)(_totalR * factor),
+                (float)(_totalG * factor),
+                (float)(_totalB * factor),
+                (float)(_totalA * factor)
+            );
+        }
     }
     public struct RgbGammaCorrectedPremultipliedAlphaAverageAccumulator : IAverageAccumulator<Rgba32>, IAverageAccumulator<Rgb24>
     {

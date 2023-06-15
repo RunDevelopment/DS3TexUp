@@ -1,4 +1,5 @@
 using System;
+using static System.Drawing.Imaging.PixelFormat;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
@@ -93,6 +94,70 @@ namespace DS3TexUpUI
                 _ => throw new Exception("Invalid format: " + image.PixelType.ToString())
             };
             return new ArrayTextureMap<Rgba32>(data, image.Width, image.Height);
+        }
+        public static ArrayTextureMap<Rgba32> ToTextureMap(this System.Drawing.Bitmap image)
+        {
+            byte[] ToBytes()
+            {
+                var data = image.LockBits(new System.Drawing.Rectangle(default, image.Size), System.Drawing.Imaging.ImageLockMode.ReadOnly, image.PixelFormat);
+                var bytes = new byte[data.Height * Math.Abs(data.Stride)];
+                System.Runtime.InteropServices.Marshal.Copy(data.Scan0, bytes, 0, bytes.Length);
+                image.UnlockBits(data);
+                return bytes;
+            }
+            // ArrayTextureMap<Rgba32> Map1(Func<byte, Rgba32> f)
+            // {
+            //     var rgba = new Rgba32[image.Width * image.Height];
+            //     var bytes = ToBytes();
+            //     if (bytes.Length != image.Width * image.Height) throw new Exception();
+            //     for (var i = 0; i < rgba.Length; i++)
+            //     {
+            //         rgba[i] = f(bytes[i]);
+            //     }
+            //     return rgba.AsTextureMap(image.Width);
+            // }
+            // ArrayTextureMap<Rgba32> Map2(Func<byte, byte, Rgba32> f)
+            // {
+            //     var rgba = new Rgba32[image.Width * image.Height];
+            //     var bytes = ToBytes();
+            //     if (bytes.Length != image.Width * image.Height * 2) throw new Exception();
+            //     for (var i = 0; i < rgba.Length; i++)
+            //     {
+            //         rgba[i] = f(bytes[i * 2], bytes[i * 2 + 1]);
+            //     }
+            //     return rgba.AsTextureMap(image.Width);
+            // }
+            ArrayTextureMap<Rgba32> Map3(Func<byte, byte, byte, Rgba32> f)
+            {
+                var rgba = new Rgba32[image.Width * image.Height];
+                var bytes = ToBytes();
+                if (bytes.Length != image.Width * image.Height * 3) throw new Exception();
+                for (var i = 0; i < rgba.Length; i++)
+                {
+                    rgba[i] = f(bytes[i * 3], bytes[i * 3 + 1], bytes[i * 3 + 2]);
+                }
+                return rgba.AsTextureMap(image.Width);
+            }
+            ArrayTextureMap<Rgba32> Map4(Func<byte, byte, byte, byte, Rgba32> f)
+            {
+                var rgba = new Rgba32[image.Width * image.Height];
+                var bytes = ToBytes();
+                if (bytes.Length != image.Width * image.Height * 4) throw new Exception();
+                for (var i = 0; i < rgba.Length; i++)
+                {
+                    rgba[i] = f(bytes[i * 4], bytes[i * 4 + 1], bytes[i * 4 + 2], bytes[i * 4 + 3]);
+                }
+                return rgba.AsTextureMap(image.Width);
+            }
+
+
+            return image.PixelFormat switch
+            {
+                Format24bppRgb => Map3((b, g, r) => new Rgba32(r, g, b)),
+                Format32bppArgb => Map4((b, g, r, a) => new Rgba32(r, g, b, a)),
+                Format32bppRgb => Map4((b, g, r, _) => new Rgba32(r, g, b)),
+                _ => throw new Exception("Unsupported pixel format: " + image.PixelFormat.ToString())
+            };
         }
 
         public static ArrayTextureMap<T> Clone<T>(this ITextureMap<T> map) where T : struct

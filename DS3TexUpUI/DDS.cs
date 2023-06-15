@@ -166,7 +166,7 @@ namespace DS3TexUpUI
 
         public static DDSImage Load(string file)
         {
-            var image = Pfim.Pfim.FromFile(file);
+            var image = Pfimage.FromFile(file);
             if (image.Compressed) image.Decompress();
 
             return new DDSImage(image);

@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Linq;
 using SixLabors.ImageSharp;
 using SoulsFormats;
+using SixLabors.ImageSharp.PixelFormats;
 
 #nullable enable
 
@@ -25,6 +26,8 @@ namespace DS3TexUpUI
             [typeof(Vector2)] = new Vector2Converter(),
             [typeof(TexId)] = new TexIdConverter(),
             [typeof(Size)] = new SizeConverter(),
+            [typeof(Rgb24)] = new Rgb24Converter(),
+            [typeof(Rgba32)] = new Rgba32Converter(),
             [typeof(RgbaDiff)] = new RgbaDiffConverter(),
             [typeof(DDSFormat)] = new StringParsingConverter<DDSFormat>(DDSFormat.Parse),
             [typeof(ColorCode6x6)] = new StringParsingConverter<ColorCode6x6>(ColorCode6x6.Parse),
@@ -502,6 +505,49 @@ namespace DS3TexUpUI
             }
 
             public override void Write(Utf8JsonWriter writer, RgbaDiff value, JsonSerializerOptions options)
+            {
+                JsonSerializer.Serialize(writer, new Surrogate { R = value.R, G = value.G, B = value.B, A = value.A }, options);
+            }
+
+            private struct Surrogate
+            {
+                public byte R { get; set; }
+                public byte G { get; set; }
+                public byte B { get; set; }
+                public byte A { get; set; }
+            }
+        }
+
+        private sealed class Rgb24Converter : JsonConverter<Rgb24>
+        {
+            public override Rgb24 Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var s = JsonSerializer.Deserialize<Surrogate>(ref reader, options);
+                return new Rgb24(s.R, s.G, s.B);
+            }
+
+            public override void Write(Utf8JsonWriter writer, Rgb24 value, JsonSerializerOptions options)
+            {
+                JsonSerializer.Serialize(writer, new Surrogate { R = value.R, G = value.G, B = value.B }, options);
+            }
+
+            private struct Surrogate
+            {
+                public byte R { get; set; }
+                public byte G { get; set; }
+                public byte B { get; set; }
+            }
+        }
+
+        private sealed class Rgba32Converter : JsonConverter<Rgba32>
+        {
+            public override Rgba32 Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                var s = JsonSerializer.Deserialize<Surrogate>(ref reader, options);
+                return new Rgba32(s.R, s.G, s.B, s.A);
+            }
+
+            public override void Write(Utf8JsonWriter writer, Rgba32 value, JsonSerializerOptions options)
             {
                 JsonSerializer.Serialize(writer, new Surrogate { R = value.R, G = value.G, B = value.B, A = value.A }, options);
             }
