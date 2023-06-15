@@ -139,6 +139,62 @@ namespace DS3TexUpUI
             });
         }
 
+        public static IReadOnlyDictionary<TexId, Rgb24> SolidColorValue
+            = Data.File(@"solid-color-value.json").LoadJsonFile<Dictionary<TexId, Rgb24>>();
+        internal static Action<SubProgressToken> CreateSolidColorValueIndex(Workspace w)
+        {
+            return token =>
+            {
+                var revGamePath = DS3.GamePath.ToDictionary(kv => kv.Value, kv => kv.Key);
+
+                var dds = Directory
+                    .GetFiles(w.GameDir, "*.dds", SearchOption.AllDirectories)
+                    .Where(file =>
+                    {
+                        var rel = Path.GetRelativePath(w.GameDir, file);
+                        return revGamePath.ContainsKey(rel);
+                    })
+                    .Select(file =>
+                    {
+                        var rel = Path.GetRelativePath(w.GameDir, file);
+                        var id = revGamePath[rel];
+                        return (file, id);
+                    })
+                    .Where(p => p.id.IsSolidColor())
+                    .ToList();
+
+                var result = new Dictionary<TexId, Rgb24>();
+                token.ForAllParallel(dds, pair =>
+                {
+                    var (file, id) = pair;
+                    var img = file.LoadTextureMap();
+
+                    if (img.Width >= 16 && img.Height >= 16)
+                    {
+                        // ignore border pixels
+                        img.Crop(4, 4, img.Width - 8, img.Height - 8);
+                    }
+
+                    var avg = Average.Rgb24.Create();
+                    foreach (var pixel in img.Data)
+                    {
+                        var p = pixel;
+                        if (p.R == p.B && (p.G == p.B + 1 || p.G == p.B - 1))
+                            p.G = p.B;
+                        avg.Add(p.Rgb);
+                    }
+                    var r = avg.Result.Rgb;
+
+                    lock (result)
+                    {
+                        result[id] = r;
+                    }
+                });
+
+                result.SaveAsJson(Data.File(@"solid-color-value.json", Data.Source.Local));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, Size> OriginalSize
             = Data.File(@"original-size.json").LoadJsonFile<Dictionary<TexId, Size>>();
         internal static Action<SubProgressToken> CreateOriginalSizeIndex(Workspace w)
