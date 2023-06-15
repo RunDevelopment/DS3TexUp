@@ -243,6 +243,7 @@ namespace DS3TexUpUI
         {
             public override Vector2 Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
+                if (reader.TokenType == JsonTokenType.Number) return new Vector2(reader.GetSingle());
                 if (reader.TokenType != JsonTokenType.StartObject) throw new JsonException();
 
                 var x = 0f;
