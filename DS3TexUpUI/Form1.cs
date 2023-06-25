@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Numerics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -14,6 +15,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SixLabors.ImageSharp.PixelFormats;
 using SoulsFormats;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 #nullable enable
 
@@ -626,9 +630,338 @@ namespace DS3TexUpUI
             });
         }
 
+        // A small script to mark certain objects as shadow sources
+        private void ShadowSourceScript()
+        {
+            var msbFile = @"C:\mods\DS3\DSMapStudio-1.03\projects\map\MapStudio\m45_00_00_00.msb.dcx";
+            var msb = MSB3.Read(msbFile);
+            int count = 0;
+            var allowed = new HashSet<string>()
+            {
+                "m005500",
+                "m005501",
+                "m005502",
+                "m005503",
+                "m005550",
+            };
+            var start = new Vector3(160, 0, -115);
+            float maxDist = 50;
+            foreach (var item in msb.Parts.MapPieces.Where(m => allowed.Contains(m.ModelName)))
+            {
+                if (!item.ShadowSource && Vector3.Distance(item.Position, start) <= maxDist)
+                {
+                    item.ShadowSource = true;
+                    // item.ShadowDest = true;
+                    count++;
+                }
+            }
+            foreach (var item in msb.Parts.Objects.Where(m => allowed.Contains(m.ModelName)))
+            {
+                if (!item.ShadowSource && Vector3.Distance(item.Position, start) <= maxDist)
+                {
+                    item.ShadowSource = true;
+                    // item.ShadowDest = true;
+                    count++;
+                }
+            }
+            MessageBox.Show("" + count);
+            msb.Write(msbFile);
+        }
+        // Reads the currently selected textures and expands the selection using representatives
+        private void ExpandCurrentSelection()
+        {
+            var ids = ParseCurrent().ids;
+            var rep = DS3.RepresentativeOf.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
+            var na = DS3.NormalAlbedo.GroupBy(kv => kv.Value).ToDictionary(g => g.Key, g => g.Select(kv => kv.Key).ToList());
+            ids = ids.SelectMany(id => rep.GetOrNew(id).Append(id)).SelectMany(id => na.GetOrNew(id).Append(id)).ToHashSet();
+            Clipboard.SetText(string.Join("\n", ids.Except(DS3.Unused.Except(DS3.Representatives))));
+        }
+        // Removes all textures that are not representatives or unwanted from up-manual-new.
+        private void RemovedUnwantedFromManualNew()
+        {
+            RunTask(token =>
+            {
+                var files = Directory.GetFiles(@"C:\DS3TexUp\up-manual-new");
+                var categories = DS3.OriginalSize.Keys.Select(id => id.Category.ToString()).ToHashSet();
+                token.ForAllParallel(files, file =>
+                {
+                    var ids = categories.Select(c => TexId.FromPath(Path.Join(c, Path.GetFileName(file)))).Where(id => DS3.OriginalSize.ContainsKey(id)).ToHashSet();
+                    if (ids.Count != 1) return;
+                    var id = ids.Single();
+
+                    if (id.GetTexKind() == TexKind.Normal) return;
+
+                    if (id.GetRepresentative() != id || id.IsUnwanted())
+                    {
+                        File.Delete(file);
+                    }
+                });
+            });
+        }
+
+        private void CreateTrainingDataset()
+        {
+            RunTask(token =>
+            {
+                var hr = @"C:\Users\micha\Desktop\train\data6\hr";
+                var lr = @"C:\Users\micha\Desktop\train\data6\lr";
+                var lrBc1 = @"C:\Users\micha\Desktop\train\data6\lr-bc1";
+                var lrBc7 = @"C:\Users\micha\Desktop\train\data6\lr-bc7";
+                Training.CreateAlbedoHR(token, @"C:\Users\micha\Desktop\train\raw-data", hr);
+                Training.CreateAlbedoLR(token, hr, lr, Training.LRCompression.Uncompressed);
+                Training.CreateAlbedoLR(token, hr, lrBc1, Training.LRCompression.BC1);
+                Training.CreateAlbedoLR(token, hr, lrBc7, Training.LRCompression.BC7);
+                Training.PickValidation(token, new string[] { hr, lr, lrBc1, lrBc7 }, 0.005);
+            });
+        }
+
+        private static readonly Regex FlverNamePattern = new Regex(@"\Am(?:\d\d_){4}\d{6}\Z");
+        private static (string name, string map) ParseFlverName(string name)
+        {
+            name = Path.GetFileNameWithoutExtension(name);
+            if (!FlverNamePattern.IsMatch(name))
+                throw new Exception($"The name {name} is not a valid flver name");
+            return (name, name.Substring(0, "m00_00_00_00".Length));
+        }
+        private ConditionalWeakTable<FLVER2, string> CachedFlverNames = new ConditionalWeakTable<FLVER2, string>();
+        private FLVER2 ReadFlver(string fileName, bool original = true)
+        {
+            var (name, map) = ParseFlverName(fileName);
+            var gameDir = GetWorkspace().GameDir;
+            var mapDir = Path.Join(gameDir, "map", map);
+
+            var mapBndDir = Path.Join(mapDir, $"{name}-mapbnd-dcx");
+            if (!Directory.Exists(mapBndDir))
+                Yabber.Run(Path.Join(mapDir, $"{name}.mapbnd.dcx"));
+
+            var file = Path.Join(mapBndDir, "map", map, name, "Model", name);
+            var old = file + ".old.flver";
+            var current = file + ".flver";
+
+            file = original && File.Exists(old) ? old : current;
+            var flver = FLVER2.Read(file);
+            CachedFlverNames.Add(flver, name);
+            return flver;
+        }
+        private void WriteFlver(FLVER2 flver, string? fileName = null, bool pack = true)
+        {
+            if (fileName == null)
+            {
+                if (CachedFlverNames.TryGetValue(flver, out var cachedName))
+                    fileName = cachedName;
+                else
+                    throw new Exception("The given flver instance was not created by ReadFlver, so it needs a file name.");
+            }
+
+            var (name, map) = ParseFlverName(fileName);
+            var gameDir = GetWorkspace().GameDir;
+            var mapDir = Path.Join(gameDir, "map", map);
+
+            var mapBndDir = Path.Join(mapDir, $"{name}-mapbnd-dcx");
+            if (!Directory.Exists(mapBndDir))
+                Yabber.Run(Path.Join(mapDir, $"{name}.mapbnd.dcx"));
+
+            var file = Path.Join(mapBndDir, "map", map, name, "Model", name);
+            var old = file + ".old.flver";
+            var current = file + ".flver";
+
+            // backup
+            if (!File.Exists(old))
+                File.Move(current, old);
+
+            // write
+            flver.Write(current);
+
+            if (pack)
+                Yabber.Run(mapBndDir);
+        }
+
+        public Action<IProgressToken> ApplyBumpConfig(string configPath, Workspace w, BumpMapsStore store)
+        {
+            static List<FlverMaterialInfo> GetMaterialInfo(string configName)
+            {
+                if (configName.StartsWith("m"))
+                {
+                    return Data.File($"materials/{configName.Substring(0, 3)}.json", Data.Source.Local)
+                        .LoadJsonFile<List<FlverMaterialInfo>>()
+                        .Where(i => i.FlverPath.StartsWith($"map\\{configName}\\"))
+                        .ToList();
+                }
+                return Data.File($"materials/{configName}.json", Data.Source.Local).LoadJsonFile<List<FlverMaterialInfo>>();
+            }
+            static string GetPatchFileRel(string configName)
+            {
+                var name = "bump-patches.json";
+                if (configName.StartsWith("m"))
+                    return Path.Join("map", configName, name);
+                return Path.Join(configName, name);
+            }
+            static string GetFlverDirectory(string configName)
+            {
+                if (configName.StartsWith("m"))
+                    return Path.Join("map", configName);
+                return Path.Join(configName);
+            }
+            static void PackFlver(string flverPath)
+            {
+                string? path = flverPath;
+                while (path != null)
+                {
+                    if (path.EndsWith("bnd-dcx"))
+                        Yabber.Run(path);
+
+                    path = Path.GetDirectoryName(path);
+                }
+            }
+
+            return token =>
+            {
+                var configName = Path.GetFileNameWithoutExtension(configPath);
+                token.SubmitLog($"Config: {configName}");
+                token.SubmitStatus($"Reading config");
+                var config = configPath.LoadJsonFile<BumpConfig>();
+                config.LoadExtend(configPath);
+
+                string? map = null;
+                if (configName.StartsWith("m"))
+                    map = configName.Substring(0, 3);
+                Func<string, string> resolveBumpMap = (bumpName) =>
+                {
+                    if (map == null) return store.GetBumpMap(bumpName);
+                    return store.GetBumpMap(bumpName, map);
+                };
+
+                token.SubmitStatus($"Generating patches");
+                var materialInfo = GetMaterialInfo(configName);
+
+                var currentPatches = materialInfo.ToDictionary(
+                    info => info.FlverPath,
+                    info =>
+                    {
+                        try
+                        {
+                            return string.Join('\n', config.GeneratePatches(info, resolveBumpMap));
+                        }
+                        catch (System.Exception)
+                        {
+                            token.SubmitLog($"Failed to generate patch for {info.FlverPath}");
+                            throw;
+                        }
+                    }
+                );
+
+                var patchFile = Path.Join(w.GameDir, GetPatchFileRel(configName));
+                var oldPatches = new Dictionary<string, string>();
+                if (File.Exists(patchFile)) oldPatches = patchFile.LoadJsonFile<Dictionary<string, string>>();
+
+                token.SubmitStatus($"Searching for files");
+                var flverFiles = Directory
+                    .GetFiles(Path.Join(w.GameDir, GetFlverDirectory(configName)), "*.flver", SearchOption.AllDirectories)
+                    .Where(f => !f.EndsWith(".old.flver"))
+                    .Select(flverFile =>
+                    {
+                        var cacheKey = Path.GetRelativePath(w.GameDir, flverFile);
+                        return (flverFile, cacheKey);
+                    })
+                    .ToArray();
+
+                var rel = flverFiles.Select(p=>p.cacheKey).ToHashSet();
+                var missingFlverFiles = currentPatches
+                    .Where(kv => kv.Value.Length > 0)
+                    .Select(kv => kv.Key)
+                    .Where(p => !rel.Contains(p))
+                    .ToArray();
+                if (missingFlverFiles.Length > 0)
+                {
+                    token.SubmitLog($"Missing flver files {missingFlverFiles.Length}: " + string.Join(", ", missingFlverFiles));
+                    throw new Exception($"Expected there to be {currentPatches.Count} flver files in {configName}, but {missingFlverFiles.Length} flver files are missing.");
+                }
+
+                var relevantFlverFiles = flverFiles
+                    .Where(p => currentPatches.GetValueOrDefault(p.cacheKey, "") != oldPatches.GetValueOrDefault(p.cacheKey, ""))
+                    .ToArray();
+
+                token.SubmitStatus("Applying bump maps");
+                token.ForAllParallel(relevantFlverFiles, fileInfo =>
+                {
+                    var (flverFile, cacheKey) = fileInfo;
+
+                    var oldFile = flverFile.Substring(0, flverFile.Length - ".flver".Length) + ".old.flver";
+                    var hasOldFile = File.Exists(oldFile);
+
+                    try
+                    {
+                        var flver = FLVER2.Read(hasOldFile ? oldFile : flverFile);
+
+                        if (config.Apply(flver, flverFile, resolveBumpMap))
+                        {
+                            token.SubmitLog($"Writing {Path.GetFileName(flverFile)}");
+                            if (!hasOldFile)
+                            {
+                                File.Move(flverFile, oldFile);
+                                hasOldFile = true;
+                            }
+                            flver.Write(flverFile);
+                            PackFlver(flverFile);
+                        }
+                        else
+                        {
+                            if (hasOldFile)
+                            {
+                                token.SubmitLog(message: $"Restoring {Path.GetFileName(flverFile)}");
+                                File.Delete(flverFile);
+                                File.Move(oldFile, flverFile);
+                                hasOldFile = false;
+                                PackFlver(flverFile);
+                            }
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        token.SubmitLog($"Error in {Path.GetFileName(flverFile)}:");
+                        token.LogException(e);
+
+                        if (hasOldFile)
+                        {
+                            token.SubmitLog(message: $"Restoring {Path.GetFileName(flverFile)}");
+                            File.Delete(flverFile);
+                            File.Move(oldFile, flverFile);
+                            PackFlver(flverFile);
+
+                            lock (currentPatches)
+                            {
+                                currentPatches[cacheKey] = "";
+                            }
+                        }
+                    }
+                });
+
+                token.SubmitStatus(status: "Storing patches");
+                currentPatches.SaveAsJson(patchFile);
+            };
+        }
+        public Action<IProgressToken> ApplyBumpConfigs(Workspace w)
+        {
+            return token =>
+            {
+                var storeData = Data.File("bumps/bump-maps.json", Data.Source.Local).LoadJsonFile<Dictionary<string, Dictionary<string, string>>>();
+                var store = new BumpMapsStore(storeData);
+
+                var configNames = new List<string>() { "chr", "obj" };
+                configNames.AddRange(DS3.MapPieces.Select(m => m + "_00_00"));
+
+                var configFiles = configNames
+                    .Select(configName => Data.File($"bumps/{configName}.json", Data.Source.Local))
+                    .Where(File.Exists)
+                    .ToList();
+
+                var tasks = configFiles.Select(configFile => ApplyBumpConfig(configFile, w, store)).ToArray();
+                token.SplitEqually(tasks);
+            };
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            // m37_00_00_00_020151
             var w = GetWorkspace();
 
 

@@ -357,6 +357,45 @@ namespace DS3TexUpUI
             }
         }
 
+        public static IReadOnlyDictionary<string, List<string>> ObjectMapUsage
+            = Data.File(@"object-map-usage.json").LoadJsonFile<Dictionary<string, string>>().ToDictionary(kv => kv.Key, kv => kv.Value.Split(' ').ToList());
+        internal static Action<SubProgressToken> CreateObjectMapUsageIndex(Workspace w)
+        {
+            return token =>
+            {
+                var mapStudio = Path.Join(w.GameDir, @"map\mapstudio");
+                var msbFiles = Directory
+                    .GetFiles(mapStudio, "*.msb.dcx")
+                    .Where(f =>
+                    {
+                        var mapPiece = Path.GetFileName(f).Substring(0, 6);
+                        return DS3.MapPieces.Contains(mapPiece);
+                    })
+                    .OrderBy(f => f)
+                    .ToList();
+
+                token.SubmitStatus("Creating index");
+                var index = new Dictionary<string, List<string>>();
+                token.ForAll(msbFiles, msbFile =>
+                {
+                    var mapId = Path.GetFileName(msbFile);
+                    mapId = mapId.Substring(0, mapId.Length - ".msb.dcx".Length);
+
+                    var msb = MSB3.Read(msbFile);
+                    foreach (var obj in msb.Models.Objects)
+                    {
+                        var objId = obj.Name;
+                        index.GetOrAdd(objId).Add(mapId);
+                    }
+                });
+
+                token.SubmitStatus("Saving JSON");
+                index
+                    .ToDictionary(kv => kv.Key, kv => string.Join(" ", kv.Value))
+                    .SaveAsJson(Data.File(@"object-map-usage.json", Data.Source.Local));
+            };
+        }
+
         public static IReadOnlyDictionary<TexId, ColorCode6x6> ColorCode
             = Data.File(@"color-code.json").LoadJsonFile<Dictionary<TexId, ColorCode6x6>>();
         internal static Action<SubProgressToken> CreateColorCodeIndex()
@@ -1376,6 +1415,16 @@ namespace DS3TexUpUI
         public string FlverPath { get; set; }
         public List<FLVER2.GXList> GXLists { get; set; }
         public List<FLVER2.Material> Materials { get; set; }
+
+        public static FlverMaterialInfo Of(FLVER2 flver, string flverPath)
+        {
+            return new FlverMaterialInfo
+            {
+                FlverPath = flverPath,
+                GXLists = flver.GXLists,
+                Materials = flver.Materials,
+            };
+        }
     }
 
     public struct MTDInfo

@@ -1,0 +1,110 @@
+{
+	"m30": {
+		"stone1": "m30_00_eclipse_01_n",
+		"sludge": "m30_00_eclipse_02_n",
+		"leafs": "m30_00_ground_03_n",
+		"idk": "m30_00_Water_03_n"
+	},
+	"ash1": {
+		"m40": "m40_00_ashtiling_46_n"
+	},
+	"bark1": {
+		"m30": "m40_00_tree_300_n",
+		"m40": "m40_00_tree_300_n"
+	},
+	"bark2": {
+		"m31": "m31_00_a_o364002_tiling_n",
+		"m40": "m40_o364002_tiling_n"
+	},
+	"bark3": {
+		"m30": "m30_00_m37_00_tree_06_n",
+		"m35": "m35_00_m37_00_tree_06_n",
+		"m37": "m37_00_tree_06_n",
+		"m45": "m45_00_tree_06_n",
+		"m51": "m51_00_tree_06_n"
+	},
+	"default": {
+		"m30": "m30_00_o4801_roof_02_n",
+		"m40": "m40_00_o4801_roof_02_353_n",
+		"m50": "m50_00_o4801_roof_02_n"
+	},
+	"dirt1": {
+		"m30": "m30_00_ground_01_n",
+		"m38": "m38_00_m96_soil_01_n",
+		"m40": "m40_00_ground_329_n"
+	},
+	"dirt2": {
+		"m37": "m37_00_Outside_CemeteryDirt_n",
+		"m40": "m40_00_groundsand_326_n",
+		"m41": "m41_00_m40_00_ground_003_n"
+	},
+	"dirt3": {
+		"m30": "m30_00_ground_04_n",
+		"m34": "m34_00_o4819_02_n"
+	},
+	"grass1": {
+		"m30": "m30_00_m31_00_groundgrass_00_n",
+		"m31": "m31_00_groundgrass_00_n",
+		"m33": "m33_00_m31_00_groundgrass_00_n"
+	},
+	"mud1": {
+		"m37": "m37_00_Outside_CemeteryGroundStones_n",
+		"m40": "m40_00_ground_001_n",
+		"m41": "m41_00_m40_00_ground_001_n",
+		"m45": "m45_00_Snowpack_01_n"
+	},
+	"mud2": {
+		"m30": "m30_00_enkei_50_n",
+		"m46": "m46_00_enkei_50_n"
+	},
+	"smooth1": {
+		"m30": "m30_00_m37_00_enkei_05_n",
+		"m37": "m37_00_enkei_05_n",
+		"m39": "m39_m37_00_enkei_05_n",
+		"m40": "m40_00_enkei_05_n",
+		"m45": "m45_00_enkei_05_n"
+	},
+	"stone1": {
+		"m40": "m40_00_m13_N_wall_01_n"
+	},
+	"stone2": {
+		"m37": "m37_00_Cliffs_n",
+		"m39": "m39_m37_00_Cliffs_n",
+		"m40": "m40_00_Cliffs_n"
+	},
+	"stone3": {
+		"m37": "m37_00_Mountain_100_n",
+		"m40": "m40_00_Mountain_100_n",
+		"m41": "m41_00_m32_00_Mountain009_n"
+	},
+	"stone4": {
+		"m30": "m30_00_m31_00_rockwall_04_n",
+		"m31": "m31_00_rockwall_04_n",
+		"m33": "m33_00_m31_00_rockwall_04_n",
+		"m39": "m39_00_rockwall_03_n",
+		"m40": "m40_00_rockwall_321_n"
+	},
+	"stone5": {
+		"m31": "m31_00_rockwall_05_n",
+		"m40": "m40_00_rockwall_322_n"
+	},
+	"stone6": {
+		"m31": "m31_00_rockwall_09_n",
+		"m40": "m40_00_rockwall_323_n"
+	},
+	"stone7": {
+		"m30": "m30_00_o304786_03_n"
+	},
+	"wood1": {
+		"m30": "m30_00_stairs_500_n",
+		"m34": "m34_stairs_500_n"
+	},
+	"wood2": {
+		"m30": "m30_00_stake_01_n",
+		"m32": "m32_00_stake_01_n",
+		"m33": "m33_00_stake_01_n",
+		"m38": "m38_00_stake_01_n",
+		"m45": "m45_00_stake_01_n",
+		"m53": "m53_00_stake_01_n"
+	}
+}

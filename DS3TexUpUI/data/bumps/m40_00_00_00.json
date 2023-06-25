@@ -1,0 +1,582 @@
+{
+	"Models": {
+		"m000100": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "dirt2",
+				"Scale": 16
+			}
+		],
+		"m000310": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "dirt1",
+				"Scale": 8
+			}
+		],
+		"m000320": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "default",
+				"Scale": 4
+			}
+		],
+		"m000330": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "stone1",
+				"Scale": {
+					"X": 8,
+					"Y": 6
+				}
+			}
+		],
+		"m000340": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "stone1",
+				"Scale": 8
+			}
+		],
+		"m000350": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "dirt1",
+				"Scale": 6
+			}
+		],
+		"m000360": [
+			{
+				"MaterialIndex": 0,
+				"BumpMap": "stone1",
+				"Scale": 6
+			}
+		],
+		"m002050": [
+			{
+				"MaterialIndex": 1,
+				"BumpMap": "bark1",
+				"Scale": 9
+			}
+		],
+		"m002040": [
+			{
+				"MaterialIndex": 1,
+				"BumpMap": "bark1",
+				"Scale": 9
+			},
+			{
+				"MaterialIndex": 2,
+				"BumpMap": "bark1",
+				"Scale": 9
+			}
+		]
+	},
+	"Materials": [
+		{
+			"Diffuse": "m40_00_rock_21_a",
+			"Normal": "m40_00_rock_21_n",
+			"BumpMap": "stone3",
+			"Scale": 14
+		},
+		{
+			"Diffuse": "m40_00_rock_40_a",
+			"Normal": "m40_00_rock_40_n",
+			"BumpMap": "stone3",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_rock_40_a",
+			"Normal": "m40_00_rock_41_n",
+			"BumpMap": "stone3",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_rock_40_a",
+			"Normal": "m40_00_rock_42_n",
+			"BumpMap": "stone3",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_rock_40_a",
+			"Normal": "m40_00_rock_43_n",
+			"BumpMap": "stone3",
+			"Scale": 14
+		},
+		{
+			"Diffuse": "m40_00_rock_40_a",
+			"Normal": "m40_00_rock_44_n",
+			"BumpMap": "stone6",
+			"Scale": {
+				"X": 18,
+				"Y": 14
+			}
+		},
+		{
+			"Diffuse": "m40_00_o329223_02_rock_301_a",
+			"Normal": "m40_00_o329223_02_rock_301_n",
+			"BumpMap": "dirt2",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_RockSingle_325_a",
+			"Normal": "m40_00_RockSingle_325_n",
+			"BumpMap": "dirt2",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_Cliffs_a",
+			"Normal": "m40_00_Cliffs_n",
+			"BumpMap": "stone3",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_stonecoffin_500_a",
+			"Normal": "m40_00_stonecoffin_500_n",
+			"BumpMap": "stone1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_stonecoffin_501_a",
+			"Normal": "m40_00_stonecoffin_501_n",
+			"BumpMap": "default",
+			"Scale": 4
+		},
+		{
+			"Diffuse": "m40_00_o364060_plant_400_a",
+			"Normal": "m40_00_o364060_plant_400_n",
+			"BumpMap": "bark1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_ivy_314_a",
+			"Normal": "m40_00_ivy_314_n",
+			"BumpMap": "bark1",
+			"Scale": 2
+		},
+		{
+			"Diffuse": "m40_o364002_tiling_02_a",
+			"Normal": "m40_o364002_tiling_n",
+			"BumpMap": "bark1",
+			"Scale": 9
+		},
+		{
+			"Diffuse": "m40_00_stelae_305_a",
+			"Normal": "m40_00_stelae_305_n",
+			"BumpMap": "dirt1",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_door_304_a",
+			"Normal": "m40_00_door_304_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_arch_303_a",
+			"Normal": "m40_00_arch_303_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_slumpstone_301_a",
+			"Normal": "m40_00_slumpstone_301_n",
+			"BumpMap": "dirt1",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_wall_011_a",
+			"Normal": "m40_00_wall_011_n",
+			"BumpMap": "default",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_wall_012_a",
+			"Normal": "m40_00_wall_012_n",
+			"BumpMap": "stone6",
+			"Scale": 5
+		},
+		{
+			"Diffuse": "m40_00_wall_013_a",
+			"Normal": "m40_00_wall_013_n",
+			"BumpMap": "default",
+			"Scale": 5.5
+		},
+		{
+			"Diffuse": "m40_00_tombstones_302_a",
+			"Normal": "m40_00_tombstones_302_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_wall_block_001_a",
+			"Normal": "m40_00_wall_block_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_wall_block_005_a",
+			"Normal": "m40_00_wall_block_005_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_arch_012_a",
+			"Normal": "m40_00_arch_012_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_railing_000_a",
+			"Normal": "m40_00_railing_000_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_arch_001_a",
+			"Normal": "m40_00_arch_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_piller_002_a",
+			"Normal": "m40_00_piller_002_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_wall_block_010_a",
+			"Normal": "m40_00_wall_block_010_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_piller_001_a",
+			"Normal": "m40_00_piller_001_n",
+			"BumpMap": "default",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_o331319_wall_103_a",
+			"Normal": "m40_00_o331319_wall_103_n",
+			"BumpMap": "default",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_o331309_edge_101_a",
+			"Normal": "m40_00_o331309_edge_101_n",
+			"BumpMap": "default",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_GraveStone_500_a",
+			"Normal": "m40_00_GraveStone_500_n",
+			"BumpMap": "default",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_brick_001_a",
+			"Normal": "m40_00_brick_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_brick_break_001_a",
+			"Normal": "m40_00_brick_break_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_Plinth_of_fire_001_a",
+			"Normal": "m40_00_Plinth_of_fire_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_Plinth_of_fire_00_a",
+			"Normal": "m40_00_Plinth_of_fire_00_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_rock_small_050_a",
+			"Normal": "m40_00_rock_small_050_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_o364002_tiling_a",
+			"Normal": "m40_o364002_tiling_n",
+			"BumpMap": "bark1",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_o364002_trunk_a",
+			"Normal": "m40_o364002_trunk_n",
+			"BumpMap": "bark1",
+			"Scale": 4
+		},
+		{
+			"Diffuse": "m40_00_GraveStone_521_a",
+			"Normal": "m40_00_GraveStone_521_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_GraveStone_522_a",
+			"Normal": "m40_00_GraveStone_522_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_stonecoffin_510_a",
+			"Normal": "m40_00_stonecoffin_510_n",
+			"BumpMap": "stone1",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_stonecoffin_511_a",
+			"Normal": "m40_00_stonecoffin_511_n",
+			"BumpMap": "stone1",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_GraveStone_520_a",
+			"Normal": "m40_00_GraveStone_520_n",
+			"BumpMap": "default",
+			"Scale": 4
+		},
+		{
+			"Diffuse": "m40_00_steps_000_a",
+			"Normal": "m40_00_steps_000_n",
+			"BumpMap": "stone3",
+			"Scale": 16
+		},
+		{
+			"Diffuse": "m40_00_ashtiling_46_a",
+			"Normal": "m40_00_ashtiling_46_n",
+			"BumpMap": "ash1",
+			"Scale": 7
+		},
+		{
+			"Diffuse": "m40_00_ornaments_001_a",
+			"Normal": "m40_00_ornaments_001_n",
+			"BumpMap": "dirt1",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_ornaments_002_a",
+			"Normal": "m40_00_ornaments_002_n",
+			"BumpMap": "dirt1",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_grace_001_a",
+			"Normal": "m40_00_grace_001_n",
+			"BumpMap": "default",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_o309320_roof_301_a",
+			"Normal": "m40_00_o309320_roof_301_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_obj_224_a",
+			"Normal": "m40_00_obj_224_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_obj_225_a",
+			"Normal": "m40_00_obj_225_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_block_202_a",
+			"Normal": "m40_00_block_202_n",
+			"BumpMap": "stone3",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_o309110_frame_01_370_a",
+			"Normal": "m40_00_o309110_frame_01_370_n",
+			"BumpMap": "default",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_obj_220_a",
+			"Normal": "m40_00_obj_220_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_o309120_frame_02_370_a",
+			"Normal": "m40_00_o309120_frame_02_370_n",
+			"BumpMap": "default",
+			"Scale": 8
+		},
+		{
+			"Diffuse": "m40_00_o309120_frame_01_370_a",
+			"Normal": "m40_00_o309120_frame_01_370_n",
+			"BumpMap": "default",
+			"Scale": 7
+		},
+		{
+			"Diffuse": "m40_00_Gravestone_o000800_a",
+			"Normal": "m40_00_Gravestone_o000800_n",
+			"BumpMap": "ash1",
+			"Scale": 3
+		},
+		{
+			"Diffuse": "m40_00_o4808_groupware_301_a",
+			"Normal": "m40_00_o4808_groupware_301_n",
+			"BumpMap": "default",
+			"Scale": 9
+		},
+		{
+			"Diffuse": "m40_00_o4808_door_301_a",
+			"Normal": "m40_00_o4808_door_301_n",
+			"BumpMap": "default",
+			"Scale": 12
+		},
+		{
+			"Diffuse": "m40_00_GroundTile_Single_300_a",
+			"Normal": "m40_00_GroundTile_Single_300_n",
+			"BumpMap": "default",
+			"Scale": 10
+		},
+		{
+			"Diffuse": "m40_00_bone_316_a",
+			"Normal": "m40_00_bone_316_n",
+			"BumpMap": "default",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_deadbody_03_a",
+			"Normal": "m40_00_GeneralThrone_03_n",
+			"BumpMap": "smooth1",
+			"Scale": 3
+		},
+		{
+			"Diffuse": "m40_00_GeneralThrone_03_a",
+			"Normal": "m40_00_GeneralThrone_03_n",
+			"BumpMap": "smooth1",
+			"Scale": 3
+		},
+		{
+			"Diffuse": "m40_00_books_01_a",
+			"Normal": "m40_00_books_01_n",
+			"BumpMap": "default",
+			"Scale": 4
+		},
+		{
+			"Diffuse": "m40_00_books_02_a",
+			"Normal": "m40_00_books_02_n",
+			"BumpMap": "default",
+			"Scale": 5
+		},
+		{
+			"Diffuse": "m40_00_o350102_a",
+			"Normal": "m40_00_o350102_n",
+			"BumpMap": "dirt1",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_o350101_01_a",
+			"Normal": "m40_00_o350101_01_n",
+			"BumpMap": "dirt1",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_o350100_01_a",
+			"Normal": "m40_00_o350100_01_n",
+			"BumpMap": "dirt1",
+			"Scale": 6
+		},
+		{
+			"Diffuse": "m40_00_GeneralThrone_01_a",
+			"Normal": "m40_00_GeneralThrone_01_n",
+			"BumpMap": "stone6",
+			"Scale": 16
+		}
+	],
+	"ReflectanceOverwrites": {
+		"m40_00_tombstones_302_r": {
+			"R": 60,
+			"G": 60,
+			"B": 60
+		},
+		"m40_00_wall_011_r": {
+			"R": 58,
+			"G": 58,
+			"B": 58
+		},
+		"m40_00_wall_012_r": {
+			"R": 65,
+			"G": 65,
+			"B": 65
+		},
+		"m40_00_wall_013_r": {
+			"R": 58,
+			"G": 58,
+			"B": 58
+		},
+		"m40_00_wall_block_001_r": {
+			"R": 58,
+			"G": 58,
+			"B": 58
+		},
+		"m40_00_arch_012_r": {
+			"R": 52,
+			"G": 52,
+			"B": 52
+		},
+		"m40_00_piller_001_r": {
+			"R": 55,
+			"G": 55,
+			"B": 55
+		},
+		"m40_00_brick_001_r": {
+			"R": 58,
+			"G": 58,
+			"B": 58
+		},
+		"m40_00_brick_break_001_r": {
+			"R": 58,
+			"G": 58,
+			"B": 58
+		},
+		"m40_00_rock_small_050_r": {
+			"R": 66,
+			"G": 66,
+			"B": 66
+		},
+		"m40_o364002_trunk_r": {
+			"R": 60,
+			"G": 60,
+			"B": 60
+		},
+		"m40_00_steps_000_r": {
+			"R": 45,
+			"G": 45,
+			"B": 45
+		},
+		"m40_00_grace_001_r": {
+			"R": 52,
+			"G": 52,
+			"B": 52
+		},
+		"m40_00_bone_316_r": {
+			"R": 50,
+			"G": 50,
+			"B": 50
+		}
+	},
+	"IgnoreModels": [
+		"m001100",
+		"m001110"
+	]
+}
