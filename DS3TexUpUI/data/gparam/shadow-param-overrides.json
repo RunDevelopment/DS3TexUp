@@ -43,7 +43,7 @@
 		"Cascade Dist 2->3": 35,
 		"Far Fade Start": 100,
 		"Far Fade Dist": 25,
-		"Volume Depth": 150
+		"Volume Depth": 250
 	},
 	"m50_00": {
 		"Cascade Dist 0->1": 3.5,

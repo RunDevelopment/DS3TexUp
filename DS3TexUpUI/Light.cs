@@ -102,7 +102,7 @@ namespace DS3TexUpUI
             foreach (var file in files)
             {
                 var name = Path.GetFileName(file).Substring(0, "m??_??_????".Length);
-                if (name.StartsWith("m51"))
+                if (name.StartsWith("m39"))
                 {
                     int asdas = 0;
                 }
@@ -114,7 +114,22 @@ namespace DS3TexUpUI
                 var hasMainLight = lightAngle != null && lightAngle.ValueIDs.Count > 0 && lightAngle.ValueIDs[0] == 0;
 
                 // correct light angle
-                if (correctedAngles.TryGetValue(GetMapPieceId(file), out var correctAngle))
+                if (correctedAngles.TryGetValue(name, out var correctAngle) && lightAngle != null)
+                {
+                    if (hasMainLight)
+                    {
+                        lightAngle.Values[0] = new Vector2(correctAngle.Item1, correctAngle.Item2);
+                        changed = true;
+                    }
+                    else if (lightAngle.ValueIDs.Count == 0)
+                    {
+                        // TODO: This will bug out DS3, because lights are defined as in a struct of arrays format, so we have to set the other props as well.
+                        lightAngle.ValueIDs.Add(0);
+                        lightAngle.Values.Add(new Vector2(correctAngle.Item1, correctAngle.Item2));
+                        changed = true;
+                    }
+                }
+                else if (correctedAngles.TryGetValue(GetMapPieceId(file), out correctAngle))
                 {
                     if (lightAngle != null && hasMainLight)
                     {
